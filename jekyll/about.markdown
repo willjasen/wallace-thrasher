@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-you can call  me stretchie
+you can call me stretchie
