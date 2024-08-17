@@ -17,20 +17,19 @@ async function fetchData(path) {
 async function main() {
     try {
         const data = await fetchData('/assets/data.json');
-        let flatData = [];
+        let subtitlesData = [];
 
-        // Iterate through each album
+        // Iterate through each album, track, and subtitle
         for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
 
-            // Use for...of loop to handle async fetchData calls
             for (const track of album.Tracks) {
-                const trackData = await fetchData(track.Track_JSONPath); // Await the fetchData call
+                const trackData = await fetchData(track.Track_JSONPath);
                 
                 for (const subtitleKey of Object.keys(trackData)) {
                     const subtitle = trackData[subtitleKey];
 
-                    flatData.push({
+                    subtitlesData.push({
                         id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
                         Album: album.Album,
                         Album_Picture: album.Album_Picture,
@@ -45,10 +44,10 @@ async function main() {
             }
         }
 
-        // Index the data and setup the search (your existing code can go here)
-        // Index the data
-        const startTimeInMilliseconds = Date.now();
+        //console.log(subtitlesData);
+        // Index the data and keep a timer of how long it takes
         console.log("Indexing...");
+        const startTimeInMilliseconds = Date.now();
         const idx = lunr(function () {
             this.ref('id');
             //this.field('Album');
@@ -66,59 +65,109 @@ async function main() {
                 return token;
             });*/
 
-            flatData.forEach(function (doc) {
+            subtitlesData.forEach(function (doc) {
                 //console.log("Indexing:", doc);
                 this.add(doc);
             }, this);
-
-            const endTimeInMilliseconds = Date.now();
-            console.log("Indexing speakers and text are complete.");
-            console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds."); 
         });
+        const endTimeInMilliseconds = Date.now();
+        console.log("Indexing speakers and text are complete.");
+        console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds."); 
 
-        // Set up the search input listener
-        document.querySelector('#search-input').addEventListener('input', function () {
-            if(this.value != "") {
-                const query = this.value;
-                const results = idx.search(query);
-                console.log("Search query:", query);
-                console.log("Search results:", results);
+        // Set up the subititles search input listener
+        if (document.querySelector('#subtitles-search-input')) {
+            document.querySelector('#subtitles-search-input').addEventListener('input', function () {
+                if(this.value != "") {
+                    const query = this.value;
+                    const results = idx.search(query);
+                    //console.log("Search query:", query);
+                    //console.log("Search results:", results);
+    
+                    // Clear previous results
+                    const resultList = document.querySelector('#subtitles-search-results');
+                    resultList.innerHTML = '';
+    
+                    // Display search results
+                    let resultCount = 0;
+                    results.forEach(function (result) {
+    
+                        resultCount++;
+                        const matchedDoc = subtitlesData.find(doc => doc.id === result.ref);
+                        //console.log("Matched Document:", matchedDoc);
+    
+                        const albumAndTitleItem = document.createElement('li');
+                        albumAndTitleItem.innerHTML = `
+                            <a href="/assets/png/${matchedDoc.Album_Picture}">
+                                <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
+                            </a>
+                            <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i><small> @ ${matchedDoc.StartTime}</small>
+                        `;
+    
+                        const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
+                        const subtitleItemLi = document.createElement('li');
+                        subtitleItemLi.innerHTML = `${matchedDoc.Speaker}: "${matchedDoc.Text}"`;
+                        subtitleItem.appendChild(subtitleItemLi); // Append the subtitle item to the ul
+    
+                        albumAndTitleItem.appendChild(subtitleItem); // Append the ul to the albumAndTitleItem
+                        resultList.appendChild(albumAndTitleItem); // Finally, append the albumAndTitleItem to the resultList
+                    });
+                    resultList.innerHTML += `<br/><div>Subtitles found: ${resultCount}</div>`;
+                }
+            });
+        }
+        
+        // Set up the speakers search input listener
+if (document.querySelector('#speakers-search-input')) {
+    document.querySelector('#speakers-search-input').addEventListener('input', function () {
+        if(this.value.trim() !== "") {
+            const query = this.value.trim();
+            const results = idx.search(query);
+            console.log("Search query:", query);
+            console.log("Search results:", results);
 
-                // Clear previous results
-                const resultList = document.querySelector('#search-results');
-                resultList.innerHTML = '';
+            // Clear previous results
+            const resultList = document.querySelector('#speakers-search-results');
+            resultList.innerHTML = '';
 
-                // Display search results
-                results.forEach(function (result) {
+            // Set to store the unique track and speaker combinations
+            let tracksWithSpeaker = new Set();
 
-                    const matchedDoc = flatData.find(doc => doc.id === result.ref);
-                    console.log("Matched Document:", matchedDoc);
+            // Display search results
+            results.forEach(function (result) {
+                const matchedDoc = subtitlesData.find(doc => doc.id === result.ref);
 
-                    const albumAndTitleItem = document.createElement('li');
-                    albumAndTitleItem.innerHTML = `
-                        <a href="/assets/png/${matchedDoc.Album_Picture}">
-                            <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
-                        </a>
-                        <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i> @ <small>${matchedDoc.StartTime}</small>
-                    `;
+                if (matchedDoc && matchedDoc.Speaker.includes(query)) {
+                    const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
 
-                    const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
-                    const subtitleItemLi = document.createElement('li');
-                    subtitleItemLi.innerHTML = `${matchedDoc.Speaker}: "${matchedDoc.Text}"`;
-                    subtitleItem.appendChild(subtitleItemLi); // Append the subtitle item to the ul
+                    // Add to Set only if the combination isn't already added
+                    if (!tracksWithSpeaker.has(key)) {
+                        tracksWithSpeaker.add(key);
 
-                    albumAndTitleItem.appendChild(subtitleItem); // Append the ul to the albumAndTitleItem
-                    resultList.appendChild(albumAndTitleItem); // Finally, append the albumAndTitleItem to the resultList
+                        // Display the result
+                        const resultItem = document.createElement('li');
+                        resultItem.textContent = `Track: ${matchedDoc.Track_Title}`;
+                        resultList.appendChild(resultItem);
+                    }
+                }
+            });
 
-                });
-            }
-            
-        });
+            // Display the count of unique track-speaker combinations
+            const trackCount = tracksWithSpeaker.size;
+            resultList.innerHTML += `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
+        }
+    });
+}
+
+// Function to create a unique key
+function createKey(albumTitle, trackTitle, speaker) {
+    return `${albumTitle}-${trackTitle}-${speaker}`;
+}
+
 
     } catch (error) {
         console.error('Error in main function:', error);
     }
 }
 
-// Call the main function
+// Execute this program
 main();
