@@ -46,15 +46,15 @@ async function main() {
         }
 
         // Index the data and setup the search (your existing code can go here)
-         // Index the data
-         const idx = lunr(function () {
+        // Index the data
+        const idx = lunr(function () {
             this.ref('id');
-            this.field('Album');
-            this.field('Album_Picture');
-            this.field('Track_Number');
-            this.field('Track_Title');
-            this.field('Start Time');
-            this.field('End Time');
+            //this.field('Album');
+            //this.field('Album_Picture');
+            //this.field('Track_Number');
+            //this.field('Track_Title');
+            //this.field('Start Time');
+            //this.field('End Time');
             this.field('Speaker');
             this.field('Text');
 
@@ -69,7 +69,7 @@ async function main() {
                 this.add(doc);
             }, this);
 
-            console.log("Indexing complete.");
+            console.log("Indexing speakers and text are complete.");
         });
 
         // Set up the search input listener
@@ -100,7 +100,7 @@ async function main() {
 
                     const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
                     const subtitleItemLi = document.createElement('li');
-                    subtitleItemLi.innerHTML = `${matchedDoc.Speaker}: ${matchedDoc.Text}`;
+                    subtitleItemLi.innerHTML = `${matchedDoc.Speaker}: "${matchedDoc.Text}"`;
                     subtitleItem.appendChild(subtitleItemLi); // Append the subtitle item to the ul
 
                     albumAndTitleItem.appendChild(subtitleItem); // Append the ul to the albumAndTitleItem
