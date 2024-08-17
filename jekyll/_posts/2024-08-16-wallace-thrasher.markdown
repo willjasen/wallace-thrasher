@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "testing lunr.js"
+title:  "wallace-thrasher"
 date:   2024-08-16 18:13:42 -0400
 categories: lunr search
 ---

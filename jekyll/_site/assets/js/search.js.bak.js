@@ -1,30 +1,19 @@
-async function fetchData(path) {
-    try {
-        const response = await fetch(path);
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
-
-async function main() {
-    try {
-        const data = await fetchData('/assets/data.json');
-
+// Load the search index
+fetch('/assets/data.json')
+    .then(response => response.json())
+    .then(function(data) {
+        
         let flatData = [];
 
-        // Iterate through each album
-        for (const albumKey of Object.keys(data)) {
+        // Iterate through each track
+        Object.keys(data).forEach(albumKey => {
             const album = data[albumKey];
 
-            // Use for...of loop to handle async fetchData calls
-            for (const track of album.Tracks) {
-                const trackData = await fetchData(track.Track_JSONPath); // Await the fetchData call
-                
-                for (const subtitleKey of Object.keys(trackData)) {
-                    const subtitle = trackData[subtitleKey];
-
+            /* THIS PART WORKS */
+            // For each album, track, and subtitle - flatten the structure
+            /*album.Tracks.forEach(track => {
+                track.Subtitles.forEach(subtitle => {
+                    //console.log(track.Track_Title);
                     flatData.push({
                         id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
                         Album: album.Album,
@@ -36,16 +25,38 @@ async function main() {
                         StartTime: subtitle["Start Time"],
                         EndTime: subtitle["End Time"]
                     });
-                }
-            }
-        }
+                }) 
+            });*/
 
-        // You can now use the flatData for further processing or indexing
+            album.Tracks.forEach(track => {
+                fetch(track.Track_JSONPath)
+                    .then(response => response.json())
+                    .then(function(trackData) {
+                        Object.keys(trackData).forEach(trackKey => {
+                            const subtitle = trackData[trackKey];
+                            console.log(track.Track_Title);
+                            //console.log(subtitle);
+
+                            flatData.push({
+                                id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
+                                Album: album.Album,
+                                Album_Picture: album.Album_Picture,
+                                Track_Number: track.Track_Number,
+                                Track_Title: track.Track_Title,
+                                Speaker: subtitle.Speaker,
+                                Text: subtitle.Text,
+                                StartTime: subtitle["Start Time"],
+                                EndTime: subtitle["End Time"]
+                            });
+                        });
+                    });
+            });
+        });
+
         console.log(flatData);
 
-        // Index the data and setup the search (your existing code can go here)
-         // Index the data
-         const idx = lunr(function () {
+        // Index the data
+        const idx = lunr(function () {
             this.ref('id');
             this.field('Album');
             this.field('Album_Picture');
@@ -61,6 +72,8 @@ async function main() {
                 console.log("Tokenizing:", token.toString());
                 return token;
             });*/
+
+            
 
             flatData.forEach(function (doc) {
                 //console.log("Indexing:", doc);
@@ -108,11 +121,4 @@ async function main() {
             }
             
         });
-
-    } catch (error) {
-        console.error('Error in main function:', error);
-    }
-}
-
-// Call the main function
-main();
+    });

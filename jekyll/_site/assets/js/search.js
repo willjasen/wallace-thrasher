@@ -1,17 +1,30 @@
-// Load the search index
-fetch('/assets/data.json')
-    .then(response => response.json())
-    .then(function(data) {
-        
+async function fetchData(path) {
+    try {
+        const response = await fetch(path);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+async function main() {
+    try {
+        const data = await fetchData('/assets/data.json');
+
         let flatData = [];
 
-        // Iterate through each track
-        Object.keys(data).forEach(albumKey => {
+        // Iterate through each album
+        for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
 
-            // For each album, track, and subtitle - flatten the structure
-            album.Tracks.forEach(track => {
-                track.Subtitles.forEach(subtitle => {
+            // Use for...of loop to handle async fetchData calls
+            for (const track of album.Tracks) {
+                const trackData = await fetchData(track.Track_JSONPath); // Await the fetchData call
+                
+                for (const subtitleKey of Object.keys(trackData)) {
+                    const subtitle = trackData[subtitleKey];
+
                     flatData.push({
                         id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
                         Album: album.Album,
@@ -23,14 +36,16 @@ fetch('/assets/data.json')
                         StartTime: subtitle["Start Time"],
                         EndTime: subtitle["End Time"]
                     });
-                })
-                
-            });
+                }
+            }
+        }
 
-        });
+        // You can now use the flatData for further processing or indexing
+        console.log(flatData);
 
-        // Index the data
-        const idx = lunr(function () {
+        // Index the data and setup the search (your existing code can go here)
+         // Index the data
+         const idx = lunr(function () {
             this.ref('id');
             this.field('Album');
             this.field('Album_Picture');
@@ -93,4 +108,11 @@ fetch('/assets/data.json')
             }
             
         });
-    });
+
+    } catch (error) {
+        console.error('Error in main function:', error);
+    }
+}
+
+// Call the main function
+main();
