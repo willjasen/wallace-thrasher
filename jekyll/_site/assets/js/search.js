@@ -1,5 +1,5 @@
 // Load the search index
-fetch('/assets/Booper.json')
+fetch('/assets/json/Booper.json')
     .then(response => response.json())
     .then(function(data) {
         const idx = lunr(function () {
