@@ -99,7 +99,7 @@ async function main() {
                         <a href="/assets/png/${matchedDoc.Album_Picture}">
                             <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                         </a>
-                        <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i>
+                        <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i> @ <small>${matchedDoc.StartTime}</small>
                     `;
 
                     const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
