@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "wallace-thrasher"
+title:  "big-winner"
 date:   2024-08-16 18:13:42 -0400
 categories: lunr search
 ---

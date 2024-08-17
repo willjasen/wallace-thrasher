@@ -47,6 +47,8 @@ async function main() {
 
         // Index the data and setup the search (your existing code can go here)
         // Index the data
+        const startTimeInMilliseconds = Date.now();
+        console.log("Indexing...");
         const idx = lunr(function () {
             this.ref('id');
             //this.field('Album');
@@ -69,7 +71,9 @@ async function main() {
                 this.add(doc);
             }, this);
 
+            const endTimeInMilliseconds = Date.now();
             console.log("Indexing speakers and text are complete.");
+            console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds."); 
         });
 
         // Set up the search input listener
