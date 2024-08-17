@@ -40,9 +40,6 @@ async function main() {
             }
         }
 
-        // You can now use the flatData for further processing or indexing
-        console.log(flatData);
-
         // Index the data and setup the search (your existing code can go here)
          // Index the data
          const idx = lunr(function () {
@@ -93,7 +90,7 @@ async function main() {
                         <a href="/assets/png/${matchedDoc.Album_Picture}">
                             <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                         </a>
-                        <strong>${matchedDoc.Album}</strong> - ${matchedDoc.Track_Title}
+                        <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i>
                     `;
 
                     const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
