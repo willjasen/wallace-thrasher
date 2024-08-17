@@ -1,3 +1,6 @@
+/*
+    This function retrieves a JSON document from a given path
+*/
 async function fetchData(path) {
     try {
         const response = await fetch(path);
@@ -8,10 +11,12 @@ async function fetchData(path) {
     }
 }
 
+/*
+    This is the main function to execute
+*/
 async function main() {
     try {
         const data = await fetchData('/assets/data.json');
-
         let flatData = [];
 
         // Iterate through each album
