@@ -1,5 +1,5 @@
 # wallace-thrasher
-codename for secret website project for a man named artie yamamoto
+codename for a secret website project involving the works of a man named artie yamamoto
 
 you can call me stretchie
 

@@ -58,3 +58,11 @@ encoding: utf-8
 collections:
   tracks:
     output: true
+    permalink: /tracks/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: tracks
+    values:
+      layout: track
