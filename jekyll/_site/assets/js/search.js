@@ -136,11 +136,13 @@ if (document.querySelector('#speakers-search-input')) {
             results.forEach(function (result) {
                 const matchedDoc = subtitlesData.find(doc => doc.id === result.ref);
 
-                if (matchedDoc && matchedDoc.Speaker.includes(query)) {
+                //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
                     const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                    console.log("Matched a doc, here's a key:", key);
 
                     // Add to Set only if the combination isn't already added
                     if (!tracksWithSpeaker.has(key)) {
+                        //console.log("Adding a key:", key);
                         tracksWithSpeaker.add(key);
 
                         // Display the result
@@ -148,7 +150,7 @@ if (document.querySelector('#speakers-search-input')) {
                         resultItem.textContent = `Track: ${matchedDoc.Track_Title}`;
                         resultList.appendChild(resultItem);
                     }
-                }
+                //}
             });
 
             // Display the count of unique track-speaker combinations
