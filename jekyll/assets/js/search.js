@@ -25,7 +25,8 @@ async function main() {
             const album = data[albumKey];
 
             for (const track of album.Tracks) {
-                const trackData = await fetchData(track.Track_JSONPath);
+                const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                const trackData = await fetchData(jsonPath);
 
                 for (const subtitleKey of Object.keys(trackData)) {
                     const subtitle = trackData[subtitleKey];
@@ -44,56 +45,33 @@ async function main() {
                 }
             }
         }
-        //console.log(dataStructure);
 
-        // Index the data and keep a timer of how long it takes
-        let startTimeInMilliseconds = Date.now();
-        const idx = lunr(function () {
-            this.ref('id');
-            //this.field('Album');
-            //this.field('Album_Picture');
-            //this.field('Track_Number');
-            //this.field('Track_Title');
-            //this.field('Start Time');
-            //this.field('End Time');
-            //this.field('Speaker');
-            this.field('Text');
+        // Function to index a search based on a field
+        function indexOnField(indexField) {
+            let startTimeInMilliseconds = Date.now();
+            const idx = lunr(function () {
+                this.ref('id');
+                this.field(indexField);
 
-            dataStructure.forEach(function (doc) {
-                //console.log("Indexing:", doc);
-                this.add(doc);
-            }, this);
-        });
-        let endTimeInMilliseconds = Date.now();
-        console.log("Indexing subtitles took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+                dataStructure.forEach(function (doc) {
+                    this.add(doc);
+                }, this);
+            });
+            let endTimeInMilliseconds = Date.now();
+            console.log("Indexing " + indexField + " took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            return idx;
+        };
 
-        // Index the data and keep a timer of how long it takes
-        startTimeInMilliseconds = Date.now();
-        const idx2 = lunr(function () {
-            this.ref('id');
-            //this.field('Album');
-            //this.field('Album_Picture');
-            //this.field('Track_Number');
-            //this.field('Track_Title');
-            //this.field('Start Time');
-            //this.field('End Time');
-            this.field('Speaker');
-            //this.field('Text');
+        // Create the search indexes
+        const idxText = indexOnField('Text');
+        const idxSpeaker = indexOnField('Speaker');
 
-            dataStructure.forEach(function (doc) {
-                //console.log("Indexing:", doc);
-                this.add(doc);
-            }, this);
-        });
-        endTimeInMilliseconds = Date.now();
-        console.log("Indexing speakers took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
-
-        // Set up the subititles search input listener
+        // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
                 if (this.value != "") {
                     const query = this.value;
-                    const results = idx.search(query);
+                    const results = idxText.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
 
@@ -107,7 +85,6 @@ async function main() {
 
                         resultCount++;
                         const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
-                        //console.log("Matched Document:", matchedDoc);
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
@@ -135,7 +112,7 @@ async function main() {
             document.querySelector('#speakers-search-input').addEventListener('input', function () {
                 if (this.value.trim() !== "") {
                     const query = this.value.trim();
-                    const results = idx2.search(query);
+                    const results = idxSpeaker.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
 
@@ -152,16 +129,14 @@ async function main() {
 
                         //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
                         const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
-                        //console.log("Matched a doc, here's a key:", key);
 
                         // Add to Set only if the combination isn't already added
                         if (!tracksWithSpeaker.has(key)) {
-                            //console.log("Adding a key:", key);
                             tracksWithSpeaker.add(key);
 
                             // Display the result
                             const resultItem = document.createElement('li');
-                            resultItem.textContent = `Speaker: ${matchedDoc.Speaker} -- Track: ${matchedDoc.Track_Title}`;
+                            resultItem.textContent = `${matchedDoc.Speaker} -- ${matchedDoc.Track_Title} -- ${matchedDoc.Album}`;
                             resultList.appendChild(resultItem);
                         }
                         //}
@@ -178,7 +153,6 @@ async function main() {
         function createKey(albumTitle, trackTitle, speaker) {
             return `${albumTitle}-${trackTitle}-${speaker}`;
         }
-
 
     } catch (error) {
         console.error('Error in main function:', error);
