@@ -18,10 +18,12 @@ async function main() {
     try {
         const data = await fetchData('/assets/data.json');
         let subtitlesData = [];
+        let speakersData = [];
 
         // Iterate through each album, track, and subtitle
         for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
+            
 
             for (const track of album.Tracks) {
                 const trackData = await fetchData(track.Track_JSONPath);
@@ -43,12 +45,40 @@ async function main() {
                 }
             }
         }
-
         //console.log(subtitlesData);
+
+        // Iterate through each album, track, and subtitle
+        for (const albumKey of Object.keys(data)) {
+            const album = data[albumKey];
+            
+
+            for (const track of album.Tracks) {
+                const trackData = await fetchData(track.Track_JSONPath);
+                
+                for (const subtitleKey of Object.keys(trackData)) {
+                    const subtitle = trackData[subtitleKey];
+
+                    speakersData.push({
+                        id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
+                        Album: album.Album,
+                        Album_Picture: album.Album_Picture,
+                        Track_Number: track.Track_Number,
+                        Track_Title: track.Track_Title,
+                        Speaker: subtitle.Speaker,
+                        Text: subtitle.Text,
+                        StartTime: subtitle["Start Time"],
+                        EndTime: subtitle["End Time"]
+                    });
+                }
+            }
+        }
+        //console.log(speakersData);
+        
         // Index the data and keep a timer of how long it takes
-        console.log("Indexing...");
-        const startTimeInMilliseconds = Date.now();
-        const idx = lunr(function () {
+        console.log("Indexing subtitles...");
+        let startTimeInMilliseconds = Date.now();
+        
+        let idx = lunr(function () {
             this.ref('id');
             //this.field('Album');
             //this.field('Album_Picture');
@@ -70,9 +100,38 @@ async function main() {
                 this.add(doc);
             }, this);
         });
-        const endTimeInMilliseconds = Date.now();
-        console.log("Indexing speakers and text are complete.");
-        console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds."); 
+        let endTimeInMilliseconds = Date.now();
+        console.log("Indexing subtitles are complete.");
+        console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+
+        // Index the data and keep a timer of how long it takes
+        console.log("Indexing speakers...");
+        startTimeInMilliseconds = Date.now();
+        idx = lunr(function () {
+            this.ref('id');
+            //this.field('Album');
+            //this.field('Album_Picture');
+            //this.field('Track_Number');
+            //this.field('Track_Title');
+            //this.field('Start Time');
+            //this.field('End Time');
+            this.field('Speaker');
+            //this.field('Text');
+
+            // Custom pipeline function to inspect tokens
+            /*this.pipeline.before(lunr.trimmer, function (token) {
+                console.log("Tokenizing:", token.toString());
+                return token;
+            });*/
+
+            speakersData.forEach(function (doc) {
+                //console.log("Indexing:", doc);
+                this.add(doc);
+            }, this);
+        });
+        endTimeInMilliseconds = Date.now();
+        console.log("Indexing speakers are complete.");
+        console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
 
         // Set up the subititles search input listener
         if (document.querySelector('#subtitles-search-input')) {
@@ -134,7 +193,7 @@ if (document.querySelector('#speakers-search-input')) {
 
             // Display search results
             results.forEach(function (result) {
-                const matchedDoc = subtitlesData.find(doc => doc.id === result.ref);
+                const matchedDoc = speakersData.find(doc => doc.id === result.ref);
 
                 //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
                     const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
@@ -147,7 +206,7 @@ if (document.querySelector('#speakers-search-input')) {
 
                         // Display the result
                         const resultItem = document.createElement('li');
-                        resultItem.textContent = `Track: ${matchedDoc.Track_Title}`;
+                        resultItem.textContent = `Speaker: ${matchedDoc.Speaker} -- Track: ${matchedDoc.Track_Title}`;
                         resultList.appendChild(resultItem);
                     }
                 //}
