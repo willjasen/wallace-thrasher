@@ -15,11 +15,20 @@ permalink: /albums/
 
 <h3>Tracks</h3>
 <ul>
-  {% for track in album.Tracks %}
-    <li>
-      <strong>{{ track.Track_Number }}: {{ track.Track_Title }}</strong>
-      <br>
-      <!-- <a href="{{ track.Track_JSONPath }}" target="_blank">View Track JSON</a> -->
-    </li>
+  {% for track_json in album.Tracks %}
+
+    {% assign track_number = track_json.Track_Number %}
+    {% assign matched_track = site.tracks | where: "track_number", track_number | first %}
+
+    {% if matched_track %}
+      <li>
+        <strong>{{ track_json.Track_Number }}: </strong>
+        <a href="{{ matched_track.url }}">{{ track_json.Track_Title }}</a>
+      </li>
+    {% else %}
+      <li>{{ track_json.Track_Number }}: {{ track_json.Track_Title }}</li>
+    {% endif %}
+
+    
   {% endfor %}
 </ul>

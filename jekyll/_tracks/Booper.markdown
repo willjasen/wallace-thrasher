@@ -1,21 +1,23 @@
 ---
 layout: default
-title: Tracks
-permalink: /tracks/
+title: Booper
+album: Best Before '24
+permalink: /booper/
+track_number: "9"
 ---
 
 {% assign album = site.data.albums.Albums %}
-{% assign trackBooper = site.data.Booper %}
+{% assign track = site.data.Booper %}
 
 <h2>Album: {{ album.Album }}</h2>
 <h3>Year: {{ album.Year }}</h3>
 <p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
 
-<h3>Track: Booper</h3>
+<h3>Track: {{ page.title }}</h3>
 <ul>
-  {% for trackTest in trackBooper %}
+  {% for trackText in track %}
     <li>
-      <strong>{{ trackTest.Speaker }}:</strong> {{ trackTest.Text }}
+      <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}
       <br>
     </li>
   {% endfor %}
