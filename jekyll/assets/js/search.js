@@ -24,7 +24,6 @@ async function main() {
         for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
             
-
             for (const track of album.Tracks) {
                 const trackData = await fetchData(track.Track_JSONPath);
                 
@@ -51,7 +50,6 @@ async function main() {
         for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
             
-
             for (const track of album.Tracks) {
                 const trackData = await fetchData(track.Track_JSONPath);
                 
@@ -75,10 +73,9 @@ async function main() {
         //console.log(speakersData);
         
         // Index the data and keep a timer of how long it takes
-        console.log("Indexing subtitles...");
         let startTimeInMilliseconds = Date.now();
         
-        let idx = lunr(function () {
+        const idx = lunr(function () {
             this.ref('id');
             //this.field('Album');
             //this.field('Album_Picture');
@@ -101,13 +98,11 @@ async function main() {
             }, this);
         });
         let endTimeInMilliseconds = Date.now();
-        console.log("Indexing subtitles are complete.");
-        console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+        console.log("Indexing subtitles took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
 
         // Index the data and keep a timer of how long it takes
-        console.log("Indexing speakers...");
         startTimeInMilliseconds = Date.now();
-        idx = lunr(function () {
+        const idx2 = lunr(function () {
             this.ref('id');
             //this.field('Album');
             //this.field('Album_Picture');
@@ -130,8 +125,7 @@ async function main() {
             }, this);
         });
         endTimeInMilliseconds = Date.now();
-        console.log("Indexing speakers are complete.");
-        console.log("Indexing took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+        console.log("Indexing speakers took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
 
         // Set up the subititles search input listener
         if (document.querySelector('#subtitles-search-input')) {
@@ -180,9 +174,9 @@ if (document.querySelector('#speakers-search-input')) {
     document.querySelector('#speakers-search-input').addEventListener('input', function () {
         if(this.value.trim() !== "") {
             const query = this.value.trim();
-            const results = idx.search(query);
-            console.log("Search query:", query);
-            console.log("Search results:", results);
+            const results = idx2.search(query);
+            //console.log("Search query:", query);
+            //console.log("Search results:", results);
 
             // Clear previous results
             const resultList = document.querySelector('#speakers-search-results');
@@ -197,7 +191,7 @@ if (document.querySelector('#speakers-search-input')) {
 
                 //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
                     const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
-                    console.log("Matched a doc, here's a key:", key);
+                    //console.log("Matched a doc, here's a key:", key);
 
                     // Add to Set only if the combination isn't already added
                     if (!tracksWithSpeaker.has(key)) {
