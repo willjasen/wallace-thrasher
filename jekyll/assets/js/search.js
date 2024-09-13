@@ -88,9 +88,7 @@ async function main() {
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
-                            <a href="/assets/png/${matchedDoc.Album_Picture}">
-                                <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
-                            </a>
+                            <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i><small> @ ${matchedDoc.StartTime}</small>
                         `;
 
