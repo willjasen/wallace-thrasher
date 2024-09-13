@@ -8,6 +8,7 @@ to fix:
 - energy star (missing a small section)
 - star people (needs review, especially during 'star people' music background)
 - perma-tease (fix index 59)
+- ram (fix index 16), 30
 
 mostly completed:
 - best before '24 medley
