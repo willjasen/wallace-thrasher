@@ -23,10 +23,10 @@ async function main() {
         // Iterate through each album, track, and subtitle
         for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
-            
+
             for (const track of album.Tracks) {
                 const trackData = await fetchData(track.Track_JSONPath);
-                
+
                 for (const subtitleKey of Object.keys(trackData)) {
                     const subtitle = trackData[subtitleKey];
 
@@ -49,10 +49,10 @@ async function main() {
         // Iterate through each album, track, and subtitle
         for (const albumKey of Object.keys(data)) {
             const album = data[albumKey];
-            
+
             for (const track of album.Tracks) {
                 const trackData = await fetchData(track.Track_JSONPath);
-                
+
                 for (const subtitleKey of Object.keys(trackData)) {
                     const subtitle = trackData[subtitleKey];
 
@@ -71,10 +71,10 @@ async function main() {
             }
         }
         //console.log(speakersData);
-        
+
         // Index the data and keep a timer of how long it takes
         let startTimeInMilliseconds = Date.now();
-        
+
         const idx = lunr(function () {
             this.ref('id');
             //this.field('Album');
@@ -130,24 +130,24 @@ async function main() {
         // Set up the subititles search input listener
         if (document.querySelector('#subtitles-search-input')) {
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
-                if(this.value != "") {
+                if (this.value != "") {
                     const query = this.value;
                     const results = idx.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
-    
+
                     // Clear previous results
                     const resultList = document.querySelector('#subtitles-search-results');
                     resultList.innerHTML = '';
-    
+
                     // Display search results
                     let resultCount = 0;
                     results.forEach(function (result) {
-    
+
                         resultCount++;
                         const matchedDoc = subtitlesData.find(doc => doc.id === result.ref);
                         //console.log("Matched Document:", matchedDoc);
-    
+
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
                             <a href="/assets/png/${matchedDoc.Album_Picture}">
@@ -155,12 +155,12 @@ async function main() {
                             </a>
                             <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i><small> @ ${matchedDoc.StartTime}</small>
                         `;
-    
+
                         const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
                         const subtitleItemLi = document.createElement('li');
                         subtitleItemLi.innerHTML = `${matchedDoc.Speaker}: "${matchedDoc.Text}"`;
                         subtitleItem.appendChild(subtitleItemLi); // Append the subtitle item to the ul
-    
+
                         albumAndTitleItem.appendChild(subtitleItem); // Append the ul to the albumAndTitleItem
                         resultList.appendChild(albumAndTitleItem); // Finally, append the albumAndTitleItem to the resultList
                     });
@@ -168,55 +168,55 @@ async function main() {
                 }
             });
         }
-        
+
         // Set up the speakers search input listener
-if (document.querySelector('#speakers-search-input')) {
-    document.querySelector('#speakers-search-input').addEventListener('input', function () {
-        if(this.value.trim() !== "") {
-            const query = this.value.trim();
-            const results = idx2.search(query);
-            //console.log("Search query:", query);
-            //console.log("Search results:", results);
+        if (document.querySelector('#speakers-search-input')) {
+            document.querySelector('#speakers-search-input').addEventListener('input', function () {
+                if (this.value.trim() !== "") {
+                    const query = this.value.trim();
+                    const results = idx2.search(query);
+                    //console.log("Search query:", query);
+                    //console.log("Search results:", results);
 
-            // Clear previous results
-            const resultList = document.querySelector('#speakers-search-results');
-            resultList.innerHTML = '';
+                    // Clear previous results
+                    const resultList = document.querySelector('#speakers-search-results');
+                    resultList.innerHTML = '';
 
-            // Set to store the unique track and speaker combinations
-            let tracksWithSpeaker = new Set();
+                    // Set to store the unique track and speaker combinations
+                    let tracksWithSpeaker = new Set();
 
-            // Display search results
-            results.forEach(function (result) {
-                const matchedDoc = speakersData.find(doc => doc.id === result.ref);
+                    // Display search results
+                    results.forEach(function (result) {
+                        const matchedDoc = speakersData.find(doc => doc.id === result.ref);
 
-                //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
-                    const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
-                    //console.log("Matched a doc, here's a key:", key);
+                        //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
+                        const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                        //console.log("Matched a doc, here's a key:", key);
 
-                    // Add to Set only if the combination isn't already added
-                    if (!tracksWithSpeaker.has(key)) {
-                        //console.log("Adding a key:", key);
-                        tracksWithSpeaker.add(key);
+                        // Add to Set only if the combination isn't already added
+                        if (!tracksWithSpeaker.has(key)) {
+                            //console.log("Adding a key:", key);
+                            tracksWithSpeaker.add(key);
 
-                        // Display the result
-                        const resultItem = document.createElement('li');
-                        resultItem.textContent = `Speaker: ${matchedDoc.Speaker} -- Track: ${matchedDoc.Track_Title}`;
-                        resultList.appendChild(resultItem);
-                    }
-                //}
+                            // Display the result
+                            const resultItem = document.createElement('li');
+                            resultItem.textContent = `Speaker: ${matchedDoc.Speaker} -- Track: ${matchedDoc.Track_Title}`;
+                            resultList.appendChild(resultItem);
+                        }
+                        //}
+                    });
+
+                    // Display the count of unique track-speaker combinations
+                    const trackCount = tracksWithSpeaker.size;
+                    resultList.innerHTML += `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
+                }
             });
-
-            // Display the count of unique track-speaker combinations
-            const trackCount = tracksWithSpeaker.size;
-            resultList.innerHTML += `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
         }
-    });
-}
 
-// Function to create a unique key
-function createKey(albumTitle, trackTitle, speaker) {
-    return `${albumTitle}-${trackTitle}-${speaker}`;
-}
+        // Function to create a unique key
+        function createKey(albumTitle, trackTitle, speaker) {
+            return `${albumTitle}-${trackTitle}-${speaker}`;
+        }
 
 
     } catch (error) {
