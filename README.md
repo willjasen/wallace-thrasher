@@ -10,6 +10,8 @@ to fix:
 - perma-tease (fix index 59)
 - ram (fix index 16, 30)
 - hoho (fix index 71, 74)
+- Best Before '24 Theme 1 (fix speakers)
+- Cameleopard (fix speakers)
 
 mostly completed:
 - best before '24 medley
@@ -18,3 +20,7 @@ mostly completed:
 - multi-harry
 - booper
 - body art flipout
+
+to add:
+- post-a-cappella (file too large)
+- Best Before '24 Theme 2
