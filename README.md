@@ -12,6 +12,7 @@ to fix:
 - hoho (fix index 71, 74)
 - Best Before '24 Theme 1 (fix speakers)
 - Cameleopard (fix speakers)
+- Best Before '24 Interlude (fix speakers)
 
 mostly completed:
 - best before '24 medley
