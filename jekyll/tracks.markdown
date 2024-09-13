@@ -1,25 +1,22 @@
 ---
 layout: default
-title: Albums
-permalink: /albums/
+title: Tracks
+permalink: /tracks/
 ---
 
-<h1>{{ page.title }}</h1>
-
 {% assign album = site.data.albums.Albums %}
+{% assign trackBooper = site.data.Booper %}
 
 <h2>Album: {{ album.Album }}</h2>
 <h3>Year: {{ album.Year }}</h3>
 <p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
 
-
-<h3>Tracks</h3>
+<h3>Track: Booper</h3>
 <ul>
-  {% for track in album.Tracks %}
+  {% for trackTest in trackBooper %}
     <li>
-      <strong>{{ track.Track_Number }}: {{ track.Track_Title }}</strong>
+      <strong>{{ trackTest.Speaker }}:</strong> {{ trackTest.Text }}
       <br>
-      <!-- <a href="{{ track.Track_JSONPath }}" target="_blank">View Track JSON</a> -->
     </li>
   {% endfor %}
 </ul>
