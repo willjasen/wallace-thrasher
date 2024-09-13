@@ -2,9 +2,11 @@
 layout: default
 ---
 
+{% assign album = site.data.albums.Albums %}
+
 <h1>Tracks</h1>
 <ul>
-  {% for track in site.data.tracks %}
+  {% for track in album %}
     <li>
       <a href="{{ '/tracks/' | append: track.title | slugify | append: '/' }}">{{ track.title }}</a>
     </li>
