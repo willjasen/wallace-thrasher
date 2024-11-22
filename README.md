@@ -10,7 +10,7 @@ to fix:
 - perma-tease (fix index 59)
 - ram (fix index 16, 30)
 - hoho (fix index 71, 74)
-- Best Before '24 Theme 1 (fix speakers)
+- Best Before '24 Theme 1 (ensure audio alignment)
 - Cameleopard (fix speakers)
 - Best Before '24 Interlude (fix speakers)
 
