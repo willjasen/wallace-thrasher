@@ -11,7 +11,7 @@ to fix:
 - ram (fix index 16, 30)
 - hoho (fix index 71, 74)
 - Best Before '24 Theme 1 (ensure audio alignment)
-- Cameleopard (fix speakers)
+- Cameleopard (unsure of speakers, but text has been reviewed)
 - Best Before '24 Interlude (fix speakers)
 
 mostly completed:
