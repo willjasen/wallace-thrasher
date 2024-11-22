@@ -4,6 +4,7 @@ codename for a secret website project involving the works of a man named artie y
 you can call me stretchie
 
 to fix:
+- post-a-cappella (the "boo-boo-dickit" sections)
 - victor's mixup
 - energy star (missing a small section)
 - star people (needs review, especially during 'star people' music background)
@@ -24,4 +25,4 @@ mostly completed:
 - Best Before '24 Theme 2
 
 to add:
-- post-a-cappella (file too large)
+ (file too large)
