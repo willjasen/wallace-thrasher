@@ -18,7 +18,6 @@ module Jekyll
         doc = Document.new(path, { :site => site, :collection => site.collections['albums'] })
         doc.data['album'] = album_data['album']
         doc.data['year'] = album_data['year']
-
         doc
       end      
     end

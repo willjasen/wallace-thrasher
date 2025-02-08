@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Albums2
-permalink: /albums2/
+title: Albums
+permalink: /albums/
 ---
 
 {% for album in site.data.albums.Albums %}
