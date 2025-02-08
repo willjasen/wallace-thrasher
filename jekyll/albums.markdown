@@ -6,7 +6,7 @@ permalink: /albums/
 
 <h1>{{ page.title }}</h1>
 
-{% assign album = site.data.albums.Albums %}
+{% for album in site.data.albums.Albums %}
 
 <h2>Album: {{ album.Album }}</h2>
 <h3>Year: {{ album.Year }}</h3>
@@ -26,3 +26,10 @@ permalink: /albums/
    
   {% endfor %}
 </ul>
+
+{% endfor %}
+
+
+
+
+
