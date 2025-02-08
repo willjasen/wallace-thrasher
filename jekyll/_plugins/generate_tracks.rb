@@ -18,7 +18,7 @@ module Jekyll
         filename = "#{slug}.md"
         path = File.join(site.source, '_tracks', filename)
         doc = Document.new(path, { :site => site, :collection => site.collections['tracks'] })
-        doc.data['title'] = track_data['track_title']
+        doc.data['track_title'] = track_data['track_title']
         doc.data['track_number'] = track_data['track_number']
         doc
       end      

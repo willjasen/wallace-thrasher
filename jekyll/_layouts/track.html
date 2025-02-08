@@ -5,12 +5,43 @@ layout: default
 {% assign matching_album = site.data.albums.Albums | where_exp: "Album", "Tracks" %}
 {% assign matching_track = matching_album.Tracks | where: "Track_Title", page.title | first %}
 
-{% assign track_slug = page.title | slugify %}
+{% assign track_slug = page.track_title | slugify %}
 {% assign track = site.data[track_slug] %}
 
-<p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
+<p><img src="/assets/png/{{ matching_album.Album_Picture }}" alt="{{ matching_album.Album }}" width="150" height="150"></p>
 
-<h3>Track: {{ page.title }}</h3>
+<h3>Track {{ page.track_number }}: {{ page.track_title }}</h3>
+
+<!-- <input type="file" id="usb" webkitdirectory directory/>
+<script>
+  const usb = document.getElementById('usb');
+  if (usb.webkitdirectory) {
+    // The input element supports selecting directories, so we can add an event listener to it
+    usb.addEventListener('change', (event) => {
+      const files = event.target.files;
+      for (let i = 0; i < files.length; i++) {
+        console.log(files[i].webkitRelativePath); // Log the name of each file in the selected directory
+      }
+    });
+  } else {
+    // The input element does not support selecting directories, so we can't add an event listener to it
+  }
+</script> -->
+
+{% assign usb_directory = matching_track.USB_Directory %}
+{% assign usb_filename = matching_track.USB_Filename %}
+
+{{matching_album}}
+{{matching_track}}
+{{usb_directory}}
+{{usb_filename}}
+
+{% if usb_directory %}
+  {% if usb_filename %}
+    {% include embed-audio.html src="/assets/usb/{{usb_directory}}/{{usb_filename}}" %}
+  {% endif %}
+{% endif %} 
+
 <ul>
   {% for trackText in track %}
     <li>
