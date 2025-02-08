@@ -6,11 +6,25 @@ permalink: /albums/
 
 {% for album in site.data.albums.Albums %}
 
-  <h2>Album: {{ album.Album }}</h2>
-  <h3>Year: {{ album.Year }}</h3>
-  <p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
+  <div class="album-info" style="display: flex; align-items: center;">
+      <h2 style="margin-bottom: 10px;">{{ album.Album }} ({{ album.Year }})</h2>
+      <div class="image-container" style="margin-left: 50px;">
+          <img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150">
+      </div>
+  </div>
 
-  <h3>Tracks</h3>
+  <style>
+      .album-info {
+          display: flex;
+          align-items: center;
+      }
+
+      .image-container {
+          margin-right: 20px; /* Adds some space between the image and text for better readability */
+      }
+  </style>
+
+  <p>
   <ul>
     {% for track_json in album.Tracks %}
 
@@ -37,6 +51,7 @@ permalink: /albums/
     
     {% endfor %}
   </ul>
+  </p>
   
 {% endfor %}
 
