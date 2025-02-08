@@ -2,8 +2,11 @@
 layout: default
 ---
 
-{% assign matching_album = site.data.albums.Albums | where_exp: "Album", "Tracks" %}
+{% assign matching_album = site.data.albums.Albums | where_exp: "item", "item.Track == page.track_title" %}
 {% assign matching_track = matching_album.Tracks | where: "Track_Title", page.title | first %}
+
+{{matching_album}}
+{{matching_track}}
 
 {% assign track_slug = page.track_title | slugify %}
 {% assign track = site.data[track_slug] %}
@@ -31,8 +34,6 @@ layout: default
 {% assign usb_directory = matching_track.USB_Directory %}
 {% assign usb_filename = matching_track.USB_Filename %}
 
-{{matching_album}}
-{{matching_track}}
 {{usb_directory}}
 {{usb_filename}}
 
