@@ -59,6 +59,9 @@ collections:
   tracks:
     output: true
     permalink: /tracks/:title/
+  albums:
+    output: true
+    permalink: /albums/:title/
 
 defaults:
   - scope:
@@ -66,3 +69,11 @@ defaults:
       type: tracks
     values:
       layout: track
+  - scope:
+      path: ""
+      type: albums
+    values:
+      layout: album
+
+sass:
+  quiet_deps: true

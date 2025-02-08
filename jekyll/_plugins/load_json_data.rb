@@ -7,9 +7,9 @@ module Jekyll
 
     def generate(site)
       # Load JSON files from /assets/json
-      json_dir = File.join(site.source, 'assets', 'json', 'best-before--24')
+      json_dir = File.join(site.source, 'assets', 'json')
 
-      Dir.glob(File.join(json_dir, '*.json')) do |file|
+      Dir.glob(File.join(json_dir, '**/*.json')) do |file|
         data_key = File.basename(file, '.json')
         json_data = JSON.parse(File.read(file))
         site.data[data_key] = json_data

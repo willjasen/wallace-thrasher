@@ -21,27 +21,32 @@ async function main() {
         let dataStructure = [];
 
         // Iterate through each album, track, and subtitle
-        for (const albumKey of Object.keys(data)) {
-            const album = data[albumKey];
-
-            for (const track of album.Tracks) {
-                const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                const trackData = await fetchData(jsonPath);
-
-                for (const subtitleKey of Object.keys(trackData)) {
-                    const subtitle = trackData[subtitleKey];
-
-                    dataStructure.push({
-                        id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
-                        Album: album.Album,
-                        Album_Picture: album.Album_Picture,
-                        Track_Number: track.Track_Number,
-                        Track_Title: track.Track_Title,
-                        Speaker: subtitle.Speaker,
-                        Text: subtitle.Text,
-                        StartTime: subtitle["Start Time"],
-                        EndTime: subtitle["End Time"]
-                    });
+        for (const albumsKey of Object.keys(data)) {
+            const albums = data[albumsKey];
+            
+            for(const album of albums) {
+                console.log(album);
+                for (const track of album.Tracks) {
+                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    const trackData = await fetchData(jsonPath);
+    
+                    for (const subtitleKey of Object.keys(trackData)) {
+                        const subtitle = trackData[subtitleKey];
+    
+                        dataStructure.push({
+                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
+                            Album: album.Album,
+                            Album_Picture: album.Album_Picture,
+                            Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
+                            Track_Slug: track.Track_Slug,
+                            Track_Title: track.Track_Title,
+                            Speaker: subtitle.Speaker,
+                            Text: subtitle.Text,
+                            StartTime: subtitle["Start Time"],
+                            EndTime: subtitle["End Time"]
+                        });
+                    }
                 }
             }
         }
@@ -89,7 +94,9 @@ async function main() {
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
                             <img src="/assets/png/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
-                            <strong>${matchedDoc.Album}</strong> - <i>${matchedDoc.Track_Title}</i><small> @ ${matchedDoc.StartTime}</small>
+                            <strong>${matchedDoc.Album}</strong> - 
+                            <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
+                            <small> @ ${matchedDoc.StartTime}</small>
                         `;
 
                         const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
@@ -133,9 +140,13 @@ async function main() {
                             tracksWithSpeaker.add(key);
 
                             // Display the result
-                            const resultItem = document.createElement('li');
-                            resultItem.textContent = `${matchedDoc.Speaker} -- ${matchedDoc.Track_Title} -- ${matchedDoc.Album}`;
-                            resultList.appendChild(resultItem);
+                            const albumAndTitleItem = document.createElement('li');
+                            albumAndTitleItem.innerHTML = `
+                                ${matchedDoc.Speaker} -- 
+                                <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                ${matchedDoc.Album}
+                            `;
+                            resultList.appendChild(albumAndTitleItem);
                         }
                         //}
                     });

@@ -4,25 +4,33 @@ title: Albums
 permalink: /albums/
 ---
 
-<h1>{{ page.title }}</h1>
+{% for album in site.data.albums.Albums %}
 
-{% assign album = site.data.albums.Albums %}
+  <div class="album-info" style="display: flex; align-items: center;">
+      <h2 style="margin-bottom: 10px;">
+        <a href="/albums/{{ album.Album_Slug }}">{{ album.Album }} ({{ album.Year }})</a>
+      </h2>
+      <div class="image-container" style="margin-left: 50px;">
+          <img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150">
+      </div>
+  </div>
 
-<h2>Album: {{ album.Album }}</h2>
-<h3>Year: {{ album.Year }}</h3>
-<p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
+  <style>
+      .album-info {
+          display: flex;
+          align-items: center;
+      }
 
-<h3>Tracks</h3>
-<ul>
-  {% for track_json in album.Tracks %}
+      .image-container {
+          margin-right: 20px; /* Adds some space between the image and text for better readability */
+      }
+  </style>
 
-    {% assign track_number = track_json.Track_Number %}
-    {% assign matched_track = site.tracks | where: "track_number", track_number | first %}
+  <p></p>
+  
+{% endfor %}
 
-    <li>
-      <strong>{{ track_json.Track_Number }}: </strong>
-      <a href="{{ matched_track.url }}">{{ track_json.Track_Title }}</a>
-    </li>
-   
-  {% endfor %}
-</ul>
+
+
+
+
