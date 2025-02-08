@@ -23,8 +23,8 @@ permalink: /albums/
         {% assign matched_track = matched_album.tracks | where_exp: "track", "track.track_number == track_number" | first %}
       {% endif %}
 
-      {% assign track_slug = track_title | slugify %}
       {% assign album_slug = album_title | slugify %}
+      {% assign track_slug = track_title | slugify %}
       
       <li>
         <strong>{{ track_json.Track_Number }}: </strong>
