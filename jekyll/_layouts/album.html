@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<!-- Convert the page title to a slug if necessary -->
+{% assign track_slug = page.title | slugify %}
+<!-- Access the track data using the slug -->
+{% assign track = site.data[track_slug] %}
+
+<h2>Album: {{ album.Album }}</h2>
+<h3>Year: {{ album.Year }}</h3>
+  <p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
+<h3>Track: {{ page.title }}</h3>

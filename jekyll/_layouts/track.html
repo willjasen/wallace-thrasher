@@ -2,7 +2,14 @@
 layout: default
 ---
 
-{% assign album = site.data.albums.Albums %}
+{% assign album = site.data.tracks | where: "album", page.title | first %}
+{% if album %}
+  <p>(album found)</p>
+{% else %}
+  <p>(album not found)</p>
+{% endif %}
+
+
 <!-- Convert the page title to a slug if necessary -->
 {% assign track_slug = page.title | slugify %}
 <!-- Access the track data using the slug -->
