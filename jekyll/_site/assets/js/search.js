@@ -21,27 +21,30 @@ async function main() {
         let dataStructure = [];
 
         // Iterate through each album, track, and subtitle
-        for (const albumKey of Object.keys(data)) {
-            const album = data[albumKey];
-
-            for (const track of album.Tracks) {
-                const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                const trackData = await fetchData(jsonPath);
-
-                for (const subtitleKey of Object.keys(trackData)) {
-                    const subtitle = trackData[subtitleKey];
-
-                    dataStructure.push({
-                        id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
-                        Album: album.Album,
-                        Album_Picture: album.Album_Picture,
-                        Track_Number: track.Track_Number,
-                        Track_Title: track.Track_Title,
-                        Speaker: subtitle.Speaker,
-                        Text: subtitle.Text,
-                        StartTime: subtitle["Start Time"],
-                        EndTime: subtitle["End Time"]
-                    });
+        for (const albumsKey of Object.keys(data)) {
+            const albums = data[albumsKey];
+            
+            for(const album of albums) {
+                console.log(album);
+                for (const track of album.Tracks) {
+                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    const trackData = await fetchData(jsonPath);
+    
+                    for (const subtitleKey of Object.keys(trackData)) {
+                        const subtitle = trackData[subtitleKey];
+    
+                        dataStructure.push({
+                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
+                            Album: album.Album,
+                            Album_Picture: album.Album_Picture,
+                            Track_Number: track.Track_Number,
+                            Track_Title: track.Track_Title,
+                            Speaker: subtitle.Speaker,
+                            Text: subtitle.Text,
+                            StartTime: subtitle["Start Time"],
+                            EndTime: subtitle["End Time"]
+                        });
+                    }
                 }
             }
         }

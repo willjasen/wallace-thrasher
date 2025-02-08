@@ -2,9 +2,11 @@
 layout: default
 ---
 
-{% assign album = site.data.tracks | where: "album", page.title | first %}
+{% assign album = site.data.tracks | where_exp: "album", "tracks" %}
+{% assign track = album.tracks | where: "track_title", page.title | first %}
+
 {% if album %}
-  <p>(album found)</p>
+  <p>(album found) - {{ album.album }} </p>
 {% else %}
   <p>(album not found)</p>
 {% endif %}

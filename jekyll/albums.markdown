@@ -38,7 +38,6 @@ permalink: /albums/
     {% endfor %}
   </ul>
   
-
 {% endfor %}
 
 
