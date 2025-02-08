@@ -2,12 +2,33 @@
 layout: default
 ---
 
-<!-- Convert the page title to a slug if necessary -->
-{% assign track_slug = page.title | slugify %}
-<!-- Access the track data using the slug -->
-{% assign track = site.data[track_slug] %}
+{% assign matching_album = site.data.albums.Albums | where: "Album", page.album | first %}
 
-<h2>Album: {{ album.Album }}</h2>
-<h3>Year: {{ album.Year }}</h3>
-  <p><img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150"></p>
-<h3>Track: {{ page.title }}</h3>
+<div class="album-info" style="display: flex; align-items: center;">
+    <h2 style="margin-bottom: 10px;">{{ matching_album.Album }} ({{ matching_album.Year }})</h2>
+    <div class="image-container" style="margin-left: 50px;">
+        <img src="/assets/png/{{ matching_album.Album_Picture }}" alt="{{ matching_album.Album }}" width="150" height="150">
+    </div>
+</div>
+
+<style>
+    .album-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .image-container {
+        margin-right: 20px; /* Adds some space between the image and text for better readability */
+    }
+</style>
+
+{% for track in matching_album.Tracks %}
+  <li>
+    <strong>{{ track.Track_Number }}: </strong>
+    {% if track %}
+      <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+    {% else %}
+      {{ track.Track_Title }} (track not found)
+    {% endif %}
+  </li>
+{% endfor %}
