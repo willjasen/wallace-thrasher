@@ -6,6 +6,10 @@ you can call me stretchie
 this project uses whisper to have it output subtitle files, which can then be transformed into json files.
 this website is built with the static site generator 'jekyll'
 
+# Converting Subtitles to JSON
+
+i am using [this tool](https://github.com/willjasen/srt-to-json)
+
 ## To-Do's
 
 the to-do list has been moved to [TODO.md](TODO.md)
