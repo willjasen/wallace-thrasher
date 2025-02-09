@@ -5,7 +5,7 @@ layout: default
 {% assign matching_album = site.data.albums.Albums | where_exp: "item", "item.Track == page.track_title" %}
 {% assign matching_track = matching_album.Tracks | where: "Track_Title", page.title | first %}
 
-<!-- This is debug output -->
+<!-- This is debug output more -->
 {{matching_album}}
 {{matching_track}}
 
