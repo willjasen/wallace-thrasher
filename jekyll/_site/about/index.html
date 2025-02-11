@@ -47,9 +47,96 @@
   </header>
 
   <div class="post-content">
-    <p>i need to borrow a broom</p>
+    <p>codename for a website project involving the works of <a href="http://longmontpotioncastle.com/">longmont potion castle</a> - you can call me stretchie</p>
 
-<p>give a ring to <a href="http://longmontpotioncastle.com">longmontpotioncastle.com</a></p>
+<h3 id="backstory">Backstory</h3>
+
+<p>some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?</p>
+
+<p>there are great resources like <a href="https://talkinwhipapedia.fandom.com/">talkin’ whipapedia</a> out there that has detailed info about albums, tracks, their subtitles, and other info, however the data is not indexed and therefore not searchable, at least in a way that can answer my original question. given that i’ve been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.</p>
+
+<h3 id="components">Components</h3>
+
+<p>this website is built with the static site generator <a href="https://jekyllrb.com">jekyll</a>. whisper is utilized to analyze mp3 tracks and have it output subtitle files, which are then transformed into json files. each json file containing a track’s speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, <code class="language-plaintext highlighter-rouge">jekyll build</code> recreates the site’s pages, and then any changes are then pushed here into this repo.</p>
+
+<p>because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser.</p>
+
+<h3 id="converting-tracks-to-subtitles">Converting Tracks to Subtitles</h3>
+
+<p>i am using whisper-webui (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization to output subtitle files (.srt)</p>
+
+<h3 id="converting-subtitles-to-json">Converting Subtitles to JSON</h3>
+
+<p>i am using <a href="https://github.com/willjasen/srt-to-json">this python tool</a> to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs</p>
+
+<h3 id="json-structure-for-albums-and-tracks">JSON Structure for Albums and Tracks</h3>
+
+<p>the main JSON data file resides at <code class="language-plaintext highlighter-rouge">/assets/data.json</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "Albums": [
+    { "Album": "Longmont Potion Castle",
+      "Album_Slug": "longmont-potion-castle",
+      "Album_Picture": "LPC_1.jpg",
+      "Year": 1988,
+      "Tracks": [
+        {
+          "Track_Title": "Longmont Theme 1",
+          "Track_Number": 1,
+          "Track_JSONPath": "longmont-theme-1.json",
+          "Track_Slug": "longmont-theme-1",
+          "Speakers_Adjusted": "false",
+          "Subtitles_Adjusted": "false"
+          "USB_Filename": "longmont-theme-1.mp3",
+          "Whisper_Model": "distil-whisper/distil-large-v3"
+        }
+      ]
+    }
+  ]
+}
+</code></pre></div></div>
+<p>it is possible that the keys <code class="language-plaintext highlighter-rouge">Speakers_Adjusted</code>, <code class="language-plaintext highlighter-rouge">Subtitles_Adjusted</code>, <code class="language-plaintext highlighter-rouge">USB_Filename</code>, and <code class="language-plaintext highlighter-rouge">Whisper_Model</code> may not be present with the <code class="language-plaintext highlighter-rouge">Track</code> object.</p>
+
+<h3 id="json-structure-for-track-subtitles">JSON Structure for Track Subtitles</h3>
+
+<p>the JSON data for each track resides within a folder named as the respective album title’s slug at <code class="language-plaintext highlighter-rouge">/assets/json</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+    {
+        "Index": 1,
+        "Start Time": "00:00:02,140",
+        "End Time": "00:00:02,920",
+        "Speaker": "Woman 1",
+        "Text": "Betty Boop Diner."
+    },
+    {
+        "Index": 2,
+        "Start Time": "00:00:04,008",
+        "End Time": "00:00:08,449",
+        "Speaker": "LPC",
+        "Text": "Hi, can I please get a take-up or a pick-up?"
+    }
+]
+</code></pre></div></div>
+
+<h3 id="under-the-hood">Under The Hood</h3>
+
+<p>when the search pages are accessed, the JSON data is retrieved from the server, then lunr indexes the data so that it becomes searchable. i have noticed that the first time that the website is loaded, the JSON files may take a handful of seconds to retrieve and load (its progress can be seen on the search pages). after the data has been loaded once and subsequently cached, the loading process is much faster.</p>
+
+<p>the key <code class="language-plaintext highlighter-rouge">USB_Filename</code> refers to the respective mp3 file’s name that resides on a “LPC Ultimate Session Bundle” usb drive that are occasionally available for sale via <a href="http://longmontpotioncastle.com/">lpc’s website</a>. this key is planned for a future feature.</p>
+
+<h3 id="how-to-contribute">How to Contribute</h3>
+
+<p>if you’ve read this far and have an interest in contributing to this project - it is welcomed and appreciated!</p>
+
+<p>please refer to <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
+
+<h3 id="to-dos">To-Do’s</h3>
+
+<p>the to-do list has been moved to <a href="https://github.com/willjasen/wallace-thrasher/blob/main/TODO.md">TODO.md</a></p>
+
+<h3 id="licensing">Licensing</h3>
+
+<p>this project is licensed under the <a href="https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt">GPLv3</a>, and this license applies to all past versions and branches of the project.</p>
 
   </div>
 
