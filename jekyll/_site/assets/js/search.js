@@ -12,44 +12,69 @@ async function fetchData(path) {
 }
 
 /*
-    This is the main function to execute
+    This function loads the JSON data and creates a data structure
 */
-async function main() {
-    try {
-        const data = await fetchData('/assets/data.json');
-        console.log("Creating data structure...");
-        let dataStructure = [];
+async function loadData() {
 
-        // Iterate through each album, track, and subtitle
-        for (const albumsKey of Object.keys(data)) {
-            const albums = data[albumsKey];
-            
-            for(const album of albums) {
-                console.log(album);
-                for (const track of album.Tracks) {
-                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                    const trackData = await fetchData(jsonPath);
-    
-                    for (const subtitleKey of Object.keys(trackData)) {
-                        const subtitle = trackData[subtitleKey];
-    
-                        dataStructure.push({
-                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // Unique ID using track key and subtitle index
-                            Album: album.Album,
-                            Album_Picture: album.Album_Picture,
-                            Album_Slug: album.Album_Slug,
-                            Track_Number: track.Track_Number,
-                            Track_Slug: track.Track_Slug,
-                            Track_Title: track.Track_Title,
-                            Speaker: subtitle.Speaker,
-                            Text: subtitle.Text,
-                            StartTime: subtitle["Start Time"],
-                            EndTime: subtitle["End Time"]
-                        });
-                    }
+    console.log("Creating the data structure...");
+    const data = await fetchData('/assets/data.json');
+    let dataStructure = [];
+    let loadingStatus = "Loading";
+    //document.getElementById('loading-status').innerHTML = loadingStatus;
+
+    // Iterate through each album, track, and subtitle
+    for (const albumsKey of Object.keys(data)) {
+        const albums = data[albumsKey];
+        albumsCount = albums.length;
+        
+        for(const album of albums) {
+            console.log(album);
+            for (const track of album.Tracks) {
+                const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                const trackData = await fetchData(jsonPath);
+                for (const subtitleKey of Object.keys(trackData)) {
+                    const subtitle = trackData[subtitleKey];
+                    dataStructure.push({
+                        id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
+                        Album: album.Album,
+                        Album_Picture: album.Album_Picture,
+                        Album_Slug: album.Album_Slug,
+                        Track_Number: track.Track_Number,
+                        Track_Slug: track.Track_Slug,
+                        Track_Title: track.Track_Title,
+                        Speaker: subtitle.Speaker,
+                        Text: subtitle.Text,
+                        StartTime: subtitle["Start Time"],
+                        EndTime: subtitle["End Time"],
+                        Whisper_Model: track.Whisper_Model
+                    });
+                    
+                    // Update loading status after each iteration
+                    /*if (dataStructure.length < albumsCount) {
+                    document.getElementById('loading-status').innerHTML = "Loading...";
+                    } else {
+                    document.getElementById('loading-status').innerHTML = "Completed.";
+                    }*/
                 }
             }
         }
+    }
+
+    return dataStructure;
+}
+
+/*
+    This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
+*/
+async function main() {
+    try {
+
+        // Load the data
+        dataStructure = await loadData();
+        
+        // Set the final loading status value
+        //document.getElementById('loading-status').innerHTML = "Completed";
+        //console.log("Data structure created. Status: " + document.getElementById('loading-status').innerHTML);
 
         // Function to index a search based on a field
         function indexOnField(indexField) {
