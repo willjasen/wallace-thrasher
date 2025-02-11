@@ -11,7 +11,7 @@ permalink: /albums/
         <a href="/albums/{{ album.Album_Slug }}">{{ album.Album }} ({{ album.Year }})</a>
       </h2>
       <div class="image-container" style="margin-left: 50px;">
-          <img src="/assets/png/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150">
+          <img src="/assets/img/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="150" height="150">
       </div>
   </div>
 
