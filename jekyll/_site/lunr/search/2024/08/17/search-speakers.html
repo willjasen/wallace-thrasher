@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="search speakers" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="you can call me stretchie" />
-<meta property="og:description" content="you can call me stretchie" />
+<meta name="description" content="Data is loading..." />
+<meta property="og:description" content="Data is loading..." />
 <link rel="canonical" href="http://localhost:4000/lunr/search/2024/08/17/search-speakers.html" />
 <meta property="og:url" content="http://localhost:4000/lunr/search/2024/08/17/search-speakers.html" />
 <meta property="og:site_name" content="wallace-thrasher" />
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="search speakers" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-17T06:17:00-04:00","datePublished":"2024-08-17T06:17:00-04:00","description":"you can call me stretchie","headline":"search speakers","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/lunr/search/2024/08/17/search-speakers.html"},"url":"http://localhost:4000/lunr/search/2024/08/17/search-speakers.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-08-17T06:17:00-04:00","datePublished":"2024-08-17T06:17:00-04:00","description":"Data is loading...","headline":"search speakers","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/lunr/search/2024/08/17/search-speakers.html"},"url":"http://localhost:4000/lunr/search/2024/08/17/search-speakers.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
@@ -54,12 +54,37 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <script type="javascript">
-    document.getElementById('search_result').innerHTML = idx.search("bright");
+    <div id="status"><img src="/assets/img/loading.gif" id="statusImage" width="100" height="75" /> Data is loading...
+  <script>
+    var intervalId = setInterval(function() {
+      if (dataLoaded) {
+        clearInterval(intervalId);
+        console.log("Data has been loaded.");
+        document.getElementById('status').innerHTML = "<img src=\"/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
+        document.getElementById('status').innerHTML += " Data has been loaded!";
+      }
+    }, 100); // Check every 100ms
   </script>
+</div>
+<script type="javascript">
+  document.getElementById('search_result').innerHTML = idx.search("bright");
+</script>
 
 <p><input type="text" id="speakers-search-input" placeholder="Search..." /></p>
 <ul id="speakers-search-results"></ul>
+
+<style>
+  .loader {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .loader input,
+  .loader ul {
+    opacity: 1 !important;
+  }
+</style>
+
 
   </div><a class="u-url" href="/lunr/search/2024/08/17/search-speakers.html" hidden></a>
 </article>
@@ -91,20 +116,6 @@
         <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
       </div>
 
-  </div>
-
-  <div id="status"><img src="/assets/img/loading.gif" id="statusImage" width="100" height="75" /> Data is loading...</div>
-  <script>
-    console.log("Data loaded: " + dataLoaded);
-    var intervalId = setInterval(function() {
-      if (dataLoaded) {
-        clearInterval(intervalId);
-        console.log("Data has been loaded.");
-        document.getElementById('status').innerHTML = "<img src=\"/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
-        document.getElementById('status').innerHTML += " Data has been loaded!";
-      }
-    }, 100); // Check every 100ms
-  </script>
   </div>
 
 </footer>

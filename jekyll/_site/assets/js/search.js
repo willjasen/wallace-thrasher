@@ -19,8 +19,6 @@ async function loadData() {
     console.log("Creating the data structure...");
     const data = await fetchData('/assets/data.json');
     let dataStructure = [];
-    let loadingStatus = "Loading";
-    //document.getElementById('loading-status').innerHTML = loadingStatus;
 
     // Iterate through each album, track, and subtitle
     for (const albumsKey of Object.keys(data)) {
@@ -48,13 +46,6 @@ async function loadData() {
                         EndTime: subtitle["End Time"],
                         Whisper_Model: track.Whisper_Model
                     });
-                    
-                    // Update loading status after each iteration
-                    /*if (dataStructure.length < albumsCount) {
-                    document.getElementById('loading-status').innerHTML = "Loading...";
-                    } else {
-                    document.getElementById('loading-status').innerHTML = "Completed.";
-                    }*/
                 }
             }
         }
@@ -71,10 +62,6 @@ async function main(callback) {
 
         // Load the data
         dataStructure = await loadData();
-        
-        // Set the final loading status value
-        //document.getElementById('loading-status').innerHTML = "Completed";
-        //console.log("Data structure created. Status: " + document.getElementById('loading-status').innerHTML);
 
         // Function to index a search based on a field
         function indexOnField(indexField) {
@@ -132,7 +119,10 @@ async function main(callback) {
                         albumAndTitleItem.appendChild(subtitleItem); // Append the ul to the albumAndTitleItem
                         resultList.appendChild(albumAndTitleItem); // Finally, append the albumAndTitleItem to the resultList
                     });
-                    resultList.innerHTML += `<br/><div>Subtitles found: ${resultCount}</div>`;
+                    const totalCountContainer = document.createElement('div');
+                    totalCountContainer.style.marginBottom = '25px';
+                    totalCountContainer.innerHTML = `Subtitles found: ${resultCount}`;
+                    resultList.insertBefore(totalCountContainer, resultList.firstChild);
                 }
             });
         }
@@ -153,6 +143,7 @@ async function main(callback) {
                     // Set to store the unique track and speaker combinations
                     let tracksWithSpeaker = new Set();
 
+                    resultsCount=0;
                     // Display search results
                     results.forEach(function (result) {
                         const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
@@ -163,6 +154,7 @@ async function main(callback) {
                         // Add to Set only if the combination isn't already added
                         if (!tracksWithSpeaker.has(key)) {
                             tracksWithSpeaker.add(key);
+                            resultsCount++;
 
                             // Display the result
                             const albumAndTitleItem = document.createElement('li');
@@ -178,7 +170,10 @@ async function main(callback) {
 
                     // Display the count of unique track-speaker combinations
                     const trackCount = tracksWithSpeaker.size;
-                    resultList.innerHTML += `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
+                    const totalCountContainer = document.createElement('div');
+                    totalCountContainer.style.marginBottom = '25px';
+                    totalCountContainer.innerHTML = `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
+                    resultList.insertBefore(totalCountContainer, resultList.firstChild);
                 }
             });
         }
