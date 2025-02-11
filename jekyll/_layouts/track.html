@@ -43,6 +43,17 @@ layout: default
 </style>
 
 <h3 style="text-align: center; margin-top: 20px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
+<h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+  {% if whisper_model_detail %}
+    Model used: {{ whisper_model_detail }}
+  {% endif %}
+</h5>
+<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+  {% if track_speakers_detail %}
+    Speakers adjusted? {{ track_speakers_detail }}
+  {% endif %}
+</h5>
+
 
 <!-- This code is for an audio player -->
 <!-- <input type="file" id="usb" webkitdirectory directory/>
