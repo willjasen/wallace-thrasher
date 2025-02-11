@@ -66,7 +66,7 @@ async function loadData() {
 /*
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
-async function main() {
+async function main(callback) {
     try {
 
         // Load the data
@@ -188,10 +188,18 @@ async function main() {
             return `${albumTitle}-${trackTitle}-${speaker}`;
         }
 
+        callback(true);
+
     } catch (error) {
         console.error('Error in main function:', error);
+        callback(false);
     }
 }
 
 // Execute this program
-main();
+var dataLoaded = false;
+main(function(dataReady) {
+    if (dataReady) {
+      dataLoaded = dataReady;
+    }
+  });

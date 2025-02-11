@@ -87,6 +87,20 @@
 
   </div>
 
+  <div id="status"><img src="/assets/img/loading.gif" id="statusImage" width="100" height="75" /> Data is loading...</div>
+  <script>
+    console.log("Data loaded: " + dataLoaded);
+    var intervalId = setInterval(function() {
+      if (dataLoaded) {
+        clearInterval(intervalId);
+        console.log("Data has been loaded.");
+        document.getElementById('status').innerHTML = "<img src=\"/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
+        document.getElementById('status').innerHTML += " Data has been loaded!";
+      }
+    }, 100); // Check every 100ms
+  </script>
+  </div>
+
 </footer>
 </body>
 
