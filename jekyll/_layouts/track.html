@@ -5,43 +5,44 @@ layout: default
 {% include variables.liquid %}
 {% include album-header.html %}
 
-<!-- Display metadata information about the track as related to this project -->
 <h3 style="text-align: center; margin-top: 20px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
-<h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
-  {% if last_modified_detail %}
-    Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}
-  {% endif %}
-</h5>
-</h5>
-<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-  {% if whisper_model_detail %}
-    Model used: {{ whisper_model_detail }}
-  {% endif %}
-</h5>
-<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-  {% if track_speakers_detail %}
-    Speakers adjusted? {{ track_speakers_detail }}
-  {% endif %}
-</h5>
-<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-  {% if track_subtitles_detail %}
-    Subtitles adjusted? {{ track_subtitles_detail }}
-  {% else %}
-    Subtitles adjusted? false
-  {% endif %}
-</h5>
+
+{% if jekyll.environment != "production" %}
+  <!-- Display metadata information about the track as related to this project -->
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    {% if last_modified_detail %}
+      Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}
+    {% endif %}
+  </h5>
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    {% if whisper_model_detail %}
+      Model used: {{ whisper_model_detail }}
+    {% endif %}
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    {% if track_speakers_detail %}
+      Speakers adjusted? {{ track_speakers_detail }}
+    {% endif %}
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    {% if track_subtitles_detail %}
+      Subtitles adjusted? {{ track_subtitles_detail }}
+    {% else %}
+      Subtitles adjusted? false
+    {% endif %}
+  </h5>
+{% endif %}
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-{% for trackText in track %}
-  <li>
-    <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}
-    <br>
-  </li>
-{% endfor %}
-</ul>
-
-
+  {% for trackText in track %}
+    <li>
+      <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}
+      <br>
+    </li>
+  {% endfor %}
+  </ul>
 
 <!-- This code is for an audio player -->
 <!-- <input type="file" id="usb" webkitdirectory directory/>

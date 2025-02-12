@@ -9,7 +9,7 @@ permalink: /albums/
 
   <div class="album-info" style="display: flex; align-items: center;">
       <div class="image-container" style="margin-left: 50px;">
-          <img src="/assets/img/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="50" height="50">
+          <img src="/assets/img/albums/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="50" height="50">
       </div>
       <h4 style="margin-bottom: 10px;">
         <a href="/albums/{{ album.Album_Slug }}">{{ album.Album }} ({{ album.Year }})</a>
