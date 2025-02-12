@@ -102,7 +102,7 @@ async function main(callback) {
         console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
 
 
-        
+
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
@@ -125,7 +125,7 @@ async function main(callback) {
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
-                            <img src="/assets/img/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
+                            <img src="/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                             <small> @ ${matchedDoc.StartTime}</small>
