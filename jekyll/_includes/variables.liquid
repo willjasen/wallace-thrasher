@@ -16,6 +16,7 @@
   {% assign usb_filename_detail = track_details.USB_Filename %}
   {% assign whisper_model_detail = track_details.Whisper_Model %}
   {% assign last_modified_detail = track_details.Last_Modified %}
+  {% assign to_do_detail = track_details.To_Do %}
 {% endfor %}
 {% assign track_slug = page.track_title | slugify %}
 {% assign track = site.data[track_slug] %}

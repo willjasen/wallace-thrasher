@@ -8,10 +8,11 @@
         margin-right: 20px; /* Adds some space between the image and text for better readability */
     }
 </style>
-  
+
+<!-- Display the album header -->
 <div class="album-info" style="display: flex; align-items: center;">
     <h2 style="margin-bottom: 10px;">{{ matched_album_title }} ({{ matched_album_year }})</h2>
     <div class="image-container" style="margin-left: 50px;">
-        <img src="/assets/img/{{ matched_album_image }}" alt="{{ matched_album_title }}" width="150" height="150">
+        <img src="/assets/img/albums/{{ matched_album_image }}" alt="{{ matched_album_title }}" width="150" height="150">
     </div>
 </div>

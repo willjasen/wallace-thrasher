@@ -1,26 +1,15 @@
 # TODO
 
-This is a to-do list for wallace-thrasher, to keep track of tasks outside of the README
+Notes about To-Do's have been moved into the Track JSON objects. These can be viewed within its residing file at [/jekyll/assets/data.json](/jekyll/assets/data.json).
 
-### TO FIX
+These notes can also be seen on the website under certain circumstances. When the environment variable of `JEKYLL_ENV` is not set as 'production', then the To-Do notes will display underneath the track's heading (as well as other metadata).
 
-- [ ] post-a-cappella (the "boo-boo-dickit" sections)
-- [ ] victor's mixup
-- [ ] energy star (missing a small section)
-- [ ] star people (needs review, especially during 'star people' music background)
-- [ ] perma-tease (fix index 59)
-- [ ] ram (fix index 16, 30)
-- [ ] hoho (fix index 71, 74)
-- [ ] Best Before '24 Theme 1 (ensure audio alignment)
-- [ ] Cameleopard (unsure of speakers, but text has been reviewed)
-- [ ] Best Before '24 Interlude (fix speakers)
+An example of that looks like:
 
-### MOSTLY COMPLETED
-
-- [ ] best before '24 medley
-- [ ] comp-troller
-- [ ] cement pirates
-- [ ] multi-harry
-- [ ] booper
-- [ ] body art flipout
-- [ ] Best Before '24 Theme 2
+```
+Track 7: Alex Trebek
+Model used: distil-whisper/distil-large-v3
+Speakers adjusted? true
+Subtitles adjusted? false
+To-Do: need to review subtitles for accuracy
+```

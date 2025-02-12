@@ -1,23 +1,10 @@
 <header class="site-header" role="banner">
 
-  <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"> -->
-  <!-- <script src="scripts/use-lunr.js"></script> -->
+  {% if jekyll.environment == "production" %}
+    {% include analytics.html %}
+  {% endif %}
 
   <script src="/assets/js/theme-toggle.js"></script>
-
-  {% if jekyll.environment == "production" %}
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-874FG8X2KD');
-    </script>
-  {% endif %}
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
@@ -46,4 +33,6 @@
       </nav>
     {%- endif -%}
   </div>
+  <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"> -->
+  <!-- <script src="scripts/use-lunr.js"></script> -->
 </header>
