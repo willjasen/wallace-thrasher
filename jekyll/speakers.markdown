@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "search speakers"
-date:   2024-08-17 06:17:00 -0400
-categories: lunr search
+layout: page
+title: Speakers
+permalink: /speakers/
 ---
 
 {%- include load-search-with-progress.html -%}

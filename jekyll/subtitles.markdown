@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "search subtitles"
-date:   2024-08-16 18:13:42 -0400
-categories: lunr search
+layout: page
+title: Subtitles
+permalink: /subtitles/
 ---
 
 {%- include load-search-with-progress.html -%}
