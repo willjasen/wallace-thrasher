@@ -19,6 +19,7 @@ layout: default
   {% assign track_slug_detail = track_details.Track_Slug %}
   {% assign usb_filename_detail = track_details.USB_Filename %}
   {% assign whisper_model_detail = track_details.Whisper_Model %}
+  {% assign last_modified_detail = track_details.Last_Modified %}
 {% endfor %}
 
 {% assign track_slug = page.track_title | slugify %}
@@ -43,6 +44,23 @@ layout: default
 </style>
 
 <h3 style="text-align: center; margin-top: 20px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
+<h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+  {% if last_modified_detail %}
+    Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}
+  {% endif %}
+</h5>
+</h5>
+<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+  {% if whisper_model_detail %}
+    Model used: {{ whisper_model_detail }}
+  {% endif %}
+</h5>
+<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+  {% if track_speakers_detail %}
+    Speakers adjusted? {{ track_speakers_detail }}
+  {% endif %}
+</h5>
+
 
 <!-- This code is for an audio player -->
 <!-- <input type="file" id="usb" webkitdirectory directory/>
