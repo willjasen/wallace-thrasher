@@ -7,9 +7,11 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
+  {% include albums.html %}
+  
+  <!-- {{ content }} -->
 
-  {%- if site.posts.size > 0 -%}
+  <!--{%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
@@ -26,10 +28,9 @@ layout: default
         {%- endif -%}
       </li>
       {%- endfor -%}
-    </ul>
+    </ul>-->
 
-  <!-- <button id="theme-toggle">Switch to Dark Mode</button> -->
-
+    <!-- <button id="theme-toggle">Switch to Dark Mode</button> -->
     <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
 

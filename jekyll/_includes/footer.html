@@ -27,8 +27,11 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-        <div id="search_result"></div>
+        {% if jekyll.environment != "production" %}
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
+        {% else %}
+          <p style="color: purple;">{{- site.description | escape -}}</p>
+        {% endif %}
       </div>
 
       <div class="footer-col footer-col-4">

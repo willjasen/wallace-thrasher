@@ -83,6 +83,26 @@ async function main(callback) {
         const idxText = indexOnField('Text');
         const idxSpeaker = indexOnField('Speaker');
 
+        
+
+        // Get number of times Alex Trebek shows up
+        const resultsForAlexTrebek = idxSpeaker.search("Alex");
+        let tracksWithAlexTrebek = new Set();
+        resultsForAlexTrebek.forEach(function (resultForAlex) {
+            const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
+                //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
+                const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                
+                // Add to Set only if the combination isn't already added
+                if (!tracksWithAlexTrebek.has(key)) {
+                    tracksWithAlexTrebek.add(key);
+                }
+        });
+        const countOfAlexTrebek = tracksWithAlexTrebek.size;
+        console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
+
+
+        
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
@@ -143,7 +163,6 @@ async function main(callback) {
                     // Set to store the unique track and speaker combinations
                     let tracksWithSpeaker = new Set();
 
-                    resultsCount=0;
                     // Display search results
                     results.forEach(function (result) {
                         const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
@@ -154,7 +173,6 @@ async function main(callback) {
                         // Add to Set only if the combination isn't already added
                         if (!tracksWithSpeaker.has(key)) {
                             tracksWithSpeaker.add(key);
-                            resultsCount++;
 
                             // Display the result
                             const albumAndTitleItem = document.createElement('li');
@@ -165,7 +183,6 @@ async function main(callback) {
                             `;
                             resultList.appendChild(albumAndTitleItem);
                         }
-                        //}
                     });
 
                     // Display the count of unique track-speaker combinations
