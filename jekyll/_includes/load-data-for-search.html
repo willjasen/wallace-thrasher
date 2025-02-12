@@ -9,7 +9,7 @@
     var intervalId = setInterval(function() {
       if (dataLoaded) {
         clearInterval(intervalId);
-        console.log("Data has been loaded.");
+        console.log("Data has been loaded!");
         document.getElementById('status').innerHTML = "<img src=\"/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
         document.getElementById('status').innerHTML += " Data has been loaded!";
       }

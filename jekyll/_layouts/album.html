@@ -2,28 +2,11 @@
 layout: default
 ---
 
-{% assign matching_album = site.data.albums.Albums | where: "Album", page.album | first %}
-
-<div class="album-info" style="display: flex; align-items: center;">
-    <h2 style="margin-bottom: 10px;">{{ matching_album.Album }} ({{ matching_album.Year }})</h2>
-    <div class="image-container" style="margin-left: 50px;">
-        <img src="/assets/img/{{ matching_album.Album_Picture }}" alt="{{ matching_album.Album }}" width="150" height="150">
-    </div>
-</div>
-
-<style>
-    .album-info {
-        display: flex;
-        align-items: center;
-    }
-
-    .image-container {
-        margin-right: 20px; /* Adds some space between the image and text for better readability */
-    }
-</style>
+{% include variables.liquid %}
+{% include album-header.html %}
 
 <ul style="list-style-type: none;"> 
-{% for track in matching_album.Tracks %}  
+{% for track in all_tracks_on_album %}  
     <li style="list-style-type: none;">
       <strong>{{ track.Track_Number }}: </strong>
       {% if track %}
