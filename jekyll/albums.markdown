@@ -27,7 +27,7 @@ permalink: /albums/
       }
   </style>
 
-  <p></p>
+  <br/>
   
 {% endfor %}
 
