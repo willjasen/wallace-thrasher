@@ -3,6 +3,8 @@ codename for a website project involving the works of [longmont potion castle](h
 
 ### Overview
 
+this website allows for searching through subtitles and speakers within the longmont potion castle discography.
+
 this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery). there is a corresponding development website available at [dev.stretchie.delivery](https://dev.stretchie.delivery).
 
 ### Backstory

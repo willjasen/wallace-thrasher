@@ -6,6 +6,12 @@ permalink: /about/
 
 codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
+### Overview
+
+this website allows for searching through subtitles and speakers within the longmont potion castle discography.
+
+this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery). there is a corresponding development website available at [dev.stretchie.delivery](https://dev.stretchie.delivery).
+
 ### Backstory
 
 some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
