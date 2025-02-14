@@ -1,6 +1,24 @@
 {%- include load-search.html -%}
 
-{% assign sorted_albums = site.data.albums.Albums | sort: "Year" %}
+<!--
+group_by to the rescue :
+
+{% assign years = site.data.papers.papers | group_by: "year" %}
+{% assign yearsSorted = years | sort: "name" %}
+<ul>
+{% for y in yearsSorted %}
+  <li>{{ y.name }}
+    <ul>
+      {% assign yearTitlesSorted = y.items | sort: "title" %}
+      {% for t in yearTitlesSorted %}
+      <li>{{ t.title }}</li>
+      {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+-->
+
+{% assign sorted_albums = site.data.albums.Albums | sort: "Year"%}
 {% for album in sorted_albums %}
 
   <div class="album-info" style="display: flex; align-items: center;">
