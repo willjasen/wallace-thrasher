@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>wallace-thrasher | you can call me stretchie</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="wallace-thrasher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="you can call me stretchie" />
+<meta property="og:description" content="you can call me stretchie" />
+<link rel="canonical" href="/tracks/lpc-13-medley-reprise/" />
+<meta property="og:url" content="/tracks/lpc-13-medley-reprise/" />
+<meta property="og:site_name" content="wallace-thrasher" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-08T17:54:09-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wallace-thrasher" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T17:54:09-05:00","datePublished":"2025-03-08T17:54:09-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/lpc-13-medley-reprise/"},"url":"/tracks/lpc-13-medley-reprise/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
+<body><header class="site-header" role="banner">
+
+  
+
+  <script src="/assets/js/theme-toggle.js"></script>
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">wallace-thrasher</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/albums/">Albums</a><a class="page-link" href="/speakers/">Speakers</a><a class="page-link" href="/subtitles/">Subtitles</a></div>
+      </nav></div>
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <!-- <script src="scripts/use-lunr.js"></script> -->
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+
+
+
+
+
+<style>
+    .album-info {
+        display: flex;
+        align-items: center;
+    }
+  
+    .image-container {
+        margin-right: 20px; /* Adds some space between the image and text for better readability */
+    }
+</style>
+
+<!-- Display the album header -->
+<div class="album-info" style="display: flex; align-items: center;">
+    <h2 style="margin-bottom: 10px;">Longmont Potion Castle 13 (2017)</h2>
+    <div class="image-container" style="margin-left: 50px;">
+        <img src="/assets/img/albums/LPC_13.jpg" alt="Longmont Potion Castle 13" width="150" height="150">
+    </div>
+</div>
+
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track 17: LPC 13 Medley Reprise</h3>
+
+
+
+
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-12T08:40:46
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2017";
+    const matchedAlbumTitle = "Longmont Potion Castle 13";
+    const trackTitleDetail = "LPC 13 Medley Reprise";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
+
+<!-- Display all of the subtitles within the track -->
+<ul style="list-style-type: none;">
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Unidentified caller, what do you need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm Sasha with Downy Flake Waffles, and I'd like to get you down and try some frozen waffles with us.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> What are my little bomb with that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Bring jackass. What do you want?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hey, why don't you come try some frozen waffles there, guy? They're real good.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Why don't you go and jack off?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Downey Flake Waffles.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Yeah?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Anybody there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What's going on?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What do you need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Are you gay in over 21?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What time is it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What time is it up there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Wow, that's so gay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What are you doing?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm fucking playing with my talk.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I bet.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> How can I help you, please?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Wow.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> You had a nut on the phone there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Pardon me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I said there was some nut on the phone just now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Can I help you, then?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Oh, there you go.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Wow.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Are you into hip-hop and shit and listen to Bernice?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> You listen to Bernice?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> What a fucking homo.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> You like new band.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Huh, man? You like corn?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> You're such a bag.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Shrimp connection?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Yes, I got some shrimp up bar, and I got home and I waited if I didn't get nearly enough shrimp with my order.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I came up bar now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Okay, okay, okay, okay, okay, okay, okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> And I made my order fair and square, and then I turned around, high-tailed at home.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I wanted to eat the sons of guns.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You got me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Got me, got me, got.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> But then I realized that I don't.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I only got two, three shrimps.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> My portion was real miniature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Oh, shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> So what are we going to do here about you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Well, you're full of shit, what you are.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> What are we going to do about you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> No, you're full of shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Come back.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hey.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Shrimp connection.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I didn't get nearly enough shrimp in my order there, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm looking to make it right here today.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Can I get a refund?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> you are. And you keep calling me with the same complaint. Now, where were you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> What are you, uh, dingling?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Oh, yeah, I'm a dingling. Oh, yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> So, um, yeah. So what did you get?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You took my money, and you didn't give me a doggone thing, partner.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You left with nothing after I took your money?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You took my money.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> My money. You took my money.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> That's what I'm supposed to do.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I just want my money back.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I'll tell you. Where am I going to send it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'll come up and get it from you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Well, why don't you come on?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Why don't you come on?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Well, I don't know where the hell you are.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Why don't you step up to the plate?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Come on to Greenboro, North Carolina.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I'll see you at cross, because.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'll meet you at midnight tonight.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Oh, shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I want you to have cash in hand.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Oh, I always travel with cash.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You tell a man you're going to get him with full.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> order and he gets a partial order.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You're in a heap of trouble up there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Oh, shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I'll see you at midnight.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Where's my damn money?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Where's my damn money?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> In my pocket.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Give it here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Pay me what I need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Give me what I need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Give me what I need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Give me what I need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Shrimp connection.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm going to need a refund on my shrimp.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I didn't get enough.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Okay, listen, asshole.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I was at Costco the other night at midnight waiting on you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Well, hey, I was there, too.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Oh, bullshit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You don't know about in the down parking lot for me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> You never showed up there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Bullshit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Let me make this real clear to you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What's that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Go fucking sell and leave me along.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hey, why don't you speak English?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Impact drug and alcohol treatment center.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> This is Steve.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I've got a quartered individual.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> to bring in there this afternoon
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> named Skippy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Whoa, whoa, whoa, whoa, whoa, whoa.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Who's scheduling Skippy?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> He's just having a real hard time of Justin.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Can you talk to him for a moment?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> But first of all, who from Impact scheduled him?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> That information I don't have at my finger.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Because we don't just bring people in at our court orders.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Can you talk to Skippy for a moment?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Just let him know that he'll be in good hands.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> No, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> No, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Do you have a contact person?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> What do you need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Tell me what you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> What's up, Skippy?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> This is Skippy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> That sounds like that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> What do you need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Tell me what you're trying to need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I have to try to need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What are you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> We would have to fail for this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Can you, can you just try to talk to sense?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> listen to him, please. I'm trying to hold the guy down to talk to you here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Wow.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Here, talk to him. Just try.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> What do you do you need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Tell me what you need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't know what you need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> What are you doing to need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> What do you need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> He took off.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Oh, my God.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Why couldn't you hold him down?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I try. He's a big fella.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Who is this?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> My name's David Chandler. I'm an attorney.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Skippy was court-ordered to get some rehabilitation.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I thought you guys could, you know, sort of grease the wheel, sort of speak.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Skippy has to have a willing heart.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Well, here you again.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Skipie, talk to this Jones again.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hold on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> What do you try to do?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Even.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Who is that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Hey, who am I speaking with?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> David Chandler, attorney?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're sticking to the script?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> That's my profession.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> So, how may I help you, David?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I wanted you to talk to Skippy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Put Skippy on the phone.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Oh, I'll hear him.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Thank you for calling Lindsay. This is Jenny. How can I help you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> This is Lindsay Golf Course. Jenny is speaking. May I help you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Hello. Hello? Is there anything I can help you with today?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Well, hello. Ableton support. This is Lucas. How can I help?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> This is Stewie. I'm trying to use this recording program here, and I'm just having a heck of a time here. Everything's warbling and fouled up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Okay. Yeah, I'm happy to help here. Can I get the email address of your Ableton.com account?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> It's Dickie.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> at primemail.biz. And I'm just having a gargantuan problem here with my recording and
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> playback. There's cross-talk and cancellation on pretty much everything I try to do, and it's just not
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> helping. I went to guitar center, and they're not able to tell me a doggone thing.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Okay. Let's see. I don't see, I'm not seeing an account under this, Dickie. Is that D-I-C-K-Y?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> It's I-E. It's I-E. It's I-E. And then it's Prime-M-M-A.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> L-P-R-I-M-E-M-E-A-L-B-I-Z?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Okay, I'm not, I'm not seeing an account under that email address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Um, is there maybe another one of the, the, the...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm not sure.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Were you coming from now?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I was here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I can't...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> What's that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> It's things defective, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Um, I just, yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I paid cash on the barrel, and I'm hearing...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Which version of live are you using here?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm here in...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Version 10.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I paid cash all in the barrel, and I'm here in bullfrogs and...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> birds and everything, going on bubbles.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm wondering if maybe you've got the wrong product here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> We don't have a live 10.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Or 1.0, I guess.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> We also don't. I mean, live 1.0 is a product for 1999, so I don't think that's it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Do you know what phase cancellation sounds like?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah, absolutely.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Like, oh, really?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> It sounds like snakes are nesting inside of my recordings.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I got an acoustic guitar inside of my recordings.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I got it sounds like a sit tar going wild and up there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Okay, and so, yeah, so, I'm hearing...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Unfortunately, I can't really help you out further if you can't give me a...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm hearing different languages on tape, different languages.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm hearing insects and wildlife.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> This is just an acoustic-based project that I'm trying to run here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Interesting. I see.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> So can't we work something through?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I went to guitar center, and they told me to call you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I can't make that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I haven't made it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I can't make it work with the sounds I'm hearing.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah, I see.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I see that sounds pretty tricky there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Definitely hearing some strange things over here on my end as well.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Everything's a double-time.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm hearing foreign languages.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I've got to say, your voice sounds very familiar.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I feel like maybe I've spoken with you before.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Well, I've had this issue pop up from time to time.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> It sounds like I got a frog inside of my microphone here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I see.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> It's always like I got a frog.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Well, listen, I do think that sounds like you've got a pretty serious problem there,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> but without figuring out your license details here, I can't really spend any more time with you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I've given you my email address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I've got my receipt in hand.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I can tell you what, I can't stay on the phone here with you,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> but I'm happy to send you an email about address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And if you can just reply to that, we'll kind of work towards figuring out what's going on with your license there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> It sounds like I got a primate running.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Wow.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> in my recording space.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I understand, sir, definitely.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Look, I can't really spend any more time on the phone here with you,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> but I appreciate you, Colin, and maybe try us back another time.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I would love to recommend that you call us back.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> All right, thanks for calling and bye.
+      <br>
+    </li>
+  
+  </ul>
+
+<!-- 
+
+-->
+      </div>
+    </main><footer class="site-footer h-card">
+
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">wallace-thrasher</h2> -->
+
+    <div class="footer-col-wrapper">
+      <!-- <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">wallace-thrasher</li></ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1"><ul class="social-media-list"><li><a href="https://github.com/willjasen"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">willjasen</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-4">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
+      </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>wallace-thrasher | you can call me stretchie</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="wallace-thrasher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="you can call me stretchie" />
+<meta property="og:description" content="you can call me stretchie" />
+<link rel="canonical" href="/tracks/aardvark/" />
+<meta property="og:url" content="/tracks/aardvark/" />
+<meta property="og:site_name" content="wallace-thrasher" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-08T17:54:09-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wallace-thrasher" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T17:54:09-05:00","datePublished":"2025-03-08T17:54:09-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/aardvark/"},"url":"/tracks/aardvark/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
+<body><header class="site-header" role="banner">
+
+  
+
+  <script src="/assets/js/theme-toggle.js"></script>
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">wallace-thrasher</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/albums/">Albums</a><a class="page-link" href="/speakers/">Speakers</a><a class="page-link" href="/subtitles/">Subtitles</a></div>
+      </nav></div>
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <!-- <script src="scripts/use-lunr.js"></script> -->
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+
+
+
+
+
+<style>
+    .album-info {
+        display: flex;
+        align-items: center;
+    }
+  
+    .image-container {
+        margin-right: 20px; /* Adds some space between the image and text for better readability */
+    }
+</style>
+
+<!-- Display the album header -->
+<div class="album-info" style="display: flex; align-items: center;">
+    <h2 style="margin-bottom: 10px;">Longmont Potion Castle 20 (2023)</h2>
+    <div class="image-container" style="margin-left: 50px;">
+        <img src="/assets/img/albums/LPC_20.jpg" alt="Longmont Potion Castle 20" width="150" height="150">
+    </div>
+</div>
+
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track 9: Aardvark</h3>
+
+
+
+
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:43:28
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2023";
+    const matchedAlbumTitle = "Longmont Potion Castle 20";
+    const trackTitleDetail = "Aardvark";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
+
+<!-- Display all of the subtitles within the track -->
+<ul style="list-style-type: none;">
+  
+    <li>
+      <strong>SPEAKER_19:</strong> Hi, I'm not seeing anything that we have or have had that just has the title Ardvark.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> Could it be a different title, maybe?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_14:</strong> I'm looking up Lone Shark in my inventory, and nothing's popping up on that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> I'm sorry, were you looking for a book called Ardvark?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_14:</strong> Oh, I'm sorry, I got Lone Sharp from that. That's my bed. Ardvark. Okay, that is on me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_14:</strong> Pardon me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> Oh, no, you're fine. Um...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_14:</strong> I have Ardvark.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_14:</strong> is ready for war, is what's popping up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> Defunct Books?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> Huh? Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> Yeah, again, somebody called me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> This is Defunc Books in Nashville?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> This is Lemuria bookstore in Jackson.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> I just had someone on the phone who was looking for a book called Ardbark.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> This is Square Books right here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> I'm confused as to why you're calling me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_12:</strong> Ardvark?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> This is Heather. How may help you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Are we, hello, are we getting, what the heck's going on here?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> This is Heather from Foxton Books. Did you call us?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> No, this is Brian from Chapter 2 books in Hudson.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Somebody just called me and looking for a book.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Okay. And where do we come into it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Did you just call Chapter 2 books?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Nope.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Uh, you know what we've said?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Uh, you know what we've said?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> about to a book company.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Somebody called me, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Yep.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Yep.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I hope you're having a great day.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> You too.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> This is weird.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I still got somebody on the other line.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> What is going on here?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I don't know, but James is saying this is happening to one of our employees this morning.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Hey, guys.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I'm a third.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I'm just...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Customer calling and has multiple people on the line.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I don't know how they're doing it, but it's led to a lot of confusion.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> So I'm just going to take us.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> So I'm just going to take us.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> out of the equation.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Well, all right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Thanks.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Thank you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Bye.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Yeah, I'm still here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Hey, I'm Chris at Boswell Book Company.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Are you at a bookstore?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Chapter 2 books in Hudson, Wisconsin.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> We've talked to people at the attic in Green Bay, too, where we've had this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> And I don't know who else was on the line just now, but yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Yeah, no idea why.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> We've gotten a bunch of...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I did not put the call.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> You guys, someone else is...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Here's a call right here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> My area of books.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> This is me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Hi.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Hi, this is Chris at Boswell Book Company.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Um, on this...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> We're on the chain here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Yeah, have you been...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Yeah, have you been calls about baboon?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> You know, if we wait long enough,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> we might be able to get the whole population of Wisconsin on this call.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I don't know what's going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> So is who's meaning to call down down?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> So is who's meaning to call downtown books?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> No.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> No one.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Yeah, no, no one.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Okay, this is done getting these two.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> This is Chris at Boswell.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Yeah, I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I don't know what's going on either.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> This is Downtown bookstore, yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> This is Lemuria bookstore.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah, we had a call earlier about somebody went in Ardvark, and I think we hung up, but after we realized, like, everyone was on it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> But, yeah, I don't know what's going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> This is very weird.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> It seems like it's going to keep doing.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I have no idea.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> It's just.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Okay, all right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Well, if no one's intending it's called Downtown Books, then I'll just hang up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Yeah, I'm going to do the same.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Good luck, guys.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> All right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> We'll talk later.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Hi there.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> So, I guess we're trying to find a book for you called Baboon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Who are you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> You could call the bookstore.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> What bookstore you're talking about?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Kino Kunia, the bookstore at Japan Town?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> You're full of shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Um, okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> supposed to help your friend.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Sorry?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> I don't understand what your friend would like to get, what kind of book he wants.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Oh, is this about the book?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Yeah, he wants the book, A-A-A-R-D-V-A-R-K, correct?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> I apologize.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Yeah, this is Boswell Book Company.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Someone has been calling around.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Hello.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Hello.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Are you calling about a bookstore?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> What bookstore are you talking about?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> The one in Milwaukee.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Did someone call you asking about a book?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> What kind of book you're talking about?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Yeah, okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> His name is Joe.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> He asks him for a book, and he spell me the name, A-A-A-R-D-V-A-R-K,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> and that you're supposed to give me ISB number so that I can find whether we have it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You know something?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You know something what I want to tell you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're a criminal, and you're stupid.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're a very big criminal.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're a son of a bitch.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> My goodness, I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> That's a customer who called me asking for this book.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> I don't know what he's talking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Thanks for contact, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Okay, sorry about that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> I apologize.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Anything wrong from my side.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_10:</strong> Who is this?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_10:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_15:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_10:</strong> You're supposed to be helping me figure out which art work book I'm looking for?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_13:</strong> Well, I can. I own a bookstore, Smith, and Hannan.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_10:</strong> I got a call from somebody who said that they were getting somebody else on the phone.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_10:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_13:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_10:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_13:</strong> Joe?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Hi.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_13:</strong> Hello. Did you call me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_13:</strong> Joe.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_13:</strong> Who are you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Who are you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I would be looking for a book called Ardvark, but the last person I talked to
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> who didn't have enough information about it for me to find it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> What kind of book you're talking about?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Just a minute.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I don't know what's going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Please leave your message.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're full of crap.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're criminals.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're criminals.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> You're criminals.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> First edition, rare books.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_19:</strong> Please hold while we connect your call.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, uh, if any of you were ever in Milwaukee's General Mitchell Field,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> we have the world's first used bookstore in an airport, and you're all welcome.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_17:</strong> Uh, can I go?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm terribly sorry, everybody.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_17:</strong> No, it's a lot.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_17:</strong> Okay. Did you mean to call Annie Bloom's books in Portland, Oregon?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I did not. I, I, uh...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Are you talking to me? Who are you? Who are you? Who are you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm Mike at the Renaissance in Milwaukee, and, uh, the other lady is Katie at Annie Bloom Books in
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Portland. And how we all ended up on lines together, I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Well, let me tell you. Let me tell you who you are. You're a mother fucking chicken shit
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> criminal. You'll be in jail. You a piece of shit. Shit. Shit. Shit. Shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're a cancer for the medical. You're a piece of shit, shit, shit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, this is fascinating. Apparently, uh, someone from the, uh, Trump campaign is on the line.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Farewell.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> That's hilarious.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Excuse me. Did you hear what I said?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> We have 150,000 books in this store. I don't know what kind of book it is really. I don't know what kind of book it is really. When you say nonfiction, we have nonfiction, African American, Asian American. His
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> American, gay, lesbian, transgender, labor, radical left movements, right wean,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Asian languages. Do you understand the problem with looking to see if it's there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> We have 150,000 books on the whole top floor. What is it about?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Hi, what is this book you're looking for? Say this again?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> What is the book that you are looking for here?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Did I ever tell you about the book?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> What did I tell you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You said you picked up a book called Ardvark at our shop.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Where are you? What shop are you in?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Ballerium books.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're a motherfucker criminal.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> You're a piece of shit. You're going to be in jail very soon. You son of a bitch.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Hello? Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Okay. Um, so I understand you're trying to find a book called Bebbs.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Boone. Yeah, I don't know what you're talking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Downtown books.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> I was speaking to someone on the phone who said they were going to go get someone who knew more about this book they were asking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Are you that person?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> No, I don't know. It's weird. Who are you calling Baswell books or downtown books?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Okay. I am in a bookstore and someone, presumably a customer, was calling and asking if we have more copies of this book called Baboon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> And it's not an interesting.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Yeah, I don't know. It must be Boswell books. I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Because this is downtown books. And for some reason, we're getting calls that are intended for Boswell over here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> It's very bizarre. I don't know if they did something where they forwarded a call or something. I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Good afternoon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Well, it sounds like there's something with the phone system.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Yeah. Is there somebody else on the line now?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Well, I just heard of third wife, a woman.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> Yeah, okay. So the thing is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> It must be for someone else.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> It must be for a different store.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Yeah, hold on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> There's someone else on the line now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Listen to them.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Go ahead.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Is this Brian?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> This is Ryan at Book Soup.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> How about you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_11:</strong> I'm going to hang up because this is clearly nothing to do with our store.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> All right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> So I don't know what's going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> There seems to be stuff going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> This is Book Soup?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> No, this is Skylight Books.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> That's even more strange.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Is book soup on the line?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> No, I don't know how somebody.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Why am I part of the story?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> It's called?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> There seems to be a whole bunch of different people
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> on this line from different bookstores.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Very bizarre.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Strange.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> All right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Is this something I can help you with or?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Right, because someone called me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Okay, I'm going to hang up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Okay, I'm going to hang up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> All right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I guess I'm going to hang up, too, because it doesn't.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I'm not looking for a book.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> I'm a bookstore.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> There's something bizarre going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Who is this?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> There's something bizarre going on with the phone system here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> What's that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> It's true to me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> This is Matt.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> What is that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> So do you think I called you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I just got a call from this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Now there's three of us on the line, right?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Something very strange is going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_16:</strong> Where there seems to be all these, where are you from?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I've heard this is a scam.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> This is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> This is a scam. Hang up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>None:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Everyone hang up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Stop doing this to people, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Hang up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Stop calling, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Thanks for calling, Pozman Books,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> where we offer no books on baboons.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> How can I help you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Stop calling, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> We don't have time for this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Thank you for calling Kino-Kunia, Santa Monica.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> This is me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> No, hang up, hang up, hang up, hang up, hang up,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> hang up, it's a scam.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_18:</strong> Hang up, it's a scam.
+      <br>
+    </li>
+  
+  </ul>
+
+<!-- 
+
+-->
+      </div>
+    </main><footer class="site-footer h-card">
+
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">wallace-thrasher</h2> -->
+
+    <div class="footer-col-wrapper">
+      <!-- <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">wallace-thrasher</li></ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1"><ul class="social-media-list"><li><a href="https://github.com/willjasen"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">willjasen</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-4">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
+      </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

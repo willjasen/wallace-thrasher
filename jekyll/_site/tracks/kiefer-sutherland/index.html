@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>wallace-thrasher | you can call me stretchie</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="wallace-thrasher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="you can call me stretchie" />
+<meta property="og:description" content="you can call me stretchie" />
+<link rel="canonical" href="/tracks/kiefer-sutherland/" />
+<meta property="og:url" content="/tracks/kiefer-sutherland/" />
+<meta property="og:site_name" content="wallace-thrasher" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-08T17:54:09-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wallace-thrasher" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T17:54:09-05:00","datePublished":"2025-03-08T17:54:09-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/kiefer-sutherland/"},"url":"/tracks/kiefer-sutherland/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
+<body><header class="site-header" role="banner">
+
+  
+
+  <script src="/assets/js/theme-toggle.js"></script>
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">wallace-thrasher</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/albums/">Albums</a><a class="page-link" href="/speakers/">Speakers</a><a class="page-link" href="/subtitles/">Subtitles</a></div>
+      </nav></div>
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <!-- <script src="scripts/use-lunr.js"></script> -->
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+
+
+
+
+
+<style>
+    .album-info {
+        display: flex;
+        align-items: center;
+    }
+  
+    .image-container {
+        margin-right: 20px; /* Adds some space between the image and text for better readability */
+    }
+</style>
+
+<!-- Display the album header -->
+<div class="album-info" style="display: flex; align-items: center;">
+    <h2 style="margin-bottom: 10px;">Longmont Potion Castle 12 (2016)</h2>
+    <div class="image-container" style="margin-left: 50px;">
+        <img src="/assets/img/albums/LPC_12.jpg" alt="Longmont Potion Castle 12" width="150" height="150">
+    </div>
+</div>
+
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track 4: Kiefer Sutherland</h3>
+
+
+
+
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-11T20:56:17
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2016";
+    const matchedAlbumTitle = "Longmont Potion Castle 12";
+    const trackTitleDetail = "Kiefer Sutherland";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
+
+<!-- Display all of the subtitles within the track -->
+<ul style="list-style-type: none;">
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Yes, this is Feeley with United Parcel Service.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Yes?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> With UPS, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> We've tried to come out there twice for a shipment and...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Outwear, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm in Culver City at the district headquarters.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> We've got Plaster of Paris.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> What's the address you're trying to deliver to, sir?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's a big cluster of parcels we've got.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> And just wanted to know when you're going to be around.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> What is the address you're trying to deliver to?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I don't know who you are.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> What's the address you're trying to deliver to?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> My name is Feeley.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm a regional manager at UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And what is the address you're trying to deliver to?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> We're at 3220 Olympic Boulevard.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I don't need your address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I need to know what address you are trying to deliver the packages.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> This thing is COD.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> We've been out there twice.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Then it's not to me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It says it's for Mr. Sutherlander and...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I afforded nothing C.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> and it's not for me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's from the Ho-Ho House.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> And it's Plaster of Paris.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Now, what plaster of Paris is, is a compound?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I know what's Plesser of Paris is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm not paying for anything C-R-D and I have not ordered anything, so...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Well, our driver is coming back en route to you with an interpreter.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> He is English as a second language.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> He's Bangladeshi.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> And I just need to see some identification when he gets thorough.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Again, I'm not going to be here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I can't express to you strongly enough.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I ordered nothing, and I am not accepting anything C-R-D.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Well, what Plaster of Paris is, it's a compound.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It can't dry.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It has to be contained.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I know what Plaster of Paris is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> They send it back to whoever sent it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Sir, I did not order it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I've got your signature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I've got your digital signature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> You do not have my signature, and you do not have my digital signature, because I don't have a computer.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> That's impossible.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Give me the name of whoever I can call that is above you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's from the Ho-ho House, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I don't care.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I don't know what that is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And you're telling me, I'm accepting a project COD, and that's just not true.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I have never signed nor ordered for anything like that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> You cannot give me the address where I live, so clearly it's not coming to me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I've given you the address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And I'm telling you, I don't know what that address is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> That's not where we're located.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> That's where we're located.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> We've been here for 32 years at the same location.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> That's where you were located.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> If someone was sending me something and they knew me, they'd be sending it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> and my address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> So I'm telling you, send it back to whoever said to you, it is not mine.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's yours.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> You can pick it up from our dock, if you'd prefer.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm not picking anything up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I didn't order anything.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> It's not for me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Check or credit card required.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> So if you could bring that with you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm not doing any such thing.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> You can send the package back, but I did not order it, nor is it mine.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm a regional manager.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Plaster of Paris is what the contents are.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm looking right.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I don't care.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm telling you, someone has sent you something that I have nothing to do with, nor do I want.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm looking right at the packing slip.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And you can't tell me my address or my name.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I work as an actor.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I am relatively famous.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I cannot tell you who sent this to you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> It has nothing to do with me as all I'm trying to help you out.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> So this is an act, you're saying.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> How do you want us to proceed?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's my question.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Yes, this is a story.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Weenie with UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Yeah, and I said, I'm not
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> picking up the package. I did not order it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And I said, have a great day.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> What's the trouble out there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I didn't order it. I have no idea what you're talking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And I did not ask anything. I don't know what the whole whole house is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I don't need a secondary language interpreter to explain to me what it is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> And I'm certainly not paying for something that it's not mine.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> That's why I'm calling.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm a statewide manager for United Parcel Service.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> You were a regional manager two seconds ago, but okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> That was my associate. I'm the manager here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Okay. And my name is Kiefer Sutherland, and people send stuff all the time.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I have not ordered this. I do not want it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I have been told by our vice president we can take PayPal.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I'm not paying you anything.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Well, what is the holdup here? You said you're putting on an act of some kind.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Send it back to whoever sent it to you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Are you putting on an act of some kind, is what I've been told.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> That's why the interpreters involved.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Sir, do you want to pick it up or have a delivered?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I do not want it either.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> I do not want either.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> If you persist on bothering me, I will have my lawyer returning your call at this number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> What is your name again?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'm Sweeney.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> What is your first name?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> That is my first name.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Sir Dixon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> What is your last name?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Sweeney Dixon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Sweeney Dixon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Excellent.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I'll have someone call you right back.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> I can give you my direct line.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's my D-I-D-D line.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> But can I get the credit card number first just to get...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Absolutely not.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Absolutely not.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> What is your number?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> 1-800 pick you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> It's 1-800-7-4-2-5-8-77.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> And we need a credit card or a personal check.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> You're not getting either, but I'll have a lawyer call you right back.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Why?
+      <br>
+    </li>
+  
+  </ul>
+
+<!-- 
+
+-->
+      </div>
+    </main><footer class="site-footer h-card">
+
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">wallace-thrasher</h2> -->
+
+    <div class="footer-col-wrapper">
+      <!-- <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">wallace-thrasher</li></ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1"><ul class="social-media-list"><li><a href="https://github.com/willjasen"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">willjasen</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-4">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
+      </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

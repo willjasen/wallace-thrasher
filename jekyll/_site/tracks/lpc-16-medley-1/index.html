@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>wallace-thrasher | you can call me stretchie</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="wallace-thrasher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="you can call me stretchie" />
+<meta property="og:description" content="you can call me stretchie" />
+<link rel="canonical" href="/tracks/lpc-16-medley-1/" />
+<meta property="og:url" content="/tracks/lpc-16-medley-1/" />
+<meta property="og:site_name" content="wallace-thrasher" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-08T17:54:09-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wallace-thrasher" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T17:54:09-05:00","datePublished":"2025-03-08T17:54:09-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/lpc-16-medley-1/"},"url":"/tracks/lpc-16-medley-1/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
+<body><header class="site-header" role="banner">
+
+  
+
+  <script src="/assets/js/theme-toggle.js"></script>
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">wallace-thrasher</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/albums/">Albums</a><a class="page-link" href="/speakers/">Speakers</a><a class="page-link" href="/subtitles/">Subtitles</a></div>
+      </nav></div>
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <!-- <script src="scripts/use-lunr.js"></script> -->
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+
+
+
+
+
+<style>
+    .album-info {
+        display: flex;
+        align-items: center;
+    }
+  
+    .image-container {
+        margin-right: 20px; /* Adds some space between the image and text for better readability */
+    }
+</style>
+
+<!-- Display the album header -->
+<div class="album-info" style="display: flex; align-items: center;">
+    <h2 style="margin-bottom: 10px;">Longmont Potion Castle 16 (2019)</h2>
+    <div class="image-container" style="margin-left: 50px;">
+        <img src="/assets/img/albums/LPC_16.jpg" alt="Longmont Potion Castle 16" width="150" height="150">
+    </div>
+</div>
+
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track 1: LPC 16 Medley 1</h3>
+
+
+
+
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:42:08
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2019";
+    const matchedAlbumTitle = "Longmont Potion Castle 16";
+    const trackTitleDetail = "LPC 16 Medley 1";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
+
+<!-- Display all of the subtitles within the track -->
+<ul style="list-style-type: none;">
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Oh, yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Hello.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hi, this is Sasha.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm a whip master.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm smacked by a whip through the air,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> and I'm going to be outside practicing.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I just want you to make sure you clear the area
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> and stay out of my side, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> What the hell is the matter with you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> A human being sick?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I use a whip.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> A horse whip.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Okay, and I'm going to call the police right now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_00:</strong> Come over, and I'm going to get to the police right now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hey, hey, guy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm going to be outside here in a minute.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Okay, and I'm going to be...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> You better fuck off.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Fuck off, you mothervoker.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm going to use my will.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm going to snap my...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> You're the son of my bag.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Stay out of my way.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> This is Brannigan with UPS calling?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I don't think I have a UPS package going anywhere.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No, we have one that we're attempting to deliver for the past week.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No one answered the buzzer, according to my notes here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> At what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> I'm a traveling comedian.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Right now, I'm in Chicago.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_05:</strong> Where is the address that you're trying to deliver a practice?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Oh, we're far from Chicago, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> So when are you going to be returning to the residential delivery that we can complete our COD?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I don't.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> You haven't told me the address.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Is it in Arizona or is it in Phoenix?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I mean, Palm Springs?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> It's California residential delivery.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> And when will you be there to sign for your COD parcel?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Never.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> This is Gallagher, the comedian.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I travel around the country doing shows.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't know anything about this parcel, nor do I actually have a house.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, if you want to read...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> All these addresses are my kids.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> If you want to read a credit card or routing number, we can leave it in a safe place for you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> That's certainly no problem at all.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Not a problem at also.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't have...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't have...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I send things all the time.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I know about routing numbers.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't have a package.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I didn't go to UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I didn't get a routing number, and I didn't get a routing number,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> and I didn't.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> didn't send anything.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, we can't leave it without a COD payments or $123.40 is what we need to collect here today.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Can you just read a master charge and we can settle it by phone?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> No, I think you're a scammer. Goodbye.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Why are you still calling me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm with UPS, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We were just trying to resolve...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't believe it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't believe it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> You're just calling around to get credit card numbers.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Quit calling me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Can you talk to my supervisor?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yes, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> This is Harper with UPS.com.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> How are you today?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I'm confused.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I've gotten a number from Oregon telling me that they wanted a credit card number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Why would a person go into UPS and hand them a box and not give them a credit card at that time?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Why are you calling around from different phone numbers asking for credit card?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> This is Gallagher, the comedian.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I use UPS all the time.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I know about routing numbers.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I know how it worked, and I don't have a box in transit.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, can I put you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> on with my supervisor and just get to the bottom of this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> No, I think you're all in on it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> It's a scam.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't believe you guys.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Goodbye.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Talk.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> This is Raymond with UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm calling about a past due balance we have on your account on a parcel that we're trying to deliver.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> COD.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I think you're full of shit and you're just cheaters.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I'm going to turn your phone number into UPS and your Colorado number and your Oregon number also.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> bothering me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No, this is a package from whammo.com.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> Listen, jerk,ops.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I use UPS and you get the credit card number when you first walk in the door.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> You don't give it to them over the phone later on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I don't know how stupid you think I am, but quit the call.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> I'm telling you, I'm going to turn in your number to UPS, and it'll all get straightened out
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_06:</strong> when they find out you and your friends in Colorado and in Oregon.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> No.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Sir, I'm Raymond.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> UPS up here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Country.
+      <br>
+    </li>
+  
+    <li>
+      <strong>None:</strong> Oh, my baby.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I wanted to get some eyes and some udders.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Some what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> From a cow?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We don't deal with udders from a cow.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> This is a sausage factory.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We don't deal with cows.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We deal with pigs.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, can I get any eyes?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Eyes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I have no idea what you're talking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Eyes, like eyeballs?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We don't deal with anything like that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Our meat comes in the more in the 60-pound boxes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, okay, I'll put me down for 60 pounds.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Of what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Of eyes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We don't have eyes or otters or any of that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We make sausage.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> That's all we do.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Make sausage.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Okay.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Can I get about 20 pounds of hair or fur?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> We don't have hair or fur.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I think you make it a joke, but I'm not.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I got money to spend here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Why don't you work with me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> It doesn't matter if you have money to spend.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I don't know what you're talking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hudders.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I just don't have.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I just need utters and tails.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Utters and tails.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> It's utterly ridiculous.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Thank you for calling Christmas specialty foods.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Can I help you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yeah, do you got any ox?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> I don't.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Sorry.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> How about, um, any testes?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> No, I don't.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Any shoulder?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> What is that noise?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm trying to start my truck here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_09:</strong> Oh, any shoulder, you said?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I have a pork shoulder rose.
+      <br>
+    </li>
+  
+    <li>
+      <strong>None:</strong> Hmm.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Oh, my word.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Can I help you with something else?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Um, do you want to go for a little ride if I get to start?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> No, I don't want to go for a ride.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I knew you was being passed.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Bye.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> You want to have a glass of wine?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hi.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> This is Jebediah with Motor Rooter.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We're going to be, uh...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> What's an odor rooters?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We're going to scour your ruders up there and your pipes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> My pipes?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> How many restrooms do you have there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Restaurants?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Restaurants.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Restaurants.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Oh, toilets?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I don't know.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Linda!
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Oh, Linda.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Go Linda.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Get her here right away.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We're going to send you a DVD of all the footage when we send our snake through your pipes, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> A snake?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I don't like snakes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No, it's just a drill.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I don't ever send you a snake.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> It's terrible.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I'm afraid.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> snakes? A broken stricter?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> It's a mechanical tool that cleans or drains.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I don't want those snakes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We send it through your toilet, and then we send you the footage on a...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Did man's going to give me a snake?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> I don't want a snake.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I don't even know what's going on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_08:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hi, this is Jasper.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We got a hole here. We're trying to plug a hole.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Do you have any spare panty hose and peanut butter?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> What are you talking about peanut butter?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We're trying to plug a hole here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> and the wall.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We were just looking for some...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> You're not in my house.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Panny hose and peanut butter would help us do the job.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Who are you?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Jasper.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Can you help me out, please? I can be over there
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> in 10, 15 minutes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Absolutely, no.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I'll call the police.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Why?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I know who you are.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I don't have no strangers to my house.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Peanut butter, panty hose. That's all we need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Don't come around my house. I'll call the place.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, you don't have to do that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We can send somebody over to.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> to pick up the panty hose.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Just buy your old business out of my house.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I'm going to call a place now, I think.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Do you have any peanut butter?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> No, I don't use it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Watermelon rinds or something like that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> How about some apple peels?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> No, behave yourself.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Don't go back.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Can you have any panty hose within the hour?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Don't call it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I want to call a place, I think.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> You don't need to do that.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Never call me back, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> We have a hole in our bucket here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Now, can't you just lend a hand?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> No.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Oh, I want to call the place.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Don't do it. No. Don't do it. No. Oh, come on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Give me a hand here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm calling the police right now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Don't do this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Give me a hand with your panty hose, please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> The hose, please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> You're crazy, man. I got to call the police.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No, no, no, no, no, don't do it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Just give us some peanut butter, please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> The butter, please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> I don't use peanut butter, okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> One more minute, I'm calling the police, I think.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Panny hose, please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Penny hose, please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Pany hose. Please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> How about a watermelon?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Watermelon?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Oh, honey, they're bothering me.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Call it please.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_07:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yeah, this is Goodman.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm looking for Rory here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> With regards to?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> A shipment that took place, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> A shipment that took place?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> With regards to what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> This thing was going to Shreveport, Louisiana.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> My good, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> And I worked with you on about four days ago.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> I, excuse me, I'm not sure if you had the right number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> I'm not sure what you're referring to.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> What is this in regards to?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Well, I'm a boat master.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm a boatmaster. I,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I talked to you, I talked to you about four days ago is what I did.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm a boatmaster.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> A boatmaster?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yes, I am.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> And I sent miniaturized encased a reptile.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> It was carefully packaged and crated up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> And when it got to the other side, it was not miniaturized down in the long.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I know what's going on over there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> And when it got to the other side, it was not miniaturized down the line.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> What's going on over that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> That's what I'm trying to get.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> I don't know what you're talking about, man, because.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> because you're going in and out with different voices.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> So is it a joke or what the fuck you're doing?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'm talking to you right here, and I'm Goodman,
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> and I paid cash money on the assumption that you were going to be professional.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> On what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> And what are you talking about?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I had a miniaturized...
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You know who you're calling?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You know what state you're calling?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Because I don't have pythons.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I don't have anything of that nature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You got the wrong fucking.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> This thing was not miniaturized.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I don't know what kind of thing you're doing.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I'm in Chicago, motherfucker.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You got the wrong number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I don't know what you're getting at you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Hello, this is Rory.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hey, hello, this is Goodman.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> What are you all doing to my reptile up there?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Dude, you guys got the wrong number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I actually work for a law firm.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I don't work with reptiles or any type of species that I'm getting a phone call for.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> You gave me your card there, guy, is what you did.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Dude, dude, dude, who are you calling?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Who the fuck are you calling?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> What are you trying to call?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hey, I worked with you, fair and square.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Where?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Where did you work with me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> You took my parcel, and then this thing was all felled up.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> So, bro, I don't deal with parcels.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I don't deal with cash.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I don't deal with Python.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I work for a fucking law firm.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I'm a lawyer.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> I don't know what the fuck you're talking about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I'll say for $475 and I'll let it go.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> $475 of nothing I fucking know about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Get a life.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Just give me the payment and I'll drop the whole.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> If I knew what the fuck you were talking about, this seems like a joke that you're playing a fun of.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Okay?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Get your act together there, fella.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> You understand?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Sella, I'm a fucking lawyer.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Okay, I work for a fucking law phone.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You hear me, dude?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You hear me?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> If you continue with the harassment, I'll get you subpoenaed.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> So fuck off.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Yeah, look at here, guy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Why don't you give me what I need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Hold on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> I've got to record this for the police department.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Just give me what I need.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Why don't you just get your head on straight and give me what I need?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Hold on.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Let me keep you on the phone so I can record this real quick.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> Where's this recorder?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_02:</strong> I need to submit this to the police department.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Here, talk to my friend.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_01:</strong> Hey, uh, Longmont.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> Is he his home?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> Hey, is that ULPC?
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_03:</strong> You got the wrong number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No, it's the right number.
+      <br>
+    </li>
+  
+    <li>
+      <strong>SPEAKER_04:</strong> No, it's the right number.
+      <br>
+    </li>
+  
+  </ul>
+
+<!-- 
+
+-->
+      </div>
+    </main><footer class="site-footer h-card">
+
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">wallace-thrasher</h2> -->
+
+    <div class="footer-col-wrapper">
+      <!-- <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">wallace-thrasher</li></ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1"><ul class="social-media-list"><li><a href="https://github.com/willjasen"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">willjasen</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-4">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
+      </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>wallace-thrasher | you can call me stretchie</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="wallace-thrasher" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="you can call me stretchie" />
+<meta property="og:description" content="you can call me stretchie" />
+<link rel="canonical" href="/tracks/alex-trebek/" />
+<meta property="og:url" content="/tracks/alex-trebek/" />
+<meta property="og:site_name" content="wallace-thrasher" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-08T17:54:09-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="wallace-thrasher" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T17:54:09-05:00","datePublished":"2025-03-08T17:54:09-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/alex-trebek/"},"url":"/tracks/alex-trebek/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
+<body><header class="site-header" role="banner">
+
+  
+
+  <script src="/assets/js/theme-toggle.js"></script>
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">wallace-thrasher</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/albums/">Albums</a><a class="page-link" href="/speakers/">Speakers</a><a class="page-link" href="/subtitles/">Subtitles</a></div>
+      </nav></div>
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <!-- <script src="scripts/use-lunr.js"></script> -->
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+
+
+
+
+
+<style>
+    .album-info {
+        display: flex;
+        align-items: center;
+    }
+  
+    .image-container {
+        margin-right: 20px; /* Adds some space between the image and text for better readability */
+    }
+</style>
+
+<!-- Display the album header -->
+<div class="album-info" style="display: flex; align-items: center;">
+    <h2 style="margin-bottom: 10px;">Longmont Potion Castle 7 (2009)</h2>
+    <div class="image-container" style="margin-left: 50px;">
+        <img src="/assets/img/albums/LPC_7.jpg" alt="Longmont Potion Castle 7" width="150" height="150">
+    </div>
+</div>
+
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track 7: Alex Trebek</h3>
+
+
+
+
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? true
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2009";
+    const matchedAlbumTitle = "Longmont Potion Castle 7";
+    const trackTitleDetail = "Alex Trebek";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
+
+<!-- Display all of the subtitles within the track -->
+<ul style="list-style-type: none;">
+  
+    <li>
+      <strong>Alex Trebek:</strong> Hello?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Yeah, hello. This is Thrasher here at United Parcel Service.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> And I need a signature and a COD here today on some freight here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> What is it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> We got some sod here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Sod?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Yes.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Are you sure you have the right address?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Quite confident. Our driver's already en route to you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I just as soon get the payment prepared now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, who ordered it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> It's $1949 even.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, who ordered it?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You're the recipient.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, we're the recipient, but we didn't order it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Incorrect.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You place the initial order and now we're fulfilling it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Do you understand?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> When did we place the order?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I'm the owner of the house here and I didn't place the order.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> So you tell me who placed the order.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> If it's our gardener and he didn't tell us,
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> He didn't tell us about it, I don't know, and I don't know where we need saw it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> So you tell me where this is coming from.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I am looking at your digital signature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Digital signature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Here on my tablet, yes, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Need an online payment or some method of payment here, 449.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, where did you get my digital signature?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> From you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> When?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> At the time of purchase.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> And where it was the purchase made?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Siam.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Siam.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Correct.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> The country, Siam?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> That's all the data I have, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Uh...
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Apparently this is the third attempt here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> And this is sod?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Yes, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Grass.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Something to do with the lawn.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Yeah, it's a big, big bundle of stuff here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, I don't...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> You don't have my digital signature because I didn't give you my digital signature.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I didn't order anything from Siam, and Siam is no longer an existence.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> It's Thailand now, so I don't know what Siam is.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Well, the whole thing's viewable online.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> The whole thing is viewable online.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Your signature, the item itself, it's a real colorful bunch of stuff here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> And the payment details. So I can go ahead and take a credit card number here and we'll just get everything...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> No, you're not going to take a credit card number at all.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Because tell me where I can view this online.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> UPS.com.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> UPS
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> dot com and then we go to what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You need to just enter your credit card number as soon as possible.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I ain't going to do that because we didn't order anything.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You're not going to do it on 4,200 pounds of stuff here?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> 4,200 pounds of stuff.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Are you out of your mind?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> That is roughly the weight of this stuff here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, we didn't order it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> We got four trucks en route to you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, too bad because they ain't delivering it here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Oh, no?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Nope.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> You're not UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Most certainly, yeah, I'm 12 years on the job. I've been here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, yeah? What's your name?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I'm on the dock right here. I'm Wallace.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Wallace, what?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Thrasher
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Wallace Thrasher...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Okay, what's the number out there? Who's the supervisor?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I'm the only one on the dock, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> You're the only one?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> The only one on the dock here tonight, yes, sir?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, yeah?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Why are we delivering this at night?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Like I say, this is third or fourth try here to get this to you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Really?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> we've heard of it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> So...
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Is that a fact?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> We have a normal, a usual driver who comes here, and he never mentioned anything about it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> We don't have...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Where's mom? (sp?)
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Yep, Mom. (sp?)
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I'm going to get my wife here and find out if you've...
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Well, why don't you come down to the dock?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Huh?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Just cut a check or however you do it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Where is the dock?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I'm in Calabasas right now.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Calabasas, but you want me to come out to Calabasas to view something that I didn't order
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> and that I probably don't
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> want?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Twelve years of working here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I've seen lots and lots of digital signatures come and go.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Really?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Lots of them.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Yeah, well, I don't buy things with digital signatures.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> So...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Do we have...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> There's 4,200 pounds of sod or something on...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Or that's about to be delivered with four trucks from UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Did we order that?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> No.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Sir, I have been told by my colleague here we can't accept cash and coins
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> to get this thing resolved here for you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I think this is just a...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> crock of shit, so you're not UPS.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Absolutely, I am here.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Yeah, well I'll ask my driver tomorrow to track down a Wallace Thrasher.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You can call me Stretchy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> You're just not going to give up, are you? Stretchy?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I just deal with fulfillment, product fulfillment here at United Parcel Service, so...
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> We've got a total of three flags on your account here, so...
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I just would like to get a routing number and we'll satisfy the debt.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> You don't have a routing now. How can I have a
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> routing number? What the hell is the routing number?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> From your checking account or debit card
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Are you out of your mind?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I'm going to pay $2,000 for something that I do not have,
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> did not order, and know nothing about.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> The sender's name is Artie Yamamoto.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Send me something in the mail, stretch.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I'll send you a subpoena, is what I'll send you.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, that's good. I'll respond to a subpoena.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You'll be commanded to testify before Artie Yamamoto.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, good.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Good. Boy, that's scarcely. Artie Yamamoto. Who is he?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> He's at the Bangkok Sod Center.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Bangkok Sod Center. And that's in Bangkok, Thailand?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Yes, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, good. Yep, I'm likely to order Saud. Thailand. You're out of your mind, Stretchy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Well, let's hop on a plane and we'll go meet with them in person. I have a three-way conference.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Are you out of your mind?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> No. I resent the implication
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> frankly.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Well, good.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Uh, present it all you want.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Send me a letter. Send me a subpoena.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Be happy to receive it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> We'll do a conference call.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> No, I don't need a conference call, Stretchy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> You can call me Stretchy.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I mean...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I just did.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I've got signed affidavits and...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Appadavits?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> All kinds of other things. Yes, sir.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, good. Well, you have my signature?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> I'm looking right at it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Yeah.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> And what does it say?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> It's not legible.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> But it's not legible?
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> So that would be step one is to work on this.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> that, but...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> I have no need for $2,000 worth of sod, and I didn't order it, and I know nothing about it.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> So you thought you'd just stick good old UPS with the charges, huh?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Nope.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Are you out of your mind?
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Nobody orders sod from Asia.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Send me something in the mail, and we'll get to the bottom of this, but we're not paying for something
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> we didn't order.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Oh, you and I'll get to the bottom of it all right, if I need to come down and drive the truck myself.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Oh, well, go ahead.
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> Be prepared to...
+      <br>
+    </li>
+  
+    <li>
+      <strong>Alex Trebek:</strong> be met by police.
+      <br>
+    </li>
+  
+    <li>
+      <strong>LPC:</strong> Be prepared...
+      <br>
+    </li>
+  
+  </ul>
+
+<!-- 
+
+-->
+      </div>
+    </main><footer class="site-footer h-card">
+
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">wallace-thrasher</h2> -->
+
+    <div class="footer-col-wrapper">
+      <!-- <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">wallace-thrasher</li></ul>
+      </div> -->
+
+      <div class="footer-col footer-col-1"><ul class="social-media-list"><li><a href="https://github.com/willjasen"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">willjasen</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-4">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
+      </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
