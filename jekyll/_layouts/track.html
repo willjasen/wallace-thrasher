@@ -5,15 +5,19 @@ layout: default
 {% include variables.liquid %}
 {% include album-header.html %}
 
-<h3 style="text-align: center; margin-top: 20px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
+<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
+
+{% if track_length_detail %}
+  <h4 style="text-align: center; margin-top: 0px;">Runtime: {{ track_length_detail }} seconds</h4>
+{% endif %}
 
 {% if jekyll.environment != "production" %}
   <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
   <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
     {% if last_modified_detail %}
       Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}
     {% endif %}
-  </h5>
   </h5>
   <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
     {% if whisper_model_detail %}
@@ -37,6 +41,7 @@ layout: default
       To-Do: {{ to_do_detail }}
     {% endif %}
   </h5>
+  <hr style="margin: 20px 0;">
 {% endif %}
 
 <!-- Display all of the subtitles within the track -->
