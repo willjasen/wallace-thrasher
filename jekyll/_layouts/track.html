@@ -41,6 +41,9 @@ layout: default
       To-Do: {{ to_do_detail }}
     {% endif %}
   </h5>
+
+  {% include embed-audio-dir.html %}
+
   <hr style="margin: 20px 0;">
 {% endif %}
 
@@ -53,23 +56,6 @@ layout: default
     </li>
   {% endfor %}
   </ul>
-
-<!-- This code is for an audio player -->
-<!-- <input type="file" id="usb" webkitdirectory directory/>
-<script>
-  const usb = document.getElementById('usb');
-  if (usb.webkitdirectory) {
-    // The input element supports selecting directories, so we can add an event listener to it
-    usb.addEventListener('change', (event) => {
-      const files = event.target.files;
-      for (let i = 0; i < files.length; i++) {
-        console.log(files[i].webkitRelativePath); // Log the name of each file in the selected directory
-      }
-    });
-  } else {
-    // The input element does not support selecting directories, so we can't add an event listener to it
-  }
-</script> -->
 
 <!-- 
 {% if usb_directory %}
