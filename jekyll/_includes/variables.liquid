@@ -18,7 +18,7 @@
   {% assign whisper_model_detail = track_details.Whisper_Model %}
   {% assign last_modified_detail = track_details.Last_Modified %}
   {% assign to_do_detail = track_details.To_Do %}
+  {% assign track_subtitles = track_details.Subtitles %}
 {% endfor %}
 {% assign track_slug = page.track_title | slugify %}
 {% assign track = site.data[track_slug] %}
-{% assign track_subtitles = track_details.Subtitles %}
