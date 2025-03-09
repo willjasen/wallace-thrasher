@@ -25,11 +25,9 @@ async function loadData() {
         const albums = data[albumsKey];
         
         for(const album of albums) {
-            console.log(album);
             for (const track of album.Tracks) {
                 // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
                 //trackData = await fetchData(jsonPath);
-                console.log(track);
                 for (const subtitle of track.Subtitles) {
                     dataStructure.push({
                         id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
