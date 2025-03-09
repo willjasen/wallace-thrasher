@@ -5,36 +5,20 @@
 
 <script>
   // Define a variable for the start time, allowing it to be manipulated
-  const skipIntoTime = 15; // in seconds
 
-  const fileInput = document.getElementById('fileInput');
-  const audio = document.getElementById('audioPlayer');
-  
   // Global variable to store event.target for later use
-  let storedFileTarget;
   
-  // Create an empty object to store the file name to URL mapping
-  const fileMap = {};
   
-  fileInput.addEventListener('change', function(event) {
-    // Store event.target globally
-    storedFileTarget = event.target;
-    const files = storedFileTarget.files;
-    for (const file of files) {
-      const url = URL.createObjectURL(file);
-      // Store the mapping of file.name to its URL
-      fileMap[file.webkitRelativePath] = url;
-    }
+ 
     // Log the complete fileMap
-    console.log(fileMap);
+    // console.log(window.fileMap);
 
     // Determine the matching URL and play the file
-    const matchedAlbumYear = "{{ matched_album_year }}";
+    /* const matchedAlbumYear = "{{ matched_album_year }}";
     const matchedAlbumTitle = "{{ matched_album_title }}";
     const trackTitleDetail = "{{ track_title_detail }}";
     const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
-    console.log('Relevant URL: ' + relevantUrl);
-    const matchingUrl = fileMap[relevantUrl];
+    const matchingUrl = window.fileMap[relevantUrl];
     audio.src = matchingUrl;
 
     // Wait for metadata to be loaded before seeking.
@@ -43,9 +27,7 @@
            audio.currentTime = skipIntoTime;
          }
          audio.play();
-       }, { once: true });
-
-  });
+       }, { once: true }); */
   
   // Later use: you can now access storedFileTarget to re-upload or access the files
   // e.g., storedFileTarget.files

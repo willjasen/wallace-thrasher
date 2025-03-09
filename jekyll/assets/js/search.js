@@ -36,6 +36,7 @@ async function loadData() {
                         dataStructure.push({
                             id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
                             Album: album.Album,
+                            Album_Year: album.Year,
                             Album_Picture: album.Album_Picture,
                             Album_Slug: album.Album_Slug,
                             Track_Number: track.Track_Number,
@@ -69,6 +70,7 @@ async function loadData() {
                         dataStructure.push({
                             id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
                             Album: album.Album,
+                            Album_Year: album.Year,
                             Album_Picture: album.Album_Picture,
                             Album_Slug: album.Album_Slug,
                             Track_Number: track.Track_Number,
@@ -95,6 +97,24 @@ async function loadData() {
 async function main(callback) {
     try {
         dataStructure = await loadData();
+
+        const fileInput = document.getElementById('fileInput');
+        const audio = document.getElementById('audioPlayer');
+                        
+        fileMap = {};
+        let storedFileTarget;
+        fileInput.addEventListener('change', function(event) {
+            // Store event.target globally
+            storedFileTarget = event.target;
+            const files = storedFileTarget.files;
+            for (const file of files) {
+                const url = URL.createObjectURL(file);
+                // Store the mapping of file.name to its URL
+                fileMap[file.webkitRelativePath] = url;
+                console.log(file.webkitRelativePath);
+                console.log(fileMap[file.webkitRelativePath]);
+            }
+        });
 
         // Function to index a search based on a field
         function indexOnField(indexField) {
@@ -161,8 +181,38 @@ async function main(callback) {
                             <img src="/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
-                            <small> @ ${matchedDoc.StartTime}</small>
+                            <small> @ </small>
                         `;
+
+                        // Create a clickable link
+                        const matchedAlbumYear = matchedDoc.Album_Year;
+                        const matchedAlbumTitle = matchedDoc.Album;
+                        const trackTitleDetail = matchedDoc.Track_Title;
+
+                        const startTimeLink = document.createElement('a');
+                        startTimeLink.href = "#t=" + matchedDoc.StartTime;
+                        startTimeLink.textContent = matchedDoc.StartTime;
+                        const timeParts = matchedDoc.StartTime.split(":");
+                        // Parse minutes and seconds. For format "HH:MM:SS,ms"
+                        const minutes = parseInt(timeParts[1], 10);
+                        const seconds = parseInt(timeParts[2].split(",")[0], 10);
+                        const secondsConverted = (minutes * 60) + seconds;
+                        startTimeLink.addEventListener('click', function(e) {
+                            const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+                            console.log('Relevant URL: ' + relevantUrl);
+                            const matchingUrl = fileMap[relevantUrl];
+                            console.log('Matching URL: ' + matchingUrl);
+                            e.preventDefault();
+                            const audioPlayer = document.getElementById('audioPlayer');
+                            if (audioPlayer) {
+                                audioPlayer.src = matchingUrl;
+                                audioPlayer.currentTime = secondsConverted;
+                                console.log(audioPlayer.src);
+                                console.log("Playing audio from timestamp:", secondsConverted);
+                                audioPlayer.play();
+                            }
+                        });
+                        albumAndTitleItem.appendChild(startTimeLink);
 
                         const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
                         const subtitleItemLi = document.createElement('li');
