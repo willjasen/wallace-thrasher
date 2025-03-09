@@ -1,3 +1,9 @@
+---
+layout: null
+---
+
+// search.js
+
 /*
     This function retrieves a JSON document from a given path
 */
@@ -16,35 +22,78 @@ async function fetchData(path) {
 */
 async function loadData() {
 
-    console.log("Creating the data structure...");
-    const data = await fetchData('/assets/json/combined_data.json');
+    var renderQuickly = '{{ site.data.render_quickly }}';
+    var jekyll_env = '{{ jekyll.environment }}';
     let dataStructure = [];
+    
+    if (renderQuickly) {
+        console.log("Creating the data structure quickly...");
+        const data = await fetchData('/assets/json/data.json');
 
-    // Iterate through each album, track, and subtitle
-    for (const albumsKey of Object.keys(data)) {
-        const albums = data[albumsKey];
-        
-        for(const album of albums) {
-            for (const track of album.Tracks) {
-                // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                //trackData = await fetchData(jsonPath);
-                for (const subtitle of track.Subtitles) {
-                    dataStructure.push({
-                        id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
-                        Album: album.Album,
-                        Album_Picture: album.Album_Picture,
-                        Album_Slug: album.Album_Slug,
-                        Track_Number: track.Track_Number,
-                        Track_Slug: track.Track_Slug,
-                        Track_Title: track.Track_Title,
-                        Speaker: subtitle.Speaker,
-                        Text: subtitle.Text,
-                        StartTime: subtitle["Start Time"],
-                        EndTime: subtitle["End Time"],
-                        Whisper_Model: track.Whisper_Model
-                    });
+        // Iterate through each album, track, and subtitle
+        for (const albumsKey of Object.keys(data)) {
+            const albums = data[albumsKey];
+            for(const album of albums) {
+                console.log("Loading album: " + album.Album);
+                for (const track of album.Tracks) {
+                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    trackSubtitlesData = await fetchData(jsonPath);
+                    for (const subtitle of trackSubtitlesData) {
+                        dataStructure.push({
+                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
+                            Album: album.Album,
+                            Album_Year: album.Year,
+                            Album_Picture: album.Album_Picture,
+                            Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
+                            Track_Slug: track.Track_Slug,
+                            Track_Title: track.Track_Title,
+                            Speaker: subtitle.Speaker,
+                            Text: subtitle.Text,
+                            StartTime: subtitle["Start Time"],
+                            EndTime: subtitle["End Time"],
+                            Whisper_Model: track.Whisper_Model
+                        });
+                    }
                 }
             }
+            console.log("All albums have been loaded.");
+        }
+
+    } else {
+        console.log("Creating the data structure slowly...");
+        console.log(renderQuickly);
+        const data = await fetchData('/assets/json/combined_data.json');
+
+        // Iterate through each album, track, and subtitle
+        for (const albumsKey of Object.keys(data)) {
+            const albums = data[albumsKey];
+            
+            for(const album of albums) {
+                console.log("Loading album: " + album.Album);
+                for (const track of album.Tracks) {
+                    // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    // trackSubtitlesData = await fetchData(jsonPath);
+                    for (const subtitle of track.Subtitles) {
+                        dataStructure.push({
+                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
+                            Album: album.Album,
+                            Album_Year: album.Year,
+                            Album_Picture: album.Album_Picture,
+                            Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
+                            Track_Slug: track.Track_Slug,
+                            Track_Title: track.Track_Title,
+                            Speaker: subtitle.Speaker,
+                            Text: subtitle.Text,
+                            StartTime: subtitle["Start Time"],
+                            EndTime: subtitle["End Time"],
+                            Whisper_Model: track.Whisper_Model
+                        });
+                    }
+                }
+            }
+            console.log("All albums have been loaded.");
         }
     }
 
@@ -56,10 +105,9 @@ async function loadData() {
 */
 async function main(callback) {
     try {
-
-        // Load the data
+        var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData();
-
+       
         // Function to index a search based on a field
         function indexOnField(indexField) {
             let startTimeInMilliseconds = Date.now();
@@ -99,9 +147,31 @@ async function main(callback) {
         console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
 
 
-
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
+                if(jekyll_env !== 'production') {
+                    const fileInput = document.getElementById('fileInput');
+                    const audio = document.getElementById('audioPlayer');
+                    fileMap = {};
+                    fileInput.addEventListener('change', function(event) {
+                        fileTarget = event.target;
+                        const files = fileTarget.files;
+                        for (const file of files) {
+                            if (file.name.endsWith('.mp3')) {
+                                const url = URL.createObjectURL(file);
+                                fileMap[file.webkitRelativePath] = url;
+                            }  
+                        }
+                        console.log("Files have been uploaded! Jumping to a subtitle will now work!");
+
+                        // Update the input of #subtitles-search-input
+                        const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
+                        if (subtitlesSearchInput) {
+                            subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
+                            subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
+                        }
+                    });
+                }
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
                 if (this.value != "") {
                     const query = this.value;
@@ -125,8 +195,49 @@ async function main(callback) {
                             <img src="/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
-                            <small> @ ${matchedDoc.StartTime}</small>
                         `;
+
+                        if (!fileMap || Object.keys(fileMap).length === 0) {
+                            albumAndTitleItem.innerHTML += `
+                                <small> @ ${matchedDoc.StartTime}</small>
+                            `;
+                        }
+                        else {
+                            albumAndTitleItem.innerHTML += `
+                                <small> @ </small>
+                            `;
+
+                            // Create a clickable link
+                            const matchedAlbumYear = matchedDoc.Album_Year;
+                            const matchedAlbumTitle = matchedDoc.Album;
+                            const trackTitleDetail = matchedDoc.Track_Title;
+
+                            const startTimeLink = document.createElement('a');
+                            startTimeLink.href = "#" + matchedDoc.StartTime;
+                            startTimeLink.textContent = matchedDoc.StartTime;
+                            
+                            // Parse minutes and seconds. For format "HH:MM:SS,ms"
+                            const timeParts = matchedDoc.StartTime.split(":");
+                            const minutes = parseInt(timeParts[1], 10);
+                            const seconds = parseInt(timeParts[2].split(",")[0], 10);
+                            const secondsConverted = (minutes * 60) + seconds;
+                            startTimeLink.addEventListener('click', function(e) {
+                                const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+                                // console.log('Relevant URL: ' + relevantUrl);
+                                const matchingUrl = fileMap[relevantUrl];
+                                // console.log('Matching URL: ' + matchingUrl);
+                                e.preventDefault();
+                                const audioPlayer = document.getElementById('audioPlayer');
+                                if (audioPlayer) {
+                                    audioPlayer.src = matchingUrl;
+                                    audioPlayer.currentTime = secondsConverted;
+                                    console.log(audioPlayer.src);
+                                    console.log("Playing audio from timestamp:", secondsConverted);
+                                    audioPlayer.play();
+                                }
+                            });
+                            albumAndTitleItem.appendChild(startTimeLink);
+                        }
 
                         const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
                         const subtitleItemLi = document.createElement('li');

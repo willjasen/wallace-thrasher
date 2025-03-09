@@ -36,31 +36,37 @@ layout: default
       Subtitles adjusted? false
     {% endif %}
   </h5>
-  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 40px;">
     {% if to_do_detail %}
       To-Do: {{ to_do_detail }}
     {% endif %}
   </h5>
 
-  {% include embed-audio-dir.html %}
-
   <hr style="margin: 20px 0;">
+  {% include embed-audio-dir-for-tracks.html %}
+  <hr style="margin: 20px 0;">
+
 {% endif %}
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  {% for trackText in track_subtitles %}
+  {% if track_subtitles %}
+    {% for trackText in track_subtitles %}
+      <li>
+        {% if jekyll.environment != "production" %}
+          <i>{{ trackText.Index }}</i> -- 
+        {% endif %}
+        <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
+      </li>
+    {% endfor %}
+  {% else %}
+    {% for trackText in track %}
     <li>
-      <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}
-      <br>
+      {% if jekyll.environment != "production" %}
+          <i>{{ trackText.Index }}</i> -- 
+      {% endif %}
+      <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
     </li>
-  {% endfor %}
-  </ul>
-
-<!-- 
-{% if usb_directory %}
-  {% if usb_filename %}
-    {% include embed-audio.html src="/assets/usb/{{usb_directory}}/{{usb_filename}}" %}
+    {% endfor %}
   {% endif %}
-{% endif %}
--->
+</ul>

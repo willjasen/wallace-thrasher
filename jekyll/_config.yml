@@ -18,6 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+render_quickly: true
+
 title: wallace-thrasher
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -27,10 +29,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: willjasen
 
-# Build settings
-theme: minima
+# Build settings for dark mode
+remote_theme: jekyll/minima
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
+minima:
+  skin: auto
 
 timezone: America/New_York
 encoding: utf-8
@@ -79,6 +83,3 @@ defaults:
 
 sass:
   quiet_deps: true
-
-# skip_tracks_generation: true
-# skip_albums_generation: true
