@@ -40,7 +40,8 @@ module Jekyll
         end
 
         album_data["Tracks"] = combined_tracks_on_album_data
-        combined_albums_data = album_data
+        combined_albums_data << album_data
+        combined_tracks_on_album_data = []
       end  
 
       combined_data_path = File.join(site.source, 'assets', 'json', 'combined_data.json')
