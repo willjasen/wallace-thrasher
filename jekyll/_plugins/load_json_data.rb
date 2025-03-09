@@ -17,7 +17,7 @@ module Jekyll
       end
 
       # Load /assets/data.json
-      data_file = File.join(site.source, 'assets', 'json', 'data.json')
+      data_file = File.join(site.source, 'assets', 'json', 'combined_data.json')
 
       if File.exist?(data_file)
         data_json = JSON.parse(File.read(data_file))

@@ -25,7 +25,7 @@ module Jekyll
               track_data_content = JSON.parse(File.read(track_data_path))
               # Assign the parsed JSON as a new Tracks key into the current track
               track_data["Subtitles"] = track_data_content
-              album_data["Tracks"] = track_data
+              album_data["Tracks"] = [track_data]
               combined_data << album_data
             rescue JSON::ParserError => e
               puts "Error parsing JSON for track_data_path: #{track_data_path}, error: #{e.message.slice(0, 100)}"
