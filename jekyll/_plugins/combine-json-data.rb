@@ -38,11 +38,14 @@ module Jekyll
             puts "Warning: File does not exist for track_data_path: #{track_data_path.to_s.slice(0, 100)}"
           end
         end
-      end
+
+        album_data["Tracks"] = combined_tracks_on_album_data
+        combined_albums_data = album_data
+      end  
 
       combined_data_path = File.join(site.source, 'assets', 'json', 'combined_data.json')
       File.open(combined_data_path, 'w') do |file|
-        file.write(JSON.pretty_generate({ "Albums" => combined_tracks_on_album_data }))
+        file.write(JSON.pretty_generate({ "Albums" => combined_albums_data }))
       end
     end
   end
