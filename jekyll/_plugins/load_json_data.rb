@@ -1,4 +1,5 @@
 require 'json'
+require_relative 'combine-json-data'
 
 module Jekyll
   class LoadJsonData < Generator
