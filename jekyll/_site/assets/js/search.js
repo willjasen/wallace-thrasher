@@ -22,7 +22,7 @@ async function loadData() {
     var jekyll_env = 'development';
     let dataStructure = [];
     
-    if (loadIndividualTrackJSON === "true") {
+    if (loadIndividualTrackJSON === true) {
         console.log("Loading data from individual JSON files...");
         const data = await fetchData('/assets/json/combined_data.json');
 
@@ -148,7 +148,7 @@ async function main(callback) {
 
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
-                if(jekyll_env !== 'production') {
+                if(jekyll_env !== "production") {
                     const fileInput = document.getElementById('fileInput');
                     const audio = document.getElementById('audioPlayer');
                     fileMap = {};
