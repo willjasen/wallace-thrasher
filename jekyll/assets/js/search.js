@@ -200,7 +200,7 @@ async function main(callback) {
 
                             const startTimeLink = document.createElement('a');
                             startTimeLink.href = "#" + matchedDoc.StartTime;
-                            startTimeLink.textContent = matchedDoc.StartTime;
+                            // startTimeLink.textContent = matchedDoc.StartTime;
                             
                             // Parse minutes and seconds. For format "HH:MM:SS,ms"
                             const timeParts = matchedDoc.StartTime.split(":");
