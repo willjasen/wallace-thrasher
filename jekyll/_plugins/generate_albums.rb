@@ -1,8 +1,11 @@
+require_relative 'update_yml'
 module Jekyll
     class AlbumsGenerator < Generator
       safe true
   
       def generate(site)
+        return if site.config['skip_albums_generation']
+
         albums = site.data['tracks']
         albums.each do |album_data|
             site.collections['albums'].docs << create_album_doc(site, album_data)
