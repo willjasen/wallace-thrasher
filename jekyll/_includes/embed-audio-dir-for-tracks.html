@@ -1,10 +1,11 @@
-<!-- File input for user to select the .mp3 file -->
-<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<div style="display: flex; align-items: center;">
+  <label for="fileInput" style="margin-right: 10px;">Select LPC USB -> </label>
+  <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+  <audio id="audioPlayer" controls></audio>
+</div>
 <br>
-<audio id="audioPlayer" controls></audio>
 
 <script>
-  // Define a variable for the start time, allowing it to be manipulated
 
   const fileInput = document.getElementById('fileInput');
   const audio = document.getElementById('audioPlayer');
@@ -25,13 +26,14 @@
       fileMap[file.webkitRelativePath] = url;
     }
     // Log the complete fileMap
-    console.log(fileMap);
+    // console.log(fileMap);
 
     // Determine the matching URL and play the file
     const matchedAlbumYear = "{{ matched_album_year }}";
     const matchedAlbumTitle = "{{ matched_album_title }}";
     const trackTitleDetail = "{{ track_title_detail }}";
-    const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    const albumUSBDirectory = "{{ matched_album_usb_dir }}"
+    const relevantUrl = `LPC USB/${albumUSBDirectory}/${trackTitleDetail}.mp3`;
     console.log('Relevant URL: ' + relevantUrl);
     const matchingUrl = fileMap[relevantUrl];
     audio.src = matchingUrl;
@@ -42,8 +44,5 @@
        }, { once: true });
 
   });
-  
-  // Later use: you can now access storedFileTarget to re-upload or access the files
-  // e.g., storedFileTarget.files
-  // or trigger storedFileTarget.click() to re-open the file picker.
+
 </script>

@@ -36,15 +36,16 @@ layout: default
       Subtitles adjusted? false
     {% endif %}
   </h5>
-  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 40px;">
     {% if to_do_detail %}
       To-Do: {{ to_do_detail }}
     {% endif %}
   </h5>
 
-  {% include embed-audio-dir-for-tracks.html %}
-
   <hr style="margin: 20px 0;">
+  {% include embed-audio-dir-for-tracks.html %}
+  <hr style="margin: 20px 0;">
+
 {% endif %}
 
 <!-- Display all of the subtitles within the track -->
