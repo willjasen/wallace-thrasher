@@ -63,7 +63,7 @@ it is possible that the keys `Speakers_Adjusted`, `Subtitles_Adjusted`, `USB_Fil
 
 ### JSON Structure for Track Subtitles
 
-the JSON data for each track resides within a folder named as the respective album title's slug at `/assets/json`
+the JSON data for each track resides within a folder named as the respective album title's slug with the `/assets/json` folder
 ```
 [
     {
@@ -85,7 +85,7 @@ the JSON data for each track resides within a folder named as the respective alb
 
 ### Under The Hood
 
-when the search pages are accessed, the JSON data is retrieved from the server, then lunr indexes the data so that it becomes searchable. i have noticed that the first time that the website is loaded, the JSON files may take a handful of seconds to retrieve and load (its progress can be seen on the search pages). after the data has been loaded once and subsequently cached, the loading process is much faster.
+when the search pages are accessed, the single combined JSON data (`/assets/json/combined_json.data`) is retrieved from the server, then lunr indexes the data so that it becomes searchable.
 
 the key `USB_Filename` refers to the respective mp3 file's name that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). this key is planned for a future feature.
 
