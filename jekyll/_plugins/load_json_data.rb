@@ -17,8 +17,7 @@ module Jekyll
         #  site.data[data_key] = json_data
         #end
       else
-        # Load /assets/data.json
-        data_file_path = File.join(site.source, 'assets', 'json', 'combined_data.json')
+        data_file_path = File.join(json_dir, 'combined_data.json')
         puts "Loading data from #{data_file_path}"
 
         if File.exist?(data_file_path)
