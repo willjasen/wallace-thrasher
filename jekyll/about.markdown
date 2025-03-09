@@ -20,7 +20,7 @@ there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fan
 
 ### Components
 
-this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper is utilized to analyze mp3 tracks and have it output subtitle files, which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages, and then any changes are then pushed here into this repo.
+this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper is utilized to analyze mp3 tracks and have it output subtitle files, which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`combined_data.json`), and then any changes are then pushed here into this repo.
 
 because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser. 
 
