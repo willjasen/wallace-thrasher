@@ -1,3 +1,4 @@
+require_relative 'update_yml'
 module Jekyll
     class TracksGenerator < Generator
       safe true
