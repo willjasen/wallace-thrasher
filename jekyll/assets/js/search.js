@@ -16,33 +16,72 @@ async function fetchData(path) {
 */
 async function loadData() {
 
-    console.log("Creating the data structure...");
-    const data = await fetchData('/assets/json/combined_data.json');
     let dataStructure = [];
 
-    // Iterate through each album, track, and subtitle
-    for (const albumsKey of Object.keys(data)) {
-        const albums = data[albumsKey];
-        
-        for(const album of albums) {
-            for (const track of album.Tracks) {
-                // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                // trackData = await fetchData(jsonPath);
-                for (const subtitle of track.Subtitles) {
-                    dataStructure.push({
-                        id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
-                        Album: album.Album,
-                        Album_Picture: album.Album_Picture,
-                        Album_Slug: album.Album_Slug,
-                        Track_Number: track.Track_Number,
-                        Track_Slug: track.Track_Slug,
-                        Track_Title: track.Track_Title,
-                        Speaker: subtitle.Speaker,
-                        Text: subtitle.Text,
-                        StartTime: subtitle["Start Time"],
-                        EndTime: subtitle["End Time"],
-                        Whisper_Model: track.Whisper_Model
-                    });
+    renderQuickly = site.config.render_quickly | jsonify;
+    
+    if (renderQuickly) {
+        console.log("Creating the data structure quickly...");
+        console.log(site.render_quickly);
+        const data = await fetchData('/assets/json/data.json');
+
+        // Iterate through each album, track, and subtitle
+        for (const albumsKey of Object.keys(data)) {
+            const albums = data[albumsKey];
+            
+            for(const album of albums) {
+                for (const track of album.Tracks) {
+                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    trackData = await fetchData(jsonPath);
+                    for (const subtitle of track.Subtitles) {
+                        dataStructure.push({
+                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
+                            Album: album.Album,
+                            Album_Picture: album.Album_Picture,
+                            Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
+                            Track_Slug: track.Track_Slug,
+                            Track_Title: track.Track_Title,
+                            Speaker: subtitle.Speaker,
+                            Text: subtitle.Text,
+                            StartTime: subtitle["Start Time"],
+                            EndTime: subtitle["End Time"],
+                            Whisper_Model: track.Whisper_Model
+                        });
+                    }
+                }
+            }
+        }
+
+    } else {
+        console.log("Creating the data structure slowly...");
+        console.log(site.render_quickly);
+        const data = await fetchData('/assets/json/combined_data.json');
+
+        // Iterate through each album, track, and subtitle
+        for (const albumsKey of Object.keys(data)) {
+            const albums = data[albumsKey];
+            
+            for(const album of albums) {
+                for (const track of album.Tracks) {
+                    // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    // trackData = await fetchData(jsonPath);
+                    for (const subtitle of track.Subtitles) {
+                        dataStructure.push({
+                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
+                            Album: album.Album,
+                            Album_Picture: album.Album_Picture,
+                            Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
+                            Track_Slug: track.Track_Slug,
+                            Track_Title: track.Track_Title,
+                            Speaker: subtitle.Speaker,
+                            Text: subtitle.Text,
+                            StartTime: subtitle["Start Time"],
+                            EndTime: subtitle["End Time"],
+                            Whisper_Model: track.Whisper_Model
+                        });
+                    }
                 }
             }
         }
@@ -56,8 +95,6 @@ async function loadData() {
 */
 async function main(callback) {
     try {
-
-        // Load the data
         dataStructure = await loadData();
 
         // Function to index a search based on a field

@@ -11,11 +11,25 @@ module Jekyll
       json_dir = File.join(site.source, 'assets', 'json')
 
       if site.config['render_quickly']
-        #Dir.glob(File.join(json_dir, '**/*.json')) do |file|
-        #  data_key = File.basename(file, '.json')
-        #  json_data = JSON.parse(File.read(file))
-        #  site.data[data_key] = json_data
-        #end
+        Dir.glob(File.join(json_dir, '**/*.json')) do |file|
+          data_key = File.basename(file, '.json')
+          json_data = JSON.parse(File.read(file))
+          site.data[data_key] = json_data
+        end
+        data_file_path = File.join(json_dir, 'data.json')
+        puts "Loading data from #{data_file_path}"
+
+        if File.exist?(data_file_path)
+          file_content = File.read(data_file_path)
+          if file_content.strip.empty?
+            puts "Warning: data.json is empty."
+          else
+            data_json = JSON.parse(file_content)
+            site.data['albums'] = data_json
+          end
+        else
+          puts "Warning: data.json not found at #{data_file_path}"
+        end
       else
         data_file_path = File.join(json_dir, 'combined_data.json')
         puts "Loading data from #{data_file_path}"
