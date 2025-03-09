@@ -1,3 +1,9 @@
+---
+layout: null
+---
+
+// search.js
+
 /*
     This function retrieves a JSON document from a given path
 */
@@ -16,7 +22,8 @@ async function fetchData(path) {
 */
 async function loadData() {
 
-    var renderQuickly = true;
+    var renderQuickly = '{{ site.data.render_quickly }}';
+    var jekyll_env = '{{ jekyll.environment }}';
     let dataStructure = [];
     
     if (renderQuickly) {
@@ -100,10 +107,7 @@ async function loadData() {
 async function main(callback) {
     try {
         dataStructure = await loadData();
-
-        const fileInput = document.getElementById('fileInput');
-        const audio = document.getElementById('audioPlayer');
-
+       
         // Function to index a search based on a field
         function indexOnField(indexField) {
             let startTimeInMilliseconds = Date.now();
@@ -143,21 +147,29 @@ async function main(callback) {
         console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
 
 
-
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
-            fileMap = {};
-            fileInput.addEventListener('change', function(event) {
-                fileTarget = event.target;
-                const files = fileTarget.files;
-                for (const file of files) {
-                    if (file.name.endsWith('.mp3')) {
-                        const url = URL.createObjectURL(file);
-                        fileMap[file.webkitRelativePath] = url;
-                    }  
-                }
-                console.log("Files have been uploaded! Jumping to a subtitle will now work!");
-            });
+                const fileInput = document.getElementById('fileInput');
+                const audio = document.getElementById('audioPlayer');
+                fileMap = {};
+                fileInput.addEventListener('change', function(event) {
+                    fileTarget = event.target;
+                    const files = fileTarget.files;
+                    for (const file of files) {
+                        if (file.name.endsWith('.mp3')) {
+                            const url = URL.createObjectURL(file);
+                            fileMap[file.webkitRelativePath] = url;
+                        }  
+                    }
+                    console.log("Files have been uploaded! Jumping to a subtitle will now work!");
+
+                    // Update the input of #subtitles-search-input
+                    const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
+                    if (subtitlesSearchInput) {
+                        subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
+                        subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
+                    }
+                });
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
                 if (this.value != "") {
                     const query = this.value;
@@ -200,7 +212,7 @@ async function main(callback) {
 
                             const startTimeLink = document.createElement('a');
                             startTimeLink.href = "#" + matchedDoc.StartTime;
-                            // startTimeLink.textContent = matchedDoc.StartTime;
+                            startTimeLink.textContent = matchedDoc.StartTime;
                             
                             // Parse minutes and seconds. For format "HH:MM:SS,ms"
                             const timeParts = matchedDoc.StartTime.split(":");
