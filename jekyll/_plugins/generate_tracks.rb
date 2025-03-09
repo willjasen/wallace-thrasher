@@ -1,8 +1,11 @@
+require_relative 'update_yml'
 module Jekyll
     class TracksGenerator < Generator
       safe true
   
       def generate(site)
+        return if site.config['skip_tracks_generation']
+
         albums = site.data['tracks']
         albums.each do |album_data|
           album_data['tracks'].each do |track_data|
@@ -26,4 +29,3 @@ module Jekyll
       end      
     end
   end
-  

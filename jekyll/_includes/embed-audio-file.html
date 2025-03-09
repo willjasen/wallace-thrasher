@@ -1,0 +1,26 @@
+ <!-- File input for user to select the .mp3 file -->
+ <input type="file" id="fileInput" accept="audio/mp3">
+ <br>
+ <audio id="audioPlayer" controls></audio>
+
+ <script>
+   const fileInput = document.getElementById('fileInput');
+   const audio = document.getElementById('audioPlayer');
+
+   fileInput.addEventListener('change', function(event) {
+     const file = event.target.files[0];
+     if (file) {
+       // Create an object URL for the selected file.
+       const url = URL.createObjectURL(file);
+       audio.src = url;
+
+       // Wait for metadata to be loaded before seeking.
+       audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > 15) {
+           audio.currentTime = 15;
+         }
+         audio.play();
+       }, { once: true });
+     }
+   });
+ </script>
