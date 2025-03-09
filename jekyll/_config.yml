@@ -27,17 +27,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: willjasen
 
-# Build settings
-theme: minima
+# Build settings for dark mode
+remote_theme: jekyll/minima
 plugins:
-  - jekyll-feed
-
-# for dark mode
-# remote_theme: jekyll/minima
-# plugins:
-#  - jekyll-remote-theme
-#minima:
-#  skin: dark
+  - jekyll-remote-theme
+minima:
+  skin: auto
 
 timezone: America/New_York
 encoding: utf-8
