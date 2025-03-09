@@ -103,19 +103,6 @@ async function main(callback) {
 
         const fileInput = document.getElementById('fileInput');
         const audio = document.getElementById('audioPlayer');
-                        
-        fileMap = {};
-        fileInput.addEventListener('change', function(event) {
-            fileTarget = event.target;
-            const files = fileTarget.files;
-            for (const file of files) {
-                if (file.name.endsWith('.mp3')) {
-                    const url = URL.createObjectURL(file);
-                    fileMap[file.webkitRelativePath] = url;
-                }  
-            }
-            console.log("Files have been uploaded! Jumping to a subtitle will now work!");
-        });
 
         // Function to index a search based on a field
         function indexOnField(indexField) {
@@ -159,6 +146,18 @@ async function main(callback) {
 
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
+            fileMap = {};
+            fileInput.addEventListener('change', function(event) {
+                fileTarget = event.target;
+                const files = fileTarget.files;
+                for (const file of files) {
+                    if (file.name.endsWith('.mp3')) {
+                        const url = URL.createObjectURL(file);
+                        fileMap[file.webkitRelativePath] = url;
+                    }  
+                }
+                console.log("Files have been uploaded! Jumping to a subtitle will now work!");
+            });
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
                 if (this.value != "") {
                     const query = this.value;
