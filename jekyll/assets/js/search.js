@@ -28,7 +28,7 @@ async function loadData() {
         for (const albumsKey of Object.keys(data)) {
             const albums = data[albumsKey];
             for(const album of albums) {
-                console.log(album);
+                console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
                     const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
                     trackSubtitlesData = await fetchData(jsonPath);
@@ -51,6 +51,7 @@ async function loadData() {
                     }
                 }
             }
+            console.log("All albums have been loaded.");
         }
 
     } else {
@@ -63,6 +64,7 @@ async function loadData() {
             const albums = data[albumsKey];
             
             for(const album of albums) {
+                console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
                     // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
                     // trackSubtitlesData = await fetchData(jsonPath);
@@ -85,6 +87,7 @@ async function loadData() {
                     }
                 }
             }
+            console.log("All albums have been loaded.");
         }
     }
 
@@ -111,9 +114,8 @@ async function main(callback) {
                 const url = URL.createObjectURL(file);
                 // Store the mapping of file.name to its URL
                 fileMap[file.webkitRelativePath] = url;
-                console.log(file.webkitRelativePath);
-                console.log(fileMap[file.webkitRelativePath]);
             }
+            console.log("Files have been uploaded! Jumping to a subtitle will now work!");
         });
 
         // Function to index a search based on a field
@@ -181,38 +183,49 @@ async function main(callback) {
                             <img src="/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
-                            <small> @ </small>
                         `;
 
-                        // Create a clickable link
-                        const matchedAlbumYear = matchedDoc.Album_Year;
-                        const matchedAlbumTitle = matchedDoc.Album;
-                        const trackTitleDetail = matchedDoc.Track_Title;
+                        if (!fileMap || Object.keys(fileMap).length === 0) {
+                            albumAndTitleItem.innerHTML += `
+                                <small> @ ${matchedDoc.StartTime}</small>
+                            `;
+                        }
+                        else {
+                            albumAndTitleItem.innerHTML += `
+                                <small> @ </small>
+                            `;
 
-                        const startTimeLink = document.createElement('a');
-                        startTimeLink.href = "#t=" + matchedDoc.StartTime;
-                        startTimeLink.textContent = matchedDoc.StartTime;
-                        const timeParts = matchedDoc.StartTime.split(":");
-                        // Parse minutes and seconds. For format "HH:MM:SS,ms"
-                        const minutes = parseInt(timeParts[1], 10);
-                        const seconds = parseInt(timeParts[2].split(",")[0], 10);
-                        const secondsConverted = (minutes * 60) + seconds;
-                        startTimeLink.addEventListener('click', function(e) {
-                            const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
-                            console.log('Relevant URL: ' + relevantUrl);
-                            const matchingUrl = fileMap[relevantUrl];
-                            console.log('Matching URL: ' + matchingUrl);
-                            e.preventDefault();
-                            const audioPlayer = document.getElementById('audioPlayer');
-                            if (audioPlayer) {
-                                audioPlayer.src = matchingUrl;
-                                audioPlayer.currentTime = secondsConverted;
-                                console.log(audioPlayer.src);
-                                console.log("Playing audio from timestamp:", secondsConverted);
-                                audioPlayer.play();
-                            }
-                        });
-                        albumAndTitleItem.appendChild(startTimeLink);
+                            // Create a clickable link
+                            const matchedAlbumYear = matchedDoc.Album_Year;
+                            const matchedAlbumTitle = matchedDoc.Album;
+                            const trackTitleDetail = matchedDoc.Track_Title;
+
+                            const startTimeLink = document.createElement('a');
+                            startTimeLink.href = "#" + matchedDoc.StartTime;
+                            startTimeLink.textContent = matchedDoc.StartTime;
+                            
+                            // Parse minutes and seconds. For format "HH:MM:SS,ms"
+                            const timeParts = matchedDoc.StartTime.split(":");
+                            const minutes = parseInt(timeParts[1], 10);
+                            const seconds = parseInt(timeParts[2].split(",")[0], 10);
+                            const secondsConverted = (minutes * 60) + seconds;
+                            startTimeLink.addEventListener('click', function(e) {
+                                const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+                                // console.log('Relevant URL: ' + relevantUrl);
+                                const matchingUrl = fileMap[relevantUrl];
+                                // console.log('Matching URL: ' + matchingUrl);
+                                e.preventDefault();
+                                const audioPlayer = document.getElementById('audioPlayer');
+                                if (audioPlayer) {
+                                    audioPlayer.src = matchingUrl;
+                                    audioPlayer.currentTime = secondsConverted;
+                                    console.log(audioPlayer.src);
+                                    console.log("Playing audio from timestamp:", secondsConverted);
+                                    audioPlayer.play();
+                                }
+                            });
+                            albumAndTitleItem.appendChild(startTimeLink);
+                        }
 
                         const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
                         const subtitleItemLi = document.createElement('li');

@@ -2,34 +2,3 @@
 <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
 <br>
 <audio id="audioPlayer" controls></audio>
-
-<script>
-  // Define a variable for the start time, allowing it to be manipulated
-
-  // Global variable to store event.target for later use
-  
-  
- 
-    // Log the complete fileMap
-    // console.log(window.fileMap);
-
-    // Determine the matching URL and play the file
-    /* const matchedAlbumYear = "{{ matched_album_year }}";
-    const matchedAlbumTitle = "{{ matched_album_title }}";
-    const trackTitleDetail = "{{ track_title_detail }}";
-    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
-    const matchingUrl = window.fileMap[relevantUrl];
-    audio.src = matchingUrl;
-
-    // Wait for metadata to be loaded before seeking.
-    audio.addEventListener('loadedmetadata', function() {
-         if (audio.duration > skipIntoTime) {
-           audio.currentTime = skipIntoTime;
-         }
-         audio.play();
-       }, { once: true }); */
-  
-  // Later use: you can now access storedFileTarget to re-upload or access the files
-  // e.g., storedFileTarget.files
-  // or trigger storedFileTarget.click() to re-open the file picker.
-</script>
