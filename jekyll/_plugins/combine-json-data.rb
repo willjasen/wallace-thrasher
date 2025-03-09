@@ -1,5 +1,6 @@
 require 'json'
 require 'yaml'
+require_relative 'update_yml'
 
 module Jekyll
   class CombineData < Generator
@@ -7,7 +8,8 @@ module Jekyll
     priority :high
 
     def generate(site)
-      combined_data = []
+      combined_albums_data = []
+      combined_tracks_on_album_data = []
       data_yml_path = File.join(site.source, '_data', 'data.yml')
       yml_data = YAML.load_file(data_yml_path)
       data_json_path = File.join(site.source, 'assets', 'json', 'data.json')
@@ -18,15 +20,15 @@ module Jekyll
         album_slug = Jekyll::Utils.slugify(album_data['Album'])
         album_data['Tracks'].each do |track_data|
           track_json_path = track_data['Track_JSONPath']
-          track_data_path = File.join(site.source, '_site', 'assets', 'json', album_slug, track_json_path)
+          track_data_path = File.join(site.source, 'assets', 'json', album_slug, track_json_path)
           
           if File.exist?(track_data_path)
             begin
               track_data_content = JSON.parse(File.read(track_data_path))
+              # puts "Parsed JSON for track_data_path: #{track_data_path}"
               # Assign the parsed JSON as a new Tracks key into the current track
               track_data["Subtitles"] = track_data_content
-              album_data["Tracks"] = [track_data]
-              combined_data << album_data
+              combined_tracks_on_album_data << track_data
             rescue JSON::ParserError => e
               puts "Error parsing JSON for track_data_path: #{track_data_path}, error: #{e.message.slice(0, 100)}"
             rescue => e
@@ -40,7 +42,7 @@ module Jekyll
 
       combined_data_path = File.join(site.source, 'assets', 'json', 'combined_data.json')
       File.open(combined_data_path, 'w') do |file|
-      file.write(JSON.pretty_generate({ "Albums" => combined_data }))
+        file.write(JSON.pretty_generate({ "Albums" => combined_tracks_on_album_data }))
       end
     end
   end
