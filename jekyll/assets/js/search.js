@@ -105,15 +105,14 @@ async function main(callback) {
         const audio = document.getElementById('audioPlayer');
                         
         fileMap = {};
-        let storedFileTarget;
         fileInput.addEventListener('change', function(event) {
-            // Store event.target globally
-            storedFileTarget = event.target;
-            const files = storedFileTarget.files;
+            fileTarget = event.target;
+            const files = fileTarget.files;
             for (const file of files) {
-                const url = URL.createObjectURL(file);
-                // Store the mapping of file.name to its URL
-                fileMap[file.webkitRelativePath] = url;
+                if (file.name.endsWith('.mp3')) {
+                    const url = URL.createObjectURL(file);
+                    fileMap[file.webkitRelativePath] = url;
+                }  
             }
             console.log("Files have been uploaded! Jumping to a subtitle will now work!");
         });
