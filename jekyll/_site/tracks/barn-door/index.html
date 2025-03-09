@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/barn-door/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/barn-door/"},"url":"/tracks/barn-door/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/barn-door/"},"url":"/tracks/barn-door/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,599 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:42:08
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2019";
+    const matchedAlbumTitle = "Longmont Potion Castle 16";
+    const trackTitleDetail = "Barn Door";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Good evening, P&G Hardware.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hey, I was trying to convert a doorknob on my barn door here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> This old barn door is crickety-cracket, and I can't move the thing.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I need to get some oil on there or a new doorknob on here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You got a product I can use.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Um, is there a reason?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Huh?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> What type of sound? What sound is that?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> It's my barn door, my friend.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Oh.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sounds like you're on the train.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> This door is going to fall off if I don't get a new knob, Pronto.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How much is a knob?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> The only knobs that we haven't...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Are like a double knob, or a triple knob, you know?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I wasn't sure if you had the right product on hand, you know, or not for a barn door.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> We don't really have anything for barn doors.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> A lot of our doors are for...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I wasn't sure if you had the right product on hand, you know, or not for a barn door.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm sorry, we don't have really...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm sorry, we don't really have anything for barn doors.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> A lot of the doors, a lot of the knobs that we have are mainly just for regular doors.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is there something that I could use, like, with mineral spirits,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> to pour it on there and see...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is there something that I could use, like, with mineral spirits to pour it on there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's kind of hard to hear you with that sound going back and forth.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> The door?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Is there a way you can move?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah, is there a way that you can, like, go to a quieter place?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Like I said, it's hard to hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I could quiet the thing down, you know, with mineral spirits.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Or WD40.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I could quiet the thing down, you know, with mineral.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Do you have any mineral spirits on hand at all?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah, we saw, yeah, we saw mineral spirits.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Have any mineral spirits?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I should get a whole case, I figured, because it's...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> It's a big barn door about 20 feet by 15 feet.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Sir, do you live in Brooklyn?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yes, I do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay, let's make a sure.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> It's a big barn door about 20 feet by 15...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Where are you all located up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yes, I do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> We're in Williamsburg.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> On Robling and Top 2nd.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Where you all located up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How much you charge up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm sorry?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How much do you all charge up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> What do you mean?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> How much to charge?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> For the...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How much deal on?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> For the WD-40?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Once again, it's kind of hard to hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm hearing, like, three different things.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That door, it's a lot of noise.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's making it hard to hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> WD-40?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> All right, sir, sir,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> do you understand what I'm saying?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's hard to hear you right now.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sir.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, I'm trying to figure out the case.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's hard to hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I can't understand or hear word that you're saying.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Just the price.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How much the cost of the price?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Just the price.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Once again, I still, sir,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> once again, I still.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> still cannot hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> WD40.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sir, is there a way that you can move away?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Because, yeah, once again, sir, I can't hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Is there way you can move away from where you are?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Or an alternate product to WD40.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> If you don't have that in, on hand, or an alternate product to WD40.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Sir, it's not that we don't have it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> It's the fact that I cannot hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, I don't even know the price.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What aisle is it in to, if I come up later?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Sir, I can't hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I can't hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't even know the price.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What aisle is it in to if I come up later?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I just need to.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Sir, I can't hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What aisle is it in?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sir, sir, you're not listening.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I need you to move away from where you are so I can hear you better.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I cannot hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What aisle number is the WD4?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> We don't really have aisle, sir.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Once again, I can't hear you because there a way you can move away.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm moving around in circles here, I think I'm trying.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I can hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sir, sir, sir, sir, sir.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm just asking you to move away from the door
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> into a quieter place so that I can hear you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Because I cannot understand a word with all the
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> around you. Plus, there's another voice on the phone with you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> So I'm trying to figure out what exactly you're trying to say.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Reference to your location.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You said that you're in Williamsburg.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You're open to the west.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sir, we're located on South Second in Roebling.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You can look at the knobs there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You can see if we, we do have mineral spirits,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> we do have WD 40, hopefully that helps.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> The best thing I can give you right now,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> because I'm having a hard time hearing you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hold on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You couldn't hit the side of the barn with a doorknob.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You couldn't hit the side of the barn with a doorknob.
-      <br>
-    </li>
   
   </ul>
 
@@ -706,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

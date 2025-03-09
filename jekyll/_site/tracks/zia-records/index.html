@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/zia-records/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/zia-records/"},"url":"/tracks/zia-records/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/zia-records/"},"url":"/tracks/zia-records/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,189 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:41:50
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2012";
+    const matchedAlbumTitle = "Longmont Potion Castle 9";
+    const trackTitleDetail = "Zia Records";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Thank you. You're calling to your records out east and Mrs. William. How can I help you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, this is Benedict, and I'm looking for Nospheratu, the deadliest foe.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Nosserat, too? Is that an artist or a movie?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> It's a freaking band, dude.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hey, you don't got to get Lippy with me, bud. What's your deal, man?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, can you hear me, or what?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, I can.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Nospheratu, the deadliest foe.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm not seen that listen to our computer.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Don't mess with me, man.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> What's your deal, man? Do you want me to help you find this CD or not?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm going to scratch my record and get a complete refund, man.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> No, you're definitely not.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, no?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's actually a manager that you're talking to, not an associate.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> So if you told me you're going to come in here with a scratch record, it's definitely not going to happen.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm going to demand cash.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> No, you can demand all you want, we don't give refunds.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You can do whatever you want, man.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> This is freaking Benedict, dude.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I don't know who you are.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> That's who I am, dude. You're going to know all about me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Sounds pretty awesome.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Not just the wiki me, the real me. The real me?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> The real you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Real soon, yeah, once I come in there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Now.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Nospharatu, the deadliest foe.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> This is Longmont Potion Castle. What's going on here?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You are crushing it. Are you employee of the month or what?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I am employee of the month.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Nailing it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Don't try to mess me around.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Don't try to mess me around.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> LTCC in the house.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Looked it's from Nostratu, deadliest show.
-      <br>
-    </li>
   
   </ul>
 
@@ -296,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

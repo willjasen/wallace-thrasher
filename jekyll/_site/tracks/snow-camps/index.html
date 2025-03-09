@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/snow-camps/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/snow-camps/"},"url":"/tracks/snow-camps/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/snow-camps/"},"url":"/tracks/snow-camps/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,269 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-11T22:49:43
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2001";
+    const matchedAlbumTitle = "Longmont Potion Castle 4";
+    const trackTitleDetail = "Snow Camps";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I was wondering if you have any more snow camps going to be made available?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, not this year. You know, snow's pretty much over.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What do you do in those?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Snow camps we usually do in the fall.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Do what? That's my question.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> When do we do or what do we do it?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What do you do in them?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What do we do in them?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, just a weekend deal.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Go up there and have big Young Lives Club
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> and little competitive deals in the morning.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Jigsaw is made available to the kids.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> made available to the kids.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What's that?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Do you give them jigsaws?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Jigsaws.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, here we go again.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm sorry, sir?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, no jigsaws.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is it alright?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What's the little beep deal?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> It's the right to panel, panel the students.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What's a little beep deal?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Do the students learn paneling while they're up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hey, how come you get to ask all the questions?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What's the little beep thing?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't hear anything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You don't?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm very gratified with your program.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, hey, that's great.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I believe it's very equitable in the long run.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You know, it's my stance on your business.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hey, well, that's great.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> We're glad to hear that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You know, there's all kinds of political orientation affiliated with your business.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> There is?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I didn't know. I guess I haven't thought a lot about that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I've heard a lot of people that co-late you with cheetahs.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Ah gosh.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hey, how come you hung up last time?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Pardon?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, that's what the beef is.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is there some sort of granola cereal that goes with your program that's made available?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, sir.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, sir.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, sir.
-      <br>
-    </li>
   
   </ul>
 
@@ -376,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

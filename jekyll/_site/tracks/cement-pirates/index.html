@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/cement-pirates/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/cement-pirates/"},"url":"/tracks/cement-pirates/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/cement-pirates/"},"url":"/tracks/cement-pirates/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,444 +74,87 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? true
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? true
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2024";
+    const matchedAlbumTitle = "Best Before '24";
+    const trackTitleDetail = "Cement Pirates";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Sale Records, STL.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You got any Mötley Crüe up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Vinyl, CDs, merch, we have a ton of it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> We're all over it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> What would you like, sir?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Are you talking about Mötley Crüe?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> No, you are.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I'm just answering your question.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Because they got Mickey Mars, they got Nick Six, they got Neil Vincent.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Okay, they got a lot of guys out there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> In fact, I think they even got another guy in the band, you know?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Because I tell people, look out.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Because these guys are something else, you know what I mean?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> When you come in and pick it up, we certainly have it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Hey, you guys all selling bulk up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> No.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I mean, if you just want to come in and spend hundreds of dollars, we'll give you a discount.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> But we're not a wholesaler, if that's what you mean.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Because I wanted to get the Cement Pirates, Naughty Igor, all them one guys.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You know them one guys?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> You want to come into the store and you want to stack it up, I'm sure we can cut you a deal.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, hey, fifth row is where I seen the crew.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> All right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I got all that stuff.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> It's the best metal store in the Midwest.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, hey man, you got Mickey Mars.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You got Nick Six.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I got customers here in front of me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, listen, just sell me everything I need in a bulk.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Who is this?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> This is Dewey.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I've got to get off here, but if you like Mötley Crüe, come into the store.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I got everything you need.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, hey, fifth row.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> That's where I've seen the crew, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Gotta go.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Later.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Joe's Records, STL.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Hey, y'all got a website up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Man, all I have is an eBay store, man.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> How do I find it?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Go to eBay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I mean, we don't put any of our regular stuff on eBay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> It's just stuff that we have overstocks on and just weird, goofy stuff, so I won't be able to help you much on that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> For instance, we have every Mötley Crüe shirt and CD in the store, but it's on our website.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You got any of that?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> cement pirates?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Buddy, you're going to have to come in the store.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I can't do this over the phone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, no, because I was there and I was looking here and I was looking all over, but I couldn't see what I was looking for.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You know what I'm saying?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Because I couldn't see.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> You have to understand.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I've got customers here in front of me that come into the store that I need to wait on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I can't do this over the phone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Hey, you don't seem to understand.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> I saw a fifth row on the crew.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Hey, are you fucking with me?
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Don't call back.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I can't do this over the phone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, take my credit card and I'll just place a special order.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> How about that?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Special order, credit card, Mickey Mars.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Yeah, I'll do that, but I can't do it right now.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> All right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I offered you every Mötley Crüe record and every shirt and you didn't say you wanted anything specific.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> So I want to hands down.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> I want everything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> you got, bulk.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> I asked for both payment.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Do you live in St.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Louis?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Yes, I do, sir.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Okay, those Mötley Crüe albums are all thirty-two dollars a piece.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> You want me to pick all five of them for you and run it through a credit card?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You want to get nimble?
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Because I'm looking real seriously at coming down to pummel you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Don't pummel me, dude.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I can't wait on people over the phone like this, man.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I got people in front of me to wait on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Well, I got Mötley Crüe records to buy here, and I thought you sold records up here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> We do, but I told you once I had customers in front of me, you're not, you're not respecting me at all.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> Cause I came down there and I was looking and looking and looking and looking and I couldn't see anything that you're talking about.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> We have every Mötley Crüe record in stock.
-      <br>
-    </li>
-  
-    <li>
-      <strong>LPC:</strong> You got Naughty Igor.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> I got the Mötley Crüe box set.
-      <br>
-    </li>
-  
-    <li>
-      <strong>Joe's Records, STL:</strong> Don't call back bro.
-      <br>
-    </li>
   
   </ul>
 
@@ -551,7 +181,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

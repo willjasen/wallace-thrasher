@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/nectarines/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/nectarines/"},"url":"/tracks/nectarines/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/nectarines/"},"url":"/tracks/nectarines/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,304 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:40:44
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "1995";
+    const matchedAlbumTitle = "Longmont Potion Castle III";
+    const trackTitleDetail = "Nectarines";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You do what?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I need to bring in your nectarines.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, that's okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I say that's okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Am I talking to...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> To a nipper?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You know that has a wrong number?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> No, I need to bring your nectarine.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Just a moment.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Huh?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hi, I need to bring the nectarines to you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Necturine?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Oh, sorry, bud.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I think you do have the wrong number.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'll stop asking like an idiot, will you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Make a payment or what?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> We'll see when you get here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I need to know how you pay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> We'll see when you get here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You're gonna see...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Come on down.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> How soon are you gonna be here, bud?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Ten minutes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> We'll be here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> My fish is gonna be ready.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That's cool.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I don't think you're gonna like it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I don't think you're gonna like what's gonna come back, bud.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> What are you talking?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm talking about wit and go upside your chin as I said.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Come on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Come on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You get on down here and you back it up now,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> but I'll see you in 10 minutes asshole.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Name was it ordered these.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You made the order.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah, what's my name then?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's on the package.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay, then look at the package and tell me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I don't got it handy.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's in the truck.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> But when can I bring it to you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That's all I need and left and how are you gonna pay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That's what I need to ask.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Go get the package off the truck, man.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> No.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> If I do that, I'm just gonna drop it on you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> With my fit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That's the bottom line right there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Stop the bullshit, man. Go get the package.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You're just being an asshole.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> No, my fist will do the talking for me pretty fast.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That's cool.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I don't know.
-      <br>
-    </li>
   
   </ul>
 
@@ -411,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

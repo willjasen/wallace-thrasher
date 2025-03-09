@@ -17,21 +17,20 @@ async function fetchData(path) {
 async function loadData() {
 
     console.log("Creating the data structure...");
-    const data = await fetchData('/assets/data.json');
+    const data = await fetchData('/assets/json/combined_data.json');
     let dataStructure = [];
 
     // Iterate through each album, track, and subtitle
     for (const albumsKey of Object.keys(data)) {
         const albums = data[albumsKey];
-        albumsCount = albums.length;
         
         for(const album of albums) {
             console.log(album);
             for (const track of album.Tracks) {
-                const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                const trackData = await fetchData(jsonPath);
-                for (const subtitleKey of Object.keys(trackData)) {
-                    const subtitle = trackData[subtitleKey];
+                // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                //trackData = await fetchData(jsonPath);
+                console.log(track);
+                for (const subtitle of track.Subtitles) {
                     dataStructure.push({
                         id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
                         Album: album.Album,

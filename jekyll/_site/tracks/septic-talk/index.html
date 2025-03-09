@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/septic-talk/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/septic-talk/"},"url":"/tracks/septic-talk/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/septic-talk/"},"url":"/tracks/septic-talk/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,999 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:42:08
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2019";
+    const matchedAlbumTitle = "Longmont Potion Castle 16";
+    const trackTitleDetail = "Septic Talk";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hey, Arthur.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> This is Tim.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> What are you doing up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Tim who?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Tim Phillips.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Listen, I'm new to the area.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I was wondering, can I tap into your septic tank a little bit later?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got some structural issues here at home.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got my own hose and everything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Can you tap into your mom?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hey, it'll just be for a few minutes and I'll take care of everything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Just tap right into your tank.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Is that okay with you up there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Can you tap in?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> happen to your mother?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Listen, guy, and I don't want you mess with my hose.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'll find out about it if you mess with my hose, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Just to be clear.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> You mess with your hose?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> You mean your mother and your daughter are a hose?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Listen, guy, I need your tank.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> That's all I need.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hey, this is Brian.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> How are you doing?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Why are you calling me?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm calling you because I got some structural issues here at my house.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I need to tap into you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> your septic tank for a little bit here tonight.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay, I got my own hose and everything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Wait a minute, wait a minute.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Who are you trying?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I still don't know.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Where, who are you calling me from?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm calling you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm local.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> And I need your help there, big guy.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> What kind of help?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> What are you talking about?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I need to set my hose into your septic tank.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got problems here at home.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Big problems here on my structural issues here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Where do you live?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I live near you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> So I'm going to bring my hose over and we're going to set it up.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Does that sound good?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Of course.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Must not. It's trouble for me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> What are you talking about?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> And I still don't know who the hell you are.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Why is this such a big deal?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm going to do it. It'll be fine.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Who are you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> You can call me Bri-Bri, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yeah, but where's where you live?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm going to come over there and I'm going to get what I need.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> You're not going to get the need because I'm going to call the police on you right now.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> No, don't do that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Don't do that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Don't do that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Don't go to me like that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You don't get the horse.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm Jewish and articles.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's sober for me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> And I wouldn't give it to you any other time.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I got no business with you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Don't mess with my hose.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Because I'll find out about it if you do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got my hose ready and I'm just on my way right now.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm walking over there right now, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You're trying to come here and you'll see what's going to happen to you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Well, I'm just going to...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Your motherfucker.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Stop it!
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Your motherfucker, criminal!
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Don't you worry about it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> about a thing.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Bill?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hey, this is Bo.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm new to the area up here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Listen, I need to favor.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I wanted just to tap into your septic tank just for a few minutes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got my own hose and everything, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I don't know what you're talking about.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> What do you need me to do, bring you a ladder?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I don't have a septic tank.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I don't have anything like that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Of course you do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I already went over there and looked at it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> You know, I hope you don't mind, but I was there earlier today, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I don't have.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I have a 70 tank.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Oh, you sure do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I saw it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm going to be right there, and I'm going to hose it up.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I just want to make sure, you know, that you don't be surprised when I get there, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Call the who now?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Police?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I don't know what you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Why you'd be on my property?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Because I told you, I need to set my hose up.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Now, look, just stay out of my way, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I don't need the police, and I don't need you nosing around, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Just keep out of my affairs.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Well, keep out of my house.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> property.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> As long as you stay out of my way, we should be in good shape.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Well, let me get your name and everything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yeah, okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm Bobo.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> You got me?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hi.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hi, how are you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Who the fuck is this?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> This is Bull.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Can you hear me?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I can, yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay, listen, I'm on my way over there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm kind of new to the area.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got your number.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> at the supermarket.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I just need to tap into your septic tank tonight for a little bit, all right?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got my own hose, but I'll be there in just about 10 minutes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got some problems with my foundation.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> So I'm just going to tap into you guys for a bit, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay, and just do me a favor.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Don't miss with my hose, all right?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'll find out about it if you do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Do you, your hose?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm going to last see you with that hose.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Oh, you are, are you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm going to docy dough right on up, Aaron.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> and get with you a little bit, mix things up a little bit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> How does that grab you?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm a full stack web developer now, and I just graduated from my coding boot camp.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm at the graduation party, and I don't have time.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> If you show up on my lawn with your hose, I'm going to send 20 boot camp graduates after you,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> and they're going to code your app so hard, you're never going to walk again.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Oh, don't do that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Leave me be.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> All right, young lady?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Listen.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Making my...
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Can you hold on right now?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Your mother's being strapped to the donkey.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> She's getting fucked.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Hold on, hold on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hi, this is Bo.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> How are you doing?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Good?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yeah, good.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hey, I got your number up at the supermarket.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I hope that's okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm new to the area here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Supermarket.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Yes.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> And, hey, guy, I just need to tap into your septic tank tonight, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> It'll just be for a couple hours.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got my own hose and everything like that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> So if you see me out in front, I just wanted to let you know what I'll be doing, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> All right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Sounds good.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Just listen.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Don't touch the hose while it's working, okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Mm-hmm.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I got it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay, because I'll find out about it if you do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> So, might as well just leave it alone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I know.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I know, I know, I know you know.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Hey, and can you make me see?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> some toast. Maybe bring that out front. I'm a little hungry. Would that be okay?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I will get you the tuna sandwich.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> A tuna sandwich? Dynamite, dynamite.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Okay, touch yourself. See you later.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Okay. See you later.
-      <br>
-    </li>
   
   </ul>
 
@@ -1106,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

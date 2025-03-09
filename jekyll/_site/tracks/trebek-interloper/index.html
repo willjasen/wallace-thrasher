@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/trebek-interloper/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/trebek-interloper/"},"url":"/tracks/trebek-interloper/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/trebek-interloper/"},"url":"/tracks/trebek-interloper/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,164 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-12T05:55:25
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2013";
+    const matchedAlbumTitle = "Longmont Potion Castle 10";
+    const trackTitleDetail = "Trebek Interloper";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What are you looking for?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I didn't call.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> My phone rang, and there you are.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> There seems to be a problem.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> My, what are you looking for?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm not looking for anybody.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Did your phone ring and you picked it up?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, this is my, I'm, are you in the motel?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, there's something screwed up with the phone lines.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> That's right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You know, you can blame it to Frontier.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> They're the worst company.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> They need to go by-bye.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> They're based in New York.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I hate that company.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> When I usually remember, I call, they're corrupt.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> All right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, that company is horrible.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I hate that company.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> They need a better company.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't know what's going on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I had this problem the other day, and somebody's calling me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't even know who it is.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't know what's going on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't even know who it is.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
   
   </ul>
 
@@ -271,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

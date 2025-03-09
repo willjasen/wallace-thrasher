@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/tech-talk/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/tech-talk/"},"url":"/tracks/tech-talk/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/tech-talk/"},"url":"/tracks/tech-talk/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,379 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-14T11:41:59
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2017";
+    const matchedAlbumTitle = "Longmont Potion Castle 14";
+    const trackTitleDetail = "Tech Talk";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Well, hey there, Scott Wilkinson here, the Home Theater Geek.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> And I want to get right into some calls here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Let's go to Carmelo in Needles, California.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hello, Carmelo. It's Scott Wilkinson, the Home Theater Geek.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hello, Scott.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> How you doing?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Fine, thank you. I've got a home theater that I hooked up.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> And I'm getting some undesirable signals.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What do you mean?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, I went with all reputable managers.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> manufacturers, and I set up everything with materials that don't vibrate much or absorb vibrations.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay, you're then what we call an audio file.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Here we go.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> But I'm hearing harmonic distortion and flanging, and I've got everything magnetically shielded, and I'm using spade lugs and banana plugs.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> In the sweet spot there, I'm noticing a lot of diffractions.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Now, the inner connectivity is coming into question.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> because everything should be non-resident.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> And when I use my progressive scan, I'm hearing flanging and there's interlacing going on with my matrix.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> So I'm wondering if there's any oversampling.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Well, you're using a whole lot of technical terms there,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> some of which refer to some parts of the signal and the whole experience and some parts refer to the whole experience
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> and some parts refer to the other.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> So you're kind of conflating a bunch of stuff there, it seems to me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> So let's see if we can ferret it out a little bit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> First of all, it doesn't sound like a vibration issue to me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I mean, I've rarely, if ever heard of components physically vibrating and causing a problem.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Some people are concerned about that, and they put in these vibration damping pads or feet or whatever to avoid that, mostly for the audio.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> And interestingly, I'm getting a little odd thing here audio-wise.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> So it sounds to me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> me, like, in terms of the audio, if you're getting a flanging effect or something like that,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> there's some sort of setting, some sort of feedback going on that I would need probably more time
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> than I've got to finally figure out exactly what's going wrong there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You mentioned also interlaced and progressive.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That's the video portion of things, and there isn't much that's interlaced anymore,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> and so you don't have to worry about the deinterlacing process.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It sounds to me like it's more of an audio problem, and it sounds like there's a feedback loop somewhere.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> So I would need to see how your system was connected in order to really ferret that out.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> But I would look at how things are connected.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> What do you think about ferro fluid?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Ferro fluid, I believe, is really mostly kind of, again, a mechanical vibration dampening thing,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> or possibly an electromagnetic dampening thing.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> But that does not.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> sound to me like what your problem is.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, I'm electronically extrapolating the left and right channels and displaying everything sequentially, so I'm interlacing the full frame. You see what I'm saying. And the undesirable signal and the luminance of it is just flanging like wild over my whole crossover slope.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Well, there it is again. Wow. It's, it's, we just, it just happened again.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> My imaging?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> What kind of phone are you using?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm on a Motorola Z-Force.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Motoro. Do you hear that?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, yeah, yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> There it is again.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It's weird. I can't.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> There's nothing more I'm afraid I can help you with without more details.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Sorry about that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I can't figure it up.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I don't.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> All right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Thanks for calling. There was something weird.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Some people in the chat were saying it was a scam.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Oh, hang up on here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> him. Yeah. Where's the hangup button? Just whatever.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Drop. Drop. No, drop.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Uh, drop.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Ah. Okay. Let's see.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Uh, Jim, are you there?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Yes, I am. Okay, let's hear how this sounds.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> It was that guy. Okay. That was weird. He didn't even talk about what the thing was.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> That was pretty weird. Hang on a second. I gotta take a break. It's Scott Wilkinson,
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> the home theater geek.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You know.
-      <br>
-    </li>
   
   </ul>
 
@@ -486,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

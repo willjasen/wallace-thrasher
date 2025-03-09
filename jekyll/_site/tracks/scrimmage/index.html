@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/scrimmage/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/scrimmage/"},"url":"/tracks/scrimmage/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/scrimmage/"},"url":"/tracks/scrimmage/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,324 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-11T22:49:43
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2001";
+    const matchedAlbumTitle = "Longmont Potion Castle 4";
+    const trackTitleDetail = "Scrimmage";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Hi, this is Jack calling for the Denver Rocky Mountain News.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How you doing tonight?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Superb, Jack. How are you doing?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, that's good to hear. I'm doing just fine and thank you for asking.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, I just won the local lottery here today.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, it's really. So how much did you get?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> 50,000.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> 50,000. I'll be darned.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> One of the girls I work with just hit a $25,000.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, tell her to give me a holler.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, I wish I could hit it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Are you currently receiving Denver Rocky Mountain News there at your residence?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, you are?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Are you getting the whole everyday page?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Saturday, Sunday.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Saturday Sunday?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> All right.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I like that.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'm looking for Woody Page is what I'm looking for, sports.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, you are?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is he in your paper?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Pardon me?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is he in your newspaper?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Who is it?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Woody Page, a sports columnist?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Woody Page Sports Call.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Actually, what I'm getting to is maybe do you want to get together for
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> for some scrimmage here this weekend?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, yeah.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> How's that sound?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> For scrimmage?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Football.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Actually, we're going to meet on the soccer field this weekend.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, you are?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> And where's that sound?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> On the soccer field?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> You in or what?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, I used to play soccer when I was a kid.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'll go right on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Played for like eight years.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Tell you, run up a couple goals.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Uh-huh.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> And then we'll be at the 32nd and Navajo.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Thirty-second Navajo.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Park.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> here on Sunday.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> And I'll bring that Rocky Mountain news with me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, yeah?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Have a look at it. How's that sound?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, I can get it out to you for a penny a day.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> No, I've got it, I'm saying.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, well, then how's your service?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Oh, it's outstanding.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Well, good deal.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> That's good to hear, and we'll see you, Sunday.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I'll be out there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Okay, later.
-      <br>
-    </li>
   
   </ul>
 
@@ -431,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/fracassettes/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/fracassettes/"},"url":"/tracks/fracassettes/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/fracassettes/"},"url":"/tracks/fracassettes/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,189 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-12T05:55:25
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2013";
+    const matchedAlbumTitle = "Longmont Potion Castle 10";
+    const trackTitleDetail = "Fracassettes";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>SPEAKER_05:</strong> Hello, what I do for you, sir?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_05:</strong> So I will try. I don't give a damn. You try.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_05:</strong> How'd you like it if I put my boot in your face?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_05:</strong> Well, you could try, probably.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_05:</strong> You're going to give me 89.99.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_05:</strong> I'm going to give you a shit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Man, you know what? This is rude. He's such a fucking jack-ass.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> That's stupid, stupid ignorant white bastard.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_03:</strong> Bastert.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Yo, what up? This your boy, A.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> So I got through Oklahoma.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I just want to know if I can come down to record 25 songs.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I want to get a hip-hop shit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I want to be that shit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> I'm more than a Tupak, motherfucking diggy, fucking thug shit, like S-T-M.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> and motherfucking shit, like octocontin from little white and shit, homie, all that hair shit.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_04:</strong> Fucking call me back.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay, I'm not just a regular person that just wants to be in a band and be popular and make money
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> and all the jive-ass reasons that most people put out records.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> I'm dying to communicate things to people because when I was growing up, a lot of things
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> that I wanted to express were just shut out and I never got along.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> very well with my father, and he constantly castrated and invalidated anything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> And I think a lot of overly authoritarian behavior is wrong, but I also support independence and freedom
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> and not infringing upon the rights of others.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> And you call yourself dormant utopia.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Okay, well, if everybody acted upon that premise, I think we'd be living in a utopia.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Hi, this is Cindy with Western newspaper.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I need to deliver a best of Denver plaque for D Records, and I need an address.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> If you can please call me back.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> I'd appreciate it. Thanks.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_06:</strong> Well, I don't give a damn what you come for, but I'm not paying for nothing because I didn't order it in me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_06:</strong> No goddamn sense that you're coming over here because you're not getting a penny.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_06:</strong> You're full of shit if you think you're going to get anything.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Guns that own men.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What are guns that own men?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> that own men. What's chimp? Huh? A package of chimp? A package from Anwar Sadat? You tell me.
-      <br>
-    </li>
   
   </ul>
 
@@ -296,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 

@@ -13,28 +13,15 @@
 <meta property="og:url" content="/tracks/molecular-lionel-theme/" />
 <meta property="og:site_name" content="wallace-thrasher" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-03-08T19:29:29-05:00" />
+<meta property="article:published_time" content="2025-03-09T03:26:46-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="wallace-thrasher" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-08T19:29:29-05:00","datePublished":"2025-03-08T19:29:29-05:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/molecular-lionel-theme/"},"url":"/tracks/molecular-lionel-theme/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-09T03:26:46-04:00","datePublished":"2025-03-09T03:26:46-04:00","description":"you can call me stretchie","headline":"wallace-thrasher","mainEntityOfPage":{"@type":"WebPage","@id":"/tracks/molecular-lionel-theme/"},"url":"/tracks/molecular-lionel-theme/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="wallace-thrasher" /></head>
 <body><header class="site-header" role="banner">
 
-  
-    <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8263037491f4ee38a5cb5a2079a3378"}'></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-874FG8X2KD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-874FG8X2KD');
-</script>
   
 
   <script src="/assets/js/theme-toggle.js"></script>
@@ -87,494 +74,91 @@
 
 
 
+  <!-- Display metadata information about the track as related to this project -->
+  <hr style="margin: 20px 0;">
+  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
+    
+      Last modified: 2025-02-11T20:39:23
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Model used: distil-whisper/distil-large-v3
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Speakers adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+      Subtitles adjusted? false
+    
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    
+  </h5>
+
+  <!-- File input for user to select the .mp3 file -->
+<input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+<br>
+<audio id="audioPlayer" controls></audio>
+
+<script>
+  // Define a variable for the start time, allowing it to be manipulated
+  const skipIntoTime = 15; // in seconds
+
+  const fileInput = document.getElementById('fileInput');
+  const audio = document.getElementById('audioPlayer');
+  
+  // Global variable to store event.target for later use
+  let storedFileTarget;
+  
+  // Create an empty object to store the file name to URL mapping
+  const fileMap = {};
+  
+  fileInput.addEventListener('change', function(event) {
+    // Store event.target globally
+    storedFileTarget = event.target;
+    const files = storedFileTarget.files;
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      // Store the mapping of file.name to its URL
+      fileMap[file.webkitRelativePath] = url;
+    }
+    // Log the complete fileMap
+    console.log(fileMap);
+
+    // Determine the matching URL and play the file
+    const matchedAlbumYear = "2014";
+    const matchedAlbumTitle = "Longmont Potion Castle 11";
+    const trackTitleDetail = "Molecular Lionel Theme";
+    const relevantUrl = `LPC USB/${matchedAlbumYear} - Longmont Potion Castle - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    audio.src = matchingUrl;
+
+    // Wait for metadata to be loaded before seeking.
+    audio.addEventListener('loadedmetadata', function() {
+         if (audio.duration > skipIntoTime) {
+           audio.currentTime = skipIntoTime;
+         }
+         audio.play();
+       }, { once: true });
+
+  });
+  
+  // Later use: you can now access storedFileTarget to re-upload or access the files
+  // e.g., storedFileTarget.files
+  // or trigger storedFileTarget.click() to re-open the file picker.
+</script>
+
+  <hr style="margin: 20px 0;">
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
-  
-    <li>
-      <strong>None:</strong> Molecular line.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Molecular cross-reference.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Is he going to play its songs with a split set-nage?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> That's a nice taste player right there.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> What will your position be?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> I don't match sure in the spotlight at all.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_00:</strong> Yeah, I've got the two of the script.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Is it a Western scale?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to tell you about the special purpose for someone call for a free medical
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> phone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Call the recording for a lot with you, Sharon.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello, what?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> What's the call in the government?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You can find out the offer is right for you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm sorry, the case of your phone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> This offer is not the suit for you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hey, mother, I'm here.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You call me an elevator.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> We've got to grab.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> They're talking with you dogs in 23 times.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> What is you going with yourself?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> What is you about yourself?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> higher powers.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Well, fuckhead, police has got your number.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Thank God.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> We keep up.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> We're going to have you lost to you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> We'll be reported.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> What you should do, put a little gun to your little crazy head, is it?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> Because you've been doing this off and on.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> People like you should be put in an insane silence.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_02:</strong> You know who the hell you are, you stupid son of a bitch?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Don't yell out of it.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You can get it out.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You know who the hell you are, you stupid son of a bitch.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> You know who the hell you are, you stupid son of a bitch.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> No damn one.
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>SPEAKER_01:</strong> Welcome to your support.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You want to talk about me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm at least.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You can't talk about me.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> If you're glad, this is an hour.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> If you wish a person or a good special,
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> because I have a type of course
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> like that,
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> What that?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You know what you can't?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello?
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> You are me to do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I don't know what you want me to do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Get a sword to go to go to you want me to deal.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Thank you.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to go to go to you want me to deal.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to go to go to you want me to do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I don't know what you want to do.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I have a good one.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> A hundred people.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to go to someone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to make one somewhere.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Hello.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to go to make one someone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I want to go and someone.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I want to get a good one time.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> I'm going to get a good one tomorrow.
-      <br>
-    </li>
-  
-    <li>
-      <strong>None:</strong> Thank you.
-      <br>
-    </li>
   
   </ul>
 
@@ -601,7 +185,7 @@
 
       <div class="footer-col footer-col-3">
         
-          <p style="color: purple;">you can call me stretchie</p>
+          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
         
       </div>
 
