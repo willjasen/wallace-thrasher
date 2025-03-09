@@ -45,6 +45,10 @@ module Jekyll
       end  
 
       combined_data_path = File.join(site.source, 'assets', 'json', 'combined_data.json')
+      # Delete the file if it exists
+      if File.exist?(combined_data_path)
+        File.delete(combined_data_path)
+      end
       File.open(combined_data_path, 'w') do |file|
         file.write(JSON.pretty_generate({ "Albums" => combined_albums_data }))
       end

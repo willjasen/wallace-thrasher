@@ -1,4 +1,4 @@
-{% assign all_albums = site.data.albums.Albums %}
+{% assign all_albums = site.data.albums.Albums | sort: "Year" %}
 {% assign matched_album = all_albums | where_exp: "item", "item.Album == page.album_title" %}
 {% for album in matched_album %}
   {% assign matched_album_title = album.Album %}
