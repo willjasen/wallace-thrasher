@@ -16,24 +16,23 @@ async function fetchData(path) {
 */
 async function loadData() {
 
+    var renderQuickly = true;
     let dataStructure = [];
-
-    renderQuickly = site.config.render_quickly | jsonify;
     
     if (renderQuickly) {
         console.log("Creating the data structure quickly...");
-        console.log(site.render_quickly);
+        console.log(renderQuickly);
         const data = await fetchData('/assets/json/data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
             const albums = data[albumsKey];
-            
             for(const album of albums) {
+                console.log(album);
                 for (const track of album.Tracks) {
                     const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                    trackData = await fetchData(jsonPath);
-                    for (const subtitle of track.Subtitles) {
+                    trackSubtitlesData = await fetchData(jsonPath);
+                    for (const subtitle of trackSubtitlesData) {
                         dataStructure.push({
                             id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
                             Album: album.Album,
@@ -55,7 +54,7 @@ async function loadData() {
 
     } else {
         console.log("Creating the data structure slowly...");
-        console.log(site.render_quickly);
+        console.log(renderQuickly);
         const data = await fetchData('/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
@@ -65,7 +64,7 @@ async function loadData() {
             for(const album of albums) {
                 for (const track of album.Tracks) {
                     // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                    // trackData = await fetchData(jsonPath);
+                    // trackSubtitlesData = await fetchData(jsonPath);
                     for (const subtitle of track.Subtitles) {
                         dataStructure.push({
                             id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index

@@ -11,6 +11,7 @@ module Jekyll
       json_dir = File.join(site.source, 'assets', 'json')
 
       if site.config['render_quickly']
+        site.data['render_quickly'] = true
         Dir.glob(File.join(json_dir, '**/*.json')) do |file|
           data_key = File.basename(file, '.json')
           json_data = JSON.parse(File.read(file))
@@ -31,6 +32,7 @@ module Jekyll
           puts "Warning: data.json not found at #{data_file_path}"
         end
       else
+        site.data['render_quickly'] = false
         data_file_path = File.join(json_dir, 'combined_data.json')
         puts "Loading data from #{data_file_path}"
 
