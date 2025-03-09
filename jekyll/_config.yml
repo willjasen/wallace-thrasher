@@ -18,6 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+render_quickly: true
+
 title: wallace-thrasher
 email:
 description: >- # this means to ignore newlines until "baseurl:"
@@ -81,5 +83,3 @@ defaults:
 
 sass:
   quiet_deps: true
-
-render_quickly: true
