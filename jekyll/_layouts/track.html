@@ -52,22 +52,20 @@ layout: default
   {% if track_subtitles %}
     {% for trackText in track_subtitles %}
       <li>
+        {% if jekyll.environment != "production" %}
+          <i>{{ trackText.Index }}</i> -- 
+        {% endif %}
         <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
       </li>
     {% endfor %}
   {% else %}
     {% for trackText in track %}
     <li>
+      {% if jekyll.environment != "production" %}
+          <i>{{ trackText.Index }}</i> -- 
+      {% endif %}
       <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
     </li>
     {% endfor %}
   {% endif %}
 </ul>
-
-<!-- 
-{% if usb_directory %}
-  {% if usb_filename %}
-    {% include embed-audio.html src="/assets/usb/{{usb_directory}}/{{usb_filename}}" %}
-  {% endif %}
-{% endif %}
--->
