@@ -152,29 +152,29 @@ async function main(callback) {
 
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
-                if(jekyll_env !== "production") {
-                    const fileInput = document.getElementById('fileInput');
-                    const audio = document.getElementById('audioPlayer');
-                    fileMap = {};
-                    fileInput.addEventListener('change', function(event) {
-                        fileTarget = event.target;
-                        const files = fileTarget.files;
-                        for (const file of files) {
-                            if (file.name.endsWith('.mp3')) {
-                                const url = URL.createObjectURL(file);
-                                fileMap[file.webkitRelativePath] = url;
-                            }  
-                        }
-                        console.log("Files have been uploaded! Jumping to a subtitle will now work!");
+            fileMap = {};
+            if(jekyll_env != "production") {
+                const fileInput = document.getElementById('fileInput');
+                const audio = document.getElementById('audioPlayer');
+                fileInput.addEventListener('change', function(event) {
+                    fileTarget = event.target;
+                    const files = fileTarget.files;
+                    for (const file of files) {
+                        if (file.name.endsWith('.mp3')) {
+                            const url = URL.createObjectURL(file);
+                            fileMap[file.webkitRelativePath] = url;
+                        }  
+                    }
+                    console.log("Files have been uploaded! Jumping to a subtitle will now work!");
 
-                        // Update the input of #subtitles-search-input
-                        const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
-                        if (subtitlesSearchInput) {
-                            subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
-                            subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
-                        }
-                    });
-                }
+                    // Update the input of #subtitles-search-input
+                    const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
+                    if (subtitlesSearchInput) {
+                        subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
+                        subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
+                    }
+                });
+            }
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
                 if (this.value != "") {
                     const query = this.value;

@@ -49,6 +49,8 @@ the main JSON data file resides at `/assets/data.json`
           "Track_Number": 1,
           "Track_JSONPath": "longmont-theme-1.json",
           "Track_Slug": "longmont-theme-1",
+          "Aliases": "Wallace Thrasher",
+          "Establishments": "UPS",
           "Speakers_Adjusted": "false",
           "Subtitles_Adjusted": "false"
           "USB_Filename": "longmont-theme-1.mp3",
@@ -59,7 +61,7 @@ the main JSON data file resides at `/assets/data.json`
   ]
 }
 ```
-it is possible that the keys `Speakers_Adjusted`, `Subtitles_Adjusted`, `USB_Filename`, and `Whisper_Model` may not be present with the `Track` object.
+it is possible that some keys are not present in all tracks, but the necessary ones of `Track_Title`, `Track_Number`, `Track_JSONPath`, and `Track_Slug` are listed for each track.
 
 ### JSON Structure for Track Subtitles
 
@@ -85,9 +87,18 @@ the JSON data for each track resides within a folder named as the respective alb
 
 ### Under The Hood
 
-when the search pages are accessed, the single combined JSON data (`/assets/json/combined_json.data`) is retrieved from the server, then lunr indexes the data so that it becomes searchable.
+when the search pages are accessed, the single combined JSON data (`/assets/json/combined_json.data`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for two categories - speakers and subtitles.
 
-the key `USB_Filename` refers to the respective mp3 file's name that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). this key is planned for a future feature.
+the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
+
+### Building
+
+To install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
+
+To build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
+To build and start a local webserver, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
+
+When deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
 
 ### How to Contribute
 
