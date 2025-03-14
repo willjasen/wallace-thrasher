@@ -9,6 +9,7 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
       priority :high
 
       def generate(site)
+        start_time = Time.now  # added timer start
         combined_albums_data = []
         combined_tracks_on_album_data = []
         data_yml_path = File.join(site.source, '_data', 'data.yml')
@@ -52,6 +53,7 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         File.open(combined_data_path, 'w') do |file|
           file.write(JSON.pretty_generate({ "Albums" => combined_albums_data }))
         end
+        puts "combine-json-data.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
       end
     end
   end
