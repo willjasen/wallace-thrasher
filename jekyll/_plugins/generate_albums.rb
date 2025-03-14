@@ -4,10 +4,12 @@ module Jekyll
       safe true
   
       def generate(site)
+        start_time = Time.now  # added timer start
         albums = site.data['tracks']
         albums.each do |album_data|
             site.collections['albums'].docs << create_album_doc(site, album_data)
         end
+        puts "generate_albums.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
       end
   
       private
