@@ -22,13 +22,13 @@ async function fetchData(path) {
 */
 async function loadData() {
 
-    var renderQuickly = '{{ site.data.render_quickly }}';
+    var loadIndividualTrackJSON = '{{ site.data.loadIndividualTrackJSON }}';
     var jekyll_env = '{{ jekyll.environment }}';
     let dataStructure = [];
     
-    if (renderQuickly) {
-        console.log("Creating the data structure quickly...");
-        const data = await fetchData('/assets/json/data.json');
+    if (loadIndividualTrackJSON === true) {
+        console.log("Loading data from individual JSON files...");
+        const data = await fetchData('/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -47,6 +47,7 @@ async function loadData() {
                             Album_Slug: album.Album_Slug,
                             Track_Number: track.Track_Number,
                             Track_Slug: track.Track_Slug,
+                            Track_Subtitles: track.Subtitles,
                             Track_Title: track.Track_Title,
                             Speaker: subtitle.Speaker,
                             Text: subtitle.Text,
@@ -61,8 +62,9 @@ async function loadData() {
         }
 
     } else {
-        console.log("Creating the data structure slowly...");
-        console.log(renderQuickly);
+        console.log("Using combined_data.json");
+        console.log("Rendering the site quickly...");
+        console.log(loadIndividualTrackJSON);
         const data = await fetchData('/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
@@ -83,6 +85,7 @@ async function loadData() {
                             Album_Slug: album.Album_Slug,
                             Track_Number: track.Track_Number,
                             Track_Slug: track.Track_Slug,
+                            Track_Subtitles: track.Subtitles,
                             Track_Title: track.Track_Title,
                             Speaker: subtitle.Speaker,
                             Text: subtitle.Text,
@@ -149,7 +152,7 @@ async function main(callback) {
 
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
-                if(jekyll_env !== 'production') {
+                if(jekyll_env !== "production") {
                     const fileInput = document.getElementById('fileInput');
                     const audio = document.getElementById('audioPlayer');
                     fileMap = {};
