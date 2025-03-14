@@ -107,6 +107,8 @@
           "Track_Number": 1,
           "Track_JSONPath": "longmont-theme-1.json",
           "Track_Slug": "longmont-theme-1",
+          "Aliases": "Wallace Thrasher",
+          "Establishments": "UPS",
           "Speakers_Adjusted": "false",
           "Subtitles_Adjusted": "false"
           "USB_Filename": "longmont-theme-1.mp3",
@@ -117,7 +119,7 @@
   ]
 }
 </code></pre></div></div>
-<p>it is possible that the keys <code class="language-plaintext highlighter-rouge">Speakers_Adjusted</code>, <code class="language-plaintext highlighter-rouge">Subtitles_Adjusted</code>, <code class="language-plaintext highlighter-rouge">USB_Filename</code>, and <code class="language-plaintext highlighter-rouge">Whisper_Model</code> may not be present with the <code class="language-plaintext highlighter-rouge">Track</code> object.</p>
+<p>it is possible that some keys are not present in all tracks, but the necessary ones of <code class="language-plaintext highlighter-rouge">Track_Title</code>, <code class="language-plaintext highlighter-rouge">Track_Number</code>, <code class="language-plaintext highlighter-rouge">Track_JSONPath</code>, and <code class="language-plaintext highlighter-rouge">Track_Slug</code> are listed for each track.</p>
 
 <h3 id="json-structure-for-track-subtitles">JSON Structure for Track Subtitles</h3>
 
@@ -142,9 +144,18 @@
 
 <h3 id="under-the-hood">Under The Hood</h3>
 
-<p>when the search pages are accessed, the single combined JSON data (<code class="language-plaintext highlighter-rouge">/assets/json/combined_json.data</code>) is retrieved from the server, then lunr indexes the data so that it becomes searchable.</p>
+<p>when the search pages are accessed, the single combined JSON data (<code class="language-plaintext highlighter-rouge">/assets/json/combined_json.data</code>) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for two categories - speakers and subtitles.</p>
 
-<p>the key <code class="language-plaintext highlighter-rouge">USB_Filename</code> refers to the respective mp3 file’s name that resides on a “LPC Ultimate Session Bundle” usb drive that are occasionally available for sale via <a href="http://longmontpotioncastle.com/">lpc’s website</a>. this key is planned for a future feature.</p>
+<p>the keys of <code class="language-plaintext highlighter-rouge">USB_Directory</code> and <code class="language-plaintext highlighter-rouge">USB_Filename</code> refer to the respective directory and filename of the mp3 that resides on a “LPC Ultimate Session Bundle” usb drive that are occasionally available for sale via <a href="http://longmontpotioncastle.com/">lpc’s website</a>. these two pieces of data are used to play audio, if the files from the usb collection are uploaded.</p>
+
+<h3 id="building">Building</h3>
+
+<p>To install the project’s dependencies, ensure Ruby is installed, then install its necessary gems by running: <code class="language-plaintext highlighter-rouge">bundle install; bundle update;</code></p>
+
+<p>To build, run this command from the <code class="language-plaintext highlighter-rouge">jekyll</code> directory: <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=development bundle exec jekyll build</code>
+To build and start a local webserver, run this command from the <code class="language-plaintext highlighter-rouge">jekyll</code> directory: <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=development bundle exec jekyll serve</code></p>
+
+<p>When deploying to production, <code class="language-plaintext highlighter-rouge">JEKYLL_ENV</code> must be changed to <code class="language-plaintext highlighter-rouge">production</code>. The development environment tends to display information within data.json more so than the production environment.</p>
 
 <h3 id="how-to-contribute">How to Contribute</h3>
 
