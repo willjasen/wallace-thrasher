@@ -50,7 +50,7 @@ the main JSON data file resides at `/assets/data.json`
           "Track_JSONPath": "longmont-theme-1.json",
           "Track_Slug": "longmont-theme-1",
           "Aliases": "Wallace Thrasher",
-          "Establishments": "UPC",
+          "Establishments": "UPS",
           "Speakers_Adjusted": "false",
           "Subtitles_Adjusted": "false"
           "USB_Filename": "longmont-theme-1.mp3",
