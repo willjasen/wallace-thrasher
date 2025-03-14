@@ -1,5 +1,6 @@
 {% assign all_albums = site.data.albums.Albums | sort: "Year" %}
 {% assign matched_album = all_albums | where_exp: "item", "item.Album == page.album_title" %}
+
 {% for album in matched_album %}
   {% assign matched_album_title = album.Album %}
   {% assign matched_album_image = album.Album_Picture %}
@@ -7,8 +8,10 @@
   {% assign matched_album_year = album.Year %}
   {% assign matched_album_usb_dir = album.USB_Directory %}
 {% endfor %}
+
 {% assign matched_track = all_tracks_on_album | where_exp: "item", "item.Track_Title == page.track_title" %}
 {% for track_details in matched_track %}
+
   {% assign track_title_detail = track_details.Track_Title %}
   {% assign track_number_detail = track_details.Track_Number %}
   {% assign track_length_detail = track_details.Track_Length %}
@@ -22,6 +25,14 @@
   {% assign last_modified_detail = track_details.Last_Modified %}
   {% assign to_do_detail = track_details.To_Do %}
   {% assign track_subtitles = track_details.Subtitles %}
+
+  {% if track_speakers_detail != "true" or track_subtitles_detail != "true" %}
+    {% assign track_needs_review = "true" %}
+  {% else %}
+    {% assign track_needs_review = "false" %}
+  {% endif %}
+
 {% endfor %}
+
 {% assign track_slug = page.track_title | slugify %}
 {% assign track = site.data[track_slug] %}
