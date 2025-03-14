@@ -15,7 +15,7 @@ there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fan
 
 ### Components
 
-this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper is utilized to analyze mp3 tracks and have it output subtitle files, which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages, and then any changes are then pushed here into this repo.
+this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper is utilized to analyze mp3 tracks and have it output subtitle files, which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`combined_data.json`), and then any changes are then pushed here into this repo.
 
 because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser. 
 
@@ -44,6 +44,8 @@ the main JSON data file resides at `/assets/data.json`
           "Track_Number": 1,
           "Track_JSONPath": "longmont-theme-1.json",
           "Track_Slug": "longmont-theme-1",
+          "Aliases": "Wallace Thrasher",
+          "Establishments": "UPC",
           "Speakers_Adjusted": "false",
           "Subtitles_Adjusted": "false"
           "USB_Filename": "longmont-theme-1.mp3",
@@ -54,11 +56,11 @@ the main JSON data file resides at `/assets/data.json`
   ]
 }
 ```
-it is possible that the keys `Speakers_Adjusted`, `Subtitles_Adjusted`, `USB_Filename`, and `Whisper_Model` may not be present with the `Track` object.
+it is possible that some keys are not present in all tracks, but the necessary ones of `Track_Title`, `Track_Number`, `Track_JSONPath`, and `Track_Slug` are listed for each track.
 
 ### JSON Structure for Track Subtitles
 
-the JSON data for each track resides within a folder named as the respective album title's slug at `/assets/json`
+the JSON data for each track resides within a folder named as the respective album title's slug with the `/assets/json` folder
 ```
 [
     {
@@ -80,20 +82,29 @@ the JSON data for each track resides within a folder named as the respective alb
 
 ### Under The Hood
 
-when the search pages are accessed, the JSON data is retrieved from the server, then lunr indexes the data so that it becomes searchable. i have noticed that the first time that the website is loaded, the JSON files may take a handful of seconds to retrieve and load (its progress can be seen on the search pages). after the data has been loaded once and subsequently cached, the loading process is much faster.
+when the search pages are accessed, the single combined JSON data (`/assets/json/combined_json.data`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for two categories - speakers and subtitles.
 
-the key `USB_Filename` refers to the respective mp3 file's name that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). this key is planned for a future feature.
+the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
+
+### Building
+
+To install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
+
+To build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
+To build and start a local webserver, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
+
+When deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
 
 ### How to Contribute
 
 if you've read this far and have an interest in contributing to this project - it is welcomed and appreciated!
 
-please refer to [CONTRIBUTING.md](CONTRIBUTING.md)
+please refer to [CONTRIBUTING.md](https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md)
 
 ### To-Do's
 
-the to-do list has been moved to [TODO.md](TODO.md)
+the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-thrasher/blob/main/TODO.md)
 
 ### Licensing
 
-this project is licensed under the [GPLv3](gpl-3.0.txt), and this license applies to all past versions and branches of the project.
+this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project.
