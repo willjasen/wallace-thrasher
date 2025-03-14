@@ -41,6 +41,16 @@ layout: page
       To-Do: {{ to_do_detail }}
     {% endif %}
   </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    {% if track_aliases_detail %}
+      Aliases: {{ track_aliases_detail }}
+    {% endif %}
+  </h5>
+  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
+    {% if track_aliases_detail %}
+      Establishments: {{ track_establishments_detail }}
+    {% endif %}
+  </h5>
 
   <hr style="margin: 20px 0;">
   {% include embed-audio-dir-for-tracks.html %}
