@@ -7,6 +7,7 @@ module Jekyll
     priority :highest
 
     def generate(site)
+      start_time = Time.now  # added timer start
       # Load JSON files from /assets/json
       json_dir = File.join(site.source, 'assets', 'json')
 
@@ -48,6 +49,7 @@ module Jekyll
           puts "Warning: combined_data.json not found at #{data_file_path}"
         end
       end
+      puts "load_json_data.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
     end
   end
 end
