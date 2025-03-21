@@ -1,6 +1,8 @@
+/*
 ---
 layout: null
 ---
+*/
 
 // search.js
 
