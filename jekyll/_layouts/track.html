@@ -11,6 +11,12 @@ layout: page
   <h4 style="text-align: center; margin-top: 0px;">Runtime: {{ track_length_detail }} seconds</h4>
 {% endif %}
 
+{% if track_speakers_detail != "true" or track_subtitles_detail != "true" %}
+  <p style="color: yellow; text-align: center;">This track needs reviewing! <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">--> Lend a hand <--</a></p>
+{% else %}
+<p style="color: green; text-align: center;">This track has been reviewed! 😊</p>
+{% endif %}
+
 {% if jekyll.environment != "production" %}
   <!-- Display metadata information about the track as related to this project -->
   <hr style="margin: 20px 0;">
@@ -57,6 +63,7 @@ layout: page
   <hr style="margin: 20px 0;">
 
 {% endif %}
+
 
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">

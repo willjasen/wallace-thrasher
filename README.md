@@ -13,11 +13,15 @@ some time ago, i wanted to know one question - how many calls does alex trebek s
 
 there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however the data is not indexed and therefore not searchable, at least in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
+### Features
+
+its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
+
 ### Components
 
-this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper is utilized to analyze mp3 tracks and have it output subtitle files, which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`combined_data.json`), and then any changes are then pushed here into this repo.
+this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper-webui is utilized to analyze the audio tracks and have it output subtitles (what is spoken) that include speaker diarization (determining who says what), which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`combined_data.json`).
 
-because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser. 
+because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser.
 
 ### Converting Tracks to Subtitles
 
@@ -88,12 +92,12 @@ the keys of `USB_Directory` and `USB_Filename` refer to the respective directory
 
 ### Building
 
-To install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
+to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
 
-To build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
-To build and start a local webserver, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
+to build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
+to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
 
-When deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
+when deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
 
 ### How to Contribute
 
