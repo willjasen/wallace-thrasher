@@ -1,9 +1,4 @@
-<div style="display: flex; align-items: center;">
-  <label for="fileInput" style="margin-right: 10px;">Select LPC USB -> </label>
-  <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
-  <audio id="audioPlayer" controls></audio>
-</div>
-<br>
+{% include embed-audio.html %}
 
 <script>
 
@@ -36,6 +31,7 @@
     const relevantUrl = `LPC USB/${albumUSBDirectory}/${trackTitleDetail}.mp3`;
     console.log('Relevant URL: ' + relevantUrl);
     const matchingUrl = fileMap[relevantUrl];
+    console.log('Matching URL: ' + matchingUrl);
     audio.src = matchingUrl;
 
     // Wait for metadata to be loaded before seeking.

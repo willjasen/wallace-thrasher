@@ -1,0 +1,46 @@
+<style>
+    /* Tooltip container styles */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+  
+    /* Tooltip text styles */
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      opacity: 0;
+      width: 200px;
+      background-color: lavender; /* updated color */
+      color: #000; /* adjusted text color for contrast */
+      text-align: center;
+      border-radius: 4px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* Positions the tooltip above the label */
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+      /* added color accents */
+      border: 1px solid #ffdd57;
+      box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
+    }
+  
+    /* Show tooltip text when hovering */
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  
+  <div style="display: flex; align-items: center;">
+    <label for="fileInput" class="tooltip" style="margin-right: 10px; color: greenyellow;">
+      Select LPC USB ->
+      <span class="tooltiptext">Select the top-level directory for the collection, usually named "LPC USB"</span>
+    </label>
+    <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+    <audio id="audioPlayer" controls></audio>
+  </div>
+  <br>
+  

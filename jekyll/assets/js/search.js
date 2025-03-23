@@ -1,6 +1,8 @@
+/*
 ---
 layout: null
 ---
+*/
 
 // search.js
 
@@ -63,7 +65,6 @@ async function loadData() {
 
     } else {
         console.log("Using combined_data.json");
-        console.log("Rendering the site quickly...");
         console.log(loadIndividualTrackJSON);
         const data = await fetchData('/assets/json/combined_data.json');
 
@@ -148,6 +149,7 @@ async function main(callback) {
         });
         const countOfAlexTrebek = tracksWithAlexTrebek.size;
         console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
+
 
 
         // Set up the subtitles search input listener
@@ -306,6 +308,24 @@ async function main(callback) {
             });
         }
 
+        function onDomContentLoaded() {
+            console.log("Alex Trebek is found " + countOfAlexTrebek + " times!");
+            const alexSpan = document.querySelector('#alex-span');
+            if (alexSpan) {
+                // alexSpan.value = countOfAlexTrebek;
+                alexSpan.textContent = countOfAlexTrebek;
+            } else {
+                console.error('Element with id "alex-span" not found.');
+            }
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', onDomContentLoaded);
+        } else {
+            // DOM already loaded, so run it now
+            onDomContentLoaded();
+        }
+
         // Function to create a unique key
         function createKey(albumTitle, trackTitle, speaker) {
             return `${albumTitle}-${trackTitle}-${speaker}`;
@@ -322,6 +342,7 @@ async function main(callback) {
 // Execute this program
 var dataLoaded = false;
 main(function(dataReady) {
+    console.log("Document readyState:", document.readyState);
     if (dataReady) {
       dataLoaded = dataReady;
     }
