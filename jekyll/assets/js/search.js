@@ -310,12 +310,11 @@ async function main(callback) {
 
         function onDomContentLoaded() {
             console.log("Alex Trebek is found " + countOfAlexTrebek + " times!");
-            const alexSpan = document.querySelector('#alex-span');
+            const alexSpan = document.querySelector('#alex-count-span');
             if (alexSpan) {
-                // alexSpan.value = countOfAlexTrebek;
                 alexSpan.textContent = countOfAlexTrebek;
             } else {
-                console.error('Element with id "alex-span" not found.');
+                console.error('Element with id "alex-count-span" not found.');
             }
         }
         

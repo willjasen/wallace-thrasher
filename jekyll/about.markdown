@@ -12,15 +12,15 @@ this website allows for searching through subtitles and speakers within the long
 
 this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery). there is a corresponding development website available at [dev.stretchie.delivery](https://dev.stretchie.delivery).
 
+### Features
+
+its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
+
 ### Backstory
 
 some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
 
 there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however the data is not indexed and therefore not searchable, at least in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
-
-### Features
-
-its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
 
 ### Components
 
