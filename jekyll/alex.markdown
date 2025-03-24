@@ -2,7 +2,7 @@
 layout: page
 title: Alex Trebek
 permalink: /alex-trebek/
-published: false
+published: true
 ---
 
 {% include variables.liquid %}
