@@ -8,13 +8,13 @@ layout: page
 <h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
 
 {% if track_length_detail %}
-  <h4 style="text-align: center; margin-top: 0px;">Runtime: {{ track_length_detail }} seconds</h4>
+  <h4 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">Runtime: {{ track_length_detail }} seconds</h4>
 {% endif %}
 
 {% if track_speakers_detail != "true" or track_subtitles_detail != "true" %}
   <p style="color: yellow; text-align: center;">This track needs reviewing! <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">--> Lend a hand <--</a></p>
 {% else %}
-<p style="color: green; text-align: center;">This track has been reviewed! 😊</p>
+  <p style="color: green; text-align: center;">This track has been reviewed! 😊</p>
 {% endif %}
 
 {% if jekyll.environment != "production" %}
@@ -47,25 +47,27 @@ layout: page
       To-Do: {{ to_do_detail }}
     {% endif %}
   </h5>
-
 {% endif %}
 
-<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-  {% if track_aliases_detail %}
-    Aliases: {{ track_aliases_detail }}
-  {% endif %}
-</h5>
-<h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-  {% if track_establishments_detail %}
-    Establishments: {{ track_establishments_detail }}
-  {% endif %}
-</h5>
+
+<hr style="margin: 20px 0;">
+{% if track_aliases_detail %}
+  <h5 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
+    Aliases: {{ track_aliases_detail | join: ", " }}
+  </h5>
+{% endif %}
+{% if track_establishments_detail %}
+  <h5 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
+    Establishments: {{ track_establishments_detail | join: ", " }}
+  </h5>
+{% endif %}
 
 
 <hr style="margin: 20px 0;">
 {% include embed-audio-dir-for-tracks.html %}
-<hr style="margin: 20px 0;">
 
+
+<hr style="margin: 20px 0;">
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
   {% if track_subtitles %}
