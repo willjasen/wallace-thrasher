@@ -6,6 +6,13 @@ permalink: /about/
 
 codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
+### Last Build Time
+
+This site was last built on:
+
+{{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} -- {{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }}
+
+
 ### Overview
 
 this website allows for searching through subtitles and speakers within the longmont potion castle discography.
@@ -103,6 +110,7 @@ to build, run this command from the `jekyll` directory: `JEKYLL_ENV=development 
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
 
 when deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
+
 
 ### How to Contribute
 
