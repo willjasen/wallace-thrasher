@@ -13,6 +13,8 @@ this website allows for searching through subtitles and speakers within the long
 
 this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery).
 
+this website was last built via Jekyll on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
+
 ### Features
 
 its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
@@ -120,11 +122,13 @@ the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-
 
 this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project.
 
-### Last Build Time
+### Technical Details
 
-This site was last built via Jekyll on:
-
-{{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
-
-This site is deployed to Netlify -- 
+this website is deployed to Netlify -- 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys)
+
+[![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- this website last committed to GitHub
+
+![GitHub code size](https://img.shields.io/github/languages/code-size/willjasen/wallace-thrasher) -- deployed source code size
+
+![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
