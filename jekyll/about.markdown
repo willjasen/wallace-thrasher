@@ -6,6 +6,7 @@ permalink: /about/
 
 codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
+
 ### Overview
 
 this website allows for searching through subtitles and speakers within the longmont potion castle discography.
@@ -104,6 +105,7 @@ to build and start a local web server, run this command from the `jekyll` direct
 
 when deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
 
+
 ### How to Contribute
 
 if you've read this far and have an interest in contributing to this project - it is welcomed and appreciated!
@@ -117,3 +119,12 @@ the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-
 ### Licensing
 
 this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project.
+
+### Last Build Time
+
+This site was last built via Jekyll on:
+
+{{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
+
+This site is deployed to Netlify -- 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys)
