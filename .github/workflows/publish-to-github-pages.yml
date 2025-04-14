@@ -1,0 +1,30 @@
+# In your repository's `.github/workflows/publish-to-github-pages.yaml` file.
+---
+# Name of your GitHub Actions workflow.
+name: Publish to GitHub Pages
+
+# Specifies to run this workflow whenever a push is made (commits are
+# added) to the branch named `jekyll`.
+on:
+  push:
+    branches:
+      # Change this to the branch where you keep your Jekyll code.
+      - jekyll
+
+# Define a job named `build-and-publish` in your workflow.
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest # This job uses a GitHub-hosted runner.
+
+    steps:
+      # Checkout the source from the `jekyll` branch.
+      - uses: actions/checkout@v2
+
+      # Invoke this action against the newly checked out source code.
+      - uses: fabacab/jekyll-builder-for-github-pages-action@master
+        with:
+          # Provide this action with your repository's `GH_PAGES_TOKEN`
+          # "Secret" variable. This should be the value of a personal
+          # access token granted, at a minimum, the `public_repo` and
+          # the `repo_deployment` scopes needed to deploy to GH Pages.
+          secret_gh_pages_api_token: ${{ secrets.GH_PAGES_TOKEN }}
