@@ -33,16 +33,19 @@
       </div>
 
       <div class="footer-col footer-col-4">
-        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="{{ site.baseurl }}/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
       </div>
 
       {% if jekyll.environment != "production" %}
         <div>
           <p style="color: red;">** this is the development version **</p>
           <p style="color: greenyellow;">this website was last built via jekyll on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})</p>
+          <a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml">
+            <img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages">
+          </a>
         </div>
       {% endif %}
-      
+
   </div>
 
 </footer>

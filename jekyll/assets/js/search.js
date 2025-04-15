@@ -6,6 +6,9 @@ layout: null
 
 // search.js
 
+// Define the base URL
+const BASE_URL = "/wallace-thrasher";
+
 /*
     This function retrieves a JSON document from a given path
 */
@@ -30,7 +33,7 @@ async function loadData() {
     
     if (loadIndividualTrackJSON === true) {
         console.log("Loading data from individual JSON files...");
-        const data = await fetchData('/assets/json/data.json');
+        const data = await fetchData(`${BASE_URL}/assets/json/data.json`);
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -38,7 +41,7 @@ async function loadData() {
             for(const album of albums) {
                 console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
-                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    const jsonPath = `${BASE_URL}/assets/json/`+album.Album_Slug+"/"+track.Track_JSONPath;
                     trackSubtitlesData = await fetchData(jsonPath);
                     for (const subtitle of trackSubtitlesData) {
                         dataStructure.push({
@@ -66,7 +69,7 @@ async function loadData() {
     } else {
         console.log("Using combined_data.json");
         console.log(loadIndividualTrackJSON);
-        const data = await fetchData('/assets/json/combined_data.json');
+        const data = await fetchData(`${BASE_URL}/assets/json/combined_data.json`);
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -197,9 +200,9 @@ async function main(callback) {
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
-                            <img src="/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
+                            <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
-                            <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
+                            <i><a href="${BASE_URL}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
 
                         if (!fileMap || Object.keys(fileMap).length === 0) {
@@ -291,7 +294,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 ${matchedDoc.Speaker} -- 
-                                <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                 ${matchedDoc.Album}
                             `;
                             resultList.appendChild(albumAndTitleItem);
