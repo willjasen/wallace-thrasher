@@ -160,7 +160,14 @@
 
 <h3 id="deployment">Deployment</h3>
 
-<p>commits to the main branch trigger a <a href="https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows/publish-to-github-pages.yml">github action</a> that runs <code class="language-plaintext highlighter-rouge">jekyll build</code> to generate the site’s contents (usually stored within “/jekyll/_site”) to the <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> branch of the repository. the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> is then pulled by <a href="https://app.netlify.com/sites/wallace-thrasher/deploys">netlify</a> to redeploy its copy of the site.</p>
+<p>commits to the main branch trigger two <a href="https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows">github actions</a>:</p>
+<ul>
+  <li>run <code class="language-plaintext highlighter-rouge">jekyll build --baseurl "/"</code> to generate the site on the <a href="https://github.com/willjasen/wallace-thrasher/tree/netlify">“netlify”</a> branch</li>
+  <li>run <code class="language-plaintext highlighter-rouge">jekyll build --baseurl "/wallace-thrasher"</code> to generate the site on the <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> branch</li>
+</ul>
+
+<p>the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/netlify">“netlify”</a> is then pulled by <a href="https://app.netlify.com/sites/wallace-thrasher/deploys">netlify</a> to redeploy its copy of the site.
+the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> is then used by GitHub Pages</p>
 
 <h3 id="how-to-contribute">How to Contribute</h3>
 
@@ -186,7 +193,7 @@
 
 <p><img src="https://img.shields.io/github/repo-size/willjasen/wallace-thrasher" alt="GitHub repo size" /> – source code repository size</p>
 
-<p>this website was last built on April 15, 2025 at 05:24 PM EDT (2025-04-15 17:24:40 UTC)</p>
+<p>this website was last built on April 15, 2025 at 05:39 PM EDT (2025-04-15 17:39:45 UTC)</p>
 
   </div>
 
@@ -224,7 +231,7 @@
       
         <div>
           <p style="color: red;">** this is the development version **</p>
-          <p style="color: greenyellow;">this website was last built via jekyll on April 15, 2025 at 05:24 PM EDT (2025-04-15 17:24:40 UTC)</p>
+          <p style="color: greenyellow;">this website was last built via jekyll on April 15, 2025 at 05:39 PM EDT (2025-04-15 17:39:45 UTC)</p>
           <a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml">
             <img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages">
           </a>
