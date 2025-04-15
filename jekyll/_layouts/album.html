@@ -11,7 +11,7 @@ layout: page
     <li style="list-style-type: none;">
       <strong>{{ track.Track_Number }}: </strong>
       {% if track %}
-        <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+        <a href="{{ site.baseurl }}/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
       {% else %}
         {{ track.Track_Title }} (track not found)
       {% endif %}
