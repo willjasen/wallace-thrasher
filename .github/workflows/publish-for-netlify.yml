@@ -38,7 +38,7 @@ jobs:
           JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
 
       # Deploy to the `netlify` branch.
-      - name: Deploy to Netlify branch
+      - name: Deploy to 'netlify' branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
