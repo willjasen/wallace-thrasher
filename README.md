@@ -110,7 +110,7 @@ commits to the main branch trigger two [github actions](https://github.com/willj
 - run `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) branch
 
 the commit to ["netlify"](https://github.com/willjasen/wallace-thrasher/tree/netlify) is then pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
-the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then used by GitHub Pages
+the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then used by github pages
 
 ### How to Contribute
 
