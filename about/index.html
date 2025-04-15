@@ -186,7 +186,9 @@ to build and start a local web server, run this command from the <code class="la
 
 <h3 id="technical-details">Technical Details</h3>
 
-<p>this website was last built on April 14, 2025 at 10:48 PM EDT (2025-04-14 22:48:53 UTC)</p>
+<p>this website was last built on April 14, 2025 at 10:56 PM EDT (2025-04-14 22:56:24 UTC)</p>
+
+<p>the deployment process is that commits to the main branch trigger a github action that runs <code class="language-plaintext highlighter-rouge">jekyll build</code> to generate the site’s contents (usually stored within “/jekyll/_site”) to the “gh-pages” branch of the repository. the commit to “gh-pages” is then pulled by netlify to redeploy the its copy of the site.</p>
 
 <p><a href="https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys"><img src="https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status" alt="Netlify Status" /></a> – this website is deployed to Netlify</p>
 
