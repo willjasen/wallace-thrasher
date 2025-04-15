@@ -13,7 +13,7 @@ this website allows for searching through subtitles and speakers within the long
 
 this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery).
 
-this website was last built via Jekyll on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
+this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
 
 ### Features
 
@@ -124,8 +124,7 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 ### Technical Details
 
-this website is deployed to Netlify -- 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys)
+[![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- this website is deployed to GitHub Pages
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- this website last committed to GitHub
 
