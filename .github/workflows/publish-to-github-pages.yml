@@ -12,7 +12,7 @@ on:
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
-  build-and-publish:
+  build-and-publish-to-github-pages:
     runs-on: ubuntu-latest # This job uses a GitHub-hosted runner.
 
     steps:
@@ -31,11 +31,11 @@ jobs:
           gem install bundler
           bundle install
 
-      # Build the Jekyll site with the baseurl set to 'wallace-thrasher'.
-      - name: Build site
+      # Build the Jekyll site with the baseurl set to '/wallace-thrasher'.
+      - name: Build site for GitHub Pages
         run: |
           cd jekyll
-          JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
+          JEKYLL_ENV=production bundle exec jekyll build --baseurl "/wallace-thrasher"
 
       # Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
