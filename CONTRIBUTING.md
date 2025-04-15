@@ -1,6 +1,8 @@
 # How to Lend a Hand
 
-Most of the assistance needed to make this project work better involve reviewing for accuracy each tracks' respective JSON file that contains its speakers and subtitles. These can be found at [/jekyll/assets/json](jekyll/assets/json).
+Most of the assistance needed to make this project work better involves reviewing for accuracy each tracks' respective JSON file that contains its speakers and subtitles. These can be found at [/jekyll/assets/json](jekyll/assets/json).
+
+To discuss, offer ideas, or give feedback, please use the [Discussions tab on GitHub](https://github.com/willjasen/wallace-thrasher/discussions)
 
 If you would like to contribute to updating speakers & subtitles:
 
