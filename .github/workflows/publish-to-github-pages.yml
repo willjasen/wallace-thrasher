@@ -4,11 +4,10 @@
 name: Publish to GitHub Pages
 
 # Specifies to run this workflow whenever a push is made (commits are
-# added) to the branch named `jekyll`.
+# added) to the branch named `main`.
 on:
   push:
     branches:
-      # Change this to the branch where you keep your Jekyll code.
       - main
 
 # Define a job named `build-and-publish` in your workflow.
@@ -17,14 +16,27 @@ jobs:
     runs-on: ubuntu-latest # This job uses a GitHub-hosted runner.
 
     steps:
-      # Checkout the source from the `jekyll` branch.
-      - uses: actions/checkout@v2
+      # Checkout the source from the `main` branch.
+      - uses: actions/checkout@v3
 
-      # Invoke this action against the newly checked out source code.
-      - uses: fabacab/jekyll-builder-for-github-pages-action@master
+      # Set up Ruby for Jekyll.
+      - uses: ruby/setup-ruby@v1
         with:
-          # Provide this action with your repository's `GH_PAGES_TOKEN`
-          # "Secret" variable. This should be the value of a personal
-          # access token granted, at a minimum, the `public_repo` and
-          # the `repo_deployment` scopes needed to deploy to GH Pages.
-          secret_gh_pages_api_token: ${{ secrets.GH_PAGES_TOKEN }}
+          ruby-version: 3.1
+
+      # Install Jekyll and Bundler.
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      # Build the Jekyll site.
+      - name: Build site
+        run: bundle exec jekyll build
+
+      # Deploy to GitHub Pages.
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./_site
