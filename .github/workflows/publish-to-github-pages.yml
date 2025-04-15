@@ -32,11 +32,13 @@ jobs:
 
       # Build the Jekyll site.
       - name: Build site
-        run: bundle exec jekyll build
+        run: |
+          cd jekyll
+          bundle exec jekyll build
 
       # Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./_site
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./jekyll/_site
