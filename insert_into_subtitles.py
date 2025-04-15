@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 ### Parameter #2 - Speaker
 ### Parameter #3 - Time offset
 
-file_to_edit = "/Users/willjasen/Application Data/GitHub/wallace-thrasher/jekyll/assets/json/alive-in-25/drug-dumpling.json"
+file_to_edit = "/Users/willjasen/Application Data/GitHub/wallace-thrasher/jekyll/assets/json/alive-in-25/notline.json"
 
 # Replace hard-coded parameters with command-line arguments if provided
 if len(sys.argv) > 1:
