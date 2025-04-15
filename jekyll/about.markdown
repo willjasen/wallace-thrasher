@@ -126,8 +126,6 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 ### Technical Details
 
-this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- this website is deployed to Netlify
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- this website last committed to GitHub
@@ -135,3 +133,5 @@ this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }
 ![GitHub code size](https://img.shields.io/github/languages/code-size/willjasen/wallace-thrasher) -- deployed source code size
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
+
+this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
