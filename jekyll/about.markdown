@@ -13,8 +13,6 @@ this website allows for searching through subtitles and speakers within the long
 
 this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery).
 
-this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
-
 ### Features
 
 its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
@@ -123,6 +121,8 @@ the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-
 this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project.
 
 ### Technical Details
+
+this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
 
 [![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- this website is deployed to GitHub Pages
 
