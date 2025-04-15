@@ -29,17 +29,20 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        {% if jekyll.environment != "production" %}
-          <p style="color: red; margin-left: -15%;">** this is the development version **</p>
-        {% else %}
-          <p style="color: #D15CCE;">{{- site.description | escape -}}</p>
-        {% endif %}
+        <p style="color: #D15CCE;">{{- site.description | escape -}}</p>
       </div>
 
       <div class="footer-col footer-col-4">
         <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank"><img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC website</a>
       </div>
 
+      {% if jekyll.environment != "production" %}
+        <div>
+          <p style="color: red;">** this is the development version **</p>
+          <p style="color: greenyellow;">this website was last built via jekyll on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})</p>
+        </div>
+      {% endif %}
+      
   </div>
 
 </footer>
