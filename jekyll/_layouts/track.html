@@ -49,6 +49,11 @@ layout: page
   </h5>
 {% endif %}
 
+<h5 style="text-align: center; margin-top: 0px; margin-bottom: 40px;">
+  {% if apple_music_link_detail %}
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:500px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="{{ apple_music_link_detail }}"></iframe>
+  {% endif %}
+</h5>
 
 <hr style="margin: 20px 0;">
 {% if track_aliases_detail %}
