@@ -15,7 +15,7 @@ its basic feature is that albums and tracks have pages with the track pages cont
 
 some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
 
-there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however the data is not indexed and therefore not searchable, at least in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
+there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
 ### Components
 
@@ -25,7 +25,7 @@ because the website is static, there is no server-end processing that occurs (ot
 
 ### Converting Tracks to Subtitles
 
-i am using whisper-webui (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization to output subtitle files (.srt)
+i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization (who says what) to output subtitle files (.srt)
 
 ### Converting Subtitles to JSON
 
@@ -95,10 +95,14 @@ the keys of `USB_Directory` and `USB_Filename` refer to the respective directory
 to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
 
 to build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
+
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
 
-when deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
+when deploying to production, `JEKYLL_ENV` must be changed to `production`. the development environment tends to display information within data.json more so than the production environment.
 
+### Deployment
+
+commits to the main branch trigger a [github action](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows/publish-to-github-pages.yml) that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) branch of the repository. the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
 
 ### How to Contribute
 
@@ -116,9 +120,7 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 ### Technical Details
 
-the deployment process is that commits to the main branch trigger a github action that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the "gh-pages" branch of the repository. the commit to "gh-pages" is then pulled by netlify to redeploy the its copy of the site.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys) -- this website is deployed to Netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- this website is deployed to Netlify
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- this website last committed to GitHub
 

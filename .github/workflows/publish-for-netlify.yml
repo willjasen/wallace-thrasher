@@ -1,7 +1,7 @@
-# In your repository's `.github/workflows/publish-to-github-pages.yml` file.
+# In your repository's `.github/workflows/publish-for-netlify.yml` file.
 ---
 # Name of your GitHub Actions workflow.
-name: Publish to GitHub Pages
+name: Publish for Netlify
 
 # Specifies to run this workflow whenever a push is made (commits are
 # added) to the branch named `main`.
@@ -12,8 +12,8 @@ on:
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
-  build-and-publish-to-github-pages:
-    runs-on: ubuntu-latest # This job uses a GitHub-hosted runner.
+  build-and-publish-to-netlify:
+    runs-on: ubuntu-latest
 
     steps:
       # Checkout the source from the `main` branch.
@@ -31,15 +31,16 @@ jobs:
           gem install bundler
           bundle install
 
-      # Build the Jekyll site with the baseurl set to '/wallace-thrasher'.
-      - name: Build site for GitHub Pages
+      # Build the Jekyll site with the baseurl set to ''.
+      - name: Build site for Netlify
         run: |
           cd jekyll
-          JEKYLL_ENV=development bundle exec jekyll build --baseurl "/wallace-thrasher"
+          JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
 
-      # Deploy to GitHub Pages.
-      - name: Deploy to GitHub Pages
+      # Deploy to the `netlify` branch.
+      - name: Deploy to 'netlify' branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
+          publish_branch: netlify
