@@ -88,7 +88,7 @@
 
 <p>some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?</p>
 
-<p>there are great resources like <a href="https://talkinwhipapedia.fandom.com/">talkin’ whipapedia</a> out there that has detailed info about albums, tracks, their subtitles, and other info, however the data is not indexed and therefore not searchable, at least in a way that can answer my original question. given that i’ve been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.</p>
+<p>there are great resources like <a href="https://talkinwhipapedia.fandom.com/">talkin’ whipapedia</a> out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn’t structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i’ve been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.</p>
 
 <h3 id="components">Components</h3>
 
@@ -98,7 +98,7 @@
 
 <h3 id="converting-tracks-to-subtitles">Converting Tracks to Subtitles</h3>
 
-<p>i am using whisper-webui (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization to output subtitle files (.srt)</p>
+<p>i am using <a href="https://github.com/jhj0517/Whisper-WebUI">whisper-webui</a> (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization (who says what) to output subtitle files (.srt)</p>
 
 <h3 id="converting-subtitles-to-json">Converting Subtitles to JSON</h3>
 
@@ -165,8 +165,9 @@
 
 <p>to install the project’s dependencies, ensure Ruby is installed, then install its necessary gems by running: <code class="language-plaintext highlighter-rouge">bundle install; bundle update;</code></p>
 
-<p>to build, run this command from the <code class="language-plaintext highlighter-rouge">jekyll</code> directory: <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=development bundle exec jekyll build</code>
-to build and start a local web server, run this command from the <code class="language-plaintext highlighter-rouge">jekyll</code> directory: <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=development bundle exec jekyll serve</code></p>
+<p>to build, run this command from the <code class="language-plaintext highlighter-rouge">jekyll</code> directory: <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=development bundle exec jekyll build</code></p>
+
+<p>to build and start a local web server, run this command from the <code class="language-plaintext highlighter-rouge">jekyll</code> directory: <code class="language-plaintext highlighter-rouge">JEKYLL_ENV=development bundle exec jekyll serve</code></p>
 
 <p>when deploying to production, <code class="language-plaintext highlighter-rouge">JEKYLL_ENV</code> must be changed to <code class="language-plaintext highlighter-rouge">production</code>. the development environment tends to display information within data.json more so than the production environment.</p>
 
@@ -190,7 +191,7 @@ to build and start a local web server, run this command from the <code class="la
 
 <h3 id="technical-details">Technical Details</h3>
 
-<p>this website was last built on April 14, 2025 at 11:15 PM EDT (2025-04-14 23:15:11 UTC)</p>
+<p>this website was last built on April 15, 2025 at 04:00 PM EDT (2025-04-15 16:00:32 UTC)</p>
 
 <p><a href="https://app.netlify.com/sites/wallace-thrasher/deploys"><img src="https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status" alt="Netlify Status" /></a> – this website is deployed to Netlify</p>
 
