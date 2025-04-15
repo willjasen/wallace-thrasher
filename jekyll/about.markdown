@@ -103,8 +103,11 @@ to install the project's dependencies, ensure Ruby is installed, then install it
 to build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
 
-when deploying to production, `JEKYLL_ENV` must be changed to `production`. The development environment tends to display information within data.json more so than the production environment.
+when deploying to production, `JEKYLL_ENV` must be changed to `production`. the development environment tends to display information within data.json more so than the production environment.
 
+### Deployment
+
+commits to the main branch trigger a [github action](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows/publish-to-github-pages.yml) that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) branch of the repository. the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
 
 ### How to Contribute
 
@@ -124,9 +127,7 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
 
-the deployment process is that commits to the main branch trigger a github action that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the "gh-pages" branch of the repository. the commit to "gh-pages" is then pulled by netlify to redeploy the its copy of the site.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys) -- this website is deployed to Netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- this website is deployed to Netlify
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- this website last committed to GitHub
 
