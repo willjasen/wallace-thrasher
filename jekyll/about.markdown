@@ -108,7 +108,12 @@ when deploying to production, `JEKYLL_ENV` must be changed to `production`. the 
 
 ### Deployment
 
-commits to the main branch trigger a [github action](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows/publish-to-github-pages.yml) that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) branch of the repository. the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
+commits to the main branch trigger two [github actions](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows):
+- run `jekyll build --baseurl "/"` to generate the site on the ["netlify"](https://github.com/willjasen/wallace-thrasher/tree/netlify) branch
+- run `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) branch
+
+the commit to ["netlify"](https://github.com/willjasen/wallace-thrasher/tree/netlify) is then pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
+the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then used by GitHub Pages
 
 ### How to Contribute
 
