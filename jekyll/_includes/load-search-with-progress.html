@@ -1,6 +1,6 @@
 {% include load-search.html %}
 
-<div id="status"><img src="/assets/img/loading.gif" id="statusImage" width="25" height="25" /> Data is loading...
+<div id="status"><img src="{{ site.baseurl }}/assets/img/loading.gif" id="statusImage" width="25" height="25" /> Data is loading...
     <script>
       var intervalId = setInterval(function() {
         if (dataLoaded) {
