@@ -2,6 +2,12 @@ import sys
 import json
 from datetime import datetime, timedelta
 
+### Parameter #1 - Index to insert as
+### Parameter #2 - Speaker
+### Parameter #3 - Time offset
+
+file_to_edit = "/Users/willjasen/Application Data/GitHub/wallace-thrasher/jekyll/assets/json/alive-in-25/drug-dumpling.json"
+
 # Replace hard-coded parameters with command-line arguments if provided
 if len(sys.argv) > 1:
     index_to_insert_as = int(sys.argv[1])
@@ -26,7 +32,7 @@ def format_time(dt):
     return dt.strftime("%H:%M:%S,%f")[:-3]
 
 # Load the JSON file
-with open("/Users/willjasen/Application Data/GitHub/wallace-thrasher/jekyll/assets/json/alive-in-25/drug-dumpling.json", "r") as f:
+with open(file_to_edit, "r") as f:
     data = json.load(f)
 
 # Create your new object (adjust values as needed)
@@ -67,7 +73,7 @@ for i in range(insert_at + 2, len(data)):
     data[i]["Index"] += 1
 
 # Save the updated JSON back to the file (or a new file)
-with open("/Users/willjasen/Application Data/GitHub/wallace-thrasher/jekyll/assets/json/alive-in-25/drug-dumpling.json", "w") as f:
+with open(file_to_edit, "w") as f:
     json.dump(data, f, indent=2)
 
 print("Indexes updated successfully!")
