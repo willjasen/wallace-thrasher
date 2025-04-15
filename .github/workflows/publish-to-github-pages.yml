@@ -31,11 +31,11 @@ jobs:
           gem install bundler
           bundle install
 
-      # Build the Jekyll site.
+      # Build the Jekyll site with the baseurl set to 'wallace-thrasher'.
       - name: Build site
         run: |
           cd jekyll
-          bundle exec jekyll build
+          bundle exec jekyll build --baseurl "/wallace-thrasher"
 
       # Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
