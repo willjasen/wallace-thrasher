@@ -21,7 +21,7 @@ its basic feature is that albums and tracks have pages with the track pages cont
 
 some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
 
-there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however the data is not indexed in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
+there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
 ### Components
 
@@ -101,6 +101,7 @@ the keys of `USB_Directory` and `USB_Filename` refer to the respective directory
 to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
 
 to build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
+
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
 
 when deploying to production, `JEKYLL_ENV` must be changed to `production`. the development environment tends to display information within data.json more so than the production environment.
