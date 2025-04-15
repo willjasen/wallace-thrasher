@@ -35,7 +35,7 @@ jobs:
       - name: Build site for GitHub Pages
         run: |
           cd jekyll
-          JEKYLL_ENV=production bundle exec jekyll build --baseurl "/wallace-thrasher"
+          JEKYLL_ENV=development bundle exec jekyll build --baseurl "/wallace-thrasher"
 
       # Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
