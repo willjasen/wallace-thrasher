@@ -27,6 +27,7 @@ jobs:
       # Install Jekyll and Bundler.
       - name: Install dependencies
         run: |
+          cd jekyll
           gem install bundler
           bundle install
 
