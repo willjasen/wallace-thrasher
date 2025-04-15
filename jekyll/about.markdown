@@ -124,7 +124,7 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
 
-the deployment process is that commits to the main branch trigger a github action that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the "gh-pages" branch of the repository. the commit to "gh-pages" is then pulled by netlify to redeploy the its copy of the site.
+the deployment process is that commits to the main branch trigger a github action that runs `jekyll build` to generate the site's contents (usually stored within "/jekyll/_site") to the "gh-pages" branch of the repository. the commit to "gh-pages" is then pulled by netlify to redeploy its copy of the site.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher-rendered-main/deploys) -- this website is deployed to Netlify
 
