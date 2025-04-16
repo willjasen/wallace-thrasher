@@ -2,35 +2,35 @@
 layout: page
 title: Track Review
 permalink: /track-review/
-published: false
+published: true
 ---
 
 {% include variables.liquid %}
 
-<h1 style="text-align: center;">Tracks Needing Review</h1>
+<h5 style="text-align: center;">Tracks that are shown in <span style='color: green;'>green</span> have been reviewed for its speaker and subtitles content!</h5>
+<h5 style="text-align: center; margin: -20px;">Tracks that are shown in <span style='color: yellow;'>yellow</span> still need to be reviewed.</h5>
+<hr/>
 
 {% assign sorted_albums = site.data.albums.Albums %}
 {% for album in sorted_albums %}
 
   <ul style="list-style-type: none; padding: 0;">
-
-    <h3> {{ album.Album }} </h3>
-
+    <h3> {{ album.Album }} ({{ album.Year }})</h3>
   </ul>
 
+  <ul style="padding: 0px;">
   {% for track in album.Tracks %}
-
-  <ul style="padding: 0;">
-  
-      <li style="margin: 20px 0;">
-        Track {{ track.Track_Number }}: {{ track.Track_Title }}
-        <!-- <p><strong>Speakers adjusted:</strong> {{ track.Speakers_Adjusted }}</p> -->
-        <!-- <p><strong>Subtitles adjusted:</strong> {{ track.Subtitles_Adjusted }}</p> -->
-      </li>
-
-  </ul>
-
+      {% if track.Speakers_Adjusted != true or track.Subtitles_Adjusted != true %}
+          <li style="margin: 0px; color: yellow;">
+            Track {{ track.Track_Number }}: <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+          </li>
+      {% else %}
+          <li style="margin: 0px; color: green;">
+            Track {{ track.Track_Number }}: <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+          </li>
+      {% endif %}
   {% endfor %}
+  </ul>
 {% endfor %}
 
 {% if track_needs_review.size == 0 %}
