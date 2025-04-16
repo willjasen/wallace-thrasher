@@ -131,9 +131,15 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 ### Technical Details
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- this website is deployed to Netlify
+here are various badges related to this project's code and its deployments
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- this website last committed to GitHub
+[![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
+
+[![Publish for Netlify](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-for-netlify.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-for-netlify.yml) -- GitHub Action to ready the project for Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- deployment status to Netlify
+
+[![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- when last committed to GitHub
 
 ![GitHub code size](https://img.shields.io/github/languages/code-size/willjasen/wallace-thrasher) -- deployed source code size
 

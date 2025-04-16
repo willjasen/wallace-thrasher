@@ -1,8 +1,6 @@
 # wallace-thrasher
 codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
-codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
-
 
 ### Overview
 
