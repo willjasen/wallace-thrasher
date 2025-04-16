@@ -44,3 +44,8 @@ jobs:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
           publish_branch: netlify
+
+      # Send a webhook upon completion.
+      - name: Send webhook notification
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"status": "success"}' ${{ secrets.WEBHOOK_URL }}
