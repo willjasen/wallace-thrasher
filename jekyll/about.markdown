@@ -139,4 +139,4 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
 
-this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }} ({{ site.time | date: '%Y-%m-%d %H:%M:%S UTC' }})
+this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }}
