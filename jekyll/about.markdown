@@ -11,7 +11,7 @@ codename for a website project involving the works of [longmont potion castle](h
 
 this website allows for searching through subtitles and speakers within the longmont potion castle discography.
 
-this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery).
+this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery) and via [GitHub Pages](https://willjasen.github.io/wallace-thrasher/)
 
 ### Features
 
