@@ -2,7 +2,7 @@
 layout: page
 title: Track Review
 permalink: /track-review/
-published: false
+published: true
 ---
 
 {% include variables.liquid %}
@@ -13,24 +13,18 @@ published: false
 {% for album in sorted_albums %}
 
   <ul style="list-style-type: none; padding: 0;">
-
     <h3> {{ album.Album }} </h3>
-
   </ul>
 
+  <ul style="padding: 0px;">
   {% for track in album.Tracks %}
-
-  <ul style="padding: 0;">
-  
-      <li style="margin: 20px 0;">
-        Track {{ track.Track_Number }}: {{ track.Track_Title }}
-        <!-- <p><strong>Speakers adjusted:</strong> {{ track.Speakers_Adjusted }}</p> -->
-        <!-- <p><strong>Subtitles adjusted:</strong> {{ track.Subtitles_Adjusted }}</p> -->
-      </li>
-
-  </ul>
-
+      {% if track_speakers_detail != true or track_subtitles_detail != true %}
+          <li style="margin: 0px;">
+            Track {{ track.Track_Number }}: <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+          </li>
+      {% endif %}
   {% endfor %}
+  </ul>
 {% endfor %}
 
 {% if track_needs_review.size == 0 %}
