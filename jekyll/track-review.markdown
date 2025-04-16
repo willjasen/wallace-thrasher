@@ -11,7 +11,7 @@ published: true
 <h5 style="text-align: center; margin: -20px;">Tracks that are shown in <span style='color: yellow;'>yellow</span> still need to be reviewed.</h5>
 <hr/>
 
-{% assign sorted_albums = site.data.albums.Albums %}
+{% assign sorted_albums = site.data.albums.Albums | sort: "Year" %}
 {% for album in sorted_albums %}
 
   <ul style="list-style-type: none; padding: 0;">
