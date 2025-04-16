@@ -48,4 +48,4 @@ jobs:
       # Send a webhook upon completion.
       - name: Send webhook notification
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published to the ['netlify'](https://github.com/willjasen/wallace-thrasher/tree/netlify) branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published to the ['netlify'](https://github.com/willjasen/wallace-thrasher/tree/netlify) branch successfully!", "embeds": []}' ${{ secrets.WEBHOOK_URL }}
