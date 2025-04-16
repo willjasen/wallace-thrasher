@@ -24,9 +24,9 @@ async function fetchData(path) {
 */
 async function loadData() {
 
+    let dataStructure = [];
     var loadIndividualTrackJSON = '{{ site.data.loadIndividualTrackJSON }}';
     var jekyll_env = '{{ jekyll.environment }}';
-    let dataStructure = [];
     
     if (loadIndividualTrackJSON === true) {
         console.log("Loading data from individual JSON files...");
@@ -132,26 +132,25 @@ async function main(callback) {
         const idxText = indexOnField('Text');
         const idxSpeaker = indexOnField('Speaker');
 
-        
 
-        // Get number of times Alex Trebek shows up
-        const resultsForAlexTrebek = idxSpeaker.search("Alex");
-        let tracksWithAlexTrebek = new Set();
-        resultsForAlexTrebek.forEach(function (resultForAlex) {
-            const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
-                //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
+        // Count the number of times Alex Trebek show up within a track
+        function getNumberOfTracksThatAlexTrebekIsIn() {
+            const resultsForAlexTrebek = idxSpeaker.search("Alex");
+            let tracksWithAlexTrebek = new Set();
+            resultsForAlexTrebek.forEach(function (resultForAlex) {
+                const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
                 const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
                 
                 // Add to Set only if the combination isn't already added
                 if (!tracksWithAlexTrebek.has(key)) {
                     tracksWithAlexTrebek.add(key);
                 }
-        });
-        const countOfAlexTrebek = tracksWithAlexTrebek.size;
-        console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
-
-
-
+            });
+            const countOfAlexTrebek = tracksWithAlexTrebek.size;
+            console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
+            return countOfAlexTrebek;
+        }
+        
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
             fileMap = {};
@@ -309,7 +308,7 @@ async function main(callback) {
         }
 
         function onDomContentLoaded() {
-            console.log("Alex Trebek is found " + countOfAlexTrebek + " times!");
+            const countOfAlexTrebek = getNumberOfTracksThatAlexTrebekIsIn();
             const alexSpan = document.querySelector('#alex-count-span');
             if (alexSpan) {
                 alexSpan.textContent = countOfAlexTrebek;
