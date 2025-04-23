@@ -34,13 +34,16 @@
     }
   </style>
   
-  <div style="display: flex; align-items: center;">
-    <label for="fileInput" class="tooltip" style="margin-right: 10px; color: greenyellow;">
-      Select LPC USB ->
-      <span class="tooltiptext">Select the top-level directory for the collection, usually named "LPC USB"</span>
-    </label>
-    <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
-    <audio id="audioPlayer" controls></audio>
+  <div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;">
+    <div style="display: flex; align-items: center;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;">
+        <label for="fileInput" class="tooltip" style="margin-bottom: 10px; color: greenyellow;">
+          ⬇️ Select LPC USB ⬇️
+          <span class="tooltiptext">Select the top-level directory for the collection, usually named "LPC USB"</span>
+        </label>
+        <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory multiple>
+      </div>
+      <audio id="audioPlayer" controls></audio>
+    </div>
   </div>
   <br>
-  
