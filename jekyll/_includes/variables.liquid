@@ -7,6 +7,7 @@
   {% assign all_tracks_on_album = album.Tracks | sort: "Track_Number" %}
   {% assign matched_album_year = album.Year %}
   {% assign matched_album_usb_dir = album.USB_Directory %}
+  {% assign matched_album_slug = album.Album_Slug %}
 {% endfor %}
 
 {% assign matched_track = all_tracks_on_album | where_exp: "item", "item.Track_Title == page.track_title" %}
