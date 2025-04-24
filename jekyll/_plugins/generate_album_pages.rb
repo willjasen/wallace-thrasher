@@ -1,6 +1,6 @@
 require_relative 'update_yml'
 module Jekyll
-    class AlbumsGenerator < Generator
+    class AlbumPagesGenerator < Generator
       safe true
   
       def generate(site)
@@ -9,7 +9,7 @@ module Jekyll
         albums.each do |album_data|
             site.collections['albums'].docs << create_album_doc(site, album_data)
         end
-        puts "generate_albums.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
+        puts "generate_album_pages.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
       end
   
       private
@@ -25,4 +25,3 @@ module Jekyll
       end      
     end
   end
-  
