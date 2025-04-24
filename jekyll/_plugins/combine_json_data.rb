@@ -6,7 +6,7 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
   module Jekyll
     class CombineData < Generator
       safe true
-      priority :high
+      priority :normal
 
       def generate(site)
         start_time = Time.now  # added timer start
