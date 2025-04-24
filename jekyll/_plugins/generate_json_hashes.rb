@@ -49,6 +49,7 @@ module Jekyll
             next if file.end_with?('data.json') # Exclude files ending with 'data.json'
 
             file_content = File.read(file)
+            file_content = sanitize_json(file_content) # Sanitize JSON content
             file_hash = Digest::SHA256.hexdigest(file_content)
             relative_path = file.sub(json_dir + '/', '') # Include album folder in the path in the .sha256 file
             # puts "Processing file: #{relative_path}, Computed hash: #{file_hash}, Previous hash: #{stored_hashes[relative_path]}" # Log file details
@@ -61,10 +62,9 @@ module Jekyll
 
 
         if updated_files.empty?
-            puts "\e[32mNo track hashes have changed.\e[0m"
+            puts "\e[32mNo track JSON file hashes have changed.\e[0m"
 
         elsif File.exist?(data_file_path)
-            
             # Update the .sha256 file with newly found track hashes
             updated_hashes = File.readlines(hash_file_path).map do |line|
                 old_hash, file = line.strip.split('  ', 2)
@@ -77,34 +77,46 @@ module Jekyll
                     line.strip
                 end
             end
-
             File.open(hash_file_path, 'w') do |hash_file|
                 hash_file.puts(updated_hashes)
+        end
+
+        data_json = JSON.parse(sanitize_json(File.read(data_file_path)))
+
+        puts "\e[33mThe following files have changed:\e[0m"
+        updated_files.each do |updated_file_path|
+            puts "\e[33m#{updated_file_path}\e[0m"
+            data_json['Albums'].each do |album|
+                # puts "\e[33mChecking album: #{album['Album']}\e[0m"
+                album['Tracks'].each do |track|
+                    # puts "\e[33mChecking track: #{track['Track_Title']}\e[0m"
+                    # puts updated_file
+                    updated_file = updated_file_path.split('/', 2).last
+                    # puts updated_file
+                    if track['Track_JSONPath'].split('/', 2).last == updated_file
+                        puts "\e[33mUpdating Last_Modified for track: #{track['Track_Title']}\e[0m"
+                        track['Last_Modified'] = Time.now.to_i
+                    end
+                end
             end
+        end
 
-            # data = JSON.parse(File.read(data_file_path))
-
-            # puts "\e[33mThe following files have changed:\e[0m"
-            # updated_files.each do |updated_file|
-            # puts "\e[33m#{updated_file}\e[0m"
-            # data.each do |track|
-            #     if track['File'] == updated_file
-            #     puts "Updating Last_Modified for track: #{track['File']}"
-            #     track['Last_Modified'] = Time.now.to_i
-            #     end
-            # end
-            # end
-
-            # File.open(data_file_path, 'w') do |data_file|
-            # data_file.write(JSON.pretty_generate(data))
-            # end
-            # puts "Updated Last_Modified for changed tracks in #{data_file_path}"
+        File.open(data_file_path, 'w') do |data_file|
+            data_file.write(JSON.pretty_generate(data_json))
+        end
+        # puts "Updated Last_Modified for changed tracks in #{data_file_path}"
 
         else
             puts "\e[31mWarning: data.json file not found.\e[0m"
         end
 
         puts "generate_json_hashes.rb plugin took #{Time.now - start_time} seconds."
+    end
+
+    private
+
+    def sanitize_json(json_content)
+        json_content.encode('UTF-8', invalid: :replace, undef: :replace, replace: '')
     end
   end
 end
