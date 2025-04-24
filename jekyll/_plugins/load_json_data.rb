@@ -19,7 +19,7 @@ module Jekyll
           site.data[data_key] = json_data
         end
         data_file_path = File.join(json_dir, 'data.json')
-        puts "Loading data from #{data_file_path}"
+        puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
         if File.exist?(data_file_path)
           file_content = File.read(data_file_path)
@@ -35,7 +35,7 @@ module Jekyll
       else
         site.data['render_quickly'] = false
         data_file_path = File.join(json_dir, 'combined_data.json')
-        puts "Loading data from #{data_file_path}"
+        puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
         if File.exist?(data_file_path)
           file_content = File.read(data_file_path)
