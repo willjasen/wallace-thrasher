@@ -20,22 +20,23 @@ module Jekyll
             stored_hashes[file] = hash
             end
         else
-            puts "\e[33mHash file not found. Generating a new one.\e[0m"
+            puts "\e[33mHash file not found. Generating a new one...\e[0m"
             Dir.glob(File.join(json_dir, '**/*.json')) do |file|
-            next if File.basename(file) == 'tracks.sha256' # Skip the hash file itself
-            next if file.end_with?('data.json') # Exclude files ending with 'data.json'
+                next if file.end_with?('data.json') # Exclude files 'data.json' and 'combined_data.json'
 
-            file_content = File.read(file)
-            file_hash = Digest::SHA256.hexdigest(file_content)
-            relative_path = file.sub(json_dir + '/', '') # Include album folder in the path in the .sha256 file
-            stored_hashes[relative_path] = file_hash
+                file_content = File.read(file)
+                file_hash = Digest::SHA256.hexdigest(file_content)
+                relative_path = file.sub(json_dir + '/', '') # Include album folder in the path in the .sha256 file
+                stored_hashes[relative_path] = file_hash
             end
 
+            # Write the current hashes to a newly created .sha256 file
             File.open(hash_file_path, 'w') do |hash_file|
-            stored_hashes.each do |file, hash|
-                hash_file.puts("#{hash}  #{file}")
+                stored_hashes.each do |file, hash|
+                    hash_file.puts("#{hash}  #{file}")
+                end
             end
-            end
+            puts "\e[32mNew hash file created at '#{hash_file_path}'\e[0m"
         end
 
     
