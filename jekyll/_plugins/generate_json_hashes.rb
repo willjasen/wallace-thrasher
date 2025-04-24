@@ -37,10 +37,11 @@ module Jekyll
                 end
             end
             puts "\e[32mNew hash file created at '#{hash_file_path}'\e[0m"
+            puts "generate_json_hashes.rb plugin took #{Time.now - start_time} seconds."
             return
         end
 
-    
+        # Read all of the current track JSON files and calculate their hashes
         current_hashes = []
         updated_files = []
         Dir.glob(File.join(json_dir, '**/*.json')) do |file|
