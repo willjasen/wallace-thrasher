@@ -49,7 +49,7 @@ module Jekyll
           puts "Warning: combined_data.json not found at #{data_file_path}"
         end
       end
-      puts "load_json_data.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
+      puts "\e[34mload_json_data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
     end
 
     private
