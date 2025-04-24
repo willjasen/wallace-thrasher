@@ -15,7 +15,7 @@ module Jekyll
         site.data['render_quickly'] = true
         Dir.glob(File.join(json_dir, '**/*.json')) do |file|
           data_key = File.basename(file, '.json')
-          json_data = JSON.parse(File.read(file))
+          json_data = parse_json_safely(File.read(file))
           site.data[data_key] = json_data
         end
         data_file_path = File.join(json_dir, 'data.json')
@@ -26,7 +26,7 @@ module Jekyll
           if file_content.strip.empty?
             puts "Warning: data.json is empty."
           else
-            data_json = JSON.parse(file_content)
+            data_json = parse_json_safely(file_content)
             site.data['albums'] = data_json
           end
         else
@@ -42,7 +42,7 @@ module Jekyll
           if file_content.strip.empty?
             puts "Warning: combined_data.json is empty."
           else
-            data_json = JSON.parse(file_content)
+            data_json = parse_json_safely(file_content)
             site.data['albums'] = data_json
           end
         else
@@ -50,6 +50,16 @@ module Jekyll
         end
       end
       puts "load_json_data.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
+    end
+
+    private
+
+    def parse_json_safely(json_string)
+      sanitized_string = json_string.encode('UTF-8', invalid: :replace, undef: :replace, replace: '')
+      JSON.parse(sanitized_string)
+    rescue JSON::ParserError => e
+      puts "Error parsing JSON: #{e.message}"
+      {}
     end
   end
 end
