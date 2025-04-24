@@ -37,7 +37,7 @@ module Jekyll
                 end
             end
             puts "\e[32mNew hash file created at '#{hash_file_path}'\e[0m"
-            puts "\e[34mcheck_track_json_hashes.rb plugin took #{Time.now - start_time} seconds.\e[0m"
+            # puts "\e[34mcheck_track_json_hashes.rb plugin took #{Time.now - start_time} seconds.\e[0m"
             return
         end
 
@@ -110,7 +110,7 @@ module Jekyll
             puts "\e[31mWarning: data.json file not found.\e[0m"
         end
 
-        puts "\e[34mcheck_track_json_hashes.rb plugin took #{Time.now - start_time} seconds.\e[0m"
+        # puts "\e[34mcheck_track_json_hashes.rb plugin took #{Time.now - start_time} seconds.\e[0m"
     end
 
     private

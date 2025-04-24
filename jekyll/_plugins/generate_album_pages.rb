@@ -10,7 +10,7 @@ module Jekyll
         albums.each do |album_data|
             site.collections['albums'].docs << create_album_doc(site, album_data)
         end
-        puts "\e[34mgenerate_album_pages.rb plugin took #{Time.now - start_time} seconds.\e[0m"
+        # puts "\e[34mgenerate_album_pages.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end
   
       private

@@ -12,7 +12,7 @@ module Jekyll
               site.collections['tracks'].docs << create_track_doc(site, album_data, track_data)
           end
         end
-        puts "\e[34mgenerate_track_pages.rb plugin took #{Time.now - start_time} seconds.\e[0m"
+        # puts "\e[34mgenerate_track_pages.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end
   
       private
