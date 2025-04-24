@@ -139,5 +139,3 @@ here are various badges related to this project's code and its deployments
 ![GitHub code size](https://img.shields.io/github/languages/code-size/willjasen/wallace-thrasher) -- deployed source code size
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
-
-this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }}
