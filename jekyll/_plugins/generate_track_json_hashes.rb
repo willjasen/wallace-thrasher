@@ -2,7 +2,7 @@ require 'digest'
 require 'json'
 
 module Jekyll
-  class GenerateJsonHashes < Generator
+  class GenerateTrackJsonHashes < Generator
     safe true
     priority :low
 
