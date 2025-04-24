@@ -34,6 +34,7 @@
     }
   </style>
   
+  <hr id="audioSectionDivider" style="margin: 20px 0;">
   <div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;">
     <div id="audioControlContainer" style="display: flex; align-items: center;">
       <div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;">
@@ -46,7 +47,7 @@
       <audio id="audioPlayer" controls></audio>
     </div>
   </div>
-  
+
   <script>
     // Mobile detection function
     function isMobileDevice() {
@@ -67,6 +68,12 @@
         const container = document.getElementById('audioControlContainer');
         if (container) {
           container.style.display = 'none';
+        }
+        
+        // Also hide the horizontal rule divider
+        const divider = document.getElementById('audioSectionDivider');
+        if (divider) {
+          divider.style.display = 'none';
         }
       }
     });
