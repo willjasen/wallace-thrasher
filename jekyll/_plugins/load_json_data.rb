@@ -1,10 +1,10 @@
 require 'json'
-require_relative 'combine-json-data'
+require_relative 'combine_json_data'
 
 module Jekyll
   class LoadJsonData < Generator
     safe true
-    priority :high
+    priority :normal
 
     def generate(site)
       start_time = Time.now  # added timer start
