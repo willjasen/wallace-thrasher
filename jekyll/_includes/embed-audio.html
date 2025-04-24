@@ -35,7 +35,7 @@
   </style>
   
   <div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;">
-    <div style="display: flex; align-items: center;">
+    <div id="audioControlContainer" style="display: flex; align-items: center;">
       <div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;">
         <label for="fileInput" class="tooltip" style="margin-bottom: 10px; color: greenyellow;">
           ⬇️ Select LPC USB ⬇️
@@ -46,4 +46,28 @@
       <audio id="audioPlayer" controls></audio>
     </div>
   </div>
+  <script>
+    // Mobile detection function
+    function isMobileDevice() {
+      return (window.innerWidth <= 768) || 
+             (navigator.userAgent.match(/Android/i) ||
+              navigator.userAgent.match(/webOS/i) ||
+              navigator.userAgent.match(/iPhone/i) ||
+              navigator.userAgent.match(/iPad/i) ||
+              navigator.userAgent.match(/iPod/i) ||
+              navigator.userAgent.match(/BlackBerry/i) ||
+              navigator.userAgent.match(/Windows Phone/i));
+    }
+    
+    // Execute when DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      if (isMobileDevice()) {
+        // Hide the audio control container on mobile devices
+        const container = document.getElementById('audioControlContainer');
+        if (container) {
+          container.style.display = 'none';
+        }
+      }
+    });
+  </script>
   <br>
