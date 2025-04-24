@@ -1,6 +1,6 @@
 require_relative 'update_yml'
 module Jekyll
-    class TracksGenerator < Generator
+    class TrackPagesGenerator < Generator
       safe true
   
       def generate(site)
@@ -11,7 +11,7 @@ module Jekyll
               site.collections['tracks'].docs << create_track_doc(site, album_data, track_data)
           end
         end
-        puts "generate_tracks.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
+        puts "generate_track_pages.rb plugin took #{Time.now - start_time} seconds."  # added runtime output
       end
   
       private
