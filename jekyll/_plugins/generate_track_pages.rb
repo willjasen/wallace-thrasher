@@ -5,7 +5,7 @@ module Jekyll
       priority :low
   
       def generate(site)
-        start_time = Time.now  # added timer start
+        start_time = Time.now
         albums = site.data['tracks']
         albums.each do |album_data|
           album_data['tracks'].each do |track_data|
