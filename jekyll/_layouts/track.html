@@ -66,6 +66,11 @@ layout: page
     Establishments: {{ track_establishments_detail | join: ", " }}
   </h5>
 {% endif %}
+{% if track_deliveries_detail %}
+  <h5 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
+    Deliveries: {{ track_deliveries_detail | join: ", " }}
+  </h5>
+{% endif %}
 
 
 <hr style="margin: 20px 0;">
