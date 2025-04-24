@@ -18,9 +18,16 @@ module Jekyll
       private
   
       def create_track_doc(site, album_data, track_data)
-        slug = Jekyll::Utils.slugify(track_data['track_title'])
-        filename = "#{slug}.md"
-        path = File.join(site.source, '_tracks', filename)
+        track_slug = Jekyll::Utils.slugify(track_data['track_title'])
+        album_slug = Jekyll::Utils.slugify(album_data['album'])
+        
+        # Create album subfolder path
+        album_dir = File.join('_tracks', album_slug)
+        # Create full directory path if it doesn't exist
+        FileUtils.mkdir_p(File.join(site.source, album_dir)) unless Dir.exist?(File.join(site.source, album_dir))
+        
+        filename = "#{track_slug}.md"
+        path = File.join(site.source, album_dir, filename)
         doc = Document.new(path, { :site => site, :collection => site.collections['tracks'] })
         doc.data['album_title'] = album_data['album']
         doc.data['album_year'] = album_data['year']
