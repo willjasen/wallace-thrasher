@@ -18,7 +18,7 @@ module Jekyll
           json_data = parse_json_safely(File.read(file))
           site.data[data_key] = json_data
         end
-        data_file_path = File.join(json_dir, 'data.json')
+        data_file_path = File.join(json_dir, 'combined_data.json')
         puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
         if File.exist?(data_file_path)
