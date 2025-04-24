@@ -2,9 +2,9 @@ require 'digest'
 require 'json'
 
 module Jekyll
-  class GenerateTrackJsonHashes < Generator
+  class CheckTrackJsonHashes < Generator
     safe true
-    priority :low
+    priority :highest
 
     def generate(site)
         start_time = Time.now
