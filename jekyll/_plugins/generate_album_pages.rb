@@ -2,6 +2,7 @@ require_relative 'update_yml'
 module Jekyll
     class AlbumPagesGenerator < Generator
       safe true
+      priority :low
   
       def generate(site)
         start_time = Time.now  # added timer start

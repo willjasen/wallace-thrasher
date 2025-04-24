@@ -2,6 +2,7 @@ require_relative 'update_yml'
 module Jekyll
     class TrackPagesGenerator < Generator
       safe true
+      priority :low
   
       def generate(site)
         start_time = Time.now  # added timer start
