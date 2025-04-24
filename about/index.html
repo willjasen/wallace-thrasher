@@ -61,37 +61,37 @@
   <div class="post-content">
     <p>codename for a website project involving the works of <a href="http://longmontpotioncastle.com/">longmont potion castle</a> - you can call me stretchie</p>
 
-<h3 id="overview">Overview</h3>
+<h3 id="-overview-">⌗ Overview ⌗</h3>
 
 <p>this website allows for searching through subtitles and speakers within the longmont potion castle discography.</p>
 
 <p>this website can currently be viewed at <a href="https://stretchie.delivery">stretchie.delivery</a> and via <a href="https://willjasen.github.io/wallace-thrasher/">GitHub Pages</a></p>
 
-<h3 id="features">Features</h3>
+<h3 id="-features-">🎮 Features 🎮</h3>
 
 <p>its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.</p>
 
-<h3 id="backstory">Backstory</h3>
+<h3 id="-backstory-">📘 Backstory 📘</h3>
 
 <p>some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?</p>
 
 <p>there are great resources like <a href="https://talkinwhipapedia.fandom.com/">talkin’ whipapedia</a> out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn’t structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i’ve been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.</p>
 
-<h3 id="components">Components</h3>
+<h3 id="️-components-️">⚙️ Components ⚙️</h3>
 
 <p>this website is built with the static site generator <a href="https://jekyllrb.com">jekyll</a>. whisper-webui is utilized to analyze the audio tracks and have it output subtitles (what is spoken) that include speaker diarization (determining who says what), which are then transformed into json files. each json file containing a track’s speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, <code class="language-plaintext highlighter-rouge">jekyll build</code> recreates the site’s pages and combines all JSON data into one single JSON data file (<code class="language-plaintext highlighter-rouge">combined_data.json</code>).</p>
 
 <p>because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser.</p>
 
-<h3 id="converting-tracks-to-subtitles">Converting Tracks to Subtitles</h3>
+<h3 id="️-converting-tracks-to-subtitles-️">↪️ Converting Tracks to Subtitles ↪️</h3>
 
 <p>i am using <a href="https://github.com/jhj0517/Whisper-WebUI">whisper-webui</a> (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization (who says what) to output subtitle files (.srt)</p>
 
-<h3 id="converting-subtitles-to-json">Converting Subtitles to JSON</h3>
+<h3 id="️-converting-subtitles-to-json-️">↘️ Converting Subtitles to JSON ↘️</h3>
 
 <p>i am using <a href="https://github.com/willjasen/srt-to-json">this python tool</a> to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs</p>
 
-<h3 id="json-structure-for-albums-and-tracks">JSON Structure for Albums and Tracks</h3>
+<h3 id="-json-structure-for-albums-and-tracks-">💽 JSON Structure for Albums and Tracks 💽</h3>
 
 <p>the main JSON data file resides at <code class="language-plaintext highlighter-rouge">/assets/data.json</code></p>
 
@@ -121,7 +121,7 @@
 </code></pre></div></div>
 <p>it is possible that some keys are not present in all tracks, but the necessary ones of <code class="language-plaintext highlighter-rouge">Track_Title</code>, <code class="language-plaintext highlighter-rouge">Track_Number</code>, <code class="language-plaintext highlighter-rouge">Track_JSONPath</code>, and <code class="language-plaintext highlighter-rouge">Track_Slug</code> are listed for each track.</p>
 
-<h3 id="json-structure-for-track-subtitles">JSON Structure for Track Subtitles</h3>
+<h3 id="-json-structure-for-track-subtitles-">💽 JSON Structure for Track Subtitles 💽</h3>
 
 <p>the JSON data for each track resides within a folder named as the respective album title’s slug with the <code class="language-plaintext highlighter-rouge">/assets/json</code> folder</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
@@ -142,13 +142,13 @@
 ]
 </code></pre></div></div>
 
-<h3 id="under-the-hood">Under The Hood</h3>
+<h3 id="-under-the-hood-">🚘 Under The Hood 🚘</h3>
 
 <p>when the search pages are accessed, the single combined JSON data (<code class="language-plaintext highlighter-rouge">/assets/json/combined_json.data</code>) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for two categories - speakers and subtitles.</p>
 
 <p>the keys of <code class="language-plaintext highlighter-rouge">USB_Directory</code> and <code class="language-plaintext highlighter-rouge">USB_Filename</code> refer to the respective directory and filename of the mp3 that resides on a “LPC Ultimate Session Bundle” usb drive that are occasionally available for sale via <a href="http://longmontpotioncastle.com/">lpc’s website</a>. these two pieces of data are used to play audio, if the files from the usb collection are uploaded.</p>
 
-<h3 id="building">Building</h3>
+<h3 id="️-building-️">🛠️ Building 🛠️</h3>
 
 <p>to install the project’s dependencies, ensure Ruby is installed, then install its necessary gems by running: <code class="language-plaintext highlighter-rouge">bundle install; bundle update;</code></p>
 
@@ -158,7 +158,7 @@
 
 <p>when deploying to production, <code class="language-plaintext highlighter-rouge">JEKYLL_ENV</code> must be changed to <code class="language-plaintext highlighter-rouge">production</code>. the development environment tends to display information within data.json more so than the production environment.</p>
 
-<h3 id="deployment">Deployment</h3>
+<h3 id="-deployment-">📤 Deployment 📤</h3>
 
 <p>commits to the main branch trigger two <a href="https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows">github actions</a>:</p>
 <ul>
@@ -169,21 +169,21 @@
 <p>the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/netlify">“netlify”</a> is then pulled by <a href="https://app.netlify.com/sites/wallace-thrasher/deploys">netlify</a> to redeploy its copy of the site.
 the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> is then used by github pages</p>
 
-<h3 id="how-to-contribute">How to Contribute</h3>
+<h3 id="️-how-to-contribute-️">✍️ How to Contribute ✍️</h3>
 
 <p>if you’ve read this far and have an interest in contributing to this project - it is welcomed and appreciated!</p>
 
 <p>please refer to <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
 
-<h3 id="to-dos">To-Do’s</h3>
+<h3 id="️-to-dos-️">☑️ To-Do’s ☑️</h3>
 
 <p>the to-do list has been moved to <a href="https://github.com/willjasen/wallace-thrasher/blob/main/TODO.md">TODO.md</a></p>
 
-<h3 id="licensing">Licensing</h3>
+<h3 id="-licensing-">🪪 Licensing 🪪</h3>
 
 <p>this project is licensed under the <a href="https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt">GPLv3</a>, and this license applies to all past versions and branches of the project.</p>
 
-<h3 id="technical-details">Technical Details</h3>
+<h3 id="-technical-details-">🤓 Technical Details 🤓</h3>
 
 <p>here are various badges related to this project’s code and its deployments</p>
 
@@ -199,7 +199,7 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
 
 <p><img src="https://img.shields.io/github/repo-size/willjasen/wallace-thrasher" alt="GitHub repo size" /> – source code repository size</p>
 
-<p>this website was last built on April 24, 2025 at 05:01 AM EDT</p>
+<p>this website was last built on April 24, 2025 at 06:11 PM EDT</p>
 
   </div>
 
@@ -221,9 +221,10 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
       </div> -->
 
       <div class="footer-col footer-col-1">
-        <a href="https://github.com/willjasen/wallace-thrasher/" rel="noopener noreferrer" target="_blank">
+        <a href="https://github.com/willjasen/" rel="noopener noreferrer" target="_blank">
           <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='100' height='100' viewBox='0 0 50 50'%3E%3Cpath d='M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z'%3E%3C/path%3E%3C/svg%3E" alt="GitHub logo" width="25" height="25"> willjasen
         </a>
+        <div id="latest-tag">Latest version: <a id="tag-link" href="#" target="_blank" rel="noopener noreferrer"><span id="tag-display">loading...</span></a></div>
       </div>
 
       <!-- <div class="footer-col footer-col-3">
@@ -237,7 +238,7 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
       
         <div class="footer-col footer-col-3">
           <p style="color: red;">** this is the dev version **</p>
-          <p style="color: greenyellow;">this website was last built on April 24, 2025 at 05:01 AM EDT</p>
+          <p style="color: greenyellow;">this website was last built on April 24, 2025 at 06:11 PM EDT</p>
           <a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml">
             <img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages">
           </a>
@@ -249,6 +250,26 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
 
   </div>
   
+  <script>
+    // Fetch latest GitHub tag
+    fetch('https://api.github.com/repos/willjasen/wallace-thrasher/tags')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          // Get the first (latest) tag
+          const latestTag = data[0].name;
+          const tagLink = document.getElementById('tag-link');
+          tagLink.href = `https://github.com/willjasen/wallace-thrasher/releases/tag/${latestTag}`;
+          document.getElementById('tag-display').textContent = latestTag;
+        } else {
+          document.getElementById('tag-display').textContent = 'No tags found';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching tags:', error);
+        document.getElementById('tag-display').textContent = 'Error loading';
+      });
+  </script>
 </footer>
 
 
