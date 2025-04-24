@@ -37,6 +37,7 @@ module Jekyll
                 end
             end
             puts "\e[32mNew hash file created at '#{hash_file_path}'\e[0m"
+            return
         end
 
     
