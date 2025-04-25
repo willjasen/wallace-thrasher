@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // If the screen is mobile-sized, ensure the menu starts collapsed
   function checkScreenSize() {
-    if (window.innerWidth <= 800 && navTrigger) {
+    if (window.innerWidth <= 600 && navTrigger) {
       navTrigger.checked = false;
     }
   }
