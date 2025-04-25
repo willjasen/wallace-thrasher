@@ -3,12 +3,11 @@
 # Name of your GitHub Actions workflow.
 name: Publish for Netlify
 
-# Specifies to run this workflow whenever a push is made (commits are
-# added) to the branch named `main`.
+# Specifies to run this workflow whenever the tag v1.2.0 is pushed
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v1.2.0'
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
@@ -16,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the source from the `main` branch.
+      # Checkout the source with the specific tag.
       - uses: actions/checkout@v3
 
       # Set up Ruby for Jekyll.
