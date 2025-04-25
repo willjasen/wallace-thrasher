@@ -1,7 +1,7 @@
 // search.js
 const BASE_URL = '/wallace-thrasher';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
-const loadIndividualTrackJSON = 'true';
+const loadIndividualTrackJSON = 'true' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
 
 /*
@@ -26,7 +26,7 @@ async function loadData() {
     
     var jekyll_env = 'development';
     
-    if (loadIndividualTrackJSON === true) {
+    if (loadIndividualTrackJSON) {
         console.log("--Loading data from data.json and the individual track JSON files--");
         const data = await fetchData(BASE_URL+"/assets/json/data.json");
 
