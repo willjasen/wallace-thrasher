@@ -5,7 +5,7 @@
 // search.js
 const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
-const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}';
+const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
 
 /*
@@ -30,7 +30,7 @@ async function loadData() {
     
     var jekyll_env = '{{ jekyll.environment }}';
     
-    if (loadIndividualTrackJSON === true) {
+    if (loadIndividualTrackJSON) {
         console.log("--Loading data from data.json and the individual track JSON files--");
         const data = await fetchData(BASE_URL+"/assets/json/data.json");
 
