@@ -66,7 +66,7 @@ async function loadData() {
     } else {
         console.log("Using combined_data.json");
         console.log(loadIndividualTrackJSON);
-        const data = await fetchData(/assets/json/combined_data.json);
+        const data = await fetchData('/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
