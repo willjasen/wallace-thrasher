@@ -40,7 +40,7 @@ async function loadData() {
             for(const album of albums) {
                 console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
-                    const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
+                    const jsonPath = BASE_URL+"/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
                     trackSubtitlesData = await fetchData(jsonPath);
                     for (const subtitle of trackSubtitlesData) {
                         dataStructure.push({
