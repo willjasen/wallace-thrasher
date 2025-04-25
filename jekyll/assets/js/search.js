@@ -25,7 +25,7 @@ async function fetchData(path) {
 async function loadData() {
 
     let dataStructure = [];
-    var loadIndividualTrackJSON = '{{ site.data.loadIndividualTrackJSON }}';
+    var loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}';
     var jekyll_env = '{{ jekyll.environment }}';
     
     if (loadIndividualTrackJSON === true) {
