@@ -4,9 +4,9 @@
 
 // search.js
 const BASE_URL = '{{ site.baseurl }}';
-//console.log("BASE_URL: " + BASE_URL);
+console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}';
-//console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
+console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
 
 /*
     This function retrieves a JSON document from a given path
