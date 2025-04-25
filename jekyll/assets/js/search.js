@@ -1,11 +1,13 @@
-/*
 ---
-layout: null
+
 ---
-*/
 
 // search.js
 const BASE_URL = '{{ site.baseurl }}';
+//console.log("BASE_URL: " + BASE_URL);
+const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}';
+//console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
+
 /*
     This function retrieves a JSON document from a given path
 */
@@ -25,11 +27,11 @@ async function fetchData(path) {
 async function loadData() {
 
     let dataStructure = [];
-    var loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}';
+    
     var jekyll_env = '{{ jekyll.environment }}';
     
     if (loadIndividualTrackJSON === true) {
-        console.log("Loading data from individual JSON files...");
+        console.log("--Loading data from data.json and the individual track JSON files--");
         const data = await fetchData('/assets/json/data.json');
 
         // Iterate through each album, track, and subtitle
@@ -64,8 +66,7 @@ async function loadData() {
         }
 
     } else {
-        console.log("Using combined_data.json");
-        console.log(loadIndividualTrackJSON);
+        console.log("--Loading data from combined_data.json--");
         const data = await fetchData('/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
