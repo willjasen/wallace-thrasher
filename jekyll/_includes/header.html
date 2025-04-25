@@ -6,6 +6,51 @@
   {% endif %}
 
   <!-- <script src="/assets/js/theme-toggle.js"></script> -->
+  <script src="/assets/js/nav-menu.js"></script>
+  <style>
+    @media screen and (max-width: 600px) {
+      .site-nav {
+        position: absolute;
+        top: 9px;
+        right: 15px;
+        border-radius: 5px;
+        text-align: right;
+        z-index: 1000;
+      }
+      
+      /* Light theme styles
+      body:not(.dark-theme) .site-nav {
+        background-color: white;
+        border: 1px solid #e8e8e8;
+      } */
+      
+      /* Dark theme styles
+      body.dark-theme .site-nav {
+        background-color: #333;
+        border: 1px solid #444;
+      } */
+      
+      .site-nav .menu-icon {
+        display: block !important;
+      }
+      
+      .site-nav .trigger {
+        clear: both;
+        display: none;
+      }
+      
+      .site-nav input:checked ~ .trigger {
+        display: block;
+        padding-bottom: 5px;
+      }
+      
+      .site-nav .page-link {
+        display: block;
+        padding: 0px 0px;
+        margin-left: 20px;
+      }
+    }
+  </style>
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
