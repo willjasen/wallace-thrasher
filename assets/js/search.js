@@ -1,11 +1,9 @@
-/*
----
-layout: null
----
-*/
-
 // search.js
-const BASE_URL = '{{ site.baseurl }}';
+const BASE_URL = '/wallace-thrasher';
+console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
+const loadIndividualTrackJSON = 'false';
+console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
+
 /*
     This function retrieves a JSON document from a given path
 */
@@ -25,13 +23,12 @@ async function fetchData(path) {
 async function loadData() {
 
     let dataStructure = [];
-    var loadIndividualTrackJSON = '{{ site.data.loadIndividualTrackJSON }}';
-    var jekyll_env = '{{ jekyll.environment }}';
-    var site_baseurl = '{{ site.baseurl }}';
+    
+    var jekyll_env = 'development';
     
     if (loadIndividualTrackJSON === true) {
-        console.log("Loading data from individual JSON files...");
-        const data = await fetchData(site_baseurl+'/assets/json/data.json');
+        console.log("--Loading data from data.json and the individual track JSON files--");
+        const data = await fetchData('/assets/json/data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -65,9 +62,8 @@ async function loadData() {
         }
 
     } else {
-        console.log("Using combined_data.json");
-        console.log(loadIndividualTrackJSON);
-        const data = await fetchData(site_baseurl+'/assets/json/combined_data.json');
+        console.log("--Loading data from combined_data.json--");
+        const data = await fetchData('/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -110,7 +106,7 @@ async function loadData() {
 */
 async function main(callback) {
     try {
-        var jekyll_env = '{{ jekyll.environment }}';
+        var jekyll_env = 'development';
         dataStructure = await loadData();
        
         // Function to index a search based on a field
@@ -197,7 +193,7 @@ async function main(callback) {
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
-                            <img src="${site_baseurl}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
+                            <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
@@ -291,7 +287,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 ${matchedDoc.Speaker} -- 
-                                <i><a href="${site_baseurl}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                 ${matchedDoc.Album}
                             `;
                             resultList.appendChild(albumAndTitleItem);
