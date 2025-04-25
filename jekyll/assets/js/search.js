@@ -196,7 +196,7 @@ async function main(callback) {
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
-                            <img src="/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
+                            <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
@@ -290,7 +290,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 ${matchedDoc.Speaker} -- 
-                                <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                 ${matchedDoc.Album}
                             `;
                             resultList.appendChild(albumAndTitleItem);

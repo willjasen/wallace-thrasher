@@ -5,14 +5,14 @@ module Jekyll
       priority :low
   
       def generate(site)
-        start_time = Time.now  # added timer start
+        start_time = Time.now
         albums = site.data['tracks']
         albums.each do |album_data|
           album_data['tracks'].each do |track_data|
               site.collections['tracks'].docs << create_track_doc(site, album_data, track_data)
           end
         end
-        puts "\e[34mgenerate_track_pages.rb plugin took #{Time.now - start_time} seconds.\e[0m"
+        # puts "\e[34mgenerate_track_pages.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end
   
       private

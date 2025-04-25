@@ -53,7 +53,7 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         File.open(combined_data_path, 'w') do |file|
           file.write(JSON.pretty_generate({ "Albums" => combined_albums_data }))
         end
-        puts "\e[34mcombine-json-data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
+        # puts "\e[34mcombine-json-data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end
     end
   end
