@@ -27,11 +27,10 @@ async function loadData() {
     let dataStructure = [];
     var loadIndividualTrackJSON = '{{ site.data.loadIndividualTrackJSON }}';
     var jekyll_env = '{{ jekyll.environment }}';
-    var site_baseurl = '{{ site.baseurl }}';
     
     if (loadIndividualTrackJSON === true) {
         console.log("Loading data from individual JSON files...");
-        const data = await fetchData(site_baseurl+'/assets/json/data.json');
+        const data = await fetchData(`${BASE_URL}/assets/json/data.json`);
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -67,7 +66,7 @@ async function loadData() {
     } else {
         console.log("Using combined_data.json");
         console.log(loadIndividualTrackJSON);
-        const data = await fetchData(site_baseurl+'/assets/json/combined_data.json');
+        const data = await fetchData(`${BASE_URL}/assets/json/combined_data.json`);
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -197,7 +196,7 @@ async function main(callback) {
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
-                            <img src="${site_baseurl}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
+                            <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
                             <i><a href="/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
@@ -291,7 +290,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 ${matchedDoc.Speaker} -- 
-                                <i><a href="${site_baseurl}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                 ${matchedDoc.Album}
                             `;
                             resultList.appendChild(albumAndTitleItem);
