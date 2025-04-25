@@ -34,19 +34,19 @@ module Jekyll
         end
       else
         site.data['render_quickly'] = false
-        data_file_path = File.join(json_dir, 'combined_data.json')
+        data_file_path = File.join(json_dir, 'data.json')
         puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
         if File.exist?(data_file_path)
           file_content = File.read(data_file_path)
           if file_content.strip.empty?
-            puts "Warning: combined_data.json is empty."
+            puts "Warning: data.json is empty."
           else
             data_json = parse_json_safely(file_content)
             site.data['albums'] = data_json
           end
         else
-          puts "Warning: combined_data.json not found at #{data_file_path}"
+          puts "Warning: data.json not found at #{data_file_path}"
         end
       end
       # puts "\e[34mload_json_data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
