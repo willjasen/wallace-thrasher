@@ -22,11 +22,11 @@ published: true
   {% for track in album.Tracks %}
       {% if track.Speakers_Adjusted != true or track.Subtitles_Adjusted != true %}
           <li style="margin: 0px; color: yellow;">
-            Track {{ track.Track_Number }}: <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+            Track {{ track.Track_Number }}: <a href="/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
           </li>
       {% else %}
           <li style="margin: 0px; color: green;">
-            Track {{ track.Track_Number }}: <a href="/tracks/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+            Track {{ track.Track_Number }}: <a href="/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
           </li>
       {% endif %}
   {% endfor %}
