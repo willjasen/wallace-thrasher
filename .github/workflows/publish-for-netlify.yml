@@ -11,9 +11,9 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Tag to publish (e.g., v1.2.0)'
+        description: 'Version tag to publish'
         required: true
-        default: 'v1.2.0'
+        default: 'v1.3.0'
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
@@ -21,12 +21,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the v1.2.0 tag when triggered by push to main
+      # Checkout the specific version tag when triggered by push to main
       # or use the specified tag when manually triggered
       - name: Checkout specific tag
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.inputs.tag || 'v1.2.0' }}
+          ref: ${{ github.event.inputs.tag || 'v1.3.0' }}
 
       # Set up Ruby for Jekyll.
       - uses: ruby/setup-ruby@v1
