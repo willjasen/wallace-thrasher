@@ -3,11 +3,17 @@
 # Name of your GitHub Actions workflow.
 name: Publish for Netlify
 
-# Specifies to run this workflow whenever the tag v1.2.0 is pushed
+# Specifies to run this workflow whenever code is pushed to main branch
 on:
   push:
-    tags:
-      - 'v1.2.0'
+    branches:
+      - 'main'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to publish (e.g., v1.2.0)'
+        required: true
+        default: 'v1.2.0'
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
@@ -15,8 +21,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the source with the specific tag.
-      - uses: actions/checkout@v3
+      # Checkout the v1.2.0 tag when triggered by push to main
+      # or use the specified tag when manually triggered
+      - name: Checkout specific tag
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.tag || 'v1.2.0' }}
 
       # Set up Ruby for Jekyll.
       - uses: ruby/setup-ruby@v1
