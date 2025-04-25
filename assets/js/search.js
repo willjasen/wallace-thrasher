@@ -1,7 +1,7 @@
 // search.js
 const BASE_URL = '/wallace-thrasher';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
-const loadIndividualTrackJSON = 'false';
+const loadIndividualTrackJSON = 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
 
 /*
@@ -28,7 +28,7 @@ async function loadData() {
     
     if (loadIndividualTrackJSON === true) {
         console.log("--Loading data from data.json and the individual track JSON files--");
-        const data = await fetchData('/assets/json/data.json');
+        const data = await fetchData(BASE_URL+'/assets/json/data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -63,7 +63,7 @@ async function loadData() {
 
     } else {
         console.log("--Loading data from combined_data.json--");
-        const data = await fetchData('/assets/json/combined_data.json');
+        const data = await fetchData(BASE_URL+'/assets/json/combined_data.json');
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
