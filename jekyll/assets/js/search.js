@@ -1,6 +1,7 @@
 ---
 
 ---
+// These 3 lines above must stay because they are used like front matter for Jekyll to process
 
 // search.js
 const BASE_URL = '{{ site.baseurl }}';
