@@ -112,18 +112,21 @@
   document.getElementById('search_result').innerHTML = idx.search("bright");
 </script>
 
-<div id="status"><img src="/wallace-thrasher/assets/img/loading.gif" id="statusImage" width="25" height="25" /> Data is loading...
-    <script>
-      var intervalId = setInterval(function() {
-        if (dataLoaded) {
-          clearInterval(intervalId);
-          console.log("Data has been loaded!");
-          document.getElementById('status').innerHTML = "<img src=\"/wallace-thrasher/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
-          document.getElementById('status').innerHTML += " Data has been loaded!";
-        }
-      }, 100); // Check every 100ms
-    </script>
-  </div>
+<div id="status">
+  <img src="/wallace-thrasher/assets/img/loading.gif" id="statusImage" width="25" height="25" /> 
+  <span>Data is loading... <span id="statusPercentage">0%</span></span>
+  <script>
+    var intervalId = setInterval(function() {
+      document.getElementById('statusPercentage').textContent = Math.round(dataLoadedPercentage) + '%';
+      if (dataLoaded) {
+        clearInterval(intervalId);
+        console.log("Data has been loaded!");
+        document.getElementById('status').innerHTML = "<img src=\"/wallace-thrasher/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
+        document.getElementById('status').innerHTML += " Data has been loaded!";
+      }
+    }, 100); // Check every 100ms
+  </script>
+</div>
 <p><input type="text" id="speakers-search-input" placeholder="Search..." /></p>
 <ul id="speakers-search-results"></ul>
 
@@ -177,7 +180,7 @@
       
         <div class="footer-col footer-col-3">
           <p style="color: red;">** this is the dev version **</p>
-          <p style="color: greenyellow;">this website was last built on April 25, 2025 at 10:32 PM EDT</p>
+          <p style="color: greenyellow;">this website was last built on April 30, 2025 at 07:47 PM EDT</p>
           <a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml">
             <img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages">
           </a>
