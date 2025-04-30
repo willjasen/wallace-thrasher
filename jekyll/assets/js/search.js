@@ -38,6 +38,7 @@ async function loadData() {
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
             const albums = data[albumsKey];
+            const numberOfAlbums = albums.length;
             for(const album of albums) {
                 console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
@@ -61,7 +62,12 @@ async function loadData() {
                             Whisper_Model: track.Whisper_Model
                         });
                     }
+                    // console.log("Track: " + track.Track_Title + " has been loaded.");
                 }
+                // console.log("Album: " + album.Album + " has been loaded.");
+                // Update the loading progress
+                dataLoadedPercentage += (1 / numberOfAlbums) * 100;
+                console.log("Loading progress: " + Math.round(dataLoadedPercentage) + "%");
             }
             console.log("All albums have been loaded.");
         }
@@ -97,7 +103,12 @@ async function loadData() {
                             Whisper_Model: track.Whisper_Model
                         });
                     }
+                    // console.log("Track: " + track.Track_Title + " has been loaded.");
                 }
+                // console.log("Album: " + album.Album + " has been loaded.");
+                // Update the loading progress
+                dataLoadedPercentage += (1 / numberOfAlbums) * 100;
+                console.log("Loading progress: " + Math.round(dataLoadedPercentage) + "%");
             }
             console.log("All albums have been loaded.");
         }
@@ -341,8 +352,9 @@ async function main(callback) {
 
 // Execute this program
 var dataLoaded = false;
+let dataLoadedPercentage = 0;
 main(function(dataReady) {
-    console.log("Document readyState:", document.readyState);
+    // console.log("Document readyState:", document.readyState);
     if (dataReady) {
       dataLoaded = dataReady;
     }
