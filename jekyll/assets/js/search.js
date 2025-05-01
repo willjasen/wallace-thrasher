@@ -227,7 +227,7 @@ async function main(callback) {
                         albumAndTitleItem.innerHTML = `
                             <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
-                            <i><a href="/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
+                            <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
 
                         if (!fileMap || Object.keys(fileMap).length === 0) {
