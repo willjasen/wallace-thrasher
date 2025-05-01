@@ -5,7 +5,7 @@
   <span>Data is loading... <span id="statusPercentage">0%</span></span>
   <script>
     var intervalId = setInterval(function() {
-      document.getElementById('statusPercentage').textContent = Math.round(dataLoadedPercentage) + '%';
+      document.getElementById('statusPercentage').textContent = trackDataLoadedPercentage.toFixed(1) + '%';
       if (dataLoaded) {
         clearInterval(intervalId);
         console.log("Data has been loaded!");
