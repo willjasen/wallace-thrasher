@@ -36,9 +36,9 @@
         <div id="buiid-time" style="font-size: smaller;">
           Built: 
           {% if jekyll.environment != "production" %}
-            {{ site.time | date: '%-m/%e/%y, %-I:%M:%S %p %Z' }}
+            {{ site.time | date: '%-m/%-d/%y, %-I:%M:%S %p %Z' }}
           {% else %}
-            {{ site.time | date: '%-m/%e/%y, %-I:%M %p %Z' }}
+            {{ site.time | date: '%-m/%-d/%y, %-I:%M %p %Z' }}
           {% endif %}
         </div>
       </div>
