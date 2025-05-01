@@ -1,6 +1,7 @@
 ---
 
 ---
+// These 3 lines above must stay because they are used like front matter for Jekyll to process
 
 // search.js
 const BASE_URL = '{{ site.baseurl }}';
@@ -21,6 +22,15 @@ async function fetchData(path) {
     }
 }
 
+// Helper to calculate total number of tracks across all albums
+function getTotalTracks(data) {
+    return Object.values(data).reduce(
+        (albumAcc, albums) =>
+            albumAcc + albums.reduce((trackAcc, album) => trackAcc + album.Tracks.length, 0),
+        0
+    );
+}
+
 /*
     This function loads the JSON data and creates a data structure
 */
@@ -34,9 +44,14 @@ async function loadData() {
         console.log("--Loading data from data.json and the individual track JSON files--");
         const data = await fetchData(BASE_URL+"/assets/json/data.json");
 
+        // Calculate total number of tracks across all albums
+        const totalTracks = getTotalTracks(data);
+        console.log("Total tracks in data.json:", totalTracks);
+
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
             const albums = data[albumsKey];
+            const numberOfAlbums = albums.length;
             for(const album of albums) {
                 console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
@@ -60,7 +75,12 @@ async function loadData() {
                             Whisper_Model: track.Whisper_Model
                         });
                     }
+                    trackDataLoadedPercentage += (1 / totalTracks) * 100;
+                    // console.log("Loading track progress: " + trackDataLoadedPercentage.toFixed(1) + "%");
                 }
+                // Update the loading progress
+                albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
+                // console.log("Loading album progress: " + Math.round(albumDataLoadedPercentage) + "%");
             }
             console.log("All albums have been loaded.");
         }
@@ -68,6 +88,10 @@ async function loadData() {
     } else {
         console.log("--Loading data from combined_data.json--");
         const data = await fetchData(BASE_URL+"/assets/json/combined_data.json");
+
+        // Calculate total number of tracks across all albums
+        const totalTracks = getTotalTracks(data);
+        console.log("Total tracks in data.json:", totalTracks);
 
         // Iterate through each album, track, and subtitle
         for (const albumsKey of Object.keys(data)) {
@@ -96,7 +120,13 @@ async function loadData() {
                             Whisper_Model: track.Whisper_Model
                         });
                     }
+                    trackDataLoadedPercentage += (1 / totalTracks) * 100;
+                    // console.log("Loading track progress: " + trackDataLoadedPercentage.toFixed(1) + "%");
                 }
+                // console.log("Album: " + album.Album + " has been loaded.");
+                // Update the loading progress
+                albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
+                // console.log("Loading album progress: " + Math.round(albumDataLoadedPercentage) + "%");
             }
             console.log("All albums have been loaded.");
         }
@@ -340,8 +370,10 @@ async function main(callback) {
 
 // Execute this program
 var dataLoaded = false;
+let albumDataLoadedPercentage = 0;
+let trackDataLoadedPercentage = 0;
 main(function(dataReady) {
-    console.log("Document readyState:", document.readyState);
+    // console.log("Document readyState:", document.readyState);
     if (dataReady) {
       dataLoaded = dataReady;
     }
