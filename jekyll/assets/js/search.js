@@ -22,7 +22,7 @@ async function fetchData(path) {
     }
 }
 
-// Helper to calculate total number of tracks across all albums
+// Return the total number of tracks across all albums
 function getTotalTracks(data) {
     return Object.values(data).reduce(
         (albumAcc, albums) =>
@@ -123,7 +123,6 @@ async function loadData() {
                     trackDataLoadedPercentage += (1 / totalTracks) * 100;
                     // console.log("Loading track progress: " + trackDataLoadedPercentage.toFixed(1) + "%");
                 }
-                // console.log("Album: " + album.Album + " has been loaded.");
                 // Update the loading progress
                 albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
                 // console.log("Loading album progress: " + Math.round(albumDataLoadedPercentage) + "%");
@@ -162,7 +161,6 @@ async function main(callback) {
         // Create the search indexes
         const idxText = indexOnField('Text');
         const idxSpeaker = indexOnField('Speaker');
-
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
@@ -344,7 +342,7 @@ async function main(callback) {
             if (alexSpan) {
                 alexSpan.textContent = countOfAlexTrebek;
             } else {
-                console.error('Element with id "alex-count-span" not found.');
+                // console.error('Element with id "alex-count-span" not found.');
             }
         }
         
