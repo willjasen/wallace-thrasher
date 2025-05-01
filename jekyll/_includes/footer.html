@@ -43,14 +43,8 @@
         </div>
       </div>
 
-      <div class="footer-col footer-col-2" style="text-align: right; margin-left: auto; margin-right: auto;">
-        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank">
-          <img src="{{ site.baseurl }}/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC
-        </a>
-      </div>
-
       {% if jekyll.environment != "production" %}
-        <div class="footer-col footer-col-3">
+        <div class="footer-col footer-col-2" style="text-align: center;">
           <p style="color: red;">** this is the dev version **</p>
           <p style="color: greenyellow;">this website was last built on {{ site.time | date: '%B %d, %Y at %I:%M %p %Z' }}</p>
           <a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml">
@@ -61,6 +55,12 @@
           </a>
         </div>
       {% endif %}
+
+      <div class="footer-col footer-col-3" style="text-align: right;">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank">
+          <img src="{{ site.baseurl }}/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC
+        </a>
+      </div>
 
   </div>
   
