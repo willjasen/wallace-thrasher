@@ -90,7 +90,6 @@ async function loadData() {
                         // Reset for next batch
                         trackFetchPromises = [];
                         trackInfoList = [];
-                        console.log("Batch of " + maxBatchSize + " tracks loaded.");
                     }
                 }
                 albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
