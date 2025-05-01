@@ -3,7 +3,7 @@
 // search.js
 const BASE_URL = '/wallace-thrasher';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
-const loadIndividualTrackJSON = 'true' === 'true';
+const loadIndividualTrackJSON = 'false' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
 
 /*
