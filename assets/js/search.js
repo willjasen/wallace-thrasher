@@ -51,33 +51,46 @@ async function loadData() {
             const numberOfAlbums = albums.length;
             for(const album of albums) {
                 console.log("Loading album: " + album.Album);
+                let trackFetchPromises = [];
+                let trackInfoList = [];
                 for (const track of album.Tracks) {
                     const jsonPath = BASE_URL+"/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                    trackSubtitlesData = await fetchData(jsonPath);
-                    for (const subtitle of trackSubtitlesData) {
-                        dataStructure.push({
-                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
-                            Album: album.Album,
-                            Album_Year: album.Year,
-                            Album_Picture: album.Album_Picture,
-                            Album_Slug: album.Album_Slug,
-                            Track_Number: track.Track_Number,
-                            Track_Slug: track.Track_Slug,
-                            Track_Subtitles: track.Subtitles,
-                            Track_Title: track.Track_Title,
-                            Speaker: subtitle.Speaker,
-                            Text: subtitle.Text,
-                            StartTime: subtitle["Start Time"],
-                            EndTime: subtitle["End Time"],
-                            Whisper_Model: track.Whisper_Model
-                        });
+                    trackFetchPromises.push(fetchData(jsonPath));
+                    trackInfoList.push({ album, track });
+                    // If we have 4 promises or it's the last track, process the batch
+                    const maxBatchSize = 4;
+                    if (trackFetchPromises.length === maxBatchSize || track === album.Tracks[album.Tracks.length - 1]) {
+                        const results = await Promise.all(trackFetchPromises);
+                        for (let i = 0; i < results.length; i++) {
+                            const trackSubtitlesData = results[i];
+                            const { album, track } = trackInfoList[i];
+                            for (const subtitle of trackSubtitlesData) {
+                                dataStructure.push({
+                                    id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`,
+                                    Album: album.Album,
+                                    Album_Year: album.Year,
+                                    Album_Picture: album.Album_Picture,
+                                    Album_Slug: album.Album_Slug,
+                                    Track_Number: track.Track_Number,
+                                    Track_Slug: track.Track_Slug,
+                                    Track_Subtitles: track.Subtitles,
+                                    Track_Title: track.Track_Title,
+                                    Speaker: subtitle.Speaker,
+                                    Text: subtitle.Text,
+                                    StartTime: subtitle["Start Time"],
+                                    EndTime: subtitle["End Time"],
+                                    Whisper_Model: track.Whisper_Model
+                                });
+                            }
+                            trackDataLoadedPercentage += (1 / totalTracks) * 100;
+                        }
+                        // Reset for next batch
+                        trackFetchPromises = [];
+                        trackInfoList = [];
+                        console.log("Batch of " + maxBatchSize + " tracks loaded.");
                     }
-                    trackDataLoadedPercentage += (1 / totalTracks) * 100;
-                    // console.log("Loading track progress: " + trackDataLoadedPercentage.toFixed(1) + "%");
                 }
-                // Update the loading progress
                 albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
-                // console.log("Loading album progress: " + Math.round(albumDataLoadedPercentage) + "%");
             }
             console.log("All albums have been loaded.");
         }
