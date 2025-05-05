@@ -90,7 +90,6 @@ async function loadData() {
                         // Reset for next batch
                         trackFetchPromises = [];
                         trackInfoList = [];
-                        console.log("Batch of " + maxBatchSize + " tracks loaded.");
                     }
                 }
                 albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
@@ -137,7 +136,7 @@ async function loadData() {
                     // console.log("Loading track progress: " + trackDataLoadedPercentage.toFixed(1) + "%");
                 }
                 // Update the loading progress
-                albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
+                // albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
                 // console.log("Loading album progress: " + Math.round(albumDataLoadedPercentage) + "%");
             }
             console.log("All albums have been loaded.");

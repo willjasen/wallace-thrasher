@@ -11,8 +11,11 @@ module Jekyll
       # Load JSON files from /assets/json
       json_dir = File.join(site.source, 'assets', 'json')
 
-      if site.config['render_quickly']
-        site.data['render_quickly'] = true
+      # Assume render_slowly for production builds
+      site.config['render_slowly'] = true if ENV['JEKYLL_ENV'] == 'production'
+
+      if site.config['render_slowly']
+        site.data['render_slowly'] = true
         Dir.glob(File.join(json_dir, '**/*.json')) do |file|
           data_key = File.basename(file, '.json')
           json_data = parse_json_safely(File.read(file))
@@ -33,7 +36,7 @@ module Jekyll
           puts "Warning: data.json not found at #{data_file_path}"
         end
       else
-        site.data['render_quickly'] = false
+        site.data['render_slowly'] = false
         data_file_path = File.join(json_dir, 'data.json')
         puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
