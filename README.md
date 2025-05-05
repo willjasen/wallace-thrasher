@@ -1,7 +1,8 @@
 # wallace-thrasher
-codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
-![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher)
+![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
+
+codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
 ### ⌗ Overview ⌗
 
