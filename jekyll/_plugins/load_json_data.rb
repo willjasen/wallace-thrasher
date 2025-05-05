@@ -11,6 +11,9 @@ module Jekyll
       # Load JSON files from /assets/json
       json_dir = File.join(site.source, 'assets', 'json')
 
+      # Assume render_slowly for production builds
+      site.config['render_slowly'] = true if ENV['JEKYLL_ENV'] == 'production'
+
       if site.config['render_slowly']
         site.data['render_slowly'] = true
         Dir.glob(File.join(json_dir, '**/*.json')) do |file|

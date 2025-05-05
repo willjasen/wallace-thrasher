@@ -25,6 +25,7 @@ loadIndividualTrackJSON: false
 
 # If this is set to true, the Jekyll build process will be slow and the track pages will contain their contents
 #   - This is necessary for a production build
+#   - In "load_json_data.rb", if the build is set to production, the value here will be ignored (render_slowly will be overridden to be true)
 # If this is set to false, the Jekyll build process will be quick, but the track pages will not contain any content
 #   - This is useful for testing the site without having to wait a long time for the Jekyll build process to finish
 render_slowly: false
