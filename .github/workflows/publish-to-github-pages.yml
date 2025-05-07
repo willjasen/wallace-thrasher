@@ -37,12 +37,19 @@ jobs:
           cd jekyll
           JEKYLL_ENV=development bundle exec jekyll build --baseurl "/wallace-thrasher"
 
+      # Copy the .github/workflows folder to the build output directory.
+      - name: Copy workflows folder
+        run: |
+          mkdir -p jekyll/_site/.github
+          cp -r .github/workflows jekyll/_site/.github/
+
       # Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
+          keep_files: false
 
           # Send a webhook upon completion.
       - name: Send webhook notification
