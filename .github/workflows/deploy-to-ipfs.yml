@@ -31,6 +31,7 @@ jobs:
           pinata-jwt-token: ${{ secrets.PINATA_JWT_TOKEN }}
           pinata-pinning-url: 'https://api.pinata.cloud/psa'
 
+      # Update DNSLink in Cloudflare
       - name: Update DNSLink in Cloudflare
         id: update-dnslink
         run: |
