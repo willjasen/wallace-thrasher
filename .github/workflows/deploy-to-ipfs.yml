@@ -28,6 +28,9 @@ jobs:
           storacha-key: ${{ secrets.STORACHA_KEY }}
           storacha-proof: ${{ secrets.STORACHA_PROOF }}
           github-token: ${{ secrets.GH_PAGES_TOKEN }}
+          filebase-bucket: 'wallace-thrasher'
+          filebase-access-key: ${{ secrets.FILEBASE_ACCESS_KEY }}
+          filebase-secret-key: ${{ secrets.FILEBASE_SECRET_KEY }}
 
       # Update DNSLink in Cloudflare
       - name: Update DNSLink in Cloudflare
