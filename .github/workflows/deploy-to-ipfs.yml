@@ -8,7 +8,7 @@ permissions:
 on:
   push:
     branches:
-      - netlify
+      - main
   workflow_dispatch:
 
 jobs:
@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+            ref: netlify
 
       - name: Deploy to IPFS
         uses: ipfs/ipfs-deploy-action@v1
