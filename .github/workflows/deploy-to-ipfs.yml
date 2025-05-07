@@ -28,3 +28,5 @@ jobs:
           storacha-key: ${{ secrets.STORACHA_KEY }}
           storacha-proof: ${{ secrets.STORACHA_PROOF }}
           github-token: ${{ secrets.GH_PAGES_TOKEN }}
+          pinata-jwt-token: ${{ secrets.PINATA_JWT_TOKEN }}
+          pinata-pinning-url: 'https://api.pinata.cloud/psa' # Default URL
