@@ -13,6 +13,7 @@
   <!-- <script src="/assets/js/theme-toggle.js"></script> -->
   <script src="{{ site.baseurl }}/assets/js/nav-menu.js"></script>
   <style>
+    /* screen less than 'max-width' hides header page links */
     @media screen and (max-width: 600px) {
       .site-nav {
         position: absolute;
@@ -22,18 +23,6 @@
         text-align: right;
         z-index: 1000;
       }
-      
-      /* Light theme styles
-      body:not(.dark-theme) .site-nav {
-        background-color: white;
-        border: 1px solid #e8e8e8;
-      } */
-      
-      /* Dark theme styles
-      body.dark-theme .site-nav {
-        background-color: #333;
-        border: 1px solid #444;
-      } */
       
       .site-nav .menu-icon {
         display: block !important;
