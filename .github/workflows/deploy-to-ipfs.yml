@@ -40,6 +40,6 @@ jobs:
             --data '{
               "type": "TXT",
               "name": "_dnslink.${{ secrets.CLOUDFLARE_DOMAIN }}",
-              "content": "dnslink=/ipfs/${{ steps.deploy.outputs.cid }}",
+              "content": "\"dnslink=/ipfs/${{ steps.deploy.outputs.cid }}\"",
               "ttl": 1
             }'
