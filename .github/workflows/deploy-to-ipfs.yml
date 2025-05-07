@@ -1,0 +1,26 @@
+name: Deploy to IPFS
+
+on:
+  push:
+    branches:
+      - netlify
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install ipfs-deploy
+        run: |
+          npm install -g ipfs-deploy
+
+      - name: Deploy to IPFS
+        env:
+          IPFS_DEPLOY_PINATA__API_KEY: ${{ secrets.PINATA_API_KEY }}
+          IPFS_DEPLOY_PINATA__SECRET_API_KEY: ${{ secrets.PINATA_SECRET_API_KEY }}
+        run: |
+          ipfs-deploy ./
