@@ -22,6 +22,32 @@ async function fetchData(path) {
     }
 }
 
+// Add a function to get URL parameters
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    const results = regex.exec(window.location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Generalize the URL parameter handling
+function handleSearchParameter() {
+    const searchParam = getUrlParameter('search');
+    if (searchParam) {
+        // Determine the input field based on the page context
+        const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
+        const speakersSearchInput = document.querySelector('#speakers-search-input');
+
+        if (subtitlesSearchInput) {
+            subtitlesSearchInput.value = searchParam;
+            subtitlesSearchInput.dispatchEvent(new Event('input'));
+        } else if (speakersSearchInput) {
+            speakersSearchInput.value = searchParam;
+            speakersSearchInput.dispatchEvent(new Event('input'));
+        }
+    }
+}
+
 // Return the total number of tracks across all albums
 function getTotalTracks(data) {
     return Object.values(data).reduce(
@@ -218,8 +244,8 @@ async function main(callback) {
                 });
             }
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
-                if (this.value != "") {
-                    const query = this.value;
+                if (this.value.trim() != "") {
+                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxText.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -304,7 +330,7 @@ async function main(callback) {
         if (document.querySelector('#speakers-search-input')) {
             document.querySelector('#speakers-search-input').addEventListener('input', function () {
                 if (this.value.trim() !== "") {
-                    const query = this.value.trim();
+                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxSpeaker.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -382,9 +408,10 @@ async function main(callback) {
 var dataLoaded = false;
 let albumDataLoadedPercentage = 0;
 let trackDataLoadedPercentage = 0;
+// Call the generalized function after data is loaded
 main(function(dataReady) {
-    // console.log("Document readyState:", document.readyState);
     if (dataReady) {
-      dataLoaded = dataReady;
+        dataLoaded = dataReady;
+        handleSearchParameter();
     }
-  });
+});

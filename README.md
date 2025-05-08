@@ -2,13 +2,17 @@
 
 ![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
 
-codename for a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
+a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
 
-### ⌗ Overview ⌗
+### 🧭 Overview 🧭
 
 this website allows for searching through subtitles and speakers within the longmont potion castle discography.
 
-this website can currently be viewed at [stretchie.delivery](https://stretchie.delivery) and via [GitHub Pages](https://willjasen.github.io/wallace-thrasher/)
+this website can currently be viewed at:
+
+- primary domain --> [stretchie.delivery](https://stretchie.delivery)
+- via ipfs/ipns --> example: [https://dweb.link/ipns/stretchie.delivery/](https://dweb.link/ipns/stretchie.delivery/)
+- for development only --> [github pages](https://willjasen.github.io/wallace-thrasher/)
 
 ### 🎮 Features 🎮
 
@@ -19,6 +23,16 @@ its basic feature is that albums and tracks have pages with the track pages cont
 some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
 
 there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
+
+### 🔎 Searching 🔎
+
+as of v1.4.0, the search feature uses a logical 'and' when operating, instead of a logical 'or'. this change in behavior affects when multiple words are searched. before, the search would return any subtitles containing any word that was entered. now, the search will only return subtitles that contain all words being searched.
+
+for example, a search term of "cheese pizza" previously return 134 results - all subtitles containing either the word "cheese" or "pizza". now, the same search of "cheese pizza" returns 7 results - all subtitles containing both the words "cheese" and "pizza".
+
+note that results returned are not based on phrase matching. for example, a subtitle of "i want a cheese pizza" will be returned, but so will "i would like cheese on my pizza". due to limitations of [lunr.js](https://lunrjs.com/), phrase matching is not possible.
+
+also note that the ordering of the words does not matter, so a search for "cheese pizza" and for "pizza cheese" will return the same results.
 
 ### ⚙️ Components ⚙️
 
@@ -106,11 +120,16 @@ when deploying to production, `JEKYLL_ENV` must be changed to `production`. the 
 ### 📤 Deployment 📤
 
 commits to the main branch trigger two [github actions](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows):
-- run `jekyll build --baseurl "/"` to generate the site on the ["netlify"](https://github.com/willjasen/wallace-thrasher/tree/netlify) branch
-- run `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) branch
 
-the commit to ["netlify"](https://github.com/willjasen/wallace-thrasher/tree/netlify) is then pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
-the commit to ["gh-pages"](https://github.com/willjasen/wallace-thrasher/tree/gh-pages) is then used by github pages
+- `deploy-production-build.yml`:
+  - runs `jekyll build --baseurl ""` to generate the site on the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch
+  - deploys the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch to IPFS
+
+- `publish-to-github-pages.yml`:
+  - runs `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch
+  - a separate action then uses the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch to deploy to github pages
+
+the commit to "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" is pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
 
 ### ✍️ How to Contribute ✍️
 
@@ -130,9 +149,9 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 
 here are various badges related to this project's code and its deployments
 
-[![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
+[![Deploy a Production Build](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml)
 
-[![Publish for Netlify](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-for-netlify.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-for-netlify.yml) -- GitHub Action to ready the project for Netlify
+[![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- deployment status to Netlify
 
@@ -141,3 +160,7 @@ here are various badges related to this project's code and its deployments
 ![GitHub code size](https://img.shields.io/github/languages/code-size/willjasen/wallace-thrasher) -- deployed source code size
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
+
+![GitHub License](https://img.shields.io/github/license/willjasen/wallace-thrasher) -- the open source license
+
+![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version

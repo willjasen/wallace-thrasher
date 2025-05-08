@@ -1,0 +1,109 @@
+# In your repository's `.github/workflows/deploy-production-build.yml` file.
+---
+# Name of your GitHub Actions workflow.
+name: Deploy a Production Build
+
+# Specifies to run this workflow whenever code is pushed to main branch, or when manually triggered
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Version tag to deploy'
+        required: true
+
+# Define environment variables for reuse
+env:
+  VERSION_TAG: ${{ github.event.inputs.tag || 'v1.4.0' }}
+  SUCCESS_COLOR: "\033[0;32m"
+  FAILURE_COLOR: "\033[0;31m"
+  WARNING_COLOR: "\033[0;33m"
+  INFO_COLOR: "\033[0;34m"
+  DEBUG_COLOR: "\033[0;35m"
+  RESET_COLOR: "\033[0m"
+
+# Job definitions
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the specific version tag when triggered by push to main
+      # or use the specified tag when manually triggered
+      - name: Checkout specific tag
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ env.VERSION_TAG }}
+
+      # Set up Ruby for Jekyll.
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      # Install Jekyll and Bundler.
+      - name: Install dependencies
+        run: |
+          cd jekyll
+          gem install bundler
+          bundle install
+
+      # Build the Jekyll site with the baseurl set to ''
+      - name: Build site for production
+        run: |
+          echo -e "${{ env.SUCCESS_COLOR }}Building site for production with version: ${{ env.VERSION_TAG }}${{ env.RESET_COLOR }}"
+          cd jekyll
+          JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
+
+      # Deploy the rendered build to the `production-build` branch
+      - name: Deploy to 'production-build' branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./jekyll/_site
+          publish_branch: production-build
+          keep_files: false
+
+      # Send a webhook upon completion
+      - name: Send webhook notification
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
+
+  # Deploy to IPFS
+  #  - deploys to Storacha and Filebase
+  #  - updates DNSLink TXT record in Cloudflare
+  deploy-to-ipfs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+            ref: production-build
+
+      - name: Deploy to IPFS
+        uses: ipfs/ipfs-deploy-action@v1
+        id: deploy
+        with:
+          path-to-deploy: .
+          storacha-key: ${{ secrets.STORACHA_KEY }}
+          storacha-proof: ${{ secrets.STORACHA_PROOF }}
+          github-token: ${{ secrets.GH_PAGES_TOKEN }}
+          filebase-bucket: 'wallace-thrasher'
+          filebase-access-key: ${{ secrets.FILEBASE_ACCESS_KEY }}
+          filebase-secret-key: ${{ secrets.FILEBASE_SECRET_KEY }}
+
+      - name: Update DNSLink in Cloudflare
+        id: update-dnslink
+        run: |
+          curl -X PUT "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/dns_records/${{ secrets.CLOUDFLARE_DNS_RECORD_ID }}" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{
+              "type": "TXT",
+              "name": "_dnslink.${{ secrets.CLOUDFLARE_DOMAIN }}",
+              "content": "\"dnslink=/ipfs/${{ steps.deploy.outputs.cid }}\"",
+              "ttl": 1
+            }'
+
+# END OF WORKFLOW
