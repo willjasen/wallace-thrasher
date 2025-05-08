@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>About | wallace-thrasher</title>
+<title>About | stretchie</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="About" />
 <meta property="og:locale" content="en_US" />
@@ -11,14 +11,14 @@
 <meta property="og:description" content="you can call me stretchie" />
 <link rel="canonical" href="/wallace-thrasher/about/" />
 <meta property="og:url" content="/wallace-thrasher/about/" />
-<meta property="og:site_name" content="wallace-thrasher" />
+<meta property="og:site_name" content="stretchie" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"you can call me stretchie","headline":"About","name":"wallace-thrasher","url":"/wallace-thrasher/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"you can call me stretchie","headline":"About","name":"stretchie","url":"/wallace-thrasher/about/"}</script>
 <!-- End Jekyll SEO tag -->
-<link id="main-stylesheet" rel="stylesheet" href="/wallace-thrasher/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/wallace-thrasher/feed.xml" title="wallace-thrasher" />
+<link id="main-stylesheet" rel="stylesheet" href="/wallace-thrasher/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/wallace-thrasher/feed.xml" title="stretchie" />
 </head>
 <body><header class="site-header" role="banner">
 
@@ -81,7 +81,7 @@
     }
   </style>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/wallace-thrasher/">wallace-thrasher</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/wallace-thrasher/">stretchie</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -104,13 +104,19 @@
   </header>
 
   <div class="post-content">
-    <p>codename for a website project involving the works of <a href="http://longmontpotioncastle.com/">longmont potion castle</a> - you can call me stretchie</p>
+    <p>a website project involving the works of <a href="http://longmontpotioncastle.com/">longmont potion castle</a> - you can call me stretchie</p>
 
-<h3 id="-overview-">⌗ Overview ⌗</h3>
+<h3 id="-overview-">🧭 Overview 🧭</h3>
 
 <p>this website allows for searching through subtitles and speakers within the longmont potion castle discography.</p>
 
-<p>this website can currently be viewed at <a href="https://stretchie.delivery">stretchie.delivery</a> and via <a href="https://willjasen.github.io/wallace-thrasher/">GitHub Pages</a></p>
+<p>this website can currently be viewed at:</p>
+
+<ul>
+  <li>primary domain –&gt; <a href="https://stretchie.delivery">stretchie.delivery</a></li>
+  <li>via ipfs/ipns –&gt; example: <a href="https://dweb.link/ipns/stretchie.delivery/">https://dweb.link/ipns/stretchie.delivery/</a></li>
+  <li>for development only –&gt; <a href="https://willjasen.github.io/wallace-thrasher/">github pages</a></li>
+</ul>
 
 <h3 id="-features-">🎮 Features 🎮</h3>
 
@@ -121,6 +127,16 @@
 <p>some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?</p>
 
 <p>there are great resources like <a href="https://talkinwhipapedia.fandom.com/">talkin’ whipapedia</a> out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn’t structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i’ve been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.</p>
+
+<h3 id="-searching-">🔎 Searching 🔎</h3>
+
+<p>as of v1.4.0, the search feature uses a logical ‘and’ when operating, instead of a logical ‘or’. this change in behavior affects when multiple words are searched. before, the search would return any subtitles containing any word that was entered. now, the search will only return subtitles that contain all words being searched.</p>
+
+<p>for example, a search term of “cheese pizza” previously return 134 results - all subtitles containing either the word “cheese” or “pizza”. now, the same search of “cheese pizza” returns 7 results - all subtitles containing both the words “cheese” and “pizza”.</p>
+
+<p>note that results returned are not based on phrase matching. for example, a subtitle of “i want a cheese pizza” will be returned, but so will “i would like cheese on my pizza”. due to limitations of <a href="https://lunrjs.com/">lunr.js</a>, phrase matching is not possible.</p>
+
+<p>also note that the ordering of the words does not matter, so a search for “cheese pizza” and for “pizza cheese” will return the same results.</p>
 
 <h3 id="️-components-️">⚙️ Components ⚙️</h3>
 
@@ -206,13 +222,23 @@
 <h3 id="-deployment-">📤 Deployment 📤</h3>
 
 <p>commits to the main branch trigger two <a href="https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows">github actions</a>:</p>
+
 <ul>
-  <li>run <code class="language-plaintext highlighter-rouge">jekyll build --baseurl "/"</code> to generate the site on the <a href="https://github.com/willjasen/wallace-thrasher/tree/netlify">“netlify”</a> branch</li>
-  <li>run <code class="language-plaintext highlighter-rouge">jekyll build --baseurl "/wallace-thrasher"</code> to generate the site on the <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> branch</li>
+  <li><code class="language-plaintext highlighter-rouge">deploy-production-build.yml</code>:
+    <ul>
+      <li>runs <code class="language-plaintext highlighter-rouge">jekyll build --baseurl ""</code> to generate the site on the “<a href="https://github.com/willjasen/wallace-thrasher/tree/production-build">production-build</a>” branch</li>
+      <li>deploys the “<a href="https://github.com/willjasen/wallace-thrasher/tree/production-build">production-build</a>” branch to IPFS</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">publish-to-github-pages.yml</code>:
+    <ul>
+      <li>runs <code class="language-plaintext highlighter-rouge">jekyll build --baseurl "/wallace-thrasher"</code> to generate the site on the “<a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">gh-pages</a>” branch</li>
+      <li>a separate action then uses the “<a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">gh-pages</a>” branch to deploy to github pages</li>
+    </ul>
+  </li>
 </ul>
 
-<p>the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/netlify">“netlify”</a> is then pulled by <a href="https://app.netlify.com/sites/wallace-thrasher/deploys">netlify</a> to redeploy its copy of the site.
-the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pages">“gh-pages”</a> is then used by github pages</p>
+<p>the commit to “<a href="https://github.com/willjasen/wallace-thrasher/tree/production-build">production-build</a>” is pulled by <a href="https://app.netlify.com/sites/wallace-thrasher/deploys">netlify</a> to redeploy its copy of the site.</p>
 
 <h3 id="️-how-to-contribute-️">✍️ How to Contribute ✍️</h3>
 
@@ -232,9 +258,9 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
 
 <p>here are various badges related to this project’s code and its deployments</p>
 
-<p><a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml"><img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages" /></a> – GitHub Action to publish to GitHub Pages</p>
+<p><a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml"><img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg" alt="Deploy a Production Build" /></a></p>
 
-<p><a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-for-netlify.yml"><img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-for-netlify.yml/badge.svg" alt="Publish for Netlify" /></a> – GitHub Action to ready the project for Netlify</p>
+<p><a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml"><img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages" /></a> – GitHub Action to publish to GitHub Pages</p>
 
 <p><a href="https://app.netlify.com/sites/wallace-thrasher/deploys"><img src="https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status" alt="Netlify Status" /></a> – deployment status to Netlify</p>
 
@@ -244,9 +270,11 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
 
 <p><img src="https://img.shields.io/github/repo-size/willjasen/wallace-thrasher" alt="GitHub repo size" /> – source code repository size</p>
 
+<p><img src="https://img.shields.io/github/license/willjasen/wallace-thrasher" alt="GitHub License" /> – the open source license</p>
+
 <p><img src="https://img.shields.io/github/v/release/willjasen/wallace-thrasher" alt="GitHub Release" /> – the latest version</p>
 
-<p>this website was last built on May  7, 2025 at 6:40 PM EDT</p>
+<p>this website was last built on May  7, 2025 at 11:40 PM EDT</p>
 
   </div>
 
@@ -259,12 +287,12 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
 
   <div class="wrapper">
 
-    <!-- <h2 class="footer-heading">wallace-thrasher</h2> -->
+    <!-- <h2 class="footer-heading">stretchie</h2> -->
 
     <div class="footer-col-wrapper">
       <!-- <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">wallace-thrasher</li></ul>
+          <li class="p-name">stretchie</li></ul>
       </div> -->
 
       <div class="footer-col footer-col-1">
@@ -281,7 +309,7 @@ the commit to <a href="https://github.com/willjasen/wallace-thrasher/tree/gh-pag
         <div id="buiid-time" style="font-size: smaller;">
           Built: 
           
-            5/7/25, 6:40:06 PM EDT
+            5/7/25, 11:40:43 PM EDT
           
         </div>
       </div>
