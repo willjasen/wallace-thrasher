@@ -17,6 +17,12 @@ on:
 # Define environment variables for reuse
 env:
   VERSION_TAG: ${{ github.event.inputs.tag || 'v1.3.9' }}
+  SUCCESS_COLOR: "\033[0;32m"
+  FAILURE_COLOR: "\033[0;31m"
+  WARNING_COLOR: "\033[0;33m"
+  INFO_COLOR: "\033[0;34m"
+  DEBUG_COLOR: "\033[0;35m"
+  RESET_COLOR: "\033[0m"
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
@@ -46,6 +52,7 @@ jobs:
       # Build the Jekyll site with the baseurl set to ''
       - name: Build site for production
         run: |
+          echo -e "${{ env.SUCCESS_COLOR }}Building site for production with version: ${{ env.VERSION_TAG }}${{ env.RESET_COLOR }}"
           cd jekyll
           JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
 
