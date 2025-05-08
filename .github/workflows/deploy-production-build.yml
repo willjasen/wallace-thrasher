@@ -52,7 +52,7 @@ jobs:
       # Build the Jekyll site with the baseurl set to ''
       - name: Build site for production
         run: |
-          echo -e "${{ env.SUCCESS_COLOR }}Building site for production with version: ${{ env.VERSION_TAG }}${{ env.RESET_COLOR }}"
+          echo "Building site for production with version: ${{ env.VERSION_TAG }}"
           cd jekyll
           JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
 
