@@ -43,8 +43,9 @@ jobs:
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
+          keep_files: false
 
-          # Send a webhook upon completion.
+      # Send a webhook upon completion.
       - name: Send webhook notification
         run: |
           curl -X POST -H "Content-Type: application/json" -d '{"content": "Published to GitHub Pages successfully!"}' ${{ secrets.WEBHOOK_URL }}
