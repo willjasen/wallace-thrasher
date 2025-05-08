@@ -1,9 +1,9 @@
-# In your repository's `.github/workflows/publish-for-netlify.yml` file.
+# In your repository's `.github/workflows/render-production-build.yml` file.
 ---
 # Name of your GitHub Actions workflow.
-name: Publish for Netlify
+name: Render a Production Build
 
-# Specifies to run this workflow whenever code is pushed to main branch
+# Specifies to run this workflow whenever code is pushed to main branch, or when manually triggered
 on:
   push:
     branches:
@@ -13,11 +13,14 @@ on:
       tag:
         description: 'Version tag to publish'
         required: true
-        default: 'v1.3.9'
+
+# Define environment variables for reuse
+env:
+  VERSION_TAG: ${{ github.event.inputs.tag || 'v1.3.9' }}
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
-  build-and-publish-for-netlify:
+  build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +29,7 @@ jobs:
       - name: Checkout specific tag
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.inputs.tag || 'v1.3.9' }}
+          ref: ${{ env.VERSION_TAG }}
 
       # Set up Ruby for Jekyll.
       - uses: ruby/setup-ruby@v1
@@ -40,28 +43,22 @@ jobs:
           gem install bundler
           bundle install
 
-      # Build the Jekyll site with the baseurl set to ''.
-      - name: Build site for Netlify
+      # Build the Jekyll site with the baseurl set to ''
+      - name: Build site for production
         run: |
           cd jekyll
           JEKYLL_ENV=production bundle exec jekyll build --baseurl ""
 
-      # Copy the .github/workflows folder to the build output directory.
-      - name: Copy workflows folder
-        run: |
-          mkdir -p jekyll/_site/.github
-          cp -r .github/workflows jekyll/_site/.github/
-
-      # Deploy to the `netlify` branch.
-      - name: Deploy to 'netlify' branch
+      # Deploy the rendered build to the `production-build` branch
+      - name: Deploy to 'production-build' branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
-          publish_branch: netlify
+          publish_branch: production-build
           keep_files: false
 
-      # Send a webhook upon completion.
+      # Send a webhook upon completion
       - name: Send webhook notification
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published to the 'netlify' branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
