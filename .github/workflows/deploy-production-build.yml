@@ -74,6 +74,7 @@ jobs:
   #  - deploys to Storacha and Filebase
   #  - updates DNSLink TXT record in Cloudflare
   deploy-to-ipfs:
+    needs: build-and-publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
