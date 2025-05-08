@@ -70,6 +70,9 @@ jobs:
         run: |
           curl -X POST -H "Content-Type: application/json" -d '{"content": "Published ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
 
+  # Deploy to IPFS
+  #  - deploys to Storacha and Filebase
+  #  - updates DNSLink TXT record in Cloudflare
   deploy-to-ipfs:
     runs-on: ubuntu-latest
     steps:
@@ -78,8 +81,6 @@ jobs:
         with:
             ref: production-build
 
-      # Deploy to IPFS
-      #   - deploys to Storacha and Filebase
       - name: Deploy to IPFS
         uses: ipfs/ipfs-deploy-action@v1
         id: deploy
@@ -92,7 +93,6 @@ jobs:
           filebase-access-key: ${{ secrets.FILEBASE_ACCESS_KEY }}
           filebase-secret-key: ${{ secrets.FILEBASE_SECRET_KEY }}
 
-      # Update DNSLink TXT record in Cloudflare
       - name: Update DNSLink in Cloudflare
         id: update-dnslink
         run: |
