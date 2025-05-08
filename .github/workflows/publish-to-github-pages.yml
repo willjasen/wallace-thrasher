@@ -9,6 +9,7 @@ on:
   push:
     branches:
       - dev
+  workflow_dispatch:
 
 # Define a job named `build-and-publish` in your workflow.
 jobs:
