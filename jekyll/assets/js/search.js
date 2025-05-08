@@ -218,8 +218,8 @@ async function main(callback) {
                 });
             }
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
-                if (this.value != "") {
-                    const query = this.value;
+                if (this.value.trim() != "") {
+                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxText.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -304,7 +304,7 @@ async function main(callback) {
         if (document.querySelector('#speakers-search-input')) {
             document.querySelector('#speakers-search-input').addEventListener('input', function () {
                 if (this.value.trim() !== "") {
-                    const query = this.value.trim();
+                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxSpeaker.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
