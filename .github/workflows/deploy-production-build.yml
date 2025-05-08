@@ -1,7 +1,7 @@
-# In your repository's `.github/workflows/render-production-build.yml` file.
+# In your repository's `.github/workflows/deploy-production-build.yml` file.
 ---
 # Name of your GitHub Actions workflow.
-name: Render a Production Build
+name: Deploy a Production Build
 
 # Specifies to run this workflow whenever code is pushed to main branch, or when manually triggered
 on:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Version tag to publish'
+        description: 'Version tag to deploy'
         required: true
 
 # Define environment variables for reuse
