@@ -24,9 +24,9 @@ env:
   DEBUG_COLOR: "\033[0;35m"
   RESET_COLOR: "\033[0m"
 
-# Define a job named `build-and-publish` in your workflow.
+# Define a job named `build-and-deploy` in your workflow.
 jobs:
-  build-and-publish:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
