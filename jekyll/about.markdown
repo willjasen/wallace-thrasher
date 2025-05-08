@@ -167,4 +167,6 @@ here are various badges related to this project's code and its deployments
 
 ![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
 
+notes on version history can be found on the [version history](/version-history) page
+
 this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' }}
