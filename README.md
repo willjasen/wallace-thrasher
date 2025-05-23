@@ -16,13 +16,21 @@ this website can currently be viewed at:
 
 ### 🎮 Features 🎮
 
-its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track. its smart feature is that all of this aforementioned data is indexed so that search becomes possible. the neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
+there are three main features of various interests implemented:
+
+- its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track
+- its smart feature is that all of this aforementioned data is indexed so that search becomes possible
+- its neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
 
 ### 📘 Backstory 📘
 
 some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
 
 there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
+
+### 🫡 A Pledge 🫡
+
+when i began the venture of creating this magnificent package, i pledged that i would not monetize the website, and i still have no intentions of doing so. i created this as an effort of love for the works involved here and as a challenge to myself. it is the best homage that i can contribute to this little weird corner of the universe.
 
 ### 🔎 Searching 🔎
 
@@ -141,9 +149,20 @@ please refer to [CONTRIBUTING.md](https://github.com/willjasen/wallace-thrasher/
 
 the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-thrasher/blob/main/TODO.md)
 
-### 🪪 Licensing 🪪
+### 🪪 Licensing & Rights 🪪
 
-this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project.
+this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
+
+1. anyone may copy, modify, and distribute this software (throw it up and down)
+2. all distrubtions of this software must include the license and copyright notice always (otherwise you're gettin' a citation)
+3. anyone may use this software privately (even during a real hypnotic massage)
+4. anyone may use this software for commercial purposes (cave of the winds might find it useful)
+6. if changes are made to the code, those changes must be indicated (it better be real legible real quick)
+7. any and all modifications of this code base must without question be distributed with the same license, GPLv3 (don't make me kick my boots around)
+8. this software is provided without warranty (just like when those hubcaps came clean off the car)
+9. while it seems far out how such a case could arise, the software author or license can not be held liable for any damages inflicted by the software (or your lips will be inflicted with the sidewalk)
+
+longmont potion castle exclusively retains all rights to his associated and respective works.
 
 ### 🤓 Technical Details 🤓
 

@@ -4,6 +4,11 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.4.1
+
+- updates to the README and About pages
+- minor fixes for "Drug Dumpling" (still needs a redo)
+
 ### v1.4.0
 
 - website's title is renamed to 'stretchie'
