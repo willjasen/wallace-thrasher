@@ -162,7 +162,9 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 8. this software is provided without warranty (just like when those hubcaps came clean off the car)
 9. while it seems far out how such a case could arise, the software author or license can not be held liable for any damages inflicted by the software (or your lips will be inflicted with the sidewalk)
 
-longmont potion castle exclusively retains all rights to his associated and respective works.
+longmont potion castle retains all rights to his associated and respective works
+
+if you enjoy the catalogue, please support the artist by purchasing merch from [the official website at noisetent.com](http://noisetent.com/lpcmerchandise.htm)
 
 ### 🤓 Technical Details 🤓
 
