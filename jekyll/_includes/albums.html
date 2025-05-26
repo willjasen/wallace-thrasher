@@ -3,30 +3,33 @@
     .album-info {
         display: flex;
         align-items: center;
+        width:50%;
+        margin-left:25%;
+        margin-right:25%;
+        margin-bottom: 10px;
     }
 
-    .image-container {
-        margin-left: 50px;
+    .album-image {
+        margin-left: 10%;
         margin-right: 20px;
     }
 
     .album-text {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
-    
+
 </style>
 
 {% assign sorted_albums = site.data.albums.Albums | sort: "Year" %}
 {% for album in sorted_albums %}
 
   <div class="album-info">
-      <div class="image-container">
+      <div class="album-image">
           <img src="{{ site.baseurl }}/assets/img/albums/{{ album.Album_Picture }}" alt="{{ album.Album }}" width="50" height="50">
       </div>
-      <h4 class="album-text">
+      <span class="album-text">
         <a href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}">{{ album.Album }} ({{ album.Year }})</a>
-      </h4>
+      </span>
   </div>
-  <br/>
 
 {% endfor %}
