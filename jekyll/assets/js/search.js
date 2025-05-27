@@ -214,7 +214,7 @@ async function main(callback) {
                 }
             });
             const countOfAlexTrebek = tracksWithAlexTrebek.size;
-            console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
+            // console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
             return countOfAlexTrebek;
         }
         
