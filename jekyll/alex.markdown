@@ -14,4 +14,4 @@ Alex Trebek shows up in <span id="alex-count-span"><img src="{{ site.baseurl }}/
 
 ---
 
-Read more about Alex Trebek on [Wikipedia](https://en.wikipedia.org/wiki/Alex_Trebek)
+Read more about Alex Trebek on [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/wiki/Alex_Trebek_(person)) and [Wikipedia](https://en.wikipedia.org/wiki/Alex_Trebek)
