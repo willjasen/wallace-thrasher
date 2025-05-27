@@ -202,7 +202,7 @@ async function main(callback) {
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
-            const resultsForAlexTrebek = idxSpeaker.search("Alex Trebek");
+            const resultsForAlexTrebek = idxSpeaker.search("+Alex +Trebek");
             let tracksWithAlexTrebek = new Set();
             resultsForAlexTrebek.forEach(function (resultForAlex) {
                 const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
@@ -246,7 +246,6 @@ async function main(callback) {
                                 tracksWithSpeaker.add(key);
                                 const albumAndTitleItem = document.createElement('li');
                                 albumAndTitleItem.innerHTML = `
-                                    ${matchedDoc.Speaker} -- 
                                     <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                     ${matchedDoc.Album}
                                 `;
