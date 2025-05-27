@@ -4,6 +4,13 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.5.0
+
+- updated all known tracks (excluding themes) that include Alex Trebek
+- Alex Trebek's page now displays the tracks he is included in
+- updated the format of the Albums page
+- added link in the README and About page to [the lpc merch site at noisetent.com](http://noisetent.com/lpcmerchandise.htm)
+
 ### v1.4.1
 
 - updates to the README and About pages

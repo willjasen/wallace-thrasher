@@ -89,7 +89,7 @@ it is possible that some keys are not present in all tracks, but the necessary o
 
 ### 💽 JSON Structure for Track Subtitles 💽
 
-the JSON data for each track resides within a folder named as the respective album title's slug with the `/assets/json` folder
+the JSON data for each track resides within a folder named as the respective album title's slug within the `/assets/json` folder
 ```
 [
     {
@@ -153,16 +153,18 @@ the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-
 
 this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
 
-1. anyone may copy, modify, and distribute this software (throw it up and down)
-2. all distrubtions of this software must include the license and copyright notice always (otherwise you're gettin' a citation)
-3. anyone may use this software privately (even during a real hypnotic massage)
-4. anyone may use this software for commercial purposes (cave of the winds might find it useful)
-6. if changes are made to the code, those changes must be indicated (it better be real legible real quick)
-7. any and all modifications of this code base must without question be distributed with the same license, GPLv3 (don't make me kick my boots around)
-8. this software is provided without warranty (just like when those hubcaps came clean off the car)
-9. while it seems far out how such a case could arise, the software author or license can not be held liable for any damages inflicted by the software (or your lips will be inflicted with the sidewalk)
+1. anyone may copy, modify, and distribute this software *(throw it up and down)*
+2. all distrubtions of this software must include the license and copyright notice always *(otherwise you're gettin' a citation)*
+3. anyone may use this software privately *(even during a real hypnotic massage)*
+4. anyone may use this software for commercial purposes *(cave of the winds might find it useful)*
+6. if changes are made to the code, those changes must be indicated *(it better be real legible real quick)*
+7. any and all modifications of this code base must without question be distributed with the same license, GPLv3 *(don't make me kick my boots around)*
+8. this software is provided without warranty *(just like when those hubcaps came clean off the car)*
+9. while it seems far out how such a case could arise, the software author or license can not be held liable for any damages inflicted by the software *(or your lips will be inflicted with the sidewalk)*
 
-longmont potion castle exclusively retains all rights to his associated and respective works.
+longmont potion castle retains all rights to his associated and respective works
+
+if you enjoy the catalogue, please support the artist by purchasing merch from [the official website at noisetent.com](http://noisetent.com/lpcmerchandise.htm)
 
 ### 🤓 Technical Details 🤓
 

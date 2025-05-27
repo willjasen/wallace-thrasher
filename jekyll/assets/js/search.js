@@ -202,7 +202,7 @@ async function main(callback) {
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
-            const resultsForAlexTrebek = idxSpeaker.search("Alex");
+            const resultsForAlexTrebek = idxSpeaker.search("+Alex +Trebek");
             let tracksWithAlexTrebek = new Set();
             resultsForAlexTrebek.forEach(function (resultForAlex) {
                 const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
@@ -214,10 +214,51 @@ async function main(callback) {
                 }
             });
             const countOfAlexTrebek = tracksWithAlexTrebek.size;
-            console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
+            // console.log("Alex Trebek is found " + countOfAlexTrebek + " times.");
             return countOfAlexTrebek;
         }
         
+        // Function to programmatically run the speakers search for "Alex Trebek"
+        function runSpeakerSearchForAlexTrebek() {
+            let resultsContainer = document.querySelector('#alex-tracks-span');
+            if (!resultsContainer) {
+                // Only run on the Alex Trebek page
+                return;
+            }
+            let speakersSearchInput = document.querySelector('#speakers-search-input');
+            if (!speakersSearchInput) {
+                // Create a hidden input if it doesn't exist
+                speakersSearchInput = document.createElement('input');
+                speakersSearchInput.type = 'hidden';
+                speakersSearchInput.id = 'speakers-search-input';
+                document.body.appendChild(speakersSearchInput);
+                // Attach the event listener as in main()
+                speakersSearchInput.addEventListener('input', function () {
+                    if (this.value.trim() !== "") {
+                        const query = this.value.trim().split(' ').map(word => `+${word}`).join(' ');
+                        const results = idxSpeaker.search(query);
+                        resultsContainer.innerHTML = '';
+                        let tracksWithSpeaker = new Set();
+                        results.forEach(function (result) {
+                            const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                            const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                            if (!tracksWithSpeaker.has(key)) {
+                                tracksWithSpeaker.add(key);
+                                const albumAndTitleItem = document.createElement('li');
+                                albumAndTitleItem.innerHTML = `
+                                    <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                    ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
+                                `;
+                                resultsContainer.appendChild(albumAndTitleItem);
+                            }
+                        });
+                    }
+                });
+            }
+            speakersSearchInput.value = 'Alex Trebek';
+            speakersSearchInput.dispatchEvent(new Event('input'));
+        }
+
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
             fileMap = {};
@@ -376,12 +417,14 @@ async function main(callback) {
 
         function onDomContentLoaded() {
             const countOfAlexTrebek = getNumberOfTracksThatAlexTrebekIsIn();
-            const alexSpan = document.querySelector('#alex-count-span');
-            if (alexSpan) {
-                alexSpan.textContent = countOfAlexTrebek;
+            const alexCountSpan = document.querySelector('#alex-count-span');
+            if (alexCountSpan) {
+                alexCountSpan.textContent = countOfAlexTrebek;
             } else {
                 // console.error('Element with id "alex-count-span" not found.');
             }
+            // Display the results for Alex Trebek
+            runSpeakerSearchForAlexTrebek();
         }
         
         if (document.readyState === 'loading') {
