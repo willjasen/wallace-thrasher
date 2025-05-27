@@ -11,10 +11,14 @@ published: true
 - updated the format of the Albums page
 - added link in the README and About page to [the lpc merch site at noisetent.com](http://noisetent.com/lpcmerchandise.htm)
 
+---
+
 ### v1.4.1
 
 - updates to the README and About pages
 - minor fixes for "Drug Dumpling" (still needs a redo)
+
+---
 
 ### v1.4.0
 
