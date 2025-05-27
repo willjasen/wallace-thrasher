@@ -89,7 +89,7 @@ it is possible that some keys are not present in all tracks, but the necessary o
 
 ### 💽 JSON Structure for Track Subtitles 💽
 
-the JSON data for each track resides within a folder named as the respective album title's slug with the `/assets/json` folder
+the JSON data for each track resides within a folder named as the respective album title's slug within the `/assets/json` folder
 ```
 [
     {
