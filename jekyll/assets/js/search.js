@@ -252,11 +252,6 @@ async function main(callback) {
                                 resultsContainer.appendChild(albumAndTitleItem);
                             }
                         });
-                        const trackCount = tracksWithSpeaker.size;
-                        const totalCountContainer = document.createElement('div');
-                        totalCountContainer.style.marginBottom = '25px';
-                        totalCountContainer.innerHTML = `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
-                        resultsContainer.insertBefore(totalCountContainer, resultsContainer.firstChild);
                     }
                 });
             }
