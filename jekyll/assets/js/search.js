@@ -247,7 +247,7 @@ async function main(callback) {
                                 const albumAndTitleItem = document.createElement('li');
                                 albumAndTitleItem.innerHTML = `
                                     <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
-                                    ${matchedDoc.Album}
+                                    ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
                                 `;
                                 resultsContainer.appendChild(albumAndTitleItem);
                             }
