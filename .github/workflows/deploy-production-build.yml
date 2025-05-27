@@ -46,8 +46,9 @@ jobs:
       - name: Install dependencies
         run: |
           cd jekyll
-          gem install bundler
-          bundle install
+          BUNDLER_VERSION=$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xargs)
+          gem install bundler -v $BUNDLER_VERSION
+          bundle _${BUNDLER_VERSION}_ install
 
       # Build the Jekyll site with the baseurl set to ''
       - name: Build site for production
