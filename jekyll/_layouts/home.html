@@ -4,7 +4,14 @@ layout: page
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <div class="title-container">
+      <div class="logo">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="page-logo">
+      </div>
+      <div class="title">
+        <h1 class="page-heading">{{ page.title }}</h1>
+      </div>
+    </div>
   {%- endif -%}
 
   {% include albums.html %}
