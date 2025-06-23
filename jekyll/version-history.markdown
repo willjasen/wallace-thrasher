@@ -4,6 +4,12 @@ permalink: /version-history/
 published: true
 ---
 
+
+### v1.5.1
+
+- add link to Talkin'Whipapedia at the bottom of each album page
+
+
 ### v1.5.0
 
 - updated all known tracks (excluding themes) that include Alex Trebek
