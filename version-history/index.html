@@ -94,7 +94,8 @@
     }
   </style>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">stretchie</a><nav class="site-nav">
+  <div class="wrapper"><img src="/assets/img/icon.png" alt="Logo" class="page-logo" style="width: 25px; height: 25px;">
+    <a class="site-title" rel="author" href="/">stretchie</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -117,7 +118,19 @@
   </header>
 
   <div class="post-content">
-    <h3 id="v150">v1.5.0</h3>
+    <h3 id="v151">v1.5.1</h3>
+
+<ul>
+  <li>fix typo within page track data for “Circus Tickets” on LPC 1</li>
+  <li>add logo to site title (formatting isn’t the best yet)</li>
+  <li>add link to Talkin’Whipapedia at the bottom of each album page</li>
+  <li>add link to the new Discord server at the bottom of the page</li>
+  <li>send webhook to the new Discord server production builds</li>
+</ul>
+
+<hr />
+
+<h3 id="v150">v1.5.0</h3>
 
 <ul>
   <li>updated all known tracks (excluding themes) that include Alex Trebek</li>
@@ -126,12 +139,16 @@
   <li>added link in the README and About page to <a href="http://noisetent.com/lpcmerchandise.htm">the lpc merch site at noisetent.com</a></li>
 </ul>
 
+<hr />
+
 <h3 id="v141">v1.4.1</h3>
 
 <ul>
   <li>updates to the README and About pages</li>
   <li>minor fixes for “Drug Dumpling” (still needs a redo)</li>
 </ul>
+
+<hr />
 
 <h3 id="v140">v1.4.0</h3>
 
@@ -185,7 +202,7 @@
         <div id="buiid-time" style="font-size: smaller;">
           Built: 
           
-            5/27/25, 12:02 AM EDT
+            6/22/25, 10:33 PM EDT
           
         </div>
       </div>
@@ -197,9 +214,15 @@
           <img src="/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC
         </a>
       </div>
+    </div>
+    
+    <!-- Discord server link -->
+    <div style="text-align: center; margin-top: 1em;">
+      <a href="https://discord.gg/jjfQ25NJ" rel="noopener noreferrer" target="_blank">
+        Join the Discord server
+      </a>
+    </div>
 
-  </div>
-  
   <script>
     // Fetch latest GitHub tag
     fetch('https://api.github.com/repos/willjasen/wallace-thrasher/tags')
