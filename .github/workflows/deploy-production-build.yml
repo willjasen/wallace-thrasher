@@ -74,7 +74,7 @@ jobs:
       # Send a webhook to the Discord server upon completion
       - name: Send webhook notification to Discord server
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published stretchie  ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.DISCORD_SERVER_WEBHOOK_URL }}
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published stretchie ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.DISCORD_SERVER_WEBHOOK_URL }}
 
   # Deploy to IPFS
   #  - deploys to Storacha and Filebase
