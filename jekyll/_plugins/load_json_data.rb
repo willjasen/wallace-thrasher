@@ -16,11 +16,11 @@ module Jekyll
 
       if site.config['render_slowly']
         site.data['render_slowly'] = true
-        Dir.glob(File.join(json_dir, '**/*.json')) do |file|
-          data_key = File.basename(file, '.json')
-          json_data = parse_json_safely(File.read(file))
-          site.data[data_key] = json_data
-        end
+        # Dir.glob(File.join(json_dir, '**/*.json')) do |file|
+        #  data_key = File.basename(file, '.json')
+        #  json_data = parse_json_safely(File.read(file))
+        #  site.data[data_key] = json_data
+        # end
         data_file_path = File.join(json_dir, 'combined_data.json')
         puts "\e[32mLoading data from #{data_file_path}\e[0m"
 

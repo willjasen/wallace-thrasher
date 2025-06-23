@@ -4,6 +4,17 @@ permalink: /version-history/
 published: true
 ---
 
+
+### v1.5.1
+
+- fix typo within page track data for "Circus Tickets" on LPC 1
+- add logo to site title (formatting isn't the best yet)
+- add link to Talkin'Whipapedia at the bottom of each album page
+- add link to the new Discord server at the bottom of the page
+- send webhook to the new Discord server production builds
+
+---
+
 ### v1.5.0
 
 - updated all known tracks (excluding themes) that include Alex Trebek
@@ -11,10 +22,14 @@ published: true
 - updated the format of the Albums page
 - added link in the README and About page to [the lpc merch site at noisetent.com](http://noisetent.com/lpcmerchandise.htm)
 
+---
+
 ### v1.4.1
 
 - updates to the README and About pages
 - minor fixes for "Drug Dumpling" (still needs a redo)
+
+---
 
 ### v1.4.0
 
