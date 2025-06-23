@@ -8,6 +8,7 @@ published: true
 ### v1.5.1
 
 - fix typo within page track data for "Circus Tickets" on LPC 1
+- add logo to site title (formatting isn't the best yet)
 - add link to Talkin'Whipapedia at the bottom of each album page
 - send webhook to the new Discord server production builds
 
