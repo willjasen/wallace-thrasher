@@ -11,6 +11,7 @@ published: true
 - add link to Talkin'Whipapedia at the bottom of each album page
 - send webhook to the new Discord server production builds
 
+---
 
 ### v1.5.0
 
