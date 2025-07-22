@@ -9,6 +9,8 @@ published: true
 - fix the album page for "Where In The Hell Is The Lavender House Soundtrack (2018)"
 - a few various track updates
 
+---
+
 ### v1.5.1
 
 - fix typo within page track data for "Circus Tickets" on LPC 1
