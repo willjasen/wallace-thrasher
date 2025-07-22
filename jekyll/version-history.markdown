@@ -4,14 +4,18 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.5.2
+
+- fix the album page for "Where In The Hell Is The Lavender House Soundtrack (2018)"
+- a few various track updates
 
 ### v1.5.1
 
 - fix typo within page track data for "Circus Tickets" on LPC 1
 - add logo to site title (formatting isn't the best yet)
-- add link to Talkin'Whipapedia at the bottom of each album page
-- add link to the new Discord server at the bottom of the page
-- send webhook to the new Discord server production builds
+- add link to Talkin' Whipapedia at the bottom of each album page
+- add [link to the Discord server](https://discord.gg/jjfQ25NJ) at the bottom of the page
+- send webhook to the new Discord server after production builds
 
 ---
 
