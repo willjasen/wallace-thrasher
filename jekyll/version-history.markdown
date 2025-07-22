@@ -4,6 +4,10 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.5.2
+
+- fix the album page for "Where In The Hell Is The Lavender House Soundtrack (2018)"
+- a few various track updates
 
 ### v1.5.1
 
