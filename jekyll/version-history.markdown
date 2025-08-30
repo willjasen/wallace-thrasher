@@ -9,6 +9,8 @@ published: true
 - stretchie is now available via https://stretchie.net and https://stretchie.org
 - https://stretchie.net will now be the primary domain for the project
 
+---
+
 ### v1.5.2
 
 - fix the album page for "Where In The Hell Is The Lavender House Soundtrack (2018)"
