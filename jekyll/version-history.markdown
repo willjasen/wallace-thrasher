@@ -6,8 +6,8 @@ published: true
 
 ### v1.5.3
 
-- stretchie is now available via https://stretchie.net and https://stretchie.org
-- https://stretchie.net will now be the primary domain for the project
+- stretchie is now available via [https://stretchie.net](https://stretchie.net) and [https://stretchie.org](https://stretchie.org)
+- [https://stretchie.net](https://stretchie.net) will now be the primary domain for the project
 
 ---
 
