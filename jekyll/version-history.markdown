@@ -4,6 +4,12 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.5.4
+
+ - minor edits to typos
+
+---
+
 ### v1.5.3
 
 - stretchie is now available via [https://stretchie.net](https://stretchie.net) and [https://stretchie.org](https://stretchie.org)
