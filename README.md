@@ -171,7 +171,7 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 
 here are various badges related to this project's code and its deployments
 
-[![Deploy a Production Build](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml)
+[![Deploy a Production Build](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml) -- GitHub Action to publish the production website
 
 [![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
 
