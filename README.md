@@ -155,7 +155,7 @@ the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-
 this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
 
 1. anyone may copy, modify, and distribute this software *(throw it up and down)*
-2. all distrubtions of this software must include the license and copyright notice always *(otherwise you're gettin' a citation)*
+2. all distributions of this software must include the license and copyright notice always *(otherwise you're gettin' a citation)*
 3. anyone may use this software privately *(even during a real hypnotic massage)*
 4. anyone may use this software for commercial purposes *(cave of the winds might find it useful)*
 6. if changes are made to the code, those changes must be indicated *(it better be real legible real quick)*
