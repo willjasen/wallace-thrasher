@@ -23,6 +23,7 @@ there are three main features of various interests implemented:
 - its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track
 - its smart feature is that all of this aforementioned data is indexed so that search becomes possible
 - its neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
+- its thoughtful feature is that the website runs locally within the browser (there is no remote backend database that executes the searches)
 
 ### 📘 Backstory 📘
 
