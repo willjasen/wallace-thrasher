@@ -27,7 +27,7 @@ published: true
   {% for track in album.Tracks %}
       {% if track.Aliases and track.Aliases.size > 0 %}
           <li style="margin: 0px;">
-            Track {{ track.Track_Number }}: {{ track.Track_Title }}
+            Track {{ track.Track_Number }}: <a href="{{ site.baseurl }}/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
           </li>
           <ul style="padding: 0px;">
         {% for alias_used in track.Aliases %}
