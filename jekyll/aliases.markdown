@@ -26,22 +26,18 @@ published: true
   <ul style="padding: 0px;">
   {% for track in album.Tracks %}
       {% if track.Aliases and track.Aliases.size > 0 %}
+          <li style="margin: 0px;">
+            Track {{ track.Track_Number }}: {{ track.Track_Title }}
+          </li>
+          <ul style="padding: 0px;">
         {% for alias_used in track.Aliases %}
           <li style="margin: 0px;">
             {{ alias_used }}
           </li>
         {% endfor %}
+        </ul>
       {% endif %}
   {% endfor %}
   </ul>
-
+  
 {% endfor %}
-
-{% if track_needs_review.size == 0 %}
-  <p style="text-align: center;">All tracks are reviewed and up to date!</p>
-{% endif %}
-
-
-  
-  
- 
