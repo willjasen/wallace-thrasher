@@ -177,6 +177,35 @@ async function loadData() {
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
+        // Build a track-level establishments index
+        function buildTrackEstablishmentIndex() {
+            let trackDocs = [];
+            let rawData = null;
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
+            xhr.send(null);
+            if (xhr.status === 200) {
+                rawData = JSON.parse(xhr.responseText);
+            }
+            if (rawData && rawData.Albums) {
+                rawData.Albums.forEach(album => {
+                    album.Tracks.forEach(track => {
+                        trackDocs.push({
+                            id: `${album.Album}|||${track.Track_Title}`,
+                            Album: album.Album,
+                            Album_Slug: album.Album_Slug,
+                            Track_Title: track.Track_Title,
+                            Track_Slug: track.Track_Slug,
+                            Establishments: (Array.isArray(track.Establishments) ? track.Establishments.join(', ') : (track.Establishments || '')),
+                            Album_Picture: album.Album_Picture
+                        });
+                    });
+                });
+            }
+            return trackDocs;
+        }
+
+        const trackEstablishmentDocs = buildTrackEstablishmentIndex();
     try {
         var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData();
@@ -500,6 +529,41 @@ async function main(callback) {
                 const totalCountContainer = document.createElement('div');
                 totalCountContainer.style.marginBottom = '25px';
                 totalCountContainer.innerHTML = `<br/><p>Unique track-alias combinations: ${matchCount}</p>`;
+                resultList.insertBefore(totalCountContainer, resultList.firstChild);
+            });
+        }
+
+        // Set up the establishments search input listener
+        if (document.querySelector('#establishments-search-input')) {
+            document.querySelector('#establishments-search-input').addEventListener('input', function () {
+                const query = this.value.trim().toLowerCase();
+                const resultList = document.querySelector('#establishments-search-results');
+                resultList.innerHTML = '';
+                if (query === "") return;
+
+                let tracksWithEstablishments = new Set();
+                let matchCount = 0;
+                trackEstablishmentDocs.forEach(function (doc) {
+                    const establishmentsStr = (doc.Establishments || '').toLowerCase();
+                    if (establishmentsStr.includes(query)) {
+                        const key = `${doc.Album}|||${doc.Track_Title}`;
+                        if (!tracksWithEstablishments.has(key)) {
+                            tracksWithEstablishments.add(key);
+                            matchCount++;
+                            const albumAndTitleItem = document.createElement('li');
+                            albumAndTitleItem.innerHTML = `
+                                <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
+                                <i><a href="${BASE_URL}/tracks/${doc.Album_Slug}/${doc.Track_Slug}">${doc.Track_Title}</a></i> --
+                                <b>Establishments:</b> ${doc.Establishments ? doc.Establishments : '<em>None</em>'} --
+                                ${doc.Album}
+                            `;
+                            resultList.appendChild(albumAndTitleItem);
+                        }
+                    }
+                });
+                const totalCountContainer = document.createElement('div');
+                totalCountContainer.style.marginBottom = '25px';
+                totalCountContainer.innerHTML = `<br/><p>Unique track-establishment combinations: ${matchCount}</p>`;
                 resultList.insertBefore(totalCountContainer, resultList.firstChild);
             });
         }

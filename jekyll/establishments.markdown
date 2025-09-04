@@ -5,6 +5,25 @@ permalink: /establishments/
 published: true
 ---
 
+{%- include load-search-with-progress.html -%}
+
+<input type="text" id="establishments-search-input" placeholder="Search...">
+  <ul id="establishments-search-results"></ul>
+
+<style>
+  .loader {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .loader input,
+  .loader ul {
+    opacity: 1 !important;
+  }
+</style>
+
+<hr/>
+
 <style>
 
   .album-info {
