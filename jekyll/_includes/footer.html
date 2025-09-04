@@ -33,7 +33,7 @@
             <span id="tag-display"></span>
           </a>
         </div>
-        <div id="buiid-time" style="font-size: smaller;">
+        <div id="build-time" style="font-size: smaller;">
           Built: 
           {% if jekyll.environment != "production" %}
             {{ site.time | date: '%-m/%-d/%y, %-I:%M:%S %p %Z' }}
@@ -41,7 +41,14 @@
             {{ site.time | date: '%-m/%-d/%y, %-I:%M %p %Z' }}
           {% endif %}
         </div>
+        <!-- Discord server link -->
+        <div id="discord-link" style="font-size: smaller;">
+          <a href="https://discord.gg/jjfQ25NJ" rel="noopener noreferrer" target="_blank">
+            join the discord server
+          </a>
+        </div>
       </div>
+      
 
       {% if jekyll.environment != "production" %}
         <div class="footer-col footer-col-2" style="text-align: center;">
@@ -60,13 +67,6 @@
           <img src="{{ site.baseurl }}/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC
         </a>
       </div>
-    </div>
-    
-    <!-- Discord server link -->
-    <div style="text-align: center; margin-top: 1em;">
-      <a href="https://discord.gg/jjfQ25NJ" rel="noopener noreferrer" target="_blank">
-        Join the Discord server
-      </a>
     </div>
 
   <script>
