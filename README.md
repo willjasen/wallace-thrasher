@@ -21,6 +21,7 @@ there are three main features of various interests implemented:
 - its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track
 - its smart feature is that all of this aforementioned data is indexed so that search becomes possible
 - its neat feature is that the lpc usb collection can be uploaded into the site and then tracks can be easily played, as well as one can jump into a track at the point of when a certain subtitle line is spoken.
+- its thoughtful feature is that the website runs locally within the browser (there is no remote backend database that executes the searches)
 
 ### 📘 Backstory 📘
 
@@ -154,7 +155,7 @@ the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-
 this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
 
 1. anyone may copy, modify, and distribute this software *(throw it up and down)*
-2. all distrubtions of this software must include the license and copyright notice always *(otherwise you're gettin' a citation)*
+2. all distributions of this software must include the license and copyright notice always *(otherwise you're gettin' a citation)*
 3. anyone may use this software privately *(even during a real hypnotic massage)*
 4. anyone may use this software for commercial purposes *(cave of the winds might find it useful)*
 6. if changes are made to the code, those changes must be indicated *(it better be real legible real quick)*
@@ -170,7 +171,7 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 
 here are various badges related to this project's code and its deployments
 
-[![Deploy a Production Build](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml)
+[![Deploy a Production Build](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml) -- GitHub Action to publish the production website
 
 [![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
 

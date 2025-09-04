@@ -4,10 +4,19 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.5.4
+
+ - fix the index page layout by creating a redirect to another page
+ - minor edits to typos
+
+---
+
 ### v1.5.3
 
-- stretchie is now available via https://stretchie.net and https://stretchie.org
-- https://stretchie.net will now be the primary domain for the project
+- stretchie is now available via [https://stretchie.net](https://stretchie.net) and [https://stretchie.org](https://stretchie.org)
+- [https://stretchie.net](https://stretchie.net) will now be the primary domain for the project
+
+---
 
 ### v1.5.2
 
