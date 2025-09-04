@@ -5,6 +5,25 @@ permalink: /aliases/
 published: true
 ---
 
+{%- include load-search-with-progress.html -%}
+
+<input type="text" id="aliases-search-input" placeholder="Search...">
+  <ul id="aliases-search-results"></ul>
+
+<style>
+  .loader {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .loader input,
+  .loader ul {
+    opacity: 1 !important;
+  }
+</style>
+
+<hr/>
+
 <style>
 
   .album-info {
