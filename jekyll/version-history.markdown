@@ -6,6 +6,7 @@ published: true
 
 ### v1.5.4
 
+ - fix the index page layout by creating a redirect to another page
  - minor edits to typos
 
 ---
