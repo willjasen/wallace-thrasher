@@ -1,14 +1,44 @@
 <html>
  <head>
      <meta charset="utf-8"/>
-     <meta http-equiv="refresh" content="1;url=/albums"/>
-     <link rel="canonical" href="/albums"/>
+     <!-- Dynamically build the redirect URL to support non-root deployments -->
      <script type="text/javascript">
-             window.location.href = "/albums"
+         (function() {
+             var redirectPath = "/albums";
+             // Remove leading slash if present
+             if (redirectPath.charAt(0) === '/') {
+                 redirectPath = redirectPath.substring(1);
+             }
+             // Build the new URL based on current location
+             var base = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
+             var newUrl = base.replace(/\/$/, '') + '/' + redirectPath;
+             // Set canonical and meta refresh dynamically
+             var link = document.createElement('link');
+             link.rel = 'canonical';
+             link.href = newUrl;
+             document.head.appendChild(link);
+             var meta = document.createElement('meta');
+             meta.httpEquiv = 'refresh';
+             meta.content = '1;url=' + newUrl;
+             document.head.appendChild(meta);
+             // Redirect
+             window.location.replace(newUrl);
+         })();
      </script>
      <title>Page Redirection</title>
  </head>
  <body>
- If you are not redirected automatically, follow <a href='/albums'>this link</a>.
+ If you are not redirected automatically, follow <a id="manual-redirect-link" href="#">this link</a>.
+ <script type="text/javascript">
+     (function() {
+         var redirectPath = "/albums";
+         if (redirectPath.charAt(0) === '/') {
+             redirectPath = redirectPath.substring(1);
+         }
+         var base = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
+         var newUrl = base.replace(/\/$/, '') + '/' + redirectPath;
+         document.getElementById('manual-redirect-link').href = newUrl;
+     })();
+ </script>
  </body>
  </html>
