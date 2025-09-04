@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Version History
 permalink: /version-history/
 published: true
 ---
