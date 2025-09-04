@@ -71,12 +71,12 @@ published: true
             Track {{ track.Track_Number }}: <a href="{{ site.baseurl }}/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
           </li>
           <ul>
-        {% for alias_used in track.Aliases %}
-          <li style="margin: 0px;">
-            {{ alias_used }}
-          </li>
-        {% endfor %}
-        </ul>
+            {% for alias_used in track.Aliases %}
+              <li style="margin: 0px;">
+                {{ alias_used }}
+              </li>
+            {% endfor %}
+          </ul> 
       {% endif %}
   {% endfor %}
   </ul>

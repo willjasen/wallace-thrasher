@@ -69,14 +69,14 @@ published: true
       {% if track.Establishments and track.Establishments.size > 0 %}
           <li style="margin: 0px;">
             Track {{ track.Track_Number }}: <a href="{{ site.baseurl }}/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
-          </li>
+          </li>  
           <ul>
-        {% for establishment_used in track.Establishments %}
-          <li style="margin: 0px;">
-            {{ establishment_used }}
-          </li>
-        {% endfor %}
-        </ul>
+            {% for establishment_used in track.Establishments %}
+              <li style="margin: 0px;">
+                {{ establishment_used }}
+              </li>
+            {% endfor %}
+          </ul>
       {% endif %}
   {% endfor %}
   </ul>
