@@ -4,6 +4,13 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.6.0
+
+ - add pages for Aliases and Establishments and their searching thereof
+ - better the layout for the tracks list of each album on the "Track Review" page
+
+---
+
 ### v1.5.4
 
  - fix the index page layout by creating a redirect to another page
