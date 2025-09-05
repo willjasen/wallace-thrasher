@@ -54,6 +54,16 @@
   justify-content: center;
 }
 
+/* Ensure menu-icon only shows SVG, no unwanted glyphs */
+.menu-icon {
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+.menu-icon svg {
+  display: block;
+}
+
 .site-header .site-branding {
   display: flex;
   align-items: center;
