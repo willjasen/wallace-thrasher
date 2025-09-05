@@ -8,6 +8,7 @@ permalink: /speakers/
 
 <input type="text" id="speakers-search-input" placeholder="Search...">
   <ul id="speakers-search-results"></ul>
+<link rel="stylesheet" href="/assets/css/search-box.css">  
 
 <style>
   .loader {

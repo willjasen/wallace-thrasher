@@ -9,6 +9,7 @@ published: true
 
 <input type="text" id="aliases-search-input" placeholder="Search...">
   <ul id="aliases-search-results"></ul>
+<link rel="stylesheet" href="/assets/css/search-box.css">
 
 <style>
   .loader {
