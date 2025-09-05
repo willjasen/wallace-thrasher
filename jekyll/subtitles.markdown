@@ -11,4 +11,4 @@ permalink: /subtitles/
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="subtitles-search-results"></ul>
-<link rel="stylesheet" href="/assets/css/search-box.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
