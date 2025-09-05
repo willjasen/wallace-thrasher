@@ -1,0 +1,140 @@
+/* Nav menu list styles */
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list .page-link {
+    margin: 0;
+    padding: 3px 5px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.nav-list .page-link:hover {
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 600px) {
+  .site-header .site-nav .trigger {
+    width: 100%;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .nav-list li {
+    width: 100%;
+    display: block;
+  }
+  .nav-list .page-link {
+    display: block;
+    width: 100%;
+    padding: 3px 4px;
+    border-bottom: 1px solid #eee;
+  }
+}
+/* Custom header centering styles */
+.site-header .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure menu-icon only shows SVG, no unwanted glyphs */
+.menu-icon {
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  width: 18px;
+  height: 15px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-icon svg {
+  display: block;
+  margin: auto;
+  width: 18px;
+  height: 15px;
+  align-self: center;
+}
+
+.site-header .site-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.site-header .page-logo {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0;
+}
+
+.site-header .site-title {
+  display: block;
+  text-align: left;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.site-header .site-nav {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Mobile nav collapse styles */
+@media screen and (max-width: 600px) {
+  .site-header .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-header .site-branding {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+  .site-header .site-nav {
+    text-align: right;
+    margin-top: 0;
+  }
+  .site-header .site-nav .trigger {
+    display: none;
+  }
+  .site-header .nav-trigger:checked ~ label ~ .trigger {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .site-header .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-header .site-branding {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+  .site-header .site-nav {
+    text-align: right;
+    margin-top: 0;
+  }
+}

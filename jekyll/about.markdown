@@ -27,7 +27,7 @@ there are three main features of various interests implemented:
 
 ### 📘 Backstory 📘
 
-some time ago, i wanted to know one question - how many calls does alex trebek show up in throughout the discography of lpc?
+some time ago, i wanted to know one question - how many calls does [alex trebek]({{ site.baseurl }}/alex-trebek) show up in throughout the discography of lpc?
 
 there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
@@ -177,7 +177,7 @@ here are various badges related to this project's code and its deployments
 
 [![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- deployment status to Netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- production deployment status to Netlify
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- when last committed to GitHub
 

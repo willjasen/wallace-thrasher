@@ -4,7 +4,7 @@ Most of the assistance needed to make this project work better involves reviewin
 
 To discuss, offer ideas, or give feedback, please use the [Discussions tab on GitHub](https://github.com/willjasen/wallace-thrasher/discussions)
 
-If you would like to contribute to updating speakers & subtitles:
+If you would like to contribute to updating speakers, subtitles, aliases, and establishments:
 
  - create a [fork](https://github.com/willjasen/wallace-thrasher/fork) of this project
  - make and save the appropriate changes within your fork

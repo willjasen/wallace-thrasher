@@ -1,0 +1,12 @@
+/* Footer layout for side-by-side columns */
+.footer-col-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}

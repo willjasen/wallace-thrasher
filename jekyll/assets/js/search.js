@@ -104,6 +104,7 @@ async function loadData() {
                                     Track_Slug: track.Track_Slug,
                                     Track_Subtitles: track.Subtitles,
                                     Track_Title: track.Track_Title,
+                                    Aliases: track.Aliases,
                                     Speaker: subtitle.Speaker,
                                     Text: subtitle.Text,
                                     StartTime: subtitle["Start Time"],
@@ -176,6 +177,44 @@ async function loadData() {
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
+        // Build a track-level establishments index
+        function buildTrackEstablishmentIndex() {
+            let startTimeInMilliseconds = Date.now();
+            let trackDocs = [];
+            let rawData = null;
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    rawData = JSON.parse(xhr.responseText);
+                }
+            };
+            xhr.onerror = function () {
+                console.error('Error fetching data.json');
+            };
+            xhr.send(null);
+            if (rawData && rawData.Albums) {
+                rawData.Albums.forEach(album => {
+                    album.Tracks.forEach(track => {
+                        trackDocs.push({
+                            id: `${album.Album}|||${track.Track_Title}`,
+                            Album: album.Album,
+                            Album_Slug: album.Album_Slug,
+                            Track_Title: track.Track_Title,
+                            Track_Slug: track.Track_Slug,
+                            Establishments: (Array.isArray(track.Establishments) ? track.Establishments.join(', ') : (track.Establishments || '')),
+                            Album_Picture: album.Album_Picture
+                        });
+                    });
+                });
+            }
+            let endTimeInMilliseconds = Date.now();
+            console.log("Building track establishments index took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            return trackDocs;
+        }
+
+        const trackEstablishmentDocs = buildTrackEstablishmentIndex();
+        
     try {
         var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData();
@@ -188,17 +227,69 @@ async function main(callback) {
                 this.field(indexField);
 
                 dataStructure.forEach(function (doc) {
+                    if (indexField === 'Aliases') {
+                        if (!doc.Aliases || (Array.isArray(doc.Aliases) && doc.Aliases.length === 0)) {
+                            doc.Aliases = '';
+                        } else if (Array.isArray(doc.Aliases)) {
+                            doc.Aliases = doc.Aliases.join(', ');
+                        }
+                    }
                     this.add(doc);
                 }, this);
             });
             let endTimeInMilliseconds = Date.now();
             console.log("Indexing " + indexField + " took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
             return idx;
-        };
+        }
 
-        // Create the search indexes
         const idxText = indexOnField('Text');
         const idxSpeaker = indexOnField('Speaker');
+
+        // Build a track-level alias index
+        function buildTrackAliasIndex() {
+            // We'll scan the original data structure to find all unique tracks and their Aliases
+            // To do this, we need to reload the original JSON (not subtitle-level docs)
+            // We'll fetch the data again, but only for this index
+            // This is a workaround for the current data flow
+            // If you want to optimize, refactor to keep the original album/track structure in memory
+            let trackDocs = [];
+            // Try to get the original data from the same source as loadData
+            // This assumes BASE_URL and data.json are available
+            // We'll use a synchronous XHR for simplicity (since this is only for index build)
+            let rawData = null;
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
+            xhr.send(null);
+            if (xhr.status === 200) {
+                rawData = JSON.parse(xhr.responseText);
+            }
+            if (rawData && rawData.Albums) {
+                rawData.Albums.forEach(album => {
+                    album.Tracks.forEach(track => {
+                        trackDocs.push({
+                            id: `${album.Album}|||${track.Track_Title}`,
+                            Album: album.Album,
+                            Album_Slug: album.Album_Slug,
+                            Track_Title: track.Track_Title,
+                            Track_Slug: track.Track_Slug,
+                            Aliases: (Array.isArray(track.Aliases) ? track.Aliases.join(', ') : (track.Aliases || '')),
+                            Album_Picture: album.Album_Picture
+                        });
+                    });
+                });
+            }
+            const idx = lunr(function () {
+                this.ref('id');
+                this.field('Aliases');
+                this.field('Track_Title');
+                trackDocs.forEach(function (doc) {
+                    this.add(doc);
+                }, this);
+            });
+            return { idx, trackDocs };
+        }
+
+        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex();
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
@@ -415,6 +506,77 @@ async function main(callback) {
             });
         }
 
+        // Set up the aliases search input listener
+        if (document.querySelector('#aliases-search-input')) {
+            document.querySelector('#aliases-search-input').addEventListener('input', function () {
+                const query = this.value.trim().toLowerCase();
+                const resultList = document.querySelector('#aliases-search-results');
+                resultList.innerHTML = '';
+                if (query === "") return;
+
+                let tracksWithAliases = new Set();
+                let matchCount = 0;
+                trackAliasDocs.forEach(function (doc) {
+                    // Lowercase aliases for case-insensitive search
+                    const aliasesStr = (doc.Aliases || '').toLowerCase();
+                    if (aliasesStr.includes(query)) {
+                        const key = `${doc.Album}|||${doc.Track_Title}`;
+                        if (!tracksWithAliases.has(key)) {
+                            tracksWithAliases.add(key);
+                            matchCount++;
+                            const albumAndTitleItem = document.createElement('li');
+                            albumAndTitleItem.innerHTML = `
+                                <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
+                                <i><a href="${BASE_URL}/tracks/${doc.Album_Slug}/${doc.Track_Slug}">${doc.Track_Title}</a></i> --
+                                <b>Aliases:</b> ${doc.Aliases ? doc.Aliases : '<em>None</em>'} --
+                                ${doc.Album}
+                            `;
+                            resultList.appendChild(albumAndTitleItem);
+                        }
+                    }
+                });
+                const totalCountContainer = document.createElement('div');
+                totalCountContainer.style.marginBottom = '25px';
+                totalCountContainer.innerHTML = `<br/><p>Unique track-alias combinations: ${matchCount}</p>`;
+                resultList.insertBefore(totalCountContainer, resultList.firstChild);
+            });
+        }
+
+        // Set up the establishments search input listener
+        if (document.querySelector('#establishments-search-input')) {
+            document.querySelector('#establishments-search-input').addEventListener('input', function () {
+                const query = this.value.trim().toLowerCase();
+                const resultList = document.querySelector('#establishments-search-results');
+                resultList.innerHTML = '';
+                if (query === "") return;
+
+                let tracksWithEstablishments = new Set();
+                let matchCount = 0;
+                trackEstablishmentDocs.forEach(function (doc) {
+                    const establishmentsStr = (doc.Establishments || '').toLowerCase();
+                    if (establishmentsStr.includes(query)) {
+                        const key = `${doc.Album}|||${doc.Track_Title}`;
+                        if (!tracksWithEstablishments.has(key)) {
+                            tracksWithEstablishments.add(key);
+                            matchCount++;
+                            const albumAndTitleItem = document.createElement('li');
+                            albumAndTitleItem.innerHTML = `
+                                <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
+                                <i><a href="${BASE_URL}/tracks/${doc.Album_Slug}/${doc.Track_Slug}">${doc.Track_Title}</a></i> --
+                                <b>Establishments:</b> ${doc.Establishments ? doc.Establishments : '<em>None</em>'} --
+                                ${doc.Album}
+                            `;
+                            resultList.appendChild(albumAndTitleItem);
+                        }
+                    }
+                });
+                const totalCountContainer = document.createElement('div');
+                totalCountContainer.style.marginBottom = '25px';
+                totalCountContainer.innerHTML = `<br/><p>Unique track-establishment combinations: ${matchCount}</p>`;
+                resultList.insertBefore(totalCountContainer, resultList.firstChild);
+            });
+        }
+
         function onDomContentLoaded() {
             const countOfAlexTrebek = getNumberOfTracksThatAlexTrebekIsIn();
             const alexCountSpan = document.querySelector('#alex-count-span');
@@ -451,10 +613,18 @@ async function main(callback) {
 var dataLoaded = false;
 let albumDataLoadedPercentage = 0;
 let trackDataLoadedPercentage = 0;
+
+// Disable all search inputs on page load
+document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
+    .forEach(input => input && (input.disabled = true));
+
 // Call the generalized function after data is loaded
 main(function(dataReady) {
-    if (dataReady) {
-        dataLoaded = dataReady;
-        handleSearchParameter();
-    }
+        if (dataReady) {
+                dataLoaded = dataReady;
+                // Enable all search inputs
+                document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
+                    .forEach(input => input && (input.disabled = false));
+                handleSearchParameter();
+        }
 });
