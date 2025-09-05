@@ -1,4 +1,5 @@
 /* Nav menu list styles */
+
 .nav-list {
   list-style: none;
   margin: 0;
@@ -13,12 +14,12 @@
 }
 
 .nav-list .page-link {
-  margin: 0;
-  padding: 8px 12px;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 4px;
-  transition: background 0.2s;
+    margin: 0;
+    padding: 3px 5px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 4px;
+    transition: background 0.2s;
 }
 
 .nav-list .page-link:hover {
@@ -26,9 +27,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  .site-header .site-nav .trigger {
+    width: 100%;
+  }
   .nav-list {
     flex-direction: column;
     gap: 0;
+    width: 100%;
   }
   .nav-list li {
     width: 100%;
