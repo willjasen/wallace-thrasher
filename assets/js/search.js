@@ -610,10 +610,18 @@ async function main(callback) {
 var dataLoaded = false;
 let albumDataLoadedPercentage = 0;
 let trackDataLoadedPercentage = 0;
+
+// Disable all search inputs on page load
+document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
+    .forEach(input => input && (input.disabled = true));
+
 // Call the generalized function after data is loaded
 main(function(dataReady) {
-    if (dataReady) {
-        dataLoaded = dataReady;
-        handleSearchParameter();
-    }
+        if (dataReady) {
+                dataLoaded = dataReady;
+                // Enable all search inputs
+                document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
+                    .forEach(input => input && (input.disabled = false));
+                handleSearchParameter();
+        }
 });
