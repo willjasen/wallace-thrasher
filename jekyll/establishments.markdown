@@ -5,10 +5,12 @@ permalink: /establishments/
 published: true
 ---
 
-{%- include load-search-with-progress.html -%}
 
-<input type="text" id="establishments-search-input" placeholder="Search...">
-  <ul id="establishments-search-results"></ul>
+<div class="search-flex-row">
+  <input type="text" id="establishments-search-input" placeholder="Search...">
+  {%- include load-search-with-progress.html -%}
+</div>
+<ul id="establishments-search-results"></ul>
 <link rel="stylesheet" href="/assets/css/search-box.css">
 
 <style>
