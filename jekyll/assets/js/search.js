@@ -184,10 +184,15 @@ async function main(callback) {
             let rawData = null;
             const xhr = new XMLHttpRequest();
             xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    rawData = JSON.parse(xhr.responseText);
+                }
+            };
+            xhr.onerror = function () {
+                console.error('Error fetching data.json');
+            };
             xhr.send(null);
-            if (xhr.status === 200) {
-                rawData = JSON.parse(xhr.responseText);
-            }
             if (rawData && rawData.Albums) {
                 rawData.Albums.forEach(album => {
                     album.Tracks.forEach(track => {
