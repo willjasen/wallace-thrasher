@@ -41,48 +41,12 @@
 
   <!-- <script src="/assets/js/theme-toggle.js"></script> -->
   <script src="/wallace-thrasher/assets/js/nav-menu.js"></script>
-  <style>
-    /* screen less than 'max-width' hides header page links */
-    @media screen and (max-width: 600px) {
-      .site-nav {
-        position: absolute;
-        top: 9px;
-        right: 15px;
-        border-radius: 5px;
-        text-align: right;
-        z-index: 1000;
-      }
-      
-      .site-nav .menu-icon {
-        display: block !important;
-      }
-      
-      .site-nav .trigger {
-        clear: both;
-        display: none;
-      }
-      
-      .site-nav input:checked ~ .trigger {
-        display: block;
-        padding-bottom: 5px;
-      }
-      
-      .site-nav .page-link {
-        display: block;
-        padding: 0px 0px;
-        margin-left: 20px;
-      }
-    }
+  <link rel="stylesheet" href="/wallace-thrasher/assets/css/header-center.css">
 
-    span.menu-icon::before {
-      content: none !important;
-      background: none !important;
-      display: none !important;
-    }
-  </style>
-
-  <div class="wrapper"><img src="/wallace-thrasher/assets/img/icon.png" alt="Logo" class="page-logo" style="width: 25px; height: 25px;">
-    <a class="site-title" rel="author" href="/wallace-thrasher/">stretchie</a><nav class="site-nav">
+  <div class="wrapper"><div class="site-branding">
+      <img src="/wallace-thrasher/assets/img/icon.png" alt="Logo" class="page-logo">
+      <a class="site-title" rel="author" href="/wallace-thrasher/">stretchie</a>
+    </div><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -105,7 +69,47 @@
   </header>
 
   <div class="post-content">
-    <style>
+    <script src="/wallace-thrasher/assets/js/lunr.js" integrity="sha256-icIor2ifjq4/O1GRu/ZJ8Pm2S4BClvYURbR3fneCLPs=" crossorigin="anonymous"></script>
+
+<script src="/wallace-thrasher/assets/js/search.js"></script>
+
+<script type="javascript">
+  document.getElementById('search_result').innerHTML = idx.search("bright");
+</script>
+
+<div id="status">
+  <img src="/wallace-thrasher/assets/img/loading.gif" id="statusImage" width="25" height="25" /> 
+  <span>Data is loading... <span id="statusPercentage">0%</span></span>
+  <script>
+    var intervalId = setInterval(function() {
+      document.getElementById('statusPercentage').textContent = trackDataLoadedPercentage.toFixed(1) + '%';
+      if (dataLoaded) {
+        clearInterval(intervalId);
+        console.log("Data has been loaded!");
+        document.getElementById('status').innerHTML = "<img src=\"/wallace-thrasher/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
+        document.getElementById('status').innerHTML += " Data has been loaded!";
+      }
+    }, 100); // Check every 100ms
+  </script>
+</div>
+<p><input type="text" id="aliases-search-input" placeholder="Search..." /></p>
+<ul id="aliases-search-results"></ul>
+
+<style>
+  .loader {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .loader input,
+  .loader ul {
+    opacity: 1 !important;
+  }
+</style>
+
+<hr />
+
+<style>
 
   .album-info {
     display: flex;
@@ -473,16 +477,16 @@
             Track 15: <a href="/wallace-thrasher/tracks/longmont-potion-castle-iii/rope">Rope</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Dan Limon
-          </li>
-        
-          <li style="margin: 0px;">
-            Lloyd Wabbit
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Dan Limon
+              </li>
+            
+              <li style="margin: 0px;">
+                Lloyd Wabbit
+              </li>
+            
+          </ul> 
       
   
       
@@ -1103,12 +1107,12 @@
             Track 17: <a href="/wallace-thrasher/tracks/longmont-potion-castle-11/trebeks-pouch">Trebeks Pouch</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Dusty
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Dusty
+              </li>
+            
+          </ul> 
       
   
       
@@ -1120,16 +1124,16 @@
             Track 20: <a href="/wallace-thrasher/tracks/longmont-potion-castle-11/blueberry-bag">Blueberry Bag</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Schneider Webb
-          </li>
-        
-          <li style="margin: 0px;">
-            Wade Webb
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Schneider Webb
+              </li>
+            
+              <li style="margin: 0px;">
+                Wade Webb
+              </li>
+            
+          </ul> 
       
   
   </ul>
@@ -1162,24 +1166,24 @@
             Track 5: <a href="/wallace-thrasher/tracks/longmont-potion-castle-12/lpc-12-medley-1">LPC 12 Medley 1</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Dickie Lipton
-          </li>
-        
-          <li style="margin: 0px;">
-            Frederick Frick
-          </li>
-        
-          <li style="margin: 0px;">
-            Chaplin Crab Tree
-          </li>
-        
-          <li style="margin: 0px;">
-            Wallet-Sized Wildfire
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Dickie Lipton
+              </li>
+            
+              <li style="margin: 0px;">
+                Frederick Frick
+              </li>
+            
+              <li style="margin: 0px;">
+                Chaplin Crab Tree
+              </li>
+            
+              <li style="margin: 0px;">
+                Wallet-Sized Wildfire
+              </li>
+            
+          </ul> 
       
   
       
@@ -1193,20 +1197,20 @@
             Track 9: <a href="/wallace-thrasher/tracks/longmont-potion-castle-12/lpc-12-medley-2">LPC 12 Medley 2</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Down 'n' Dirty Rufus
-          </li>
-        
-          <li style="margin: 0px;">
-            Carl
-          </li>
-        
-          <li style="margin: 0px;">
-            Schlobo
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Down 'n' Dirty Rufus
+              </li>
+            
+              <li style="margin: 0px;">
+                Carl
+              </li>
+            
+              <li style="margin: 0px;">
+                Schlobo
+              </li>
+            
+          </ul> 
       
   
       
@@ -1232,12 +1236,12 @@
             Track 20: <a href="/wallace-thrasher/tracks/longmont-potion-castle-12/alaska-shakes">Alaska Shakes</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Chaplain Schumacher
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Chaplain Schumacher
+              </li>
+            
+          </ul> 
       
   
   </ul>
@@ -1304,24 +1308,24 @@
             Track 3: <a href="/wallace-thrasher/tracks/longmont-potion-castle-14/historical-hair-2">Historical Hair 2</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Farny
-          </li>
-        
-          <li style="margin: 0px;">
-            Cindy
-          </li>
-        
-          <li style="margin: 0px;">
-            Becky
-          </li>
-        
-          <li style="margin: 0px;">
-            Dick
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Farny
+              </li>
+            
+              <li style="margin: 0px;">
+                Cindy
+              </li>
+            
+              <li style="margin: 0px;">
+                Becky
+              </li>
+            
+              <li style="margin: 0px;">
+                Dick
+              </li>
+            
+          </ul> 
       
   
       
@@ -1434,12 +1438,12 @@
             Track 3: <a href="/wallace-thrasher/tracks/longmont-potion-castle-16/ups-trebek">UPS Trebek</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Barbarella
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Barbarella
+              </li>
+            
+          </ul> 
       
   
       
@@ -1566,12 +1570,12 @@
             Track 1: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/lpc-18-medley">LPC 18 Medley</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Benson
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Benson
+              </li>
+            
+          </ul> 
       
   
       
@@ -1583,16 +1587,16 @@
             Track 4: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/ups-assault">UPS Assault</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Ned Strange
-          </li>
-        
-          <li style="margin: 0px;">
-            Winchell
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Ned Strange
+              </li>
+            
+              <li style="margin: 0px;">
+                Winchell
+              </li>
+            
+          </ul> 
       
   
       
@@ -1600,12 +1604,12 @@
             Track 5: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/magnifying-glass">Magnifying Glass</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Elmer Whip
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Elmer Whip
+              </li>
+            
+          </ul> 
       
   
       
@@ -1617,12 +1621,12 @@
             Track 8: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/card-collector">Card Collector</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Stu
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Stu
+              </li>
+            
+          </ul> 
       
   
       
@@ -1638,12 +1642,12 @@
             Track 13: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/survey-by-hooter">Survey By Hooter</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Hooter
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Hooter
+              </li>
+            
+          </ul> 
       
   
       
@@ -1724,12 +1728,12 @@
             Track 3: <a href="/wallace-thrasher/tracks/longmont-potion-castle-20/holographic-rocco">Holographic Rocco</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Rocco
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Rocco
+              </li>
+            
+          </ul> 
       
   
       
@@ -1739,24 +1743,24 @@
             Track 5: <a href="/wallace-thrasher/tracks/longmont-potion-castle-20/omnibot">Omnibot</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Buck
-          </li>
-        
-          <li style="margin: 0px;">
-            Freaky Bucky
-          </li>
-        
-          <li style="margin: 0px;">
-            Mr. Pandolfo
-          </li>
-        
-          <li style="margin: 0px;">
-            Little Freddy
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Buck
+              </li>
+            
+              <li style="margin: 0px;">
+                Freaky Bucky
+              </li>
+            
+              <li style="margin: 0px;">
+                Mr. Pandolfo
+              </li>
+            
+              <li style="margin: 0px;">
+                Little Freddy
+              </li>
+            
+          </ul> 
       
   
       
@@ -1782,16 +1786,16 @@
             Track 15: <a href="/wallace-thrasher/tracks/longmont-potion-castle-20/sour-joe-aflac">Sour Joe AFLAC</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Ralford Lightfoot
-          </li>
-        
-          <li style="margin: 0px;">
-            Jarvis
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Ralford Lightfoot
+              </li>
+            
+              <li style="margin: 0px;">
+                Jarvis
+              </li>
+            
+          </ul> 
       
   
       
@@ -1799,16 +1803,16 @@
             Track 16: <a href="/wallace-thrasher/tracks/longmont-potion-castle-20/normal-jarvis">Normal Jarvis</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Jarvis Buzzer
-          </li>
-        
-          <li style="margin: 0px;">
-            Big Red
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Jarvis Buzzer
+              </li>
+            
+              <li style="margin: 0px;">
+                Big Red
+              </li>
+            
+          </ul> 
       
   
       
@@ -1847,32 +1851,32 @@
             Track 6: <a href="/wallace-thrasher/tracks/best-before-24/star-people">Star People</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Geddes
-          </li>
-        
-          <li style="margin: 0px;">
-            Samurai
-          </li>
-        
-          <li style="margin: 0px;">
-            Roderick Lip
-          </li>
-        
-          <li style="margin: 0px;">
-            Dick Fortune
-          </li>
-        
-          <li style="margin: 0px;">
-            Barry Ninny
-          </li>
-        
-          <li style="margin: 0px;">
-            Ortega Feeley
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Geddes
+              </li>
+            
+              <li style="margin: 0px;">
+                Samurai
+              </li>
+            
+              <li style="margin: 0px;">
+                Roderick Lip
+              </li>
+            
+              <li style="margin: 0px;">
+                Dick Fortune
+              </li>
+            
+              <li style="margin: 0px;">
+                Barry Ninny
+              </li>
+            
+              <li style="margin: 0px;">
+                Ortega Feeley
+              </li>
+            
+          </ul> 
       
   
       
@@ -1892,12 +1896,12 @@
             Track 13: <a href="/wallace-thrasher/tracks/best-before-24/ram">Ram</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Dewey
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Dewey
+              </li>
+            
+          </ul> 
       
   
       
@@ -1930,12 +1934,12 @@
             Track 1: <a href="/wallace-thrasher/tracks/alive-in-25/auto-body-experience">Auto Body Experience</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Gavin
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Gavin
+              </li>
+            
+          </ul> 
       
   
       
@@ -1945,16 +1949,16 @@
             Track 3: <a href="/wallace-thrasher/tracks/alive-in-25/drug-dumpling">Drug Dumpling</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Rousseau Newton
-          </li>
-        
-          <li style="margin: 0px;">
-            Suzuki
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Rousseau Newton
+              </li>
+            
+              <li style="margin: 0px;">
+                Suzuki
+              </li>
+            
+          </ul> 
       
   
       
@@ -1966,12 +1970,12 @@
             Track 6: <a href="/wallace-thrasher/tracks/alive-in-25/enviromedley">Enviromedley</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Casper Cocker
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Casper Cocker
+              </li>
+            
+          </ul> 
       
   
       
@@ -1985,12 +1989,12 @@
             Track 10: <a href="/wallace-thrasher/tracks/alive-in-25/panic-sonic">Panic Sonic</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Murray
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Murray
+              </li>
+            
+          </ul> 
       
   
       
@@ -1998,12 +2002,12 @@
             Track 11: <a href="/wallace-thrasher/tracks/alive-in-25/alive-in-25-medley">Alive In 25 Medley</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Higgins
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Higgins
+              </li>
+            
+          </ul> 
       
   
       
@@ -2015,16 +2019,16 @@
             Track 14: <a href="/wallace-thrasher/tracks/alive-in-25/sea-cruise">Sea Cruise</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Lick Ruffle
-          </li>
-        
-          <li style="margin: 0px;">
-            Dispatcher
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Lick Ruffle
+              </li>
+            
+              <li style="margin: 0px;">
+                Dispatcher
+              </li>
+            
+          </ul> 
       
   
       
@@ -2032,12 +2036,12 @@
             Track 15: <a href="/wallace-thrasher/tracks/alive-in-25/lpc-interview-reverie-archives-show">LPC Interview Reverie Archives Show</a>
           </li>
           <ul>
-        
-          <li style="margin: 0px;">
-            Grover
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Grover
+              </li>
+            
+          </ul> 
       
   
   </ul>
@@ -2076,7 +2080,7 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            9/4/25, 6:30:50 PM EDT
+            9/4/25, 8:30:48 PM EDT
           
         </div>
         <!-- Discord server link -->

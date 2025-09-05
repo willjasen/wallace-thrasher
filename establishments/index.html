@@ -41,48 +41,12 @@
 
   <!-- <script src="/assets/js/theme-toggle.js"></script> -->
   <script src="/wallace-thrasher/assets/js/nav-menu.js"></script>
-  <style>
-    /* screen less than 'max-width' hides header page links */
-    @media screen and (max-width: 600px) {
-      .site-nav {
-        position: absolute;
-        top: 9px;
-        right: 15px;
-        border-radius: 5px;
-        text-align: right;
-        z-index: 1000;
-      }
-      
-      .site-nav .menu-icon {
-        display: block !important;
-      }
-      
-      .site-nav .trigger {
-        clear: both;
-        display: none;
-      }
-      
-      .site-nav input:checked ~ .trigger {
-        display: block;
-        padding-bottom: 5px;
-      }
-      
-      .site-nav .page-link {
-        display: block;
-        padding: 0px 0px;
-        margin-left: 20px;
-      }
-    }
+  <link rel="stylesheet" href="/wallace-thrasher/assets/css/header-center.css">
 
-    span.menu-icon::before {
-      content: none !important;
-      background: none !important;
-      display: none !important;
-    }
-  </style>
-
-  <div class="wrapper"><img src="/wallace-thrasher/assets/img/icon.png" alt="Logo" class="page-logo" style="width: 25px; height: 25px;">
-    <a class="site-title" rel="author" href="/wallace-thrasher/">stretchie</a><nav class="site-nav">
+  <div class="wrapper"><div class="site-branding">
+      <img src="/wallace-thrasher/assets/img/icon.png" alt="Logo" class="page-logo">
+      <a class="site-title" rel="author" href="/wallace-thrasher/">stretchie</a>
+    </div><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -105,7 +69,47 @@
   </header>
 
   <div class="post-content">
-    <style>
+    <script src="/wallace-thrasher/assets/js/lunr.js" integrity="sha256-icIor2ifjq4/O1GRu/ZJ8Pm2S4BClvYURbR3fneCLPs=" crossorigin="anonymous"></script>
+
+<script src="/wallace-thrasher/assets/js/search.js"></script>
+
+<script type="javascript">
+  document.getElementById('search_result').innerHTML = idx.search("bright");
+</script>
+
+<div id="status">
+  <img src="/wallace-thrasher/assets/img/loading.gif" id="statusImage" width="25" height="25" /> 
+  <span>Data is loading... <span id="statusPercentage">0%</span></span>
+  <script>
+    var intervalId = setInterval(function() {
+      document.getElementById('statusPercentage').textContent = trackDataLoadedPercentage.toFixed(1) + '%';
+      if (dataLoaded) {
+        clearInterval(intervalId);
+        console.log("Data has been loaded!");
+        document.getElementById('status').innerHTML = "<img src=\"/wallace-thrasher/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
+        document.getElementById('status').innerHTML += " Data has been loaded!";
+      }
+    }, 100); // Check every 100ms
+  </script>
+</div>
+<p><input type="text" id="establishments-search-input" placeholder="Search..." /></p>
+<ul id="establishments-search-results"></ul>
+
+<style>
+  .loader {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .loader input,
+  .loader ul {
+    opacity: 1 !important;
+  }
+</style>
+
+<hr />
+
+<style>
 
   .album-info {
     display: flex;
@@ -1073,14 +1077,14 @@
       
           <li style="margin: 0px;">
             Track 17: <a href="/wallace-thrasher/tracks/longmont-potion-castle-11/trebeks-pouch">Trebeks Pouch</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            DHL
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                DHL
+              </li>
+            
+          </ul>
       
   
       
@@ -1117,18 +1121,18 @@
       
           <li style="margin: 0px;">
             Track 5: <a href="/wallace-thrasher/tracks/longmont-potion-castle-12/lpc-12-medley-1">LPC 12 Medley 1</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Dr. Fiddlesticks
-          </li>
-        
-          <li style="margin: 0px;">
-            Citizens United for Bill Cosby
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Dr. Fiddlesticks
+              </li>
+            
+              <li style="margin: 0px;">
+                Citizens United for Bill Cosby
+              </li>
+            
+          </ul>
       
   
       
@@ -1140,18 +1144,18 @@
       
           <li style="margin: 0px;">
             Track 9: <a href="/wallace-thrasher/tracks/longmont-potion-castle-12/lpc-12-medley-2">LPC 12 Medley 2</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Zatarain's
-          </li>
-        
-          <li style="margin: 0px;">
-            United Negro College Fund
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Zatarain's
+              </li>
+            
+              <li style="margin: 0px;">
+                United Negro College Fund
+              </li>
+            
+          </ul>
       
   
       
@@ -1236,18 +1240,18 @@
       
           <li style="margin: 0px;">
             Track 3: <a href="/wallace-thrasher/tracks/longmont-potion-castle-14/historical-hair-2">Historical Hair 2</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            United Parcel Service
-          </li>
-        
-          <li style="margin: 0px;">
-            Historical Hair
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                United Parcel Service
+              </li>
+            
+              <li style="margin: 0px;">
+                Historical Hair
+              </li>
+            
+          </ul>
       
   
       
@@ -1358,14 +1362,14 @@
       
           <li style="margin: 0px;">
             Track 3: <a href="/wallace-thrasher/tracks/longmont-potion-castle-16/ups-trebek">UPS Trebek</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Big Tucker's Sweathouse
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Big Tucker's Sweathouse
+              </li>
+            
+          </ul>
       
   
       
@@ -1496,31 +1500,31 @@
       
           <li style="margin: 0px;">
             Track 4: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/ups-assault">UPS Assault</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            United Parcel Service
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                United Parcel Service
+              </li>
+            
+          </ul>
       
   
       
           <li style="margin: 0px;">
             Track 5: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/magnifying-glass">Magnifying Glass</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            United Parcel Service
-          </li>
-        
-          <li style="margin: 0px;">
-            UPS.com
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                United Parcel Service
+              </li>
+            
+              <li style="margin: 0px;">
+                UPS.com
+              </li>
+            
+          </ul>
       
   
       
@@ -1540,14 +1544,14 @@
       
           <li style="margin: 0px;">
             Track 13: <a href="/wallace-thrasher/tracks/longmont-potion-castle-18/survey-by-hooter">Survey By Hooter</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Mummy Mountain
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Mummy Mountain
+              </li>
+            
+          </ul>
       
   
       
@@ -1630,30 +1634,30 @@
       
           <li style="margin: 0px;">
             Track 5: <a href="/wallace-thrasher/tracks/longmont-potion-castle-20/omnibot">Omnibot</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Tom Hanks exhibit
-          </li>
-        
-          <li style="margin: 0px;">
-            Orb within an orb
-          </li>
-        
-          <li style="margin: 0px;">
-            Pork Chop Surprise
-          </li>
-        
-          <li style="margin: 0px;">
-            Himalayan Quasar Magnet School
-          </li>
-        
-          <li style="margin: 0px;">
-            Gruesome Gulch
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Tom Hanks exhibit
+              </li>
+            
+              <li style="margin: 0px;">
+                Orb within an orb
+              </li>
+            
+              <li style="margin: 0px;">
+                Pork Chop Surprise
+              </li>
+            
+              <li style="margin: 0px;">
+                Himalayan Quasar Magnet School
+              </li>
+            
+              <li style="margin: 0px;">
+                Gruesome Gulch
+              </li>
+            
+          </ul>
       
   
       
@@ -1712,26 +1716,26 @@
       
           <li style="margin: 0px;">
             Track 6: <a href="/wallace-thrasher/tracks/best-before-24/star-people">Star People</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Winn-Dixie
-          </li>
-        
-          <li style="margin: 0px;">
-            Star People
-          </li>
-        
-          <li style="margin: 0px;">
-            Chuckwagon Society
-          </li>
-        
-          <li style="margin: 0px;">
-            Honky Tonk Society
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Winn-Dixie
+              </li>
+            
+              <li style="margin: 0px;">
+                Star People
+              </li>
+            
+              <li style="margin: 0px;">
+                Chuckwagon Society
+              </li>
+            
+              <li style="margin: 0px;">
+                Honky Tonk Society
+              </li>
+            
+          </ul>
       
   
       
@@ -1780,14 +1784,14 @@
       
           <li style="margin: 0px;">
             Track 3: <a href="/wallace-thrasher/tracks/alive-in-25/drug-dumpling">Drug Dumpling</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Drug Drumpling
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Drug Drumpling
+              </li>
+            
+          </ul>
       
   
       
@@ -1805,27 +1809,27 @@
       
           <li style="margin: 0px;">
             Track 10: <a href="/wallace-thrasher/tracks/alive-in-25/panic-sonic">Panic Sonic</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Panasonic Quality Care
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Panasonic Quality Care
+              </li>
+            
+          </ul>
       
   
       
           <li style="margin: 0px;">
             Track 11: <a href="/wallace-thrasher/tracks/alive-in-25/alive-in-25-medley">Alive In 25 Medley</a>
-          </li>
+          </li>  
           <ul>
-        
-          <li style="margin: 0px;">
-            Sniff Shack
-          </li>
-        
-        </ul>
+            
+              <li style="margin: 0px;">
+                Sniff Shack
+              </li>
+            
+          </ul>
       
   
       
@@ -1872,7 +1876,7 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            9/4/25, 6:30:50 PM EDT
+            9/4/25, 8:30:48 PM EDT
           
         </div>
         <!-- Discord server link -->
