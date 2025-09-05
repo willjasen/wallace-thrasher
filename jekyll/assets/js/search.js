@@ -179,6 +179,7 @@ async function loadData() {
 async function main(callback) {
         // Build a track-level establishments index
         function buildTrackEstablishmentIndex() {
+            let startTimeInMilliseconds = Date.now();
             let trackDocs = [];
             let rawData = null;
             const xhr = new XMLHttpRequest();
@@ -202,10 +203,13 @@ async function main(callback) {
                     });
                 });
             }
+            let endTimeInMilliseconds = Date.now();
+            console.log("Building track establishments index took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
             return trackDocs;
         }
 
         const trackEstablishmentDocs = buildTrackEstablishmentIndex();
+        
     try {
         var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData();
