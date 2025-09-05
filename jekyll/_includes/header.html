@@ -12,51 +12,15 @@
 
   <!-- <script src="/assets/js/theme-toggle.js"></script> -->
   <script src="{{ site.baseurl }}/assets/js/nav-menu.js"></script>
-  <style>
-    /* screen less than 'max-width' hides header page links */
-    @media screen and (max-width: 600px) {
-      .site-nav {
-        position: absolute;
-        top: 9px;
-        right: 15px;
-        border-radius: 5px;
-        text-align: right;
-        z-index: 1000;
-      }
-      
-      .site-nav .menu-icon {
-        display: block !important;
-      }
-      
-      .site-nav .trigger {
-        clear: both;
-        display: none;
-      }
-      
-      .site-nav input:checked ~ .trigger {
-        display: block;
-        padding-bottom: 5px;
-      }
-      
-      .site-nav .page-link {
-        display: block;
-        padding: 0px 0px;
-        margin-left: 20px;
-      }
-    }
-
-    span.menu-icon::before {
-      content: none !important;
-      background: none !important;
-      display: none !important;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ '/assets/css/header-center.css' | relative_url }}">
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <img src="{{ site.baseurl }}/assets/img/icon.png" alt="Logo" class="page-logo" style="width: 25px; height: 25px;">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <div class="site-branding">
+      <img src="{{ site.baseurl }}/assets/img/icon.png" alt="Logo" class="page-logo">
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
 
     {%- if page_paths -%}
       <nav class="site-nav">
