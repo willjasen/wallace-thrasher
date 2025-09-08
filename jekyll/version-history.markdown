@@ -4,6 +4,11 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.6.1
+
+ - fix the discord link in the footer
+ - updates to a few tracks
+
 ### v1.6.0
 
  - add pages for Aliases and Establishments and their searching thereof
@@ -40,7 +45,7 @@ published: true
 - fix typo within page track data for "Circus Tickets" on LPC 1
 - add logo to site title (formatting isn't the best yet)
 - add link to Talkin' Whipapedia at the bottom of each album page
-- add [link to the Discord server](https://discord.gg/jjfQ25NJ) at the bottom of the page
+- add [link to the Discord server](https://discord.gg/fFzWs8Vv83) at the bottom of the page
 - send webhook to the new Discord server after production builds
 
 ---
