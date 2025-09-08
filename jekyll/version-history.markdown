@@ -9,6 +9,8 @@ published: true
  - fix the discord link in the footer
  - updates to a few tracks
 
+ ---
+
 ### v1.6.0
 
  - add pages for Aliases and Establishments and their searching thereof
