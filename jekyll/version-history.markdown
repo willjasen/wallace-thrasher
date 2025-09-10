@@ -7,6 +7,7 @@ published: true
 ### v1.6.2
 
  - add aliases and establishments for "Alive in '25"
+ - use stretchie.net for IPNS
 
 ---
 
