@@ -4,6 +4,12 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.6.2
+
+ - add aliases and establishments for "Alive in '25"
+
+---
+
 ### v1.6.1
 
  - fix the discord link in the footer
