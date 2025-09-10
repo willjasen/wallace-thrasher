@@ -11,7 +11,7 @@ this website allows for searching through subtitles and speakers within the long
 this website can currently be viewed at:
 
 - primary domain --> [stretchie.net](https://stretchie.net)
-- via ipfs/ipns --> example: [https://dweb.link/ipns/stretchie.delivery/](https://dweb.link/ipns/stretchie.delivery/)
+- via ipfs/ipns --> example: [https://dweb.link/ipns/stretchie.net/](https://dweb.link/ipns/stretchie.net/)
 - for development only --> [github pages](https://willjasen.github.io/wallace-thrasher/)
 
 ### 🎮 Features 🎮
