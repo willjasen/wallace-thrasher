@@ -4,6 +4,12 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.6.3
+
+ - began editing "Game Stop 2"; only got about 6 minutes in
+
+---
+
 ### v1.6.2
 
  - add aliases and establishments for "Alive in '25"
