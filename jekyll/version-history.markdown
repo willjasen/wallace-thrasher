@@ -7,6 +7,7 @@ published: true
 ### v1.6.3
 
  - began editing "Game Stop 2"; only got about 6 minutes in
+ - minor typo fixes for the README and About pages
 
 ---
 
