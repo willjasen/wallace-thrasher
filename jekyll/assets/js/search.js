@@ -8,6 +8,7 @@ const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
+const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
 
 /*
     This function retrieves a JSON document from a given path
@@ -16,6 +17,42 @@ async function fetchData(path) {
     try {
         const response = await fetch(path);
         const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+/*
+    This function retrieves a JSON document from a given path, using the Cache API
+    to avoid re-downloading on every page load. The cache is keyed by build timestamp
+    so it is automatically invalidated whenever the site is rebuilt.
+*/
+async function fetchDataCached(path) {
+    if (!('caches' in window)) {
+        console.log("Cache API not available, falling back to network fetch.");
+        return fetchData(path);
+    }
+    const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
+    const cache = await caches.open(cacheName);
+    const cachedResponse = await cache.match(path);
+    if (cachedResponse) {
+        console.log("Serving from cache: " + path);
+        return cachedResponse.json();
+    }
+    console.log("Fetching from network and caching: " + path);
+    try {
+        const response = await fetch(path);
+        await cache.put(path, response.clone());
+        const data = await response.json();
+        // Clean up caches from previous builds
+        const cacheKeys = await caches.keys();
+        for (const key of cacheKeys) {
+            if (key !== cacheName && key.startsWith('wallace-thrasher-')) {
+                console.log("Deleting stale cache: " + key);
+                await caches.delete(key);
+            }
+        }
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -126,7 +163,7 @@ async function loadData() {
 
     } else {
         console.log("--Loading data from data.combined.json--");
-        const data = await fetchData(BASE_URL+"/assets/json/data.combined.json");
+        const data = await fetchDataCached(BASE_URL+"/assets/json/data.combined.json");
 
         // Calculate total number of tracks across all albums
         const totalTracks = getTotalTracks(data);
