@@ -6,9 +6,12 @@ published: true
 
 ### v1.7.0
 
-this release adds the album "The Longmont Potion Castle (2026)" into the website. it also introduces caching for `data.json` and `data.combined.json`, which makes subsequent search page loading times much quicker. pages like "Speakers" and "Subtitles" were taking about 2 seconds to load with every search page access; now with the cache, search page load times are below 100 milliseconds.
+this release adds the latest album "The Longmont Potion Castle (2026)", which released on 3/27/2026.
+
+it also introduces minifying for `data.combined.json` and caching for `data.json` and `data.combined.json`, which makes subsequent search page loading times much quicker. pages like "Speakers" and "Subtitles" were taking about 2 seconds to load with every access, as each access would always download the data from the web server, then perform indexing so that it is searchable. now with caching, downloading and indexing needs to be done once, amking subsequent search page load times below 100 milliseconds. there's a noticable difference when navigating pages and the website should feel much more responsive.
 
  - add the new album "The Longmont Potion Castle (2026)"
+ - minify the combined json data file
  - add caching support for search pages to decrease page load times
 
 ---
