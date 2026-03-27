@@ -4,6 +4,15 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.6.3
+
+this minor release is mostly to stash any changes that haven't been merged yet now that the new album "the longmont potion castle" is out (3/27/2026)
+
+ - began editing "Game Stop 2"; only got about 6 minutes in
+ - minor typo fixes for the README and About pages
+
+---
+
 ### v1.6.2
 
  - add aliases and establishments for "Alive in '25"
