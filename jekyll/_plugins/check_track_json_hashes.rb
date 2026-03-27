@@ -77,6 +77,15 @@ module Jekyll
                     line.strip
                 end
             end
+
+            # Append entries for brand-new files that have no existing entry in the .sha256 file
+            new_files = updated_files.reject { |f| stored_hashes.key?(f) }
+            new_files.each do |new_file|
+                new_hash = current_hashes.find { |h| h.include?(new_file) }.split('  ', 2).first
+                puts "\e[32mAdding new hash for file: #{new_file}, Hash: #{new_hash}\e[0m"
+                updated_hashes << "#{new_hash}  #{new_file}"
+            end
+
             File.open(hash_file_path, 'w') do |hash_file|
                 hash_file.puts(updated_hashes)
         end
