@@ -8,6 +8,7 @@ const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
+const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
 
 /*
     This function retrieves a JSON document from a given path
@@ -16,6 +17,72 @@ async function fetchData(path) {
     try {
         const response = await fetch(path);
         const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+/*
+    Save any serializable value as a synthetic Cache API entry under cacheName / cacheKey.
+*/
+async function saveToCache(cacheName, cacheKey, data) {
+    try {
+        const cache = await caches.open(cacheName);
+        const response = new Response(JSON.stringify(data), {
+            headers: { 'Content-Type': 'application/json' }
+        });
+        await cache.put(cacheKey, response);
+    } catch (error) {
+        console.warn('Failed to save to cache:', cacheKey, error);
+    }
+}
+
+/*
+    Load and parse a synthetic Cache API entry. Returns null on miss or error.
+*/
+async function loadFromCache(cacheName, cacheKey) {
+    try {
+        const cache = await caches.open(cacheName);
+        const response = await cache.match(cacheKey);
+        if (!response) return null;
+        return response.json();
+    } catch (error) {
+        console.warn('Failed to load from cache:', cacheKey, error);
+        return null;
+    }
+}
+
+/*
+    This function retrieves a JSON document from a given path, using the Cache API
+    to avoid re-downloading on every page load. The cache is keyed by build timestamp
+    so it is automatically invalidated whenever the site is rebuilt.
+*/
+async function fetchDataCached(path) {
+    if (!('caches' in window)) {
+        console.log("Cache API not available, falling back to network fetch.");
+        return fetchData(path);
+    }
+    const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
+    const cache = await caches.open(cacheName);
+    const cachedResponse = await cache.match(path);
+    if (cachedResponse) {
+        console.log("Serving from cache: " + path);
+        return cachedResponse.json();
+    }
+    console.log("Fetching from network and caching: " + path);
+    try {
+        const response = await fetch(path);
+        await cache.put(path, response.clone());
+        const data = await response.json();
+        // Clean up caches from previous builds
+        const cacheKeys = await caches.keys();
+        for (const key of cacheKeys) {
+            if (key !== cacheName && key.startsWith('wallace-thrasher-')) {
+                console.log("Deleting stale cache: " + key);
+                await caches.delete(key);
+            }
+        }
         return data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -68,7 +135,7 @@ async function loadData() {
     
     if (loadIndividualTrackJSON) {
         console.log("--Loading data from data.json and the individual track JSON files--");
-        const data = await fetchData(BASE_URL+"/assets/json/data.json");
+        const data = await fetchDataCached(BASE_URL+"/assets/json/data.json");
 
         // Calculate total number of tracks across all albums
         const totalTracks = getTotalTracks(data);
@@ -125,8 +192,8 @@ async function loadData() {
         }
 
     } else {
-        console.log("--Loading data from combined_data.json--");
-        const data = await fetchData(BASE_URL+"/assets/json/combined_data.json");
+        console.log("--Loading data from data.combined.json--");
+        const data = await fetchDataCached(BASE_URL+"/assets/json/data.combined.json");
 
         // Calculate total number of tracks across all albums
         const totalTracks = getTotalTracks(data);
@@ -177,22 +244,13 @@ async function loadData() {
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
+        // Fetch data.json once and cache it for all consumers
+        const rawDataJson = await fetchDataCached(BASE_URL + '/assets/json/data.json');
+
         // Build a track-level establishments index
-        function buildTrackEstablishmentIndex() {
+        function buildTrackEstablishmentIndex(rawData) {
             let startTimeInMilliseconds = Date.now();
             let trackDocs = [];
-            let rawData = null;
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    rawData = JSON.parse(xhr.responseText);
-                }
-            };
-            xhr.onerror = function () {
-                console.error('Error fetching data.json');
-            };
-            xhr.send(null);
             if (rawData && rawData.Albums) {
                 rawData.Albums.forEach(album => {
                     album.Tracks.forEach(track => {
@@ -213,7 +271,7 @@ async function main(callback) {
             return trackDocs;
         }
 
-        const trackEstablishmentDocs = buildTrackEstablishmentIndex();
+        const trackEstablishmentDocs = buildTrackEstablishmentIndex(rawDataJson);
         
     try {
         var jekyll_env = '{{ jekyll.environment }}';
@@ -242,27 +300,44 @@ async function main(callback) {
             return idx;
         }
 
-        const idxText = indexOnField('Text');
-        const idxSpeaker = indexOnField('Speaker');
+        const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
+
+        let idxText;
+        if ('caches' in window) {
+            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Text');
+            if (cached) {
+                let startTimeInMilliseconds = Date.now();
+                idxText = lunr.Index.load(cached);
+                console.log('Loading Text index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
+            }
+        }
+        if (!idxText) {
+            idxText = indexOnField('Text');
+            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Text', idxText.toJSON());
+        }
+
+        let idxSpeaker;
+        if ('caches' in window) {
+            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Speaker');
+            if (cached) {
+                let startTimeInMilliseconds = Date.now();
+                idxSpeaker = lunr.Index.load(cached);
+                console.log('Loading Speaker index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
+            }
+        }
+        if (!idxSpeaker) {
+            idxSpeaker = indexOnField('Speaker');
+            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Speaker', idxSpeaker.toJSON());
+        }
 
         // Build a track-level alias index
-        function buildTrackAliasIndex() {
+        function buildTrackAliasIndex(rawData) {
             // We'll scan the original data structure to find all unique tracks and their Aliases
             // To do this, we need to reload the original JSON (not subtitle-level docs)
             // We'll fetch the data again, but only for this index
             // This is a workaround for the current data flow
             // If you want to optimize, refactor to keep the original album/track structure in memory
             let trackDocs = [];
-            // Try to get the original data from the same source as loadData
-            // This assumes BASE_URL and data.json are available
-            // We'll use a synchronous XHR for simplicity (since this is only for index build)
-            let rawData = null;
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
-            xhr.send(null);
-            if (xhr.status === 200) {
-                rawData = JSON.parse(xhr.responseText);
-            }
             if (rawData && rawData.Albums) {
                 rawData.Albums.forEach(album => {
                     album.Tracks.forEach(track => {
@@ -289,7 +364,7 @@ async function main(callback) {
             return { idx, trackDocs };
         }
 
-        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex();
+        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex(rawDataJson);
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
