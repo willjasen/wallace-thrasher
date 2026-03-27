@@ -24,6 +24,36 @@ async function fetchData(path) {
 }
 
 /*
+    Save any serializable value as a synthetic Cache API entry under cacheName / cacheKey.
+*/
+async function saveToCache(cacheName, cacheKey, data) {
+    try {
+        const cache = await caches.open(cacheName);
+        const response = new Response(JSON.stringify(data), {
+            headers: { 'Content-Type': 'application/json' }
+        });
+        await cache.put(cacheKey, response);
+    } catch (error) {
+        console.warn('Failed to save to cache:', cacheKey, error);
+    }
+}
+
+/*
+    Load and parse a synthetic Cache API entry. Returns null on miss or error.
+*/
+async function loadFromCache(cacheName, cacheKey) {
+    try {
+        const cache = await caches.open(cacheName);
+        const response = await cache.match(cacheKey);
+        if (!response) return null;
+        return response.json();
+    } catch (error) {
+        console.warn('Failed to load from cache:', cacheKey, error);
+        return null;
+    }
+}
+
+/*
     This function retrieves a JSON document from a given path, using the Cache API
     to avoid re-downloading on every page load. The cache is keyed by build timestamp
     so it is automatically invalidated whenever the site is rebuilt.
@@ -279,8 +309,35 @@ async function main(callback) {
             return idx;
         }
 
-        const idxText = indexOnField('Text');
-        const idxSpeaker = indexOnField('Speaker');
+        const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
+
+        let idxText;
+        if ('caches' in window) {
+            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Text');
+            if (cached) {
+                let startTimeInMilliseconds = Date.now();
+                idxText = lunr.Index.load(cached);
+                console.log('Loading Text index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
+            }
+        }
+        if (!idxText) {
+            idxText = indexOnField('Text');
+            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Text', idxText.toJSON());
+        }
+
+        let idxSpeaker;
+        if ('caches' in window) {
+            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Speaker');
+            if (cached) {
+                let startTimeInMilliseconds = Date.now();
+                idxSpeaker = lunr.Index.load(cached);
+                console.log('Loading Speaker index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
+            }
+        }
+        if (!idxSpeaker) {
+            idxSpeaker = indexOnField('Speaker');
+            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Speaker', idxSpeaker.toJSON());
+        }
 
         // Build a track-level alias index
         function buildTrackAliasIndex() {
