@@ -22,7 +22,7 @@ module Jekyll
         else
             puts "\e[33mHash file not found. Generating a new one...\e[0m"
             Dir.glob(File.join(json_dir, '**/*.json')) do |file|
-                next if file.end_with?('data.json') # Exclude files 'data.json' and 'combined_data.json'
+                next if file.end_with?('data.json') || file.end_with?('data.combined.json') # Exclude files 'data.json' and 'data.combined.json'
 
                 file_content = File.read(file)
                 file_hash = Digest::SHA256.hexdigest(file_content)
@@ -46,7 +46,7 @@ module Jekyll
         updated_files = []
         Dir.glob(File.join(json_dir, '**/*.json')) do |file|
             next if File.basename(file) == 'tracks.sha256' # Skip the hash file itself
-            next if file.end_with?('data.json') # Exclude files ending with 'data.json'
+            next if file.end_with?('data.json') || file.end_with?('data.combined.json') # Exclude files 'data.json' and 'data.combined.json'
 
             file_content = File.read(file)
             file_content = sanitize_json(file_content) # Sanitize JSON content
@@ -77,6 +77,15 @@ module Jekyll
                     line.strip
                 end
             end
+
+            # Append entries for brand-new files that have no existing entry in the .sha256 file
+            new_files = updated_files.reject { |f| stored_hashes.key?(f) }
+            new_files.each do |new_file|
+                new_hash = current_hashes.find { |h| h.include?(new_file) }.split('  ', 2).first
+                puts "\e[32mAdding new hash for file: #{new_file}, Hash: #{new_hash}\e[0m"
+                updated_hashes << "#{new_hash}  #{new_file}"
+            end
+
             File.open(hash_file_path, 'w') do |hash_file|
                 hash_file.puts(updated_hashes)
         end
