@@ -135,7 +135,7 @@ async function loadData() {
     
     if (loadIndividualTrackJSON) {
         console.log("--Loading data from data.json and the individual track JSON files--");
-        const data = await fetchData(BASE_URL+"/assets/json/data.json");
+        const data = await fetchDataCached(BASE_URL+"/assets/json/data.json");
 
         // Calculate total number of tracks across all albums
         const totalTracks = getTotalTracks(data);
@@ -244,22 +244,13 @@ async function loadData() {
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
+        // Fetch data.json once and cache it for all consumers
+        const rawDataJson = await fetchDataCached(BASE_URL + '/assets/json/data.json');
+
         // Build a track-level establishments index
-        function buildTrackEstablishmentIndex() {
+        function buildTrackEstablishmentIndex(rawData) {
             let startTimeInMilliseconds = Date.now();
             let trackDocs = [];
-            let rawData = null;
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    rawData = JSON.parse(xhr.responseText);
-                }
-            };
-            xhr.onerror = function () {
-                console.error('Error fetching data.json');
-            };
-            xhr.send(null);
             if (rawData && rawData.Albums) {
                 rawData.Albums.forEach(album => {
                     album.Tracks.forEach(track => {
@@ -280,7 +271,7 @@ async function main(callback) {
             return trackDocs;
         }
 
-        const trackEstablishmentDocs = buildTrackEstablishmentIndex();
+        const trackEstablishmentDocs = buildTrackEstablishmentIndex(rawDataJson);
         
     try {
         var jekyll_env = '{{ jekyll.environment }}';
@@ -340,23 +331,13 @@ async function main(callback) {
         }
 
         // Build a track-level alias index
-        function buildTrackAliasIndex() {
+        function buildTrackAliasIndex(rawData) {
             // We'll scan the original data structure to find all unique tracks and their Aliases
             // To do this, we need to reload the original JSON (not subtitle-level docs)
             // We'll fetch the data again, but only for this index
             // This is a workaround for the current data flow
             // If you want to optimize, refactor to keep the original album/track structure in memory
             let trackDocs = [];
-            // Try to get the original data from the same source as loadData
-            // This assumes BASE_URL and data.json are available
-            // We'll use a synchronous XHR for simplicity (since this is only for index build)
-            let rawData = null;
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET', BASE_URL + '/assets/json/data.json', false); // sync
-            xhr.send(null);
-            if (xhr.status === 200) {
-                rawData = JSON.parse(xhr.responseText);
-            }
             if (rawData && rawData.Albums) {
                 rawData.Albums.forEach(album => {
                     album.Tracks.forEach(track => {
@@ -383,7 +364,7 @@ async function main(callback) {
             return { idx, trackDocs };
         }
 
-        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex();
+        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex(rawDataJson);
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
