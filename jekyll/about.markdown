@@ -18,7 +18,7 @@ this website can currently be viewed at:
 
 ### 🎮 Features 🎮
 
-there are three main features of various interests implemented:
+there are four main features of various interests implemented:
 
 - its basic feature is that albums and tracks have pages with the track pages containing the subtitles for the track
 - its smart feature is that all of this aforementioned data is indexed so that search becomes possible
