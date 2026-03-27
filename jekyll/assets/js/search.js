@@ -125,8 +125,8 @@ async function loadData() {
         }
 
     } else {
-        console.log("--Loading data from combined_data.json--");
-        const data = await fetchData(BASE_URL+"/assets/json/combined_data.json");
+        console.log("--Loading data from data.combined.json--");
+        const data = await fetchData(BASE_URL+"/assets/json/data.combined.json");
 
         // Calculate total number of tracks across all albums
         const totalTracks = getTotalTracks(data);
