@@ -301,13 +301,6 @@ async function main(callback) {
                 this.field(indexField);
 
                 dataStructure.forEach(function (doc) {
-                    if (indexField === 'Aliases') {
-                        if (!doc.Aliases || (Array.isArray(doc.Aliases) && doc.Aliases.length === 0)) {
-                            doc.Aliases = '';
-                        } else if (Array.isArray(doc.Aliases)) {
-                            doc.Aliases = doc.Aliases.join(', ');
-                        }
-                    }
                     this.add(doc);
                 }, this);
             });
@@ -348,13 +341,9 @@ async function main(callback) {
             if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Speaker', idxSpeaker.toJSON());
         }
 
-        // Build a track-level alias index
-        function buildTrackAliasIndex(rawData) {
-            // We'll scan the original data structure to find all unique tracks and their Aliases
-            // To do this, we need to reload the original JSON (not subtitle-level docs)
-            // We'll fetch the data again, but only for this index
-            // This is a workaround for the current data flow
-            // If you want to optimize, refactor to keep the original album/track structure in memory
+        // Build a track-level alias docs array
+        function buildTrackAliasDocs(rawData) {
+            let startTimeInMilliseconds = Date.now();
             let trackDocs = [];
             if (rawData && rawData.Albums) {
                 rawData.Albums.forEach(album => {
@@ -371,19 +360,13 @@ async function main(callback) {
                     });
                 });
             }
-            const idx = lunr(function () {
-                this.ref('id');
-                this.field('Aliases');
-                this.field('Track_Title');
-                trackDocs.forEach(function (doc) {
-                    this.add(doc);
-                }, this);
-            });
-            return { idx, trackDocs };
+            let endTimeInMilliseconds = Date.now();
+            console.log("Building track alias docs took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            return trackDocs;
         }
 
         await yieldToMain();
-        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex(rawDataJson);
+        const trackAliasDocs = buildTrackAliasDocs(rawDataJson);
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
