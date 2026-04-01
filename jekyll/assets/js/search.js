@@ -279,7 +279,7 @@ async function main(callback) {
                 }, this);
             });
             let endTimeInMilliseconds = Date.now();
-            console.log("Indexing " + indexField + " took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            console.log("Indexing " + indexField + " took", (endTimeInMilliseconds - startTimeInMilliseconds), "milliseconds.");
             return idx;
         }
 
@@ -292,7 +292,7 @@ async function main(callback) {
             if (cached) {
                 let startTimeInMilliseconds = Date.now();
                 idxText = lunr.Index.load(cached);
-                console.log('Loading Text index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
+                console.log('Loading Text index from cache took', (Date.now() - startTimeInMilliseconds), 'milliseconds.');
             }
         }
         if (!idxText) {
@@ -307,7 +307,7 @@ async function main(callback) {
             if (cached) {
                 let startTimeInMilliseconds = Date.now();
                 idxSpeaker = lunr.Index.load(cached);
-                console.log('Loading Speaker index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
+                console.log('Loading Speaker index from cache took', (Date.now() - startTimeInMilliseconds), 'milliseconds.');
             }
         }
         if (!idxSpeaker) {
@@ -335,7 +335,7 @@ async function main(callback) {
                 });
             }
             let endTimeInMilliseconds = Date.now();
-            console.log("Building track alias docs took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            console.log("Building track alias docs took", (endTimeInMilliseconds - startTimeInMilliseconds), "milliseconds.");
             return trackDocs;
         }
 
@@ -362,7 +362,7 @@ async function main(callback) {
                 });
             }
             let endTimeInMilliseconds = Date.now();
-            console.log("Building track establishment docs took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            console.log("Building track establishment docs took", (endTimeInMilliseconds - startTimeInMilliseconds), "milliseconds.");
             return trackDocs;
         }
 
