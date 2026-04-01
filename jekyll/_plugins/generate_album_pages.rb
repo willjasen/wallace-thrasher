@@ -1,4 +1,4 @@
-require_relative 'update_yml'
+require 'json'
 module Jekyll
     class AlbumPagesGenerator < Generator
       safe true
@@ -6,7 +6,7 @@ module Jekyll
   
       def generate(site)
         start_time = Time.now  # added timer start
-        albums = site.data['tracks']
+        albums = site.data['albums']['Albums']
         albums.each do |album_data|
             site.collections['albums'].docs << create_album_doc(site, album_data)
         end
@@ -16,12 +16,12 @@ module Jekyll
       private
   
       def create_album_doc(site, album_data)
-        slug = Jekyll::Utils.slugify(album_data['album'])
+        slug = Jekyll::Utils.slugify(album_data['Album'])
         filename = "#{slug}.md"
         path = File.join(site.source, '_albums', filename)
         doc = Document.new(path, { :site => site, :collection => site.collections['albums'] })
-        doc.data['album_title'] = album_data['album']
-        doc.data['album_year'] = album_data['year']
+        doc.data['album_title'] = album_data['Album']
+        doc.data['album_year'] = album_data['Year']
         doc
       end      
     end
