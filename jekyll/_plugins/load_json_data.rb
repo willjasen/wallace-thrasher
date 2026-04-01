@@ -1,5 +1,4 @@
 require 'json'
-require_relative 'combine_json_data'
 
 module Jekyll
   class LoadJsonData < Generator
@@ -11,46 +10,21 @@ module Jekyll
       # Load JSON files from /assets/json
       json_dir = File.join(site.source, 'assets', 'json')
 
-      # Assume render_slowly for production builds
-      site.config['render_slowly'] = true if ENV['JEKYLL_ENV'] == 'production'
+      # Load data.json at build time (metadata only - no subtitle text)
+      # Track pages are rendered client-side from data.combined.json via tracks/index.html
+      data_file_path = File.join(json_dir, 'data.json')
+      puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
-      if site.config['render_slowly']
-        site.data['render_slowly'] = true
-        # Dir.glob(File.join(json_dir, '**/*.json')) do |file|
-        #  data_key = File.basename(file, '.json')
-        #  json_data = parse_json_safely(File.read(file))
-        #  site.data[data_key] = json_data
-        # end
-        data_file_path = File.join(json_dir, 'data.combined.json')
-        puts "\e[32mLoading data from #{data_file_path}\e[0m"
-
-        if File.exist?(data_file_path)
-          file_content = File.read(data_file_path)
-          if file_content.strip.empty?
-            puts "Warning: data.json is empty."
-          else
-            data_json = parse_json_safely(file_content)
-            site.data['albums'] = data_json
-          end
+      if File.exist?(data_file_path)
+        file_content = File.read(data_file_path)
+        if file_content.strip.empty?
+          puts "Warning: data.json is empty."
         else
-          puts "Warning: data.json not found at #{data_file_path}"
+          data_json = parse_json_safely(file_content)
+          site.data['albums'] = data_json
         end
       else
-        site.data['render_slowly'] = false
-        data_file_path = File.join(json_dir, 'data.json')
-        puts "\e[32mLoading data from #{data_file_path}\e[0m"
-
-        if File.exist?(data_file_path)
-          file_content = File.read(data_file_path)
-          if file_content.strip.empty?
-            puts "Warning: data.json is empty."
-          else
-            data_json = parse_json_safely(file_content)
-            site.data['albums'] = data_json
-          end
-        else
-          puts "Warning: data.json not found at #{data_file_path}"
-        end
+        puts "Warning: data.json not found at #{data_file_path}"
       end
       # puts "\e[34mload_json_data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
     end
