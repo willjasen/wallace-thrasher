@@ -146,7 +146,7 @@ async function loadData() {
             const albums = data[albumsKey];
             const numberOfAlbums = albums.length;
             for(const album of albums) {
-                console.log("Loading album: " + album.Album);
+                // console.log("Loading album: " + album.Album);
                 let trackFetchPromises = [];
                 let trackInfoList = [];
                 for (const track of album.Tracks) {
@@ -204,7 +204,7 @@ async function loadData() {
             const albums = data[albumsKey];
             
             for(const album of albums) {
-                console.log("Loading album: " + album.Album);
+                // console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
                     // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
                     // trackSubtitlesData = await fetchData(jsonPath);
