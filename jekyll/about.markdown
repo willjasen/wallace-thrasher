@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const label = document.createElement("div");
   label.id = "about-toc-label";
-  label.textContent = "on this page";
+  label.textContent = "About";
   nav.appendChild(label);
 
   const ul = document.createElement("ul");
