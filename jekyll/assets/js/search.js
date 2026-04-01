@@ -427,29 +427,8 @@ async function main(callback) {
 
         // Set up the subtitles search input listener
         if (document.querySelector('#subtitles-search-input')) {
-            fileMap = {};
-            if(jekyll_env != "production") {
-                const fileInput = document.getElementById('fileInput');
-                const audio = document.getElementById('audioPlayer');
-                fileInput.addEventListener('change', function(event) {
-                    fileTarget = event.target;
-                    const files = fileTarget.files;
-                    for (const file of files) {
-                        if (file.name.endsWith('.mp3')) {
-                            const url = URL.createObjectURL(file);
-                            fileMap[file.webkitRelativePath] = url;
-                        }  
-                    }
-                    console.log("Files have been uploaded! Jumping to a subtitle will now work!");
-
-                    // Update the input of #subtitles-search-input
-                    const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
-                    if (subtitlesSearchInput) {
-                        subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
-                        subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
-                    }
-                });
-            }
+            // fileMap is populated by the LPC USB FAB (embed-audio-dir-for-search.html)
+            window.fileMap = window.fileMap || {};
             document.querySelector('#subtitles-search-input').addEventListener('input', function () {
                 if (this.value.trim() != "") {
                     const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
@@ -475,7 +454,7 @@ async function main(callback) {
                             <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
 
-                        if (!fileMap || Object.keys(fileMap).length === 0) {
+                        if (!window.fileMap || Object.keys(window.fileMap).length === 0) {
                             albumAndTitleItem.innerHTML += `
                                 <small> @ ${matchedDoc.StartTime}</small>
                             `;
@@ -502,7 +481,7 @@ async function main(callback) {
                             startTimeLink.addEventListener('click', function(e) {
                                 const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
                                 // console.log('Relevant URL: ' + relevantUrl);
-                                const matchingUrl = fileMap[relevantUrl];
+                                const matchingUrl = window.fileMap[relevantUrl];
                                 // console.log('Matching URL: ' + matchingUrl);
                                 e.preventDefault();
                                 const audioPlayer = document.getElementById('audioPlayer');

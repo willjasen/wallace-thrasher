@@ -55,12 +55,21 @@ hide_from_nav: true
     border: 2px solid #9a9adf;
     cursor: pointer;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 26px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.5);
     transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
     line-height: 1;
+    gap: 1px;
+  }
+  #audioFabTime {
+    font-size: 8px;
+    color: #d0d0ff;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    display: none;
   }
   #audioFab:hover {
     background: #7a7abf;
@@ -261,6 +270,8 @@ hide_from_nav: true
   if (!isMobile) {
     const fab = el('button', { id: 'audioFab', title: 'Listen to track', 'aria-label': 'Listen to track' });
     fab.textContent = '\uD83C\uDFA7';
+    const fabTimeLabel = el('span', { id: 'audioFabTime' });
+    fab.appendChild(fabTimeLabel);
 
     const fabPanel = el('div', { id: 'audioFabPanel' });
 
@@ -325,6 +336,13 @@ hide_from_nav: true
           selectBtn.textContent = '\u2705 LPC USB loaded';
           selectBtn.style.borderColor = 'greenyellow';
           panelTitle.style.display = 'none';
+          audioPlayer.addEventListener('timeupdate', function () {
+            if (audioPlayer.duration) {
+              const s = Math.floor(audioPlayer.currentTime);
+              fabTimeLabel.textContent = Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+              fabTimeLabel.style.display = '';
+            }
+          });
         } catch (e) {
           console.warn('Could not load track from directory:', e);
         }

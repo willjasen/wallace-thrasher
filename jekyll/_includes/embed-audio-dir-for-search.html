@@ -1,2 +1,219 @@
 
-{% include embed-audio.html %}
+<style>
+  #audioFab {
+    position: fixed; bottom: 24px; right: 24px; z-index: 1000;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #5a5a9a; border: 2px solid #9a9adf;
+    cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-size: 26px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s; line-height: 1; gap: 1px;
+  }
+  #audioFabTime {
+    font-size: 8px; color: #d0d0ff; letter-spacing: 0.02em; line-height: 1; display: none;
+  }
+  #audioFab:hover { background: #7a7abf; transform: scale(1.1); box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+  #audioFabPanel {
+    position: fixed; bottom: 90px; right: 24px; z-index: 999;
+    background: #1e1e3a; border: 1px solid #7a7abf;
+    border-radius: 14px; padding: 16px 18px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+    display: none; flex-direction: column; align-items: center; min-width: 300px; gap: 10px;
+  }
+  #audioFabPanel audio { width: 100%; margin-top: 4px; }
+  #audioFabPanel .fab-panel-title { margin: 0; color: #b0b0e0; font-size: 0.78em; text-align: center; }
+</style>
+
+<script>
+(function () {
+  const isMobile = window.innerWidth <= 768 ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+  if (isMobile) return;
+
+  const fab = document.createElement('button');
+  fab.id = 'audioFab';
+  fab.title = 'Listen to track';
+  fab.setAttribute('aria-label', 'Listen to track');
+  fab.textContent = '\uD83C\uDFA7';
+  const fabTimeLabel = document.createElement('span');
+  fabTimeLabel.id = 'audioFabTime';
+  fab.appendChild(fabTimeLabel);
+
+  const fabPanel = document.createElement('div');
+  fabPanel.id = 'audioFabPanel';
+
+  const panelTitle = document.createElement('p');
+  panelTitle.className = 'fab-panel-title';
+  panelTitle.textContent = 'Select the top-level directory for the collection, usually named \u201CLPC USB\u201D';
+  fabPanel.appendChild(panelTitle);
+
+  const audioPlayer = document.createElement('audio');
+  audioPlayer.id = 'audioPlayer';
+  audioPlayer.setAttribute('controls', '');
+  audioPlayer.style.display = 'none';
+  fabPanel.appendChild(audioPlayer);
+
+  document.addEventListener('click', function (e) {
+    const searchResults = document.getElementById('subtitles-search-results');
+    if (!fab.contains(e.target) && !fabPanel.contains(e.target) &&
+        !(searchResults && searchResults.contains(e.target))) {
+      fabPanel.style.display = 'none';
+    }
+  });
+
+  function refreshSearch() {
+    const searchInput = document.querySelector('#subtitles-search-input');
+    if (searchInput && searchInput.value.trim() !== '') {
+      searchInput.dispatchEvent(new Event('input'));
+    }
+  }
+
+  if ('showDirectoryPicker' in window) {
+    // IndexedDB helpers — shared with tracks page (same store)
+    function openDb() {
+      return new Promise(function (resolve, reject) {
+        const req = indexedDB.open('lpc-usb-db', 1);
+        req.onupgradeneeded = function (e) { e.target.result.createObjectStore('handles'); };
+        req.onsuccess = function (e) { resolve(e.target.result); };
+        req.onerror = function () { reject(req.error); };
+      });
+    }
+    async function getStoredHandle() {
+      try {
+        const db = await openDb();
+        return await new Promise(function (resolve) {
+          const tx = db.transaction('handles', 'readonly');
+          const get = tx.objectStore('handles').get('lpcUsb');
+          get.onsuccess = function () { resolve(get.result || null); };
+          get.onerror = function () { resolve(null); };
+        });
+      } catch (e) { return null; }
+    }
+    async function storeHandle(handle) {
+      const db = await openDb();
+      return new Promise(function (resolve, reject) {
+        const tx = db.transaction('handles', 'readwrite');
+        tx.objectStore('handles').put(handle, 'lpcUsb');
+        tx.oncomplete = function () { resolve(); };
+        tx.onerror = function () { reject(tx.error); };
+      });
+    }
+
+    // Recursively traverse the LPC USB dir and build window.fileMap
+    async function traverseDir(dirHandle, path) {
+      for await (const [name, entry] of dirHandle.entries()) {
+        const entryPath = path + '/' + name;
+        if (entry.kind === 'file' && name.toLowerCase().endsWith('.mp3')) {
+          const file = await entry.getFile();
+          window.fileMap[entryPath] = URL.createObjectURL(file);
+        } else if (entry.kind === 'directory') {
+          await traverseDir(entry, entryPath);
+        }
+      }
+    }
+
+    async function loadFromDir(dirHandle) {
+      window.fileMap = {};
+      selectBtn.textContent = '\u23F3 Loading\u2026';
+      selectBtn.disabled = true;
+      await traverseDir(dirHandle, 'LPC USB');
+      audioPlayer.style.display = '';
+      selectBtn.textContent = '\u2705 LPC USB loaded';
+      selectBtn.style.borderColor = 'greenyellow';
+      selectBtn.disabled = false;
+      panelTitle.style.display = 'none';
+      audioPlayer.addEventListener('timeupdate', function () {
+        if (audioPlayer.duration) {
+          const s = Math.floor(audioPlayer.currentTime);
+          fabTimeLabel.textContent = Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+          fabTimeLabel.style.display = '';
+        }
+      });
+      refreshSearch();
+    }
+
+    let cachedHandle = null;
+    getStoredHandle().then(async function (h) {
+      cachedHandle = h;
+      if (!h) return;
+      try {
+        const perm = await h.queryPermission({ mode: 'read' });
+        if (perm === 'granted') {
+          await loadFromDir(h);
+        }
+      } catch (e) {
+        console.warn('Auto-load on page load failed:', e);
+      }
+    });
+
+    const selectBtn = document.createElement('button');
+    selectBtn.id = 'selectLpcBtn';
+    selectBtn.style.cssText = 'color: greenyellow; background: none; border: 1px solid greenyellow; border-radius: 6px; padding: 6px 12px; cursor: pointer; font-weight: bold;';
+    selectBtn.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
+    fabPanel.insertBefore(selectBtn, audioPlayer);
+
+    selectBtn.addEventListener('click', async function () {
+      try {
+        const dirHandle = await window.showDirectoryPicker({ mode: 'read', startIn: 'music' });
+        await storeHandle(dirHandle);
+        cachedHandle = dirHandle;
+        await loadFromDir(dirHandle);
+      } catch (e) {
+        if (e.name !== 'AbortError') console.error(e);
+      }
+    });
+
+    fab.addEventListener('click', async function () {
+      const isOpen = fabPanel.style.display === 'flex';
+      fabPanel.style.display = isOpen ? 'none' : 'flex';
+      if (!isOpen && audioPlayer.style.display === 'none' && cachedHandle) {
+        try {
+          const perm = await cachedHandle.requestPermission({ mode: 'read' });
+          if (perm === 'granted') {
+            await loadFromDir(cachedHandle);
+          }
+        } catch (e) {
+          console.warn('Could not auto-load from stored handle:', e);
+        }
+      }
+    });
+
+  } else {
+    // Fallback: legacy <input webkitdirectory>
+    const fileLabel = document.createElement('label');
+    fileLabel.setAttribute('for', 'fileInput');
+    fileLabel.style.cssText = 'color: greenyellow; cursor: pointer; font-weight: bold;';
+    fileLabel.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
+    fabPanel.insertBefore(fileLabel, audioPlayer);
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.id = 'fileInput';
+    fileInput.accept = 'audio/mp3';
+    fileInput.setAttribute('webkitdirectory', '');
+    fileInput.multiple = true;
+    fabPanel.insertBefore(fileInput, audioPlayer);
+
+    fab.addEventListener('click', function () {
+      const isOpen = fabPanel.style.display === 'flex';
+      fabPanel.style.display = isOpen ? 'none' : 'flex';
+    });
+
+    fileInput.addEventListener('change', function (event) {
+      window.fileMap = {};
+      const files = event.target.files;
+      for (const file of files) {
+        if (file.name.toLowerCase().endsWith('.mp3')) {
+          window.fileMap[file.webkitRelativePath] = URL.createObjectURL(file);
+        }
+      }
+      audioPlayer.style.display = '';
+      fileLabel.textContent = '\u2705 LPC USB loaded';
+      panelTitle.style.display = 'none';
+      refreshSearch();
+    });
+  }
+
+  document.body.appendChild(fabPanel);
+  document.body.appendChild(fab);
+})();
+</script>
