@@ -262,32 +262,6 @@ async function main(callback) {
         // Fetch data.json once and cache it for all consumers
         const rawDataJson = await fetchDataCached(BASE_URL + '/assets/json/data.json');
 
-        // Build a track-level establishments index
-        function buildTrackEstablishmentIndex(rawData) {
-            let startTimeInMilliseconds = Date.now();
-            let trackDocs = [];
-            if (rawData && rawData.Albums) {
-                rawData.Albums.forEach(album => {
-                    album.Tracks.forEach(track => {
-                        trackDocs.push({
-                            id: `${album.Album}|||${track.Track_Title}`,
-                            Album: album.Album,
-                            Album_Slug: album.Album_Slug,
-                            Track_Title: track.Track_Title,
-                            Track_Slug: track.Track_Slug,
-                            Establishments: (Array.isArray(track.Establishments) ? track.Establishments.join(', ') : (track.Establishments || '')),
-                            Album_Picture: album.Album_Picture
-                        });
-                    });
-                });
-            }
-            let endTimeInMilliseconds = Date.now();
-            console.log("Building track establishments index took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
-            return trackDocs;
-        }
-
-        const trackEstablishmentDocs = buildTrackEstablishmentIndex(rawDataJson);
-        
     try {
         var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData();
@@ -367,6 +341,33 @@ async function main(callback) {
 
         await yieldToMain();
         const trackAliasDocs = buildTrackAliasDocs(rawDataJson);
+
+        // Build a track-level establishment docs array
+        function buildTrackEstablishmentDocs(rawData) {
+            let startTimeInMilliseconds = Date.now();
+            let trackDocs = [];
+            if (rawData && rawData.Albums) {
+                rawData.Albums.forEach(album => {
+                    album.Tracks.forEach(track => {
+                        trackDocs.push({
+                            id: `${album.Album}|||${track.Track_Title}`,
+                            Album: album.Album,
+                            Album_Slug: album.Album_Slug,
+                            Track_Title: track.Track_Title,
+                            Track_Slug: track.Track_Slug,
+                            Establishments: (Array.isArray(track.Establishments) ? track.Establishments.join(', ') : (track.Establishments || '')),
+                            Album_Picture: album.Album_Picture
+                        });
+                    });
+                });
+            }
+            let endTimeInMilliseconds = Date.now();
+            console.log("Building track establishment docs took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            return trackDocs;
+        }
+
+        await yieldToMain();
+        const trackEstablishmentDocs = buildTrackEstablishmentDocs(rawDataJson);
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
