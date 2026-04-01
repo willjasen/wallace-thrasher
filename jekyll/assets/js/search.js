@@ -250,6 +250,12 @@ async function loadData() {
 }
 
 /*
+    Yield control back to the browser's task queue, breaking up long tasks and
+    preventing 'setTimeout handler took Xms' violations in DevTools.
+*/
+const yieldToMain = () => new Promise(resolve => setTimeout(resolve, 0));
+
+/*
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
@@ -285,7 +291,8 @@ async function main(callback) {
     try {
         var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData();
-       
+        const dataMap = new Map(dataStructure.map(doc => [doc.id, doc]));
+
         // Function to index a search based on a field
         function indexOnField(indexField) {
             let startTimeInMilliseconds = Date.now();
@@ -312,6 +319,7 @@ async function main(callback) {
         const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
 
         let idxText;
+        await yieldToMain();
         if ('caches' in window) {
             const cached = await loadFromCache(cacheName, '/wt-cache/idx-Text');
             if (cached) {
@@ -326,6 +334,7 @@ async function main(callback) {
         }
 
         let idxSpeaker;
+        await yieldToMain();
         if ('caches' in window) {
             const cached = await loadFromCache(cacheName, '/wt-cache/idx-Speaker');
             if (cached) {
@@ -373,6 +382,7 @@ async function main(callback) {
             return { idx, trackDocs };
         }
 
+        await yieldToMain();
         const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex(rawDataJson);
 
         // Count the number of times Alex Trebek show up within a track
@@ -380,7 +390,7 @@ async function main(callback) {
             const resultsForAlexTrebek = idxSpeaker.search("+Alex +Trebek");
             let tracksWithAlexTrebek = new Set();
             resultsForAlexTrebek.forEach(function (resultForAlex) {
-                const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
+                const matchedDoc = dataMap.get(resultForAlex.ref);
                 const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
                 
                 // Add to Set only if the combination isn't already added
@@ -402,7 +412,7 @@ async function main(callback) {
             resultsContainer.innerHTML = '';
             let tracksWithSpeaker = new Set();
             results.forEach(function (result) {
-                const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                const matchedDoc = dataMap.get(result.ref);
                 const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
                 if (!tracksWithSpeaker.has(key)) {
                     tracksWithSpeaker.add(key);
@@ -436,7 +446,7 @@ async function main(callback) {
                     results.forEach(function (result) {
 
                         resultCount++;
-                        const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                        const matchedDoc = dataMap.get(result.ref);
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
@@ -522,7 +532,7 @@ async function main(callback) {
 
                     // Display search results
                     results.forEach(function (result) {
-                        const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                        const matchedDoc = dataMap.get(result.ref);
 
                         //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
                         const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
@@ -628,7 +638,7 @@ async function main(callback) {
         // Cache the Alex Trebek count so the lunr search only runs once ever.
         let _cachedAlexCount = null;
 
-        function onDomContentLoaded() {
+        async function onDomContentLoaded() {
             // Only do Alex-related work when on the Alex Trebek page.
             const alexCountSpan = document.querySelector('#alex-count-span');
             const alexTracksSpan = document.querySelector('#alex-tracks-span');
@@ -640,6 +650,7 @@ async function main(callback) {
                 }
                 alexCountSpan.textContent = _cachedAlexCount;
             }
+            await yieldToMain();
             runSpeakerSearchForAlexTrebek();
         }
         
