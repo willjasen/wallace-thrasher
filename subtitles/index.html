@@ -72,90 +72,40 @@
 
   <div class="post-content">
     
-<style>
-    /* Tooltip container styles */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-    }
-  
-    /* Tooltip text styles */
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      opacity: 0;
-      width: 200px;
-      background-color: lavender; /* updated color */
-      color: #000; /* adjusted text color for contrast */
-      text-align: center;
-      border-radius: 4px;
-      padding: 8px;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%; /* Positions the tooltip above the label */
-      left: 50%;
-      transform: translateX(-50%);
-      transition: opacity 0.3s;
-      /* added color accents */
-      border: 1px solid #ffdd57;
-      box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
-    }
-  
-    /* Show tooltip text when hovering */
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
-
-<hr id="audioSectionDivider" style="margin: 20px 0;" />
-
-<div style="display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;">
-    <div id="audioControlContainer" style="display: flex; align-items: center;">
-      <div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;">
-        <label for="fileInput" class="tooltip" style="margin-bottom: 10px; color: greenyellow;">
-          ⬇️ Select LPC USB ⬇️
-          <span class="tooltiptext">Select the top-level directory for the collection, usually named "LPC USB"</span>
-        </label>
-        <input type="file" id="fileInput" accept="audio/mp3" webkitdirectory="" multiple="" />
-      </div>
-      <audio id="audioPlayer" controls=""></audio>
-    </div>
-  </div>
-<hr style="margin: 20px 0;" />
-
 <script>
-    // Mobile detection function
-    function isMobileDevice() {
-      return (window.innerWidth <= 768) || 
-             (navigator.userAgent.match(/Android/i) ||
-              navigator.userAgent.match(/webOS/i) ||
-              navigator.userAgent.match(/iPhone/i) ||
-              navigator.userAgent.match(/iPad/i) ||
-              navigator.userAgent.match(/iPod/i) ||
-              navigator.userAgent.match(/BlackBerry/i) ||
-              navigator.userAgent.match(/Windows Phone/i));
+// Subtitles page: request lpc-player to traverse all files so timestamps work.
+// persistent-player.js handles the FAB, IndexedDB, and window.fileMap.
+(function initSubtitlesAudio() {
+  function tryTraverse() {
+    if (window.lpcPlayer && window.lpcPlayer.isLoaded()) {
+      // Already loaded (e.g. soft-nav from a track page) — nothing to do
+      return;
     }
-    
-    // Execute when DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
-      if (isMobileDevice()) {
-        // Hide the audio control container on mobile devices
-        const container = document.getElementById('audioControlContainer');
-        if (container) {
-          container.style.display = 'none';
-        }
-        
-        // Also hide the horizontal rule divider
-        const divider = document.getElementById('audioSectionDivider');
-        if (divider) {
-          divider.style.display = 'none';
-        }
-      }
-    });
-  </script>
+    if (window.lpcPlayer && window.lpcPlayer.handle) {
+      window.lpcPlayer.traverseAll().then(function (ok) {
+        if (ok) document.dispatchEvent(new CustomEvent('lpc-loaded'));
+      });
+    }
+  }
 
-<p><br /></p>
+  // Run immediately in case persistent-player.js already finished startup
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryTraverse);
+  } else {
+    tryTraverse();
+  }
+
+  // Also run when the directory finishes loading (covers the case where
+  // the auto-load in persistent-player.js completes after this script runs)
+  document.addEventListener('lpc-loaded', function () {
+    // Refresh search results so timestamps become links
+    var searchInput = document.querySelector('#subtitles-search-input');
+    if (searchInput && searchInput.value.trim() !== '') {
+      searchInput.dispatchEvent(new Event('input'));
+    }
+  });
+})();
+</script>
 <div class="search-flex-row">
   <input type="text" id="subtitles-search-input" placeholder="Search..." /><script src="/wallace-thrasher/assets/js/lunr.js" integrity="sha256-icIor2ifjq4/O1GRu/ZJ8Pm2S4BClvYURbR3fneCLPs=" crossorigin="anonymous"></script>
 <script src="/wallace-thrasher/assets/js/search.js"></script>
@@ -211,7 +161,7 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            4/1/26, 12:03:20 AM EDT
+            4/1/26, 2:04:11 AM EDT
           
         </div>
         <!-- Discord server link -->
@@ -279,6 +229,7 @@ ten is strength
 recalled images are detailed
 -->
 
+<script src="/wallace-thrasher/assets/js/persistent-player.js"></script>
 </footer>
 
 

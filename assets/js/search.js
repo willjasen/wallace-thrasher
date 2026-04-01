@@ -5,7 +5,7 @@ const BASE_URL = '/wallace-thrasher';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = 'false' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
-const BUILD_TIMESTAMP = '1775016200';
+const BUILD_TIMESTAMP = '1775023451';
 
 /*
     This function retrieves a JSON document from a given path
@@ -383,73 +383,34 @@ async function main(callback) {
         
         // Function to programmatically run the speakers search for "Alex Trebek"
         function runSpeakerSearchForAlexTrebek() {
-            let resultsContainer = document.querySelector('#alex-tracks-span');
-            if (!resultsContainer) {
-                // Only run on the Alex Trebek page
-                return;
-            }
-            let speakersSearchInput = document.querySelector('#speakers-search-input');
-            if (!speakersSearchInput) {
-                // Create a hidden input if it doesn't exist
-                speakersSearchInput = document.createElement('input');
-                speakersSearchInput.type = 'hidden';
-                speakersSearchInput.id = 'speakers-search-input';
-                document.body.appendChild(speakersSearchInput);
-                // Attach the event listener as in main()
-                speakersSearchInput.addEventListener('input', function () {
-                    if (this.value.trim() !== "") {
-                        const query = this.value.trim().split(' ').map(word => `+${word}`).join(' ');
-                        const results = idxSpeaker.search(query);
-                        resultsContainer.innerHTML = '';
-                        let tracksWithSpeaker = new Set();
-                        results.forEach(function (result) {
-                            const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
-                            const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
-                            if (!tracksWithSpeaker.has(key)) {
-                                tracksWithSpeaker.add(key);
-                                const albumAndTitleItem = document.createElement('li');
-                                albumAndTitleItem.innerHTML = `
-                                    <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
-                                    ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
-                                `;
-                                resultsContainer.appendChild(albumAndTitleItem);
-                            }
-                        });
-                    }
-                });
-            }
-            speakersSearchInput.value = 'Alex Trebek';
-            speakersSearchInput.dispatchEvent(new Event('input'));
+            const resultsContainer = document.querySelector('#alex-tracks-span');
+            if (!resultsContainer) return; // Only run on the Alex Trebek page
+
+            const results = idxSpeaker.search('+Alex +Trebek');
+            resultsContainer.innerHTML = '';
+            let tracksWithSpeaker = new Set();
+            results.forEach(function (result) {
+                const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                if (!tracksWithSpeaker.has(key)) {
+                    tracksWithSpeaker.add(key);
+                    const albumAndTitleItem = document.createElement('li');
+                    albumAndTitleItem.innerHTML = `
+                        <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                        ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
+                    `;
+                    resultsContainer.appendChild(albumAndTitleItem);
+                }
+            });
         }
 
-        // Set up the subtitles search input listener
-        if (document.querySelector('#subtitles-search-input')) {
-            fileMap = {};
-            if(jekyll_env != "production") {
-                const fileInput = document.getElementById('fileInput');
-                const audio = document.getElementById('audioPlayer');
-                fileInput.addEventListener('change', function(event) {
-                    fileTarget = event.target;
-                    const files = fileTarget.files;
-                    for (const file of files) {
-                        if (file.name.endsWith('.mp3')) {
-                            const url = URL.createObjectURL(file);
-                            fileMap[file.webkitRelativePath] = url;
-                        }  
-                    }
-                    console.log("Files have been uploaded! Jumping to a subtitle will now work!");
-
-                    // Update the input of #subtitles-search-input
-                    const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
-                    if (subtitlesSearchInput) {
-                        subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
-                        subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
-                    }
-                });
-            }
-            document.querySelector('#subtitles-search-input').addEventListener('input', function () {
-                if (this.value.trim() != "") {
-                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
+        // Set up the subtitles search input listener (delegated so it survives soft-nav DOM swaps)
+        window.fileMap = window.fileMap || {};
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#subtitles-search-input')) return;
+            (function (input) {
+                if (input.value.trim() != "") {
+                    const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxText.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -472,7 +433,7 @@ async function main(callback) {
                             <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
 
-                        if (!fileMap || Object.keys(fileMap).length === 0) {
+                        if (!window.fileMap || Object.keys(window.fileMap).length === 0) {
                             albumAndTitleItem.innerHTML += `
                                 <small> @ ${matchedDoc.StartTime}</small>
                             `;
@@ -499,7 +460,7 @@ async function main(callback) {
                             startTimeLink.addEventListener('click', function(e) {
                                 const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
                                 // console.log('Relevant URL: ' + relevantUrl);
-                                const matchingUrl = fileMap[relevantUrl];
+                                const matchingUrl = window.fileMap[relevantUrl];
                                 // console.log('Matching URL: ' + matchingUrl);
                                 e.preventDefault();
                                 const audioPlayer = document.getElementById('audioPlayer');
@@ -527,14 +488,15 @@ async function main(callback) {
                     totalCountContainer.innerHTML = `Subtitles found: ${resultCount}`;
                     resultList.insertBefore(totalCountContainer, resultList.firstChild);
                 }
-            });
-        }
+            })(e.target);
+        });
 
-        // Set up the speakers search input listener
-        if (document.querySelector('#speakers-search-input')) {
-            document.querySelector('#speakers-search-input').addEventListener('input', function () {
-                if (this.value.trim() !== "") {
-                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
+        // Set up the speakers search input listener (delegated)
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#speakers-search-input')) return;
+            (function (input) {
+                if (input.value.trim() !== "") {
+                    const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxSpeaker.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -575,13 +537,14 @@ async function main(callback) {
                     totalCountContainer.innerHTML = `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
                     resultList.insertBefore(totalCountContainer, resultList.firstChild);
                 }
-            });
-        }
+            })(e.target);
+        });
 
-        // Set up the aliases search input listener
-        if (document.querySelector('#aliases-search-input')) {
-            document.querySelector('#aliases-search-input').addEventListener('input', function () {
-                const query = this.value.trim().toLowerCase();
+        // Set up the aliases search input listener (delegated)
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#aliases-search-input')) return;
+            (function (input) {
+                const query = input.value.trim().toLowerCase();
                 const resultList = document.querySelector('#aliases-search-results');
                 resultList.innerHTML = '';
                 if (query === "") return;
@@ -611,13 +574,14 @@ async function main(callback) {
                 totalCountContainer.style.marginBottom = '25px';
                 totalCountContainer.innerHTML = `<br/><p>Unique track-alias combinations: ${matchCount}</p>`;
                 resultList.insertBefore(totalCountContainer, resultList.firstChild);
-            });
-        }
+            })(e.target);
+        });
 
-        // Set up the establishments search input listener
-        if (document.querySelector('#establishments-search-input')) {
-            document.querySelector('#establishments-search-input').addEventListener('input', function () {
-                const query = this.value.trim().toLowerCase();
+        // Set up the establishments search input listener (delegated)
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#establishments-search-input')) return;
+            (function (input) {
+                const query = input.value.trim().toLowerCase();
                 const resultList = document.querySelector('#establishments-search-results');
                 resultList.innerHTML = '';
                 if (query === "") return;
@@ -646,18 +610,24 @@ async function main(callback) {
                 totalCountContainer.style.marginBottom = '25px';
                 totalCountContainer.innerHTML = `<br/><p>Unique track-establishment combinations: ${matchCount}</p>`;
                 resultList.insertBefore(totalCountContainer, resultList.firstChild);
-            });
-        }
+            })(e.target);
+        });
+
+        // Cache the Alex Trebek count so the lunr search only runs once ever.
+        let _cachedAlexCount = null;
 
         function onDomContentLoaded() {
-            const countOfAlexTrebek = getNumberOfTracksThatAlexTrebekIsIn();
+            // Only do Alex-related work when on the Alex Trebek page.
             const alexCountSpan = document.querySelector('#alex-count-span');
+            const alexTracksSpan = document.querySelector('#alex-tracks-span');
+            if (!alexCountSpan && !alexTracksSpan) return;
+
             if (alexCountSpan) {
-                alexCountSpan.textContent = countOfAlexTrebek;
-            } else {
-                // console.error('Element with id "alex-count-span" not found.');
+                if (_cachedAlexCount === null) {
+                    _cachedAlexCount = getNumberOfTracksThatAlexTrebekIsIn();
+                }
+                alexCountSpan.textContent = _cachedAlexCount;
             }
-            // Display the results for Alex Trebek
             runSpeakerSearchForAlexTrebek();
         }
         
@@ -672,6 +642,9 @@ async function main(callback) {
         function createKey(albumTitle, trackTitle, speaker) {
             return `${albumTitle}-${trackTitle}-${speaker}`;
         }
+
+        // Expose so the module-level soft-nav listener can call it after async work is done
+        window._wtOnDomContentLoaded = onDomContentLoaded;
 
         callback(true);
 
@@ -699,4 +672,13 @@ main(function(dataReady) {
                     .forEach(input => input && (input.disabled = false));
                 handleSearchParameter();
         }
+});
+
+// Re-run page-specific UI after soft-nav swaps the DOM.
+// Registered here at module level (not inside async main()) so it is always
+// active regardless of how long main() takes to finish.
+document.addEventListener('soft-nav', function () {
+    if (typeof window._wtOnDomContentLoaded === 'function') {
+        setTimeout(window._wtOnDomContentLoaded, 0);
+    }
 });
