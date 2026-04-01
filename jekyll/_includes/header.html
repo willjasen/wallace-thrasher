@@ -49,4 +49,6 @@
     {%- endif -%}
   </div>
   <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"> -->
+  {% if page.search_page %}<script>window._wtIsSearchPage = true;</script>{% endif %}
+  {% include prefetch-data.html %}
 </header>

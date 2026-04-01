@@ -3,6 +3,7 @@ layout: page
 title: Aliases
 permalink: /aliases/
 published: true
+search_page: true
 ---
 
 <div class="search-flex-row">
@@ -10,7 +11,6 @@ published: true
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="aliases-search-results"></ul>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
 
 <style>
   .loader {

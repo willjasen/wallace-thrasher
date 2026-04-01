@@ -2,6 +2,7 @@
 layout: page
 title: Subtitles
 permalink: /subtitles/
+search_page: true
 ---
 
 {%- include embed-audio-dir-for-search.html -%}
@@ -11,4 +12,3 @@ permalink: /subtitles/
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="subtitles-search-results"></ul>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
