@@ -132,7 +132,7 @@
   <li>prefetch and index data on every page, if needed</li>
   <li>move the LPC USB feature into a floating action button</li>
   <li>the LPC USB feature now persists across page navigations</li>
-  <li>add a table of contents for the About page</li>
+  <li>add a table of contents for the About and Version History pages</li>
   <li>center the search box on associated pages</li>
   <li>stop <code class="language-plaintext highlighter-rouge">jekyll serve</code> from constant rebuilding</li>
   <li>specify <code class="language-plaintext highlighter-rouge">netlify.toml</code> for build settings at netlify</li>
@@ -282,15 +282,104 @@
       <li>search results returned will now include only all words entered</li>
     </ul>
   </li>
-  <li>allow URL parameter for search (https://stretchie.delivery/subtitles/?search=cheese+pizza)</li>
+  <li>allow URL parameter for search (https://stretchie.net/subtitles/?search=cheese+pizza)</li>
   <li>deploy website to IPFS
     <ul>
       <li>renamed ‘publish-for-netlify.yml’ to ‘deploy-production-build.yml’</li>
       <li>‘deploy-production-build.yml’ builds the website as a production build and publishes the built site’s contents to the ‘production-build’ branch</li>
-      <li>‘deploy-production-build.yml’ deploys the site to IPFS via <a href="https://filebase.com/">Filebase</a> and <a href="https://storacha.network/">Storacha</a> using the ‘production-build’ branch, then updates the <code class="language-plaintext highlighter-rouge">_dnslink</code> TXT DNS record for the “<a href="https://stretchie.delivery">stretchie.delivery</a>” domain to reflect the new IPFS hash</li>
+      <li>‘deploy-production-build.yml’ deploys the site to IPFS via <a href="https://filebase.com/">Filebase</a> and <a href="https://storacha.network/">Storacha</a> using the ‘production-build’ branch, then updates the <code class="language-plaintext highlighter-rouge">_dnslink</code> TXT DNS record for the “<a href="https://stretchie.net">stretchie.net</a>” domain to reflect the new IPFS hash</li>
     </ul>
   </li>
 </ul>
+
+<link rel="stylesheet" href="/wallace-thrasher/assets/css/version-history-toc.css" />
+
+<script>
+(function () {
+  function buildTOC() {
+    // Remove any stale TOC left by a previous visit (soft-nav re-execution)
+    var existing = document.getElementById("version-history-toc");
+    if (existing) existing.remove();
+    document.body.classList.remove("version-history-page");
+
+    const content = document.querySelector(".post-content") || document.querySelector(".page-content .wrapper");
+    if (!content) return;
+
+    const headings = content.querySelectorAll("h3");
+    if (headings.length === 0) return;
+
+    const nav = document.createElement("nav");
+    nav.id = "version-history-toc";
+    nav.setAttribute("aria-label", "Page sections");
+
+    const label = document.createElement("div");
+    label.id = "version-history-toc-label";
+    label.textContent = "Version History";
+    nav.appendChild(label);
+
+    const ul = document.createElement("ul");
+    headings.forEach(function (h) {
+      if (!h.id) {
+        h.id = h.textContent.trim().toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+      }
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.dataset.targetId = h.id;
+      a.textContent = h.textContent
+        .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}\u{1FA00}-\u{1FFFD}\u2194-\u21FF\u2300-\u23FF\u2B00-\u2BFF\u{231A}-\u{231B}☑↪↘⚙🛠✍☑🪪🤓]/gu, "")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    nav.appendChild(ul);
+    document.body.appendChild(nav);
+    document.body.classList.add("version-history-page");
+
+    const links = nav.querySelectorAll("a");
+
+    links.forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.getElementById(a.dataset.targetId);
+        if (target) target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove("active"); });
+          const active = nav.querySelector('[data-target-id="' + entry.target.id + '"]');
+          if (active) active.classList.add("active");
+        }
+      });
+    }, { rootMargin: "0px 0px -80% 0px" });
+
+    headings.forEach(function (h) { observer.observe(h); });
+  }
+
+  // Run immediately if DOM is ready (soft-nav re-execution), otherwise wait
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", buildTOC);
+  } else {
+    buildTOC();
+  }
+
+  // Clean up when the persistent player soft-navigates away from Version History
+  document.addEventListener("soft-nav", function onSoftNav(e) {
+    var url = (e.detail && e.detail.url) || "";
+    if (!url.match(/\/version-history\/?$/)) {
+      var toc = document.getElementById("version-history-toc");
+      if (toc) toc.remove();
+      document.body.classList.remove("version-history-page");
+      document.removeEventListener("soft-nav", onSoftNav);
+    }
+  });
+})();
+</script>
+
 
   </div>
 
@@ -321,7 +410,7 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            4/1/26, 4:18:18 PM EDT
+            4/1/26, 4:58:40 PM EDT
           
         </div>
         <!-- Discord server link -->
