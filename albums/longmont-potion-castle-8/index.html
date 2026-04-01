@@ -13,13 +13,13 @@
 <meta property="og:url" content="/wallace-thrasher/albums/longmont-potion-castle-8/" />
 <meta property="og:site_name" content="stretchie" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-04-01T14:18:59-04:00" />
+<meta property="article:published_time" content="2026-04-01T15:34:36-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="stretchie" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-04-01T14:18:59-04:00","datePublished":"2026-04-01T14:18:59-04:00","description":"you can call me stretchie","headline":"stretchie","mainEntityOfPage":{"@type":"WebPage","@id":"/wallace-thrasher/albums/longmont-potion-castle-8/"},"url":"/wallace-thrasher/albums/longmont-potion-castle-8/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-04-01T15:34:36-04:00","datePublished":"2026-04-01T15:34:36-04:00","description":"you can call me stretchie","headline":"stretchie","mainEntityOfPage":{"@type":"WebPage","@id":"/wallace-thrasher/albums/longmont-potion-castle-8/"},"url":"/wallace-thrasher/albums/longmont-potion-castle-8/"}</script>
 <!-- End Jekyll SEO tag -->
-<link id="main-stylesheet" rel="stylesheet" href="/wallace-thrasher/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/wallace-thrasher/feed.xml" title="stretchie" />
+<link id="main-stylesheet" rel="stylesheet" href="/wallace-thrasher/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/wallace-thrasher/feed.xml" title="stretchie" /><link rel="stylesheet" href="/wallace-thrasher/assets/css/search-box.css">
 </head>
 <body><header class="site-header" role="banner">
 
@@ -64,6 +64,59 @@
         </div>
       </nav></div>
   <!-- <link rel="stylesheet" href="/wallace-thrasher/assets/css/main.css"> -->
+  
+  <script>
+  (function() {
+    var BASE_URL = '/wallace-thrasher';
+
+    function isScriptLoaded(partialSrc) {
+      return Array.from(document.scripts).some(function(s) {
+        return s.src && s.src.indexOf(partialSrc) !== -1;
+      });
+    }
+
+    function loadScript(src, integrity, onload) {
+      var s = document.createElement('script');
+      s.src = src;
+      if (integrity) {
+        s.integrity = integrity;
+        s.crossOrigin = 'anonymous';
+      }
+      if (onload) s.onload = onload;
+      document.head.appendChild(s);
+    }
+
+    function run() {
+      // window._wtIsSearchPage is set synchronously by header.html on search pages,
+      // before this idle callback is ever scheduled — so this check is race-condition-free.
+      if (window._wtIsSearchPage) return;
+
+      var lunrSrc    = BASE_URL + '/assets/js/lunr.js';
+      var searchSrc  = BASE_URL + '/assets/js/search.js';
+      var lunrIntegrity = 'sha256-icIor2ifjq4/O1GRu/ZJ8Pm2S4BClvYURbR3fneCLPs=';
+
+      function injectSearch() {
+        if (!isScriptLoaded('/assets/js/search.js')) {
+          loadScript(searchSrc, null, null);
+        }
+      }
+
+      if (isScriptLoaded('/assets/js/lunr.js')) {
+        injectSearch();
+      } else {
+        loadScript(lunrSrc, lunrIntegrity, injectSearch);
+      }
+    }
+
+    // Defer until idle so prefetching doesn't compete with current-page resources
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(run);
+    } else {
+      setTimeout(run, 0);
+    }
+  })();
+</script>
+
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -319,7 +372,7 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            4/1/26, 2:18:59 PM EDT
+            4/1/26, 3:34:36 PM EDT
           
         </div>
         <!-- Discord server link -->
