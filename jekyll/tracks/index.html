@@ -268,24 +268,9 @@ hide_from_nav: true
     panelTitle.textContent = 'Select the top-level directory for the collection, usually named \u201CLPC USB\u201D';
     fabPanel.appendChild(panelTitle);
 
-    const fileLabel = el('label', { for: 'fileInput', class: 'tooltip', style: 'color: greenyellow; cursor: pointer; font-weight: bold;' });
-    fileLabel.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
-    const tooltipSpan = el('span', { class: 'tooltiptext' });
-    tooltipSpan.textContent = 'Select the top-level directory for the collection, usually named "LPC USB"';
-    fileLabel.appendChild(tooltipSpan);
-    fabPanel.appendChild(fileLabel);
-
-    const fileInput = el('input', { type: 'file', id: 'fileInput', accept: 'audio/mp3', webkitdirectory: '', multiple: '' });
-    fabPanel.appendChild(fileInput);
-
     const audioPlayer = el('audio', { id: 'audioPlayer', controls: '' });
     audioPlayer.style.display = 'none';
     fabPanel.appendChild(audioPlayer);
-
-    fab.addEventListener('click', function () {
-      const isOpen = fabPanel.style.display === 'flex';
-      fabPanel.style.display = isOpen ? 'none' : 'flex';
-    });
 
     // Close panel when clicking outside
     document.addEventListener('click', function (e) {
@@ -294,25 +279,126 @@ hide_from_nav: true
       }
     });
 
-    // File selection handler
-    const fileMap = {};
-    fileInput.addEventListener('change', function (event) {
-      const files = event.target.files;
-      for (const file of files) {
-        fileMap[file.webkitRelativePath] = URL.createObjectURL(file);
+    if ('showDirectoryPicker' in window) {
+      // --- File System Access API: persists handle across page navigations via IndexedDB ---
+      function openDb() {
+        return new Promise(function (resolve, reject) {
+          const req = indexedDB.open('lpc-usb-db', 1);
+          req.onupgradeneeded = function (e) { e.target.result.createObjectStore('handles'); };
+          req.onsuccess = function (e) { resolve(e.target.result); };
+          req.onerror = function () { reject(req.error); };
+        });
       }
-      const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
-      const relevantUrl = 'LPC USB/' + album.USB_Directory + '/' + usbFilename;
-      console.log('Relevant URL: ' + relevantUrl);
-      const matchingUrl = fileMap[relevantUrl];
-      console.log('Matching URL: ' + matchingUrl);
-      if (matchingUrl) {
-        audioPlayer.src = matchingUrl;
-        audioPlayer.style.display = '';
-      } else {
-        console.warn('Audio file not found in selected directory: ' + relevantUrl);
+      async function getStoredHandle() {
+        try {
+          const db = await openDb();
+          return await new Promise(function (resolve) {
+            const tx = db.transaction('handles', 'readonly');
+            const get = tx.objectStore('handles').get('lpcUsb');
+            get.onsuccess = function () { resolve(get.result || null); };
+            get.onerror = function () { resolve(null); };
+          });
+        } catch (e) { return null; }
       }
-    });
+      async function storeHandle(handle) {
+        const db = await openDb();
+        return new Promise(function (resolve, reject) {
+          const tx = db.transaction('handles', 'readwrite');
+          tx.objectStore('handles').put(handle, 'lpcUsb');
+          tx.oncomplete = function () { resolve(); };
+          tx.onerror = function () { reject(tx.error); };
+        });
+      }
+
+      // Pre-load handle into memory so FAB click can use it without any prior awaits
+      let cachedHandle = null;
+      getStoredHandle().then(function (h) { cachedHandle = h; });
+
+      async function loadTrackFromDir(dirHandle) {
+        try {
+          const albumDir = await dirHandle.getDirectoryHandle(album.USB_Directory);
+          const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
+          const fileHandle = await albumDir.getFileHandle(usbFilename);
+          const file = await fileHandle.getFile();
+          audioPlayer.src = URL.createObjectURL(file);
+          audioPlayer.style.display = '';
+          selectBtn.textContent = '\u2705 LPC USB loaded';
+          selectBtn.style.borderColor = 'greenyellow';
+          panelTitle.style.display = 'none';
+        } catch (e) {
+          console.warn('Could not load track from directory:', e);
+        }
+      }
+
+      const selectBtn = el('button', { id: 'selectLpcBtn', style: 'color: greenyellow; background: none; border: 1px solid greenyellow; border-radius: 6px; padding: 6px 12px; cursor: pointer; font-weight: bold;' });
+      selectBtn.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
+      fabPanel.insertBefore(selectBtn, audioPlayer);
+
+      selectBtn.addEventListener('click', async function () {
+        try {
+          const dirHandle = await window.showDirectoryPicker({ mode: 'read', startIn: 'music' });
+          await storeHandle(dirHandle);
+          cachedHandle = dirHandle;
+          await loadTrackFromDir(dirHandle);
+        } catch (e) {
+          if (e.name !== 'AbortError') console.error(e);
+        }
+      });
+
+      // FAB click is a user gesture. With cachedHandle already in memory (no await needed),
+      // requestPermission fires immediately within the activation window — this is what
+      // allows the browser to re-grant permission across page navigations without re-picking.
+      fab.addEventListener('click', async function () {
+        const isOpen = fabPanel.style.display === 'flex';
+        fabPanel.style.display = isOpen ? 'none' : 'flex';
+        if (!isOpen && audioPlayer.style.display === 'none' && cachedHandle) {
+          try {
+            const perm = await cachedHandle.requestPermission({ mode: 'read' });
+            if (perm === 'granted') {
+              await loadTrackFromDir(cachedHandle);
+            }
+          } catch (e) {
+            console.warn('Could not auto-load from stored handle:', e);
+          }
+        }
+      });
+
+    } else {
+      // --- Fallback: legacy <input webkitdirectory> for browsers without File System Access API ---
+      const fileLabel = el('label', { for: 'fileInput', class: 'tooltip', style: 'color: greenyellow; cursor: pointer; font-weight: bold;' });
+      fileLabel.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
+      const tooltipSpan = el('span', { class: 'tooltiptext' });
+      tooltipSpan.textContent = 'Select the top-level directory for the collection, usually named "LPC USB"';
+      fileLabel.appendChild(tooltipSpan);
+      fabPanel.insertBefore(fileLabel, audioPlayer);
+
+      const fileInput = el('input', { type: 'file', id: 'fileInput', accept: 'audio/mp3', webkitdirectory: '', multiple: '' });
+      fabPanel.insertBefore(fileInput, audioPlayer);
+
+      fab.addEventListener('click', function () {
+        const isOpen = fabPanel.style.display === 'flex';
+        fabPanel.style.display = isOpen ? 'none' : 'flex';
+      });
+
+      const fileMap = {};
+      fileInput.addEventListener('change', function (event) {
+        const files = event.target.files;
+        for (const file of files) {
+          fileMap[file.webkitRelativePath] = URL.createObjectURL(file);
+        }
+        const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
+        const relevantUrl = 'LPC USB/' + album.USB_Directory + '/' + usbFilename;
+        console.log('Relevant URL: ' + relevantUrl);
+        const matchingUrl = fileMap[relevantUrl];
+        console.log('Matching URL: ' + matchingUrl);
+        if (matchingUrl) {
+          audioPlayer.src = matchingUrl;
+          audioPlayer.style.display = '';
+        } else {
+          console.warn('Audio file not found in selected directory: ' + relevantUrl);
+        }
+      });
+    }
 
     document.body.appendChild(fabPanel);
     document.body.appendChild(fab);
