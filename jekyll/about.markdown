@@ -220,13 +220,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const a = document.createElement("a");
     a.href = "#" + h.id;
     a.dataset.targetId = h.id;
-    // strip emoji: remove characters outside basic latin + extended
-    a.textContent = h.textContent.replace(/[\u{1F000}-\u{1FFFF}]|[\u2600-\u27FF]/gu, "").trim();
+    // strip all emoji and variation selectors, then collapse extra whitespace
+    a.textContent = h.textContent
+      .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}\u{1FA00}-\u{1FFFD}\u2194-\u21FF\u2300-\u23FF\u2B00-\u2BFF\u{231A}-\u{231B}☑↪↘⚙🛠✍☑🪪🤓]/gu, "")
+      .replace(/\s{2,}/g, " ")
+      .trim();
     li.appendChild(a);
     ul.appendChild(li);
   });
   nav.appendChild(ul);
   document.body.appendChild(nav);
+  document.body.classList.add("about-page");
 
   // highlight active section on scroll
   const links = nav.querySelectorAll("a");

@@ -1,9 +1,9 @@
 #about-toc {
   position: fixed;
-  top: 6rem;
+  top: 10rem;
   right: 1rem;
   width: 180px;
-  max-height: calc(100vh - 8rem);
+  max-height: calc(100vh - 12rem);
   overflow-y: auto;
   font-size: 0.75rem;
   line-height: 1.5;
@@ -46,8 +46,8 @@
   color: var(--minima-link-base-color, #1e69d8);
 }
 
-/* hide on small screens where there's no room */
-@media (max-width: 1024px) {
+/* hide when there isn't enough gutter space beside the 800px wrapper */
+@media (max-width: 1200px) {
   #about-toc {
     display: none;
   }
