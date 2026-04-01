@@ -1,0 +1,14 @@
+[build]
+  base    = "jekyll"
+  command = "bundle exec jekyll build --baseurl \"\""
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  BUNDLE_PATH = "vendor/bundle"
+
+[build.cache]
+  paths = [
+    "jekyll/vendor/bundle",
+    "$HOME/.local/share/mise/installs/ruby"
+  ]
