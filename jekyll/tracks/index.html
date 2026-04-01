@@ -279,6 +279,7 @@ hide_from_nav: true
     fabPanel.appendChild(fileInput);
 
     const audioPlayer = el('audio', { id: 'audioPlayer', controls: '' });
+    audioPlayer.style.display = 'none';
     fabPanel.appendChild(audioPlayer);
 
     fab.addEventListener('click', function () {
@@ -307,6 +308,7 @@ hide_from_nav: true
       console.log('Matching URL: ' + matchingUrl);
       if (matchingUrl) {
         audioPlayer.src = matchingUrl;
+        audioPlayer.style.display = '';
       } else {
         console.warn('Audio file not found in selected directory: ' + relevantUrl);
       }
