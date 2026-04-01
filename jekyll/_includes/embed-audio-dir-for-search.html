@@ -2,16 +2,17 @@
 <style>
   #audioFab {
     position: fixed; bottom: 24px; right: 24px; z-index: 1000;
-    width: 56px; height: 56px; border-radius: 50%;
+    height: 48px; min-width: 48px; border-radius: 24px;
     background: #5a5a9a; border: 2px solid #9a9adf;
-    cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    font-size: 26px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);
-    transition: transform 0.2s, background 0.2s, box-shadow 0.2s; line-height: 1; gap: 1px;
+    cursor: pointer; display: flex; flex-direction: row; align-items: center; justify-content: center;
+    gap: 6px; padding: 0 14px; font-size: 22px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    transition: background 0.2s, box-shadow 0.2s, min-width 0.2s; line-height: 1;
   }
   #audioFabTime {
-    font-size: 8px; color: #d0d0ff; letter-spacing: 0.02em; line-height: 1; display: none;
+    font-size: 13px; font-weight: bold; color: #d0d0ff; letter-spacing: 0.04em;
+    line-height: 1; display: none; white-space: nowrap;
   }
-  #audioFab:hover { background: #7a7abf; transform: scale(1.1); box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+  #audioFab:hover { background: #7a7abf; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
   #audioFabPanel {
     position: fixed; bottom: 90px; right: 24px; z-index: 999;
     background: #1e1e3a; border: 1px solid #7a7abf;
@@ -125,7 +126,7 @@
         if (audioPlayer.duration) {
           const s = Math.floor(audioPlayer.currentTime);
           fabTimeLabel.textContent = Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
-          fabTimeLabel.style.display = '';
+          fabTimeLabel.style.display = 'block';
         }
       });
       refreshSearch();
