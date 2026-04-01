@@ -11,7 +11,6 @@ search_page: true
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="speakers-search-results"></ul>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">  
 
 <style>
   .loader {

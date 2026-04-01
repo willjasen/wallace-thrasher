@@ -12,4 +12,3 @@ search_page: true
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="subtitles-search-results"></ul>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
