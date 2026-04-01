@@ -4,8 +4,13 @@
   publish = "_site"
 
 [build.environment]
-  JEKYLL_ENV = "development"
   BUNDLE_PATH = "vendor/bundle"
+
+[context.main.environment]
+  JEKYLL_ENV = "production"
+
+[context.dev.environment]
+  JEKYLL_ENV = "development"
 
 [build.cache]
   paths = [
