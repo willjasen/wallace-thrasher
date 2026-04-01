@@ -4,6 +4,12 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.7.1
+
+ - upgrade Ruby to version 3.3.x
+
+---
+
 ### v1.7.0
 
 this release adds the latest album "The Longmont Potion Castle (2026)", which released on 3/27/2026.
