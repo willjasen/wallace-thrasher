@@ -192,3 +192,64 @@ here are various badges related to this project's code and its deployments
 notes on version history can be found on the [version history]({{ site.baseurl }}/version-history) page
 
 this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' }}
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/about-toc.css">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const content = document.querySelector(".post-content") || document.querySelector(".page-content .wrapper");
+  if (!content) return;
+
+  const headings = content.querySelectorAll("h3");
+  if (headings.length === 0) return;
+
+  const nav = document.createElement("nav");
+  nav.id = "about-toc";
+  nav.setAttribute("aria-label", "Page sections");
+
+  const label = document.createElement("div");
+  label.id = "about-toc-label";
+  label.textContent = "on this page";
+  nav.appendChild(label);
+
+  const ul = document.createElement("ul");
+  headings.forEach(function (h) {
+    if (!h.id) {
+      h.id = h.textContent.trim().toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+    }
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#" + h.id;
+    a.dataset.targetId = h.id;
+    // strip emoji: remove characters outside basic latin + extended
+    a.textContent = h.textContent.replace(/[\u{1F000}-\u{1FFFF}]|[\u2600-\u27FF]/gu, "").trim();
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  nav.appendChild(ul);
+  document.body.appendChild(nav);
+
+  // highlight active section on scroll
+  const links = nav.querySelectorAll("a");
+
+  // scroll to section without hash navigation to avoid jump-to-top issues
+  links.forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.getElementById(a.dataset.targetId);
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function (a) { a.classList.remove("active"); });
+        const active = nav.querySelector('[data-target-id="' + entry.target.id + '"]');
+        if (active) active.classList.add("active");
+      }
+    });
+  }, { rootMargin: "0px 0px -80% 0px" });
+
+  headings.forEach(function (h) { observer.observe(h); });
+});
+</script>
