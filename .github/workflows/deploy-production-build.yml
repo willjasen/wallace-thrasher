@@ -33,7 +33,7 @@ jobs:
       # Checkout the specific version tag when triggered by push to main
       # or use the specified tag when manually triggered
       - name: Checkout specific tag
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ env.VERSION_TAG }}
 
@@ -58,7 +58,7 @@ jobs:
 
       # Deploy the rendered build to the `production-build` branch
       - name: Deploy to 'production-build' branch
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
