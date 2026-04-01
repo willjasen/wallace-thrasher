@@ -9,7 +9,9 @@ published: true
  - prefetch and index data on every page, if needed
  - move the LPC USB feature into a floating action button
  - the LPC USB feature now persists across page navigations
+ - add a table of contents for the About page
  - center the search box on associated pages
+ - stop `jekyll serve` from constant rebuilding
  - specify `netlify.toml` for build settings at netlify
 
 ---
