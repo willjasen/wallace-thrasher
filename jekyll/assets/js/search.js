@@ -3,7 +3,16 @@
 ---
 // These 3 lines above must stay because they are used like front matter for Jekyll to process
 
+// Globals read by load-search-with-progress.html — initialized once, preserved across re-executions
+window.dataLoaded = window.dataLoaded || false;
+window.albumDataLoadedPercentage = window.albumDataLoadedPercentage || 0;
+window.trackDataLoadedPercentage = window.trackDataLoadedPercentage || 0;
+
 // search.js
+;(function() {
+if (window._wtSearchLoaded) return;
+window._wtSearchLoaded = true;
+
 const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}' === 'true';
@@ -658,9 +667,6 @@ async function main(callback) {
 }
 
 // Execute this program
-var dataLoaded = false;
-let albumDataLoadedPercentage = 0;
-let trackDataLoadedPercentage = 0;
 
 // Disable all search inputs on page load
 document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
@@ -685,3 +691,4 @@ document.addEventListener('soft-nav', function () {
         setTimeout(window._wtOnDomContentLoaded, 0);
     }
 });
+})(); // close IIFE guard — prevents re-execution in the same window context (e.g. after soft-nav)

@@ -2,6 +2,7 @@
 layout: page
 title: Speakers
 permalink: /speakers/
+search_page: true
 ---
 
 

@@ -2,6 +2,7 @@
 layout: page
 title: Subtitles
 permalink: /subtitles/
+search_page: true
 ---
 
 {%- include embed-audio-dir-for-search.html -%}

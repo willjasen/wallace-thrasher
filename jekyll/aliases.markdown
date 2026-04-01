@@ -3,6 +3,7 @@ layout: page
 title: Aliases
 permalink: /aliases/
 published: true
+search_page: true
 ---
 
 <div class="search-flex-row">

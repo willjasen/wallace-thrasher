@@ -3,6 +3,7 @@ layout: page
 title: Establishments
 permalink: /establishments/
 published: true
+search_page: true
 ---
 
 
