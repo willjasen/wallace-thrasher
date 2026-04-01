@@ -18,7 +18,7 @@ jobs:
 
     steps:
       # Checkout the source from the `main` branch.
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Set up Ruby for Jekyll.
       - uses: ruby/setup-ruby@v1
@@ -41,7 +41,7 @@ jobs:
 
       # Deploy to GitHub Pages.
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./jekyll/_site
