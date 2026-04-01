@@ -4,6 +4,12 @@ permalink: /version-history/
 published: true
 ---
 
+### v1.8.0
+
+ - render track pages at access time
+
+---
+
 ### v1.7.1
 
  - upgrade Ruby to version 3.3
