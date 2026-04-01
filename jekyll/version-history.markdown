@@ -6,7 +6,8 @@ published: true
 
 ### v1.7.1
 
- - upgrade Ruby to version 3.3.x
+ - upgrade Ruby to version 3.3
+ - upgrade a few Ruby gems safely
 
 ---
 
