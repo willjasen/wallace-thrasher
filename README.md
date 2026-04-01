@@ -57,7 +57,7 @@ i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed v
 
 i am using [this python tool](https://github.com/willjasen/srt-to-json) to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs
 
-### 💽 JSON Structure for Albums and Tracks 💽
+### 💽 JSON for Albums and Tracks 💽
 
 the main JSON data file resides at `/assets/data.json`
 
@@ -88,7 +88,7 @@ the main JSON data file resides at `/assets/data.json`
 ```
 it is possible that some keys are not present in all tracks, but the necessary ones of `Track_Title`, `Track_Number`, `Track_JSONPath`, and `Track_Slug` are listed for each track.
 
-### 💽 JSON Structure for Track Subtitles 💽
+### 💽 JSON for Track Subtitles 💽
 
 the JSON data for each track resides within a folder named as the respective album title's slug within the `/assets/json` folder
 ```

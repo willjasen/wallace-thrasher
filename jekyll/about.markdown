@@ -59,7 +59,7 @@ i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed v
 
 i am using [this python tool](https://github.com/willjasen/srt-to-json) to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs
 
-### 💽 JSON Structure for Albums and Tracks 💽
+### 💽 JSON for Albums and Tracks 💽
 
 the main JSON data file resides at `/assets/data.json`
 
@@ -90,7 +90,7 @@ the main JSON data file resides at `/assets/data.json`
 ```
 it is possible that some keys are not present in all tracks, but the necessary ones of `Track_Title`, `Track_Number`, `Track_JSONPath`, and `Track_Slug` are listed for each track.
 
-### 💽 JSON Structure for Track Subtitles 💽
+### 💽 JSON for Track Subtitles 💽
 
 the JSON data for each track resides within a folder named as the respective album title's slug within the `/assets/json` folder
 ```
@@ -192,3 +192,91 @@ here are various badges related to this project's code and its deployments
 notes on version history can be found on the [version history]({{ site.baseurl }}/version-history) page
 
 this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' }}
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/about-toc.css">
+<script>
+(function () {
+  function buildTOC() {
+    // Remove any stale TOC left by a previous visit (soft-nav re-execution)
+    var existing = document.getElementById("about-toc");
+    if (existing) existing.remove();
+    document.body.classList.remove("about-page");
+
+    const content = document.querySelector(".post-content") || document.querySelector(".page-content .wrapper");
+    if (!content) return;
+
+    const headings = content.querySelectorAll("h3");
+    if (headings.length === 0) return;
+
+    const nav = document.createElement("nav");
+    nav.id = "about-toc";
+    nav.setAttribute("aria-label", "Page sections");
+
+    const label = document.createElement("div");
+    label.id = "about-toc-label";
+    label.textContent = "About";
+    nav.appendChild(label);
+
+    const ul = document.createElement("ul");
+    headings.forEach(function (h) {
+      if (!h.id) {
+        h.id = h.textContent.trim().toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+      }
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.dataset.targetId = h.id;
+      // strip all emoji and variation selectors, then collapse extra whitespace
+      a.textContent = h.textContent
+        .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}\u{1FA00}-\u{1FFFD}\u2194-\u21FF\u2300-\u23FF\u2B00-\u2BFF\u{231A}-\u{231B}☑↪↘⚙🛠✍☑🪪🤓]/gu, "")
+        .replace(/\s{2,}/g, " ")
+        .trim();
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    nav.appendChild(ul);
+    document.body.appendChild(nav);
+    document.body.classList.add("about-page");
+
+    const links = nav.querySelectorAll("a");
+
+    links.forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.getElementById(a.dataset.targetId);
+        if (target) target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove("active"); });
+          const active = nav.querySelector('[data-target-id="' + entry.target.id + '"]');
+          if (active) active.classList.add("active");
+        }
+      });
+    }, { rootMargin: "0px 0px -80% 0px" });
+
+    headings.forEach(function (h) { observer.observe(h); });
+  }
+
+  // Run immediately if DOM is ready (soft-nav re-execution), otherwise wait
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", buildTOC);
+  } else {
+    buildTOC();
+  }
+
+  // Clean up when the persistent player soft-navigates away from About
+  document.addEventListener("soft-nav", function onSoftNav(e) {
+    var url = (e.detail && e.detail.url) || "";
+    if (!url.match(/\/about\/?$/)) {
+      var toc = document.getElementById("about-toc");
+      if (toc) toc.remove();
+      document.body.classList.remove("about-page");
+      document.removeEventListener("soft-nav", onSoftNav);
+    }
+  });
+})();
+</script>
