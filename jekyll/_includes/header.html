@@ -3,6 +3,8 @@
   {% include variables.liquid %}
   {% if jekyll.environment == "production" %}
     {% include analytics.html %}
+  {% else %}
+    <meta name="robots" content="noindex, nofollow">
   {% endif %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
