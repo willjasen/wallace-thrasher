@@ -45,20 +45,20 @@
   style.textContent = `
     #audioFab {
       position: fixed; bottom: 24px; right: 24px; z-index: 9000;
-      height: 48px; min-width: 48px; border-radius: 24px;
+      height: 60px; min-width: 60px; border-radius: 30px;
       background: #5a5a9a; border: 2px solid #9a9adf;
       cursor: pointer; display: flex; flex-direction: row; align-items: center;
-      justify-content: center; gap: 6px; padding: 0 14px;
-      font-size: 22px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+      justify-content: center; gap: 8px; padding: 0 18px;
+      font-size: 28px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);
       transition: background 0.2s, box-shadow 0.2s; line-height: 1;
     }
     #audioFab:hover { background: #7a7abf; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
     #audioFabTime {
-      font-size: 13px; font-weight: bold; color: #d0d0ff;
+      font-size: 16px; font-weight: bold; color: #d0d0ff;
       letter-spacing: 0.04em; line-height: 1; display: none; white-space: nowrap;
     }
     #audioFabPanel {
-      position: fixed; bottom: 90px; right: 24px; z-index: 8999;
+      position: fixed; bottom: 102px; right: 24px; z-index: 8999;
       background: #1e1e3a; border: 1px solid #7a7abf;
       border-radius: 14px; padding: 16px 18px;
       box-shadow: 0 8px 28px rgba(0,0,0,0.6);
