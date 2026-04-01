@@ -90,7 +90,7 @@ published: true
   {% for track in album.Tracks %}
       {% if track.Establishments and track.Establishments.size > 0 %}
           <li style="margin: 0px;">
-            Track {{ track.Track_Number }}: <a href="{{ site.baseurl }}/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+            Track {{ track.Track_Number }}: <a href="{{ site.baseurl }}/tracks/?album={{ album.Album_Slug }}&track={{ track.Track_Slug }}">{{ track.Track_Title }}</a>
           </li>  
           <ul>
             {% for establishment_used in track.Establishments %}
