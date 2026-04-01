@@ -46,12 +46,10 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         end  
 
         combined_data_path = File.join(site.source, 'assets', 'json', 'data.combined.json')
-        # Delete the file if it exists
-        if File.exist?(combined_data_path)
-          File.delete(combined_data_path)
-        end
-        File.open(combined_data_path, 'w') do |file|
-          file.write(JSON.generate({ "Albums" => combined_albums_data }))
+        new_content = JSON.generate({ "Albums" => combined_albums_data })
+        existing = File.exist?(combined_data_path) ? File.read(combined_data_path) : nil
+        unless existing == new_content
+          File.write(combined_data_path, new_content)
         end
         # puts "\e[34mcombine-json-data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end
