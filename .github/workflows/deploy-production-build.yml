@@ -82,17 +82,44 @@ jobs:
         with:
             ref: production-build
 
-      - name: Deploy to IPFS
-        uses: ipfs/ipfs-deploy-action@v1
-        id: deploy
+      # ipfs/ipfs-deploy-action@v1 (v1.8.0) installs @storacha/cli without a pinned version.
+      # v2.1.x introduced a regression where space/index/add fails with "Unexpected end of data".
+      # Work around by replicating the action's steps with a pinned @storacha/cli version.
+      - name: Setup Kubo CLI
+        uses: ipfs/download-ipfs-distribution-action@v1
         with:
-          path-to-deploy: .
-          storacha-key: ${{ secrets.STORACHA_KEY }}
-          storacha-proof: ${{ secrets.STORACHA_PROOF }}
-          github-token: ${{ secrets.GH_PAGES_TOKEN }}
-          filebase-bucket: 'wallace-thrasher'
-          filebase-access-key: ${{ secrets.FILEBASE_ACCESS_KEY }}
-          filebase-secret-key: ${{ secrets.FILEBASE_SECRET_KEY }}
+          name: kubo
+          version: v0.33.0
+
+      - name: ipfs init
+        shell: bash
+        run: ipfs init
+
+      - name: Merkleize into CAR file
+        id: deploy
+        shell: bash
+        run: |
+          CID=$(ipfs add --cid-version 1 --chunker size-1048576 -Q -r .)
+          ipfs dag export $CID > build.car
+          echo "cid=$CID" >> "$GITHUB_OUTPUT"
+          echo "Root CID: $CID"
+
+      - name: Upload to Storacha
+        shell: bash
+        env:
+          STORACHA_PRINCIPAL: ${{ secrets.STORACHA_KEY }}
+        run: |
+          npm install -g @storacha/cli@2.0.8
+          storacha space add ${{ secrets.STORACHA_PROOF }}
+          storacha up --car build.car
+
+      - name: Upload to Filebase
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.FILEBASE_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.FILEBASE_SECRET_KEY }}
+        run: |
+          aws --endpoint https://s3.filebase.com s3 cp build.car s3://wallace-thrasher --metadata 'import=car'
 
       - name: Update DNSLink in Cloudflare
         id: update-dnslink
