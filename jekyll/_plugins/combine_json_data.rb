@@ -1,7 +1,5 @@
 unless ENV['SKIP_COMBINE_JSON'] == 'true'
   require 'json'
-  require 'yaml'
-  require_relative 'update_yml'
 
   module Jekyll
     class CombineData < Generator
@@ -12,12 +10,10 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         start_time = Time.now  # added timer start
         combined_albums_data = []
         combined_tracks_on_album_data = []
-        data_yml_path = File.join(site.source, '_data', 'data.yml')
-        yml_data = YAML.load_file(data_yml_path)
         data_json_path = File.join(site.source, 'assets', 'json', 'data.json')
         data_json = JSON.parse(File.read(data_json_path))
-        
-        albums_data = yml_data['Albums']
+
+        albums_data = data_json['Albums']
         albums_data.each do |album_data|
           album_slug = Jekyll::Utils.slugify(album_data['Album'])
           album_data['Tracks'].each do |track_data|
