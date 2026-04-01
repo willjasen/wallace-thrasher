@@ -128,11 +128,11 @@ this minor release is mostly to stash any changes that haven't been merged yet n
 - website's title is renamed to 'stretchie'
 - change search feature to use logical 'AND' instead of logical 'OR'
 	- search results returned will now include only all words entered
-- allow URL parameter for search (https://stretchie.delivery/subtitles/?search=cheese+pizza)
+- allow URL parameter for search (https://stretchie.net/subtitles/?search=cheese+pizza)
 - deploy website to IPFS
 	- renamed 'publish-for-netlify.yml' to 'deploy-production-build.yml'
 	- 'deploy-production-build.yml' builds the website as a production build and publishes the built site's contents to the 'production-build' branch
-	- 'deploy-production-build.yml' deploys the site to IPFS via [Filebase](https://filebase.com/) and [Storacha](https://storacha.network/) using the 'production-build' branch, then updates the `_dnslink` TXT DNS record for the "[stretchie.delivery](https://stretchie.delivery)" domain to reflect the new IPFS hash
+	- 'deploy-production-build.yml' deploys the site to IPFS via [Filebase](https://filebase.com/) and [Storacha](https://storacha.network/) using the 'production-build' branch, then updates the `_dnslink` TXT DNS record for the "[stretchie.net](https://stretchie.net)" domain to reflect the new IPFS hash
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/version-history-toc.css">
 <script>
