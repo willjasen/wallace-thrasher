@@ -1,2 +1,35 @@
 
-{% include embed-audio.html %}
+<script>
+// Subtitles page: request lpc-player to traverse all files so timestamps work.
+// persistent-player.js handles the FAB, IndexedDB, and window.fileMap.
+(function initSubtitlesAudio() {
+  function tryTraverse() {
+    if (window.lpcPlayer && window.lpcPlayer.isLoaded()) {
+      // Already loaded (e.g. soft-nav from a track page) — nothing to do
+      return;
+    }
+    if (window.lpcPlayer && window.lpcPlayer.handle) {
+      window.lpcPlayer.traverseAll().then(function (ok) {
+        if (ok) document.dispatchEvent(new CustomEvent('lpc-loaded'));
+      });
+    }
+  }
+
+  // Run immediately in case persistent-player.js already finished startup
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryTraverse);
+  } else {
+    tryTraverse();
+  }
+
+  // Also run when the directory finishes loading (covers the case where
+  // the auto-load in persistent-player.js completes after this script runs)
+  document.addEventListener('lpc-loaded', function () {
+    // Refresh search results so timestamps become links
+    var searchInput = document.querySelector('#subtitles-search-input');
+    if (searchInput && searchInput.value.trim() !== '') {
+      searchInput.dispatchEvent(new Event('input'));
+    }
+  });
+})();
+</script>

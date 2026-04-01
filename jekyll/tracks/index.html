@@ -203,57 +203,52 @@ hide_from_nav: true
       'Deliveries: ' + track.Deliveries.join(', ')));
   }
 
-  // ---- Audio player ----
-  const audioHr = hr();
-  audioHr.id = 'audioSectionDivider';
-  frag.appendChild(audioHr);
+  // ---- Audio player (delegates to persistent-player.js) ----
+  // Container in the page for a "Play this track" button when audio is already playing
+  const audioContainer = el('div', { style: 'text-align: center; margin: 10px 0;' });
+  frag.appendChild(audioContainer);
 
-  const audioOuter = el('div', { style: 'display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;' });
-  const audioCtrlContainer = el('div', { id: 'audioControlContainer', style: 'display: flex; align-items: center;' });
-
-  const audioLabelWrap = el('div', { style: 'display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;' });
-  const fileLabel = el('label', { for: 'fileInput', class: 'tooltip', style: 'margin-bottom: 10px; color: greenyellow;' });
-  fileLabel.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
-  const tooltipSpan = el('span', { class: 'tooltiptext' });
-  tooltipSpan.textContent = 'Select the top-level directory for the collection, usually named "LPC USB"';
-  fileLabel.appendChild(tooltipSpan);
-
-  const fileInput = el('input', { type: 'file', id: 'fileInput', accept: 'audio/mp3', webkitdirectory: '', multiple: '' });
-  audioLabelWrap.appendChild(fileLabel);
-  audioLabelWrap.appendChild(fileInput);
-
-  const audioPlayer = el('audio', { id: 'audioPlayer', controls: '' });
-  audioCtrlContainer.appendChild(audioLabelWrap);
-  audioCtrlContainer.appendChild(audioPlayer);
-  audioOuter.appendChild(audioCtrlContainer);
-  frag.appendChild(audioOuter);
-  frag.appendChild(hr());
-
-  // File selection handler
-  const fileMap = {};
-  fileInput.addEventListener('change', function (event) {
-    const files = event.target.files;
-    for (const file of files) {
-      fileMap[file.webkitRelativePath] = URL.createObjectURL(file);
-    }
-    const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
-    const relevantUrl = 'LPC USB/' + album.USB_Directory + '/' + usbFilename;
-    console.log('Relevant URL: ' + relevantUrl);
-    const matchingUrl = fileMap[relevantUrl];
-    console.log('Matching URL: ' + matchingUrl);
-    if (matchingUrl) {
-      audioPlayer.src = matchingUrl;
+  function applyTrackAudio(matchingUrl) {
+    const audio = window.lpcPlayer.audio;
+    if (!audio.paused) {
+      // Something is actively playing — don't interrupt; offer a button to switch
+      audioContainer.innerHTML = '';
+      const btn = document.createElement('button');
+      btn.textContent = '\u25B6 Play this track';
+      btn.style.cssText = 'color: greenyellow; background: none; border: 1px solid greenyellow; border-radius: 6px; padding: 6px 14px; cursor: pointer; font-weight: bold; font-size: 1em;';
+      btn.addEventListener('click', function () {
+        audio.src = matchingUrl;
+        audio.style.display = '';
+        audio.play();
+        btn.remove();
+      });
+      audioContainer.appendChild(btn);
     } else {
-      console.warn('Audio file not found in selected directory: ' + relevantUrl);
+      // Nothing playing — auto-load this track
+      audio.src = matchingUrl;
+      audio.style.display = '';
     }
-  });
-
-  // Hide audio controls on mobile
-  if (window.innerWidth <= 768 ||
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-    audioCtrlContainer.style.display = 'none';
-    audioHr.style.display = 'none';
   }
+
+  function initTrackAudio() {
+    const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
+    const albumUsbDir = album.USB_Directory;
+    const relevantUrl = 'LPC USB/' + albumUsbDir + '/' + usbFilename;
+
+    if (window.lpcPlayer && window.lpcPlayer.isLoaded()) {
+      const matchingUrl = window.fileMap[relevantUrl];
+      if (matchingUrl) applyTrackAudio(matchingUrl);
+    }
+    // Load when directory is selected/granted for the first time
+    document.addEventListener('lpc-loaded', function () {
+      const matchingUrl = window.fileMap[relevantUrl];
+      if (matchingUrl) applyTrackAudio(matchingUrl);
+    }, { once: true });
+    document.addEventListener('lpc-permission-granted', async function () {
+      await window.lpcPlayer.loadTrack(albumUsbDir, usbFilename);
+    }, { once: true });
+  }
+  initTrackAudio();
 
   // ---- Subtitles ----
   frag.appendChild(hr());
