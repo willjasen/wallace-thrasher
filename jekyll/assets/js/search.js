@@ -616,15 +616,21 @@ async function main(callback) {
             })(e.target);
         });
 
+        // Cache the Alex Trebek count so the lunr search only runs once ever.
+        let _cachedAlexCount = null;
+
         function onDomContentLoaded() {
-            const countOfAlexTrebek = getNumberOfTracksThatAlexTrebekIsIn();
+            // Only do Alex-related work when on the Alex Trebek page.
             const alexCountSpan = document.querySelector('#alex-count-span');
+            const alexTracksSpan = document.querySelector('#alex-tracks-span');
+            if (!alexCountSpan && !alexTracksSpan) return;
+
             if (alexCountSpan) {
-                alexCountSpan.textContent = countOfAlexTrebek;
-            } else {
-                // console.error('Element with id "alex-count-span" not found.');
+                if (_cachedAlexCount === null) {
+                    _cachedAlexCount = getNumberOfTracksThatAlexTrebekIsIn();
+                }
+                alexCountSpan.textContent = _cachedAlexCount;
             }
-            // Display the results for Alex Trebek
             runSpeakerSearchForAlexTrebek();
         }
         
@@ -676,6 +682,6 @@ main(function(dataReady) {
 // active regardless of how long main() takes to finish.
 document.addEventListener('soft-nav', function () {
     if (typeof window._wtOnDomContentLoaded === 'function') {
-        window._wtOnDomContentLoaded();
+        setTimeout(window._wtOnDomContentLoaded, 0);
     }
 });
