@@ -5,6 +5,8 @@ layout: page
 {% include variables.liquid %}
 {% include album-header.html %}
 
+<script>console.log("Track: {{ page.track_title }}");</script>
+
 <h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
 
 {% if track_length_detail %}

@@ -1,0 +1,285 @@
+---
+layout: page
+hide_from_nav: true
+---
+
+<div id="track-content">
+  <p style="text-align: center;"><em>Loading track data...</em></p>
+</div>
+
+<style>
+  .album-info {
+    display: flex;
+    align-items: center;
+  }
+  .image-container {
+    margin-right: 20px;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background-color: lavender;
+    color: #000;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    border: 1px solid #ffdd57;
+    box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<script>
+(async function () {
+  const BASE_URL = '{{ site.baseurl }}';
+  const JEKYLL_ENV = '{{ jekyll.environment }}';
+  const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
+
+  const params = new URLSearchParams(window.location.search);
+  const albumSlug = params.get('album');
+  const trackSlug = params.get('track');
+  const container = document.getElementById('track-content');
+
+  if (!albumSlug || !trackSlug) {
+    container.innerHTML = '<p style="text-align: center;">No track specified. <a href="' + BASE_URL + '/albums/">Browse albums</a></p>';
+    return;
+  }
+
+  async function fetchCached(path) {
+    if (!('caches' in window)) {
+      return fetch(path).then(r => r.json());
+    }
+    const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
+    const cache = await caches.open(cacheName);
+    const cached = await cache.match(path);
+    if (cached) { return cached.json(); }
+    const response = await fetch(path);
+    const data = await response.json();
+    await cache.put(path, new Response(JSON.stringify(data), { headers: { 'Content-Type': 'application/json' } }));
+    const keys = await caches.keys();
+    for (const key of keys) {
+      if (key !== cacheName && key.startsWith('wallace-thrasher-')) {
+        await caches.delete(key);
+      }
+    }
+    return data;
+  }
+
+  let data;
+  try {
+    data = await fetchCached(BASE_URL + '/assets/json/data.combined.json');
+  } catch (e) {
+    console.error('Error loading track data:', e);
+    container.innerHTML = '<p style="text-align: center;">Error loading track data.</p>';
+    return;
+  }
+
+  const album = (data.Albums || []).find(a => a.Album_Slug === albumSlug);
+  if (!album) {
+    container.innerHTML = '<p style="text-align: center;">Album not found: ' + albumSlug + '</p>';
+    return;
+  }
+
+  const track = (album.Tracks || []).find(t => t.Track_Slug === trackSlug);
+  if (!track) {
+    container.innerHTML = '<p style="text-align: center;">Track not found: ' + trackSlug + '</p>';
+    return;
+  }
+
+  document.title = track.Track_Title + ' \u2014 ' + album.Album;
+
+  const needsReview = (track.Speakers_Adjusted !== true) || (track.Subtitles_Adjusted !== true);
+
+  // Helper: create element with optional attributes and text content
+  function el(tag, attrs) {
+    const e = document.createElement(tag);
+    Object.entries(attrs || {}).forEach(([k, v]) => e.setAttribute(k, v));
+    return e;
+  }
+  function textEl(tag, attrs, content) {
+    const e = el(tag, attrs);
+    e.textContent = content;
+    return e;
+  }
+  function hr(style) {
+    const e = document.createElement('hr');
+    e.style.margin = style || '20px 0';
+    return e;
+  }
+
+  const frag = document.createDocumentFragment();
+
+  // ---- Album header ----
+  const albumInfo = el('div', { class: 'album-info', style: 'display: flex; align-items: center;' });
+  albumInfo.appendChild(textEl('h2', { style: 'margin-bottom: 10px;' }, album.Album + ' (' + album.Year + ')'));
+  const imgContainer = el('div', { class: 'image-container', style: 'margin-left: 50px;' });
+  imgContainer.appendChild(el('img', { src: BASE_URL + '/assets/img/albums/' + album.Album_Picture, alt: album.Album, width: '150', height: '150' }));
+  albumInfo.appendChild(imgContainer);
+  frag.appendChild(albumInfo);
+
+  // ---- Track title and number ----
+  frag.appendChild(textEl('h3', { style: 'text-align: center; margin-top: 20px; margin-bottom: 0px;' },
+    'Track ' + track.Track_Number + ': ' + track.Track_Title));
+
+  // ---- Runtime ----
+  if (track.Track_Length) {
+    frag.appendChild(textEl('h4', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
+      'Runtime: ' + track.Track_Length + ' seconds'));
+  }
+
+  // ---- Review status ----
+  const reviewP = el('p', { style: 'text-align: center;' });
+  if (needsReview) {
+    reviewP.style.color = 'yellow';
+    reviewP.innerHTML = 'This track needs reviewing! <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">--&gt; Lend a hand &lt;--</a>';
+  } else {
+    reviewP.style.color = 'green';
+    reviewP.textContent = 'This track has been reviewed! \uD83D\uDE0A';
+  }
+  frag.appendChild(reviewP);
+
+  // ---- Dev-environment metadata (non-production only) ----
+  if (JEKYLL_ENV !== 'production') {
+    frag.appendChild(hr());
+    if (track.Last_Modified) {
+      const d = new Date(track.Last_Modified * 1000);
+      const iso = d.toISOString().replace(/\.\d{3}Z$/, '').replace('T', 'T');
+      frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -10px; margin-bottom: 30px;' }, 'Last modified: ' + iso));
+    }
+    if (track.Whisper_Model) {
+      frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 30px;' }, 'Model used: ' + track.Whisper_Model));
+    }
+    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 30px;' },
+      'Speakers adjusted? ' + (track.Speakers_Adjusted !== undefined ? track.Speakers_Adjusted : false)));
+    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 30px;' },
+      'Subtitles adjusted? ' + (track.Subtitles_Adjusted !== undefined ? track.Subtitles_Adjusted : false)));
+    if (track.To_Do) {
+      frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 40px;' }, 'To-Do: ' + track.To_Do));
+    }
+  }
+
+  // ---- Apple Music embed ----
+  if (track.Apple_Music_Link) {
+    const amH5 = el('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 40px;' });
+    amH5.appendChild(el('iframe', {
+      allow: 'autoplay *; encrypted-media *; fullscreen *; clipboard-write',
+      frameborder: '0',
+      height: '175',
+      style: 'width:100%;max-width:500px;overflow:hidden;border-radius:10px;',
+      sandbox: 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation',
+      src: track.Apple_Music_Link
+    }));
+    frag.appendChild(amH5);
+  }
+
+  frag.appendChild(hr());
+
+  // ---- Aliases / Establishments / Deliveries ----
+  if (track.Aliases && track.Aliases.length > 0) {
+    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
+      'Aliases: ' + track.Aliases.join(', ')));
+  }
+  if (track.Establishments && track.Establishments.length > 0) {
+    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
+      'Establishments: ' + track.Establishments.join(', ')));
+  }
+  if (track.Deliveries && track.Deliveries.length > 0) {
+    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
+      'Deliveries: ' + track.Deliveries.join(', ')));
+  }
+
+  // ---- Audio player ----
+  const audioHr = hr();
+  audioHr.id = 'audioSectionDivider';
+  frag.appendChild(audioHr);
+
+  const audioOuter = el('div', { style: 'display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;' });
+  const audioCtrlContainer = el('div', { id: 'audioControlContainer', style: 'display: flex; align-items: center;' });
+
+  const audioLabelWrap = el('div', { style: 'display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;' });
+  const fileLabel = el('label', { for: 'fileInput', class: 'tooltip', style: 'margin-bottom: 10px; color: greenyellow;' });
+  fileLabel.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
+  const tooltipSpan = el('span', { class: 'tooltiptext' });
+  tooltipSpan.textContent = 'Select the top-level directory for the collection, usually named "LPC USB"';
+  fileLabel.appendChild(tooltipSpan);
+
+  const fileInput = el('input', { type: 'file', id: 'fileInput', accept: 'audio/mp3', webkitdirectory: '', multiple: '' });
+  audioLabelWrap.appendChild(fileLabel);
+  audioLabelWrap.appendChild(fileInput);
+
+  const audioPlayer = el('audio', { id: 'audioPlayer', controls: '' });
+  audioCtrlContainer.appendChild(audioLabelWrap);
+  audioCtrlContainer.appendChild(audioPlayer);
+  audioOuter.appendChild(audioCtrlContainer);
+  frag.appendChild(audioOuter);
+  frag.appendChild(hr());
+
+  // File selection handler
+  const fileMap = {};
+  fileInput.addEventListener('change', function (event) {
+    const files = event.target.files;
+    for (const file of files) {
+      fileMap[file.webkitRelativePath] = URL.createObjectURL(file);
+    }
+    const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
+    const relevantUrl = 'LPC USB/' + album.USB_Directory + '/' + usbFilename;
+    console.log('Relevant URL: ' + relevantUrl);
+    const matchingUrl = fileMap[relevantUrl];
+    console.log('Matching URL: ' + matchingUrl);
+    if (matchingUrl) {
+      audioPlayer.src = matchingUrl;
+    } else {
+      console.warn('Audio file not found in selected directory: ' + relevantUrl);
+    }
+  });
+
+  // Hide audio controls on mobile
+  if (window.innerWidth <= 768 ||
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+    audioCtrlContainer.style.display = 'none';
+    audioHr.style.display = 'none';
+  }
+
+  // ---- Subtitles ----
+  frag.appendChild(hr());
+
+  const subtitlesList = el('ul', { style: 'list-style-type: none;' });
+  const subtitles = track.Subtitles || [];
+  subtitles.forEach(function (sub) {
+    const li = document.createElement('li');
+    if (JEKYLL_ENV !== 'production') {
+      const idxEl = document.createElement('i');
+      idxEl.textContent = sub.Index;
+      li.appendChild(idxEl);
+      li.appendChild(document.createTextNode(' -- '));
+    }
+    const strong = document.createElement('strong');
+    strong.textContent = sub.Speaker + ':';
+    li.appendChild(strong);
+    li.appendChild(document.createTextNode(' ' + sub.Text));
+    li.appendChild(document.createElement('br'));
+    subtitlesList.appendChild(li);
+  });
+  frag.appendChild(subtitlesList);
+
+  // Replace loading indicator with rendered content
+  container.innerHTML = '';
+  container.appendChild(frag);
+
+})();
+</script>

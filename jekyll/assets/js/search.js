@@ -146,7 +146,7 @@ async function loadData() {
             const albums = data[albumsKey];
             const numberOfAlbums = albums.length;
             for(const album of albums) {
-                console.log("Loading album: " + album.Album);
+                // console.log("Loading album: " + album.Album);
                 let trackFetchPromises = [];
                 let trackInfoList = [];
                 for (const track of album.Tracks) {
@@ -204,7 +204,7 @@ async function loadData() {
             const albums = data[albumsKey];
             
             for(const album of albums) {
-                console.log("Loading album: " + album.Album);
+                // console.log("Loading album: " + album.Album);
                 for (const track of album.Tracks) {
                     // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
                     // trackSubtitlesData = await fetchData(jsonPath);
@@ -412,7 +412,7 @@ async function main(callback) {
                                 tracksWithSpeaker.add(key);
                                 const albumAndTitleItem = document.createElement('li');
                                 albumAndTitleItem.innerHTML = `
-                                    <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                    <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                     ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
                                 `;
                                 resultsContainer.appendChild(albumAndTitleItem);
@@ -472,7 +472,7 @@ async function main(callback) {
                         albumAndTitleItem.innerHTML = `
                             <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
                             <strong>${matchedDoc.Album}</strong> - 
-                            <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
+                            <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
 
                         if (!fileMap || Object.keys(fileMap).length === 0) {
@@ -564,7 +564,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 ${matchedDoc.Speaker} -- 
-                                <i><a href="${BASE_URL}/tracks/${matchedDoc.Album_Slug}/${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
                                 ${matchedDoc.Album}
                             `;
                             resultList.appendChild(albumAndTitleItem);
@@ -602,7 +602,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
-                                <i><a href="${BASE_URL}/tracks/${doc.Album_Slug}/${doc.Track_Slug}">${doc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/?album=${doc.Album_Slug}&track=${doc.Track_Slug}">${doc.Track_Title}</a></i> --
                                 <b>Aliases:</b> ${doc.Aliases ? doc.Aliases : '<em>None</em>'} --
                                 ${doc.Album}
                             `;
@@ -637,7 +637,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
-                                <i><a href="${BASE_URL}/tracks/${doc.Album_Slug}/${doc.Track_Slug}">${doc.Track_Title}</a></i> --
+                                <i><a href="${BASE_URL}/tracks/?album=${doc.Album_Slug}&track=${doc.Track_Slug}">${doc.Track_Title}</a></i> --
                                 <b>Establishments:</b> ${doc.Establishments ? doc.Establishments : '<em>None</em>'} --
                                 ${doc.Album}
                             `;

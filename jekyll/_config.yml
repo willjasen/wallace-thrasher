@@ -23,12 +23,9 @@
 # If this is set to false, the client browser will request the single combined JSON file containing all track data
 loadIndividualTrackJSON: false
 
-# If this is set to true, the Jekyll build process will be slow and the track pages will contain their contents
-#   - This is necessary for a production build
-#   - In "load_json_data.rb", if the build is set to production, the value here will be ignored (render_slowly will be overridden to be true)
-# If this is set to false, the Jekyll build process will be quick, but the track pages will not contain any content
-#   - This is useful for testing the site without having to wait a long time for the Jekyll build process to finish
-render_slowly: false
+# Track pages are rendered dynamically client-side via tracks/index.html using data.combined.json
+# Album pages only need track metadata (title, number, slug) which is available in data.json
+# The Jekyll build only loads data.json at build time; data.combined.json is fetched client-side as needed
 
 ##########
 
@@ -81,8 +78,7 @@ incremental: true
 
 collections:
   tracks:
-    output: true
-    permalink: /tracks/:path/
+    output: false
   albums:
     output: true
     permalink: /albums/:title/
