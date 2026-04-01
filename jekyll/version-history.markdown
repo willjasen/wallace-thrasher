@@ -4,7 +4,7 @@ permalink: /version-history/
 published: true
 ---
 
-### v2.0.0
+### v2.0.0 (beta)
 
  - move the LPC USB feature into a floating action button
  - specify `netlify.toml` for build settings at netlify
