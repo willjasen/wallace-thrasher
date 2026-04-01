@@ -6,6 +6,8 @@ published: true
 
 ### v1.8.0
 
+this release builds upon the newly implemented caching feature of v1.7.0 to render track pages as they are accessed rather than statically render them during build time. this cuts down on the time it takes to build and deploy the site - a couple of minutes for development and much more for production.
+
  - render track pages at access time
 
 ---
