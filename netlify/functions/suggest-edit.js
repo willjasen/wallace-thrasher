@@ -361,7 +361,7 @@ exports.handler = async (event) => {
     const prBodyLines = [
       `**Edit type:** ${edit_type}`,
       `**Album:** \`${album_slug}\``,
-      `**Track:** \`${track_slug}\``,
+      `**Track:** [\`${track_slug}\`](https://github.com/${REPO_OWNER}/${REPO_NAME}/blob/${BASE_BRANCH}/jekyll/assets/json/${album_slug}/${track_slug}.json)`,
       `**Suggested by:** [@${attributedTo}](https://github.com/${attributedTo})`,
     ];
     if (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'Track') {
