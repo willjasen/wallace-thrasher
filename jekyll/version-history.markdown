@@ -6,6 +6,13 @@ published: true
 
 ### v2.0.0 (beta)
 
+MAJOR CHANGES TO SOFTWARE LICENSING
+
+ - the JSON data at `/assets/json` is now licensed with CC-BY-SA 3.0
+ - the rest of the source code remains under the GPLv3 license
+
+other notes
+
  - prefetch and index data on every page, if needed
  - remove the need for YML data files
  - move the LPC USB feature into a floating action button
