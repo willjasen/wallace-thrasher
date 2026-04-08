@@ -175,6 +175,11 @@
         console.warn('lpcPlayer.traverseAll failed:', e);
         return false;
       }
+    },
+
+    // Update the select button to show the currently-loaded album and track name
+    setNowPlaying: function (albumName, trackTitle) {
+      selectBtn.textContent = albumName + ' \u2014 ' + trackTitle;
     }
   };
 
