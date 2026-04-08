@@ -17,3 +17,11 @@
     "jekyll/vendor/bundle",
     "$HOME/.local/share/mise/installs/ruby"
   ]
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com; connect-src 'self' https://api.github.com https://www.google-analytics.com https://stats.g.doubleclick.net https://cloudflareinsights.com; media-src 'self' blob:; font-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -7,6 +7,7 @@ published: true
 ### v2.0.0 (beta)
 
  - prefetch and index data on every page, if needed
+ - remove the need for YML data files
  - move the LPC USB feature into a floating action button
  - the LPC USB feature now persists across page navigations
  - add a table of contents for the About and Version History pages
