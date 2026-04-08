@@ -94,7 +94,7 @@
 
   const selectBtn = document.createElement('button');
   selectBtn.id = 'selectLpcBtn';
-  selectBtn.textContent = '⬇️ Select LPC USB ⬇️';
+  selectBtn.textContent = 'Select LPC USB';
   fabPanel.appendChild(selectBtn);
 
   const audioPlayer = document.createElement('audio');
