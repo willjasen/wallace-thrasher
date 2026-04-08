@@ -1,0 +1,24 @@
+[build]
+  base    = "jekyll"
+  command = "bundle exec jekyll build --baseurl \"\""
+  publish = "_site"
+
+[build.environment]
+  BUNDLE_PATH = "vendor/bundle"
+
+[context.main.environment]
+  JEKYLL_ENV = "production"
+
+[context.dev.environment]
+  JEKYLL_ENV = "development"
+
+[build.cache]
+  paths = [
+    "jekyll/vendor/bundle",
+    "$HOME/.local/share/mise/installs/ruby"
+  ]
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com; connect-src 'self' https://api.github.com https://www.google-analytics.com https://analytics.google.com https://cloudflareinsights.com https://static.cloudflareinsights.com; frame-src https://embed.music.apple.com; object-src 'none'; base-uri 'self'; form-action 'self';"
