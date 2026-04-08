@@ -551,7 +551,7 @@ hide_from_nav: true
         const data = await res.json();
         if (data.ok) {
           resultEl.style.color = 'greenyellow';
-          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;">PR #' + data.pr_number + '</a>';
+          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;text-decoration:underline;font-weight:bold;">PR #' + data.pr_number + ' 🔗</a>';
           exitEditMode();
           editToggleBtn.style.display = 'none';
           bar.style.display = 'flex';
