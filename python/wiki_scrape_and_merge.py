@@ -326,9 +326,41 @@ def _normalize(text: str) -> str:
 
 # ── Helpers: Alignment ────────────────────────────────────────────────────────
 
+def _parse_timecode(tc: str) -> float:
+    """Parse 'HH:MM:SS,mmm' to seconds."""
+    parts = tc.replace(",", ".").split(":")
+    return int(parts[0]) * 3600 + int(parts[1]) * 60 + float(parts[2])
+
+
 def _is_action_only(text: str) -> bool:
     """Return True if the text is purely a sound/action annotation like [beep]."""
     return bool(re.fullmatch(r"[\[\(][^\]\)]+[\]\)]", text.strip()))
+
+
+def _expand_group(
+    alignments: list[dict],
+    group: list[tuple[int, dict]],
+    wiki_speaker: str | None,
+    wiki_text: str,
+    similarity: float,
+    match_type: str,
+) -> None:
+    """Expand a matched group into per-entry alignment records."""
+    group_indices = (
+        [entry["Index"] for _, entry in group] if len(group) > 1 else None
+    )
+    sim_rounded = round(similarity, 4) if isinstance(similarity, float) else similarity
+    for _, entry in group:
+        alignments.append({
+            "json_index":   entry["Index"],
+            "json_speaker": entry.get("Speaker", ""),
+            "json_text":    entry.get("Text", ""),
+            "wiki_speaker": wiki_speaker,
+            "wiki_text":    wiki_text,
+            "similarity":   sim_rounded,
+            "match_type":   match_type,
+            "json_group":   group_indices,
+        })
 
 
 def align_wiki_to_json(
@@ -339,14 +371,22 @@ def align_wiki_to_json(
     """
     Globally align wiki transcript lines to JSON subtitle entries.
 
+    Wiki transcripts tend to have one line per speaker turn (full sentences),
+    while JSON subtitles have timestamped fragments — so a single wiki line
+    often spans multiple consecutive same-speaker JSON entries.  This function
+    first consolidates consecutive same-speaker JSON entries into groups, aligns
+    wiki lines against those groups, then falls back to individual matching for
+    anything the group pass left unmatched.
+
     Returns a list of alignment records, each a dict:
       json_index       – 1-based index of JSON entry
       json_speaker     – original SPEAKER_XX code
       json_text        – original JSON text
       wiki_speaker     – human name from wiki (may be None)
       wiki_text        – wiki text for this line
-      similarity       – float 0-1
+      similarity       – float 0-1 (group-level for multi-entry groups)
       match_type       – 'exact'|'similar'|'unmatched_json'
+      json_group       – list of json_indices in the group (None for singles)
     """
     # Filter wiki lines that have actual speech content (not pure [actions])
     wiki_speech = [
@@ -361,45 +401,154 @@ def align_wiki_to_json(
         if entry.get("Text", "").strip()
     ]
 
-    wiki_norm = [_normalize(txt) for _, _, txt in wiki_speech]
-    json_norm = [_normalize(entry["Text"]) for _, entry in json_speech]
+    if not wiki_speech or not json_speech:
+        return [
+            {
+                "json_index":   entry["Index"],
+                "json_speaker": entry.get("Speaker", ""),
+                "json_text":    entry.get("Text", ""),
+                "wiki_speaker": None,
+                "wiki_text":    None,
+                "similarity":   0.0,
+                "match_type":   "unmatched_json",
+                "json_group":   None,
+            }
+            for _, entry in json_speech
+        ]
+
+    # ── Phase 1: Group consecutive same-speaker JSON entries ──────────────
+    # A significant time gap between entries hints at a speaker change that
+    # the diariser may have missed, so we split groups at large pauses.
+    MAX_GAP = 1.5  # seconds
+    json_groups: list[list[tuple[int, dict]]] = []
+    current_group: list[tuple[int, dict]] | None = None
+    for idx, entry in json_speech:
+        same_speaker = (
+            current_group
+            and entry["Speaker"] == current_group[-1][1]["Speaker"]
+        )
+        if same_speaker:
+            prev_end   = _parse_timecode(current_group[-1][1].get("End Time", "0"))
+            curr_start = _parse_timecode(entry.get("Start Time", "0"))
+            gap = curr_start - prev_end
+            if gap <= MAX_GAP:
+                current_group.append((idx, entry))
+                continue
+        # Start a new group
+        if current_group:
+            json_groups.append(current_group)
+        current_group = [(idx, entry)]
+    if current_group:
+        json_groups.append(current_group)
+
+    # Build consolidated text for each group
+    group_texts = [
+        " ".join(entry["Text"].strip() for _, entry in group)
+        for group in json_groups
+    ]
+
+    wiki_norm  = [_normalize(txt) for _, _, txt in wiki_speech]
+    group_norm = [_normalize(txt) for txt in group_texts]
 
     alignments: list[dict] = []
-    matched_json = set()
+    matched_wiki_indices: set[int]  = set()
+    matched_group_indices: set[int] = set()
 
-    # Use SequenceMatcher on the normalised sequences for global alignment
-    sm = difflib.SequenceMatcher(None, wiki_norm, json_norm, autojunk=False)
+    # ── Phase 2: Align wiki lines against consolidated groups ─────────────
+    sm = difflib.SequenceMatcher(None, wiki_norm, group_norm, autojunk=False)
 
     for tag, i1, i2, j1, j2 in sm.get_opcodes():
         if tag == "equal":
-            for wi, ji in zip(range(i1, i2), range(j1, j2)):
+            for wi, gi in zip(range(i1, i2), range(j1, j2)):
                 _, w_spk, w_txt = wiki_speech[wi]
-                j_idx, j_entry = json_speech[ji]
-                matched_json.add(j_idx)
-                alignments.append({
-                    "json_index":   j_entry["Index"],
-                    "json_speaker": j_entry.get("Speaker", ""),
-                    "json_text":    j_entry.get("Text", ""),
-                    "wiki_speaker": w_spk,
-                    "wiki_text":    w_txt,
-                    "similarity":   1.0,
-                    "match_type":   "exact",
-                })
+                matched_wiki_indices.add(wi)
+                matched_group_indices.add(gi)
+                _expand_group(alignments, json_groups[gi],
+                              w_spk, w_txt, 1.0, "exact")
         elif tag in ("replace", "insert", "delete"):
-            # Within a 'replace' block, do pairwise best-match
             if tag == "replace":
+                used_gi: set[int] = set()
+                for wi in range(i1, i2):
+                    best_gi, best_sim = None, 0.0
+                    for gi in range(j1, j2):
+                        if gi in used_gi:
+                            continue
+                        sim = difflib.SequenceMatcher(
+                            None, wiki_norm[wi], group_norm[gi]
+                        ).ratio()
+                        if sim > best_sim:
+                            best_sim, best_gi = sim, gi
+                    if best_gi is not None and best_sim >= min_similarity:
+                        # Multi-entry groups need higher confidence to avoid
+                        # over-matching when diarisation errors cause groups
+                        # that span multiple real speaker turns.
+                        group = json_groups[best_gi]
+                        effective_threshold = (
+                            max(min_similarity, 0.5)
+                            if len(group) > 1
+                            else min_similarity
+                        )
+                        if best_sim >= effective_threshold:
+                            _, w_spk, w_txt = wiki_speech[wi]
+                            matched_wiki_indices.add(wi)
+                            matched_group_indices.add(best_gi)
+                            used_gi.add(best_gi)
+                            _expand_group(alignments, json_groups[best_gi],
+                                          w_spk, w_txt, best_sim, "similar")
+            # 'insert' means wiki has lines with no JSON-group match → skip
+            # 'delete' means JSON groups with no wiki match → handled below
+
+    # ── Phase 3: Fallback — individual matching for leftovers ─────────────
+    # Explode unmatched groups back to individual entries and try 1:1
+    # alignment against unmatched wiki lines.  This recovers matches when
+    # speaker diarisation errors caused over-grouping.
+    matched_entry_indices = {a["json_index"] for a in alignments}
+    fallback_entries = [
+        (idx, entry) for idx, entry in json_speech
+        if entry["Index"] not in matched_entry_indices
+    ]
+    fallback_wiki = [
+        (wi, wiki_speech[wi][1], wiki_speech[wi][2])
+        for wi in range(len(wiki_speech))
+        if wi not in matched_wiki_indices
+    ]
+
+    if fallback_entries and fallback_wiki:
+        fw_norm = [_normalize(txt) for _, _, txt in fallback_wiki]
+        fe_norm = [_normalize(entry["Text"]) for _, entry in fallback_entries]
+
+        sm2 = difflib.SequenceMatcher(None, fw_norm, fe_norm, autojunk=False)
+        for tag, i1, i2, j1, j2 in sm2.get_opcodes():
+            if tag == "equal":
+                for wi, ji in zip(range(i1, i2), range(j1, j2)):
+                    _, w_spk, w_txt = fallback_wiki[wi]
+                    _, j_entry = fallback_entries[ji]
+                    alignments.append({
+                        "json_index":   j_entry["Index"],
+                        "json_speaker": j_entry.get("Speaker", ""),
+                        "json_text":    j_entry.get("Text", ""),
+                        "wiki_speaker": w_spk,
+                        "wiki_text":    w_txt,
+                        "similarity":   1.0,
+                        "match_type":   "exact",
+                        "json_group":   None,
+                    })
+            elif tag == "replace":
+                used_ji: set[int] = set()
                 for wi in range(i1, i2):
                     best_ji, best_sim = None, 0.0
                     for ji in range(j1, j2):
+                        if ji in used_ji:
+                            continue
                         sim = difflib.SequenceMatcher(
-                            None, wiki_norm[wi], json_norm[ji]
+                            None, fw_norm[wi], fe_norm[ji]
                         ).ratio()
                         if sim > best_sim:
                             best_sim, best_ji = sim, ji
                     if best_ji is not None and best_sim >= min_similarity:
-                        _, w_spk, w_txt = wiki_speech[wi]
-                        j_idx, j_entry = json_speech[best_ji]
-                        matched_json.add(j_idx)
+                        _, w_spk, w_txt = fallback_wiki[wi]
+                        _, j_entry = fallback_entries[best_ji]
+                        used_ji.add(best_ji)
                         alignments.append({
                             "json_index":   j_entry["Index"],
                             "json_speaker": j_entry.get("Speaker", ""),
@@ -408,9 +557,8 @@ def align_wiki_to_json(
                             "wiki_text":    w_txt,
                             "similarity":   round(best_sim, 4),
                             "match_type":   "similar",
+                            "json_group":   None,
                         })
-            # 'insert' means wiki has lines with no JSON match → skip
-            # 'delete' means JSON has lines with no wiki match → mark below
 
     # Sort by JSON entry order
     alignments.sort(key=lambda x: x["json_index"])
@@ -427,6 +575,7 @@ def align_wiki_to_json(
                 "wiki_text":    None,
                 "similarity":   0.0,
                 "match_type":   "unmatched_json",
+                "json_group":   None,
             })
 
     alignments.sort(key=lambda x: x["json_index"])
@@ -754,12 +903,21 @@ def cmd_compare(args) -> None:
             w_text = aln["wiki_text"]
             j_text = aln["json_text"]
             sim    = aln["similarity"]
+            is_group = aln.get("json_group") is not None
 
             aln["proposed_speaker"] = speaker_map.get(code, code)
 
             if w_text is None:
                 aln["proposed_text"]   = j_text
                 aln["text_action"]     = "no_wiki_match"
+            elif is_group:
+                # Multi-entry group: wiki text spans several JSON entries,
+                # so we can't auto-replace individual entry text.
+                aln["proposed_text"] = j_text
+                if sim >= 0.99:
+                    aln["text_action"] = "keep"
+                else:
+                    aln["text_action"] = "group_review"
             elif sim >= 0.99:
                 aln["proposed_text"]   = j_text
                 aln["text_action"]     = "keep"
@@ -790,6 +948,7 @@ def cmd_compare(args) -> None:
                 "speakers_to_map":     len(speaker_map),
                 "text_auto_correct":   sum(1 for a in alignments if a.get("text_action") == "auto_correct"),
                 "text_review":         sum(1 for a in alignments if a.get("text_action") == "review"),
+                "text_group_review":   sum(1 for a in alignments if a.get("text_action") == "group_review"),
                 "unmatched_json":      sum(1 for a in alignments if a["match_type"] == "unmatched_json"),
             },
         }
@@ -800,6 +959,7 @@ def cmd_compare(args) -> None:
             f"  speakers={len(speaker_map)}"
             f"  auto_correct={result['summary']['text_auto_correct']}"
             f"  review={result['summary']['text_review']}"
+            f"  group_review={result['summary']['text_group_review']}"
             f"  unmatched={result['summary']['unmatched_json']}"
         )
         processed += 1
@@ -864,6 +1024,11 @@ def cmd_merge(args) -> None:
                 changed_speaker += 1
 
             if spk_only:
+                continue
+
+            # Multi-entry groups: wiki text spans several JSON entries and
+            # can't be auto-split back — skip text replacement for these.
+            if aln.get("json_group"):
                 continue
 
             # Text update — only apply when confidence is sufficient
@@ -938,6 +1103,7 @@ def cmd_report(args) -> None:
         print(f"  Unmatched    : {s.get('unmatched_json', '?')}")
         print(f"  Auto-correct : {s.get('text_auto_correct', '?')} text changes")
         print(f"  For review   : {s.get('text_review', '?')} text changes")
+        print(f"  Group review : {s.get('text_group_review', '?')} grouped entries")
 
         if sm:
             print(f"  Speaker map  :")
@@ -949,16 +1115,19 @@ def cmd_report(args) -> None:
             for aln in compare["alignments"]:
                 action = aln.get("text_action", "")
                 marker = {
-                    "auto_correct": "✏ ",
-                    "review":       "? ",
-                    "keep":         "  ",
-                    "no_wiki_match":"  ",
+                    "auto_correct":  "✏ ",
+                    "review":        "? ",
+                    "group_review":  "⊞ ",
+                    "keep":          "  ",
+                    "no_wiki_match": "  ",
                 }.get(action, "  ")
                 spk_from = aln["json_speaker"]
                 spk_to   = aln.get("proposed_speaker", spk_from)
                 spk_note = f" [{spk_from}→{spk_to}]" if spk_from != spk_to else f" [{spk_from}]"
                 sim_pct  = f"{aln['similarity']*100:.0f}%"
-                print(f"  {marker}[{aln['json_index']:3d}]{spk_note} ({sim_pct})")
+                grp      = aln.get("json_group")
+                grp_note = f" grp{grp}" if grp else ""
+                print(f"  {marker}[{aln['json_index']:3d}]{spk_note} ({sim_pct}){grp_note}")
                 if aln.get("wiki_text") and aln["wiki_text"] != aln["json_text"]:
                     print(f"       JSON: {aln['json_text']}")
                     print(f"       WIKI: {aln['wiki_text']}")
