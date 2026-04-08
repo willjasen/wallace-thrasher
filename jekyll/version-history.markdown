@@ -20,7 +20,7 @@ published: true
 ### v1.8.1
 
  - set a Content Security Policy for Netlify
- - bump gem rexml to 3.4.4
+ - bump gem `rexml` to 3.4.4
 
 ---
 
