@@ -42,6 +42,16 @@ hide_from_nav: true
     visibility: visible;
     opacity: 1;
   }
+  .subtitle-line {
+    padding: 4px 10px;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    transition: background-color 0.25s, border-color 0.25s;
+  }
+  .subtitle-line.subtitle-active {
+    background-color: rgba(173, 255, 47, 0.15);
+    border-left-color: greenyellow;
+  }
 </style>
 
 <script>
@@ -194,6 +204,12 @@ hide_from_nav: true
   const audioContainer = el('div', { style: 'text-align: center; margin: 10px 0;' });
   frag.appendChild(audioContainer);
 
+  // Karaoke is only started when THIS page's track is actually loaded into the player.
+  // startKaraokeCallback is set after the DOM is rendered (subtitle elements exist).
+  // thisTrackShouldHighlight is set when the audio auto-loads before the DOM is ready.
+  let thisTrackShouldHighlight = false;
+  let startKaraokeCallback = null;
+
   function applyTrackAudio(matchingUrl) {
     const audio = window.lpcPlayer.audio;
     if (!audio.paused) {
@@ -207,12 +223,19 @@ hide_from_nav: true
         audio.style.display = '';
         audio.play();
         btn.remove();
+        if (startKaraokeCallback) startKaraokeCallback();
       });
       audioContainer.appendChild(btn);
     } else {
       // Nothing playing — auto-load this track
       audio.src = matchingUrl;
       audio.style.display = '';
+      // If the DOM is already rendered, start karaoke now; otherwise flag it for after render.
+      if (startKaraokeCallback) {
+        startKaraokeCallback();
+      } else {
+        thisTrackShouldHighlight = true;
+      }
     }
   }
 
@@ -238,7 +261,10 @@ hide_from_nav: true
     }, { once: true });
     document.addEventListener('lpc-permission-granted', async function () {
       const ok = await window.lpcPlayer.loadTrack(albumUsbDir, usbFilename);
-      if (ok) window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+      if (ok) {
+        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+        if (startKaraokeCallback) startKaraokeCallback();
+      }
     }, { once: true });
   }
   initTrackAudio();
@@ -246,10 +272,13 @@ hide_from_nav: true
   // ---- Subtitles ----
   frag.appendChild(hr());
 
-  const subtitlesList = el('ul', { style: 'list-style-type: none;' });
+  const subtitlesList = el('ul', { id: 'subtitleList', style: 'list-style-type: none; padding-left: 0;' });
   const subtitles = track.Subtitles || [];
   subtitles.forEach(function (sub) {
     const li = document.createElement('li');
+    li.className = 'subtitle-line';
+    if (sub['Start Time']) li.setAttribute('data-start', sub['Start Time']);
+    if (sub['End Time'])   li.setAttribute('data-end',   sub['End Time']);
     if (JEKYLL_ENV !== 'production') {
       const idxEl = document.createElement('i');
       idxEl.textContent = sub.Index;
@@ -268,6 +297,70 @@ hide_from_nav: true
   // Replace loading indicator with rendered content
   container.innerHTML = '';
   container.appendChild(frag);
+
+  // ---- Karaoke highlight ----
+  // Build subtitle timing data from the now-rendered DOM, then expose startKaraokeCallback
+  // so that applyTrackAudio (and the button click handler) can activate highlighting only
+  // when THIS page's track is actually loaded — not just because audio happens to be playing.
+  (function () {
+    function parseTimecode(tc) {
+      if (!tc) return null;
+      var parts = tc.split(',');
+      var ms = parts.length > 1 ? parseInt(parts[1], 10) : 0;
+      var timeParts = parts[0].split(':').map(Number);
+      return timeParts[0] * 3600 + timeParts[1] * 60 + timeParts[2] + ms / 1000;
+    }
+
+    var items = Array.from(document.querySelectorAll('#subtitleList .subtitle-line'));
+    var subtitleData = items
+      .map(function (item) {
+        return {
+          el: item,
+          start: parseTimecode(item.getAttribute('data-start')),
+          end:   parseTimecode(item.getAttribute('data-end'))
+        };
+      })
+      .filter(function (s) { return s.start !== null && s.end !== null; });
+
+    var currentActive = null;
+    var karaokeAbort = new AbortController();
+
+    document.addEventListener('soft-nav', function () {
+      karaokeAbort.abort();
+      if (currentActive) { currentActive.el.classList.remove('subtitle-active'); currentActive = null; }
+    }, { once: true });
+
+    function updateHighlight(currentTime) {
+      var next = null;
+      for (var i = 0; i < subtitleData.length; i++) {
+        if (currentTime >= subtitleData[i].start && currentTime <= subtitleData[i].end) {
+          next = subtitleData[i];
+          break;
+        }
+      }
+      if (next === currentActive) return;
+      if (currentActive) currentActive.el.classList.remove('subtitle-active');
+      currentActive = next;
+      if (currentActive) {
+        currentActive.el.classList.add('subtitle-active');
+        currentActive.el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    var karaokeStarted = false;
+    // Assign to the outer-scope variable so applyTrackAudio's handlers can call it.
+    startKaraokeCallback = function () {
+      if (karaokeStarted || !subtitleData.length || !window.lpcPlayer) return;
+      karaokeStarted = true;
+      var audio = window.lpcPlayer.audio;
+      audio.addEventListener('timeupdate', function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
+      audio.addEventListener('seeked',     function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
+      updateHighlight(audio.currentTime);
+    };
+
+    // If applyTrackAudio already auto-loaded this track before the DOM was ready, start now.
+    if (thisTrackShouldHighlight) startKaraokeCallback();
+  })();
 
   // ---- Apple Music FAB ----
   // Clean up any FAB left from a previous track navigation
