@@ -12,9 +12,9 @@ errors.  This tool bridges the two sources.
 
 Scrape snapshots
 ────────────────
-Each `scrape` run creates a timestamped snapshot under wiki_cache/snapshots/.
+Each `scrape` run creates a timestamped snapshot under wiki/cache/snapshots/.
 All subsequent commands default to the most-recent snapshot (recorded in
-wiki_cache/latest).  Pass --snapshot <name> to target a specific one.
+wiki/cache/latest).  Pass --snapshot <name> to target a specific one.
 
 Usage
 ─────
@@ -50,7 +50,7 @@ Usage
   python wiki_scrape_and_merge.py report --snapshot 20260408-142301
   python wiki_scrape_and_merge.py report --album longmont-potion-castle-4 --track a-simple-inquiry
 
-  # 7. Migrate legacy flat wiki_cache/ structure into a named snapshot
+  # 7. Migrate legacy flat wiki/cache/ structure into a named snapshot
   python wiki_scrape_and_merge.py migrate
   python wiki_scrape_and_merge.py migrate --snapshot initial  # custom name
 
@@ -78,16 +78,15 @@ PROJECT_ROOT   = SCRIPT_DIR.parent
 JEKYLL_DIR     = PROJECT_ROOT / "jekyll"
 JSON_SRC_DIR   = JEKYLL_DIR / "assets" / "json"
 DATA_JSON      = JSON_SRC_DIR / "data.json"
-CACHE_DIR      = SCRIPT_DIR / "wiki_cache"
+CACHE_DIR      = SCRIPT_DIR / "wiki" / "cache"
 SNAPSHOTS_DIR  = CACHE_DIR / "snapshots"   # each scrape run creates a subdir here
 LATEST_FILE    = CACHE_DIR / "latest"      # plain-text file containing the active snapshot name
-COMPARE_DIR    = SCRIPT_DIR / "wiki_compare_output"
-BACKUP_DIR     = SCRIPT_DIR / "wiki_merge_backups"
+COMPARE_DIR    = SCRIPT_DIR / "wiki" / "compare"
 
 # ── Wiki API ──────────────────────────────────────────────────────────────────
 
 WIKI_API       = "https://talkinwhipapedia.fandom.com/api.php"
-REQUEST_DELAY  = 2   # seconds between requests (be polite)
+REQUEST_DELAY  = 0.8   # seconds between requests (be polite)
 USER_AGENT     = "wallace-thrasher-wiki-scraper/1.0 (github.com/willjasen/wallace-thrasher)"
 
 # ── Helpers: HTTP ─────────────────────────────────────────────────────────────
@@ -139,17 +138,19 @@ def _extract_cell_content(line: str) -> str:
     Given a raw wikitext table cell line (starts with | or !), return the cell
     content (everything after the attribute separator pipe).
 
-    e.g.  '| style="width:10%;"|Larry:'  → 'Larry:'
+    e.g.  '| style="width:10%;"|Larry:'   → 'Larry:'
+          '| style="width:10%;" |Larry:'  → 'Larry:'
           '| Larry:'                       → 'Larry:'
     """
     # Strip leading | or ! and optional whitespace
     stripped = line.lstrip("|! \t")
-    # The separator between attributes and content is the first '"|' sequence
-    # (closing quote of last attribute value, followed by |).
-    # This reliably avoids being fooled by | inside [[wikilinks]].
-    sep = stripped.find('"|')
-    if sep != -1:
-        return stripped[sep + 2:].strip()
+    # The separator between style attributes and content is a closing quote
+    # (ASCII or Unicode curly) followed by optional whitespace and a pipe.
+    # Using a regex handles both '"|content' and '" |content' as well as
+    # pages that use Unicode curly quotes (\u201c/\u201d) in their markup.
+    m = re.search(r'["\u201c\u201d\u2018\u2019\']\s*\|', stripped)
+    if m:
+        return stripped[m.end():].strip()
     # No style attributes — the content is everything
     return stripped.strip()
 
@@ -459,7 +460,7 @@ def deduce_speaker_mapping(alignments: list[dict]) -> dict[str, str]:
 # ── Cache helpers ─────────────────────────────────────────────────────────────
 
 def _resolve_snapshot(snapshot: str | None) -> str | None:
-    """Return the snapshot name to use: the given value, or read from wiki_cache/latest."""
+    """Return the snapshot name to use: the given value, or read from wiki/cache/latest."""
     if snapshot:
         return snapshot
     if LATEST_FILE.exists():
@@ -818,8 +819,6 @@ def cmd_merge(args) -> None:
     if not snapshot:
         sys.exit("No snapshot found. Run 'scrape' and 'compare' first, or pass --snapshot <name>.")
 
-    BACKUP_DIR.mkdir(parents=True, exist_ok=True)
-
     applied = skipped = no_compare = 0
 
     for album, track in iter_tracks(data, args.album, args.track):
@@ -889,12 +888,6 @@ def cmd_merge(args) -> None:
 
         full_path = JSON_SRC_DIR / a_slug / json_path
         if not dry_run:
-            # Backup original
-            backup_path = BACKUP_DIR / a_slug / json_path
-            backup_path.parent.mkdir(parents=True, exist_ok=True)
-            if not backup_path.exists():
-                shutil.copy2(full_path, backup_path)
-
             # Write updated JSON
             full_path.write_text(
                 json.dumps(json_entries, indent=2, ensure_ascii=False),
@@ -992,7 +985,7 @@ def cmd_list_snapshots(args) -> None:
 # ── Subcommand: use ───────────────────────────────────────────────────────────
 
 def cmd_use(args) -> None:
-    """Set a snapshot as the active default (updates wiki_cache/latest)."""
+    """Set a snapshot as the active default (updates wiki/cache/latest)."""
     snapshot = args.snapshot
     if not _snapshot_cache_dir(snapshot).exists():
         sys.exit(f"Snapshot '{snapshot}' not found under {SNAPSHOTS_DIR}.")
@@ -1003,9 +996,9 @@ def cmd_use(args) -> None:
 # ── Subcommand: migrate ───────────────────────────────────────────────────────
 
 def cmd_migrate(args) -> None:
-    """Migrate legacy flat wiki_cache/<album>/ structure into a named snapshot."""
+    """Migrate legacy flat wiki/cache/<album>/ structure into a named snapshot."""
     if not CACHE_DIR.exists():
-        print("wiki_cache/ does not exist. Nothing to migrate.")
+        print("wiki/cache/ does not exist. Nothing to migrate.")
         return
 
     legacy_dirs = [
@@ -1013,7 +1006,7 @@ def cmd_migrate(args) -> None:
         if d.is_dir() and d.name != "snapshots"
     ]
     if not legacy_dirs:
-        print("No legacy album directories found directly under wiki_cache/.")
+        print("No legacy album directories found directly under wiki/cache/.")
         return
 
     snapshot = args.snapshot or "initial"
@@ -1039,7 +1032,7 @@ def cmd_migrate(args) -> None:
         print(f"Note: 'latest' still points to '{_resolve_snapshot(None)}'; not changed.")
         print(f"      Run 'use {snapshot}' to switch if desired.")
 
-    print(f"\nMigration complete. Original files remain in wiki_cache/<album>/.")
+    print(f"\nMigration complete. Original files remain in wiki/cache/<album>/.") 
     print("Delete them manually once you have verified the snapshot.")
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -1095,7 +1088,7 @@ def build_parser() -> argparse.ArgumentParser:
                        help="Show individual alignment entries.")
 
     # ── migrate ──
-    p_mig = sub.add_parser("migrate", help="Migrate legacy flat wiki_cache/ structure into a snapshot.")
+    p_mig = sub.add_parser("migrate", help="Migrate legacy flat wiki/cache/ structure into a snapshot.")
     p_mig.add_argument("--snapshot", help="Snapshot name for migrated data (default: 'initial').")
     p_mig.add_argument("--force",    action="store_true", help="Merge into snapshot if it already exists.")
 
