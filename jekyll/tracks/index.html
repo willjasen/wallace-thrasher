@@ -272,23 +272,60 @@ hide_from_nav: true
   // ---- Subtitles ----
   frag.appendChild(hr());
 
-  const subtitlesList = el('ul', { id: 'subtitleList', style: 'list-style-type: none; padding-left: 0;' });
+  // "Suggest edits" toggle button — lets visitors edit speakers/subtitles inline
+  const editToggleBtn = el('button', {
+    id: 'suggest-edit-toggle',
+    style: 'display:block;margin:0 auto 12px;background:none;border:1px solid lavender;color:lavender;border-radius:6px;padding:5px 14px;cursor:pointer;font-size:0.85em;',
+  });
+  editToggleBtn.textContent = '\u270F\uFE0F Suggest edits';
+  frag.appendChild(editToggleBtn);
+
+  const subtitlesList = el('ul', { id: 'subtitleList', style: 'list-style-type: none; padding-left: 0; padding-bottom: 60px;' });
   const subtitles = track.Subtitles || [];
   subtitles.forEach(function (sub) {
     const li = document.createElement('li');
     li.className = 'subtitle-line';
+    li.setAttribute('data-sub-index', sub.Index);
     if (sub['Start Time']) li.setAttribute('data-start', sub['Start Time']);
     if (sub['End Time'])   li.setAttribute('data-end',   sub['End Time']);
+
+    // ---- View span (default display) ----
+    const viewSpan = el('span', { class: 'sub-view' });
     if (JEKYLL_ENV !== 'production') {
       const idxEl = document.createElement('i');
       idxEl.textContent = sub.Index;
-      li.appendChild(idxEl);
-      li.appendChild(document.createTextNode(' -- '));
+      viewSpan.appendChild(idxEl);
+      viewSpan.appendChild(document.createTextNode(' -- '));
     }
     const strong = document.createElement('strong');
     strong.textContent = sub.Speaker + ':';
-    li.appendChild(strong);
-    li.appendChild(document.createTextNode(' ' + sub.Text));
+    viewSpan.appendChild(strong);
+    viewSpan.appendChild(document.createTextNode(' ' + sub.Text));
+    li.appendChild(viewSpan);
+
+    // ---- Edit span (shown only in edit mode) ----
+    const editSpan = el('span', { class: 'sub-edit', style: 'display:none;align-items:baseline;gap:6px;' });
+    const speakerInput = el('input', {
+      class: 'sub-speaker-input',
+      type: 'text',
+      value: sub.Speaker,
+      'data-orig': sub.Speaker,
+      'aria-label': 'Speaker',
+      style: 'width:110px;font-size:0.85em;padding:2px 6px;border-radius:4px;border:1px solid #666;background:#1a1a2e;color:#e0e0e0;',
+    });
+    editSpan.appendChild(speakerInput);
+    editSpan.appendChild(document.createTextNode(': '));
+    const textInput = el('input', {
+      class: 'sub-text-input',
+      type: 'text',
+      value: sub.Text,
+      'data-orig': sub.Text,
+      'aria-label': 'Subtitle text',
+      style: 'width:calc(100% - 160px);min-width:180px;font-size:0.85em;padding:2px 6px;border-radius:4px;border:1px solid #666;background:#1a1a2e;color:#e0e0e0;',
+    });
+    editSpan.appendChild(textInput);
+    li.appendChild(editSpan);
+
     li.appendChild(document.createElement('br'));
     subtitlesList.appendChild(li);
   });
@@ -297,6 +334,152 @@ hide_from_nav: true
   // Replace loading indicator with rendered content
   container.innerHTML = '';
   container.appendChild(frag);
+
+  // ---- Edit mode wiring ----
+  (function () {
+    let editMode = false;
+
+    // Sticky submit bar — z-index 7000 keeps it below the audio/Apple Music FABs (9000)
+    const bar = el('div', {
+      id: 'suggest-edit-bar',
+      style: 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:7000;background:#1a1a2e;border-top:1px solid lavender;padding:10px 20px;flex-direction:column;align-items:center;gap:8px;',
+    });
+    const barTop = el('div', { style: 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;width:100%;' });
+
+    const changeCountEl = el('span', { style: 'color:lavender;font-size:0.85em;white-space:nowrap;' });
+    changeCountEl.textContent = '0 changes';
+
+    const noteInput = el('input', {
+      type: 'text',
+      placeholder: 'Optional note for reviewer\u2026',
+      maxlength: '500',
+      style: 'flex:1;min-width:160px;max-width:380px;font-size:0.85em;padding:4px 8px;border-radius:4px;border:1px solid #666;background:#0d0d1a;color:#e0e0e0;',
+    });
+
+    const submitBtn = el('button', {
+      style: 'background:none;border:1px solid greenyellow;color:greenyellow;border-radius:6px;padding:5px 16px;cursor:pointer;font-size:0.85em;font-weight:bold;',
+    });
+    submitBtn.textContent = 'Submit suggestions';
+    submitBtn.disabled = true;
+
+    const cancelBtn = el('button', {
+      style: 'background:none;border:1px solid #666;color:#aaa;border-radius:6px;padding:5px 14px;cursor:pointer;font-size:0.85em;',
+    });
+    cancelBtn.textContent = 'Cancel';
+
+    const resultEl = el('div', { style: 'font-size:0.85em;text-align:center;' });
+
+    barTop.appendChild(changeCountEl);
+    barTop.appendChild(noteInput);
+    barTop.appendChild(submitBtn);
+    barTop.appendChild(cancelBtn);
+    bar.appendChild(barTop);
+    bar.appendChild(resultEl);
+    document.body.appendChild(bar);
+
+    function getEdits() {
+      const edits = [];
+      document.querySelectorAll('#subtitleList .subtitle-line[data-sub-index]').forEach(function (li) {
+        const idx    = parseInt(li.dataset.subIndex, 10);
+        const sIn    = li.querySelector('.sub-speaker-input');
+        const tIn    = li.querySelector('.sub-text-input');
+        const speakerChanged = sIn && sIn.value !== sIn.dataset.orig;
+        const textChanged    = tIn && tIn.value !== tIn.dataset.orig;
+        if (speakerChanged || textChanged) {
+          const edit = { index: idx };
+          if (speakerChanged) edit.speaker = sIn.value;
+          if (textChanged)    edit.text    = tIn.value;
+          edits.push(edit);
+        }
+      });
+      return edits;
+    }
+
+    function updateCount() {
+      const edits = getEdits();
+      changeCountEl.textContent = edits.length + ' change' + (edits.length !== 1 ? 's' : '');
+      submitBtn.disabled = edits.length === 0;
+    }
+
+    function enterEditMode() {
+      editMode = true;
+      editToggleBtn.textContent = '\u2715 Exit edit mode';
+      editToggleBtn.style.borderColor = '#666';
+      editToggleBtn.style.color = '#aaa';
+      document.querySelectorAll('#subtitleList .sub-view').forEach(function (v) { v.style.display = 'none'; });
+      document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'inline-flex'; });
+      bar.style.display = 'flex';
+      resultEl.textContent = '';
+      updateCount();
+      document.querySelectorAll('#subtitleList .sub-speaker-input, #subtitleList .sub-text-input').forEach(function (inp) {
+        inp.addEventListener('input', updateCount);
+      });
+    }
+
+    function exitEditMode() {
+      editMode = false;
+      editToggleBtn.textContent = '\u270F\uFE0F Suggest edits';
+      editToggleBtn.style.borderColor = 'lavender';
+      editToggleBtn.style.color = 'lavender';
+      document.querySelectorAll('#subtitleList .sub-view').forEach(function (v) { v.style.display = ''; });
+      document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'none'; });
+      bar.style.display = 'none';
+    }
+
+    editToggleBtn.addEventListener('click', function () {
+      if (editMode) { exitEditMode(); } else { enterEditMode(); }
+    });
+
+    cancelBtn.addEventListener('click', exitEditMode);
+
+    // Clean up bar when the user soft-navigates to another track
+    document.addEventListener('soft-nav', function () {
+      const b = document.getElementById('suggest-edit-bar');
+      if (b) b.remove();
+    }, { once: true });
+
+    submitBtn.addEventListener('click', async function () {
+      const edits = getEdits();
+      if (edits.length === 0) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting\u2026';
+      resultEl.textContent = '';
+      resultEl.style.color = 'lavender';
+      const note = noteInput.value.trim();
+      try {
+        const res = await fetch('/.netlify/functions/suggest-edit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            edit_type: 'TrackLine',
+            album_slug: albumSlug,
+            track_slug: trackSlug,
+            edits: edits,
+            note: note || undefined,
+            _hp: '',
+          }),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          resultEl.style.color = 'greenyellow';
+          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;">PR #' + data.pr_number + '</a>';
+          exitEditMode();
+          editToggleBtn.style.display = 'none';
+          bar.style.display = 'flex';
+        } else {
+          resultEl.style.color = '#ff6b6b';
+          resultEl.textContent = 'Error: ' + (data.error || 'Unknown error');
+        }
+      } catch (err) {
+        resultEl.style.color = '#ff6b6b';
+        resultEl.textContent = 'Network error. Please try again.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit suggestions';
+        bar.style.display = 'flex';
+      }
+    });
+  })();
 
   // ---- Karaoke highlight ----
   // Build subtitle timing data from the now-rendered DOM, then expose startKaraokeCallback
