@@ -237,15 +237,22 @@ hide_from_nav: true
 
     if (window.lpcPlayer && window.lpcPlayer.isLoaded()) {
       const matchingUrl = window.fileMap[relevantUrl];
-      if (matchingUrl) applyTrackAudio(matchingUrl);
+      if (matchingUrl) {
+        applyTrackAudio(matchingUrl);
+        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+      }
     }
     // Load when directory is selected/granted for the first time
     document.addEventListener('lpc-loaded', function () {
       const matchingUrl = window.fileMap[relevantUrl];
-      if (matchingUrl) applyTrackAudio(matchingUrl);
+      if (matchingUrl) {
+        applyTrackAudio(matchingUrl);
+        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+      }
     }, { once: true });
     document.addEventListener('lpc-permission-granted', async function () {
-      await window.lpcPlayer.loadTrack(albumUsbDir, usbFilename);
+      const ok = await window.lpcPlayer.loadTrack(albumUsbDir, usbFilename);
+      if (ok) window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
     }, { once: true });
   }
   initTrackAudio();
