@@ -181,7 +181,7 @@
 (async function () {
   const BASE_URL = '/wallace-thrasher';
   const JEKYLL_ENV = 'development';
-  const BUILD_TIMESTAMP = '1775651861';
+  const BUILD_TIMESTAMP = '1775654349';
   const GITHUB_CLIENT_ID = 'Ov23liG9lBhvOqyOOSj2';
 
   const params = new URLSearchParams(window.location.search);
@@ -674,7 +674,7 @@
         const data = await res.json();
         if (data.ok) {
           resultEl.style.color = 'greenyellow';
-          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;">PR #' + data.pr_number + '</a>';
+          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;text-decoration:underline;font-weight:bold;">PR #' + data.pr_number + ' 🔗</a>';
           exitEditMode();
           editToggleBtn.style.display = 'none';
           bar.style.display = 'flex';
@@ -859,7 +859,7 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            4/8/26, 8:37:41 AM EDT
+            4/8/26, 9:19:09 AM EDT
           
         </div>
         <!-- Discord server link -->
