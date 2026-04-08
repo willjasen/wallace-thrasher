@@ -15,7 +15,7 @@ const REPO_OWNER = 'willjasen';
 const REPO_NAME  = 'wallace-thrasher';
 const BASE_BRANCH = 'main';
 
-const VALID_EDIT_TYPES = ['Speaker', 'Subtitle', 'TrackLine', 'Alias', 'Establishment'];
+const VALID_EDIT_TYPES = ['Speaker', 'Subtitle', 'Track', 'Alias', 'Establishment'];
 
 // Only lowercase letters, digits, and hyphens — prevents path traversal in file paths.
 const SLUG_RE    = /^[a-z0-9-]{1,100}$/;
@@ -179,10 +179,10 @@ exports.handler = async (event) => {
         }
       }
     }
-  } else if (edit_type === 'TrackLine') {
+  } else if (edit_type === 'Track') {
     // edits is an array of { index, speaker?, text? } — patches both fields in one commit
     if (!Array.isArray(edits) || edits.length === 0 || edits.length > 500) {
-      return jsonResponse(400, { error: 'edits must be a non-empty array (max 500 items) for TrackLine edits' });
+      return jsonResponse(400, { error: 'edits must be a non-empty array (max 500 items) for Track edits' });
     }
     const seenIndexes = new Set();
     for (const edit of edits) {
@@ -263,11 +263,11 @@ exports.handler = async (event) => {
       return jsonResponse(503, { error: 'Your fork is still initialising — please try submitting again in a few seconds.' });
     }
 
-    const editCount = (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'TrackLine') ? edits.length : null;
+    const editCount = (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'Track') ? edits.length : null;
 
     // 3. Fetch the file, apply the change, and re-encode
     let filePath, newContentB64, currentSha;
-    let oldValues = new Map();  // per-index old values for Speaker/Subtitle/TrackLine
+    let oldValues = new Map();  // per-index old values for Speaker/Subtitle/Track
     let oldMetaValue = null;    // old value for Alias/Establishment
 
     if (edit_type === 'Speaker' || edit_type === 'Subtitle') {
@@ -298,7 +298,7 @@ exports.handler = async (event) => {
 
       newContentB64 = Buffer.from(JSON.stringify(lines, null, 2) + '\n').toString('base64');
 
-    } else if (edit_type === 'TrackLine') {
+    } else if (edit_type === 'Track') {
       filePath = `jekyll/assets/json/${album_slug}/${track_slug}.json`;
 
       const tlFileData = await githubFetch(
@@ -364,8 +364,8 @@ exports.handler = async (event) => {
       `**Track:** \`${track_slug}\``,
       `**Suggested by:** [@${attributedTo}](https://github.com/${attributedTo})`,
     ];
-    if (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'TrackLine') {
-      if (edit_type === 'TrackLine') {
+    if (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'Track') {
+      if (edit_type === 'Track') {
         prBodyLines.push(
           `**Changes (${edits.length} line${edits.length !== 1 ? 's' : ''}):**`,
           '',
