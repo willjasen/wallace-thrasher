@@ -59,11 +59,60 @@ hide_from_nav: true
   const BASE_URL = '{{ site.baseurl }}';
   const JEKYLL_ENV = '{{ jekyll.environment }}';
   const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
+  const GITHUB_CLIENT_ID = '{{ site.github_client_id }}';
 
   const params = new URLSearchParams(window.location.search);
   const albumSlug = params.get('album');
   const trackSlug = params.get('track');
   const container = document.getElementById('track-content');
+
+  // ---- GitHub OAuth identity helpers ----
+  // Parse a fresh identity from the URL fragment (returned by github-oauth-callback).
+  let autoEnterEditMode = false;
+  (function parseIdentityFragment() {
+    const hash = window.location.hash;
+    const idMatch    = hash.match(/[#&]wt-identity=([^&]+)/);
+    const errMatch   = hash.match(/[#&]wt-auth-error=([^&]+)/);
+    if (idMatch) {
+      try {
+        const identity = JSON.parse(decodeURIComponent(idMatch[1]));
+        if (identity.exp > Date.now()) {
+          sessionStorage.setItem('wt-identity', JSON.stringify(identity));
+          autoEnterEditMode = true;
+        }
+      } catch { /* ignore malformed token */ }
+    } else if (errMatch) {
+      console.warn('GitHub OAuth error:', decodeURIComponent(errMatch[1]));
+    }
+    // Clean the fragment from the URL regardless.
+    if (idMatch || errMatch) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  })();
+
+  function getStoredIdentity() {
+    try {
+      const stored = sessionStorage.getItem('wt-identity');
+      if (!stored) return null;
+      const identity = JSON.parse(stored);
+      if (identity.exp < Date.now()) {
+        sessionStorage.removeItem('wt-identity');
+        return null;
+      }
+      return identity;
+    } catch { return null; }
+  }
+
+  function startGitHubOAuth() {
+    const state = encodeURIComponent(JSON.stringify({
+      returnUrl: window.location.pathname + window.location.search,
+    }));
+    window.location.href =
+      'https://github.com/login/oauth/authorize' +
+      '?client_id=' + encodeURIComponent(GITHUB_CLIENT_ID) +
+      '&scope=public_repo' +
+      '&state=' + state;
+  }
 
   if (!albumSlug || !trackSlug) {
     container.innerHTML = '<p style="text-align: center;">No track specified. <a href="' + BASE_URL + '/albums/">Browse albums</a></p>';
@@ -346,6 +395,9 @@ hide_from_nav: true
     });
     const barTop = el('div', { style: 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;width:100%;' });
 
+    // Identity indicator — shows avatar + username when signed in
+    const identityEl = el('div', { style: 'display:flex;align-items:center;gap:6px;font-size:0.85em;color:lavender;white-space:nowrap;' });
+
     const changeCountEl = el('span', { style: 'color:lavender;font-size:0.85em;white-space:nowrap;' });
     changeCountEl.textContent = '0 changes';
 
@@ -369,6 +421,7 @@ hide_from_nav: true
 
     const resultEl = el('div', { style: 'font-size:0.85em;text-align:center;' });
 
+    barTop.appendChild(identityEl);
     barTop.appendChild(changeCountEl);
     barTop.appendChild(noteInput);
     barTop.appendChild(submitBtn);
@@ -376,6 +429,33 @@ hide_from_nav: true
     bar.appendChild(barTop);
     bar.appendChild(resultEl);
     document.body.appendChild(bar);
+
+    function renderIdentityEl(identity) {
+      identityEl.innerHTML = '';
+      if (identity) {
+        const img = el('img', {
+          src: identity.avatar_url,
+          alt: identity.login,
+          width: '20', height: '20',
+          style: 'border-radius:50%;vertical-align:middle;',
+        });
+        identityEl.appendChild(img);
+        identityEl.appendChild(document.createTextNode(' @' + identity.login));
+        const signOut = el('button', {
+          style: 'background:none;border:none;color:#888;cursor:pointer;font-size:0.8em;padding:0 2px;',
+          title: 'Sign out',
+        });
+        signOut.textContent = '\u00D7';
+        signOut.addEventListener('click', function () {
+          sessionStorage.removeItem('wt-identity');
+          exitEditMode();
+          renderIdentityEl(null);
+        });
+        identityEl.appendChild(signOut);
+      } else {
+        identityEl.textContent = '';
+      }
+    }
 
     function getEdits() {
       const edits = [];
@@ -402,7 +482,15 @@ hide_from_nav: true
     }
 
     function enterEditMode() {
+      const identity = getStoredIdentity();
+      if (!identity) {
+        // Not signed in — kick off OAuth, which will return to this page and
+        // set autoEnterEditMode so we enter edit mode on return.
+        startGitHubOAuth();
+        return;
+      }
       editMode = true;
+      renderIdentityEl(identity);
       editToggleBtn.textContent = '\u2715 Exit edit mode';
       editToggleBtn.style.borderColor = '#666';
       editToggleBtn.style.color = '#aaa';
@@ -456,6 +544,7 @@ hide_from_nav: true
             track_slug: trackSlug,
             edits: edits,
             note: note || undefined,
+            auth: getStoredIdentity() || undefined,
             _hp: '',
           }),
         });
@@ -479,6 +568,9 @@ hide_from_nav: true
         bar.style.display = 'flex';
       }
     });
+
+    // Auto-enter edit mode if we just returned from GitHub OAuth.
+    if (autoEnterEditMode) enterEditMode();
   })();
 
   // ---- Karaoke highlight ----

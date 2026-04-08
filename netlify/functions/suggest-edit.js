@@ -1,11 +1,15 @@
 // Netlify Function: suggest-edit
-// Accepts a community suggestion and opens a GitHub PR with the proposed change.
+// Accepts a community suggestion, forks the repo under the contributor's GitHub
+// account, and opens a PR from their fork — so the PR appears as coming from them.
 //
-// Required environment variable (set in Netlify dashboard):
-//   GITHUB_TOKEN — a fine-grained PAT with `contents: write` and `pull-requests: write`
-//                  scoped to the willjasen/wallace-thrasher repository only.
+// Required environment variables (set in Netlify dashboard + .env):
+//   GITHUB_OAUTH_SECRET — shared secret for verifying and decrypting contributor
+//                         identity tokens minted by github-oauth-callback.
+//                         (No GITHUB_TOKEN needed — contributors supply their own token.)
 
 'use strict';
+
+const crypto = require('crypto');
 
 const REPO_OWNER = 'willjasen';
 const REPO_NAME  = 'wallace-thrasher';
@@ -22,6 +26,42 @@ const SPEAKER_RE = /^[A-Za-z0-9_ -]{1,60}$/;
 // Helpers
 // ---------------------------------------------------------------------------
 
+// Derives separate signing and encryption keys from GITHUB_OAUTH_SECRET via HKDF-SHA256.
+// Must match the derivation in github-oauth-callback.js exactly.
+function deriveKeys(secret) {
+  const ikm  = Buffer.from(secret, 'utf8');
+  const salt = Buffer.from('wt-oauth-v1', 'utf8');
+  return {
+    sigKey: Buffer.from(crypto.hkdfSync('sha256', ikm, salt, Buffer.from('sign'),    32)),
+    encKey: Buffer.from(crypto.hkdfSync('sha256', ikm, salt, Buffer.from('encrypt'), 32)),
+  };
+}
+
+// Verifies a signed identity token minted by github-oauth-callback.
+// The HMAC covers the full payload (login, exp, jti, token_enc) so no
+// field can be tampered with without invalidating the signature.
+// Returns the GitHub login string on success, or null if invalid/expired.
+function verifyIdentity(auth) {
+  if (!auth || !auth.login || !auth.exp || !auth.jti || !auth.sig || !auth.token_enc) return null;
+  if (Date.now() > auth.exp) return null;
+  const secret = process.env.GITHUB_OAUTH_SECRET;
+  if (!secret) return null;
+  try {
+    const { sigKey } = deriveKeys(secret);
+    const expected = crypto
+      .createHmac('sha256', sigKey)
+      .update(`${auth.login}|${auth.exp}|${auth.jti}|${auth.token_enc}`)
+      .digest('hex');
+    const sigBuf = Buffer.from(auth.sig,  'hex');
+    const expBuf = Buffer.from(expected, 'hex');
+    if (sigBuf.length !== expBuf.length) return null;
+    if (!crypto.timingSafeEqual(sigBuf, expBuf)) return null;
+    return String(auth.login);
+  } catch {
+    return null;
+  }
+}
+
 function jsonResponse(statusCode, data) {
   return {
     statusCode,
@@ -30,9 +70,9 @@ function jsonResponse(statusCode, data) {
   };
 }
 
-async function githubFetch(method, path, token, body) {
+async function githubFetch(method, path, token, body, owner, repo) {
   const res = await fetch(
-    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${path}`,
+    `https://api.github.com/repos/${owner || REPO_OWNER}/${repo || REPO_NAME}${path}`,
     {
       method,
       headers: {
@@ -54,6 +94,29 @@ async function githubFetch(method, path, token, body) {
   return res.json();
 }
 
+// Decrypts the contributor's GitHub OAuth access token from the identity payload.
+// Uses the encryption key derived via HKDF — separate from the signing key.
+function decryptContributorToken(auth) {
+  if (!auth || !auth.token_enc) return null;
+  const secret = process.env.GITHUB_OAUTH_SECRET;
+  if (!secret) return null;
+  try {
+    const { encKey } = deriveKeys(secret);
+    const [ivHex, encHex, tagHex] = String(auth.token_enc).split(':');
+    if (!ivHex || !encHex || !tagHex) return null;
+    const iv       = Buffer.from(ivHex,  'hex');
+    const enc      = Buffer.from(encHex, 'hex');
+    const tag      = Buffer.from(tagHex, 'hex');
+    const decipher = crypto.createDecipheriv('aes-256-gcm', encKey, iv);
+    decipher.setAuthTag(tag);
+    return Buffer.concat([decipher.update(enc), decipher.final()]).toString('utf8');
+  } catch { return null; }
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // ---------------------------------------------------------------------------
 // Handler
 // ---------------------------------------------------------------------------
@@ -71,7 +134,7 @@ exports.handler = async (event) => {
     return jsonResponse(400, { error: 'Invalid JSON body' });
   }
 
-  const { edit_type, album_slug, track_slug, edits, new_value, note, _hp } = body;
+  const { edit_type, album_slug, track_slug, edits, new_value, note, auth, _hp } = body;
 
   // Honeypot: bots tend to fill hidden fields; humans don't.
   if (_hp) {
@@ -152,28 +215,53 @@ exports.handler = async (event) => {
     }
   }
 
+  // --- Require GitHub authentication ---
+  // Contributors must sign in so the PR is opened from their fork and appears as theirs.
+  if (!auth) {
+    return jsonResponse(401, { error: 'Please sign in with GitHub to submit a suggestion.' });
+  }
+  const attributedTo = verifyIdentity(auth);
+  if (!attributedTo) {
+    return jsonResponse(401, { error: 'Your session has expired. Please sign in again.' });
+  }
+  const contributorToken = decryptContributorToken(auth);
+  if (!contributorToken) {
+    return jsonResponse(401, { error: 'Unable to verify your session. Please sign in again.' });
+  }
+
   // Sanitise the optional note
   const sanitisedNote = note ? String(note).slice(0, 500) : null;
 
-  // --- Check token ---
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    console.error('GITHUB_TOKEN environment variable is not set');
-    return jsonResponse(500, { error: 'Server configuration error' });
-  }
-
-  // --- GitHub operations ---
+  // --- GitHub operations (contributor's token does all the work) ---
   try {
-    // 1. Resolve the base branch SHA
-    const baseRef = await githubFetch('GET', `/git/ref/heads/${BASE_BRANCH}`, token);
+    // 1. Fork the upstream repo under the contributor's account (idempotent —
+    //    returns the existing fork if one already exists).
+    const fork = await githubFetch('POST', '/forks', contributorToken, { default_branch_only: true });
+    const forkOwner = fork.owner.login;
+    const forkRepo  = fork.name;
+
+    // 2. Resolve the base branch SHA from the upstream repo.
+    const baseRef = await githubFetch('GET', `/git/ref/heads/${BASE_BRANCH}`, contributorToken);
     const baseSha = baseRef.object.sha;
 
-    // 2. Create a unique branch for this suggestion
+    // 3. Create a unique branch on the fork (retry while the fork finishes initialising).
     const branchName = `suggest/${edit_type.toLowerCase()}-${album_slug}-${track_slug}-${Date.now()}`;
-    await githubFetch('POST', '/git/refs', token, {
-      ref: `refs/heads/${branchName}`,
-      sha: baseSha,
-    });
+    let branchCreated = false;
+    for (let attempt = 0; attempt < 5; attempt++) {
+      try {
+        await githubFetch('POST', '/git/refs', contributorToken, {
+          ref: `refs/heads/${branchName}`,
+          sha: baseSha,
+        }, forkOwner, forkRepo);
+        branchCreated = true;
+        break;
+      } catch {
+        if (attempt < 4) await sleep(1500);
+      }
+    }
+    if (!branchCreated) {
+      return jsonResponse(503, { error: 'Your fork is still initialising — please try submitting again in a few seconds.' });
+    }
 
     const editCount = (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'TrackLine') ? edits.length : null;
 
@@ -183,10 +271,11 @@ exports.handler = async (event) => {
     if (edit_type === 'Speaker' || edit_type === 'Subtitle') {
       filePath = `jekyll/assets/json/${album_slug}/${track_slug}.json`;
 
+      // Fetch from upstream — fork mirrors it at baseSha, blob SHAs are identical.
       const fileData = await githubFetch(
         'GET',
-        `/contents/${filePath}?ref=${encodeURIComponent(branchName)}`,
-        token
+        `/contents/${filePath}?ref=${encodeURIComponent(BASE_BRANCH)}`,
+        contributorToken
       );
       currentSha = fileData.sha;
 
@@ -210,8 +299,8 @@ exports.handler = async (event) => {
 
       const tlFileData = await githubFetch(
         'GET',
-        `/contents/${filePath}?ref=${encodeURIComponent(branchName)}`,
-        token
+        `/contents/${filePath}?ref=${encodeURIComponent(BASE_BRANCH)}`,
+        contributorToken
       );
       currentSha = tlFileData.sha;
 
@@ -233,8 +322,8 @@ exports.handler = async (event) => {
 
       const fileData = await githubFetch(
         'GET',
-        `/contents/${filePath}?ref=${encodeURIComponent(branchName)}`,
-        token
+        `/contents/${filePath}?ref=${encodeURIComponent(BASE_BRANCH)}`,
+        contributorToken
       );
       currentSha = fileData.sha;
 
@@ -254,19 +343,20 @@ exports.handler = async (event) => {
       newContentB64 = Buffer.from(JSON.stringify(data, null, 2) + '\n').toString('base64');
     }
 
-    // 4. Commit the patched file to the branch
-    await githubFetch('PUT', `/contents/${filePath}`, token, {
+    // 4. Commit the patched file to the fork's branch.
+    await githubFetch('PUT', `/contents/${filePath}`, contributorToken, {
       message: `[suggestion] ${edit_type.toLowerCase()} edit${editCount !== null ? ` (${editCount} lines)` : ''}: ${track_slug} (${album_slug})`,
       content: newContentB64,
       sha:     currentSha,
       branch:  branchName,
-    });
+    }, forkOwner, forkRepo);
 
     // 5. Open a pull request
     const prBodyLines = [
       `**Edit type:** ${edit_type}`,
       `**Album:** \`${album_slug}\``,
       `**Track:** \`${track_slug}\``,
+      `**Suggested by:** [@${attributedTo}](https://github.com/${attributedTo})`,
     ];
     if (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'TrackLine') {
       if (edit_type === 'TrackLine') {
@@ -299,10 +389,12 @@ exports.handler = async (event) => {
     }
     prBodyLines.push('', '_Opened automatically via the community suggestion form._');
 
-    const pr = await githubFetch('POST', '/pulls', token, {
+    // 5. Open the PR on the upstream repo using the contributor's token.
+    //    head uses forkOwner:branchName so the PR appears as opened by them.
+    const pr = await githubFetch('POST', '/pulls', contributorToken, {
       title: `[Suggestion] ${edit_type}: ${track_slug} (${album_slug})${editCount !== null ? ` — ${editCount} line${editCount !== 1 ? 's' : ''}` : ''}`,
       body:  prBodyLines.join('\n'),
-      head:  branchName,
+      head:  `${forkOwner}:${branchName}`,
       base:  BASE_BRANCH,
     });
 
