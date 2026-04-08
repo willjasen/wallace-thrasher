@@ -14,6 +14,7 @@ published: true
  - center the search box on associated pages
  - stop `jekyll serve` from constant rebuilding
  - specify `netlify.toml` for build settings at netlify
+ - improvements to the content security policy for Netlify
 
 ---
 
