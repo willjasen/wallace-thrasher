@@ -6,6 +6,18 @@
 [build.environment]
   BUNDLE_PATH = "vendor/bundle"
 
+[functions]
+  directory = "../netlify/functions"
+  node_bundler = "esbuild"
+
+[dev]
+  # netlify dev proxies the already-running Jekyll dev server and adds the
+  # functions runtime. Start Jekyll first (in another terminal), then run
+  # `npm run dev` from the repo root.
+  targetPort  = 4000
+  port        = 8888
+  autoLaunch  = false
+
 [context.main.environment]
   JEKYLL_ENV = "production"
 
@@ -21,7 +33,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://img.shields.io https://api.netlify.com; connect-src 'self' https://api.github.com https://www.google-analytics.com https://stats.g.doubleclick.net https://cloudflareinsights.com; media-src 'self' blob:; font-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://github.com https://img.shields.io https://api.netlify.com https://avatars.githubusercontent.com; connect-src 'self' https://api.github.com https://www.google-analytics.com https://stats.g.doubleclick.net https://cloudflareinsights.com; media-src 'self' blob:; font-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
