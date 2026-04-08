@@ -325,6 +325,13 @@ hide_from_nav: true
       amPanel.style.display = amPanel.style.display === 'flex' ? 'none' : 'flex';
     });
 
+    document.addEventListener('soft-nav', function removeFabOnNav() {
+      var fab = document.getElementById('appleMusicFab');
+      var panel = document.getElementById('appleMusicFabPanel');
+      if (fab) fab.remove();
+      if (panel) panel.remove();
+    }, { once: true });
+
     document.body.appendChild(amPanel);
     document.body.appendChild(amFab);
   }
