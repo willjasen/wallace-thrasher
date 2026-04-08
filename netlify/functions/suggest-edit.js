@@ -385,7 +385,7 @@ exports.handler = async (event) => {
       );
     }
     if (sanitisedNote) {
-      prBodyLines.push(`**Contributor note:** ${sanitisedNote}`);
+      prBodyLines.push('', `**Contributor note:** ${sanitisedNote}`);
     }
     prBodyLines.push('', '_Opened automatically via the community suggestion form._');
 
