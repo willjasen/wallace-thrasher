@@ -173,20 +173,6 @@ hide_from_nav: true
     }
   }
 
-  // ---- Apple Music embed ----
-  if (track.Apple_Music_Link) {
-    const amH5 = el('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 40px;' });
-    amH5.appendChild(el('iframe', {
-      allow: 'autoplay *; encrypted-media *; fullscreen *; clipboard-write',
-      frameborder: '0',
-      height: '175',
-      style: 'width:100%;max-width:500px;overflow:hidden;border-radius:10px;',
-      sandbox: 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation',
-      src: track.Apple_Music_Link
-    }));
-    frag.appendChild(amH5);
-  }
-
   frag.appendChild(hr());
 
   // ---- Aliases / Establishments / Deliveries ----
@@ -282,6 +268,66 @@ hide_from_nav: true
   // Replace loading indicator with rendered content
   container.innerHTML = '';
   container.appendChild(frag);
+
+  // ---- Apple Music FAB ----
+  // Clean up any FAB left from a previous track navigation
+  ['appleMusicFab', 'appleMusicFabPanel'].forEach(function (id) {
+    var existing = document.getElementById(id);
+    if (existing) existing.remove();
+  });
+
+  if (track.Apple_Music_Link) {
+    if (!document.getElementById('appleMusicFabStyle')) {
+      var amStyle = document.createElement('style');
+      amStyle.id = 'appleMusicFabStyle';
+      amStyle.textContent = [
+        '#appleMusicFab {',
+        '  position: fixed; bottom: 24px; left: 24px; z-index: 9000;',
+        '  height: 60px; min-width: 60px; border-radius: 30px;',
+        '  background: #fc3c44; border: 2px solid #ff6b6b;',
+        '  cursor: pointer; display: flex; flex-direction: row; align-items: center;',
+        '  justify-content: center; gap: 8px; padding: 0 18px;',
+        '  font-size: 28px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);',
+        '  transition: background 0.2s, box-shadow 0.2s; line-height: 1;',
+        '}',
+        '#appleMusicFab:hover { background: #ff5a5a; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }',
+        '#appleMusicFabPanel {',
+        '  position: fixed; bottom: 102px; left: 24px; z-index: 8999;',
+        '  background: #1e1e3a; border: 1px solid #ff6b6b;',
+        '  border-radius: 14px; padding: 16px 18px;',
+        '  box-shadow: 0 8px 28px rgba(0,0,0,0.6);',
+        '  display: none; flex-direction: column; align-items: center;',
+        '  min-width: 320px; gap: 10px;',
+        '}'
+      ].join('\n');
+      document.head.appendChild(amStyle);
+    }
+
+    var amFab = document.createElement('button');
+    amFab.id = 'appleMusicFab';
+    amFab.title = 'Listen on Apple Music';
+    amFab.setAttribute('aria-label', 'Listen on Apple Music');
+    amFab.textContent = '\uD83C\uDFB5';
+
+    var amPanel = document.createElement('div');
+    amPanel.id = 'appleMusicFabPanel';
+
+    var amIframe = document.createElement('iframe');
+    amIframe.setAttribute('allow', 'autoplay *; encrypted-media *; fullscreen *; clipboard-write');
+    amIframe.setAttribute('frameborder', '0');
+    amIframe.setAttribute('height', '175');
+    amIframe.style.cssText = 'width:100%;max-width:500px;overflow:hidden;border-radius:10px;';
+    amIframe.setAttribute('sandbox', 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation');
+    amIframe.src = track.Apple_Music_Link;
+    amPanel.appendChild(amIframe);
+
+    amFab.addEventListener('click', function () {
+      amPanel.style.display = amPanel.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    document.body.appendChild(amPanel);
+    document.body.appendChild(amFab);
+  }
 
 })();
 </script>
