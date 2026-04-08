@@ -16,7 +16,7 @@ on:
 
 # Define environment variables for reuse
 env:
-  VERSION_TAG: ${{ github.event.inputs.tag || 'v1.8.0' }}
+  VERSION_TAG: ${{ github.event.inputs.tag || github.sha }}
   SUCCESS_COLOR: "\033[0;32m"
   FAILURE_COLOR: "\033[0;31m"
   WARNING_COLOR: "\033[0;33m"
@@ -30,9 +30,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the specific version tag when triggered by push to main
+      # Checkout the current commit when triggered by push to main,
       # or use the specified tag when manually triggered
-      - name: Checkout specific tag
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           ref: ${{ env.VERSION_TAG }}

@@ -15,7 +15,7 @@ const REPO_OWNER = 'willjasen';
 const REPO_NAME  = 'wallace-thrasher';
 const BASE_BRANCH = 'main';
 
-const VALID_EDIT_TYPES = ['Speaker', 'Subtitle', 'TrackLine', 'Alias', 'Establishment'];
+const VALID_EDIT_TYPES = ['Speaker', 'Subtitle', 'Track', 'Alias', 'Establishment'];
 
 // Only lowercase letters, digits, and hyphens — prevents path traversal in file paths.
 const SLUG_RE    = /^[a-z0-9-]{1,100}$/;
@@ -179,10 +179,10 @@ exports.handler = async (event) => {
         }
       }
     }
-  } else if (edit_type === 'TrackLine') {
+  } else if (edit_type === 'Track') {
     // edits is an array of { index, speaker?, text? } — patches both fields in one commit
     if (!Array.isArray(edits) || edits.length === 0 || edits.length > 500) {
-      return jsonResponse(400, { error: 'edits must be a non-empty array (max 500 items) for TrackLine edits' });
+      return jsonResponse(400, { error: 'edits must be a non-empty array (max 500 items) for Track edits' });
     }
     const seenIndexes = new Set();
     for (const edit of edits) {
@@ -263,10 +263,12 @@ exports.handler = async (event) => {
       return jsonResponse(503, { error: 'Your fork is still initialising — please try submitting again in a few seconds.' });
     }
 
-    const editCount = (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'TrackLine') ? edits.length : null;
+    const editCount = (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'Track') ? edits.length : null;
 
     // 3. Fetch the file, apply the change, and re-encode
     let filePath, newContentB64, currentSha;
+    let oldValues = new Map();  // per-index old values for Speaker/Subtitle/Track
+    let oldMetaValue = null;    // old value for Alias/Establishment
 
     if (edit_type === 'Speaker' || edit_type === 'Subtitle') {
       filePath = `jekyll/assets/json/${album_slug}/${track_slug}.json`;
@@ -286,15 +288,17 @@ exports.handler = async (event) => {
           return jsonResponse(400, { error: `No entry with Index ${edit.index} in ${filePath}` });
         }
         if (edit_type === 'Speaker') {
+          oldValues.set(edit.index, entry.Speaker);
           entry.Speaker = edit.new_value;
         } else {
+          oldValues.set(edit.index, entry.Text);
           entry.Text = edit.new_value;
         }
       }
 
       newContentB64 = Buffer.from(JSON.stringify(lines, null, 2) + '\n').toString('base64');
 
-    } else if (edit_type === 'TrackLine') {
+    } else if (edit_type === 'Track') {
       filePath = `jekyll/assets/json/${album_slug}/${track_slug}.json`;
 
       const tlFileData = await githubFetch(
@@ -310,6 +314,7 @@ exports.handler = async (event) => {
         if (!entry) {
           return jsonResponse(400, { error: `No entry with Index ${edit.index} in ${filePath}` });
         }
+        oldValues.set(edit.index, { speaker: entry.Speaker, text: entry.Text });
         if (edit.speaker !== undefined) entry.Speaker = edit.speaker;
         if (edit.text    !== undefined) entry.Text    = edit.text;
       }
@@ -338,6 +343,7 @@ exports.handler = async (event) => {
       }
 
       const key = edit_type === 'Alias' ? 'Aliases' : 'Establishments';
+      oldMetaValue = track[key] ? [...track[key]] : [];
       track[key] = new_value.map(s => s.trim());
 
       newContentB64 = Buffer.from(JSON.stringify(data, null, 2) + '\n').toString('base64');
@@ -355,37 +361,42 @@ exports.handler = async (event) => {
     const prBodyLines = [
       `**Edit type:** ${edit_type}`,
       `**Album:** \`${album_slug}\``,
-      `**Track:** \`${track_slug}\``,
+      `**Track:** [\`${track_slug}\`](https://github.com/${REPO_OWNER}/${REPO_NAME}/blob/${BASE_BRANCH}/jekyll/assets/json/${album_slug}/${track_slug}.json)`,
       `**Suggested by:** [@${attributedTo}](https://github.com/${attributedTo})`,
     ];
-    if (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'TrackLine') {
-      if (edit_type === 'TrackLine') {
+    if (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'Track') {
+      if (edit_type === 'Track') {
         prBodyLines.push(
           `**Changes (${edits.length} line${edits.length !== 1 ? 's' : ''}):**`,
           '',
-          '| Index | Speaker | Text |',
-          '|------:|---------|------|',
-          ...edits.map(e =>
-            `| ${e.index} | ${e.speaker !== undefined ? String(e.speaker).replace(/\|/g, '\\|') : '\u2014'} | ${e.text !== undefined ? String(e.text).replace(/\|/g, '\\|') : '\u2014'} |`
-          )
+          '| Index | Field | Before | After |',
+          '|------:|-------|--------|-------|',
+          ...edits.flatMap(e => {
+            const old = oldValues.get(e.index) || {};
+            const rows = [];
+            if (e.speaker !== undefined) rows.push(`| ${e.index} | Speaker | ${String(old.speaker ?? '').replace(/\|/g, '\\|')} | ${String(e.speaker).replace(/\|/g, '\\|')} |`);
+            if (e.text    !== undefined) rows.push(`| ${e.index} | Text | ${String(old.text ?? '').replace(/\|/g, '\\|')} | ${String(e.text).replace(/\|/g, '\\|')} |`);
+            return rows;
+          })
         );
       } else {
         const field = edit_type === 'Speaker' ? 'Speaker' : 'Text';
         prBodyLines.push(
           `**Changes (${edits.length} line${edits.length !== 1 ? 's' : ''}):**`,
           '',
-          `| Index | New ${field} |`,
-          `|------:|------------|`,
-          ...edits.map(e => `| ${e.index} | ${String(e.new_value).replace(/\|/g, '\\|')} |`)
+          `| Index | Old ${field} | New ${field} |`,
+          `|------:|------------|------------|`,
+          ...edits.map(e => `| ${e.index} | ${String(oldValues.get(e.index) ?? '').replace(/\|/g, '\\|')} | ${String(e.new_value).replace(/\|/g, '\\|')} |`)
         );
       }
     } else {
       prBodyLines.push(
+        `**Current value:**\n\`\`\`\n${JSON.stringify(oldMetaValue, null, 2)}\n\`\`\``,
         `**Proposed value:**\n\`\`\`\n${JSON.stringify(new_value, null, 2)}\n\`\`\``
       );
     }
     if (sanitisedNote) {
-      prBodyLines.push(`**Contributor note:** ${sanitisedNote}`);
+      prBodyLines.push('', `**Contributor note:** ${sanitisedNote}`);
     }
     prBodyLines.push('', '_Opened automatically via the community suggestion form._');
 
