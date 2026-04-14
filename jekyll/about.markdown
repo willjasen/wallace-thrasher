@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
+a website project involving the works of [longmont potion castle](https://en.wikipedia.org/wiki/Longmont_Potion_Castle) - you can call me stretchie
 
 ### 🧭 Overview 🧭
 
