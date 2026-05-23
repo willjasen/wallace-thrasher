@@ -25,7 +25,7 @@ there are four main features of various interests implemented:
 
 ### 📘 Backstory 📘
 
-some time ago, i wanted to know one question - how many calls does [alex trebek](/alex-trebek) show up in throughout the discography of lpc?
+some time ago, i wanted to know one question - how many calls does [alex trebek](https://stretchie.net/alex-trebek/) show up in throughout the discography of lpc?
 
 there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that have detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
