@@ -8,7 +8,7 @@ published: true
 
 MAJOR CHANGES TO SOFTWARE LICENSING
 
- - the JSON data at `/assets/json` is now licensed with CC-BY-SA 3.0
+ - the JSON data at [`/assets/json`](https://github.com/willjasen/wallace-thrasher/tree/main/jekyll/assets/json){:target="_blank"} is now licensed with CC-BY-SA 3.0
  - the rest of the source code remains under the GPLv3 license
 
 data
