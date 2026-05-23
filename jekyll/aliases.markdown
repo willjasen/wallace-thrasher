@@ -4,6 +4,7 @@ title: Aliases
 permalink: /aliases/
 published: true
 search_page: true
+search_menu: true
 ---
 
 <div class="search-flex-row">

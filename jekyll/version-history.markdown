@@ -8,19 +8,28 @@ published: true
 
 MAJOR CHANGES TO SOFTWARE LICENSING
 
- - the JSON data at `/assets/json` is now licensed with CC-BY-SA 3.0
+ - the JSON data at [`/assets/json`](https://github.com/willjasen/wallace-thrasher/tree/main/jekyll/assets/json){:target="_blank"} is now licensed with CC-BY-SA 3.0
  - the rest of the source code remains under the GPLv3 license
 
-other notes
+data
 
  - prefetch and index data on every page, if needed
- - remove the need for YML data files
+ - remove the need for YAML data files
+
+features
+
  - move the LPC USB feature into a floating action button
  - the LPC USB feature now persists across page navigations
+
+appearance
+
  - add a table of contents for the About and Version History pages
  - center the search box on associated pages
+
+other
+
  - stop `jekyll serve` from constant rebuilding
- - specify `netlify.toml` for build settings at netlify
+ - specify [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml){:target="_blank"} for build settings at netlify
  - improvements to the content security policy for Netlify
  - implement editing feature via GitHub OAuth
 

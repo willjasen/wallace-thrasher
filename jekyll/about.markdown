@@ -4,11 +4,13 @@ title: About
 permalink: /about/
 ---
 
-a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
+a website project involving the works of [longmont potion castle](https://en.wikipedia.org/wiki/Longmont_Potion_Castle) - you can call me stretchie
 
 ### 🧭 Overview 🧭
 
 this website allows for searching through subtitles and speakers within the longmont potion castle discography.
+
+for help on how to use the web app, refer to the [instructions]({{ site.baseurl }}/instructions) page.
 
 this website can currently be viewed at:
 
@@ -29,27 +31,17 @@ there are four main features of various interests implemented:
 
 some time ago, i wanted to know one question - how many calls does [alex trebek]({{ site.baseurl }}/alex-trebek) show up in throughout the discography of lpc?
 
-there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
+there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that have detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
 ### 🫡 A Pledge 🫡
 
 when i began the venture of creating this magnificent package, i pledged that i would not monetize the website, and i still have no intentions of doing so. i created this as an effort of love for the works involved here and as a challenge to myself. it is the best homage that i can contribute to this little weird corner of the universe.
 
-### 🔎 Searching 🔎
-
-as of v1.4.0, the search feature uses a logical 'and' when operating, instead of a logical 'or'. this change in behavior affects when multiple words are searched. before, the search would return any subtitles containing any word that was entered. now, the search will only return subtitles that contain all words being searched.
-
-for example, a search term of "cheese pizza" previously return 134 results - all subtitles containing either the word "cheese" or "pizza". now, the same search of "cheese pizza" returns 7 results - all subtitles containing both the words "cheese" and "pizza".
-
-note that results returned are not based on phrase matching. for example, a subtitle of "i want a cheese pizza" will be returned, but so will "i would like cheese on my pizza". due to limitations of [lunr.js](https://lunrjs.com/), phrase matching is not possible.
-
-also note that the ordering of the words does not matter, so a search for "cheese pizza" and for "pizza cheese" will return the same results.
-
 ### ⚙️ Components ⚙️
 
 this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper-webui is utilized to analyze the audio tracks and have it output subtitles (what is spoken) that include speaker diarization (determining who says what), which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`data.combined.json`).
 
-because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser.
+because the website is static, there is no server-end processing that occurs when searching - it runs locally within the browser.
 
 ### ↪️ Converting Tracks to Subtitles ↪️
 
