@@ -29,7 +29,7 @@ appearance
 other
 
  - stop `jekyll serve` from constant rebuilding
- - specify `netlify.toml` for build settings at netlify
+ - specify [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml){:target="_blank"} for build settings at netlify
  - improvements to the content security policy for Netlify
  - implement editing feature via GitHub OAuth
 
