@@ -75,6 +75,12 @@
   transform: translateY(0);
 }
 
+.nav-dropdown.closing:hover .dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+}
+
 .dropdown-menu li {
   display: block;
   margin: 0;
