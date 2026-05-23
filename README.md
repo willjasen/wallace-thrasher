@@ -39,7 +39,7 @@ when i began the venture of creating this magnificent package, i pledged that i 
 
 this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper-webui is utilized to analyze the audio tracks and have it output subtitles (what is spoken) that include speaker diarization (determining who says what), which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`data.combined.json`).
 
-because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser.
+because the website is static, there is no server-end processing that occurs when searching - it runs locally within the browser.
 
 ### ↪️ Converting Tracks to Subtitles ↪️
 
