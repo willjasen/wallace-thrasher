@@ -7,7 +7,7 @@ published: true
 
 ### 🧭 Search Pages 🧭
 
-there are four pages that utilize the search feature, found under the Search menu option at the top:
+there are four pages that utilize the search feature, found under the Search menu option:
 
 the "[Aliases]({{ site.baseurl }}/aliases)" page enables for searching through the aliases and nicknames that LPC uses when calling others. in your case - you can call me stretchie. the page also displays all aliases used throughout the discography.
 
