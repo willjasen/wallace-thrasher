@@ -26,6 +26,7 @@ appearance
  - create a Search hover menu and move the pages that use search under it
  - add a table of contents for the About and Version History pages
  - center the search box on associated pages
+ - fix the positioning of the hamburger menu icon within its box
 
 other
 
