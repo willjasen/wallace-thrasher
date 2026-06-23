@@ -52,6 +52,32 @@ hide_from_nav: true
     background-color: rgba(173, 255, 47, 0.15);
     border-left-color: greenyellow;
   }
+  #suggest-edit-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto 12px;
+    background: none;
+    border: 1px solid lavender;
+    color: lavender;
+    border-radius: 6px;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  #suggest-edit-toggle .github-identity {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 8px;
+    border-left: 1px solid currentColor;
+    font-weight: 600;
+  }
+  #suggest-edit-toggle .github-identity svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
 </style>
 
 <script>
@@ -324,9 +350,8 @@ hide_from_nav: true
   // "Suggest edits" toggle button — lets visitors edit speakers/subtitles inline
   const editToggleBtn = el('button', {
     id: 'suggest-edit-toggle',
-    style: 'display:block;margin:0 auto 12px;background:none;border:1px solid lavender;color:lavender;border-radius:6px;padding:5px 14px;cursor:pointer;font-size:0.85em;',
+    type: 'button',
   });
-  editToggleBtn.textContent = '\u270F\uFE0F Suggest edits';
   frag.appendChild(editToggleBtn);
 
   const subtitlesList = el('ul', { id: 'subtitleList', style: 'list-style-type: none; padding-left: 0; padding-bottom: 60px;' });
@@ -387,6 +412,36 @@ hide_from_nav: true
   // ---- Edit mode wiring ----
   (function () {
     let editMode = false;
+
+    function renderEditToggle() {
+      const identity = getStoredIdentity();
+      editToggleBtn.innerHTML = '';
+
+      const action = el('span');
+      action.textContent = editMode ? '\u2715 Exit edit mode' : '\u270F\uFE0F Suggest edits';
+      editToggleBtn.appendChild(action);
+
+      if (identity) {
+        const githubIdentity = el('span', {
+          class: 'github-identity',
+          title: 'Signed in with GitHub as ' + identity.login,
+        });
+        githubIdentity.innerHTML =
+          '<svg viewBox="0 0 16 16" aria-hidden="true">' +
+            '<path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.71.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.5-2.01.38-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.21-3.64-.91-3.64-4.02 0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.42 7.42 0 0 1 8 3.93c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19 0 3.12-1.87 3.81-3.65 4.02.29.25.54.74.54 1.51 0 1.09-.01 1.97-.01 2.24 0 .22.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z"></path>' +
+          '</svg>';
+        githubIdentity.appendChild(document.createTextNode(identity.login));
+        editToggleBtn.appendChild(githubIdentity);
+      }
+
+      editToggleBtn.setAttribute(
+        'aria-label',
+        (editMode ? 'Exit edit mode' : 'Suggest edits') +
+          (identity ? '; signed in with GitHub as ' + identity.login : '')
+      );
+    }
+
+    renderEditToggle();
 
     // Sticky submit bar — z-index 7000 keeps it below the audio/Apple Music FABs (9000)
     const bar = el('div', {
@@ -450,6 +505,7 @@ hide_from_nav: true
           sessionStorage.removeItem('wt-identity');
           exitEditMode();
           renderIdentityEl(null);
+          renderEditToggle();
         });
         identityEl.appendChild(signOut);
       } else {
@@ -491,9 +547,9 @@ hide_from_nav: true
       }
       editMode = true;
       renderIdentityEl(identity);
-      editToggleBtn.textContent = '\u2715 Exit edit mode';
       editToggleBtn.style.borderColor = '#666';
       editToggleBtn.style.color = '#aaa';
+      renderEditToggle();
       document.querySelectorAll('#subtitleList .sub-view').forEach(function (v) { v.style.display = 'none'; });
       document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'inline-flex'; });
       bar.style.display = 'flex';
@@ -506,9 +562,9 @@ hide_from_nav: true
 
     function exitEditMode() {
       editMode = false;
-      editToggleBtn.textContent = '\u270F\uFE0F Suggest edits';
       editToggleBtn.style.borderColor = 'lavender';
       editToggleBtn.style.color = 'lavender';
+      renderEditToggle();
       document.querySelectorAll('#subtitleList .sub-view').forEach(function (v) { v.style.display = ''; });
       document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'none'; });
       bar.style.display = 'none';
