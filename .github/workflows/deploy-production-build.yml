@@ -46,8 +46,9 @@ jobs:
       - name: Install dependencies
         run: |
           cd jekyll
-          gem install bundler
-          bundle install
+          BUNDLER_VERSION=$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xargs)
+          gem install bundler -v $BUNDLER_VERSION
+          bundle _${BUNDLER_VERSION}_ install
 
       # Build the Jekyll site with the baseurl set to ''
       - name: Build site for production
@@ -68,6 +69,11 @@ jobs:
       # Send a webhook upon completion
       - name: Send webhook notification
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published stretchie ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.WEBHOOK_URL }}
+
+      # Send a webhook to the Discord server upon completion
+      - name: Send webhook notification to Discord server
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "Published stretchie ${{ env.VERSION_TAG }} to the 'production-build' branch successfully!"}' ${{ secrets.DISCORD_SERVER_WEBHOOK_URL }}
 
 # END OF WORKFLOW
