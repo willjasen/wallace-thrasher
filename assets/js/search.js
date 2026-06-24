@@ -14,7 +14,7 @@ const BASE_URL = '/wallace-thrasher';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = 'false' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
-const BUILD_TIMESTAMP = '1782263857';
+const BUILD_TIMESTAMP = '1782265078';
 
 /*
     This function retrieves a JSON document from a given path
