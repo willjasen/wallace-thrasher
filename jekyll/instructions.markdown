@@ -31,7 +31,7 @@ also note that the ordering of the words does not matter, so a search for "chees
 
 ---
 
-### ✍️ Submit or Edit Subtitles and Speakers ✍️
+### ✍️ Edit Subtitles and Speakers ✍️
 
 to suggest a correction, open the relevant album, select the track you want to correct, and then select **Suggest edits** above its subtitles.
 
