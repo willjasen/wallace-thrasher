@@ -5,7 +5,7 @@ const BASE_URL = '';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = 'false' === 'true';
 console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
-const BUILD_TIMESTAMP = '1776959567';
+const BUILD_TIMESTAMP = '1782264049';
 
 /*
     This function retrieves a JSON document from a given path
