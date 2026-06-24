@@ -124,7 +124,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function createBranchOnFork(token, forkOwner, forkRepo, branchName, upstreamBaseSha) {
+async function createBranchOnFork(token, forkOwner, forkRepo, branchName) {
   let lastError;
 
   // New forks are created asynchronously, so wait until their base ref exists.
@@ -154,26 +154,6 @@ async function createBranchOnFork(token, forkOwner, forkRepo, branchName, upstre
   }
 
   if (lastError) throw lastError;
-
-  // Bring only the temporary suggestion branch up to date. Do not modify the
-  // contributor's main branch: it may be intentionally old or contain their
-  // own work.
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      await githubFetch('POST', '/merges', token, {
-        base: branchName,
-        // GitHub's merge endpoint accepts a branch in this repository or an
-        // exact commit SHA. A cross-repository "owner:branch" head is invalid.
-        head: upstreamBaseSha,
-      }, forkOwner, forkRepo);
-      return;
-    } catch (err) {
-      lastError = err;
-      if (attempt < 2) await sleep(1000);
-    }
-  }
-
-  throw lastError;
 }
 
 // ---------------------------------------------------------------------------
@@ -299,25 +279,12 @@ exports.handler = async (event) => {
     const forkOwner = fork.owner.login;
     const forkRepo  = fork.name;
 
-    // Resolve the exact upstream commit that the suggestion should target.
-    const upstreamBaseRef = await githubFetch(
-      'GET',
-      `/git/ref/heads/${BASE_BRANCH}`,
-      contributorToken
-    );
-    const upstreamBaseSha = upstreamBaseRef.object.sha;
-
-    // 2. Create a unique branch in the fork and bring that temporary branch
-    //    up to the exact upstream commit. Retry while new forks initialise.
+    // 2. Create a unique branch from the fork's existing main branch. We do
+    //    not synchronise the whole fork because that can pull workflow changes
+    //    requiring permissions unrelated to a transcript suggestion.
     const branchName = `suggest/${edit_type.toLowerCase()}-${album_slug}-${track_slug}-${Date.now()}`;
     try {
-      await createBranchOnFork(
-        contributorToken,
-        forkOwner,
-        forkRepo,
-        branchName,
-        upstreamBaseSha
-      );
+      await createBranchOnFork(contributorToken, forkOwner, forkRepo, branchName);
     } catch (err) {
       console.error('Unable to prepare contributor fork:', err);
       return jsonResponse(503, {
@@ -341,8 +308,6 @@ exports.handler = async (event) => {
         `/contents/${filePath}?ref=${encodeURIComponent(BASE_BRANCH)}`,
         contributorToken
       );
-      currentSha = fileData.sha;
-
       const lines = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf8'));
       for (const edit of edits) {
         const entry = lines.find(e => e.Index === edit.index);
@@ -368,8 +333,6 @@ exports.handler = async (event) => {
         `/contents/${filePath}?ref=${encodeURIComponent(BASE_BRANCH)}`,
         contributorToken
       );
-      currentSha = tlFileData.sha;
-
       const tlLines = JSON.parse(Buffer.from(tlFileData.content, 'base64').toString('utf8'));
       for (const edit of edits) {
         const entry = tlLines.find(e => e.Index === edit.index);
@@ -392,8 +355,6 @@ exports.handler = async (event) => {
         `/contents/${filePath}?ref=${encodeURIComponent(BASE_BRANCH)}`,
         contributorToken
       );
-      currentSha = fileData.sha;
-
       const data = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf8'));
       const album = (data.Albums || []).find(a => a.Album_Slug === album_slug);
       if (!album) {
@@ -410,6 +371,19 @@ exports.handler = async (event) => {
 
       newContentB64 = Buffer.from(JSON.stringify(data, null, 2) + '\n').toString('base64');
     }
+
+    // The fork may be far behind upstream, so its version of the file can
+    // have a different blob SHA. The Contents API requires the SHA currently
+    // present on the branch being updated, not the upstream file's SHA.
+    const forkFileData = await githubFetch(
+      'GET',
+      `/contents/${filePath}?ref=${encodeURIComponent(branchName)}`,
+      contributorToken,
+      undefined,
+      forkOwner,
+      forkRepo
+    );
+    currentSha = forkFileData.sha;
 
     // 4. Commit the patched file to the fork's branch.
     await githubFetch('PUT', `/contents/${filePath}`, contributorToken, {
