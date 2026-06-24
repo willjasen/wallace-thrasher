@@ -123,6 +123,46 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+async function createBranchOnFork(token, forkOwner, forkRepo, branchName) {
+  let lastError;
+
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      // A previously-created fork can lag behind upstream. Synchronise its base
+      // branch first so the branch and file SHAs used below exist in the fork.
+      await githubFetch(
+        'POST',
+        '/merge-upstream',
+        token,
+        { branch: BASE_BRANCH },
+        forkOwner,
+        forkRepo
+      );
+
+      const forkBaseRef = await githubFetch(
+        'GET',
+        `/git/ref/heads/${BASE_BRANCH}`,
+        token,
+        undefined,
+        forkOwner,
+        forkRepo
+      );
+
+      await githubFetch('POST', '/git/refs', token, {
+        ref: `refs/heads/${branchName}`,
+        sha: forkBaseRef.object.sha,
+      }, forkOwner, forkRepo);
+
+      return;
+    } catch (err) {
+      lastError = err;
+      if (attempt < 4) await sleep(1500);
+    }
+  }
+
+  throw lastError;
+}
+
 // ---------------------------------------------------------------------------
 // Handler
 // ---------------------------------------------------------------------------
@@ -246,27 +286,16 @@ exports.handler = async (event) => {
     const forkOwner = fork.owner.login;
     const forkRepo  = fork.name;
 
-    // 2. Resolve the base branch SHA from the upstream repo.
-    const baseRef = await githubFetch('GET', `/git/ref/heads/${BASE_BRANCH}`, contributorToken);
-    const baseSha = baseRef.object.sha;
-
-    // 3. Create a unique branch on the fork (retry while the fork finishes initialising).
+    // 2. Synchronise the fork and create a unique branch from its base branch.
+    //    Retry because GitHub creates new forks asynchronously.
     const branchName = `suggest/${edit_type.toLowerCase()}-${album_slug}-${track_slug}-${Date.now()}`;
-    let branchCreated = false;
-    for (let attempt = 0; attempt < 5; attempt++) {
-      try {
-        await githubFetch('POST', '/git/refs', contributorToken, {
-          ref: `refs/heads/${branchName}`,
-          sha: baseSha,
-        }, forkOwner, forkRepo);
-        branchCreated = true;
-        break;
-      } catch {
-        if (attempt < 4) await sleep(1500);
-      }
-    }
-    if (!branchCreated) {
-      return jsonResponse(503, { error: 'Your fork is still initialising — please try submitting again in a few seconds.' });
+    try {
+      await createBranchOnFork(contributorToken, forkOwner, forkRepo, branchName);
+    } catch (err) {
+      console.error('Unable to prepare contributor fork:', err);
+      return jsonResponse(503, {
+        error: 'Unable to prepare your GitHub fork. Please sync its main branch with the upstream repository, then try again.',
+      });
     }
 
     const editCount = (edit_type === 'Speaker' || edit_type === 'Subtitle' || edit_type === 'Track') ? edits.length : null;
@@ -422,3 +451,5 @@ exports.handler = async (event) => {
     return jsonResponse(500, { error: 'Failed to submit suggestion. Please try again later.' });
   }
 };
+
+exports.createBranchOnFork = createBranchOnFork;

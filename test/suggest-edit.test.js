@@ -2,7 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { handler } = require('../netlify/functions/suggest-edit');
+const { handler, createBranchOnFork } = require('../netlify/functions/suggest-edit');
 
 function submit(body) {
   return handler({
@@ -57,4 +57,35 @@ test('rejects the obsolete TrackLine edit type', async () => {
 
   assert.equal(response.statusCode, 400);
   assert.match(response.body, /Invalid edit_type/);
+});
+
+test('synchronises a fork and creates a branch from the fork base SHA', async (t) => {
+  const originalFetch = global.fetch;
+  const requests = [];
+  t.after(() => { global.fetch = originalFetch; });
+
+  global.fetch = async (url, options) => {
+    requests.push({ url, options });
+    if (url.endsWith('/merge-upstream')) {
+      return { ok: true, json: async () => ({ message: 'Successfully synced' }) };
+    }
+    if (url.endsWith('/git/ref/heads/main')) {
+      return { ok: true, json: async () => ({ object: { sha: 'fork-base-sha' } }) };
+    }
+    if (url.endsWith('/git/refs')) {
+      return { ok: true, json: async () => ({ ref: 'refs/heads/suggest/test' }) };
+    }
+    throw new Error(`Unexpected request: ${url}`);
+  };
+
+  await createBranchOnFork('token', 'contributor', 'wallace-thrasher', 'suggest/test');
+
+  assert.equal(requests.length, 3);
+  assert.match(requests[0].url, /contributor\/wallace-thrasher\/merge-upstream$/);
+  assert.deepEqual(JSON.parse(requests[0].options.body), { branch: 'main' });
+  assert.match(requests[1].url, /contributor\/wallace-thrasher\/git\/ref\/heads\/main$/);
+  assert.deepEqual(JSON.parse(requests[2].options.body), {
+    ref: 'refs/heads/suggest/test',
+    sha: 'fork-base-sha',
+  });
 });
