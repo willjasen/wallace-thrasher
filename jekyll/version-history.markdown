@@ -4,7 +4,7 @@ permalink: /version-history/
 published: true
 ---
 
-### v2.0.0 (beta)
+### v2.0.0
 
 MAJOR CHANGES TO SOFTWARE LICENSING
 
