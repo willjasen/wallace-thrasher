@@ -4,7 +4,8 @@
   "description": "![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version",
   "main": "index.js",
   "scripts": {
-    "dev": "dotenv -- netlify dev"
+    "dev": "dotenv -- netlify dev",
+    "test": "node --test test/*.test.js"
   },
   "repository": {
     "type": "git",
