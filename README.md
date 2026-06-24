@@ -134,8 +134,6 @@ the commit to "[production-build](https://github.com/willjasen/wallace-thrasher/
 
 GitHub users can contribute corrections directly from the website. sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
 
-for other contributions, or for more details about the review process, please refer to [CONTRIBUTING.md](https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md)
-
 ### ☑️ To-Do's ☑️
 
 the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-thrasher/blob/main/TODO.md)
