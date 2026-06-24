@@ -29,6 +29,22 @@ note that results returned are not based on phrase matching. for example, a subt
 
 also note that the ordering of the words does not matter, so a search for "cheese pizza" and for "pizza cheese" will return the same results.
 
+---
+
+### ✍️ Submit or Edit Subtitles and Speakers ✍️
+
+to suggest a correction, open the relevant album, select the track you want to correct, and then select **Suggest edits** above its subtitles.
+
+if you are not already signed in, you will be asked to sign in with GitHub. after signing in, you will return to the track with edit mode enabled.
+
+each subtitle line contains two editable fields: the speaker's name on the left and the spoken subtitle on the right. update either field as needed. you may edit multiple lines before submitting, and the bar at the bottom of the page will show how many lines have changed.
+
+you may also add an optional note for the reviewer. when your changes are ready, select **Submit suggestions**. your edits will be submitted as a GitHub pull request for review, and a link to the pull request will appear after the submission succeeds.
+
+select **Cancel** or **Exit edit mode** to leave without submitting.
+
+submitted suggestions do not appear on the website immediately; they must be reviewed and merged.
+
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/instructions-toc.css">
 <script>
 (function () {
