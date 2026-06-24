@@ -132,9 +132,9 @@ the commit to "[production-build](https://github.com/willjasen/wallace-thrasher/
 
 ### ✍️ How to Contribute ✍️
 
-if you've read this far and have an interest in contributing to this project - it is welcomed and appreciated!
+GitHub users can contribute corrections directly from the website. sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
 
-please refer to [CONTRIBUTING.md](https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md)
+for other contributions, or for more details about the review process, please refer to [CONTRIBUTING.md](https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md)
 
 ### ☑️ To-Do's ☑️
 
