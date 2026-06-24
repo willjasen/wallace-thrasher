@@ -124,7 +124,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function createBranchOnFork(token, forkOwner, forkRepo, branchName) {
+async function createBranchOnFork(token, forkOwner, forkRepo, branchName, upstreamBaseSha) {
   let lastError;
 
   // New forks are created asynchronously, so wait until their base ref exists.
@@ -162,7 +162,9 @@ async function createBranchOnFork(token, forkOwner, forkRepo, branchName) {
     try {
       await githubFetch('POST', '/merges', token, {
         base: branchName,
-        head: `${REPO_OWNER}:${BASE_BRANCH}`,
+        // GitHub's merge endpoint accepts a branch in this repository or an
+        // exact commit SHA. A cross-repository "owner:branch" head is invalid.
+        head: upstreamBaseSha,
       }, forkOwner, forkRepo);
       return;
     } catch (err) {
@@ -297,15 +299,29 @@ exports.handler = async (event) => {
     const forkOwner = fork.owner.login;
     const forkRepo  = fork.name;
 
-    // 2. Synchronise the fork and create a unique branch from its base branch.
-    //    Retry because GitHub creates new forks asynchronously.
+    // Resolve the exact upstream commit that the suggestion should target.
+    const upstreamBaseRef = await githubFetch(
+      'GET',
+      `/git/ref/heads/${BASE_BRANCH}`,
+      contributorToken
+    );
+    const upstreamBaseSha = upstreamBaseRef.object.sha;
+
+    // 2. Create a unique branch in the fork and bring that temporary branch
+    //    up to the exact upstream commit. Retry while new forks initialise.
     const branchName = `suggest/${edit_type.toLowerCase()}-${album_slug}-${track_slug}-${Date.now()}`;
     try {
-      await createBranchOnFork(contributorToken, forkOwner, forkRepo, branchName);
+      await createBranchOnFork(
+        contributorToken,
+        forkOwner,
+        forkRepo,
+        branchName,
+        upstreamBaseSha
+      );
     } catch (err) {
       console.error('Unable to prepare contributor fork:', err);
       return jsonResponse(503, {
-        error: 'Unable to prepare your GitHub fork. Please sync its main branch with the upstream repository, then try again.',
+        error: 'Unable to prepare a suggestion branch in your GitHub fork. Please try again.',
       });
     }
 

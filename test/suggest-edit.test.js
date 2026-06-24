@@ -79,7 +79,13 @@ test('creates and updates a suggestion branch without modifying the fork main br
     throw new Error(`Unexpected request: ${url}`);
   };
 
-  await createBranchOnFork('token', 'contributor', 'wallace-thrasher', 'suggest/test');
+  await createBranchOnFork(
+    'token',
+    'contributor',
+    'wallace-thrasher',
+    'suggest/test',
+    'upstream-base-sha'
+  );
 
   assert.equal(requests.length, 3);
   assert.match(requests[0].url, /contributor\/wallace-thrasher\/git\/ref\/heads\/main$/);
@@ -90,6 +96,6 @@ test('creates and updates a suggestion branch without modifying the fork main br
   assert.match(requests[2].url, /contributor\/wallace-thrasher\/merges$/);
   assert.deepEqual(JSON.parse(requests[2].options.body), {
     base: 'suggest/test',
-    head: 'willjasen:main',
+    head: 'upstream-base-sha',
   });
 });
