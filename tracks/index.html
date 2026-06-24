@@ -18,7 +18,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"you can call me stretchie","headline":"stretchie","url":"/tracks/"}</script>
 <!-- End Jekyll SEO tag -->
-<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="stretchie" />
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="stretchie" /><link rel="stylesheet" href="/assets/css/search-box.css">
 </head>
 <body><header class="site-header" role="banner">
 
@@ -70,10 +70,66 @@
         </label>
 
         <div class="trigger">
-            <ul class="nav-list"><li><a class="page-link" href="/about/">About</a></li><li><a class="page-link" href="/albums/">Albums</a></li><li><a class="page-link" href="/alex-trebek/">Alex Trebek</a></li><li><a class="page-link" href="/aliases/">Aliases</a></li><li><a class="page-link" href="/establishments/">Establishments</a></li><li><a class="page-link" href="/speakers/">Speakers</a></li><li><a class="page-link" href="/subtitles/">Subtitles</a></li><li><a class="page-link" href="/track-review/">Track Review</a></li></ul>
+            <ul class="nav-list"><li><a class="page-link" href="/about/">About</a></li><li><a class="page-link" href="/albums/">Albums</a></li><li><a class="page-link" href="/alex-trebek/">Alex Trebek</a></li><li><a class="page-link" href="/instructions/">Instructions</a></li><li class="nav-dropdown">
+                        <button class="dropdown-toggle">Search</button>
+                        <ul class="dropdown-menu"><li><a class="page-link" href="/aliases/">Aliases</a></li><li><a class="page-link" href="/establishments/">Establishments</a></li><li><a class="page-link" href="/speakers/">Speakers</a></li><li><a class="page-link" href="/subtitles/">Subtitles</a></li></ul>
+                      </li></ul>
         </div>
       </nav></div>
   <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  
+  <script>
+  (function() {
+    var BASE_URL = '';
+
+    function isScriptLoaded(partialSrc) {
+      return Array.from(document.scripts).some(function(s) {
+        return s.src && s.src.indexOf(partialSrc) !== -1;
+      });
+    }
+
+    function loadScript(src, integrity, onload) {
+      var s = document.createElement('script');
+      s.src = src;
+      if (integrity) {
+        s.integrity = integrity;
+        s.crossOrigin = 'anonymous';
+      }
+      if (onload) s.onload = onload;
+      document.head.appendChild(s);
+    }
+
+    function run() {
+      // window._wtIsSearchPage is set synchronously by header.html on search pages,
+      // before this idle callback is ever scheduled — so this check is race-condition-free.
+      if (window._wtIsSearchPage) return;
+
+      var lunrSrc    = BASE_URL + '/assets/js/lunr.js';
+      var searchSrc  = BASE_URL + '/assets/js/search.js';
+      var lunrIntegrity = 'sha256-icIor2ifjq4/O1GRu/ZJ8Pm2S4BClvYURbR3fneCLPs=';
+
+      function injectSearch() {
+        if (!isScriptLoaded('/assets/js/search.js')) {
+          loadScript(searchSrc, null, null);
+        }
+      }
+
+      if (isScriptLoaded('/assets/js/lunr.js')) {
+        injectSearch();
+      } else {
+        loadScript(lunrSrc, lunrIntegrity, injectSearch);
+      }
+    }
+
+    // Defer until idle so prefetching doesn't compete with current-page resources
+    if (typeof requestIdleCallback === 'function') {
+      requestIdleCallback(run);
+    } else {
+      setTimeout(run, 0);
+    }
+  })();
+</script>
+
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -123,18 +179,103 @@
     visibility: visible;
     opacity: 1;
   }
+  .subtitle-line {
+    padding: 4px 10px;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    transition: background-color 0.25s, border-color 0.25s;
+  }
+  .subtitle-line.subtitle-active {
+    background-color: rgba(173, 255, 47, 0.15);
+    border-left-color: greenyellow;
+  }
+  #suggest-edit-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto 12px;
+    background: none;
+    border: 1px solid lavender;
+    color: lavender;
+    border-radius: 6px;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 0.85em;
+  }
+  #suggest-edit-toggle .github-identity {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 8px;
+    border-left: 1px solid currentColor;
+    font-weight: 600;
+  }
+  #suggest-edit-toggle .github-identity svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
 </style>
 
 <script>
 (async function () {
   const BASE_URL = '';
   const JEKYLL_ENV = 'production';
-  const BUILD_TIMESTAMP = '1782264049';
+  const BUILD_TIMESTAMP = '1782265101';
+  const GITHUB_CLIENT_ID = 'Ov23liG9lBhvOqyOOSj2';
 
   const params = new URLSearchParams(window.location.search);
   const albumSlug = params.get('album');
   const trackSlug = params.get('track');
   const container = document.getElementById('track-content');
+
+  // ---- GitHub OAuth identity helpers ----
+  // Parse a fresh identity from the URL fragment (returned by github-oauth-callback).
+  let autoEnterEditMode = false;
+  (function parseIdentityFragment() {
+    const hash = window.location.hash;
+    const idMatch    = hash.match(/[#&]wt-identity=([^&]+)/);
+    const errMatch   = hash.match(/[#&]wt-auth-error=([^&]+)/);
+    if (idMatch) {
+      try {
+        const identity = JSON.parse(decodeURIComponent(idMatch[1]));
+        if (identity.exp > Date.now()) {
+          sessionStorage.setItem('wt-identity', JSON.stringify(identity));
+          autoEnterEditMode = true;
+        }
+      } catch { /* ignore malformed token */ }
+    } else if (errMatch) {
+      console.warn('GitHub OAuth error:', decodeURIComponent(errMatch[1]));
+    }
+    // Clean the fragment from the URL regardless.
+    if (idMatch || errMatch) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  })();
+
+  function getStoredIdentity() {
+    try {
+      const stored = sessionStorage.getItem('wt-identity');
+      if (!stored) return null;
+      const identity = JSON.parse(stored);
+      if (identity.exp < Date.now()) {
+        sessionStorage.removeItem('wt-identity');
+        return null;
+      }
+      return identity;
+    } catch { return null; }
+  }
+
+  function startGitHubOAuth() {
+    const state = encodeURIComponent(JSON.stringify({
+      returnUrl: window.location.pathname + window.location.search,
+    }));
+    window.location.href =
+      'https://github.com/login/oauth/authorize' +
+      '?client_id=' + encodeURIComponent(GITHUB_CLIENT_ID) +
+      '&scope=public_repo' +
+      '&state=' + state;
+  }
 
   if (!albumSlug || !trackSlug) {
     container.innerHTML = '<p style="text-align: center;">No track specified. <a href="' + BASE_URL + '/albums/">Browse albums</a></p>';
@@ -254,20 +395,6 @@
     }
   }
 
-  // ---- Apple Music embed ----
-  if (track.Apple_Music_Link) {
-    const amH5 = el('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 40px;' });
-    amH5.appendChild(el('iframe', {
-      allow: 'autoplay *; encrypted-media *; fullscreen *; clipboard-write',
-      frameborder: '0',
-      height: '175',
-      style: 'width:100%;max-width:500px;overflow:hidden;border-radius:10px;',
-      sandbox: 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation',
-      src: track.Apple_Music_Link
-    }));
-    frag.appendChild(amH5);
-  }
-
   frag.appendChild(hr());
 
   // ---- Aliases / Establishments / Deliveries ----
@@ -284,75 +411,134 @@
       'Deliveries: ' + track.Deliveries.join(', ')));
   }
 
-  // ---- Audio player ----
-  const audioHr = hr();
-  audioHr.id = 'audioSectionDivider';
-  frag.appendChild(audioHr);
+  // ---- Audio player (delegates to persistent-player.js) ----
+  // Container in the page for a "Play this track" button when audio is already playing
+  const audioContainer = el('div', { style: 'text-align: center; margin: 10px 0;' });
+  frag.appendChild(audioContainer);
 
-  const audioOuter = el('div', { style: 'display: flex; flex-direction: column; align-items: center; margin: 0 auto; text-align: center;' });
-  const audioCtrlContainer = el('div', { id: 'audioControlContainer', style: 'display: flex; align-items: center;' });
+  // Karaoke is only started when THIS page's track is actually loaded into the player.
+  // startKaraokeCallback is set after the DOM is rendered (subtitle elements exist).
+  // thisTrackShouldHighlight is set when the audio auto-loads before the DOM is ready.
+  let thisTrackShouldHighlight = false;
+  let startKaraokeCallback = null;
 
-  const audioLabelWrap = el('div', { style: 'display: flex; flex-direction: column; align-items: flex-start; margin-right: 10px;' });
-  const fileLabel = el('label', { for: 'fileInput', class: 'tooltip', style: 'margin-bottom: 10px; color: greenyellow;' });
-  fileLabel.textContent = '\u2B07\uFE0F Select LPC USB \u2B07\uFE0F';
-  const tooltipSpan = el('span', { class: 'tooltiptext' });
-  tooltipSpan.textContent = 'Select the top-level directory for the collection, usually named "LPC USB"';
-  fileLabel.appendChild(tooltipSpan);
-
-  const fileInput = el('input', { type: 'file', id: 'fileInput', accept: 'audio/mp3', webkitdirectory: '', multiple: '' });
-  audioLabelWrap.appendChild(fileLabel);
-  audioLabelWrap.appendChild(fileInput);
-
-  const audioPlayer = el('audio', { id: 'audioPlayer', controls: '' });
-  audioCtrlContainer.appendChild(audioLabelWrap);
-  audioCtrlContainer.appendChild(audioPlayer);
-  audioOuter.appendChild(audioCtrlContainer);
-  frag.appendChild(audioOuter);
-  frag.appendChild(hr());
-
-  // File selection handler
-  const fileMap = {};
-  fileInput.addEventListener('change', function (event) {
-    const files = event.target.files;
-    for (const file of files) {
-      fileMap[file.webkitRelativePath] = URL.createObjectURL(file);
-    }
-    const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
-    const relevantUrl = 'LPC USB/' + album.USB_Directory + '/' + usbFilename;
-    console.log('Relevant URL: ' + relevantUrl);
-    const matchingUrl = fileMap[relevantUrl];
-    console.log('Matching URL: ' + matchingUrl);
-    if (matchingUrl) {
-      audioPlayer.src = matchingUrl;
+  function applyTrackAudio(matchingUrl) {
+    const audio = window.lpcPlayer.audio;
+    if (!audio.paused) {
+      // Something is actively playing — don't interrupt; offer a button to switch
+      audioContainer.innerHTML = '';
+      const btn = document.createElement('button');
+      btn.textContent = '\u25B6 Play this track';
+      btn.style.cssText = 'color: greenyellow; background: none; border: 1px solid greenyellow; border-radius: 6px; padding: 6px 14px; cursor: pointer; font-weight: bold; font-size: 1em;';
+      btn.addEventListener('click', function () {
+        audio.src = matchingUrl;
+        audio.style.display = '';
+        audio.play();
+        btn.remove();
+        if (startKaraokeCallback) startKaraokeCallback();
+      });
+      audioContainer.appendChild(btn);
     } else {
-      console.warn('Audio file not found in selected directory: ' + relevantUrl);
+      // Nothing playing — auto-load this track
+      audio.src = matchingUrl;
+      audio.style.display = '';
+      // If the DOM is already rendered, start karaoke now; otherwise flag it for after render.
+      if (startKaraokeCallback) {
+        startKaraokeCallback();
+      } else {
+        thisTrackShouldHighlight = true;
+      }
     }
-  });
-
-  // Hide audio controls on mobile
-  if (window.innerWidth <= 768 ||
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-    audioCtrlContainer.style.display = 'none';
-    audioHr.style.display = 'none';
   }
+
+  function initTrackAudio() {
+    const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
+    const albumUsbDir = album.USB_Directory;
+    const relevantUrl = 'LPC USB/' + albumUsbDir + '/' + usbFilename;
+
+    if (window.lpcPlayer && window.lpcPlayer.isLoaded()) {
+      const matchingUrl = window.fileMap[relevantUrl];
+      if (matchingUrl) {
+        applyTrackAudio(matchingUrl);
+        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+      }
+    }
+    // Load when directory is selected/granted for the first time
+    document.addEventListener('lpc-loaded', function () {
+      const matchingUrl = window.fileMap[relevantUrl];
+      if (matchingUrl) {
+        applyTrackAudio(matchingUrl);
+        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+      }
+    }, { once: true });
+    document.addEventListener('lpc-permission-granted', async function () {
+      const ok = await window.lpcPlayer.loadTrack(albumUsbDir, usbFilename);
+      if (ok) {
+        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+        if (startKaraokeCallback) startKaraokeCallback();
+      }
+    }, { once: true });
+  }
+  initTrackAudio();
 
   // ---- Subtitles ----
   frag.appendChild(hr());
 
-  const subtitlesList = el('ul', { style: 'list-style-type: none;' });
+  // "Suggest edits" toggle button — lets visitors edit speakers/subtitles inline
+  const editToggleBtn = el('button', {
+    id: 'suggest-edit-toggle',
+    type: 'button',
+  });
+  frag.appendChild(editToggleBtn);
+
+  const subtitlesList = el('ul', { id: 'subtitleList', style: 'list-style-type: none; padding-left: 0; padding-bottom: 60px;' });
   const subtitles = track.Subtitles || [];
   subtitles.forEach(function (sub) {
     const li = document.createElement('li');
+    li.className = 'subtitle-line';
+    li.setAttribute('data-sub-index', sub.Index);
+    if (sub['Start Time']) li.setAttribute('data-start', sub['Start Time']);
+    if (sub['End Time'])   li.setAttribute('data-end',   sub['End Time']);
+
+    // ---- View span (default display) ----
+    const viewSpan = el('span', { class: 'sub-view' });
     if (JEKYLL_ENV !== 'production') {
       const idxEl = document.createElement('i');
       idxEl.textContent = sub.Index;
-      li.appendChild(idxEl);
-      li.appendChild(document.createTextNode(' -- '));
+      viewSpan.appendChild(idxEl);
+      viewSpan.appendChild(document.createTextNode(' -- '));
     }
     const strong = document.createElement('strong');
     strong.textContent = sub.Speaker + ':';
-    li.appendChild(strong);
-    li.appendChild(document.createTextNode(' ' + sub.Text));
+    viewSpan.appendChild(strong);
+    viewSpan.appendChild(document.createTextNode(' ' + sub.Text));
+    li.appendChild(viewSpan);
+
+    // ---- Edit span (shown only in edit mode) ----
+    const editSpan = el('span', { class: 'sub-edit', style: 'display:none;align-items:baseline;gap:6px;' });
+    const speakerInput = el('input', {
+      class: 'sub-speaker-input',
+      type: 'text',
+      value: sub.Speaker,
+      'data-orig': sub.Speaker,
+      maxlength: '100',
+      'aria-label': 'Speaker',
+      style: 'width:110px;font-size:0.85em;padding:2px 6px;border-radius:4px;border:1px solid #666;background:#1a1a2e;color:#e0e0e0;',
+    });
+    editSpan.appendChild(speakerInput);
+    editSpan.appendChild(document.createTextNode(': '));
+    const textInput = el('input', {
+      class: 'sub-text-input',
+      type: 'text',
+      value: sub.Text,
+      'data-orig': sub.Text,
+      maxlength: '1000',
+      'aria-label': 'Subtitle text',
+      style: 'width:calc(100% - 160px);min-width:180px;font-size:0.85em;padding:2px 6px;border-radius:4px;border:1px solid #666;background:#1a1a2e;color:#e0e0e0;',
+    });
+    editSpan.appendChild(textInput);
+    li.appendChild(editSpan);
+
     li.appendChild(document.createElement('br'));
     subtitlesList.appendChild(li);
   });
@@ -361,6 +547,357 @@
   // Replace loading indicator with rendered content
   container.innerHTML = '';
   container.appendChild(frag);
+
+  // ---- Edit mode wiring ----
+  (function () {
+    let editMode = false;
+
+    function renderEditToggle() {
+      const identity = getStoredIdentity();
+      editToggleBtn.innerHTML = '';
+
+      const action = el('span');
+      action.textContent = editMode ? '\u2715 Exit edit mode' : '\u270F\uFE0F Suggest edits';
+      editToggleBtn.appendChild(action);
+
+      if (identity) {
+        const githubIdentity = el('span', {
+          class: 'github-identity',
+          title: 'Signed in with GitHub as ' + identity.login,
+        });
+        githubIdentity.innerHTML =
+          '<svg viewBox="0 0 16 16" aria-hidden="true">' +
+            '<path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.71.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.5-2.01.38-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.52-.01-.53.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.21-3.64-.91-3.64-4.02 0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.42 7.42 0 0 1 8 3.93c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19 0 3.12-1.87 3.81-3.65 4.02.29.25.54.74.54 1.51 0 1.09-.01 1.97-.01 2.24 0 .22.15.47.55.39A8.01 8.01 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z"></path>' +
+          '</svg>';
+        githubIdentity.appendChild(document.createTextNode(identity.login));
+        editToggleBtn.appendChild(githubIdentity);
+      }
+
+      editToggleBtn.setAttribute(
+        'aria-label',
+        (editMode ? 'Exit edit mode' : 'Suggest edits') +
+          (identity ? '; signed in with GitHub as ' + identity.login : '')
+      );
+    }
+
+    renderEditToggle();
+
+    // Sticky submit bar — z-index 7000 keeps it below the audio/Apple Music FABs (9000)
+    const bar = el('div', {
+      id: 'suggest-edit-bar',
+      style: 'display:none;position:fixed;bottom:0;left:0;right:0;z-index:7000;background:#1a1a2e;border-top:1px solid lavender;padding:10px 20px;flex-direction:column;align-items:center;gap:8px;',
+    });
+    const barTop = el('div', { style: 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;width:100%;' });
+
+    // Identity indicator — shows avatar + username when signed in
+    const identityEl = el('div', { style: 'display:flex;align-items:center;gap:6px;font-size:0.85em;color:lavender;white-space:nowrap;' });
+
+    const changeCountEl = el('span', { style: 'color:lavender;font-size:0.85em;white-space:nowrap;' });
+    changeCountEl.textContent = '0 changes';
+
+    const noteInput = el('input', {
+      type: 'text',
+      placeholder: 'Optional note for reviewer\u2026',
+      maxlength: '500',
+      style: 'flex:1;min-width:160px;max-width:380px;font-size:0.85em;padding:4px 8px;border-radius:4px;border:1px solid #666;background:#0d0d1a;color:#e0e0e0;',
+    });
+
+    const submitBtn = el('button', {
+      style: 'background:none;border:1px solid greenyellow;color:greenyellow;border-radius:6px;padding:5px 16px;cursor:pointer;font-size:0.85em;font-weight:bold;',
+    });
+    submitBtn.textContent = 'Submit suggestions';
+    submitBtn.disabled = true;
+
+    const cancelBtn = el('button', {
+      style: 'background:none;border:1px solid #666;color:#aaa;border-radius:6px;padding:5px 14px;cursor:pointer;font-size:0.85em;',
+    });
+    cancelBtn.textContent = 'Cancel';
+
+    const resultEl = el('div', { style: 'font-size:0.85em;text-align:center;' });
+
+    barTop.appendChild(identityEl);
+    barTop.appendChild(changeCountEl);
+    barTop.appendChild(noteInput);
+    barTop.appendChild(submitBtn);
+    barTop.appendChild(cancelBtn);
+    bar.appendChild(barTop);
+    bar.appendChild(resultEl);
+    document.body.appendChild(bar);
+
+    function renderIdentityEl(identity) {
+      identityEl.innerHTML = '';
+      if (identity) {
+        const img = el('img', {
+          src: identity.avatar_url,
+          alt: identity.login,
+          width: '20', height: '20',
+          style: 'border-radius:50%;vertical-align:middle;',
+        });
+        identityEl.appendChild(img);
+        identityEl.appendChild(document.createTextNode(' @' + identity.login));
+        const signOut = el('button', {
+          style: 'background:none;border:none;color:#888;cursor:pointer;font-size:0.8em;padding:0 2px;',
+          title: 'Sign out',
+        });
+        signOut.textContent = '\u00D7';
+        signOut.addEventListener('click', function () {
+          sessionStorage.removeItem('wt-identity');
+          exitEditMode();
+          renderIdentityEl(null);
+          renderEditToggle();
+        });
+        identityEl.appendChild(signOut);
+      } else {
+        identityEl.textContent = '';
+      }
+    }
+
+    function getEdits() {
+      const edits = [];
+      document.querySelectorAll('#subtitleList .subtitle-line[data-sub-index]').forEach(function (li) {
+        const idx    = parseInt(li.dataset.subIndex, 10);
+        const sIn    = li.querySelector('.sub-speaker-input');
+        const tIn    = li.querySelector('.sub-text-input');
+        const speakerChanged = sIn && sIn.value !== sIn.dataset.orig;
+        const textChanged    = tIn && tIn.value !== tIn.dataset.orig;
+        if (speakerChanged || textChanged) {
+          const edit = { index: idx };
+          if (speakerChanged) edit.speaker = sIn.value;
+          if (textChanged)    edit.text    = tIn.value;
+          edits.push(edit);
+        }
+      });
+      return edits;
+    }
+
+    function updateCount() {
+      const edits = getEdits();
+      changeCountEl.textContent = edits.length + ' change' + (edits.length !== 1 ? 's' : '');
+      submitBtn.disabled = edits.length === 0;
+    }
+
+    function enterEditMode() {
+      const identity = getStoredIdentity();
+      if (!identity) {
+        // Not signed in — kick off OAuth, which will return to this page and
+        // set autoEnterEditMode so we enter edit mode on return.
+        startGitHubOAuth();
+        return;
+      }
+      editMode = true;
+      renderIdentityEl(identity);
+      editToggleBtn.style.borderColor = '#666';
+      editToggleBtn.style.color = '#aaa';
+      renderEditToggle();
+      document.querySelectorAll('#subtitleList .sub-view').forEach(function (v) { v.style.display = 'none'; });
+      document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'inline-flex'; });
+      bar.style.display = 'flex';
+      resultEl.textContent = '';
+      updateCount();
+      document.querySelectorAll('#subtitleList .sub-speaker-input, #subtitleList .sub-text-input').forEach(function (inp) {
+        inp.addEventListener('input', updateCount);
+      });
+    }
+
+    function exitEditMode() {
+      editMode = false;
+      editToggleBtn.style.borderColor = 'lavender';
+      editToggleBtn.style.color = 'lavender';
+      renderEditToggle();
+      document.querySelectorAll('#subtitleList .sub-view').forEach(function (v) { v.style.display = ''; });
+      document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'none'; });
+      bar.style.display = 'none';
+    }
+
+    editToggleBtn.addEventListener('click', function () {
+      if (editMode) { exitEditMode(); } else { enterEditMode(); }
+    });
+
+    cancelBtn.addEventListener('click', exitEditMode);
+
+    // Clean up bar when the user soft-navigates to another track
+    document.addEventListener('soft-nav', function () {
+      const b = document.getElementById('suggest-edit-bar');
+      if (b) b.remove();
+    }, { once: true });
+
+    submitBtn.addEventListener('click', async function () {
+      const edits = getEdits();
+      if (edits.length === 0) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting\u2026';
+      resultEl.textContent = '';
+      resultEl.style.color = 'lavender';
+      const note = noteInput.value.trim();
+      try {
+        const res = await fetch('/.netlify/functions/suggest-edit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            edit_type: 'Track',
+            album_slug: albumSlug,
+            track_slug: trackSlug,
+            edits: edits,
+            note: note || undefined,
+            auth: getStoredIdentity() || undefined,
+            _hp: '',
+          }),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          resultEl.style.color = 'greenyellow';
+          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;text-decoration:underline;font-weight:bold;">PR #' + data.pr_number + ' 🔗</a>';
+          exitEditMode();
+          editToggleBtn.style.display = 'none';
+          bar.style.display = 'flex';
+        } else {
+          resultEl.style.color = '#ff6b6b';
+          resultEl.textContent = 'Error: ' + (data.error || 'Unknown error');
+        }
+      } catch (err) {
+        resultEl.style.color = '#ff6b6b';
+        resultEl.textContent = 'Network error. Please try again.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit suggestions';
+        bar.style.display = 'flex';
+      }
+    });
+
+    // Auto-enter edit mode if we just returned from GitHub OAuth.
+    if (autoEnterEditMode) enterEditMode();
+  })();
+
+  // ---- Karaoke highlight ----
+  // Build subtitle timing data from the now-rendered DOM, then expose startKaraokeCallback
+  // so that applyTrackAudio (and the button click handler) can activate highlighting only
+  // when THIS page's track is actually loaded — not just because audio happens to be playing.
+  (function () {
+    function parseTimecode(tc) {
+      if (!tc) return null;
+      var parts = tc.split(',');
+      var ms = parts.length > 1 ? parseInt(parts[1], 10) : 0;
+      var timeParts = parts[0].split(':').map(Number);
+      return timeParts[0] * 3600 + timeParts[1] * 60 + timeParts[2] + ms / 1000;
+    }
+
+    var items = Array.from(document.querySelectorAll('#subtitleList .subtitle-line'));
+    var subtitleData = items
+      .map(function (item) {
+        return {
+          el: item,
+          start: parseTimecode(item.getAttribute('data-start')),
+          end:   parseTimecode(item.getAttribute('data-end'))
+        };
+      })
+      .filter(function (s) { return s.start !== null && s.end !== null; });
+
+    var currentActive = null;
+    var karaokeAbort = new AbortController();
+
+    document.addEventListener('soft-nav', function () {
+      karaokeAbort.abort();
+      if (currentActive) { currentActive.el.classList.remove('subtitle-active'); currentActive = null; }
+    }, { once: true });
+
+    function updateHighlight(currentTime) {
+      var next = null;
+      for (var i = 0; i < subtitleData.length; i++) {
+        if (currentTime >= subtitleData[i].start && currentTime <= subtitleData[i].end) {
+          next = subtitleData[i];
+          break;
+        }
+      }
+      if (next === currentActive) return;
+      if (currentActive) currentActive.el.classList.remove('subtitle-active');
+      currentActive = next;
+      if (currentActive) {
+        currentActive.el.classList.add('subtitle-active');
+        currentActive.el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    var karaokeStarted = false;
+    // Assign to the outer-scope variable so applyTrackAudio's handlers can call it.
+    startKaraokeCallback = function () {
+      if (karaokeStarted || !subtitleData.length || !window.lpcPlayer) return;
+      karaokeStarted = true;
+      var audio = window.lpcPlayer.audio;
+      audio.addEventListener('timeupdate', function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
+      audio.addEventListener('seeked',     function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
+      updateHighlight(audio.currentTime);
+    };
+
+    // If applyTrackAudio already auto-loaded this track before the DOM was ready, start now.
+    if (thisTrackShouldHighlight) startKaraokeCallback();
+  })();
+
+  // ---- Apple Music FAB ----
+  // Clean up any FAB left from a previous track navigation
+  ['appleMusicFab', 'appleMusicFabPanel'].forEach(function (id) {
+    var existing = document.getElementById(id);
+    if (existing) existing.remove();
+  });
+
+  if (track.Apple_Music_Link) {
+    if (!document.getElementById('appleMusicFabStyle')) {
+      var amStyle = document.createElement('style');
+      amStyle.id = 'appleMusicFabStyle';
+      amStyle.textContent = [
+        '#appleMusicFab {',
+        '  position: fixed; bottom: 24px; left: 24px; z-index: 9000;',
+        '  height: 60px; min-width: 60px; border-radius: 30px;',
+        '  background: #fc3c44; border: 2px solid #ff6b6b;',
+        '  cursor: pointer; display: flex; flex-direction: row; align-items: center;',
+        '  justify-content: center; gap: 8px; padding: 0 18px;',
+        '  font-size: 28px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);',
+        '  transition: background 0.2s, box-shadow 0.2s; line-height: 1;',
+        '}',
+        '#appleMusicFab:hover { background: #ff5a5a; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }',
+        '#appleMusicFabPanel {',
+        '  position: fixed; bottom: 102px; left: 24px; z-index: 8999;',
+        '  background: #1e1e3a; border: 1px solid #ff6b6b;',
+        '  border-radius: 14px; padding: 16px 18px;',
+        '  box-shadow: 0 8px 28px rgba(0,0,0,0.6);',
+        '  display: none; flex-direction: column; align-items: center;',
+        '  min-width: 320px; gap: 10px;',
+        '}'
+      ].join('\n');
+      document.head.appendChild(amStyle);
+    }
+
+    var amFab = document.createElement('button');
+    amFab.id = 'appleMusicFab';
+    amFab.title = 'Listen on Apple Music';
+    amFab.setAttribute('aria-label', 'Listen on Apple Music');
+    amFab.innerHTML = '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white"><title>Apple Music</title><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg>';
+
+    var amPanel = document.createElement('div');
+    amPanel.id = 'appleMusicFabPanel';
+
+    var amIframe = document.createElement('iframe');
+    amIframe.setAttribute('allow', 'autoplay *; encrypted-media *; fullscreen *; clipboard-write');
+    amIframe.setAttribute('frameborder', '0');
+    amIframe.setAttribute('height', '175');
+    amIframe.style.cssText = 'width:100%;max-width:500px;overflow:hidden;border-radius:10px;';
+    amIframe.setAttribute('sandbox', 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation');
+    amIframe.src = track.Apple_Music_Link;
+    amPanel.appendChild(amIframe);
+
+    amFab.addEventListener('click', function () {
+      amPanel.style.display = amPanel.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    document.addEventListener('soft-nav', function removeFabOnNav() {
+      var fab = document.getElementById('appleMusicFab');
+      var panel = document.getElementById('appleMusicFabPanel');
+      if (fab) fab.remove();
+      if (panel) panel.remove();
+    }, { once: true });
+
+    document.body.appendChild(amPanel);
+    document.body.appendChild(amFab);
+  }
 
 })();
 </script>
@@ -394,8 +931,11 @@
         <div id="build-time" style="font-size: smaller;">
           Built: 
           
-            6/23/26, 9:20 PM EDT
+            6/23/26, 9:38 PM EDT
           
+        </div>
+         <div style="font-size: smaller;">
+          data licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC-BY-SA 3.0</a>
         </div>
         <!-- Discord server link -->
         <div id="discord-link" style="font-size: smaller;">
@@ -458,8 +998,8 @@ ten is strength
 recalled images are detailed
 -->
 
+<script src="/assets/js/persistent-player.js"></script>
 </footer>
-
 
 </body>
 
