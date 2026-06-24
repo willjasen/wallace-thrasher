@@ -19,8 +19,14 @@ const VALID_EDIT_TYPES = ['Speaker', 'Subtitle', 'Track', 'Alias', 'Establishmen
 
 // Only lowercase letters, digits, and hyphens — prevents path traversal in file paths.
 const SLUG_RE    = /^[a-z0-9-]{1,100}$/;
-// Speaker IDs seen in the data: SPEAKER_00, LPC, etc.
-const SPEAKER_RE = /^[A-Za-z0-9_ -]{1,60}$/;
+// Speaker labels are human-readable and legitimately contain punctuation
+// (for example "Woman #1", "Joe's Records, STL", and "LPC/Arthur").
+function isValidSpeaker(value) {
+  return typeof value === 'string' &&
+    value.trim().length > 0 &&
+    value.length <= 100 &&
+    !/[\u0000-\u001f\u007f]/.test(value);
+}
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -170,7 +176,7 @@ exports.handler = async (event) => {
       }
       seenIndexes.add(edit.index);
       if (edit_type === 'Speaker') {
-        if (!SPEAKER_RE.test(String(edit.new_value ?? ''))) {
+        if (!isValidSpeaker(edit.new_value)) {
           return jsonResponse(400, { error: `Invalid speaker value at index ${edit.index}` });
         }
       } else {
@@ -196,7 +202,7 @@ exports.handler = async (event) => {
       if (edit.speaker === undefined && edit.text === undefined) {
         return jsonResponse(400, { error: `Edit at index ${edit.index} must have at least one of 'speaker' or 'text'` });
       }
-      if (edit.speaker !== undefined && !SPEAKER_RE.test(String(edit.speaker))) {
+      if (edit.speaker !== undefined && !isValidSpeaker(edit.speaker)) {
         return jsonResponse(400, { error: `Invalid speaker value at index ${edit.index}` });
       }
       if (edit.text !== undefined && (typeof edit.text !== 'string' || edit.text.trim().length === 0 || edit.text.length > 1000)) {

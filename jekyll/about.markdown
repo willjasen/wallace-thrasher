@@ -15,7 +15,6 @@ for help on how to use the web app, refer to the [instructions]({{ site.baseurl 
 this website can currently be viewed at:
 
 - primary domain --> [stretchie.net](https://stretchie.net)
-- via ipfs/ipns --> [https://dweb.link/ipns/stretchie.net/](https://dweb.link/ipns/stretchie.net/)
 - for development only --> [dev.stretchie.net](https://dev.stretchie.net) & [github pages](https://willjasen.github.io/wallace-thrasher/)
 
 ### 🎮 Features 🎮
@@ -126,7 +125,6 @@ commits to the main branch trigger two [github actions](https://github.com/willj
 
 - `deploy-production-build.yml`:
   - runs `jekyll build --baseurl ""` to generate the site on the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch
-  - deploys the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch to IPFS
 
 - `publish-to-github-pages.yml`:
   - runs `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch

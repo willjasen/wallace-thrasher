@@ -384,6 +384,7 @@ hide_from_nav: true
       type: 'text',
       value: sub.Speaker,
       'data-orig': sub.Speaker,
+      maxlength: '100',
       'aria-label': 'Speaker',
       style: 'width:110px;font-size:0.85em;padding:2px 6px;border-radius:4px;border:1px solid #666;background:#1a1a2e;color:#e0e0e0;',
     });
@@ -394,6 +395,7 @@ hide_from_nav: true
       type: 'text',
       value: sub.Text,
       'data-orig': sub.Text,
+      maxlength: '1000',
       'aria-label': 'Subtitle text',
       style: 'width:calc(100% - 160px);min-width:180px;font-size:0.85em;padding:2px 6px;border-radius:4px;border:1px solid #666;background:#1a1a2e;color:#e0e0e0;',
     });
@@ -595,7 +597,7 @@ hide_from_nav: true
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            edit_type: 'TrackLine',
+            edit_type: 'Track',
             album_slug: albumSlug,
             track_slug: trackSlug,
             edits: edits,
