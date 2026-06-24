@@ -97,6 +97,7 @@ async function githubFetch(method, path, token, body, owner, repo) {
     throw new Error(`GitHub API ${res.status} ${res.statusText}: ${text}`);
   }
 
+  if (res.status === 204) return null;
   return res.json();
 }
 
@@ -126,19 +127,11 @@ function sleep(ms) {
 async function createBranchOnFork(token, forkOwner, forkRepo, branchName) {
   let lastError;
 
+  // New forks are created asynchronously, so wait until their base ref exists.
   for (let attempt = 0; attempt < 5; attempt++) {
     try {
-      // A previously-created fork can lag behind upstream. Synchronise its base
-      // branch first so the branch and file SHAs used below exist in the fork.
-      await githubFetch(
-        'POST',
-        '/merge-upstream',
-        token,
-        { branch: BASE_BRANCH },
-        forkOwner,
-        forkRepo
-      );
-
+      // Always create the working branch from a commit already present in the
+      // contributor's fork. This works for both newly-created and old forks.
       const forkBaseRef = await githubFetch(
         'GET',
         `/git/ref/heads/${BASE_BRANCH}`,
@@ -152,11 +145,29 @@ async function createBranchOnFork(token, forkOwner, forkRepo, branchName) {
         ref: `refs/heads/${branchName}`,
         sha: forkBaseRef.object.sha,
       }, forkOwner, forkRepo);
-
-      return;
+      lastError = null;
+      break;
     } catch (err) {
       lastError = err;
       if (attempt < 4) await sleep(1500);
+    }
+  }
+
+  if (lastError) throw lastError;
+
+  // Bring only the temporary suggestion branch up to date. Do not modify the
+  // contributor's main branch: it may be intentionally old or contain their
+  // own work.
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      await githubFetch('POST', '/merges', token, {
+        base: branchName,
+        head: `${REPO_OWNER}:${BASE_BRANCH}`,
+      }, forkOwner, forkRepo);
+      return;
+    } catch (err) {
+      lastError = err;
+      if (attempt < 2) await sleep(1000);
     }
   }
 

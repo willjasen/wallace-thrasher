@@ -59,21 +59,22 @@ test('rejects the obsolete TrackLine edit type', async () => {
   assert.match(response.body, /Invalid edit_type/);
 });
 
-test('synchronises a fork and creates a branch from the fork base SHA', async (t) => {
+test('creates and updates a suggestion branch without modifying the fork main branch', async (t) => {
   const originalFetch = global.fetch;
   const requests = [];
   t.after(() => { global.fetch = originalFetch; });
 
   global.fetch = async (url, options) => {
     requests.push({ url, options });
-    if (url.endsWith('/merge-upstream')) {
-      return { ok: true, json: async () => ({ message: 'Successfully synced' }) };
-    }
     if (url.endsWith('/git/ref/heads/main')) {
       return { ok: true, json: async () => ({ object: { sha: 'fork-base-sha' } }) };
     }
     if (url.endsWith('/git/refs')) {
       return { ok: true, json: async () => ({ ref: 'refs/heads/suggest/test' }) };
+    }
+    if (url.endsWith('/merges')) {
+      // GitHub returns an empty 204 response when the branch is already current.
+      return { ok: true, status: 204 };
     }
     throw new Error(`Unexpected request: ${url}`);
   };
@@ -81,11 +82,14 @@ test('synchronises a fork and creates a branch from the fork base SHA', async (t
   await createBranchOnFork('token', 'contributor', 'wallace-thrasher', 'suggest/test');
 
   assert.equal(requests.length, 3);
-  assert.match(requests[0].url, /contributor\/wallace-thrasher\/merge-upstream$/);
-  assert.deepEqual(JSON.parse(requests[0].options.body), { branch: 'main' });
-  assert.match(requests[1].url, /contributor\/wallace-thrasher\/git\/ref\/heads\/main$/);
-  assert.deepEqual(JSON.parse(requests[2].options.body), {
+  assert.match(requests[0].url, /contributor\/wallace-thrasher\/git\/ref\/heads\/main$/);
+  assert.deepEqual(JSON.parse(requests[1].options.body), {
     ref: 'refs/heads/suggest/test',
     sha: 'fork-base-sha',
+  });
+  assert.match(requests[2].url, /contributor\/wallace-thrasher\/merges$/);
+  assert.deepEqual(JSON.parse(requests[2].options.body), {
+    base: 'suggest/test',
+    head: 'willjasen:main',
   });
 });
