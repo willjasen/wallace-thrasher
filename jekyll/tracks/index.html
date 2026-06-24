@@ -133,9 +133,11 @@ hide_from_nav: true
     const state = encodeURIComponent(JSON.stringify({
       returnUrl: window.location.pathname + window.location.search,
     }));
+    const redirectUri = window.location.origin + '/.netlify/functions/github-oauth-callback';
     window.location.href =
       'https://github.com/login/oauth/authorize' +
       '?client_id=' + encodeURIComponent(GITHUB_CLIENT_ID) +
+      '&redirect_uri=' + encodeURIComponent(redirectUri) +
       '&scope=public_repo' +
       '&state=' + state;
   }
