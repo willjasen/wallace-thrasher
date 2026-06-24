@@ -1,7 +1,5 @@
 unless ENV['SKIP_COMBINE_JSON'] == 'true'
   require 'json'
-  require 'yaml'
-  require_relative 'update_yml'
 
   module Jekyll
     class CombineData < Generator
@@ -12,12 +10,10 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         start_time = Time.now  # added timer start
         combined_albums_data = []
         combined_tracks_on_album_data = []
-        data_yml_path = File.join(site.source, '_data', 'data.yml')
-        yml_data = YAML.load_file(data_yml_path)
         data_json_path = File.join(site.source, 'assets', 'json', 'data.json')
         data_json = JSON.parse(File.read(data_json_path))
-        
-        albums_data = yml_data['Albums']
+
+        albums_data = data_json['Albums']
         albums_data.each do |album_data|
           album_slug = Jekyll::Utils.slugify(album_data['Album'])
           album_data['Tracks'].each do |track_data|
@@ -46,12 +42,10 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         end  
 
         combined_data_path = File.join(site.source, 'assets', 'json', 'data.combined.json')
-        # Delete the file if it exists
-        if File.exist?(combined_data_path)
-          File.delete(combined_data_path)
-        end
-        File.open(combined_data_path, 'w') do |file|
-          file.write(JSON.generate({ "Albums" => combined_albums_data }))
+        new_content = JSON.generate({ "Albums" => combined_albums_data })
+        existing = File.exist?(combined_data_path) ? File.read(combined_data_path) : nil
+        unless existing == new_content
+          File.write(combined_data_path, new_content)
         end
         # puts "\e[34mcombine-json-data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end

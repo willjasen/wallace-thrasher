@@ -3,6 +3,8 @@ layout: page
 title: Establishments
 permalink: /establishments/
 published: true
+search_page: true
+search_menu: true
 ---
 
 
@@ -11,7 +13,6 @@ published: true
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="establishments-search-results"></ul>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
 
 <style>
   .loader {

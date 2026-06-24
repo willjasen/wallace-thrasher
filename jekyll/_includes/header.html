@@ -3,6 +3,8 @@
   {% include variables.liquid %}
   {% if jekyll.environment == "production" %}
     {% include analytics.html %}
+  {% else %}
+    <meta name="robots" content="noindex, nofollow">
   {% endif %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
@@ -38,7 +40,24 @@
               {%- for path in page_paths -%}
                 {%- assign my_page = site.pages | where: "path", path | first -%}
                 {%- if my_page.title and my_page.hide_from_nav != true -%}
-                  <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+                  {%- if my_page.search_menu == true -%}
+                    {%- if search_menu_added != true -%}
+                      <li class="nav-dropdown">
+                        <button class="dropdown-toggle">Search</button>
+                        <ul class="dropdown-menu">
+                          {%- for path in page_paths -%}
+                            {%- assign search_page = site.pages | where: "path", path | first -%}
+                            {%- if search_page.search_menu == true and search_page.title and search_page.hide_from_nav != true -%}
+                              <li><a class="page-link" href="{{ search_page.url | relative_url }}">{{ search_page.title | escape }}</a></li>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </ul>
+                      </li>
+                      {%- assign search_menu_added = true -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+                  {%- endif -%}
                 {%- endif -%}
               {%- endfor -%}
             </ul>
@@ -47,4 +66,6 @@
     {%- endif -%}
   </div>
   <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"> -->
+  {% if page.search_page %}<script>window._wtIsSearchPage = true;</script>{% endif %}
+  {% include prefetch-data.html %}
 </header>

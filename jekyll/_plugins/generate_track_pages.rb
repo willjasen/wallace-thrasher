@@ -1,4 +1,3 @@
-require_relative 'update_yml'
 # Track page generation is disabled - track pages are now rendered dynamically
 # from data.combined.json via jekyll/tracks/index.html
 # module Jekyll

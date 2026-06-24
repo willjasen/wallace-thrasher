@@ -2,6 +2,8 @@
 layout: page
 title: Speakers
 permalink: /speakers/
+search_page: true
+search_menu: true
 ---
 
 
@@ -10,7 +12,6 @@ permalink: /speakers/
   {%- include load-search-with-progress.html -%}
 </div>
 <ul id="speakers-search-results"></ul>
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">  
 
 <style>
   .loader {

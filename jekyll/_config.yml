@@ -43,6 +43,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: willjasen
+github_client_id: "Ov23liG9lBhvOqyOOSj2"  # Your GitHub OAuth App Client ID (public — safe to commit)
 
 # Build settings for dark mode
 remote_theme: jekyll/minima
@@ -53,6 +54,18 @@ minima:
 
 timezone: America/New_York
 encoding: utf-8
+
+# Header navigation in alphabetical order
+# Putting non-search items first ensures Search dropdown appears after alphabetically
+header_pages:
+  - about.markdown
+  - albums.markdown
+  - alex.markdown
+  - instructions.markdown
+  - aliases.markdown
+  - establishments.markdown
+  - speakers.markdown
+  - subtitles.markdown
 
 incremental: true
 

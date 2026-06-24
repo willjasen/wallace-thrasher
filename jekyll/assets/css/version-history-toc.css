@@ -1,0 +1,54 @@
+#version-history-toc {
+  position: fixed;
+  top: 10rem;
+  right: 1rem;
+  width: 180px;
+  max-height: calc(100vh - 12rem);
+  overflow-y: auto;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  background: var(--minima-background-color, #fdfdfd);
+  color: var(--minima-text-color, #414141);
+  border-left: 2px solid var(--minima-border-color-01, #e7e7e7);
+  padding: 0.5rem 0.75rem;
+  z-index: 100;
+}
+
+#version-history-toc-label {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  opacity: 0.6;
+}
+
+#version-history-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#version-history-toc li {
+  margin: 0.2rem 0;
+}
+
+#version-history-toc a {
+  text-decoration: none;
+  color: var(--minima-text-color, #414141);
+  opacity: 0.7;
+  display: block;
+  cursor: pointer;
+}
+
+#version-history-toc a:hover,
+#version-history-toc a.active {
+  opacity: 1;
+  color: var(--minima-link-base-color, #1e69d8);
+}
+
+/* hide when there isn't enough gutter space beside the 800px wrapper */
+@media (max-width: 1200px) {
+  #version-history-toc {
+    display: none;
+  }
+}

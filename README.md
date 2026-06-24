@@ -2,17 +2,18 @@
 
 ![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
 
-a website project involving the works of [longmont potion castle](http://longmontpotioncastle.com/) - you can call me stretchie
+a website project involving the works of [longmont potion castle](https://en.wikipedia.org/wiki/Longmont_Potion_Castle) - you can call me stretchie
 
 ### 🧭 Overview 🧭
 
 this website allows for searching through subtitles and speakers within the longmont potion castle discography.
 
+for help on how to use the web app, refer to the [instructions](https://stretchie.net/instructions) page.
+
 this website can currently be viewed at:
 
 - primary domain --> [stretchie.net](https://stretchie.net)
-- via ipfs/ipns --> example: [https://dweb.link/ipns/stretchie.net/](https://dweb.link/ipns/stretchie.net/)
-- for development only --> [github pages](https://willjasen.github.io/wallace-thrasher/)
+- for development only --> [dev.stretchie.net](https://dev.stretchie.net) & [github pages](https://willjasen.github.io/wallace-thrasher/)
 
 ### 🎮 Features 🎮
 
@@ -25,29 +26,19 @@ there are four main features of various interests implemented:
 
 ### 📘 Backstory 📘
 
-some time ago, i wanted to know one question - how many calls does [alex trebek](/alex-trebek) show up in throughout the discography of lpc?
+some time ago, i wanted to know one question - how many calls does [alex trebek](https://stretchie.net/alex-trebek/) show up in throughout the discography of lpc?
 
-there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that has detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
+there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fandom.com/) out there that have detailed info about albums, tracks, their subtitles, and other info, however its data isn't structured in a formal way and therefore is not indexedable in a way that can answer my original question. given that i've been programming since i was in elementary school, i knew i could create something that would tell me, and i wanted it to be something that i could share within the niche community of lpc.
 
 ### 🫡 A Pledge 🫡
 
 when i began the venture of creating this magnificent package, i pledged that i would not monetize the website, and i still have no intentions of doing so. i created this as an effort of love for the works involved here and as a challenge to myself. it is the best homage that i can contribute to this little weird corner of the universe.
 
-### 🔎 Searching 🔎
-
-as of v1.4.0, the search feature uses a logical 'and' when operating, instead of a logical 'or'. this change in behavior affects when multiple words are searched. before, the search would return any subtitles containing any word that was entered. now, the search will only return subtitles that contain all words being searched.
-
-for example, a search term of "cheese pizza" previously return 134 results - all subtitles containing either the word "cheese" or "pizza". now, the same search of "cheese pizza" returns 7 results - all subtitles containing both the words "cheese" and "pizza".
-
-note that results returned are not based on phrase matching. for example, a subtitle of "i want a cheese pizza" will be returned, but so will "i would like cheese on my pizza". due to limitations of [lunr.js](https://lunrjs.com/), phrase matching is not possible.
-
-also note that the ordering of the words does not matter, so a search for "cheese pizza" and for "pizza cheese" will return the same results.
-
 ### ⚙️ Components ⚙️
 
 this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper-webui is utilized to analyze the audio tracks and have it output subtitles (what is spoken) that include speaker diarization (determining who says what), which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`data.combined.json`).
 
-because the website is static, there is no server-end processing that occurs (other than serving files) - the searching functions run locally within the browser.
+because the website is static, there is no server-end processing that occurs when searching - it runs locally within the browser.
 
 ### ↪️ Converting Tracks to Subtitles ↪️
 
@@ -57,7 +48,7 @@ i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed v
 
 i am using [this python tool](https://github.com/willjasen/srt-to-json) to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs
 
-### 💽 JSON Structure for Albums and Tracks 💽
+### 💽 JSON for Albums and Tracks 💽
 
 the main JSON data file resides at `/assets/data.json`
 
@@ -88,7 +79,7 @@ the main JSON data file resides at `/assets/data.json`
 ```
 it is possible that some keys are not present in all tracks, but the necessary ones of `Track_Title`, `Track_Number`, `Track_JSONPath`, and `Track_Slug` are listed for each track.
 
-### 💽 JSON Structure for Track Subtitles 💽
+### 💽 JSON for Track Subtitles 💽
 
 the JSON data for each track resides within a folder named as the respective album title's slug within the `/assets/json` folder
 ```
@@ -112,7 +103,7 @@ the JSON data for each track resides within a folder named as the respective alb
 
 ### 🚘 Under The Hood 🚘
 
-when the search pages are accessed, the single combined JSON data (`/assets/json/combined_json.data`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for two categories - speakers and subtitles.
+when the search pages are accessed, the single combined JSON data (`/assets/json/data.combined.json`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for multiple fields: speakers, subtitles, aliases, and establishments.
 
 the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
 
@@ -132,7 +123,6 @@ commits to the main branch trigger two [github actions](https://github.com/willj
 
 - `deploy-production-build.yml`:
   - runs `jekyll build --baseurl ""` to generate the site on the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch
-  - deploys the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch to IPFS
 
 - `publish-to-github-pages.yml`:
   - runs `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch
@@ -150,9 +140,17 @@ please refer to [CONTRIBUTING.md](https://github.com/willjasen/wallace-thrasher/
 
 the to-do list has been moved to [TODO.md](https://github.com/willjasen/wallace-thrasher/blob/main/TODO.md)
 
+### 📋 Attribution 📋
+
+the transcript and subtitle data on this website are merged with data from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/) and its contributors. that data is used and distributed here under the [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/) license, consistent with the wiki's own licensing.
+
 ### 🪪 Licensing & Rights 🪪
 
-this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
+this project is **dual-licensed** — the source code and the JSON data are covered by separate licenses.
+
+##### source code — GPLv3
+
+all source code (Ruby plugins, Python scripts, JavaScript, HTML templates, YAML config, etc.) is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
 
 1. anyone may copy, modify, and distribute this software *(throw it up and down)*
 2. all distributions of this software must include the license and copyright notice always *(otherwise you're gettin' a citation)*
@@ -163,7 +161,11 @@ this project is licensed under the [GPLv3](https://github.com/willjasen/wallace-
 8. this software is provided without warranty *(just like when those hubcaps came clean off the car)*
 9. while it seems far out how such a case could arise, the software author or license can not be held liable for any damages inflicted by the software *(or your lips will be inflicted with the sidewalk)*
 
-longmont potion castle retains all rights to his associated and respective works
+##### json data — CC-BY-SA 3.0
+
+the JSON transcript and subtitle data files in `/assets/json/` are merged with data from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/) and distributed here under the [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/) license, per the wiki's share-alike requirement.
+
+##### longmont potion castle retains all rights to his associated and respective works
 
 if you enjoy the catalogue, please support the artist by purchasing merch from [the official website at noisetent.com](http://noisetent.com/lpcmerchandise.htm)
 

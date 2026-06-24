@@ -3,7 +3,16 @@
 ---
 // These 3 lines above must stay because they are used like front matter for Jekyll to process
 
+// Globals read by load-search-with-progress.html — initialized once, preserved across re-executions
+window.dataLoaded = window.dataLoaded || false;
+window.albumDataLoadedPercentage = window.albumDataLoadedPercentage || 0;
+window.trackDataLoadedPercentage = window.trackDataLoadedPercentage || 0;
+
 // search.js
+;(function() {
+if (window._wtSearchLoaded) return;
+window._wtSearchLoaded = true;
+
 const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}' === 'true';
@@ -241,14 +250,100 @@ async function loadData() {
 }
 
 /*
+    Yield control back to the browser's task queue, breaking up long tasks and
+    preventing 'setTimeout handler took Xms' violations in DevTools.
+*/
+const yieldToMain = () => new Promise(resolve => setTimeout(resolve, 0));
+
+/*
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
         // Fetch data.json once and cache it for all consumers
         const rawDataJson = await fetchDataCached(BASE_URL + '/assets/json/data.json');
 
-        // Build a track-level establishments index
-        function buildTrackEstablishmentIndex(rawData) {
+    try {
+        var jekyll_env = '{{ jekyll.environment }}';
+        dataStructure = await loadData();
+        const dataMap = new Map(dataStructure.map(doc => [doc.id, doc]));
+
+        // Function to index a search based on a field
+        function indexOnField(indexField) {
+            let startTimeInMilliseconds = Date.now();
+            const idx = lunr(function () {
+                this.ref('id');
+                this.field(indexField);
+
+                dataStructure.forEach(function (doc) {
+                    this.add(doc);
+                }, this);
+            });
+            let endTimeInMilliseconds = Date.now();
+            console.log("Indexing " + indexField + " took", (endTimeInMilliseconds - startTimeInMilliseconds), "milliseconds.");
+            return idx;
+        }
+
+        const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
+
+        let idxText;
+        await yieldToMain();
+        if ('caches' in window) {
+            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Text');
+            if (cached) {
+                let startTimeInMilliseconds = Date.now();
+                idxText = lunr.Index.load(cached);
+                console.log('Loading Text index from cache took', (Date.now() - startTimeInMilliseconds), 'milliseconds.');
+            }
+        }
+        if (!idxText) {
+            idxText = indexOnField('Text');
+            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Text', idxText.toJSON());
+        }
+
+        let idxSpeaker;
+        await yieldToMain();
+        if ('caches' in window) {
+            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Speaker');
+            if (cached) {
+                let startTimeInMilliseconds = Date.now();
+                idxSpeaker = lunr.Index.load(cached);
+                console.log('Loading Speaker index from cache took', (Date.now() - startTimeInMilliseconds), 'milliseconds.');
+            }
+        }
+        if (!idxSpeaker) {
+            idxSpeaker = indexOnField('Speaker');
+            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Speaker', idxSpeaker.toJSON());
+        }
+
+        // Build a track-level alias docs array
+        function buildTrackAliasDocs(rawData) {
+            let startTimeInMilliseconds = Date.now();
+            let trackDocs = [];
+            if (rawData && rawData.Albums) {
+                rawData.Albums.forEach(album => {
+                    album.Tracks.forEach(track => {
+                        trackDocs.push({
+                            id: `${album.Album}|||${track.Track_Title}`,
+                            Album: album.Album,
+                            Album_Slug: album.Album_Slug,
+                            Track_Title: track.Track_Title,
+                            Track_Slug: track.Track_Slug,
+                            Aliases: (Array.isArray(track.Aliases) ? track.Aliases.join(', ') : (track.Aliases || '')),
+                            Album_Picture: album.Album_Picture
+                        });
+                    });
+                });
+            }
+            let endTimeInMilliseconds = Date.now();
+            console.log("Building track alias docs took", (endTimeInMilliseconds - startTimeInMilliseconds), "milliseconds.");
+            return trackDocs;
+        }
+
+        await yieldToMain();
+        const trackAliasDocs = buildTrackAliasDocs(rawDataJson);
+
+        // Build a track-level establishment docs array
+        function buildTrackEstablishmentDocs(rawData) {
             let startTimeInMilliseconds = Date.now();
             let trackDocs = [];
             if (rawData && rawData.Albums) {
@@ -267,111 +362,19 @@ async function main(callback) {
                 });
             }
             let endTimeInMilliseconds = Date.now();
-            console.log("Building track establishments index took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
+            console.log("Building track establishment docs took", (endTimeInMilliseconds - startTimeInMilliseconds), "milliseconds.");
             return trackDocs;
         }
 
-        const trackEstablishmentDocs = buildTrackEstablishmentIndex(rawDataJson);
-        
-    try {
-        var jekyll_env = '{{ jekyll.environment }}';
-        dataStructure = await loadData();
-       
-        // Function to index a search based on a field
-        function indexOnField(indexField) {
-            let startTimeInMilliseconds = Date.now();
-            const idx = lunr(function () {
-                this.ref('id');
-                this.field(indexField);
-
-                dataStructure.forEach(function (doc) {
-                    if (indexField === 'Aliases') {
-                        if (!doc.Aliases || (Array.isArray(doc.Aliases) && doc.Aliases.length === 0)) {
-                            doc.Aliases = '';
-                        } else if (Array.isArray(doc.Aliases)) {
-                            doc.Aliases = doc.Aliases.join(', ');
-                        }
-                    }
-                    this.add(doc);
-                }, this);
-            });
-            let endTimeInMilliseconds = Date.now();
-            console.log("Indexing " + indexField + " took " + (endTimeInMilliseconds - startTimeInMilliseconds) + " milliseconds.");
-            return idx;
-        }
-
-        const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
-
-        let idxText;
-        if ('caches' in window) {
-            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Text');
-            if (cached) {
-                let startTimeInMilliseconds = Date.now();
-                idxText = lunr.Index.load(cached);
-                console.log('Loading Text index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
-            }
-        }
-        if (!idxText) {
-            idxText = indexOnField('Text');
-            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Text', idxText.toJSON());
-        }
-
-        let idxSpeaker;
-        if ('caches' in window) {
-            const cached = await loadFromCache(cacheName, '/wt-cache/idx-Speaker');
-            if (cached) {
-                let startTimeInMilliseconds = Date.now();
-                idxSpeaker = lunr.Index.load(cached);
-                console.log('Loading Speaker index from cache took ' + (Date.now() - startTimeInMilliseconds) + ' milliseconds.');
-            }
-        }
-        if (!idxSpeaker) {
-            idxSpeaker = indexOnField('Speaker');
-            if ('caches' in window) await saveToCache(cacheName, '/wt-cache/idx-Speaker', idxSpeaker.toJSON());
-        }
-
-        // Build a track-level alias index
-        function buildTrackAliasIndex(rawData) {
-            // We'll scan the original data structure to find all unique tracks and their Aliases
-            // To do this, we need to reload the original JSON (not subtitle-level docs)
-            // We'll fetch the data again, but only for this index
-            // This is a workaround for the current data flow
-            // If you want to optimize, refactor to keep the original album/track structure in memory
-            let trackDocs = [];
-            if (rawData && rawData.Albums) {
-                rawData.Albums.forEach(album => {
-                    album.Tracks.forEach(track => {
-                        trackDocs.push({
-                            id: `${album.Album}|||${track.Track_Title}`,
-                            Album: album.Album,
-                            Album_Slug: album.Album_Slug,
-                            Track_Title: track.Track_Title,
-                            Track_Slug: track.Track_Slug,
-                            Aliases: (Array.isArray(track.Aliases) ? track.Aliases.join(', ') : (track.Aliases || '')),
-                            Album_Picture: album.Album_Picture
-                        });
-                    });
-                });
-            }
-            const idx = lunr(function () {
-                this.ref('id');
-                this.field('Aliases');
-                this.field('Track_Title');
-                trackDocs.forEach(function (doc) {
-                    this.add(doc);
-                }, this);
-            });
-            return { idx, trackDocs };
-        }
-
-        const { idx: idxTrackAlias, trackDocs: trackAliasDocs } = buildTrackAliasIndex(rawDataJson);
+        await yieldToMain();
+        const trackEstablishmentDocs = buildTrackEstablishmentDocs(rawDataJson);
 
         // Count the number of times Alex Trebek show up within a track
         function getNumberOfTracksThatAlexTrebekIsIn() {
             const resultsForAlexTrebek = idxSpeaker.search("+Alex +Trebek");
             let tracksWithAlexTrebek = new Set();
             resultsForAlexTrebek.forEach(function (resultForAlex) {
-                const matchedDoc = dataStructure.find(doc => doc.id === resultForAlex.ref);
+                const matchedDoc = dataMap.get(resultForAlex.ref);
                 const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
                 
                 // Add to Set only if the combination isn't already added
@@ -386,73 +389,34 @@ async function main(callback) {
         
         // Function to programmatically run the speakers search for "Alex Trebek"
         function runSpeakerSearchForAlexTrebek() {
-            let resultsContainer = document.querySelector('#alex-tracks-span');
-            if (!resultsContainer) {
-                // Only run on the Alex Trebek page
-                return;
-            }
-            let speakersSearchInput = document.querySelector('#speakers-search-input');
-            if (!speakersSearchInput) {
-                // Create a hidden input if it doesn't exist
-                speakersSearchInput = document.createElement('input');
-                speakersSearchInput.type = 'hidden';
-                speakersSearchInput.id = 'speakers-search-input';
-                document.body.appendChild(speakersSearchInput);
-                // Attach the event listener as in main()
-                speakersSearchInput.addEventListener('input', function () {
-                    if (this.value.trim() !== "") {
-                        const query = this.value.trim().split(' ').map(word => `+${word}`).join(' ');
-                        const results = idxSpeaker.search(query);
-                        resultsContainer.innerHTML = '';
-                        let tracksWithSpeaker = new Set();
-                        results.forEach(function (result) {
-                            const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
-                            const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
-                            if (!tracksWithSpeaker.has(key)) {
-                                tracksWithSpeaker.add(key);
-                                const albumAndTitleItem = document.createElement('li');
-                                albumAndTitleItem.innerHTML = `
-                                    <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
-                                    ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
-                                `;
-                                resultsContainer.appendChild(albumAndTitleItem);
-                            }
-                        });
-                    }
-                });
-            }
-            speakersSearchInput.value = 'Alex Trebek';
-            speakersSearchInput.dispatchEvent(new Event('input'));
+            const resultsContainer = document.querySelector('#alex-tracks-span');
+            if (!resultsContainer) return; // Only run on the Alex Trebek page
+
+            const results = idxSpeaker.search('+Alex +Trebek');
+            resultsContainer.innerHTML = '';
+            let tracksWithSpeaker = new Set();
+            results.forEach(function (result) {
+                const matchedDoc = dataMap.get(result.ref);
+                const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                if (!tracksWithSpeaker.has(key)) {
+                    tracksWithSpeaker.add(key);
+                    const albumAndTitleItem = document.createElement('li');
+                    albumAndTitleItem.innerHTML = `
+                        <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                        ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
+                    `;
+                    resultsContainer.appendChild(albumAndTitleItem);
+                }
+            });
         }
 
-        // Set up the subtitles search input listener
-        if (document.querySelector('#subtitles-search-input')) {
-            fileMap = {};
-            if(jekyll_env != "production") {
-                const fileInput = document.getElementById('fileInput');
-                const audio = document.getElementById('audioPlayer');
-                fileInput.addEventListener('change', function(event) {
-                    fileTarget = event.target;
-                    const files = fileTarget.files;
-                    for (const file of files) {
-                        if (file.name.endsWith('.mp3')) {
-                            const url = URL.createObjectURL(file);
-                            fileMap[file.webkitRelativePath] = url;
-                        }  
-                    }
-                    console.log("Files have been uploaded! Jumping to a subtitle will now work!");
-
-                    // Update the input of #subtitles-search-input
-                    const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
-                    if (subtitlesSearchInput) {
-                        subtitlesSearchInput.value = subtitlesSearchInput.value; // Set the value to itself
-                        subtitlesSearchInput.dispatchEvent(new Event('input')); // Trigger the input event
-                    }
-                });
-            }
-            document.querySelector('#subtitles-search-input').addEventListener('input', function () {
-                if (this.value.trim() != "") {
-                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
+        // Set up the subtitles search input listener (delegated so it survives soft-nav DOM swaps)
+        window.fileMap = window.fileMap || {};
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#subtitles-search-input')) return;
+            (function (input) {
+                if (input.value.trim() != "") {
+                    const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxText.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -466,7 +430,7 @@ async function main(callback) {
                     results.forEach(function (result) {
 
                         resultCount++;
-                        const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                        const matchedDoc = dataMap.get(result.ref);
 
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.innerHTML = `
@@ -475,7 +439,7 @@ async function main(callback) {
                             <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
                         `;
 
-                        if (!fileMap || Object.keys(fileMap).length === 0) {
+                        if (!window.fileMap || Object.keys(window.fileMap).length === 0) {
                             albumAndTitleItem.innerHTML += `
                                 <small> @ ${matchedDoc.StartTime}</small>
                             `;
@@ -502,7 +466,7 @@ async function main(callback) {
                             startTimeLink.addEventListener('click', function(e) {
                                 const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
                                 // console.log('Relevant URL: ' + relevantUrl);
-                                const matchingUrl = fileMap[relevantUrl];
+                                const matchingUrl = window.fileMap[relevantUrl];
                                 // console.log('Matching URL: ' + matchingUrl);
                                 e.preventDefault();
                                 const audioPlayer = document.getElementById('audioPlayer');
@@ -530,14 +494,15 @@ async function main(callback) {
                     totalCountContainer.innerHTML = `Subtitles found: ${resultCount}`;
                     resultList.insertBefore(totalCountContainer, resultList.firstChild);
                 }
-            });
-        }
+            })(e.target);
+        });
 
-        // Set up the speakers search input listener
-        if (document.querySelector('#speakers-search-input')) {
-            document.querySelector('#speakers-search-input').addEventListener('input', function () {
-                if (this.value.trim() !== "") {
-                    const query = this.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
+        // Set up the speakers search input listener (delegated)
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#speakers-search-input')) return;
+            (function (input) {
+                if (input.value.trim() !== "") {
+                    const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxSpeaker.search(query);
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
@@ -551,7 +516,7 @@ async function main(callback) {
 
                     // Display search results
                     results.forEach(function (result) {
-                        const matchedDoc = dataStructure.find(doc => doc.id === result.ref);
+                        const matchedDoc = dataMap.get(result.ref);
 
                         //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
                         const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
@@ -578,13 +543,14 @@ async function main(callback) {
                     totalCountContainer.innerHTML = `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
                     resultList.insertBefore(totalCountContainer, resultList.firstChild);
                 }
-            });
-        }
+            })(e.target);
+        });
 
-        // Set up the aliases search input listener
-        if (document.querySelector('#aliases-search-input')) {
-            document.querySelector('#aliases-search-input').addEventListener('input', function () {
-                const query = this.value.trim().toLowerCase();
+        // Set up the aliases search input listener (delegated)
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#aliases-search-input')) return;
+            (function (input) {
+                const query = input.value.trim().toLowerCase();
                 const resultList = document.querySelector('#aliases-search-results');
                 resultList.innerHTML = '';
                 if (query === "") return;
@@ -614,13 +580,14 @@ async function main(callback) {
                 totalCountContainer.style.marginBottom = '25px';
                 totalCountContainer.innerHTML = `<br/><p>Unique track-alias combinations: ${matchCount}</p>`;
                 resultList.insertBefore(totalCountContainer, resultList.firstChild);
-            });
-        }
+            })(e.target);
+        });
 
-        // Set up the establishments search input listener
-        if (document.querySelector('#establishments-search-input')) {
-            document.querySelector('#establishments-search-input').addEventListener('input', function () {
-                const query = this.value.trim().toLowerCase();
+        // Set up the establishments search input listener (delegated)
+        document.addEventListener('input', function (e) {
+            if (!e.target.matches('#establishments-search-input')) return;
+            (function (input) {
+                const query = input.value.trim().toLowerCase();
                 const resultList = document.querySelector('#establishments-search-results');
                 resultList.innerHTML = '';
                 if (query === "") return;
@@ -649,18 +616,25 @@ async function main(callback) {
                 totalCountContainer.style.marginBottom = '25px';
                 totalCountContainer.innerHTML = `<br/><p>Unique track-establishment combinations: ${matchCount}</p>`;
                 resultList.insertBefore(totalCountContainer, resultList.firstChild);
-            });
-        }
+            })(e.target);
+        });
 
-        function onDomContentLoaded() {
-            const countOfAlexTrebek = getNumberOfTracksThatAlexTrebekIsIn();
+        // Cache the Alex Trebek count so the lunr search only runs once ever.
+        let _cachedAlexCount = null;
+
+        async function onDomContentLoaded() {
+            // Only do Alex-related work when on the Alex Trebek page.
             const alexCountSpan = document.querySelector('#alex-count-span');
+            const alexTracksSpan = document.querySelector('#alex-tracks-span');
+            if (!alexCountSpan && !alexTracksSpan) return;
+
             if (alexCountSpan) {
-                alexCountSpan.textContent = countOfAlexTrebek;
-            } else {
-                // console.error('Element with id "alex-count-span" not found.');
+                if (_cachedAlexCount === null) {
+                    _cachedAlexCount = getNumberOfTracksThatAlexTrebekIsIn();
+                }
+                alexCountSpan.textContent = _cachedAlexCount;
             }
-            // Display the results for Alex Trebek
+            await yieldToMain();
             runSpeakerSearchForAlexTrebek();
         }
         
@@ -676,6 +650,9 @@ async function main(callback) {
             return `${albumTitle}-${trackTitle}-${speaker}`;
         }
 
+        // Expose so the module-level soft-nav listener can call it after async work is done
+        window._wtOnDomContentLoaded = onDomContentLoaded;
+
         callback(true);
 
     } catch (error) {
@@ -685,9 +662,6 @@ async function main(callback) {
 }
 
 // Execute this program
-var dataLoaded = false;
-let albumDataLoadedPercentage = 0;
-let trackDataLoadedPercentage = 0;
 
 // Disable all search inputs on page load
 document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
@@ -703,3 +677,13 @@ main(function(dataReady) {
                 handleSearchParameter();
         }
 });
+
+// Re-run page-specific UI after soft-nav swaps the DOM.
+// Registered here at module level (not inside async main()) so it is always
+// active regardless of how long main() takes to finish.
+document.addEventListener('soft-nav', function () {
+    if (typeof window._wtOnDomContentLoaded === 'function') {
+        setTimeout(window._wtOnDomContentLoaded, 0);
+    }
+});
+})(); // close IIFE guard — prevents re-execution in the same window context (e.g. after soft-nav)
