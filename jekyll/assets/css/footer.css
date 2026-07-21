@@ -8,5 +8,24 @@
 }
 .footer-col {
   flex: 1;
-  min-width: 200px;
+  min-width: 0;
+}
+
+.footer-col-1 {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  flex-basis: auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  width: auto !important;
+}
+
+.footer-col-2 {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  margin-left: auto;
+  min-width: max-content;
+  padding-right: 0;
+  text-align: left !important;
+  width: auto !important;
 }
