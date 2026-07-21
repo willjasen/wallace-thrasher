@@ -1,27 +1,38 @@
 ---
-layout: page
+layout: base
 ---
 
 {% include variables.liquid %}
-{% include album-header.html %}
 
-<!-- Display an album with its tracks -->
-<ul style="list-style-type: none;"> 
-{% for track in all_tracks_on_album %}  
-    <li style="list-style-type: none;">
-      <strong>{{ track.Track_Number }}: </strong>
-      {% if track %}
-        <a href="{{ site.baseurl }}/tracks/{{ matched_album_slug }}/{{ track.Track_Slug }}/">{{ track.Track_Title }}</a>
-      {% else %}
-        {{ track.Track_Title }} (track not found)
-      {% endif %}
-    </li>
-{% endfor %}
-</ul>
+<article class="post album-page">
+  <div class="post-content">
+    <header class="album-hero">
+      <img src="{{ site.baseurl }}/assets/img/albums/{{ matched_album_image }}" alt="Album cover for {{ matched_album_title }}" width="180" height="180">
+      <div>
+        <p class="album-hero-label">Album</p>
+        <h1>{{ matched_album_title }}</h1>
+        <p class="album-hero-meta">{{ matched_album_year }} · {{ all_tracks_on_album | size }} tracks</p>
+      </div>
+    </header>
 
-<!-- Link to external wiki at the bottom -->
-<p style="margin-top:2em;">
-  <a href="https://talkinwhipapedia.fandom.com/wiki/{{ matched_album_title | replace: ' ', '_' }}" target="_blank" rel="noopener">
-    More about the album "{{ matched_album_title }}" on Talkin 'Whipapedia
-  </a>
-</p>
+    <section aria-labelledby="album-track-heading">
+      <h2 class="album-track-heading" id="album-track-heading">Tracks</h2>
+      <ol class="album-track-list">
+        {% for track in all_tracks_on_album %}
+          <li>
+            <a href="{{ site.baseurl }}/tracks/{{ matched_album_slug }}/{{ track.Track_Slug }}/">
+              <span class="album-track-number">{{ track.Track_Number }}</span>
+              <span>{{ track.Track_Title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <p class="album-wiki-link">
+      <a href="https://talkinwhipapedia.fandom.com/wiki/{{ matched_album_title | replace: ' ', '_' }}" target="_blank" rel="noopener">
+        More about {{ matched_album_title }} on Talkin 'Whipapedia →
+      </a>
+    </p>
+  </div>
+</article>

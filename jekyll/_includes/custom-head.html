@@ -2,6 +2,9 @@
 {% if page.collection == "tracks" or page.url == "/tracks/" %}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/track-page.css">
 {% endif %}
+{% if page.collection == "albums" %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/album-page.css">
+{% endif %}
 <script
   src="{{ site.baseurl }}/assets/js/data-api.js"
   data-source="{{ site.baseurl }}/assets/json/data.combined.json"

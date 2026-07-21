@@ -1,0 +1,61 @@
+.album-page .post-content { margin-top: 0; }
+
+.album-hero {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+  margin: 0 0 28px;
+  padding: 24px;
+  border: 1px solid rgba(127, 127, 127, 0.28);
+  border-radius: 16px;
+  background: rgba(127, 127, 127, 0.07);
+}
+
+.album-hero img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.album-hero-label {
+  margin: 0 0 5px;
+  color: #aaa;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.album-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.album-hero-meta { margin: 0; color: #aaa; font-size: 0.95rem; }
+.album-track-heading { margin: 0 0 12px; font-size: 1.25rem; }
+.album-track-list { margin: 0; padding: 0; list-style: none; }
+.album-track-list li { border-top: 1px solid rgba(127, 127, 127, 0.2); }
+.album-track-list li:last-child { border-bottom: 1px solid rgba(127, 127, 127, 0.2); }
+.album-track-list a {
+  display: grid;
+  grid-template-columns: 3ch minmax(0, 1fr);
+  gap: 12px;
+  padding: 11px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.album-track-list a:hover { background: rgba(127, 127, 127, 0.1); }
+.album-track-number { color: #888; text-align: right; font-variant-numeric: tabular-nums; }
+.album-wiki-link { margin: 24px 0 0; }
+
+@media (max-width: 620px) {
+  .album-hero { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; padding: 16px; }
+  .album-hero img { width: 100px; height: 100px; }
+  .album-hero h1 { font-size: clamp(1.55rem, 8vw, 2.2rem); }
+}
