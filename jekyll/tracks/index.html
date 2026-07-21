@@ -264,6 +264,12 @@ noindex: true
   let thisTrackShouldHighlight = false;
   let startKaraokeCallback = null;
 
+  const artworkUrl = BASE_URL + '/assets/img/albums/' + album.Album_Picture;
+
+  function setNowPlaying() {
+    window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title, artworkUrl);
+  }
+
   function applyTrackAudio(matchingUrl) {
     const audio = window.lpcPlayer.audio;
     if (!audio.paused) {
@@ -276,6 +282,7 @@ noindex: true
         audio.src = matchingUrl;
         audio.style.display = '';
         audio.play();
+        setNowPlaying();
         btn.remove();
         if (startKaraokeCallback) startKaraokeCallback();
       });
@@ -284,6 +291,7 @@ noindex: true
       // Nothing playing — auto-load this track
       audio.src = matchingUrl;
       audio.style.display = '';
+      setNowPlaying();
       // If the DOM is already rendered, start karaoke now; otherwise flag it for after render.
       if (startKaraokeCallback) {
         startKaraokeCallback();
@@ -296,27 +304,24 @@ noindex: true
   function initTrackAudio() {
     const usbFilename = track.USB_Filename || (track.Track_Title + '.mp3');
     const albumUsbDir = album.USB_Directory;
-    const relevantUrl = 'LPC USB/' + albumUsbDir + '/' + usbFilename;
 
     if (window.lpcPlayer && window.lpcPlayer.isLoaded()) {
-      const matchingUrl = window.fileMap[relevantUrl];
+      const matchingUrl = window.lpcPlayer.resolveTrackUrl(albumUsbDir, usbFilename);
       if (matchingUrl) {
         applyTrackAudio(matchingUrl);
-        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
       }
     }
     // Load when directory is selected/granted for the first time
     document.addEventListener('lpc-loaded', function () {
-      const matchingUrl = window.fileMap[relevantUrl];
+      const matchingUrl = window.lpcPlayer.resolveTrackUrl(albumUsbDir, usbFilename);
       if (matchingUrl) {
         applyTrackAudio(matchingUrl);
-        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
       }
     }, { once: true });
     document.addEventListener('lpc-permission-granted', async function () {
       const ok = await window.lpcPlayer.loadTrack(albumUsbDir, usbFilename);
       if (ok) {
-        window.lpcPlayer.setNowPlaying(album.Album, track.Track_Title);
+        setNowPlaying();
         if (startKaraokeCallback) startKaraokeCallback();
       }
     }, { once: true });

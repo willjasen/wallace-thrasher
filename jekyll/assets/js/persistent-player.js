@@ -67,6 +67,10 @@
     }
     #audioFabPanel audio { width: 100%; margin-top: 4px; }
     #audioFabPanel .fab-panel-title { margin: 0; color: #b0b0e0; font-size: 0.78em; text-align: center; }
+    #audioFabArtwork {
+      display: none; width: 112px; height: 112px; object-fit: cover;
+      border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.45);
+    }
     #selectLpcBtn {
       color: greenyellow; background: none; border: 1px solid greenyellow;
       border-radius: 6px; padding: 6px 12px; cursor: pointer; font-weight: bold;
@@ -91,6 +95,11 @@
   panelTitle.className = 'fab-panel-title';
   panelTitle.textContent = 'Select the top-level directory for the collection, usually named \u201CLPC USB\u201D';
   fabPanel.appendChild(panelTitle);
+
+  const albumArtwork = document.createElement('img');
+  albumArtwork.id = 'audioFabArtwork';
+  albumArtwork.alt = '';
+  fabPanel.appendChild(albumArtwork);
 
   const selectBtn = document.createElement('button');
   selectBtn.id = 'selectLpcBtn';
@@ -137,6 +146,11 @@
     get fileMap() { return window.fileMap; },
     isLoaded: function () { return Object.keys(window.fileMap).length > 0; },
 
+    resolveTrackUrl: function (albumUsbDir, usbFilename) {
+      if (!window.LpcFileResolver) return null;
+      return window.LpcFileResolver.resolve(window.fileMap, albumUsbDir, usbFilename);
+    },
+
     // Load a specific track from the stored directory handle
     async loadTrack(albumUsbDir, usbFilename) {
       if (!cachedHandle) return false;
@@ -147,10 +161,17 @@
           const granted = await cachedHandle.requestPermission({ mode: 'read' });
           if (granted !== 'granted') return false;
         }
-        const albumDir = await handle.getDirectoryHandle(albumUsbDir);
-        const fileHandle = await albumDir.getFileHandle(usbFilename);
-        const file = await fileHandle.getFile();
-        audioPlayer.src = URL.createObjectURL(file);
+        // Prefer the traversed map: it tolerates case, punctuation, and Unicode
+        // differences between the catalog and the files on the USB.
+        var resolvedUrl = this.resolveTrackUrl(albumUsbDir, usbFilename);
+        if (resolvedUrl) {
+          audioPlayer.src = resolvedUrl;
+        } else {
+          const albumDir = await handle.getDirectoryHandle(albumUsbDir);
+          const fileHandle = await albumDir.getFileHandle(usbFilename);
+          const file = await fileHandle.getFile();
+          audioPlayer.src = URL.createObjectURL(file);
+        }
         audioPlayer.style.display = '';
         markLoaded();
         return true;
@@ -177,9 +198,18 @@
       }
     },
 
-    // Update the select button to show the currently-loaded album and track name
-    setNowPlaying: function (albumName, trackTitle) {
+    // Update the panel with the currently-loaded album, track, and artwork.
+    setNowPlaying: function (albumName, trackTitle, artworkUrl) {
       selectBtn.textContent = albumName + ' \u2014 ' + trackTitle;
+      if (artworkUrl) {
+        albumArtwork.src = artworkUrl;
+        albumArtwork.alt = 'Album cover for ' + albumName;
+        albumArtwork.style.display = 'block';
+      } else {
+        albumArtwork.removeAttribute('src');
+        albumArtwork.alt = '';
+        albumArtwork.style.display = 'none';
+      }
     }
   };
 

@@ -5,6 +5,19 @@ layout: page
 {% include variables.liquid %}
 {% include album-header.html %}
 
+<style>
+  .subtitle-line {
+    padding: 4px 10px;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    transition: background-color 0.25s, border-color 0.25s;
+  }
+  .subtitle-line.subtitle-active {
+    background-color: rgba(173, 255, 47, 0.15);
+    border-left-color: greenyellow;
+  }
+</style>
+
 <script>console.log("Track: {{ page.track_title }}");</script>
 
 <h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
@@ -143,7 +156,7 @@ layout: page
 <ul style="list-style-type: none;">
   {% if track_subtitles %}
     {% for trackText in track_subtitles %}
-      <li>
+      <li class="subtitle-line" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
         {% if jekyll.environment != "production" %}
           <i>{{ trackText.Index }}</i> -- 
         {% endif %}
@@ -152,7 +165,7 @@ layout: page
     {% endfor %}
   {% else %}
     {% for trackText in track %}
-    <li>
+    <li class="subtitle-line" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
       {% if jekyll.environment != "production" %}
           <i>{{ trackText.Index }}</i> -- 
       {% endif %}

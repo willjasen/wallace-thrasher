@@ -99,10 +99,12 @@ async function loadData(data) {
                     Album_Year: album.Year,
                     Album_Picture: album.Album_Picture,
                     Album_Slug: album.Album_Slug,
+                    Album_USB_Directory: album.USB_Directory,
                     Track_Number: track.Track_Number,
                     Track_Slug: track.Track_Slug,
                     Track_Subtitles: track.Subtitles,
                     Track_Title: track.Track_Title,
+                    Track_USB_Filename: track.USB_Filename,
                     Subtitle_Index: subtitle.Index,
                     Speaker: subtitle.Speaker,
                     Text: subtitle.Text,
@@ -362,10 +364,6 @@ async function main(callback) {
                             `;
 
                             // Create a clickable link
-                            const matchedAlbumYear = matchedDoc.Album_Year;
-                            const matchedAlbumTitle = matchedDoc.Album;
-                            const trackTitleDetail = matchedDoc.Track_Title;
-
                             const startTimeLink = document.createElement('a');
                             startTimeLink.href = "#" + matchedDoc.StartTime;
                             startTimeLink.textContent = matchedDoc.StartTime;
@@ -376,17 +374,25 @@ async function main(callback) {
                             const seconds = parseInt(timeParts[2].split(",")[0], 10);
                             const secondsConverted = (minutes * 60) + seconds;
                             startTimeLink.addEventListener('click', function(e) {
-                                const relevantUrl = `LPC USB/${matchedAlbumYear} - ${matchedAlbumTitle}/${trackTitleDetail}.mp3`;
-                                // console.log('Relevant URL: ' + relevantUrl);
-                                const matchingUrl = window.fileMap[relevantUrl];
-                                // console.log('Matching URL: ' + matchingUrl);
                                 e.preventDefault();
+                                const usbFilename = matchedDoc.Track_USB_Filename || (matchedDoc.Track_Title + '.mp3');
+                                const matchingUrl = window.lpcPlayer && window.lpcPlayer.resolveTrackUrl(
+                                    matchedDoc.Album_USB_Directory,
+                                    usbFilename
+                                );
+                                if (!matchingUrl) {
+                                    console.warn('No LPC USB audio found for', matchedDoc.Album, matchedDoc.Track_Title);
+                                    return;
+                                }
                                 const audioPlayer = document.getElementById('audioPlayer');
                                 if (audioPlayer) {
                                     audioPlayer.src = matchingUrl;
                                     audioPlayer.currentTime = secondsConverted;
-                                    console.log(audioPlayer.src);
-                                    console.log("Playing audio from timestamp:", secondsConverted);
+                                    window.lpcPlayer.setNowPlaying(
+                                        matchedDoc.Album,
+                                        matchedDoc.Track_Title,
+                                        `${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}`
+                                    );
                                     audioPlayer.play();
                                 }
                             });

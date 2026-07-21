@@ -1,44 +1,108 @@
-{% include embed-audio.html %}
-
 <script>
+(function initTrackAudio() {
+  const albumName = {{ matched_album_title | jsonify }};
+  const trackTitle = {{ track_title_detail | jsonify }};
+  const albumUSBDirectory = {{ matched_album_usb_dir | jsonify }};
+  const usbFilename = {{ usb_filename_detail | jsonify }} || (trackTitle + '.mp3');
+  const artworkUrl = {{ site.baseurl | append: "/assets/img/albums/" | append: matched_album_image | jsonify }};
 
-  const fileInput = document.getElementById('fileInput');
-  const audio = document.getElementById('audioPlayer');
-  
-  // Global variable to store event.target for later use
-  let storedFileTarget;
-  
-  // Create an empty object to store the file name to URL mapping
-  const fileMap = {};
-  
-  fileInput.addEventListener('change', function(event) {
-    // Store event.target globally
-    storedFileTarget = event.target;
-    const files = storedFileTarget.files;
-    for (const file of files) {
-      const url = URL.createObjectURL(file);
-      // Store the mapping of file.name to its URL
-      fileMap[file.webkitRelativePath] = url;
+  // A soft navigation can leave listeners from the previous track page alive.
+  // Retire them before connecting this page to the persistent player.
+  if (window.legacyTrackAudioAbort) window.legacyTrackAudioAbort.abort();
+  const abortController = new AbortController();
+  window.legacyTrackAudioAbort = abortController;
+  let karaokeStarted = false;
+  let activeSubtitle = null;
+
+  function parseSubtitleTime(value) {
+    const match = String(value || '').match(/^(?:(\d+):)?(\d+):(\d+)(?:[,.](\d+))?$/);
+    if (!match) return NaN;
+    const hours = Number(match[1] || 0);
+    const minutes = Number(match[2] || 0);
+    const seconds = Number(match[3] || 0);
+    const milliseconds = Number((match[4] || '').padEnd(3, '0').slice(0, 3));
+    return (hours * 3600) + (minutes * 60) + seconds + (milliseconds / 1000);
+  }
+
+  function startKaraoke() {
+    if (karaokeStarted || !window.lpcPlayer) return;
+    const lines = Array.from(document.querySelectorAll('.subtitle-line[data-start-time]')).map(function (line) {
+      return {
+        element: line,
+        start: parseSubtitleTime(line.dataset.startTime),
+        end: parseSubtitleTime(line.dataset.endTime)
+      };
+    }).filter(function (line) {
+      return Number.isFinite(line.start) && Number.isFinite(line.end);
+    });
+    if (!lines.length) return;
+
+    const audio = window.lpcPlayer.audio;
+    function updateHighlight() {
+      const time = audio.currentTime;
+      const next = lines.find(function (line) {
+        return time >= line.start && time < line.end;
+      });
+      const nextElement = next ? next.element : null;
+      if (nextElement === activeSubtitle) return;
+      if (activeSubtitle) activeSubtitle.classList.remove('subtitle-active');
+      activeSubtitle = nextElement;
+      if (activeSubtitle) activeSubtitle.classList.add('subtitle-active');
     }
-    // Log the complete fileMap
-    // console.log(fileMap);
 
-    // Determine the matching URL and play the file
-    const matchedAlbumYear = "{{ matched_album_year }}";
-    const matchedAlbumTitle = "{{ matched_album_title }}";
-    const trackTitleDetail = "{{ track_title_detail }}";
-    const albumUSBDirectory = "{{ matched_album_usb_dir }}"
-    const relevantUrl = `LPC USB/${albumUSBDirectory}/${trackTitleDetail}.mp3`;
-    console.log('Relevant URL: ' + relevantUrl);
-    const matchingUrl = fileMap[relevantUrl];
-    console.log('Matching URL: ' + matchingUrl);
-    audio.src = matchingUrl;
+    audio.addEventListener('timeupdate', updateHighlight, { signal: abortController.signal });
+    audio.addEventListener('seeked', updateHighlight, { signal: abortController.signal });
+    audio.addEventListener('loadedmetadata', updateHighlight, { signal: abortController.signal });
+    karaokeStarted = true;
+    updateHighlight();
+  }
 
-    // Wait for metadata to be loaded before seeking.
-    audio.addEventListener('loadedmetadata', function() {
-         // audio.play();
-       }, { once: true });
+  function setNowPlaying() {
+    window.lpcPlayer.setNowPlaying(albumName, trackTitle, artworkUrl);
+  }
 
+  function loadFromFileMap() {
+    if (!window.lpcPlayer || !window.lpcPlayer.isLoaded()) return false;
+    const matchingUrl = window.lpcPlayer.resolveTrackUrl(albumUSBDirectory, usbFilename);
+    if (!matchingUrl) return false;
+
+    const audio = window.lpcPlayer.audio;
+    // Preserve uninterrupted playback when arriving from another track. If the
+    // player is idle, make this page's track ready for the play button.
+    const isCurrentTrack = audio.src === matchingUrl || audio.currentSrc === matchingUrl;
+    if (audio.paused || !audio.currentSrc) {
+      if (audio.src !== matchingUrl) audio.src = matchingUrl;
+      audio.style.display = '';
+      setNowPlaying();
+      startKaraoke();
+    } else if (isCurrentTrack) {
+      setNowPlaying();
+      startKaraoke();
+    }
+    return true;
+  }
+
+  document.addEventListener('lpc-loaded', loadFromFileMap, {
+    signal: abortController.signal
   });
 
+  document.addEventListener('lpc-permission-granted', async function () {
+    if (!window.lpcPlayer) return;
+    const loaded = await window.lpcPlayer.loadTrack(albumUSBDirectory, usbFilename);
+    if (loaded) {
+      setNowPlaying();
+      startKaraoke();
+    }
+  }, { signal: abortController.signal });
+
+  // persistent-player.js is loaded in the footer, after this inline script.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadFromFileMap, {
+      once: true,
+      signal: abortController.signal
+    });
+  } else {
+    loadFromFileMap();
+  }
+})();
 </script>
