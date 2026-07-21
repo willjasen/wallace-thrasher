@@ -12,9 +12,9 @@ errors.  This tool bridges the two sources.
 
 Scrape snapshots
 ────────────────
-Each `scrape` run creates a timestamped snapshot under wiki/cache/snapshots/.
+Each `scrape` run creates a timestamped snapshot under wiki_cache/snapshots/.
 All subsequent commands default to the most-recent snapshot (recorded in
-wiki/cache/latest).  Pass --snapshot <name> to target a specific one.
+wiki_cache/latest).  Pass --snapshot <name> to target a specific one.
 
 Usage
 ─────
@@ -50,22 +50,25 @@ Usage
   python wiki_scrape_and_merge.py report --snapshot 20260408-142301
   python wiki_scrape_and_merge.py report --album longmont-potion-castle-4 --track a-simple-inquiry
 
-  # 7. Migrate legacy flat wiki/cache/ structure into a named snapshot
+  # 7. Migrate legacy flat wiki_cache/ structure into a named snapshot
   python wiki_scrape_and_merge.py migrate
   python wiki_scrape_and_merge.py migrate --snapshot initial  # custom name
 
-Dependencies: Python 3.8+ standard library only (urllib, json, re, difflib, etc.)
+Dependencies: Python 3.10+ standard library only (urllib, json, re, difflib, etc.)
 """
 
 import argparse
 import datetime
 import difflib
+import hashlib
 import json
 import os
 import re
 import shutil
 import sys
+import tempfile
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
@@ -78,18 +81,38 @@ PROJECT_ROOT   = SCRIPT_DIR.parent
 JEKYLL_DIR     = PROJECT_ROOT / "jekyll"
 JSON_SRC_DIR   = JEKYLL_DIR / "assets" / "json"
 DATA_JSON      = JSON_SRC_DIR / "data.json"
-CACHE_DIR      = SCRIPT_DIR / "wiki" / "cache"
+CACHE_DIR      = SCRIPT_DIR / "wiki_cache"
 SNAPSHOTS_DIR  = CACHE_DIR / "snapshots"   # each scrape run creates a subdir here
 LATEST_FILE    = CACHE_DIR / "latest"      # plain-text file containing the active snapshot name
-COMPARE_DIR    = SCRIPT_DIR / "wiki" / "compare"
+COMPARE_DIR    = SCRIPT_DIR / "wiki_compare_output"
+BACKUP_DIR     = SCRIPT_DIR / "wiki_merge_backups"
 
 # ── Wiki API ──────────────────────────────────────────────────────────────────
 
 WIKI_API       = "https://talkinwhipapedia.fandom.com/api.php"
 REQUEST_DELAY  = 0.8   # seconds between requests (be polite)
 USER_AGENT     = "wallace-thrasher-wiki-scraper/1.0 (github.com/willjasen/wallace-thrasher)"
+SNAPSHOT_RE    = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}\Z")
 
 # ── Helpers: HTTP ─────────────────────────────────────────────────────────────
+
+class WikiRequestError(RuntimeError):
+    """Raised when the wiki cannot be reached after retrying."""
+
+
+def _request_json(url: str, attempts: int = 3) -> object:
+    """Fetch JSON with bounded retries; never turn a network error into a miss."""
+    last_error: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            last_error = exc
+            if attempt < attempts:
+                time.sleep(1.5 * attempt)
+    raise WikiRequestError(f"wiki request failed after {attempts} attempts: {last_error}")
 
 def fetch_wikitext(title: str) -> dict | None:
     """
@@ -106,13 +129,7 @@ def fetch_wikitext(title: str) -> dict | None:
         "formatversion": "2",
     })
     url = f"{WIKI_API}?{params}"
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-    except Exception as e:
-        print(f"  !! HTTP error fetching '{title}': {e}", file=sys.stderr)
-        return None
+    data = _request_json(url)
 
     pages = data.get("query", {}).get("pages", [])
     if not pages:
@@ -144,13 +161,16 @@ def _extract_cell_content(line: str) -> str:
     """
     # Strip leading | or ! and optional whitespace
     stripped = line.lstrip("|! \t")
-    # The separator between style attributes and content is a closing quote
-    # (ASCII or Unicode curly) followed by optional whitespace and a pipe.
-    # Using a regex handles both '"|content' and '" |content' as well as
-    # pages that use Unicode curly quotes (\u201c/\u201d) in their markup.
-    m = re.search(r'["\u201c\u201d\u2018\u2019\']\s*\|', stripped)
-    if m:
-        return stripped[m.end():].strip()
+    # Quoted and unquoted attributes are both valid MediaWiki markup:
+    #   | style=width:13%; text-align:right; |Larry:
+    # Only treat a pipe as an attribute separator when the prefix looks like
+    # table-cell attributes; ordinary transcript text may itself contain pipes.
+    if re.match(
+        r"(?:style|class|id|rowspan|colspan|align|valign|width)\s*=",
+        stripped,
+        re.IGNORECASE,
+    ) and "|" in stripped:
+        return stripped.split("|", 1)[1].strip()
     # No style attributes — the content is everything
     return stripped.strip()
 
@@ -165,6 +185,10 @@ def _clean_wiki_text(raw: str) -> str:
     raw = re.sub(r"\[\[[^\]|]+\|([^\]]+)\]\]", r"\1", raw)
     # Wiki links without display text: [[Page]] → Page
     raw = re.sub(r"\[\[([^\]]+)\]\]", r"\1", raw)
+    # External links with labels: [https://example.test Label] → Label
+    raw = re.sub(r"\[https?://[^\s\]]+\s+([^\]]+)\]", r"\1", raw)
+    # Bare external links are metadata, not spoken transcript text.
+    raw = re.sub(r"\[https?://[^\]]+\]", "", raw)
     # HTML tags (spans etc.)
     raw = re.sub(r"<[^>]+>", "", raw)
     # Collapse whitespace
@@ -292,7 +316,13 @@ def load_data_json() -> dict:
     """Load and return the parsed data.json."""
     if not DATA_JSON.exists():
         sys.exit(f"Error: data.json not found at {DATA_JSON}")
-    return json.loads(DATA_JSON.read_text(encoding="utf-8"))
+    try:
+        data = json.loads(DATA_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        sys.exit(f"Error: could not read {DATA_JSON}: {exc}")
+    if not isinstance(data, dict) or not isinstance(data.get("Albums"), list):
+        sys.exit(f"Error: {DATA_JSON} must contain an 'Albums' list.")
+    return data
 
 
 def iter_tracks(data: dict, album_filter: str | None = None, track_filter: str | None = None):
@@ -310,10 +340,38 @@ def iter_tracks(data: dict, album_filter: str | None = None, track_filter: str |
 
 def load_track_json(album_slug: str, json_path: str) -> list[dict] | None:
     """Load a track's subtitle JSON file from the source directory."""
-    full_path = JSON_SRC_DIR / album_slug / json_path
+    album_dir = (JSON_SRC_DIR / album_slug).resolve()
+    full_path = (album_dir / json_path).resolve()
+    if full_path.parent != album_dir:
+        raise ValueError(f"Track JSON path escapes its album directory: {json_path!r}")
     if not full_path.exists():
         return None
-    return json.loads(full_path.read_text(encoding="utf-8"))
+    data = json.loads(full_path.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise ValueError(f"Track JSON must be a list: {full_path}")
+    return data
+
+
+def _file_sha256(path: Path) -> str:
+    """Return the SHA-256 digest of a file."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _write_json_atomic(path: Path, data: object) -> None:
+    """Write JSON without leaving a partially-written destination file."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, temp_name = tempfile.mkstemp(prefix=f".{path.name}.", dir=path.parent)
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            json.dump(data, handle, indent=2, ensure_ascii=False)
+            handle.write("\n")
+        os.replace(temp_name, path)
+    except BaseException:
+        try:
+            os.unlink(temp_name)
+        except FileNotFoundError:
+            pass
+        raise
 
 # ── Helpers: Text normalisation for matching ──────────────────────────────────
 
@@ -324,43 +382,25 @@ def _normalize(text: str) -> str:
     text = re.sub(r"[^\w\s']", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
+
+def _character_ngrams(text: str) -> frozenset[str]:
+    """Build a cheap fuzzy-match prefilter for normalized text."""
+    compact = text.replace(" ", "")
+    width = 2 if len(compact) < 12 else 3
+    if len(compact) <= width:
+        return frozenset({compact}) if compact else frozenset()
+    return frozenset(compact[index:index + width] for index in range(len(compact) - width + 1))
+
 # ── Helpers: Alignment ────────────────────────────────────────────────────────
-
-def _parse_timecode(tc: str) -> float:
-    """Parse 'HH:MM:SS,mmm' to seconds."""
-    parts = tc.replace(",", ".").split(":")
-    return int(parts[0]) * 3600 + int(parts[1]) * 60 + float(parts[2])
-
 
 def _is_action_only(text: str) -> bool:
     """Return True if the text is purely a sound/action annotation like [beep]."""
     return bool(re.fullmatch(r"[\[\(][^\]\)]+[\]\)]", text.strip()))
 
 
-def _expand_group(
-    alignments: list[dict],
-    group: list[tuple[int, dict]],
-    wiki_speaker: str | None,
-    wiki_text: str,
-    similarity: float,
-    match_type: str,
-) -> None:
-    """Expand a matched group into per-entry alignment records."""
-    group_indices = (
-        [entry["Index"] for _, entry in group] if len(group) > 1 else None
-    )
-    sim_rounded = round(similarity, 4) if isinstance(similarity, float) else similarity
-    for _, entry in group:
-        alignments.append({
-            "json_index":   entry["Index"],
-            "json_speaker": entry.get("Speaker", ""),
-            "json_text":    entry.get("Text", ""),
-            "wiki_speaker": wiki_speaker,
-            "wiki_text":    wiki_text,
-            "similarity":   sim_rounded,
-            "match_type":   match_type,
-            "json_group":   group_indices,
-        })
+def _contains_uncertainty(text: str) -> bool:
+    """Return True when wiki text explicitly says its wording is uncertain."""
+    return bool(re.search(r"\[(?:unclear|inaudible|unintelligible|\?)[^\]]*\]", text, re.I))
 
 
 def align_wiki_to_json(
@@ -371,12 +411,13 @@ def align_wiki_to_json(
     """
     Globally align wiki transcript lines to JSON subtitle entries.
 
-    Wiki transcripts tend to have one line per speaker turn (full sentences),
-    while JSON subtitles have timestamped fragments — so a single wiki line
-    often spans multiple consecutive same-speaker JSON entries.  This function
-    first consolidates consecutive same-speaker JSON entries into groups, aligns
-    wiki lines against those groups, then falls back to individual matching for
-    anything the group pass left unmatched.
+    Wiki transcripts tend to have one line per speaker turn while timestamped
+    JSON subtitles split that turn into several fragments.  Alignment therefore
+    compares short, consecutive spans from both sources.  A dynamic program
+    chooses a monotonic set of matches, so one locally-attractive match cannot
+    reorder the rest of the transcript.  Speaker codes are deliberately ignored
+    while matching because diarisation mistakes are one of the things this tool
+    is intended to correct.
 
     Returns a list of alignment records, each a dict:
       json_index       – 1-based index of JSON entry
@@ -384,9 +425,10 @@ def align_wiki_to_json(
       json_text        – original JSON text
       wiki_speaker     – human name from wiki (may be None)
       wiki_text        – wiki text for this line
-      similarity       – float 0-1 (group-level for multi-entry groups)
+      similarity       – float 0-1 (span-level for grouped matches)
       match_type       – 'exact'|'similar'|'unmatched_json'
       json_group       – list of json_indices in the group (None for singles)
+      wiki_indices     – original zero-based wiki line indices in the match
     """
     # Filter wiki lines that have actual speech content (not pure [actions])
     wiki_speech = [
@@ -394,12 +436,18 @@ def align_wiki_to_json(
         for i, (spk, txt) in enumerate(wiki_lines)
         if txt and not _is_action_only(txt)
     ]
-    # JSON entries that have text
-    json_speech = [
-        (entry["Index"], entry)
-        for entry in json_entries
-        if entry.get("Text", "").strip()
-    ]
+    json_speech = []
+    seen_indices: set[int] = set()
+    for position, entry in enumerate(json_entries):
+        if not isinstance(entry, dict) or not entry.get("Text", "").strip():
+            continue
+        index = entry.get("Index")
+        if not isinstance(index, int) or isinstance(index, bool):
+            raise ValueError(f"Subtitle entry {position + 1} has a non-integer Index.")
+        if index in seen_indices:
+            raise ValueError(f"Subtitle JSON contains duplicate Index {index}.")
+        seen_indices.add(index)
+        json_speech.append((index, entry))
 
     if not wiki_speech or not json_speech:
         return [
@@ -412,209 +460,234 @@ def align_wiki_to_json(
                 "similarity":   0.0,
                 "match_type":   "unmatched_json",
                 "json_group":   None,
+                "wiki_indices": [],
             }
             for _, entry in json_speech
         ]
+    if not 0.0 <= min_similarity <= 1.0:
+        raise ValueError("min_similarity must be between 0 and 1.")
 
-    # ── Phase 1: Group consecutive same-speaker JSON entries ──────────────
-    # A significant time gap between entries hints at a speaker change that
-    # the diariser may have missed, so we split groups at large pauses.
-    MAX_GAP = 1.5  # seconds
-    json_groups: list[list[tuple[int, dict]]] = []
-    current_group: list[tuple[int, dict]] | None = None
-    for idx, entry in json_speech:
-        same_speaker = (
-            current_group
-            and entry["Speaker"] == current_group[-1][1]["Speaker"]
-        )
-        if same_speaker:
-            prev_end   = _parse_timecode(current_group[-1][1].get("End Time", "0"))
-            curr_start = _parse_timecode(entry.get("Start Time", "0"))
-            gap = curr_start - prev_end
-            if gap <= MAX_GAP:
-                current_group.append((idx, entry))
-                continue
-        # Start a new group
-        if current_group:
-            json_groups.append(current_group)
-        current_group = [(idx, entry)]
-    if current_group:
-        json_groups.append(current_group)
+    max_wiki_span = 3
+    max_json_span = 6
+    n_wiki, n_json = len(wiki_speech), len(json_speech)
+    wiki_spans: dict[tuple[int, int], tuple[str, str, frozenset[str]]] = {}
+    json_spans: dict[tuple[int, int], tuple[str, str, frozenset[str]]] = {}
+    for start in range(n_wiki):
+        combined = []
+        speakers: set[str] = set()
+        for count in range(1, min(max_wiki_span, n_wiki - start) + 1):
+            _, speaker, text = wiki_speech[start + count - 1]
+            combined.append(text)
+            if speaker:
+                speakers.add(speaker)
+            if len(speakers) > 1:
+                break
+            value = " ".join(combined)
+            normalized = _normalize(value)
+            wiki_spans[(start, count)] = (value, normalized, _character_ngrams(normalized))
+    for start in range(n_json):
+        combined = []
+        for count in range(1, min(max_json_span, n_json - start) + 1):
+            combined.append(json_speech[start + count - 1][1].get("Text", "").strip())
+            value = " ".join(combined)
+            normalized = _normalize(value)
+            json_spans[(start, count)] = (value, normalized, _character_ngrams(normalized))
 
-    # Build consolidated text for each group
-    group_texts = [
-        " ".join(entry["Text"].strip() for _, entry in group)
-        for group in json_groups
+    negative = float("-inf")
+    scores = [[negative] * (n_json + 1) for _ in range(n_wiki + 1)]
+    previous: list[list[tuple[int, int, tuple] | None]] = [
+        [None] * (n_json + 1) for _ in range(n_wiki + 1)
     ]
+    scores[0][0] = 0.0
 
-    wiki_norm  = [_normalize(txt) for _, _, txt in wiki_speech]
-    group_norm = [_normalize(txt) for txt in group_texts]
+    def update(i: int, j: int, value: float, prior: tuple[int, int, tuple]) -> None:
+        if value > scores[i][j] + 1e-12:
+            scores[i][j] = value
+            previous[i][j] = prior
+
+    for i in range(n_wiki + 1):
+        for j in range(n_json + 1):
+            base = scores[i][j]
+            if base == negative:
+                continue
+            if i < n_wiki:
+                update(i + 1, j, base, (i, j, ("skip_wiki",)))
+            if j < n_json:
+                update(i, j + 1, base, (i, j, ("skip_json",)))
+
+            for wiki_count in range(1, min(max_wiki_span, n_wiki - i) + 1):
+                wiki_span = wiki_spans.get((i, wiki_count))
+                if wiki_span is None:
+                    break
+                _, wiki_normalized, wiki_ngrams = wiki_span
+                for json_count in range(1, min(max_json_span, n_json - j) + 1):
+                    _, json_normalized, json_ngrams = json_spans[(j, json_count)]
+                    # SequenceMatcher cannot exceed this length-only bound.
+                    # Avoid constructing it for clearly impossible matches.
+                    longer = len(wiki_normalized) + len(json_normalized)
+                    length_upper_bound = (
+                        2 * min(len(wiki_normalized), len(json_normalized)) / longer
+                        if longer else 1.0
+                    )
+                    effective_threshold = min_similarity
+                    if wiki_count + json_count > 2:
+                        effective_threshold = max(min_similarity, 0.5)
+                    if length_upper_bound < effective_threshold:
+                        continue
+                    gram_total = len(wiki_ngrams) + len(json_ngrams)
+                    gram_similarity = (
+                        2 * len(wiki_ngrams & json_ngrams) / gram_total
+                        if gram_total else 1.0
+                    )
+                    if gram_similarity < max(0.08, effective_threshold - 0.28):
+                        continue
+                    matcher = difflib.SequenceMatcher(
+                        None, wiki_normalized, json_normalized, autojunk=False
+                    )
+                    if matcher.quick_ratio() < effective_threshold:
+                        continue
+                    similarity = matcher.ratio()
+                    if similarity < effective_threshold:
+                        continue
+                    # Similarity drives selection. A tiny bonus only resolves
+                    # true ties in favour of covering more source material.
+                    match_score = similarity + 0.001 * (wiki_count + json_count - 2)
+                    update(
+                        i + wiki_count,
+                        j + json_count,
+                        base + match_score,
+                        (i, j, ("match", wiki_count, json_count, similarity)),
+                    )
+
+    operations = []
+    i, j = n_wiki, n_json
+    while i or j:
+        prior = previous[i][j]
+        if prior is None:  # Defensive: skip an entry if a future change makes a state unreachable.
+            if j:
+                operations.append(("skip_json", i, j - 1))
+                j -= 1
+            else:
+                operations.append(("skip_wiki", i - 1, j))
+                i -= 1
+            continue
+        old_i, old_j, operation = prior
+        operations.append((*operation, old_i, old_j))
+        i, j = old_i, old_j
+    operations.reverse()
 
     alignments: list[dict] = []
-    matched_wiki_indices: set[int]  = set()
-    matched_group_indices: set[int] = set()
-
-    # ── Phase 2: Align wiki lines against consolidated groups ─────────────
-    sm = difflib.SequenceMatcher(None, wiki_norm, group_norm, autojunk=False)
-
-    for tag, i1, i2, j1, j2 in sm.get_opcodes():
-        if tag == "equal":
-            for wi, gi in zip(range(i1, i2), range(j1, j2)):
-                _, w_spk, w_txt = wiki_speech[wi]
-                matched_wiki_indices.add(wi)
-                matched_group_indices.add(gi)
-                _expand_group(alignments, json_groups[gi],
-                              w_spk, w_txt, 1.0, "exact")
-        elif tag in ("replace", "insert", "delete"):
-            if tag == "replace":
-                used_gi: set[int] = set()
-                for wi in range(i1, i2):
-                    best_gi, best_sim = None, 0.0
-                    for gi in range(j1, j2):
-                        if gi in used_gi:
-                            continue
-                        sim = difflib.SequenceMatcher(
-                            None, wiki_norm[wi], group_norm[gi]
-                        ).ratio()
-                        if sim > best_sim:
-                            best_sim, best_gi = sim, gi
-                    if best_gi is not None and best_sim >= min_similarity:
-                        # Multi-entry groups need higher confidence to avoid
-                        # over-matching when diarisation errors cause groups
-                        # that span multiple real speaker turns.
-                        group = json_groups[best_gi]
-                        effective_threshold = (
-                            max(min_similarity, 0.5)
-                            if len(group) > 1
-                            else min_similarity
-                        )
-                        if best_sim >= effective_threshold:
-                            _, w_spk, w_txt = wiki_speech[wi]
-                            matched_wiki_indices.add(wi)
-                            matched_group_indices.add(best_gi)
-                            used_gi.add(best_gi)
-                            _expand_group(alignments, json_groups[best_gi],
-                                          w_spk, w_txt, best_sim, "similar")
-            # 'insert' means wiki has lines with no JSON-group match → skip
-            # 'delete' means JSON groups with no wiki match → handled below
-
-    # ── Phase 3: Fallback — individual matching for leftovers ─────────────
-    # Explode unmatched groups back to individual entries and try 1:1
-    # alignment against unmatched wiki lines.  This recovers matches when
-    # speaker diarisation errors caused over-grouping.
-    matched_entry_indices = {a["json_index"] for a in alignments}
-    fallback_entries = [
-        (idx, entry) for idx, entry in json_speech
-        if entry["Index"] not in matched_entry_indices
-    ]
-    fallback_wiki = [
-        (wi, wiki_speech[wi][1], wiki_speech[wi][2])
-        for wi in range(len(wiki_speech))
-        if wi not in matched_wiki_indices
-    ]
-
-    if fallback_entries and fallback_wiki:
-        fw_norm = [_normalize(txt) for _, _, txt in fallback_wiki]
-        fe_norm = [_normalize(entry["Text"]) for _, entry in fallback_entries]
-
-        sm2 = difflib.SequenceMatcher(None, fw_norm, fe_norm, autojunk=False)
-        for tag, i1, i2, j1, j2 in sm2.get_opcodes():
-            if tag == "equal":
-                for wi, ji in zip(range(i1, i2), range(j1, j2)):
-                    _, w_spk, w_txt = fallback_wiki[wi]
-                    _, j_entry = fallback_entries[ji]
-                    alignments.append({
-                        "json_index":   j_entry["Index"],
-                        "json_speaker": j_entry.get("Speaker", ""),
-                        "json_text":    j_entry.get("Text", ""),
-                        "wiki_speaker": w_spk,
-                        "wiki_text":    w_txt,
-                        "similarity":   1.0,
-                        "match_type":   "exact",
-                        "json_group":   None,
-                    })
-            elif tag == "replace":
-                used_ji: set[int] = set()
-                for wi in range(i1, i2):
-                    best_ji, best_sim = None, 0.0
-                    for ji in range(j1, j2):
-                        if ji in used_ji:
-                            continue
-                        sim = difflib.SequenceMatcher(
-                            None, fw_norm[wi], fe_norm[ji]
-                        ).ratio()
-                        if sim > best_sim:
-                            best_sim, best_ji = sim, ji
-                    if best_ji is not None and best_sim >= min_similarity:
-                        _, w_spk, w_txt = fallback_wiki[wi]
-                        _, j_entry = fallback_entries[best_ji]
-                        used_ji.add(best_ji)
-                        alignments.append({
-                            "json_index":   j_entry["Index"],
-                            "json_speaker": j_entry.get("Speaker", ""),
-                            "json_text":    j_entry.get("Text", ""),
-                            "wiki_speaker": w_spk,
-                            "wiki_text":    w_txt,
-                            "similarity":   round(best_sim, 4),
-                            "match_type":   "similar",
-                            "json_group":   None,
-                        })
-
-    # Sort by JSON entry order
-    alignments.sort(key=lambda x: x["json_index"])
-
-    # Tag JSON entries that were never matched
-    matched_indices = {a["json_index"] for a in alignments}
-    for j_idx, j_entry in json_speech:
-        if j_entry["Index"] not in matched_indices:
+    for operation in operations:
+        kind = operation[0]
+        if kind == "skip_json":
+            _, _, json_position = operation
+            _, entry = json_speech[json_position]
             alignments.append({
-                "json_index":   j_entry["Index"],
-                "json_speaker": j_entry.get("Speaker", ""),
-                "json_text":    j_entry.get("Text", ""),
+                "json_index": entry["Index"],
+                "json_speaker": entry.get("Speaker", ""),
+                "json_text": entry.get("Text", ""),
                 "wiki_speaker": None,
-                "wiki_text":    None,
-                "similarity":   0.0,
-                "match_type":   "unmatched_json",
-                "json_group":   None,
+                "wiki_text": None,
+                "similarity": 0.0,
+                "match_type": "unmatched_json",
+                "json_group": None,
+                "wiki_indices": [],
             })
+        elif kind == "match":
+            _, wiki_count, json_count, similarity, wiki_position, json_position = operation
+            wiki_slice = wiki_speech[wiki_position:wiki_position + wiki_count]
+            json_slice = json_speech[json_position:json_position + json_count]
+            wiki_indices = [original_index for original_index, _, _ in wiki_slice]
+            wiki_speaker = next((speaker for _, speaker, _ in wiki_slice if speaker), None)
+            wiki_text = " ".join(text for _, _, text in wiki_slice)
+            group_indices = [entry["Index"] for _, entry in json_slice]
+            for _, entry in json_slice:
+                alignments.append({
+                    "json_index": entry["Index"],
+                    "json_speaker": entry.get("Speaker", ""),
+                    "json_text": entry.get("Text", ""),
+                    "wiki_speaker": wiki_speaker,
+                    "wiki_text": wiki_text,
+                    "similarity": round(similarity, 4),
+                    "match_type": "exact" if similarity >= 0.9999 else "similar",
+                    "json_group": group_indices if json_count > 1 else None,
+                    "wiki_indices": wiki_indices,
+                })
 
-    alignments.sort(key=lambda x: x["json_index"])
+    alignments.sort(key=lambda item: item["json_index"])
     return alignments
 
 
-def deduce_speaker_mapping(alignments: list[dict]) -> dict[str, str]:
-    """
-    From aligned pairs, determine SPEAKER_XX → human-name mapping.
-    Uses majority-vote per speaker code.
-    """
-    counts: Counter = Counter()
-    for aln in alignments:
-        code = aln["json_speaker"]
-        name = aln["wiki_speaker"]
-        if code and name and re.match(r"SPEAKER_\d+", code):
-            counts[(code, name)] += 1
+def deduce_speaker_mapping_details(alignments: list[dict]) -> tuple[dict[str, str], dict]:
+    """Infer reliable diariser-code mappings and return supporting evidence."""
+    scores: Counter = Counter()
+    evidence: Counter = Counter()
+    seen: set[tuple] = set()
+    for alignment in alignments:
+        code = alignment.get("json_speaker", "")
+        name = alignment.get("wiki_speaker")
+        similarity = float(alignment.get("similarity", 0.0))
+        if not (name and re.fullmatch(r"SPEAKER_\d+", code) and similarity >= 0.60):
+            continue
+        # A wiki line expanded over three JSON fragments is one observation,
+        # not three votes. This prevents long turns from dominating a mapping.
+        observation = (code, name, tuple(alignment.get("wiki_indices", [])))
+        if observation in seen:
+            continue
+        seen.add(observation)
+        scores[(code, name)] += similarity
+        evidence[(code, name)] += 1
 
     mapping: dict[str, str] = {}
-    # Group by code, pick name with highest count
-    by_code: dict[str, tuple[str, int]] = {}
-    for (code, name), cnt in counts.items():
-        if code not in by_code or cnt > by_code[code][1]:
-            by_code[code] = (name, cnt)
+    details: dict[str, dict] = {}
+    codes = sorted({code for code, _ in scores})
+    for code in codes:
+        candidates = sorted(
+            ((name, scores[(code, name)], evidence[(code, name)])
+             for candidate_code, name in scores if candidate_code == code),
+            key=lambda item: (-item[1], item[0].casefold()),
+        )
+        winner, winning_score, observations = candidates[0]
+        total_score = sum(score for _, score, _ in candidates)
+        confidence = winning_score / total_score if total_score else 0.0
+        accepted = confidence >= 0.67 and (observations >= 2 or winning_score >= 0.85)
+        details[code] = {
+            "name": winner,
+            "confidence": round(confidence, 4),
+            "observations": observations,
+            "accepted": accepted,
+            "candidates": [
+                {"name": name, "score": round(score, 4), "observations": count}
+                for name, score, count in candidates
+            ],
+        }
+        if accepted:
+            mapping[code] = winner
+    return mapping, details
 
-    for code, (name, _) in by_code.items():
-        mapping[code] = name
 
-    return mapping
+def deduce_speaker_mapping(alignments: list[dict]) -> dict[str, str]:
+    """Backward-compatible shorthand returning only accepted mappings."""
+    return deduce_speaker_mapping_details(alignments)[0]
 
 # ── Cache helpers ─────────────────────────────────────────────────────────────
 
 def _resolve_snapshot(snapshot: str | None) -> str | None:
-    """Return the snapshot name to use: the given value, or read from wiki/cache/latest."""
+    """Return and validate the requested or active snapshot name."""
     if snapshot:
-        return snapshot
+        return _validate_snapshot_name(snapshot)
     if LATEST_FILE.exists():
-        return LATEST_FILE.read_text(encoding="utf-8").strip() or None
+        value = LATEST_FILE.read_text(encoding="utf-8").strip()
+        return _validate_snapshot_name(value) if value else None
     return None
+
+
+def _validate_snapshot_name(snapshot: str) -> str:
+    if not SNAPSHOT_RE.fullmatch(snapshot):
+        raise ValueError(
+            "Snapshot names must be 1-80 letters, numbers, dots, underscores, or hyphens."
+        )
+    return snapshot
 
 
 def _snapshot_cache_dir(snapshot: str) -> Path:
@@ -628,7 +701,7 @@ def _cache_path(album_slug: str, track_slug: str, snapshot: str) -> Path:
 def save_cache(album_slug: str, track_slug: str, data: dict, snapshot: str) -> None:
     p = _cache_path(album_slug, track_slug, snapshot)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    _write_json_atomic(p, data)
 
 
 def load_cache(album_slug: str, track_slug: str, snapshot: str | None = None) -> dict | None:
@@ -648,7 +721,7 @@ def _compare_path(album_slug: str, track_slug: str, snapshot: str) -> Path:
 def save_compare(album_slug: str, track_slug: str, data: dict, snapshot: str) -> None:
     p = _compare_path(album_slug, track_slug, snapshot)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    _write_json_atomic(p, data)
 
 
 def load_compare(album_slug: str, track_slug: str, snapshot: str | None = None) -> dict | None:
@@ -711,21 +784,16 @@ def search_wiki_titles(query: str, limit: int = 5) -> list[str]:
         "format":    "json",
     })
     url = f"{WIKI_API}?{params}"
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-        # opensearch returns [query, [titles], [descriptions], [urls]]
-        return data[1] if len(data) > 1 else []
-    except Exception:
-        return []
+    data = _request_json(url)
+    # opensearch returns [query, [titles], [descriptions], [urls]]
+    return data[1] if isinstance(data, list) and len(data) > 1 else []
 
 
 def candidate_wiki_titles(track_title: str, album_slug: str) -> list[str]:
     """
     Generate a prioritised list of wiki page titles to try for a given track.
     """
-    candidates = [track_title]
+    candidates: list[str] = []
 
     # Try with album disambiguation suffix  e.g. "Brian (LPC II)"
     suffix = ROMAN_ALBUM_SUFFIXES.get(album_slug)
@@ -738,7 +806,10 @@ def candidate_wiki_titles(track_title: str, album_slug: str) -> list[str]:
         num = m.group(1)
         candidates.append(f"{track_title} (LPC {num})")
 
-    return candidates
+    # Unqualified pages are a fallback: common track names can otherwise
+    # resolve to a similarly named transcript from the wrong album.
+    candidates.append(track_title)
+    return list(dict.fromkeys(candidates))
 
 
 def best_search_match(track_title: str, album_slug: str) -> str | None:
@@ -766,7 +837,9 @@ def cmd_scrape(args) -> None:
     """Fetch wiki transcripts and cache them to disk as a named snapshot."""
     data = load_data_json()
 
-    snapshot = args.snapshot or datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    snapshot = _validate_snapshot_name(
+        args.snapshot or datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+    )
     snapshot_dir = _snapshot_cache_dir(snapshot)
 
     if snapshot_dir.exists() and not args.force:
@@ -869,7 +942,7 @@ def cmd_compare(args) -> None:
 
     (COMPARE_DIR / snapshot).mkdir(parents=True, exist_ok=True)
 
-    threshold = float(args.threshold)
+    threshold = args.threshold
     processed = skipped = no_wiki = no_json = 0
 
     for album, track in iter_tracks(data, args.album, args.track):
@@ -893,9 +966,17 @@ def cmd_compare(args) -> None:
             no_json += 1
             continue
 
-        wiki_lines = [(row[0], row[1]) for row in cached["transcript"]]
+        wiki_lines = [
+            (
+                _extract_speaker_name(_extract_cell_content(str(row[0])))
+                if row[0] else None,
+                _clean_wiki_text(_extract_cell_content(str(row[1]))),
+            )
+            for row in cached["transcript"]
+            if isinstance(row, (list, tuple)) and len(row) >= 2
+        ]
         alignments = align_wiki_to_json(wiki_lines, json_entries, threshold)
-        speaker_map = deduce_speaker_mapping(alignments)
+        speaker_map, speaker_evidence = deduce_speaker_mapping_details(alignments)
 
         # Annotate each alignment with proposed changes
         for aln in alignments:
@@ -905,7 +986,17 @@ def cmd_compare(args) -> None:
             sim    = aln["similarity"]
             is_group = aln.get("json_group") is not None
 
-            aln["proposed_speaker"] = speaker_map.get(code, code)
+            if aln.get("wiki_speaker") and sim >= 0.65:
+                # Prefer the speaker attached to this particular matched line.
+                # The global map is only a fallback for unmatched/weak lines.
+                aln["proposed_speaker"] = aln["wiki_speaker"]
+                aln["speaker_action"] = "matched_line"
+            elif code in speaker_map:
+                aln["proposed_speaker"] = speaker_map[code]
+                aln["speaker_action"] = "inferred_mapping"
+            else:
+                aln["proposed_speaker"] = code
+                aln["speaker_action"] = "keep"
 
             if w_text is None:
                 aln["proposed_text"]   = j_text
@@ -921,7 +1012,10 @@ def cmd_compare(args) -> None:
             elif sim >= 0.99:
                 aln["proposed_text"]   = j_text
                 aln["text_action"]     = "keep"
-            elif sim >= 0.70:
+            elif _contains_uncertainty(w_text):
+                aln["proposed_text"]   = w_text
+                aln["text_action"]     = "review"
+            elif sim >= 0.85:
                 aln["proposed_text"]   = w_text
                 aln["text_action"]     = "auto_correct"
             elif sim >= threshold:
@@ -931,19 +1025,32 @@ def cmd_compare(args) -> None:
                 aln["proposed_text"]   = j_text
                 aln["text_action"]     = "keep_low_confidence"
 
+        track_file = (JSON_SRC_DIR / a_slug / json_path).resolve()
+        matched_wiki_indices = {
+            index for alignment in alignments
+            for index in alignment.get("wiki_indices", [])
+        }
+        total_wiki_lines = len([line for line in wiki_lines if not _is_action_only(line[1])])
         result = {
+            "format_version": 2,
+            "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "snapshot": snapshot,
             "album":        album.get("Album", ""),
             "album_slug":   a_slug,
             "track":        track.get("Track_Title", ""),
             "track_slug":   t_slug,
-            "json_path":    str(JSON_SRC_DIR / a_slug / json_path),
+            "json_path":    str(track_file),
+            "json_sha256":  _file_sha256(track_file),
             "wiki_title":   cached.get("wiki_title"),
             "wiki_url":     cached.get("wiki_url"),
             "speaker_mapping": speaker_map,
+            "speaker_mapping_evidence": speaker_evidence,
             "alignments":   alignments,
             "summary": {
                 "total_json_entries":  len(json_entries),
-                "total_wiki_lines":    len([l for l in wiki_lines if not _is_action_only(l[1])]),
+                "total_wiki_lines":    total_wiki_lines,
+                "matched_wiki_lines":  len(matched_wiki_indices),
+                "unmatched_wiki_lines": total_wiki_lines - len(matched_wiki_indices),
                 "matched":             sum(1 for a in alignments if a["similarity"] > 0),
                 "speakers_to_map":     len(speaker_map),
                 "text_auto_correct":   sum(1 for a in alignments if a.get("text_action") == "auto_correct"),
@@ -973,13 +1080,14 @@ def cmd_merge(args) -> None:
     data        = load_data_json()
     dry_run     = args.dry_run
     spk_only    = args.speakers_only
-    auto_thresh = float(args.auto_threshold)
+    auto_thresh = args.auto_threshold
 
     snapshot = _resolve_snapshot(args.snapshot)
     if not snapshot:
         sys.exit("No snapshot found. Run 'scrape' and 'compare' first, or pass --snapshot <name>.")
 
-    applied = skipped = no_compare = 0
+    applied = skipped = no_compare = stale = 0
+    backup_run = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
 
     for album, track in iter_tracks(data, args.album, args.track):
         a_slug    = album["Album_Slug"]
@@ -1001,7 +1109,17 @@ def cmd_merge(args) -> None:
             skipped += 1
             continue
 
-        speaker_map = compare.get("speaker_mapping", {})
+        full_path = (JSON_SRC_DIR / a_slug / json_path).resolve()
+        expected_hash = compare.get("json_sha256")
+        current_hash = _file_sha256(full_path)
+        if expected_hash != current_hash and not args.allow_stale:
+            reason = "legacy comparison has no source hash" if not expected_hash else "source JSON changed"
+            print(
+                f"  [stale] {a_slug}/{t_slug} — {reason}; "
+                "run 'compare' again (or use --allow-stale after reviewing)"
+            )
+            stale += 1
+            continue
 
         # Index JSON entries by their Index field for fast lookup
         by_index: dict[int, dict] = {e["Index"]: e for e in json_entries}
@@ -1040,7 +1158,7 @@ def cmd_merge(args) -> None:
             if (
                 w_txt
                 and w_txt != old_txt
-                and action in ("auto_correct", "review")
+                and action in ("auto_correct", "approved")
                 and sim >= auto_thresh
             ):
                 if not dry_run:
@@ -1051,13 +1169,11 @@ def cmd_merge(args) -> None:
             skipped += 1
             continue
 
-        full_path = JSON_SRC_DIR / a_slug / json_path
         if not dry_run:
-            # Write updated JSON
-            full_path.write_text(
-                json.dumps(json_entries, indent=2, ensure_ascii=False),
-                encoding="utf-8",
-            )
+            backup_path = BACKUP_DIR / backup_run / a_slug / json_path
+            backup_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(full_path, backup_path)
+            _write_json_atomic(full_path, json_entries)
 
         tag = "[dry-run]" if dry_run else "[merged]"
         print(
@@ -1067,9 +1183,14 @@ def cmd_merge(args) -> None:
         )
         applied += 1
 
-    print(f"\nDone — merged: {applied}, skipped: {skipped}, no compare: {no_compare}")
+    print(
+        f"\nDone — merged: {applied}, skipped: {skipped}, "
+        f"stale: {stale}, no compare: {no_compare}"
+    )
     if dry_run:
         print("(dry-run mode — no files were modified)")
+    elif applied:
+        print(f"Backups → {BACKUP_DIR / backup_run}")
 
 # ── Subcommand: report ────────────────────────────────────────────────────────
 
@@ -1099,6 +1220,8 @@ def cmd_report(args) -> None:
         print(f"  {'─'*66}")
         print(f"  JSON entries : {s.get('total_json_entries', '?')}")
         print(f"  Wiki lines   : {s.get('total_wiki_lines', '?')}")
+        print(f"  Wiki matched : {s.get('matched_wiki_lines', '?')}")
+        print(f"  Wiki missing : {s.get('unmatched_wiki_lines', '?')}")
         print(f"  Matched      : {s.get('matched', '?')}")
         print(f"  Unmatched    : {s.get('unmatched_json', '?')}")
         print(f"  Auto-correct : {s.get('text_auto_correct', '?')} text changes")
@@ -1116,6 +1239,7 @@ def cmd_report(args) -> None:
                 action = aln.get("text_action", "")
                 marker = {
                     "auto_correct":  "✏ ",
+                    "approved":      "✓ ",
                     "review":        "? ",
                     "group_review":  "⊞ ",
                     "keep":          "  ",
@@ -1155,7 +1279,7 @@ def cmd_list_snapshots(args) -> None:
 
 def cmd_use(args) -> None:
     """Set a snapshot as the active default (updates wiki/cache/latest)."""
-    snapshot = args.snapshot
+    snapshot = _validate_snapshot_name(args.snapshot)
     if not _snapshot_cache_dir(snapshot).exists():
         sys.exit(f"Snapshot '{snapshot}' not found under {SNAPSHOTS_DIR}.")
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
@@ -1165,9 +1289,9 @@ def cmd_use(args) -> None:
 # ── Subcommand: migrate ───────────────────────────────────────────────────────
 
 def cmd_migrate(args) -> None:
-    """Migrate legacy flat wiki/cache/<album>/ structure into a named snapshot."""
+    """Migrate legacy flat wiki_cache/<album>/ structure into a named snapshot."""
     if not CACHE_DIR.exists():
-        print("wiki/cache/ does not exist. Nothing to migrate.")
+        print("wiki_cache/ does not exist. Nothing to migrate.")
         return
 
     legacy_dirs = [
@@ -1175,10 +1299,10 @@ def cmd_migrate(args) -> None:
         if d.is_dir() and d.name != "snapshots"
     ]
     if not legacy_dirs:
-        print("No legacy album directories found directly under wiki/cache/.")
+        print("No legacy album directories found directly under wiki_cache/.")
         return
 
-    snapshot = args.snapshot or "initial"
+    snapshot = _validate_snapshot_name(args.snapshot or "initial")
     dest_dir = _snapshot_cache_dir(snapshot)
 
     if dest_dir.exists() and not args.force:
@@ -1201,10 +1325,20 @@ def cmd_migrate(args) -> None:
         print(f"Note: 'latest' still points to '{_resolve_snapshot(None)}'; not changed.")
         print(f"      Run 'use {snapshot}' to switch if desired.")
 
-    print(f"\nMigration complete. Original files remain in wiki/cache/<album>/.") 
+    print(f"\nMigration complete. Original files remain in wiki_cache/<album>/.")
     print("Delete them manually once you have verified the snapshot.")
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
+
+def _ratio_arg(value: str) -> float:
+    try:
+        ratio = float(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be a number between 0 and 1") from exc
+    if not 0.0 <= ratio <= 1.0:
+        raise argparse.ArgumentTypeError("must be between 0 and 1")
+    return ratio
+
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
@@ -1233,7 +1367,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_cmp.add_argument("--snapshot",  help="Snapshot to compare against (default: latest).")
     p_cmp.add_argument("--album",     help="Limit to a single album slug.")
     p_cmp.add_argument("--track",     help="Limit to a single track slug.")
-    p_cmp.add_argument("--threshold", default="0.4",
+    p_cmp.add_argument("--threshold", type=_ratio_arg, default=0.4,
                        help="Minimum similarity ratio to consider a line matched (default 0.4).")
 
     # ── merge ──
@@ -1245,8 +1379,10 @@ def build_parser() -> argparse.ArgumentParser:
                        help="Show what would change without writing files.")
     p_mrg.add_argument("--speakers-only",  action="store_true",
                        help="Only update speaker labels, not transcription text.")
-    p_mrg.add_argument("--auto-threshold", default="0.85",
+    p_mrg.add_argument("--auto-threshold", type=_ratio_arg, default=0.85,
                        help="Min similarity to auto-apply text corrections (default 0.85).")
+    p_mrg.add_argument("--allow-stale", action="store_true",
+                       help="Apply comparison output even if the source JSON has changed (unsafe).")
 
     # ── report ──
     p_rep = sub.add_parser("report", help="Print a human-readable summary of compare results.")
@@ -1277,7 +1413,10 @@ def main() -> None:
         "report":          cmd_report,
         "migrate":         cmd_migrate,
     }
-    dispatch[args.command](args)
+    try:
+        dispatch[args.command](args)
+    except (ValueError, json.JSONDecodeError, OSError, WikiRequestError) as exc:
+        parser.exit(1, f"Error: {exc}\n")
 
 
 if __name__ == "__main__":

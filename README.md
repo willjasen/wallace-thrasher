@@ -48,6 +48,22 @@ i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed v
 
 i am using [this python tool](https://github.com/willjasen/srt-to-json) to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs
 
+### 🔎 Comparing Subtitles with Talkin' Whipapedia 🔎
+
+`python/wiki_scrape_and_merge.py` downloads wiki transcripts into dated snapshots, aligns them with this project's timestamped JSON subtitles, and prepares speaker and text corrections for review. It uses only the Python 3.10+ standard library.
+
+Run the workflow from the project root:
+
+```bash
+python3 python/wiki_scrape_and_merge.py scrape --album longmont-potion-castle-4
+python3 python/wiki_scrape_and_merge.py compare --album longmont-potion-castle-4
+python3 python/wiki_scrape_and_merge.py report --album longmont-potion-castle-4 --detail
+python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4 --dry-run
+python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4
+```
+
+Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `python/wiki_merge_backups/` before it is written.
+
 ### 💽 JSON for Albums and Tracks 💽
 
 the main JSON data file resides at `/assets/data.json`
