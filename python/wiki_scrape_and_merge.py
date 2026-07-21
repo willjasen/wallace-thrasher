@@ -818,12 +818,23 @@ def best_search_match(track_title: str, album_slug: str) -> str | None:
     Returns the best matching title, or None if nothing plausible found.
     """
     results = search_wiki_titles(track_title)
+    query_numbers = re.findall(r"\b\d+\b", track_title)
+    if query_numbers:
+        # Punctuation differences can keep a numbered title out of the first
+        # result set (for example "Steves" vs "Steve's"). Search the base
+        # title too, then require the same numeric parts below.
+        base_query = re.sub(r"\s+\d+\s*$", "", track_title).strip()
+        if base_query and base_query != track_title:
+            results.extend(search_wiki_titles(base_query))
+    results = list(dict.fromkeys(results))
     if not results:
         return None
 
     norm_query = _normalize(track_title)
     best_title, best_score = None, 0.0
     for title in results:
+        if re.findall(r"\b\d+\b", title) != query_numbers:
+            continue
         score = difflib.SequenceMatcher(None, norm_query, _normalize(title)).ratio()
         if score > best_score:
             best_score, best_title = score, title

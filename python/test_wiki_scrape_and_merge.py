@@ -118,6 +118,18 @@ class ArgumentTests(unittest.TestCase):
         args = wiki.build_parser().parse_args(["merge", "--min-coverage", "0.8"])
         self.assertEqual(args.min_coverage, 0.8)
 
+    def test_numbered_search_result_cannot_cross_match_parts(self):
+        def results(query):
+            if query.endswith(" 1"):
+                return ["Steve's Meat Market 2"]
+            return ["Steve's Meat Market 2", "Steve's Meat Market 1"]
+
+        with mock.patch.object(wiki, "search_wiki_titles", side_effect=results):
+            self.assertEqual(
+                wiki.best_search_match("Steves Meat Market 1", "longmont-potion-castle-ii"),
+                "Steve's Meat Market 1",
+            )
+
 
 class RequestTests(unittest.TestCase):
     def test_network_failure_is_not_reported_as_a_missing_page(self):
