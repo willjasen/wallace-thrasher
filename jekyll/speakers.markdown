@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Speakers
+description: Search speakers and call participants across Longmont Potion Castle subtitles.
 permalink: /speakers/
 search_page: true
 search_menu: true

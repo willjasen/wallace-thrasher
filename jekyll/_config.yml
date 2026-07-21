@@ -38,17 +38,19 @@ exclude:
 title: stretchie
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  you can call me stretchie
+  Search Longmont Potion Castle albums, track subtitles, speakers, aliases, and establishments across the discography.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://stretchie.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: willjasen
 github_client_id: "Ov23lil16AZFYdrRBOtw"  # Your GitHub OAuth App Client ID (public — safe to commit)
+logo: /assets/img/lpc_logo.jpg
 
 # Build settings for dark mode
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
 minima:
   skin: auto
 
@@ -91,7 +93,7 @@ incremental: true
 
 collections:
   tracks:
-    output: false
+    output: true
   albums:
     output: true
     permalink: /albums/:title/

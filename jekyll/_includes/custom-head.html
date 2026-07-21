@@ -1,1 +1,68 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
+
+{% if jekyll.environment != "production" or page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+{% endif %}
+
+<meta name="theme-color" content="#1a1a2e">
+
+{% assign absolute_logo_url = site.logo | absolute_url %}
+{% assign organization_description = site.description | strip_newlines | escape %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "description": {{ organization_description | jsonify }},
+  "image": {{ absolute_logo_url | jsonify }},
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ "/subtitles/" | absolute_url }}?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{% if page.collection == "albums" %}
+  {% include variables.liquid %}
+  {% assign album_image_url = "/assets/img/albums/" | append: matched_album_image | absolute_url %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": {{ matched_album_title | jsonify }},
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": "Longmont Potion Castle"
+    },
+    "datePublished": {{ matched_album_year | append: "-01-01" | jsonify }},
+    "image": {{ album_image_url | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "numTracks": {{ all_tracks_on_album | size | jsonify }}
+  }
+  </script>
+{% endif %}
+
+{% if page.collection == "tracks" %}
+  {% assign track_image_url = page.image | absolute_url %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    "name": {{ page.track_title | jsonify }},
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": "Longmont Potion Castle"
+    },
+    "inAlbum": {
+      "@type": "MusicAlbum",
+      "name": {{ page.album_title | jsonify }}
+    },
+    "position": {{ page.track_number | jsonify }},
+    "duration": {% if page.track_length %}{{ "PT" | append: page.track_length | append: "S" | jsonify }}{% else %}null{% endif %},
+    "image": {{ track_image_url | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }}
+  }
+  </script>
+{% endif %}

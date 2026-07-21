@@ -1,0 +1,27 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign static_pages = site.pages | where_exp: "page", "page.url != '/sitemap.xml' and page.url != '/robots.txt' and page.url != '/404.html' and page.url != '/index.html' and page.published != false and page.noindex != true" %}
+  {% for page in static_pages %}
+  {% unless page.url contains "." %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endunless %}
+  {% endfor %}
+  {% for album in site.albums %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ album.url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
+  {% for track in site.tracks %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ track.url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
+</urlset>

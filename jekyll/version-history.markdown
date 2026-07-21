@@ -1,5 +1,7 @@
 ---
 layout: page
+title: Version History
+description: Release notes and update history for the stretchie Longmont Potion Castle archive.
 permalink: /version-history/
 published: true
 ---

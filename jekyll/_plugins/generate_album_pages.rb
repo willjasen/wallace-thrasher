@@ -22,6 +22,9 @@ module Jekyll
         doc = Document.new(path, { :site => site, :collection => site.collections['albums'] })
         doc.data['album_title'] = album_data['Album']
         doc.data['album_year'] = album_data['Year']
+        doc.data['title'] = "#{album_data['Album']} (#{album_data['Year']})"
+        doc.data['description'] = "Track list and subtitle links for #{album_data['Album']} by Longmont Potion Castle."
+        doc.data['image'] = "/assets/img/albums/#{album_data['Album_Picture']}"
         doc
       end      
     end

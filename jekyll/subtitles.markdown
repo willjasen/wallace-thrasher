@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Subtitles
+description: Search spoken subtitle text across the Longmont Potion Castle discography.
 permalink: /subtitles/
 search_page: true
 search_menu: true

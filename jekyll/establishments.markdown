@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Establishments
+description: Search establishments, places, and businesses mentioned across Longmont Potion Castle tracks.
 permalink: /establishments/
 published: true
 search_page: true

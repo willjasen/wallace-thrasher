@@ -37,5 +37,9 @@
 
 {% endfor %}
 
+{% if page.track_subtitles %}
+  {% assign track_subtitles = page.track_subtitles %}
+{% endif %}
+
 {% assign track_slug = page.track_title | slugify %}
 {% assign track = site.data[track_slug] %}

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Alex Trebek
+description: Find Longmont Potion Castle tracks and subtitles that mention Alex Trebek.
 permalink: /alex-trebek/
 published: true
 search_page: true

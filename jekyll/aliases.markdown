@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Aliases
+description: Search aliases and nicknames used across Longmont Potion Castle tracks.
 permalink: /aliases/
 published: true
 search_page: true

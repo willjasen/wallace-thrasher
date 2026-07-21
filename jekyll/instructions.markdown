@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Instructions
+description: How to use stretchie search pages, upload local LPC audio, and jump into subtitle lines.
 permalink: /instructions/
 published: true
 ---
