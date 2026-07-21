@@ -6,8 +6,9 @@ permalink: /version-history/
 published: true
 ---
 
-### v2.0.2 (beta)
+### v2.1.0 (beta)
 
+ - merged & scraped data from Talkin'Whipapedia
  - create a local API for data
  - better SEO
 
