@@ -103,6 +103,7 @@ async function loadData(data) {
                     Track_Slug: track.Track_Slug,
                     Track_Subtitles: track.Subtitles,
                     Track_Title: track.Track_Title,
+                    Subtitle_Index: subtitle.Index,
                     Speaker: subtitle.Speaker,
                     Text: subtitle.Text,
                     StartTime: subtitle["Start Time"],
@@ -304,7 +305,31 @@ async function main(callback) {
             (function (input) {
                 if (input.value.trim() != "") {
                     const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
-                    const results = idxText.search(query);
+                    const results = idxText.search(query).sort(function (a, b) {
+                        const aDoc = dataMap.get(a.ref);
+                        const bDoc = dataMap.get(b.ref);
+                        const aYear = Number(aDoc.Album_Year);
+                        const bYear = Number(bDoc.Album_Year);
+                        const yearDifference = (Number.isFinite(aYear) ? aYear : Infinity) -
+                            (Number.isFinite(bYear) ? bYear : Infinity);
+
+                        if (yearDifference !== 0) return yearDifference;
+
+                        const albumDifference = aDoc.Album.localeCompare(bDoc.Album, undefined, {
+                            numeric: true,
+                            sensitivity: 'base'
+                        });
+                        if (albumDifference !== 0) return albumDifference;
+
+                        const aTrackNumber = Number(aDoc.Track_Number);
+                        const bTrackNumber = Number(bDoc.Track_Number);
+                        const trackDifference = (Number.isFinite(aTrackNumber) ? aTrackNumber : Infinity) -
+                            (Number.isFinite(bTrackNumber) ? bTrackNumber : Infinity);
+
+                        if (trackDifference !== 0) return trackDifference;
+
+                        return Number(aDoc.Subtitle_Index) - Number(bDoc.Subtitle_Index);
+                    });
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
 

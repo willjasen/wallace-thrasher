@@ -11,6 +11,7 @@ published: true
  - merged & scraped data from Talkin'Whipapedia
  - create a local API for data
  - better SEO
+ - sort subtitle results by album & track number
 
 ---
 
