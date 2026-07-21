@@ -1,0 +1,85 @@
+.track-page .post-content { margin-top: 0; }
+
+.track-hero {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin: 0 0 28px;
+  padding: 24px;
+  border: 1px solid rgba(127, 127, 127, 0.28);
+  border-radius: 16px;
+  background: rgba(127, 127, 127, 0.07);
+}
+
+.track-hero-cover { display: block; line-height: 0; }
+.track-hero-cover img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.track-hero-album {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.track-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.track-hero-meta { margin: 0 0 14px; color: #aaa; font-size: 0.95rem; }
+.track-review-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.track-review-status.is-reviewed { color: #b9f6ca; background: rgba(30, 130, 76, 0.22); }
+.track-review-status.needs-review { color: #ffe082; background: rgba(180, 130, 0, 0.2); }
+.track-review-status a { white-space: nowrap; }
+
+.track-dev-details {
+  margin: 0 0 22px;
+  padding: 10px 14px;
+  border: 1px solid rgba(127, 127, 127, 0.24);
+  border-radius: 8px;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+.track-dev-details summary { cursor: pointer; font-weight: 600; }
+.track-dev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 6px 18px;
+  margin-top: 10px;
+}
+.track-dev-grid p { margin: 0; }
+
+.track-facts {
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  border-left: 3px solid rgba(127, 127, 127, 0.45);
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.track-facts p { margin: 2px 0; }
+.track-subtitle-divider { margin: 22px 0; }
+
+@media (max-width: 620px) {
+  .track-hero { grid-template-columns: 92px minmax(0, 1fr); gap: 16px; padding: 16px; }
+  .track-hero-cover img { width: 92px; height: 92px; }
+  .track-hero h1 { font-size: clamp(1.55rem, 8vw, 2.2rem); }
+}

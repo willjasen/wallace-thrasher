@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/search-box.css">
+{% if page.collection == "tracks" or page.url == "/tracks/" %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/track-page.css">
+{% endif %}
 <script
   src="{{ site.baseurl }}/assets/js/data-api.js"
   data-source="{{ site.baseurl }}/assets/json/data.combined.json"

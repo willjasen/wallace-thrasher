@@ -1,9 +1,27 @@
 ---
-layout: page
+layout: base
 ---
 
 {% include variables.liquid %}
-{% include album-header.html %}
+
+<article class="post track-page">
+<div class="post-content">
+
+<header class="track-hero">
+  <a class="track-hero-cover" href="{{ site.baseurl }}/albums/{{ matched_album_slug }}/" aria-label="View {{ matched_album_title }}">
+    <img src="{{ site.baseurl }}/assets/img/albums/{{ matched_album_image }}" alt="Album cover for {{ matched_album_title }}" width="160" height="160">
+  </a>
+  <div>
+    <a class="track-hero-album" href="{{ site.baseurl }}/albums/{{ matched_album_slug }}/">{{ matched_album_title }} · {{ matched_album_year }}</a>
+    <h1>{{ page.track_title }}</h1>
+    <p class="track-hero-meta">Track {{ page.track_number }}{% if track_length_detail %} · {{ track_length_detail }} seconds{% endif %}</p>
+    {% if track_speakers_detail != true or track_subtitles_detail != true %}
+      <p class="track-review-status needs-review">Needs review <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">Lend a hand →</a></p>
+    {% else %}
+      <p class="track-review-status is-reviewed">✓ Reviewed</p>
+    {% endif %}
+  </div>
+</header>
 
 <style>
   .subtitle-line {
@@ -18,52 +36,17 @@ layout: page
   }
 </style>
 
-<script>console.log("Track: {{ page.track_title }}");</script>
-
-<h3 style="text-align: center; margin-top: 20px; margin-bottom: 0px;">Track {{ page.track_number }}: {{ page.track_title }}</h3>
-
-{% if track_length_detail %}
-  <h4 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">Runtime: {{ track_length_detail }} seconds</h4>
-{% endif %}
-
-{% if track_speakers_detail != true or track_subtitles_detail != true %}
-  <p style="color: yellow; text-align: center;">This track needs reviewing! <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">--> Lend a hand <--</a></p>
-{% else %}
-  <p style="color: green; text-align: center;">This track has been reviewed! 😊</p>
-{% endif %}
-
 {% if jekyll.environment != "production" %}
-  <!-- Display metadata information about the track as related to this project -->
-  <hr style="margin: 20px 0;">
-  <h5 style="text-align: center; margin-top: -10px; margin-bottom: 30px;">
-    {% if last_modified_detail %}
-      Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}
-    {% endif %}
-  </h5>
-  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-    {% if whisper_model_detail %}
-      Model used: {{ whisper_model_detail }}
-    {% endif %}
-  </h5>
-  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-    {% if track_speakers_detail %}
-      Speakers adjusted? {{ track_speakers_detail }}
-    {% else %}
-      Speakers adjusted? false
-    {% endif %}
-  </h5>
-  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 30px;">
-    {% if track_subtitles_detail %}
-      Subtitles adjusted? {{ track_subtitles_detail }}
-    {% else %}
-      Subtitles adjusted? false
-    {% endif %}
-  </h5>
-  <h5 style="text-align: center; margin-top: -30px; margin-bottom: 40px;">
-    {% if to_do_detail %}
-      To-Do: {{ to_do_detail }}
-    {% endif %}
-  </h5>
+  <details class="track-dev-details">
+    <summary>Track data</summary>
+    <div class="track-dev-grid">
+      {% if last_modified_detail %}<p>Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}</p>{% endif %}
+      {% if whisper_model_detail %}<p>Model: {{ whisper_model_detail }}</p>{% endif %}
+      <p>Speakers adjusted: {{ track_speakers_detail | default: false }}</p>
+      <p>Subtitles adjusted: {{ track_subtitles_detail | default: false }}</p>
+      {% if to_do_detail %}<p>To-do: {{ to_do_detail }}</p>{% endif %}
+    </div>
+  </details>
 {% endif %}
 
 {% if apple_music_link_detail %}
@@ -130,28 +113,19 @@ layout: page
 </script>
 {% endif %}
 
-<hr style="margin: 20px 0;">
-{% if track_aliases_detail %}
-  <h5 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
-    Aliases: {{ track_aliases_detail | join: ", " }}
-  </h5>
-{% endif %}
-{% if track_establishments_detail %}
-  <h5 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
-    Establishments: {{ track_establishments_detail | join: ", " }}
-  </h5>
-{% endif %}
-{% if track_deliveries_detail %}
-  <h5 style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
-    Deliveries: {{ track_deliveries_detail | join: ", " }}
-  </h5>
+{% if track_aliases_detail or track_establishments_detail or track_deliveries_detail %}
+  <div class="track-facts">
+    {% if track_aliases_detail %}<p><strong>Aliases:</strong> {{ track_aliases_detail | join: ", " }}</p>{% endif %}
+    {% if track_establishments_detail %}<p><strong>Establishments:</strong> {{ track_establishments_detail | join: ", " }}</p>{% endif %}
+    {% if track_deliveries_detail %}<p><strong>Deliveries:</strong> {{ track_deliveries_detail | join: ", " }}</p>{% endif %}
+  </div>
 {% endif %}
 
 
 {% include embed-audio-dir-for-tracks.html %}
 
 
-<hr style="margin: 20px 0;">
+<hr class="track-subtitle-divider">
 <!-- Display all of the subtitles within the track -->
 <ul style="list-style-type: none;">
   {% if track_subtitles %}
@@ -174,3 +148,6 @@ layout: page
     {% endfor %}
   {% endif %}
 </ul>
+
+</div>
+</article>
