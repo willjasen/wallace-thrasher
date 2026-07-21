@@ -105,6 +105,23 @@ the JSON data for each track resides within a folder named as the respective alb
 
 when the search pages are accessed, the single combined JSON data (`/assets/json/data.combined.json`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for multiple fields: speakers, subtitles, aliases, and establishments.
 
+the same file is exposed through a read-only browser API. the API downloads and caches `data.combined.json` once; all of its methods query that in-memory dataset and do not request `data.json`, individual track files, or a backend. it is available on every page as `window.WallaceThrasherAPI`:
+
+```javascript
+const api = window.WallaceThrasherAPI;
+
+const albums = await api.getAlbums({ year: 2001, query: 'volume' });
+const tracks = await api.getTracks({ album: 'longmont-potion-castle-4' });
+const result = await api.getTrack('longmont-potion-castle-4', 'alex-trebek');
+const lines = await api.getSubtitles({ speaker: 'Alex Trebek', query: 'parcel', limit: 20 });
+const speakers = await api.getSpeakers({ album: 'longmont-potion-castle-4' });
+const aliases = await api.getAliases({ query: 'stretch' });
+const establishments = await api.getEstablishments({ query: 'ups' });
+const stats = await api.getStats();
+```
+
+list methods accept `offset` and `limit`. `getTracks()` returns `{ album, track }` records, `getTrack()` returns one such record or `null`, and `getSubtitles()` returns `{ album, track, subtitle }` records. `api.ready()` or `api.getData()` provides the original combined document when a specialized query is not enough.
+
 the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
 
 ### 🛠️ Building 🛠️

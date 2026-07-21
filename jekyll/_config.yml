@@ -19,11 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 
-# If this is set to true, the client browser will request each track JSON file individually
-# If this is set to false, the client browser will request the single combined JSON file containing all track data
-loadIndividualTrackJSON: false
-
-# Track pages are rendered dynamically client-side via tracks/index.html using data.combined.json
+# Browser-side data access goes exclusively through assets/json/data.combined.json.
+# Track pages are rendered dynamically client-side via tracks/index.html using that API.
 # Album pages only need track metadata (title, number, slug) which is available in data.json
 # The Jekyll build only loads data.json at build time; data.combined.json is fetched client-side as needed
 

@@ -15,22 +15,7 @@ window._wtSearchLoaded = true;
 
 const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
-const loadIndividualTrackJSON = '{{ site.loadIndividualTrackJSON }}' === 'true';
-console.log("loadIndividualTrackJSON: " + loadIndividualTrackJSON);
 const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
-
-/*
-    This function retrieves a JSON document from a given path
-*/
-async function fetchData(path) {
-    try {
-        const response = await fetch(path);
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
 
 /*
     Save any serializable value as a synthetic Cache API entry under cacheName / cacheKey.
@@ -62,41 +47,6 @@ async function loadFromCache(cacheName, cacheKey) {
     }
 }
 
-/*
-    This function retrieves a JSON document from a given path, using the Cache API
-    to avoid re-downloading on every page load. The cache is keyed by build timestamp
-    so it is automatically invalidated whenever the site is rebuilt.
-*/
-async function fetchDataCached(path) {
-    if (!('caches' in window)) {
-        console.log("Cache API not available, falling back to network fetch.");
-        return fetchData(path);
-    }
-    const cacheName = 'wallace-thrasher-' + BUILD_TIMESTAMP;
-    const cache = await caches.open(cacheName);
-    const cachedResponse = await cache.match(path);
-    if (cachedResponse) {
-        console.log("Serving from cache: " + path);
-        return cachedResponse.json();
-    }
-    console.log("Fetching from network and caching: " + path);
-    try {
-        const response = await fetch(path);
-        await cache.put(path, response.clone());
-        const data = await response.json();
-        // Clean up caches from previous builds
-        const cacheKeys = await caches.keys();
-        for (const key of cacheKeys) {
-            if (key !== cacheName && key.startsWith('wallace-thrasher-')) {
-                console.log("Deleting stale cache: " + key);
-                await caches.delete(key);
-            }
-        }
-        return data;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
 
 // Add a function to get URL parameters
 function getUrlParameter(name) {
@@ -136,116 +86,35 @@ function getTotalTracks(data) {
 /*
     This function loads the JSON data and creates a data structure
 */
-async function loadData() {
+async function loadData(data) {
+    const dataStructure = [];
+    const totalTracks = getTotalTracks(data);
 
-    let dataStructure = [];
-    
-    var jekyll_env = '{{ jekyll.environment }}';
-    
-    if (loadIndividualTrackJSON) {
-        console.log("--Loading data from data.json and the individual track JSON files--");
-        const data = await fetchDataCached(BASE_URL+"/assets/json/data.json");
-
-        // Calculate total number of tracks across all albums
-        const totalTracks = getTotalTracks(data);
-        console.log("Total tracks in data.json:", totalTracks);
-
-        // Iterate through each album, track, and subtitle
-        for (const albumsKey of Object.keys(data)) {
-            const albums = data[albumsKey];
-            const numberOfAlbums = albums.length;
-            for(const album of albums) {
-                // console.log("Loading album: " + album.Album);
-                let trackFetchPromises = [];
-                let trackInfoList = [];
-                for (const track of album.Tracks) {
-                    const jsonPath = BASE_URL+"/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                    trackFetchPromises.push(fetchData(jsonPath));
-                    trackInfoList.push({ album, track });
-                    // If we have 4 promises or it's the last track, process the batch
-                    const maxBatchSize = 4;
-                    if (trackFetchPromises.length === maxBatchSize || track === album.Tracks[album.Tracks.length - 1]) {
-                        const results = await Promise.all(trackFetchPromises);
-                        for (let i = 0; i < results.length; i++) {
-                            const trackSubtitlesData = results[i];
-                            const { album, track } = trackInfoList[i];
-                            for (const subtitle of trackSubtitlesData) {
-                                dataStructure.push({
-                                    id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`,
-                                    Album: album.Album,
-                                    Album_Year: album.Year,
-                                    Album_Picture: album.Album_Picture,
-                                    Album_Slug: album.Album_Slug,
-                                    Track_Number: track.Track_Number,
-                                    Track_Slug: track.Track_Slug,
-                                    Track_Subtitles: track.Subtitles,
-                                    Track_Title: track.Track_Title,
-                                    Aliases: track.Aliases,
-                                    Speaker: subtitle.Speaker,
-                                    Text: subtitle.Text,
-                                    StartTime: subtitle["Start Time"],
-                                    EndTime: subtitle["End Time"],
-                                    Whisper_Model: track.Whisper_Model
-                                });
-                            }
-                            trackDataLoadedPercentage += (1 / totalTracks) * 100;
-                        }
-                        // Reset for next batch
-                        trackFetchPromises = [];
-                        trackInfoList = [];
-                    }
-                }
-                albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
+    for (const album of data.Albums) {
+        for (const track of (album.Tracks || [])) {
+            for (const subtitle of (track.Subtitles || [])) {
+                dataStructure.push({
+                    id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`,
+                    Album: album.Album,
+                    Album_Year: album.Year,
+                    Album_Picture: album.Album_Picture,
+                    Album_Slug: album.Album_Slug,
+                    Track_Number: track.Track_Number,
+                    Track_Slug: track.Track_Slug,
+                    Track_Subtitles: track.Subtitles,
+                    Track_Title: track.Track_Title,
+                    Speaker: subtitle.Speaker,
+                    Text: subtitle.Text,
+                    StartTime: subtitle["Start Time"],
+                    EndTime: subtitle["End Time"],
+                    Whisper_Model: track.Whisper_Model
+                });
             }
-            console.log("All albums have been loaded.");
-        }
-
-    } else {
-        console.log("--Loading data from data.combined.json--");
-        const data = await fetchDataCached(BASE_URL+"/assets/json/data.combined.json");
-
-        // Calculate total number of tracks across all albums
-        const totalTracks = getTotalTracks(data);
-        console.log("Total tracks in data.json:", totalTracks);
-
-        // Iterate through each album, track, and subtitle
-        for (const albumsKey of Object.keys(data)) {
-            const albums = data[albumsKey];
-            
-            for(const album of albums) {
-                // console.log("Loading album: " + album.Album);
-                for (const track of album.Tracks) {
-                    // const jsonPath = "/assets/json/"+album.Album_Slug+"/"+track.Track_JSONPath;
-                    // trackSubtitlesData = await fetchData(jsonPath);
-                    for (const subtitle of track.Subtitles) {
-                        dataStructure.push({
-                            id: `${album.Album}-${track.Track_Title}-${subtitle.Index}`, // create a unique ID for each subtitle using album, track title, and subtitle index
-                            Album: album.Album,
-                            Album_Year: album.Year,
-                            Album_Picture: album.Album_Picture,
-                            Album_Slug: album.Album_Slug,
-                            Track_Number: track.Track_Number,
-                            Track_Slug: track.Track_Slug,
-                            Track_Subtitles: track.Subtitles,
-                            Track_Title: track.Track_Title,
-                            Speaker: subtitle.Speaker,
-                            Text: subtitle.Text,
-                            StartTime: subtitle["Start Time"],
-                            EndTime: subtitle["End Time"],
-                            Whisper_Model: track.Whisper_Model
-                        });
-                    }
-                    trackDataLoadedPercentage += (1 / totalTracks) * 100;
-                    // console.log("Loading track progress: " + trackDataLoadedPercentage.toFixed(1) + "%");
-                }
-                // Update the loading progress
-                // albumDataLoadedPercentage += (1 / numberOfAlbums) * 100;
-                // console.log("Loading album progress: " + Math.round(albumDataLoadedPercentage) + "%");
-            }
-            console.log("All albums have been loaded.");
+            trackDataLoadedPercentage += (1 / totalTracks) * 100;
         }
     }
-
+    albumDataLoadedPercentage = 100;
+    console.log("All data has been loaded from data.combined.json.");
     return dataStructure;
 }
 
@@ -259,12 +128,11 @@ const yieldToMain = () => new Promise(resolve => setTimeout(resolve, 0));
     This is the main function that loads in the JSON data, creates a data structure, and indexes the data for search
 */
 async function main(callback) {
-        // Fetch data.json once and cache it for all consumers
-        const rawDataJson = await fetchDataCached(BASE_URL + '/assets/json/data.json');
+        const rawDataJson = await window.WallaceThrasherAPI.getData();
 
     try {
         var jekyll_env = '{{ jekyll.environment }}';
-        dataStructure = await loadData();
+        dataStructure = await loadData(rawDataJson);
         const dataMap = new Map(dataStructure.map(doc => [doc.id, doc]));
 
         // Function to index a search based on a field
