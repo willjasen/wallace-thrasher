@@ -12,15 +12,38 @@
     .album-image {
         margin-left: 16%;
         margin-right: 20px;
+        flex: 0 0 50px;
     }
 
     .album-image img {
+        display: block;
         width: 50px;
         height: 50px;
+        object-fit: cover;
     }
 
     .album-text {
         margin-bottom: 0px;
+        min-width: 0;
+    }
+
+    @media (max-width: 480px) {
+        .album-info {
+            width: calc(100% - 32px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .album-image {
+            margin-left: 0;
+            margin-right: 14px;
+            flex-basis: 56px;
+        }
+
+        .album-image img {
+            width: 56px;
+            height: 56px;
+        }
     }
 
 </style>

@@ -6,6 +6,7 @@ published: true
 
 ### v2.0.1
 
+ - fix the album covers skewed display when on mobile
  - fix the placement of the LPC logo and link
 
 ---
