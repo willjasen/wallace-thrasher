@@ -183,6 +183,4 @@ here are various badges related to this project's code and its deployments
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
 
-![GitHub License](https://img.shields.io/github/license/willjasen/wallace-thrasher) -- the open source license
-
 ![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
