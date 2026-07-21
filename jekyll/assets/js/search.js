@@ -401,10 +401,29 @@ async function main(callback) {
                 if (!tracksWithSpeaker.has(key)) {
                     tracksWithSpeaker.add(key);
                     const albumAndTitleItem = document.createElement('li');
-                    albumAndTitleItem.innerHTML = `
-                        <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
-                        ${matchedDoc.Album} <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="15" height="15">
-                    `;
+                    albumAndTitleItem.className = 'alex-track-item';
+
+                    const albumImage = document.createElement('img');
+                    albumImage.className = 'alex-track-image';
+                    albumImage.src = `${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}`;
+                    albumImage.alt = matchedDoc.Album;
+                    albumImage.width = 32;
+                    albumImage.height = 32;
+
+                    const textContainer = document.createElement('span');
+                    const trackTitle = document.createElement('a');
+                    trackTitle.className = 'alex-track-title';
+                    trackTitle.href = `${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}`;
+                    trackTitle.textContent = matchedDoc.Track_Title;
+
+                    const albumTitle = document.createElement('span');
+                    albumTitle.className = 'alex-track-album';
+                    albumTitle.textContent = matchedDoc.Album;
+
+                    textContainer.appendChild(trackTitle);
+                    textContainer.appendChild(albumTitle);
+                    albumAndTitleItem.appendChild(albumImage);
+                    albumAndTitleItem.appendChild(textContainer);
                     resultsContainer.appendChild(albumAndTitleItem);
                 }
             });
