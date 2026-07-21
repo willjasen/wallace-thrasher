@@ -6,6 +6,13 @@ permalink: /version-history/
 published: true
 ---
 
+### v2.0.2 (beta)
+
+ - create a local API for data
+ - better SEO
+
+---
+
 ### v2.0.1
 
  - fix the album covers skewed display when on mobile
