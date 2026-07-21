@@ -49,14 +49,17 @@
 }
 
 .dropdown-menu {
+  --search-submenu-bg: #f3f7fb;
+  --search-submenu-hover-bg: #e8eef7;
+  --search-submenu-border: #d5deea;
   position: absolute;
   top: 100%;
   left: 0;
   list-style: none;
   margin: 0;
   padding: 0;
-  background: var(--minima-background-color, #fdfdfd);
-  border: 1px solid #ddd;
+  background: var(--search-submenu-bg);
+  border: 1px solid var(--search-submenu-border);
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-width: 150px;
@@ -100,7 +103,15 @@
 }
 
 .dropdown-menu .page-link:hover {
-  background: #f0f0f0;
+  background: var(--search-submenu-hover-bg);
+}
+
+@supports (background: color-mix(in srgb, white, black)) {
+  .dropdown-menu {
+    --search-submenu-bg: color-mix(in srgb, var(--minima-background-color, #fdfdfd) 88%, var(--minima-brand-color, #2a7ae2) 12%);
+    --search-submenu-hover-bg: color-mix(in srgb, var(--minima-background-color, #fdfdfd) 80%, var(--minima-brand-color, #2a7ae2) 20%);
+    --search-submenu-border: color-mix(in srgb, var(--minima-border-color-01, #dddddd) 70%, var(--minima-brand-color, #2a7ae2) 30%);
+  }
 }
 
 .dropdown-menu li:first-child .page-link {
@@ -135,9 +146,12 @@
 
   .nav-list .page-link:hover,
   .site-header .site-nav .dropdown-toggle:hover,
-  .nav-dropdown.open > .dropdown-toggle,
-  .dropdown-menu .page-link:hover {
+  .nav-dropdown.open > .dropdown-toggle {
     background: var(--minima-code-background-color, #f0f0f0);
+  }
+
+  .dropdown-menu .page-link:hover {
+    background: var(--search-submenu-hover-bg);
   }
   
   /* Mobile dropdown styles */
@@ -168,7 +182,7 @@
     transition: max-height 0.2s, opacity 0.2s, visibility 0.2s;
     border: none;
     box-shadow: none;
-    background: var(--minima-background-color, #fdfdfd);
+    background: var(--search-submenu-bg);
     padding: 0;
     margin: 0;
   }
@@ -188,7 +202,7 @@
   .dropdown-menu .page-link {
     padding: 6px 12px;
     padding-left: 20px;
-    border-bottom: 1px solid var(--minima-border-color-01, #eee);
+    border-bottom: 1px solid var(--search-submenu-border);
     border-radius: 0;
   }
   

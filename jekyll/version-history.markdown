@@ -9,6 +9,7 @@ published: true
  - fix the album covers skewed display when on mobile
  - fix the tracks displayed under Alex Trebek's page on mobile
  - fix the placement of the LPC logo and link
+ - change the coloring of the Search submenu so that it is distinct
 
 ---
 
