@@ -114,6 +114,10 @@ class ArgumentTests(unittest.TestCase):
             ["Brian (LPC 7)", "Brian"],
         )
 
+    def test_merge_accepts_track_coverage_threshold(self):
+        args = wiki.build_parser().parse_args(["merge", "--min-coverage", "0.8"])
+        self.assertEqual(args.min_coverage, 0.8)
+
 
 class RequestTests(unittest.TestCase):
     def test_network_failure_is_not_reported_as_a_missing_page(self):

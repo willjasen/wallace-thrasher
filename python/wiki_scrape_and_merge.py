@@ -1081,12 +1081,13 @@ def cmd_merge(args) -> None:
     dry_run     = args.dry_run
     spk_only    = args.speakers_only
     auto_thresh = args.auto_threshold
+    min_coverage = args.min_coverage
 
     snapshot = _resolve_snapshot(args.snapshot)
     if not snapshot:
         sys.exit("No snapshot found. Run 'scrape' and 'compare' first, or pass --snapshot <name>.")
 
-    applied = skipped = no_compare = stale = 0
+    applied = skipped = low_coverage = no_compare = stale = 0
     backup_run = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
 
     for album, track in iter_tracks(data, args.album, args.track):
@@ -1101,6 +1102,18 @@ def cmd_merge(args) -> None:
 
         if not compare.get("alignments"):
             skipped += 1
+            continue
+
+        summary = compare.get("summary", {})
+        total_entries = summary.get("total_json_entries", 0)
+        matched_entries = summary.get("matched", 0)
+        coverage = matched_entries / total_entries if total_entries else 0.0
+        if coverage < min_coverage:
+            print(
+                f"  [coverage] {a_slug}/{t_slug} — {coverage:.1%} is below "
+                f"the required {min_coverage:.1%}"
+            )
+            low_coverage += 1
             continue
 
         json_entries = load_track_json(a_slug, json_path)
@@ -1185,7 +1198,7 @@ def cmd_merge(args) -> None:
 
     print(
         f"\nDone — merged: {applied}, skipped: {skipped}, "
-        f"stale: {stale}, no compare: {no_compare}"
+        f"below coverage: {low_coverage}, stale: {stale}, no compare: {no_compare}"
     )
     if dry_run:
         print("(dry-run mode — no files were modified)")
@@ -1381,6 +1394,8 @@ def build_parser() -> argparse.ArgumentParser:
                        help="Only update speaker labels, not transcription text.")
     p_mrg.add_argument("--auto-threshold", type=_ratio_arg, default=0.85,
                        help="Min similarity to auto-apply text corrections (default 0.85).")
+    p_mrg.add_argument("--min-coverage", type=_ratio_arg, default=0.0,
+                       help="Only merge tracks with at least this matched-entry coverage (default 0).")
     p_mrg.add_argument("--allow-stale", action="store_true",
                        help="Apply comparison output even if the source JSON has changed (unsafe).")
 
