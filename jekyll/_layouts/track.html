@@ -114,11 +114,44 @@ layout: base
 {% endif %}
 
 {% if track_aliases_detail or track_establishments_detail or track_deliveries_detail %}
-  <div class="track-facts">
-    {% if track_aliases_detail %}<p><strong>Aliases:</strong> {{ track_aliases_detail | join: ", " }}</p>{% endif %}
-    {% if track_establishments_detail %}<p><strong>Establishments:</strong> {{ track_establishments_detail | join: ", " }}</p>{% endif %}
-    {% if track_deliveries_detail %}<p><strong>Deliveries:</strong> {{ track_deliveries_detail | join: ", " }}</p>{% endif %}
-  </div>
+  <section class="track-facts" aria-labelledby="track-facts-heading">
+    <p class="track-facts-heading" id="track-facts-heading">Track details</p>
+    <div class="track-facts-grid">
+      {% if track_aliases_detail %}
+        <div class="track-fact-group track-fact-aliases">
+          <div class="track-fact-label">
+            <span class="track-fact-icon" aria-hidden="true">A</span>
+            <h2>Aliases</h2>
+          </div>
+          <ul class="track-fact-values">
+            {% for alias in track_aliases_detail %}<li>{{ alias }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if track_establishments_detail %}
+        <div class="track-fact-group track-fact-establishments">
+          <div class="track-fact-label">
+            <span class="track-fact-icon" aria-hidden="true">E</span>
+            <h2>Establishments</h2>
+          </div>
+          <ul class="track-fact-values">
+            {% for establishment in track_establishments_detail %}<li>{{ establishment }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if track_deliveries_detail %}
+        <div class="track-fact-group track-fact-deliveries">
+          <div class="track-fact-label">
+            <span class="track-fact-icon" aria-hidden="true">D</span>
+            <h2>Deliveries</h2>
+          </div>
+          <ul class="track-fact-values">
+            {% for delivery in track_deliveries_detail %}<li>{{ delivery }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </section>
 {% endif %}
 
 

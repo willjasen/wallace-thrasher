@@ -70,16 +70,80 @@
 
 .track-facts {
   margin: 0 0 22px;
-  padding: 12px 16px;
-  border-left: 3px solid rgba(127, 127, 127, 0.45);
-  color: #aaa;
-  font-size: 0.9rem;
+  padding: 18px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 14px;
+  background: rgba(127, 127, 127, 0.055);
 }
-.track-facts p { margin: 2px 0; }
+.track-facts-heading {
+  margin: 0 0 12px;
+  color: #999;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.track-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+.track-fact-group {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(127, 127, 127, 0.2);
+  border-radius: 11px;
+  background: rgba(127, 127, 127, 0.06);
+}
+.track-fact-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+.track-fact-label h2 {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+.track-fact-icon {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+.track-fact-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.track-fact-values li {
+  max-width: 100%;
+  padding: 5px 9px;
+  overflow-wrap: anywhere;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 999px;
+  background: rgba(127, 127, 127, 0.08);
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+.track-fact-aliases .track-fact-icon { color: #90caf9; background: rgba(66, 165, 245, 0.16); }
+.track-fact-establishments .track-fact-icon { color: #ffcc80; background: rgba(255, 167, 38, 0.16); }
+.track-fact-deliveries .track-fact-icon { color: #a5d6a7; background: rgba(102, 187, 106, 0.16); }
 .track-subtitle-divider { margin: 22px 0; }
 
 @media (max-width: 620px) {
   .track-hero { grid-template-columns: 92px minmax(0, 1fr); gap: 16px; padding: 16px; }
   .track-hero-cover img { width: 92px; height: 92px; }
   .track-hero h1 { font-size: clamp(1.55rem, 8vw, 2.2rem); }
+  .track-facts { padding: 14px; }
+  .track-facts-grid { grid-template-columns: 1fr; }
 }

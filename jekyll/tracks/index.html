@@ -240,17 +240,44 @@ noindex: true
   frag.appendChild(hr());
 
   // ---- Aliases / Establishments / Deliveries ----
-  if (track.Aliases && track.Aliases.length > 0) {
-    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
-      'Aliases: ' + track.Aliases.join(', ')));
+  function normalizeFactValues(value) {
+    if (Array.isArray(value)) return value;
+    if (typeof value === 'string' && value.trim()) return [value];
+    return [];
   }
-  if (track.Establishments && track.Establishments.length > 0) {
-    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
-      'Establishments: ' + track.Establishments.join(', ')));
-  }
-  if (track.Deliveries && track.Deliveries.length > 0) {
-    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: 0px; margin-bottom: 0px;' },
-      'Deliveries: ' + track.Deliveries.join(', ')));
+
+  const factGroups = [
+    { key: 'Aliases', className: 'track-fact-aliases', icon: 'A' },
+    { key: 'Establishments', className: 'track-fact-establishments', icon: 'E' },
+    { key: 'Deliveries', className: 'track-fact-deliveries', icon: 'D' },
+  ].map(function (fact) {
+    fact.values = normalizeFactValues(track[fact.key]);
+    return fact;
+  }).filter(function (fact) { return fact.values.length > 0; });
+
+  if (factGroups.length > 0) {
+    const facts = el('section', { class: 'track-facts', 'aria-labelledby': 'track-facts-heading' });
+    facts.appendChild(textEl('p', { class: 'track-facts-heading', id: 'track-facts-heading' }, 'Track details'));
+    const factsGrid = el('div', { class: 'track-facts-grid' });
+
+    factGroups.forEach(function (fact) {
+      const group = el('div', { class: 'track-fact-group ' + fact.className });
+      const label = el('div', { class: 'track-fact-label' });
+      const icon = textEl('span', { class: 'track-fact-icon', 'aria-hidden': 'true' }, fact.icon);
+      label.appendChild(icon);
+      label.appendChild(textEl('h2', {}, fact.key));
+      group.appendChild(label);
+
+      const values = el('ul', { class: 'track-fact-values' });
+      fact.values.forEach(function (value) {
+        values.appendChild(textEl('li', {}, String(value)));
+      });
+      group.appendChild(values);
+      factsGrid.appendChild(group);
+    });
+
+    facts.appendChild(factsGrid);
+    frag.appendChild(facts);
   }
 
   // ---- Audio player (delegates to persistent-player.js) ----
