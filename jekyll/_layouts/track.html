@@ -171,22 +171,46 @@ layout: base
 
 
 <hr class="track-subtitle-divider">
+<div class="track-edit-actions" data-track-edit-root
+  data-album-slug="{{ matched_album_slug | escape }}"
+  data-track-slug="{{ track_slug_detail | escape }}"
+  data-github-client-id="{{ site.github_client_id | escape }}">
+  <button id="suggest-edit-toggle" type="button" aria-label="Suggest edits">
+    <span class="suggest-edit-action">✏️ Suggest edits</span>
+  </button>
+</div>
 <!-- Display all of the subtitles within the track -->
-<ul style="list-style-type: none;">
+<ul id="subtitleList" class="track-subtitle-list">
   {% if track_subtitles %}
     {% for trackText in track_subtitles %}
-      <li class="subtitle-line" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-        <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
+      {% assign subtitle_index = trackText.Index | default: forloop.index %}
+      <li class="subtitle-line" data-sub-index="{{ subtitle_index }}" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
+        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}</span>
+        <span class="sub-edit">
+          <input class="sub-speaker-input" type="text" value="{{ trackText.Speaker | escape }}" maxlength="100" aria-label="Speaker for subtitle {{ subtitle_index }}">
+          <span aria-hidden="true">:</span>
+          <input class="sub-text-input" type="text" value="{{ trackText.Text | escape }}" maxlength="1000" aria-label="Text for subtitle {{ subtitle_index }}">
+        </span>
+        <br>
       </li>
     {% endfor %}
   {% else %}
     {% for trackText in track %}
-    <li class="subtitle-line" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-      <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
-    </li>
+      {% assign subtitle_index = trackText.Index | default: forloop.index %}
+      <li class="subtitle-line" data-sub-index="{{ subtitle_index }}" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
+        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}</span>
+        <span class="sub-edit">
+          <input class="sub-speaker-input" type="text" value="{{ trackText.Speaker | escape }}" maxlength="100" aria-label="Speaker for subtitle {{ subtitle_index }}">
+          <span aria-hidden="true">:</span>
+          <input class="sub-text-input" type="text" value="{{ trackText.Text | escape }}" maxlength="1000" aria-label="Text for subtitle {{ subtitle_index }}">
+        </span>
+        <br>
+      </li>
     {% endfor %}
   {% endif %}
 </ul>
+
+<script src="{{ site.baseurl }}/assets/js/track-edit.js"></script>
 
 </div>
 </article>
