@@ -8,12 +8,20 @@ published: true
 
 ### v2.1.0 (beta)
 
+data
+
  - merged & scraped some data from Talkin' Whipapedia
- - create a local API for data
- - better SEO
  - sort subtitle results by album & track number
+ - create a local API for data
+
+appearance
+
  - fix highlighting of table of contents menu
  - include instructions for the LPC USB player
+
+other
+
+ - better SEO
 
 ---
 
