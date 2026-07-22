@@ -292,6 +292,7 @@
   // The FAB and audio element stay alive so playback continues.
 
   const MAIN_SEL = 'main.page-content';
+  const PAGE_STYLE_SEL = 'link[rel="stylesheet"][data-soft-nav-style]';
 
   // Persistent record of external script URLs that have been executed at least once.
   // DOM queries alone can't catch scripts removed by previous innerHTML swaps, so we
@@ -309,9 +310,40 @@
            (a.protocol === 'http:' || a.protocol === 'https:');
   }
 
+  // Page-specific styles live in <head>, outside the content replaced by soft
+  // navigation. Load the destination page's styles before swapping its markup,
+  // then discard styles that only belonged to the previous page.
+  async function syncPageStyles(doc) {
+    const wanted = Array.from(doc.querySelectorAll(PAGE_STYLE_SEL));
+    const wantedUrls = new Set(wanted.map(function (link) {
+      return new URL(link.getAttribute('href'), location.href).href;
+    }));
+    const current = Array.from(document.querySelectorAll(PAGE_STYLE_SEL));
+    const currentUrls = new Set(current.map(function (link) { return link.href; }));
+
+    await Promise.all(wanted.map(function (link) {
+      const url = new URL(link.getAttribute('href'), location.href).href;
+      if (currentUrls.has(url)) return Promise.resolve();
+
+      return new Promise(function (resolve) {
+        const added = document.createElement('link');
+        Array.from(link.attributes).forEach(function (attribute) {
+          added.setAttribute(attribute.name, attribute.value);
+        });
+        added.onload = resolve;
+        added.onerror = resolve;
+        document.head.appendChild(added);
+      });
+    }));
+
+    current.forEach(function (link) {
+      if (!wantedUrls.has(link.href)) link.remove();
+    });
+  }
+
   async function softNavigate(url) {
     try {
-      const res = await fetch(url, { credentials: 'same-origin' });
+      const res = await fetch(url, { credentials: 'same-origin', cache: 'no-cache' });
       if (!res.ok) { location.href = url; return; }
       const html = await res.text();
       const parser = new DOMParser();
@@ -320,6 +352,8 @@
       const newMain = doc.querySelector(MAIN_SEL);
       const oldMain = document.querySelector(MAIN_SEL);
       if (!newMain || !oldMain) { location.href = url; return; }
+
+      await syncPageStyles(doc);
 
       // Swap title
       document.title = doc.title;
