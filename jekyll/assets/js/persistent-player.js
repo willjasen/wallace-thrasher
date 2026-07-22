@@ -65,8 +65,18 @@
       display: none; flex-direction: column; align-items: center;
       min-width: 300px; gap: 10px;
     }
+    #audioFabHelp {
+      position: absolute; top: 8px; right: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 26px; height: 26px; border-radius: 50%;
+      color: #d0d0ff; font-size: 18px; line-height: 1;
+      text-decoration: none;
+    }
+    #audioFabHelp:hover, #audioFabHelp:focus-visible {
+      color: #fff; background: #5a5a9a; outline: none;
+    }
     #audioFabPanel audio { width: 100%; margin-top: 4px; }
-    #audioFabPanel .fab-panel-title { margin: 0; color: #b0b0e0; font-size: 0.78em; text-align: center; }
+    #audioFabPanel .fab-panel-title { margin: 0; padding: 0 22px; color: #b0b0e0; font-size: 0.78em; text-align: center; }
     #audioFabArtwork {
       display: none; width: 112px; height: 112px; object-fit: cover;
       border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.45);
@@ -75,6 +85,7 @@
       color: greenyellow; background: none; border: 1px solid greenyellow;
       border-radius: 6px; padding: 6px 12px; cursor: pointer; font-weight: bold;
     }
+    #selectLpcBtn:disabled { opacity: 1; cursor: default; }
   `;
   document.head.appendChild(style);
 
@@ -90,6 +101,14 @@
 
   const fabPanel = document.createElement('div');
   fabPanel.id = 'audioFabPanel';
+
+  const helpLink = document.createElement('a');
+  helpLink.id = 'audioFabHelp';
+  helpLink.href = '/instructions/#lpc-usb-player';
+  helpLink.textContent = 'ⓘ';
+  helpLink.title = 'How to use the LPC USB player';
+  helpLink.setAttribute('aria-label', 'How to use the LPC USB player');
+  fabPanel.appendChild(helpLink);
 
   const panelTitle = document.createElement('p');
   panelTitle.className = 'fab-panel-title';
@@ -118,6 +137,7 @@
   // ── State ────────────────────────────────────────────────────────────────────
   window.fileMap = window.fileMap || {};   // path → blob URL
   let cachedHandle = null;
+  let usbIsLoaded = false;
 
   // ── Helpers ──────────────────────────────────────────────────────────────────
   function formatTime(s) {
@@ -126,9 +146,12 @@
   }
 
   function markLoaded() {
+    usbIsLoaded = true;
     audioPlayer.style.display = '';
     selectBtn.textContent = '✅ LPC USB loaded';
     selectBtn.style.borderColor = 'greenyellow';
+    selectBtn.disabled = true;
+    selectBtn.title = 'LPC USB is already loaded';
     panelTitle.style.display = 'none';
   }
 
@@ -244,6 +267,13 @@
 
   // Close panel on outside click (but not search results)
   document.addEventListener('click', function (e) {
+    const playerOpener = e.target.closest('a[href="#open-lpc-usb-player"]');
+    if (playerOpener) {
+      e.preventDefault();
+      fabPanel.style.display = 'flex';
+      return;
+    }
+
     const searchResults = document.getElementById('subtitles-search-results');
     if (!fab.contains(e.target) && !fabPanel.contains(e.target) &&
         !(searchResults && searchResults.contains(e.target))) {
@@ -253,6 +283,7 @@
 
   // ── Select button ────────────────────────────────────────────────────────────
   selectBtn.addEventListener('click', async function () {
+    if (usbIsLoaded) return;
     if (!('showDirectoryPicker' in window)) return;
     try {
       const dirHandle = await window.showDirectoryPicker({ mode: 'read', startIn: 'music' });
@@ -379,8 +410,15 @@
         orig.parentNode.replaceChild(s, orig);
       });
 
-      // Scroll to top
-      window.scrollTo(0, 0);
+      // Honor deep links while keeping playback alive during soft navigation.
+      const destination = new URL(url, location.href);
+      const hashTarget = destination.hash &&
+        document.getElementById(decodeURIComponent(destination.hash.slice(1)));
+      if (hashTarget) {
+        hashTarget.scrollIntoView();
+      } else {
+        window.scrollTo(0, 0);
+      }
 
       // Notify page scripts that the page changed
       document.dispatchEvent(new CustomEvent('soft-nav', { detail: { url } }));

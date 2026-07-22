@@ -38,7 +38,17 @@
     if (!lines.length) return;
 
     const audio = window.lpcPlayer.audio;
+    function clearHighlight() {
+      if (activeSubtitle) activeSubtitle.classList.remove('subtitle-active');
+      activeSubtitle = null;
+    }
+
     function updateHighlight() {
+      if (audio.paused || audio.ended) {
+        clearHighlight();
+        return;
+      }
+
       const time = audio.currentTime;
       const next = lines.find(function (line) {
         return time >= line.start && time < line.end;
@@ -52,7 +62,10 @@
 
     audio.addEventListener('timeupdate', updateHighlight, { signal: abortController.signal });
     audio.addEventListener('seeked', updateHighlight, { signal: abortController.signal });
-    audio.addEventListener('loadedmetadata', updateHighlight, { signal: abortController.signal });
+    audio.addEventListener('play', updateHighlight, { signal: abortController.signal });
+    audio.addEventListener('pause', clearHighlight, { signal: abortController.signal });
+    audio.addEventListener('ended', clearHighlight, { signal: abortController.signal });
+    audio.addEventListener('emptied', clearHighlight, { signal: abortController.signal });
     karaokeStarted = true;
     updateHighlight();
   }

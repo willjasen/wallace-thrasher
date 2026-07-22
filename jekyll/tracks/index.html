@@ -640,14 +640,25 @@ noindex: true
       .filter(function (s) { return s.start !== null && s.end !== null; });
 
     var currentActive = null;
+    var karaokeAudio = null;
     var karaokeAbort = new AbortController();
+
+    function clearHighlight() {
+      if (currentActive) currentActive.el.classList.remove('subtitle-active');
+      currentActive = null;
+    }
 
     document.addEventListener('soft-nav', function () {
       karaokeAbort.abort();
-      if (currentActive) { currentActive.el.classList.remove('subtitle-active'); currentActive = null; }
+      clearHighlight();
     }, { once: true });
 
     function updateHighlight(currentTime) {
+      if (!karaokeAudio || karaokeAudio.paused || karaokeAudio.ended) {
+        clearHighlight();
+        return;
+      }
+
       var next = null;
       for (var i = 0; i < subtitleData.length; i++) {
         if (currentTime >= subtitleData[i].start && currentTime <= subtitleData[i].end) {
@@ -670,8 +681,13 @@ noindex: true
       if (karaokeStarted || !subtitleData.length || !window.lpcPlayer) return;
       karaokeStarted = true;
       var audio = window.lpcPlayer.audio;
+      karaokeAudio = audio;
       audio.addEventListener('timeupdate', function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
       audio.addEventListener('seeked',     function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
+      audio.addEventListener('play',       function () { updateHighlight(audio.currentTime); }, { signal: karaokeAbort.signal });
+      audio.addEventListener('pause', clearHighlight, { signal: karaokeAbort.signal });
+      audio.addEventListener('ended', clearHighlight, { signal: karaokeAbort.signal });
+      audio.addEventListener('emptied', clearHighlight, { signal: karaokeAbort.signal });
       updateHighlight(audio.currentTime);
     };
 

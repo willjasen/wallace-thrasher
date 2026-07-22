@@ -6,6 +6,21 @@ permalink: /instructions/
 published: true
 ---
 
+### 🎧 LPC USB Player 🎧 {#lpc-usb-player}
+
+the LPC USB player lets you listen to your own copy of the LPC Ultimate Session Bundle while browsing stretchie. the audio stays on your computer; stretchie only reads the folder you choose and does not upload its contents.
+
+1. use stretchie in a desktop version of Chrome or Edge. the player is not shown on phones, tablets, or browsers that cannot open a local folder.
+2. select the **🎧 button** in the lower-right corner of the page.
+3. select [**Select LPC USB**](#open-lpc-usb-player), then choose the top-level folder for the collection—usually the folder named **LPC USB**. do not choose an individual album folder.
+4. open an album or track page and use its play button, or choose a result on the Subtitles page. the selected track will open in the floating player and continue playing as you move between pages.
+
+your browser may ask for permission to read the folder again after it restarts. select the 🎧 button and allow access when prompted. if a track cannot be found, confirm that you selected the top-level collection folder and that its album folders and MP3 filenames have not been renamed.
+
+you can use the player’s standard controls to play, pause, seek, and change volume. stretchie remembers the chosen folder when the browser supports it, but it cannot access that folder unless you grant read permission.
+
+---
+
 ### 🧭 Search Pages 🧭
 
 there are four pages that utilize the search feature, found under the Search menu option:
@@ -156,7 +171,8 @@ submitted suggestions do not appear on the website immediately; they must be rev
   // Clean up when the persistent player soft-navigates away from Instructions
   document.addEventListener("soft-nav", function onSoftNav(e) {
     var url = (e.detail && e.detail.url) || "";
-    if (!url.match(/\/instructions\/?$/)) {
+    var path = new URL(url || location.href, location.href).pathname;
+    if (!path.match(/\/instructions\/?$/)) {
       var toc = document.getElementById("instructions-toc");
       if (toc) {
         if (toc.cleanup) toc.cleanup();
