@@ -1,0 +1,499 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:21.401886+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Abraham",
+  "track_slug": "abraham",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/abraham.json",
+  "json_sha256": "b53210531c4a3370f193883099dc2d40d1372de8add3b2a0ebbbfec9e7aa0813",
+  "wiki_title": "Abraham",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Abraham",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Ryan",
+    "SPEAKER_02": "Ryan"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.8214,
+      "observations": 10,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 8.8439,
+          "observations": 10
+        },
+        {
+          "name": "Ryan",
+          "score": 1.9231,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Ryan",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Ryan",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Ryan",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Ryan",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello is Ryan there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello, is Ryan there?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello is Ryan there.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm thinking.",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "Speaking.",
+      "similarity": 0.4,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Speaking.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's going down?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[clears throat] What's goin' down?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[clears throat] What's goin' down?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "None",
+      "json_text": "Who is it?",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "Who is this?",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This is Abraham?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Abraham.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Abraham?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I saw you at the park earlier.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I saw you at the... at the park, earlier? During... you know, frisbee?",
+      "similarity": 0.906,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I saw you at the park earlier.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Dern, you know, Frisbee?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I saw you at the... at the park, earlier? During... you know, frisbee?",
+      "similarity": 0.906,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dern, you know, Frisbee?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "No?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You gave me...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You gave me... [laughs] Well, you... you gave us your number, man, I'm sorry.",
+      "similarity": 0.7748,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You gave me...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, you gave this your number, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You gave me... [laughs] Well, you... you gave us your number, man, I'm sorry.",
+      "similarity": 0.7748,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you gave this your number, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Who is this?",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "Who is this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Abraham.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Abraham.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Abraham.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And you saw me where, when?",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "And you saw me where/when?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you saw me where, when?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "With that kite, stuff.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "With that kite... stuff? Gettin' all--",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "With that kite, stuff.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Getting all...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "With that kite... stuff? Gettin' all--",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Getting all...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You got the wrong number.",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "You got the wrong number, man.",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got the wrong number, man.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Getting all nice out, come on, dude.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Gettin' all nice. Aw, c'mon dude.",
+      "similarity": 0.8254,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Gettin' all nice. Aw, c'mon dude.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What now?",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "What now?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What now?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So how much...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So how much... how much do you want, man?",
+      "similarity": 0.7647,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So how much...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you want, huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So how much... how much do you want, man?",
+      "similarity": 0.7647,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want, huh?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "None",
+      "json_text": "What?",
+      "wiki_speaker": "Ryan",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Ryan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How much money, bro?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How... how much money, bro? You know, so--",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How much money, bro?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You know, so...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How... how much money, bro? You know, so--",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know, so...",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 23,
+    "total_wiki_lines": 19,
+    "matched_wiki_lines": 18,
+    "unmatched_wiki_lines": 1,
+    "matched": 23,
+    "speakers_to_map": 3,
+    "text_auto_correct": 1,
+    "text_review": 4,
+    "text_group_review": 10,
+    "unmatched_json": 0
+  }
+}

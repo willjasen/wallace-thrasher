@@ -1,0 +1,375 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:55.239366+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Exotic Cookies 2",
+  "track_slug": "exotic-cookies-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/exotic-cookies-2.json",
+  "json_sha256": "9f8526332a25bd8d246611e4464f535f144f219c6f31c87aacba98176c0486e5",
+  "wiki_title": "Exotic Cookies 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Exotic_Cookies_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (3)",
+    "SPEAKER_01": "Man (2)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (3)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (3)",
+          "score": 0.9762,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 1.6107,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Machine",
+      "confidence": 0.3333,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Machine",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man (5)",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Woman (1)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Woman (1)",
+      "confidence": 0.3527,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman (1)",
+          "score": 1.525,
+          "observations": 2
+        },
+        {
+          "name": "Man (5)",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man (4)",
+          "score": 0.9844,
+          "observations": 1
+        },
+        {
+          "name": "Woman (6)",
+          "score": 0.8148,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Helium Sandwiches.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Helium sandwiches.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Helium Sandwiches.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "None",
+      "json_text": "That's part of that. Hang up.",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "[in background] It's the smartass, hang up!",
+      "similarity": 0.5152,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "[in background] It's the smartass, hang up!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We didn't order any exotic cookies. We're on diets. We don't order anything like that.",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "We didn't order any exotic cookie. We... We're on diets, we don't order anything like that.",
+      "similarity": 0.9762,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We didn't order any exotic cookie. We... We're on diets, we don't order anything like that.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Please leave a brief message after the tone.",
+      "wiki_speaker": "Machine",
+      "wiki_text": "Please leave a brief message after the tone.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Machine",
+      "speaker_action": "matched_line",
+      "proposed_text": "Please leave a brief message after the tone.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Phealium sandwiches? I don't know what you're talking about at all.",
+      "wiki_speaker": "Man (4)",
+      "wiki_text": "Helium sandwiches? I don't know what you're talking about, at all!",
+      "similarity": 0.9844,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man (4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Helium sandwiches? I don't know what you're talking about, at all!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Stick it in your ear.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Stick it in your ear.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Stick it in your ear.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh, drop dead, you...",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Oh, drop dead, you...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, drop dead, you...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Dad, you...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Dad, you...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Lily biscuits?",
+      "wiki_speaker": "Woman (6)",
+      "wiki_text": "Fluid biscuits?",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Woman (6)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fluid biscuits?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Chaw.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Cha-cha?",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Chaw.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Cha-cha?",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What do I want? I don't want to sit.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "What?! What do I want? I don't want shit! [laughing]",
+      "similarity": 0.775,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?! What do I want? I don't want shit! [laughing]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Fluid cookie and you have a helium biscuit?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Fluid Cookie, and you have a helium biscuit? [laughs] Hold on a second...",
+      "similarity": 0.944,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fluid cookie and you have a helium biscuit?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hold on a second.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Fluid Cookie, and you have a helium biscuit? [laughs] Hold on a second...",
+      "similarity": 0.944,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hold on a second.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You've got a fluid cookie or with a helium biscuit?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "[to someone in background] You've got somebody from Fluid Cook... Cookie here with a helium biscuit?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "[to someone in background] You've got somebody from Fluid Cook... Cookie here with a helium biscuit?",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 15,
+    "total_wiki_lines": 18,
+    "matched_wiki_lines": 12,
+    "unmatched_wiki_lines": 6,
+    "matched": 14,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 4,
+    "text_group_review": 4,
+    "unmatched_json": 1
+  }
+}

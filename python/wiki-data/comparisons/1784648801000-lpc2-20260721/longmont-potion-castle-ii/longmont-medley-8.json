@@ -1,0 +1,169 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:33.104254+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Longmont Medley 8",
+  "track_slug": "longmont-medley-8",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/longmont-medley-8.json",
+  "json_sha256": "c284512b8cefdce1ac66fede30e02f7ad840df6f118c4bad740e30a38dd41f59",
+  "wiki_title": "Longmont Medley 8",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Longmont_Medley_8",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (1)",
+    "SPEAKER_01": "Man (2)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (1)",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 1.7549,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 2.4292,
+          "observations": 3
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A hernia bowel, Lebanon, Bowel, everybody has a bowel.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Lebanon? Bowel? Everybody has a bowel.",
+      "similarity": 0.8235,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2,
+        4,
+        6
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lebanon? Bowel? Everybody has a bowel.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You keep that up, Buster, and you've got problems.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You keep that up, buster, and you've got problems. They've got federal laws against harassing on telephones.",
+      "similarity": 0.9314,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You keep that up, Buster, and you've got problems.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You have federal law against harassing on telephones.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You keep that up, buster, and you've got problems. They've got federal laws against harassing on telephones.",
+      "similarity": 0.9314,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You have federal law against harassing on telephones.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hogdowl, what are you talking about?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Hog bowel? What are you talking about?",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hog bowel? What are you talking about?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I ain't gonna pay you nothing.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Well no. I ain't gonna pay you nothin'. What do you--",
+      "similarity": 0.7654,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well no. I ain't gonna pay you nothin'. What do you--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Will you do some kind of rip-off or something?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "--is this, some sort of rip off or somethin'?",
+      "similarity": 0.7209,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "--is this, some sort of rip off or somethin'?",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 8,
+    "matched_wiki_lines": 7,
+    "unmatched_wiki_lines": 1,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 3,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

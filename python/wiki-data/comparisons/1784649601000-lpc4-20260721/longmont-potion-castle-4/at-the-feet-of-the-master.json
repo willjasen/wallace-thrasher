@@ -1,0 +1,181 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:39.035653+00:00",
+  "snapshot": "1784649601000-lpc4-20260721",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "At The Feet Of The Master",
+  "track_slug": "at-the-feet-of-the-master",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/at-the-feet-of-the-master.json",
+  "json_sha256": "454a5c1cfdcca9ace7d5e9fa96f420b5e680cb5a9166cd00428671131f68b1f7",
+  "wiki_title": "At The Feet Of The Master",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/At_The_Feet_Of_The_Master",
+  "speaker_mapping": {
+    "SPEAKER_00": "Larry",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Larry",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Larry",
+          "score": 2.5056,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.6933,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.7789,
+          "observations": 2
+        },
+        {
+          "name": "Larry",
+          "score": 0.7869,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You like them?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You like them?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, they're egotistical, better.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "Naw, they're egotistical, bud.",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "Naw, they're egotistical, bud.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And it's fucking cleaning my house, about for this and wait.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "And... fuckin' cleanin' my house, 'bout to lift some weights.",
+      "similarity": 0.6842,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "And... fuckin' cleanin' my house, 'bout to lift some weights.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, really?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, really?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, really?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't need me sharing, so you want me to come over so you can learn the defeat the master?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Need me to show you to, uh... so I... you want me to come over so you can learn at the feet of the master?",
+      "similarity": 0.7789,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Need me to show you to, uh... so I... you want me to come over so you can learn at the feet of the master?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why you dream so much, Dee?",
+      "wiki_speaker": "Larry",
+      "wiki_text": "Shiiit... why you dreaming so much, dude?",
+      "similarity": 0.7869,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "Shiiit... why you dreaming so much, dude?",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 7,
+    "total_wiki_lines": 7,
+    "matched_wiki_lines": 6,
+    "unmatched_wiki_lines": 1,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 0,
+    "text_review": 4,
+    "text_group_review": 0,
+    "unmatched_json": 1
+  }
+}

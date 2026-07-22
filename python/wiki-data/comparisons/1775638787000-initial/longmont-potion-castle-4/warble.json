@@ -1,0 +1,584 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:20.799068+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Warble",
+  "track_slug": "warble",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/warble.json",
+  "json_sha256": "d5e0bed8fb2a16eb8596f31f5f1af623c914e920d34cd47b22080abcf31188c9",
+  "wiki_title": "Warble",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Warble",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_03": "Jake"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.7288,
+      "observations": 7,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 6.4802,
+          "observations": 7
+        },
+        {
+          "name": "Jake",
+          "score": 2.4111,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Jake",
+      "confidence": 0.5747,
+      "observations": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Jake",
+          "score": 3.6941,
+          "observations": 4
+        },
+        {
+          "name": "LPC",
+          "score": 2.7342,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Jake",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Jake",
+          "score": 1.9118,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They might be closed now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They might be closed right now. [clears throat]",
+      "similarity": 0.7342,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They might be closed now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Believe so.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They might be closed right now. [clears throat]",
+      "similarity": 0.7342,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Believe so.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Radio check, Jay speaking.",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Radio Shack, Jake speaking.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Radio Shack, Jake speaking.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hey.",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Hey.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hi, yeah, I had a quick question for you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, yeah. I had a quick question for you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, yeah, I had a quick question for you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, could you hold up for just a second?",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Okay, could you hold on for just a second?",
+      "similarity": 0.95,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, could you hold on for just a second?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I had this kind of version.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I... I.. it, it's kind of urgent.",
+      "similarity": 0.5769,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "I... I.. it, it's kind of urgent.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, I'm on the other one.",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Okay... I'm... I'm on the other line, could you hold on for a second?",
+      "similarity": 0.887,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, I'm on the other one.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Can you hold on for a second?",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Okay... I'm... I'm on the other line, could you hold on for a second?",
+      "similarity": 0.887,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can you hold on for a second?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "None",
+      "json_text": "All right, give a shot.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Alright, I'll give it a shot.",
+      "similarity": 0.7917,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, I'll give it a shot.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, how you doing?",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Yeah, how you doin'?",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, how you doin'?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, good. Sorry about that.",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Sorry about that.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry about that.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's okay. Uh... I ca... I'm really starting... uh, I was starting to warble, tonight? I was wondering whether... if you could... help me out with some kind of adapter.",
+      "similarity": 0.8722,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm really starting to warble.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's okay. Uh... I ca... I'm really starting... uh, I was starting to warble, tonight? I was wondering whether... if you could... help me out with some kind of adapter.",
+      "similarity": 0.8722,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm really starting to warble.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tonight, I was wondering if you could help me out with some kind of adapter.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's okay. Uh... I ca... I'm really starting... uh, I was starting to warble, tonight? I was wondering whether... if you could... help me out with some kind of adapter.",
+      "similarity": 0.8722,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tonight, I was wondering if you could help me out with some kind of adapter.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'm sorry, what?",
+      "wiki_speaker": "Jake",
+      "wiki_text": "You're starting to... I'm sorry, what?",
+      "similarity": 0.5957,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're starting to... I'm sorry, what?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm warbling a lot.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm warbling a lot.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm warbling a lot.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm warbling, a lot.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm warbling a lot.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You're warbling?",
+      "wiki_speaker": "Jake",
+      "wiki_text": "You're warbling?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're warbling?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's a definite, like, you know, pronounced warble going on.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "There's a definite, like... you know, pronounced warble... going on. So... [sigh]",
+      "similarity": 0.9612,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's a definite, like, you know, pronounced warble going on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "There's a definite, like... you know, pronounced warble... going on. So... [sigh]",
+      "similarity": 0.9612,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Okay, can you hold on for a second?",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Okay, could you hold on for a second?",
+      "similarity": 0.9118,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, could you hold on for a second?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, is there some kind of thing with the conduit?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, is there... is there some kind of thing with the conduit?",
+      "similarity": 0.9126,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, is there... is there some kind of thing with the conduit?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, yes.",
+      "wiki_speaker": "Jake",
+      "wiki_text": "Yes.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Jake",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 28,
+    "total_wiki_lines": 25,
+    "matched_wiki_lines": 21,
+    "unmatched_wiki_lines": 4,
+    "matched": 26,
+    "speakers_to_map": 2,
+    "text_auto_correct": 5,
+    "text_review": 5,
+    "text_group_review": 9,
+    "unmatched_json": 2
+  }
+}

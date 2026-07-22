@@ -1,0 +1,159 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:54.234228+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Matthew 5 Verse 9",
+  "track_slug": "matthew-5-verse-9",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/matthew-5-verse-9.json",
+  "json_sha256": "dd084c0c6a2a7d1eb628bca6eec615f3501c4467240dc240c6b207dc3ca0cc52",
+  "wiki_title": "Matthew: 5, Verse: 9",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Matthew%3A_5%2C_Verse%3A_9",
+  "speaker_mapping": {
+    "SPEAKER_01": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.6587,
+          "observations": 3
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "Voice #1",
+      "json_text": "In Matthew 5 verse 9, Jesus said, I'll meet you at the front door.",
+      "wiki_speaker": "Preacher",
+      "wiki_text": "'[sampled]' In Matthew: 5, Verse: 9, Jesus said...",
+      "similarity": 0.5849,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Voice #1",
+      "speaker_action": "keep",
+      "proposed_text": "'[sampled]' In Matthew: 5, Verse: 9, Jesus said...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm going to have a double barrel shotgun on my hand.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll meet you at the, uh... '[beep]' --front door. I'm gonna have a double-barrel shotgun in my hand. Uh. Try that for payment.",
+      "similarity": 0.7053,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to have a double barrel shotgun on my hand.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Try that for payment.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll meet you at the, uh... '[beep]' --front door. I'm gonna have a double-barrel shotgun in my hand. Uh. Try that for payment.",
+      "similarity": 0.7053,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Try that for payment.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He, why don't you buzz off, pal?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hey, why don't you buzz off, pal?",
+      "similarity": 0.9831,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, why don't you buzz off, pal?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I guarantee you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I guarantee ya, you can stick that in your butt too.",
+      "similarity": 0.9703,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I guarantee you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can stick that in your butt too.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I guarantee ya, you can stick that in your butt too.",
+      "similarity": 0.9703,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can stick that in your butt too.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 4,
+    "matched_wiki_lines": 4,
+    "unmatched_wiki_lines": 0,
+    "matched": 6,
+    "speakers_to_map": 1,
+    "text_auto_correct": 1,
+    "text_review": 1,
+    "text_group_review": 4,
+    "unmatched_json": 0
+  }
+}

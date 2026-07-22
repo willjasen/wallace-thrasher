@@ -1,0 +1,2258 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:27:51.842206+00:00",
+  "snapshot": "1784650859000-rest-longmont-potion-castle-18-20260721",
+  "album": "Longmont Potion Castle 18",
+  "album_slug": "longmont-potion-castle-18",
+  "track": "Commodore Babbit",
+  "track_slug": "commodore-babbit",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-18/commodore-babbit.json",
+  "json_sha256": "62f8605ab583bc864c5c69e3c04b920f35187edd7e8024c2def8fca73324a7f6",
+  "wiki_title": "Commodore Babbit",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Commodore_Babbit",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_02": "Jacob"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.7739,
+      "observations": 19,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 15.0289,
+          "observations": 19
+        },
+        {
+          "name": "Jacob",
+          "score": 2.3905,
+          "observations": 3
+        },
+        {
+          "name": "Alex",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Jacob",
+      "confidence": 0.9276,
+      "observations": 15,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Jacob",
+          "score": 12.8153,
+          "observations": 15
+        },
+        {
+          "name": "Man",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "Jacob",
+      "json_text": "Hello?",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "LPC",
+      "json_text": "Yes, I was looking for Jacob.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, I was lookin’ for Jacob.",
+      "similarity": 0.9811,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, I was lookin’ for Jacob.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, this is he.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Yeah, this is he.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is he.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, my name's Whip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, my name’s Whip. [exhales]",
+      "similarity": 0.7619,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, my name’s Whip. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What'd you say your name is?",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "What’d you say your name is?",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’d you say your name is?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "LPC",
+      "json_text": "Whip.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "proposed_text": "Whip.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, I cracked that whip.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Oh, like “crack that whip”?",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, like “crack that whip”?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, my name's Wip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! My name’s Whip. I was on a frigate recently and another shipman gave me this number to reach ya at. [delay] Yeah! My name’s Whip. I was on a frigate…",
+      "similarity": 0.7952,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, my name's Wip.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I was on a frigate recently, and another shipman gave me this number to reach you at.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! My name’s Whip. I was on a frigate recently and another shipman gave me this number to reach ya at. [delay] Yeah! My name’s Whip. I was on a frigate…",
+      "similarity": 0.7952,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was on a frigate recently, and another shipman gave me this number to reach you at.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "On a ship you were?",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "On a—On a ship, you were?—",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "On a—On a ship, you were?—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, on a Friot.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[emergency siren] Yeah, on a f—",
+      "similarity": 0.5238,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—[emergency siren] Yeah, on a f—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, on a frigate.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "On a frigate. Yeah, uh-huh! He was a swabbie, you know? Ah, just a ship hand out there, sure—",
+      "similarity": 0.6906,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, on a frigate.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "On a frigate. Yeah, uh-huh! He was a swabbie, you know? Ah, just a ship hand out there, sure—",
+      "similarity": 0.6906,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, uh-huh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He was a swabby, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "On a frigate. Yeah, uh-huh! He was a swabbie, you know? Ah, just a ship hand out there, sure—",
+      "similarity": 0.6906,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He was a swabby, you know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'm a ship, I know exactly what you mean.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—[laughs] Yeah! Sure! I know—I know exactly what you mean!",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "—[laughs] Yeah! Sure! I know—I know exactly what you mean!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sure, sure.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Sure, sure! Anyway, I’m, ah, Admiral Whip Babbit; you can type that into your search engine, if you like. I’m currently on the afterbrow here—[delay] Babbit—and just wanted to [siren] say ahoy to ya a little bit!",
+      "similarity": 0.7568,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sure, sure.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Anyway, I'm Admiral Whip, Babbitt.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Sure, sure! Anyway, I’m, ah, Admiral Whip Babbit; you can type that into your search engine, if you like. I’m currently on the afterbrow here—[delay] Babbit—and just wanted to [siren] say ahoy to ya a little bit!",
+      "similarity": 0.7568,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Anyway, I'm Admiral Whip, Babbitt.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You can type that in your search engine, if you like.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Sure, sure! Anyway, I’m, ah, Admiral Whip Babbit; you can type that into your search engine, if you like. I’m currently on the afterbrow here—[delay] Babbit—and just wanted to [siren] say ahoy to ya a little bit!",
+      "similarity": 0.7568,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can type that in your search engine, if you like.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm currently on the afterbrow here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Sure, sure! Anyway, I’m, ah, Admiral Whip Babbit; you can type that into your search engine, if you like. I’m currently on the afterbrow here—[delay] Babbit—and just wanted to [siren] say ahoy to ya a little bit!",
+      "similarity": 0.7568,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm currently on the afterbrow here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And just wanted to say a hoi to you a little bit.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Well ahoy to you, matey!",
+      "similarity": 0.4857,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well ahoy to you, matey!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "O'Hoy to you, I think you got a couple things I wanted to touch base with you on navigate with you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Thank you! Got a couple things I wanted to touch base with ya on, ah, [siren] navigate with ya. I’m starting a neighborhood task force, ah, we’re gonna use to commission a new anchor. It’s gonna be the—like the Cadillac of anchors! [siren]—",
+      "similarity": 0.8615,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "O'Hoy to you, I think you got a couple things I wanted to touch base with you on navigate with you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Starting a Neighborhood Task Force, we're going to use to commission.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Thank you! Got a couple things I wanted to touch base with ya on, ah, [siren] navigate with ya. I’m starting a neighborhood task force, ah, we’re gonna use to commission a new anchor. It’s gonna be the—like the Cadillac of anchors! [siren]—",
+      "similarity": 0.8615,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Starting a Neighborhood Task Force, we're going to use to commission.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "a new anchor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Thank you! Got a couple things I wanted to touch base with ya on, ah, [siren] navigate with ya. I’m starting a neighborhood task force, ah, we’re gonna use to commission a new anchor. It’s gonna be the—like the Cadillac of anchors! [siren]—",
+      "similarity": 0.8615,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "a new anchor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's going to be the, like, the Cadillac of anchors.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Thank you! Got a couple things I wanted to touch base with ya on, ah, [siren] navigate with ya. I’m starting a neighborhood task force, ah, we’re gonna use to commission a new anchor. It’s gonna be the—like the Cadillac of anchors! [siren]—",
+      "similarity": 0.8615,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's going to be the, like, the Cadillac of anchors.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Touch basis on that, see if you're giving mood for something like that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—So I wanted to touch base with ya on that, see if you’re in a giving mood for something like that. [delay] It’s gonna be the Cadillac…",
+      "similarity": 0.6768,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—So I wanted to touch base with ya on that, see if you’re in a giving mood for something like that. [delay] It’s gonna be the Cadillac…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Something drop-forged, maybe, and, um, uh, emblazoned.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "'Something drop forged, maybe, and, um, ah—",
+      "similarity": 0.8372,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "'Something drop forged, maybe, and, um, ah—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, well, it'll come with a non-rolling horizontal winch.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, w—it’ll come with a non-rolling horizontal winch—",
+      "similarity": 0.9541,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, w—it’ll come with a non-rolling horizontal winch—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And it includes a custom baggy wrinkle, too.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—and it includes a custom baggie wrinkle, too; it’s gonna have everything!",
+      "similarity": 0.9155,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And it includes a custom baggy wrinkle, too.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's going to have everything.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—and it includes a custom baggie wrinkle, too; it’s gonna have everything!",
+      "similarity": 0.9155,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's going to have everything.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So, are you leaning as the crow flies?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay] It’ll come with a non-roll—So, are ya leaning as the crow flies? Are ya affirmative on that, er…",
+      "similarity": 0.6753,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So, are you leaning as the crow flies?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Are you affirmative?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay] It’ll come with a non-roll—So, are ya leaning as the crow flies? Are ya affirmative on that, er…",
+      "similarity": 0.6753,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you affirmative?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "on that? Because you're the only one I know who's ashore right now. All my crewmen are adrift",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—‘Cause you’re the only one that I know that’s ashore right now; all my crewmen are adrift right now! [delay] …leaning as the crow “flies”? [siren]",
+      "similarity": 0.6814,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—‘Cause you’re the only one that I know that’s ashore right now; all my crewmen are adrift right now! [delay] …leaning as the crow “flies”? [siren]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "right now. The only real question I have is, are they biting? Yeah, I could pick you up in my",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "[laughs] Right? The only real question I have is: are they biting?",
+      "similarity": 0.72,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Right? The only real question I have is: are they biting?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "barge here, bring you back to my barracks. You can help me batting down the hatch up here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I could pick y’up in my barge here, bring ya back to my barracks. [exhales] You can help me batten down the hatch up here! [sniffs] [delay] Yeah, I could pick y’up in my barge…",
+      "similarity": 0.6459,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, I could pick y’up in my barge here, bring ya back to my barracks. [exhales] You can help me batten down the hatch up here! [sniffs] [delay] Yeah, I could pick y’up in my barge…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, I'll help you.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Yeah, I’ll help ya!",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I’ll help ya!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Now, once you step into my brig here, because look, this isn't some bum boat, okay? I've achieved",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Now, why don’t ya step into my brig here? ‘Cause, look: this isn’t some bumboat, okay? I’ve achieved total buoyancy out here where I’m at! I’m buooyant! [siren] [delay] ‘Cause, look: this isn’t some—and all my crew have got channel fever; they’re off on some dinghy somewhere or some donkey-mat. [siren]",
+      "similarity": 0.73,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now, once you step into my brig here, because look, this isn't some bum boat, okay? I've achieved",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "total buoyancy out here where I'm at. I'm buoyant. And all my crew have got channel fever.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Now, why don’t ya step into my brig here? ‘Cause, look: this isn’t some bumboat, okay? I’ve achieved total buoyancy out here where I’m at! I’m buooyant! [siren] [delay] ‘Cause, look: this isn’t some—and all my crew have got channel fever; they’re off on some dinghy somewhere or some donkey-mat. [siren]",
+      "similarity": 0.73,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "total buoyancy out here where I'm at. I'm buoyant. And all my crew have got channel fever.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They're off on some dingy somewhere or some donkey man. Could you call me barnacle or something like that?",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Could you call me “Barnacle” or something like that?",
+      "similarity": 0.6405,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Could you call me “Barnacle” or something like that?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, they're on their dingy there. I'm a Commodore and I need to hoist my dagger board. That's just what",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, they’re on their dinghy, there. I’m a commodore and I need to hoist my daggerboard—that’s just what it comes down to—sunup, sundown! [siren] [inhales] What division are you in, anyhow? [exhales] [delay] sunup, sundown!",
+      "similarity": 0.8633,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, they're on their dingy there. I'm a Commodore and I need to hoist my dagger board. That's just what",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "it comes down to, sun up, sundown. What division are you in, anyhow?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, they’re on their dinghy, there. I’m a commodore and I need to hoist my daggerboard—that’s just what it comes down to—sunup, sundown! [siren] [inhales] What division are you in, anyhow? [exhales] [delay] sunup, sundown!",
+      "similarity": 0.8633,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "it comes down to, sun up, sundown. What division are you in, anyhow?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I mean, I'm a landlubber primarily. As evidence of that,",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Uh! I mean, I’m a landlubber—",
+      "similarity": 0.557,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Uh! I mean, I’m a landlubber—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I did take a catamaranang of some kind, I think, between the Hawaiian Islands one time,",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—Between the Hawaiian islands, one time—",
+      "similarity": 0.6116,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Between the Hawaiian islands, one time—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and I became terribly seasick, and I'm going to get sick if I join you out there.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—and I became terribly seasick and I’m gonna get sick if I join ya—",
+      "similarity": 0.8472,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "—and I became terribly seasick and I’m gonna get sick if I join ya—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I'll tell you, when we reach dry dock, you can go ahead and secure the dunsel and the",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W—well, I’ll tell ya, when we reach dry dock, you can go ‘head and secure the dunsel and the fife if you still have your gaff. [delay] I’ll tell ya, when we reach dry dock— And after that, we can, ah, go ‘head and hop on the gangplank [delay] —sel and the fife— I’ll remain on the helm! But we can, together, at least hitch the jackstaff or just swap out the jiggermast and lace the kickstrap just according to your own comfort level! ‘Cause, hey, Jacob, a—just on a serious thing, here: [delay] Just according to your own comfort level—",
+      "similarity": 0.8856,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I'll tell you, when we reach dry dock, you can go ahead and secure the dunsel and the",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "fifee if you still have your gaff.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W—well, I’ll tell ya, when we reach dry dock, you can go ‘head and secure the dunsel and the fife if you still have your gaff. [delay] I’ll tell ya, when we reach dry dock— And after that, we can, ah, go ‘head and hop on the gangplank [delay] —sel and the fife— I’ll remain on the helm! But we can, together, at least hitch the jackstaff or just swap out the jiggermast and lace the kickstrap just according to your own comfort level! ‘Cause, hey, Jacob, a—just on a serious thing, here: [delay] Just according to your own comfort level—",
+      "similarity": 0.8856,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "fifee if you still have your gaff.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll tell you, when we reach dry down, and after that, we can go ahead and hop on the gangplank.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W—well, I’ll tell ya, when we reach dry dock, you can go ‘head and secure the dunsel and the fife if you still have your gaff. [delay] I’ll tell ya, when we reach dry dock— And after that, we can, ah, go ‘head and hop on the gangplank [delay] —sel and the fife— I’ll remain on the helm! But we can, together, at least hitch the jackstaff or just swap out the jiggermast and lace the kickstrap just according to your own comfort level! ‘Cause, hey, Jacob, a—just on a serious thing, here: [delay] Just according to your own comfort level—",
+      "similarity": 0.8856,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll tell you, when we reach dry down, and after that, we can go ahead and hop on the gangplank.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll remain on the helm, but we can together,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W—well, I’ll tell ya, when we reach dry dock, you can go ‘head and secure the dunsel and the fife if you still have your gaff. [delay] I’ll tell ya, when we reach dry dock— And after that, we can, ah, go ‘head and hop on the gangplank [delay] —sel and the fife— I’ll remain on the helm! But we can, together, at least hitch the jackstaff or just swap out the jiggermast and lace the kickstrap just according to your own comfort level! ‘Cause, hey, Jacob, a—just on a serious thing, here: [delay] Just according to your own comfort level—",
+      "similarity": 0.8856,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll remain on the helm, but we can together,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "at least hitch the jack staff or just swap out the jigger mast and lace the kickstrap just",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W—well, I’ll tell ya, when we reach dry dock, you can go ‘head and secure the dunsel and the fife if you still have your gaff. [delay] I’ll tell ya, when we reach dry dock— And after that, we can, ah, go ‘head and hop on the gangplank [delay] —sel and the fife— I’ll remain on the helm! But we can, together, at least hitch the jackstaff or just swap out the jiggermast and lace the kickstrap just according to your own comfort level! ‘Cause, hey, Jacob, a—just on a serious thing, here: [delay] Just according to your own comfort level—",
+      "similarity": 0.8856,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "at least hitch the jack staff or just swap out the jigger mast and lace the kickstrap just",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "according to your own comfort level because hey Jacob I just done a serious thing here",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W—well, I’ll tell ya, when we reach dry dock, you can go ‘head and secure the dunsel and the fife if you still have your gaff. [delay] I’ll tell ya, when we reach dry dock— And after that, we can, ah, go ‘head and hop on the gangplank [delay] —sel and the fife— I’ll remain on the helm! But we can, together, at least hitch the jackstaff or just swap out the jiggermast and lace the kickstrap just according to your own comfort level! ‘Cause, hey, Jacob, a—just on a serious thing, here: [delay] Just according to your own comfort level—",
+      "similarity": 0.8856,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "according to your own comfort level because hey Jacob I just done a serious thing here",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "yeah I heard you had gone overboard on the mother ship",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Ah, I heard you had gone overboard on the mothership. [exhales] [delay] ‘Cause, hey, Jacob? Can I ask ya a—just on a serious thing, here— Now, I wanna tell ya, if that does occur—if that happens—just remember a few things, okay? [siren]",
+      "similarity": 0.891,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "yeah I heard you had gone overboard on the mother ship",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "because hey Jacob can I ask it I just don't a serious thing now I want to tell you if that does",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Ah, I heard you had gone overboard on the mothership. [exhales] [delay] ‘Cause, hey, Jacob? Can I ask ya a—just on a serious thing, here— Now, I wanna tell ya, if that does occur—if that happens—just remember a few things, okay? [siren]",
+      "similarity": 0.891,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "because hey Jacob can I ask it I just don't a serious thing now I want to tell you if that does",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "occur if that happens just remember a few things okay",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Ah, I heard you had gone overboard on the mothership. [exhales] [delay] ‘Cause, hey, Jacob? Can I ask ya a—just on a serious thing, here— Now, I wanna tell ya, if that does occur—if that happens—just remember a few things, okay? [siren]",
+      "similarity": 0.891,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "occur if that happens just remember a few things okay",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want to tell you if that does occur, if that happens.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I want to tell you if that does occur, if that happens.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "To parbuckle your rope, forget all about containerization.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ah, [delay] Now, I wanna tell ya, if that does occur—if that happens, just remem— to parbuckle your rope; forget all about containerization; maybe just piggyback off of a chandler—[delay] —buckle your rope— in his or her gantry; still, account for all wharfage and prepare for sheddage! [siren] But, you know, hey, privately, you can even, ah, tug on your thruster [siren] [delay] and prepare for sheddage!— Privately. If it’s entered into your Captain’s log, of course [siren] then I say, ah, stow your slop tank and say, “ahoy!” there, m’friend, huh? [delay] If it’s entered into your Captain’s log— [laughs] Cause—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "To parbuckle your rope, forget all about containerization.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Maybe just piggyback off of a Chandler and his or her gantry.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ah, [delay] Now, I wanna tell ya, if that does occur—if that happens, just remem— to parbuckle your rope; forget all about containerization; maybe just piggyback off of a chandler—[delay] —buckle your rope— in his or her gantry; still, account for all wharfage and prepare for sheddage! [siren] But, you know, hey, privately, you can even, ah, tug on your thruster [siren] [delay] and prepare for sheddage!— Privately. If it’s entered into your Captain’s log, of course [siren] then I say, ah, stow your slop tank and say, “ahoy!” there, m’friend, huh? [delay] If it’s entered into your Captain’s log— [laughs] Cause—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Maybe just piggyback off of a Chandler and his or her gantry.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Still, account for all warfage and prepare for shedage.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ah, [delay] Now, I wanna tell ya, if that does occur—if that happens, just remem— to parbuckle your rope; forget all about containerization; maybe just piggyback off of a chandler—[delay] —buckle your rope— in his or her gantry; still, account for all wharfage and prepare for sheddage! [siren] But, you know, hey, privately, you can even, ah, tug on your thruster [siren] [delay] and prepare for sheddage!— Privately. If it’s entered into your Captain’s log, of course [siren] then I say, ah, stow your slop tank and say, “ahoy!” there, m’friend, huh? [delay] If it’s entered into your Captain’s log— [laughs] Cause—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Still, account for all warfage and prepare for shedage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But, you know, hey, privately, you can even tug on your thruster.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ah, [delay] Now, I wanna tell ya, if that does occur—if that happens, just remem— to parbuckle your rope; forget all about containerization; maybe just piggyback off of a chandler—[delay] —buckle your rope— in his or her gantry; still, account for all wharfage and prepare for sheddage! [siren] But, you know, hey, privately, you can even, ah, tug on your thruster [siren] [delay] and prepare for sheddage!— Privately. If it’s entered into your Captain’s log, of course [siren] then I say, ah, stow your slop tank and say, “ahoy!” there, m’friend, huh? [delay] If it’s entered into your Captain’s log— [laughs] Cause—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But, you know, hey, privately, you can even tug on your thruster.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And prepare for shedage privately.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ah, [delay] Now, I wanna tell ya, if that does occur—if that happens, just remem— to parbuckle your rope; forget all about containerization; maybe just piggyback off of a chandler—[delay] —buckle your rope— in his or her gantry; still, account for all wharfage and prepare for sheddage! [siren] But, you know, hey, privately, you can even, ah, tug on your thruster [siren] [delay] and prepare for sheddage!— Privately. If it’s entered into your Captain’s log, of course [siren] then I say, ah, stow your slop tank and say, “ahoy!” there, m’friend, huh? [delay] If it’s entered into your Captain’s log— [laughs] Cause—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And prepare for shedage privately.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If it's entered into your captain's log, of course.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ah, [delay] Now, I wanna tell ya, if that does occur—if that happens, just remem— to parbuckle your rope; forget all about containerization; maybe just piggyback off of a chandler—[delay] —buckle your rope— in his or her gantry; still, account for all wharfage and prepare for sheddage! [siren] But, you know, hey, privately, you can even, ah, tug on your thruster [siren] [delay] and prepare for sheddage!— Privately. If it’s entered into your Captain’s log, of course [siren] then I say, ah, stow your slop tank and say, “ahoy!” there, m’friend, huh? [delay] If it’s entered into your Captain’s log— [laughs] Cause—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If it's entered into your captain's log, of course.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Then I say, stow your slop tank and say a hole.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[laughs] [pitch-up & delay] I say, ah, stow your slop tank and say “ahoy!” there, m’friend, huh?—",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Then I say, stow your slop tank and say a hole.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "There, I'm a moffield, huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[laughs] [pitch-up & delay] I say, ah, stow your slop tank and say “ahoy!” there, m’friend, huh?—",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "There, I'm a moffield, huh?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I'm, I'm intimidated.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well, I'm, I'm intimidated.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm intimidated.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—I’m intimid—I’m intimidated [siren] and the only knot I even know how to tie is a sheepshank—",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm intimidated.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And the only not I even know how to tie is a sheepshack.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—I’m intimid—I’m intimidated [siren] and the only knot I even know how to tie is a sheepshank—",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "And the only not I even know how to tie is a sheepshack.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And I'm not even sure why I was tired.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—and I’m not even sure why I would tie it!",
+      "similarity": 0.8312,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "—and I’m not even sure why I would tie it!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And like I say, hey, between you and I privately, you can even tug on your thruster.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, like I say, hey, between you and I: privately, you can even tug on your thruster! Ain’t no one ever died from it! [siren] I got another crewman here that maybe you can touch base with him, see if like where he’s comin’ from on the whole task force idea. Just ask him if you have any further questions about the anchor, okay?",
+      "similarity": 0.9637,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And like I say, hey, between you and I privately, you can even tug on your thruster.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Ain't no one ever died from it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, like I say, hey, between you and I: privately, you can even tug on your thruster! Ain’t no one ever died from it! [siren] I got another crewman here that maybe you can touch base with him, see if like where he’s comin’ from on the whole task force idea. Just ask him if you have any further questions about the anchor, okay?",
+      "similarity": 0.9637,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ain't no one ever died from it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I got another crew in here that maybe you can touch base with him",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, like I say, hey, between you and I: privately, you can even tug on your thruster! Ain’t no one ever died from it! [siren] I got another crewman here that maybe you can touch base with him, see if like where he’s comin’ from on the whole task force idea. Just ask him if you have any further questions about the anchor, okay?",
+      "similarity": 0.9637,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got another crew in here that maybe you can touch base with him",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and see if you like where he's coming from on the whole task force idea.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, like I say, hey, between you and I: privately, you can even tug on your thruster! Ain’t no one ever died from it! [siren] I got another crewman here that maybe you can touch base with him, see if like where he’s comin’ from on the whole task force idea. Just ask him if you have any further questions about the anchor, okay?",
+      "similarity": 0.9637,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and see if you like where he's coming from on the whole task force idea.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just ask him if you have any further questions about the anchor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, like I say, hey, between you and I: privately, you can even tug on your thruster! Ain’t no one ever died from it! [siren] I got another crewman here that maybe you can touch base with him, see if like where he’s comin’ from on the whole task force idea. Just ask him if you have any further questions about the anchor, okay?",
+      "similarity": 0.9637,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just ask him if you have any further questions about the anchor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, like I say, hey, between you and I: privately, you can even tug on your thruster! Ain’t no one ever died from it! [siren] I got another crewman here that maybe you can touch base with him, see if like where he’s comin’ from on the whole task force idea. Just ask him if you have any further questions about the anchor, okay?",
+      "similarity": 0.9637,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Yeah!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Let me hand you over to him.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lemme hand you over to him. Come ‘ere, matey! Talk to Jacob—a helluva guy!",
+      "similarity": 0.8244,
+      "match_type": "similar",
+      "json_group": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let me hand you over to him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Come here, matey.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lemme hand you over to him. Come ‘ere, matey! Talk to Jacob—a helluva guy!",
+      "similarity": 0.8244,
+      "match_type": "similar",
+      "json_group": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come here, matey.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lemme hand you over to him. Come ‘ere, matey! Talk to Jacob—a helluva guy!",
+      "similarity": 0.8244,
+      "match_type": "similar",
+      "json_group": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Talk to Jacob.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lemme hand you over to him. Come ‘ere, matey! Talk to Jacob—a helluva guy!",
+      "similarity": 0.8244,
+      "match_type": "similar",
+      "json_group": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Talk to Jacob.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Hello!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Hello.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Hello.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Hello! Renée?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        79,
+        80
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Renee?",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Hello! Renée?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        79,
+        80
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Renee?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "No [breaks up] Jacob, bud! I’m gettin’ some kinda talk on the phone here about gettin’ signed up to be on a—a boat.",
+      "similarity": 0.8952,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Jacob, bud, I'm getting some kind of talk on the phone here about getting signed up to be on a boat.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "No [breaks up] Jacob, bud! I’m gettin’ some kinda talk on the phone here about gettin’ signed up to be on a—a boat.",
+      "similarity": 0.8952,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jacob, bud, I'm getting some kind of talk on the phone here about getting signed up to be on a boat.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And I'm, and I've hardly ever been on a boat, but once it got seat thick as all get out.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Uh, and I’m—and I’ve never—I’ve hardly ever been on a boat but once and got seasick as all get-out!",
+      "similarity": 0.8462,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, and I’m—and I’ve never—I’ve hardly ever been on a boat but once and got seasick as all get-out!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "Jacob",
+      "json_text": "Does that make any sense to you?",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "Does that [laughs] Does that make any sense to you?",
+      "similarity": 0.7848,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Does that [laughs] Does that make any sense to you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Is this Renee?",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Is this Renée?",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is this Renée?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "No!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Oh.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Oh!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Who is this?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Who is this?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "Alex Trebek",
+      "json_text": "This is Alex.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "This is Alex.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Alex.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "Jacob",
+      "json_text": "Well, yeah, I don't, uh...",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—Yeah, I don’t, ah—I’m p—I’m pretty con—I’m pretty confused about what’s happenin’ right now!",
+      "similarity": 0.7826,
+      "match_type": "similar",
+      "json_group": [
+        90,
+        91
+      ],
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, yeah, I don't, uh...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm pretty confused about what's happening right now.",
+      "wiki_speaker": "Jacob",
+      "wiki_text": "—Yeah, I don’t, ah—I’m p—I’m pretty con—I’m pretty confused about what’s happenin’ right now!",
+      "similarity": 0.7826,
+      "match_type": "similar",
+      "json_group": [
+        90,
+        91
+      ],
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Jacob",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm pretty confused about what's happening right now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Well, I think there's somebody out there who seems to take a great deal of pleasure in cross-connecting three people",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Well, I think there’s somebody out there who seems to take a great deal of pleasure in cross-connecting three people who, ah, just pick up their phones and say, “hello,” and they don’t know what the hell’s goin’ on and this guy seems to get a kick out of it! So, we just have to ignore the sonofabitch.",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I think there's somebody out there who seems to take a great deal of pleasure in cross-connecting three people",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "Alex Trebek",
+      "json_text": "who just pick up their phones and say hello, and they don't know what the hell's going on,",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Well, I think there’s somebody out there who seems to take a great deal of pleasure in cross-connecting three people who, ah, just pick up their phones and say, “hello,” and they don’t know what the hell’s goin’ on and this guy seems to get a kick out of it! So, we just have to ignore the sonofabitch.",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "who just pick up their phones and say hello, and they don't know what the hell's going on,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "Alex Trebek",
+      "json_text": "and this guy seems to get a kick out of this.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Well, I think there’s somebody out there who seems to take a great deal of pleasure in cross-connecting three people who, ah, just pick up their phones and say, “hello,” and they don’t know what the hell’s goin’ on and this guy seems to get a kick out of it! So, we just have to ignore the sonofabitch.",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "and this guy seems to get a kick out of this.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "Alex Trebek",
+      "json_text": "So we just have to ignore the son of a bitch.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Well, I think there’s somebody out there who seems to take a great deal of pleasure in cross-connecting three people who, ah, just pick up their phones and say, “hello,” and they don’t know what the hell’s goin’ on and this guy seems to get a kick out of it! So, we just have to ignore the sonofabitch.",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "So we just have to ignore the son of a bitch.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yeah, yeah.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Yeah. Yeah!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "Alex Trebek",
+      "json_text": "He's got somebody on the third line, and they don't know it because they're just picking up the sirens.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "He’s got somebody on the third line and, ah, they don’t know it because they’re—they’re just picking up the sirens and stuff, so—",
+      "similarity": 0.8673,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "He’s got somebody on the third line and, ah, they don’t know it because they’re—they’re just picking up the sirens and stuff, so—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Just hang up, and I'll do the same, and hopefully he'll get tired of bothering us today.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "—just hang up and I’ll do the same and hopefully he’ll get tired of bothering us today but he’ll—he’ll be around again.",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just hang up, and I'll do the same, and hopefully he'll get tired of bothering us today.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "Alex Trebek",
+      "json_text": "But he'll be around again.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "—just hang up and I’ll do the same and hopefully he’ll get tired of bothering us today but he’ll—he’ll be around again.",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "But he'll be around again.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Say what now?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Say what, now?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Say what now?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I said, hopefully he'll get tired of bothering us today and wait for another day.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "I said, “hopefully he’ll get tired of bothering us today and wait for another day.”",
+      "similarity": 0.9873,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "I said, “hopefully he’ll get tired of bothering us today and wait for another day.”",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Who will?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who will?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who will?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "Alex Trebek",
+      "json_text": "The guy who takes pleasure in screwing with the phone.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "The guy who takes pleasure in screwing with the phone system. We haven’t been able to track him down, unfortunately.",
+      "similarity": 0.978,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "The guy who takes pleasure in screwing with the phone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "Alex Trebek",
+      "json_text": "system. We haven't been able to track them down, unfortunately.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "The guy who takes pleasure in screwing with the phone system. We haven’t been able to track him down, unfortunately.",
+      "similarity": 0.978,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "system. We haven't been able to track them down, unfortunately.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "?",
+      "json_text": "Oh, yeah?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Oh, yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, yeah?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yeah. So, have a good day. Stay safe.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "Yeah. So have a good day! Stay safe!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah. So, have a good day. Stay safe.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "?",
+      "json_text": "What's your first? Who is your, who is this?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What’s your first name? Who is your—who is this?",
+      "similarity": 0.9195,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s your first name? Who is your—who is this?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "Alex Trebek",
+      "json_text": "This is Alex.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "This is Alex.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Alex.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Can't hear a word you're saying. You've got the background noise, and you're breaking up on your phone.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "—a word you’re saying; you’ve got, ah, the background noise and you’re—",
+      "similarity": 0.7229,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "—a word you’re saying; you’ve got, ah, the background noise and you’re—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "Alex Trebek",
+      "json_text": "So take care. Have a good one. You too. Bye-bye.",
+      "wiki_speaker": "Alex",
+      "wiki_text": "—take care! Have a good one!",
+      "similarity": 0.7246,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "Alex",
+      "speaker_action": "matched_line",
+      "proposed_text": "—take care! Have a good one!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "?",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "?",
+      "speaker_action": "keep",
+      "proposed_text": "Thank you.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 111,
+    "total_wiki_lines": 93,
+    "matched_wiki_lines": 63,
+    "unmatched_wiki_lines": 30,
+    "matched": 106,
+    "speakers_to_map": 2,
+    "text_auto_correct": 10,
+    "text_review": 18,
+    "text_group_review": 64,
+    "unmatched_json": 5
+  }
+}

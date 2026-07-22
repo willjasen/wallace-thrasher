@@ -1,0 +1,2470 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:27:22.414392+00:00",
+  "snapshot": "1784650760000-rest-longmont-potion-castle-15-20260721",
+  "album": "Longmont Potion Castle 15",
+  "album_slug": "longmont-potion-castle-15",
+  "track": "Illegalese",
+  "track_slug": "illegalese",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-15/illegalese.json",
+  "json_sha256": "ab087c7f12e66cff71d7d9f811d46b28cc3f63b90ee334acb22efd4bf362b461",
+  "wiki_title": "Illegalese",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Illegalese",
+  "speaker_mapping": {
+    "SPEAKER_00": "Woman",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman",
+      "confidence": 0.9787,
+      "observations": 33,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 28.7619,
+          "observations": 33
+        },
+        {
+          "name": "LPC",
+          "score": 0.6263,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.7353,
+      "observations": 19,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 16.1676,
+          "observations": 19
+        },
+        {
+          "name": "Woman",
+          "score": 5.8201,
+          "observations": 6
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.7692,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, this is Keith calling.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Keith callin’! [exhales]",
+      "similarity": 0.8475,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Keith callin’! [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you guys doing up?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are—? What are you guys doin’ up ‘ere?! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.4835,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What are—? What are you guys doin’ up ‘ere?! [exhales] [delay, pitch-shifted]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you talking about, the attorney?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What are—? What are you talking about, the attorney?",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are—? What are you talking about, the attorney?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uhyeah!",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uhyeah!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, here's what I need to do.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well here’s what I need to do: I need to file a…",
+      "similarity": 0.7467,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well here’s what I need to do: I need to file a…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need to file a wheel for my dad, power of attorney.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "…a will [?] for my dad, power of attorney.",
+      "similarity": 0.7674,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "…a will [?] for my dad, power of attorney.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And, uh, assets, uh, I need to file, uh, I need to file, uh,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And, uh, assets, uh, I need to file, uh, I need to file, uh,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "a will for my husband and myself.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, I need to file a… a will for my husband and myself. None of us really have a lot of money.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "a will for my husband and myself.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "None of us really have a lot of money.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, I need to file a… a will for my husband and myself. None of us really have a lot of money.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "None of us really have a lot of money.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And, uh, my, uh, I need to file, uh, against the Kaiser.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I need to file a…",
+      "similarity": 0.4923,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I need to file a…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The farmers, uh, whatever.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Farmer’s… Uh, what else?",
+      "similarity": 0.7727,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Farmer’s… Uh, what else?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, there's several of them involved.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh… There’s several of ‘em involved.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh… There’s several of ‘em involved.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, who else? I can't remember.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh!'' Who else? I can’t remember..",
+      "similarity": 0.9153,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh!'' Who else? I can’t remember..",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And, uh, one more, but I can't remember.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "…one more but I can’t remember. I have ‘em written down.",
+      "similarity": 0.9027,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And, uh, one more, but I can't remember.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I have them written down.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "…one more but I can’t remember. I have ‘em written down.",
+      "similarity": 0.9027,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have them written down.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! [exhales] [delay, pitch-shifted]Uh, we need to get an adversarial proceeding where I need to get affidavits and affirmation! To where we can pick s—",
+      "similarity": 0.7929,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, we need to get an adversary proceeding where I need to get affidavits, an affirmation, where we can pick some alternate jurors,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! [exhales] [delay, pitch-shifted]Uh, we need to get an adversarial proceeding where I need to get affidavits and affirmation! To where we can pick s—",
+      "similarity": 0.7929,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, we need to get an adversary proceeding where I need to get affidavits, an affirmation, where we can pick some alternate jurors,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "because the manner in which they select jurors is not the regular way that I like to proceed.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—alternate jurors. ‘Cause the manner in which select ju-rors is not the regular way that I like to proceed! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.7807,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "because the manner in which they select jurors is not the regular way that I like to proceed.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—alternate jurors. ‘Cause the manner in which select ju-rors is not the regular way that I like to proceed! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.7807,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh-huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I need to get a formal written statement from you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I need to get a formal, written statement from ya! [exhales] We’re gonna go—",
+      "similarity": 0.8125,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I need to get a formal, written statement from ya! [exhales] We’re gonna go—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, the other one for the city of Westminster.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, the other one for the city of Westminster?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, the other one for the city of Westminster.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh! [exhales] [delay, pitch-shifted]Are you familiar with Article III?! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.5238,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you familiar with Article 3?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh! [exhales] [delay, pitch-shifted]Are you familiar with Article III?! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.5238,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Are you familiar with Article 3?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, what's that?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, what’s that, the in situ one I get for the time?",
+      "similarity": 0.8317,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, what's that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The constituent they get for the time.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, what’s that, the in situ one I get for the time?",
+      "similarity": 0.8317,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "The constituent they get for the time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, it might be too late, but I, I fell at City Park of Westminster.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—but I fell at City Park Westminster. And when I—",
+      "similarity": 0.625,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—but I fell at City Park Westminster. And when I—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and when I was told that I'd have to hire a returney if I wanted them to pay for therapy.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I was told that I’d have to, uh…",
+      "similarity": 0.4915,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I was told that I’d have to, uh…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And now I have to file bankruptcy because everything I got is going to therapy and I can't even afford it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hire a attorney if I wanted him to pay for therapy. And now I have to file bankruptcy because everything I got is goin’ to therapy and I can’t even afford it. I’ve dropped outta therapy a few times with the new insurance company, uh, because I can’t afford it.",
+      "similarity": 0.8553,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And now I have to file bankruptcy because everything I got is going to therapy and I can't even afford it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I've dropped out of therapy a few times with the new insurance company because I can't afford it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hire a attorney if I wanted him to pay for therapy. And now I have to file bankruptcy because everything I got is goin’ to therapy and I can’t even afford it. I’ve dropped outta therapy a few times with the new insurance company, uh, because I can’t afford it.",
+      "similarity": 0.8553,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've dropped out of therapy a few times with the new insurance company because I can't afford it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I need to get you to fill out a formal request for bankruptcy protection, and we'll get that to the judiciary and all interests of the debtor and property at the time of you're filing will technically become temporary legal property of the debtor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uhh! [delay, pitch-shifted]I need to get you to fill out a Formal Request for Bankruptcy Protection and we’ll get that to the Judiciary and all Interests of the Debtor and Property at the Time of your Filing will technically become Temporary Legal Property of the Debtor. So you Understand! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.9028,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to get you to fill out a formal request for bankruptcy protection, and we'll get that to the judiciary and all interests of the debtor and property at the time of you're filing will technically become temporary legal property of the debtor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So you understand.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uhh! [delay, pitch-shifted]I need to get you to fill out a Formal Request for Bankruptcy Protection and we’ll get that to the Judiciary and all Interests of the Debtor and Property at the Time of your Filing will technically become Temporary Legal Property of the Debtor. So you Understand! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.9028,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So you understand.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think that all my phones are tapped because of my son.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I think that all my phones are tapped because of my son.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think that all my phones are tapped because of my son.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So, you know, I meant to put...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "So, you know, I meant to put my other number in and…",
+      "similarity": 0.9149,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So, you know, I meant to put...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "other number in it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "So, you know, I meant to put my other number in and…",
+      "similarity": 0.9149,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "other number in it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Probably too late now they already have, you know, what I'm going to do.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Prob’ly too late now. They already have, you know, what I’m gonna do.",
+      "similarity": 0.9104,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Prob’ly too late now. They already have, you know, what I’m gonna do.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your phones tap?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Your phone’s tapped?!",
+      "similarity": 0.8824,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your phone’s tapped?!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I think so, all of them.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yeah, I think so. All of ‘em.",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I think so. All of ‘em.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I bought a throwaway cell phone, but I think I put the wrong number on it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I’m on a throwaway cellphone but I think I put the wrong number on it.",
+      "similarity": 0.9362,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m on a throwaway cellphone but I think I put the wrong number on it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, have you committed a capital offense?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, have you committed offense?! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.6263,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, have you committed a capital offense?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, have you committed offense?! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.6263,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, it just depends on the caseload and the judge and his or her chambers.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, just depends on the case lode and the judge in his or her chambers. Oh, yeah! So if we’re gonna get ya reorganized with a bankruptcy plan! we need to adjust your debts to a family fisherman. It’s called the “family fisherman”; that’s the code name—",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it just depends on the caseload and the judge and his or her chambers.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, just depends on the case lode and the judge in his or her chambers. Oh, yeah! So if we’re gonna get ya reorganized with a bankruptcy plan! we need to adjust your debts to a family fisherman. It’s called the “family fisherman”; that’s the code name—",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So if we're going to get you reorganized with a bankruptcy plan, we need to adjust your debts to a family fisherman.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, just depends on the case lode and the judge in his or her chambers. Oh, yeah! So if we’re gonna get ya reorganized with a bankruptcy plan! we need to adjust your debts to a family fisherman. It’s called the “family fisherman”; that’s the code name—",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So if we're going to get you reorganized with a bankruptcy plan, we need to adjust your debts to a family fisherman.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's called the family fisherman.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, just depends on the case lode and the judge in his or her chambers. Oh, yeah! So if we’re gonna get ya reorganized with a bankruptcy plan! we need to adjust your debts to a family fisherman. It’s called the “family fisherman”; that’s the code name—",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's called the family fisherman.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's the code name.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, just depends on the case lode and the judge in his or her chambers. Oh, yeah! So if we’re gonna get ya reorganized with a bankruptcy plan! we need to adjust your debts to a family fisherman. It’s called the “family fisherman”; that’s the code name—",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's the code name.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So how did you get this phone number?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "So, how did you get this phone number? ‘Cause I didn’t—",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So how did you get this phone number?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because I didn't...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "So, how did you get this phone number? ‘Cause I didn’t—",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I didn't...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Is there a way you can come to my house because there's so many of us and so much to do?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Is there a way you can come to my house ‘cause there’s so many of us and so much to do? Also, that is sayin’ too, though, that my house could be tapped; it’s because of my son, is— I can tell ya later, you know, what all’s goin’ on there.",
+      "similarity": 0.7486,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is there a way you can come to my house because there's so many of us and so much to do?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Also, that is saying, too, though, that my house could be.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Is there a way you can come to my house ‘cause there’s so many of us and so much to do? Also, that is sayin’ too, though, that my house could be tapped; it’s because of my son, is— I can tell ya later, you know, what all’s goin’ on there.",
+      "similarity": 0.7486,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Also, that is saying, too, though, that my house could be.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "tapped. It's because of my son. I can tell you later, you know, what all's going on there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well what goin’ on there?",
+      "similarity": 0.4074,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well what goin’ on there?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's going on there? Well, my son's a drug addict. Why did he tap your phone?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well my son’s a drug addict.",
+      "similarity": 0.5098,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well my son’s a drug addict.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, the cops, I think, haven't tapped. I haven't done anything. My husband and I are honest.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, the cops, I think, have it tapped. I haven’t done anything. My husband and I are honest, we go to church. Um, but somebody, I believe, has my phone tapped. Because we’ve had several things missing from the house—my safe—somebody broke in, uh, and, uh, sawed it off in half. I shoula saved it but I didn’t. I finally threw it away. Um…",
+      "similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, the cops, I think, haven't tapped. I haven't done anything. My husband and I are honest.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We go to church, but somebody, I believe, has my phone tap because we've had several things missing from the",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, the cops, I think, have it tapped. I haven’t done anything. My husband and I are honest, we go to church. Um, but somebody, I believe, has my phone tapped. Because we’ve had several things missing from the house—my safe—somebody broke in, uh, and, uh, sawed it off in half. I shoula saved it but I didn’t. I finally threw it away. Um…",
+      "similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We go to church, but somebody, I believe, has my phone tap because we've had several things missing from the",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "house.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, the cops, I think, have it tapped. I haven’t done anything. My husband and I are honest, we go to church. Um, but somebody, I believe, has my phone tapped. Because we’ve had several things missing from the house—my safe—somebody broke in, uh, and, uh, sawed it off in half. I shoula saved it but I didn’t. I finally threw it away. Um…",
+      "similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "house.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My safe, somebody broke in, and saw it off in half.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, the cops, I think, have it tapped. I haven’t done anything. My husband and I are honest, we go to church. Um, but somebody, I believe, has my phone tapped. Because we’ve had several things missing from the house—my safe—somebody broke in, uh, and, uh, sawed it off in half. I shoula saved it but I didn’t. I finally threw it away. Um…",
+      "similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My safe, somebody broke in, and saw it off in half.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I should have saved it, but I didn't. I finally threw it away.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, the cops, I think, have it tapped. I haven’t done anything. My husband and I are honest, we go to church. Um, but somebody, I believe, has my phone tapped. Because we’ve had several things missing from the house—my safe—somebody broke in, uh, and, uh, sawed it off in half. I shoula saved it but I didn’t. I finally threw it away. Um…",
+      "similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I should have saved it, but I didn't. I finally threw it away.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just can't take it anymore.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I just can’t take it anymore. So I made my son move out--",
+      "similarity": 0.7407,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just can't take it anymore.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I made my son move out so I can move on with my life.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I just can’t take it anymore. So I made my son move out--",
+      "similarity": 0.7407,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I made my son move out so I can move on with my life.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My husband got hurt at work.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—so I can move on with my life. My husband got hurt at work. He doesn’t wanna pursue a lawsuit ‘cause he likes what he does.",
+      "similarity": 0.8113,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My husband got hurt at work.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He doesn't want to pursue a lawsuit because he likes what he does.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—so I can move on with my life. My husband got hurt at work. He doesn’t wanna pursue a lawsuit ‘cause he likes what he does.",
+      "similarity": 0.8113,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He doesn't want to pursue a lawsuit because he likes what he does.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But he pulled...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "But he pulled, uh, biceps.",
+      "similarity": 0.9302,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66
+      ],
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "But he pulled...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Biceps.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "But he pulled, uh, biceps.",
+      "similarity": 0.9302,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66
+      ],
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Biceps.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "His biceps.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "His biceps? [delay, pitch-shifted]",
+      "similarity": 0.5957,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "His biceps.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Biceps.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "His biceps? [delay, pitch-shifted]",
+      "similarity": 0.5957,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Biceps.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He doesn't want to lose it because he's filing work.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Biceps. And he doesn’t wanna lose it bcause he’s filing worker’s comp.",
+      "similarity": 0.7395,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Biceps. And he doesn’t wanna lose it bcause he’s filing worker’s comp.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're going to sue your son for $200,000.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh! [delay, pitch-shifted] We’re gonna sue your son for $200,000! [delay, pitch-shifted]",
+      "similarity": 0.5593,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh! [delay, pitch-shifted] We’re gonna sue your son for $200,000! [delay, pitch-shifted]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, my son, no, I don't want to sue him.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, my son? No, I don’t wanna sue him. He doesn’t have any money. I just wanted him outta the house.",
+      "similarity": 0.8984,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, my son, no, I don't want to sue him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He doesn't have money.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, my son? No, I don’t wanna sue him. He doesn’t have any money. I just wanted him outta the house.",
+      "similarity": 0.8984,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He doesn't have money.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just wanted him out of the house.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, my son? No, I don’t wanna sue him. He doesn’t have any money. I just wanted him outta the house.",
+      "similarity": 0.8984,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just wanted him out of the house.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Not when we're done with him. We're going to sue him for $210,000.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Not when we’re done with him. We’re gonna sue him for $210,000; that’s almost a quarter of a million dollars! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.8299,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not when we're done with him. We're going to sue him for $210,000.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's almost a quarter of a million dollars.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Not when we’re done with him. We’re gonna sue him for $210,000; that’s almost a quarter of a million dollars! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.8299,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's almost a quarter of a million dollars.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You just have money.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "He doesn’t have any money.",
+      "similarity": 0.6364,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "He doesn’t have any money.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He's got almost a quarter of a million dollar lawsuit coming down the pike.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "He’s got almost a quarter of a million dollar lawsuit comin’ down the pike! [delay, pitch-shifted] And I wanna get that signed and dated with today’s date on it with you and your husband. Get some signed affidavits. Because he’s lookin’ at a prison term for all these offenses. Breaking into your safe and he’s gonna serve two consecutive sentences for 20 years apiece! And he’s gonna file bankruptcy! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.856,
+      "match_type": "similar",
+      "json_group": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's got almost a quarter of a million dollar lawsuit coming down the pike.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The moon.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "He’s got almost a quarter of a million dollar lawsuit comin’ down the pike! [delay, pitch-shifted] And I wanna get that signed and dated with today’s date on it with you and your husband. Get some signed affidavits. Because he’s lookin’ at a prison term for all these offenses. Breaking into your safe and he’s gonna serve two consecutive sentences for 20 years apiece! And he’s gonna file bankruptcy! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.856,
+      "match_type": "similar",
+      "json_group": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The moon.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I want to get that signed and dated with today's date on it with you and your husband.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "He’s got almost a quarter of a million dollar lawsuit comin’ down the pike! [delay, pitch-shifted] And I wanna get that signed and dated with today’s date on it with you and your husband. Get some signed affidavits. Because he’s lookin’ at a prison term for all these offenses. Breaking into your safe and he’s gonna serve two consecutive sentences for 20 years apiece! And he’s gonna file bankruptcy! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.856,
+      "match_type": "similar",
+      "json_group": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I want to get that signed and dated with today's date on it with you and your husband.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Get some signed affidavitans.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "He’s got almost a quarter of a million dollar lawsuit comin’ down the pike! [delay, pitch-shifted] And I wanna get that signed and dated with today’s date on it with you and your husband. Get some signed affidavits. Because he’s lookin’ at a prison term for all these offenses. Breaking into your safe and he’s gonna serve two consecutive sentences for 20 years apiece! And he’s gonna file bankruptcy! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.856,
+      "match_type": "similar",
+      "json_group": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Get some signed affidavitans.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because he's looking at a prison term for all these offenses, breaking into your safe.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "He’s got almost a quarter of a million dollar lawsuit comin’ down the pike! [delay, pitch-shifted] And I wanna get that signed and dated with today’s date on it with you and your husband. Get some signed affidavits. Because he’s lookin’ at a prison term for all these offenses. Breaking into your safe and he’s gonna serve two consecutive sentences for 20 years apiece! And he’s gonna file bankruptcy! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.856,
+      "match_type": "similar",
+      "json_group": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because he's looking at a prison term for all these offenses, breaking into your safe.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He's going to serve two consecutive sentences for 20 years apiece.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "He’s got almost a quarter of a million dollar lawsuit comin’ down the pike! [delay, pitch-shifted] And I wanna get that signed and dated with today’s date on it with you and your husband. Get some signed affidavits. Because he’s lookin’ at a prison term for all these offenses. Breaking into your safe and he’s gonna serve two consecutive sentences for 20 years apiece! And he’s gonna file bankruptcy! [exhales] [delay, pitch-shifted]",
+      "similarity": 0.856,
+      "match_type": "similar",
+      "json_group": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's going to serve two consecutive sentences for 20 years apiece.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And he's going to file.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And he's going to file.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We wouldn't.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We wouldn't.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, we wouldn't do that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, we wouldn’t do that. We don’t think— Police department has my phones tapped. My son wouldn’t do that.",
+      "similarity": 0.8878,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, we wouldn't do that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You don't think the police department has my phone's staff.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, we wouldn’t do that. We don’t think— Police department has my phones tapped. My son wouldn’t do that.",
+      "similarity": 0.8878,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't think the police department has my phone's staff.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My son wouldn't do that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, we wouldn’t do that. We don’t think— Police department has my phones tapped. My son wouldn’t do that.",
+      "similarity": 0.8878,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My son wouldn't do that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Does your son dial the telephone?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Does your son dial the telephone?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Does your son dial the telephone?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, he moved out.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, he moved out, we threw him out.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        89,
+        90
+      ],
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, he moved out.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We threw him out.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, he moved out, we threw him out.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        89,
+        90
+      ],
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We threw him out.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ohh! Does he have any creditor and credit cārds, or…?!",
+      "similarity": 0.8393,
+      "match_type": "similar",
+      "json_group": [
+        91,
+        92
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Does he have any creditors and credit cards or the telephone?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ohh! Does he have any creditor and credit cārds, or…?!",
+      "similarity": 0.8393,
+      "match_type": "similar",
+      "json_group": [
+        91,
+        92
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Does he have any creditors and credit cards or the telephone?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Um.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Um—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Does he have any creditors and credit cards?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Does he have any creditors and credit cards?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How many credit cards has he done dialed the telephone?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ohh! [delay, pitch-shifted]Did you—? Does he—? How many credit cārds has he declared? [exhales]",
+      "similarity": 0.5324,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Ohh! [delay, pitch-shifted]Did you—? Does he—? How many credit cārds has he declared? [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How many credit carriers has he done?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How many credit carriers has he done?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He doesn't have any money and he doesn't have anything.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "He doesn’t have any money and he doesn’t have anything.",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He doesn’t have any money and he doesn’t have anything.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He says he declared.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "He says he declared.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're going to have to discharge him from his credit cards and I'll be taking those",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’re gonna have to discharge him from his credit cards—and I’ll be taking those—and I’ll be filing a suit under the, uh… judicial Code. And we’ll—",
+      "similarity": 0.9058,
+      "match_type": "similar",
+      "json_group": [
+        99,
+        100
+      ],
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're going to have to discharge him from his credit cards and I'll be taking those",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and I'll be filing a suit under the judicial code.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’re gonna have to discharge him from his credit cards—and I’ll be taking those—and I’ll be filing a suit under the, uh… judicial Code. And we’ll—",
+      "similarity": 0.9058,
+      "match_type": "similar",
+      "json_group": [
+        99,
+        100
+      ],
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I'll be filing a suit under the judicial code.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "For what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "For what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "For what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We'll get that on the docket.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’ll get that on the docket first-thing and we’re gonna prosecute your son for breaking and entering and unlawful use of telephone—",
+      "similarity": 0.8255,
+      "match_type": "similar",
+      "json_group": [
+        102,
+        103
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We'll get that on the docket.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "First thing, and we're going to prosecute your son for breaking and entering.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’ll get that on the docket first-thing and we’re gonna prosecute your son for breaking and entering and unlawful use of telephone—",
+      "similarity": 0.8255,
+      "match_type": "similar",
+      "json_group": [
+        102,
+        103
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "First thing, and we're going to prosecute your son for breaking and entering.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I don't think he's a telephone.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think he— He lives here. Until about a week ago.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105
+      ],
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I don't think he's a telephone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He lived here until about a week ago.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think he— He lives here. Until about a week ago.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105
+      ],
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He lived here until about a week ago.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have so much evidence.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I have so much evidence! It’s called ex parte.",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": [
+        106,
+        107
+      ],
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have so much evidence.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's called ex parte.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I have so much evidence! It’s called ex parte.",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": [
+        106,
+        107
+      ],
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's called ex parte.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, my husband wouldn't allow that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, my husband wouldn’t allow that.",
+      "similarity": 0.9697,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, my husband wouldn’t allow that.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ohh! [delay, pitch-shifted]So you want your son to be exempt from the whole proceeding?",
+      "similarity": 0.8552,
+      "match_type": "similar",
+      "json_group": [
+        109,
+        110
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So you want your son to be exempt from the whole proceeding?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ohh! [delay, pitch-shifted]So you want your son to be exempt from the whole proceeding?",
+      "similarity": 0.8552,
+      "match_type": "similar",
+      "json_group": [
+        109,
+        110
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So you want your son to be exempt from the whole proceeding?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So you want your son?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "So you want your son?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Everything you're saying right now is being repeated back to me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "See, everything you’re saying right now is being repeated back to me. So, um, give me five minutes, let me get up and get dressed and I’ll call you back from the private phone.",
+      "similarity": 0.9221,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Everything you're saying right now is being repeated back to me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So give me five minutes. Let me get up and get dressed.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "See, everything you’re saying right now is being repeated back to me. So, um, give me five minutes, let me get up and get dressed and I’ll call you back from the private phone.",
+      "similarity": 0.9221,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So give me five minutes. Let me get up and get dressed.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll call you back from the price.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "See, everything you’re saying right now is being repeated back to me. So, um, give me five minutes, let me get up and get dressed and I’ll call you back from the private phone.",
+      "similarity": 0.9221,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll call you back from the price.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That'll work. That'll work. That'll work.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That’ll work, that’ll work, that’ll work. We’re gonna do habeas corpus out the yingyang! [delay, pitch-shifted]",
+      "similarity": 0.7487,
+      "match_type": "similar",
+      "json_group": [
+        117,
+        118
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That'll work. That'll work. That'll work.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're going to do habeas corpus up the union.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That’ll work, that’ll work, that’ll work. We’re gonna do habeas corpus out the yingyang! [delay, pitch-shifted]",
+      "similarity": 0.7487,
+      "match_type": "similar",
+      "json_group": [
+        117,
+        118
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're going to do habeas corpus up the union.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Caller ID—",
+      "similarity": 0.5556,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Caller ID—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We'll get a fresh start on it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’ll get a fresh start on it.",
+      "similarity": 0.9655,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We’ll get a fresh start on it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Thanks. Bye-bye.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Thanks. Buh-bye!",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thanks. Buh-bye!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm going to convene a grand jury.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m gonna convene a grand jury—23 citizens—and we’re gonna sue your son for $200,000! Take his credit cārd! [delay, pitch-shifted]",
+      "similarity": 0.7698,
+      "match_type": "similar",
+      "json_group": [
+        122,
+        123,
+        124
+      ],
+      "wiki_indices": [
+        103
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to convene a grand jury.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We'll get a fresh 23 citizens and we're going to sue your son for $200,000.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m gonna convene a grand jury—23 citizens—and we’re gonna sue your son for $200,000! Take his credit cārd! [delay, pitch-shifted]",
+      "similarity": 0.7698,
+      "match_type": "similar",
+      "json_group": [
+        122,
+        123,
+        124
+      ],
+      "wiki_indices": [
+        103
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We'll get a fresh 23 citizens and we're going to sue your son for $200,000.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Take his credit card.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m gonna convene a grand jury—23 citizens—and we’re gonna sue your son for $200,000! Take his credit cārd! [delay, pitch-shifted]",
+      "similarity": 0.7698,
+      "match_type": "similar",
+      "json_group": [
+        122,
+        123,
+        124
+      ],
+      "wiki_indices": [
+        103
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Take his credit card.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 124,
+    "total_wiki_lines": 101,
+    "matched_wiki_lines": 68,
+    "unmatched_wiki_lines": 33,
+    "matched": 114,
+    "speakers_to_map": 2,
+    "text_auto_correct": 11,
+    "text_review": 17,
+    "text_group_review": 76,
+    "unmatched_json": 10
+  }
+}

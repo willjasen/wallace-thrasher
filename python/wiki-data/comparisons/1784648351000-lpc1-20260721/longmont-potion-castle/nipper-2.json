@@ -1,0 +1,645 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:41:01.565961+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Nipper 2",
+  "track_slug": "nipper-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/nipper-2.json",
+  "json_sha256": "590ed5b41a3fd7f8020e339c1be6359885d91d9e88d877cb7bc34b6c547bbb41",
+  "wiki_title": "Nipper 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Nipper_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man",
+    "SPEAKER_01": "Tom"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.7403,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.7027,
+          "observations": 3
+        },
+        {
+          "name": "Tom",
+          "score": 0.9483,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Tom",
+      "confidence": 0.7258,
+      "observations": 9,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Tom",
+          "score": 7.7268,
+          "observations": 9
+        },
+        {
+          "name": "Man",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 0.9189,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, go get nipper.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, go-- go get Nipper.",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, go-- go get Nipper.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Like nymphor?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Tom",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Like nymphor?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I like Mimper.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[laughs] I like Nipper, come on, let me talk to her.",
+      "similarity": 0.814,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I like Mimper.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Come on, let me talk to it.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[laughs] I like Nipper, come on, let me talk to her.",
+      "similarity": 0.814,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on, let me talk to it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just like nipper.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Just say, \"Nipper! Here, Nipper!\"",
+      "similarity": 0.8727,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just like nipper.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Here, nipper.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Just say, \"Nipper! Here, Nipper!\"",
+      "similarity": 0.8727,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here, nipper.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Go here, little nipper.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Go, \"Here, little Nipper!\"",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Go here, little nipper.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And then put the phone on the floor.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "And then put the phone on the floor, and I'll talk to her. Will you put some peanut butter on the receiver? [laughing] So she'll lick it? [laughs]",
+      "similarity": 0.8971,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "And then put the phone on the floor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I'll talk to her.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "And then put the phone on the floor, and I'll talk to her. Will you put some peanut butter on the receiver? [laughing] So she'll lick it? [laughs]",
+      "similarity": 0.8971,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I'll talk to her.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Will you put some peanut butter on the receiver?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "And then put the phone on the floor, and I'll talk to her. Will you put some peanut butter on the receiver? [laughing] So she'll lick it? [laughs]",
+      "similarity": 0.8971,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Will you put some peanut butter on the receiver?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's true.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "And then put the phone on the floor, and I'll talk to her. Will you put some peanut butter on the receiver? [laughing] So she'll lick it? [laughs]",
+      "similarity": 0.8971,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's true.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So you'll lick it.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "And then put the phone on the floor, and I'll talk to her. Will you put some peanut butter on the receiver? [laughing] So she'll lick it? [laughs]",
+      "similarity": 0.8971,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "So you'll lick it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm totally done.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You're totally stoned.",
+      "similarity": 0.7027,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're totally stoned.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Will you make your sandwich and eat it?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Will you make her a sandwich, and then eat it? [laughing]",
+      "similarity": 0.7872,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Will you make your sandwich and eat it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Will you make her a sandwich, and then eat it? [laughing]",
+      "similarity": 0.7872,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No... [unintelligible] Nipper.",
+      "similarity": 0.5909,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "None",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No... [unintelligible] Nipper.",
+      "similarity": 0.5909,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Go here, Nipper.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No... [unintelligible] Nipper.",
+      "similarity": 0.5909,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Go here, Nipper.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Will you please?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Go \"Here, Nipper!\" Will you, please?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Go \"Here, Nipper!\" Will you, please?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I will ever call you back if you just let me talk to Nipper?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "I won't ever call you back, if you al-- if you'll just let me talk to Nipper.",
+      "similarity": 0.8485,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I won't ever call you back, if you al-- if you'll just let me talk to Nipper.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just once.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Just once! One time. One time deal. That's all you're getting.",
+      "similarity": 0.9483,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just once.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "One time.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Just once! One time. One time deal. That's all you're getting.",
+      "similarity": 0.9483,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "One time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "One time deal.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Just once! One time. One time deal. That's all you're getting.",
+      "similarity": 0.9483,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "One time deal.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's how you're getting...",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Just once! One time. One time deal. That's all you're getting.",
+      "similarity": 0.9483,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's how you're getting...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Call back in an hour.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Call back in an hour.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Call back in an hour.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Call back and talk to my boss.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[scoffs] Call back and talk to my boss.",
+      "similarity": 0.8923,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "[scoffs] Call back and talk to my boss.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 29,
+    "total_wiki_lines": 18,
+    "matched_wiki_lines": 16,
+    "unmatched_wiki_lines": 2,
+    "matched": 28,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 3,
+    "text_group_review": 18,
+    "unmatched_json": 1
+  }
+}

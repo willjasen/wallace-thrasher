@@ -1,0 +1,443 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:56.136493+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Red Miller",
+  "track_slug": "red-miller",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/red-miller.json",
+  "json_sha256": "8888ef5536c04d15e1af86d4a927739a1d535001dff79a494d3429d1215f8b11",
+  "wiki_title": "Red Miller",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Red_Miller",
+  "speaker_mapping": {
+    "SPEAKER_00": "Radio Host 2",
+    "SPEAKER_02": "Radio Host 1"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Radio Host 2",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Radio Host 2",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.5808,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.731,
+          "observations": 3
+        },
+        {
+          "name": "Radio Host 2",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Radio Host 1",
+          "score": 0.9714,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Radio Host 1",
+      "confidence": 0.7373,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Radio Host 1",
+          "score": 2.637,
+          "observations": 3
+        },
+        {
+          "name": "Radio Host 2",
+          "score": 0.9394,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, Bernie and Brighton, you're on Quebec 1090 with Irvin Joe.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Well, Bernie in Brighton, you're on KBIG 1090 with Irv and Joe.",
+      "similarity": 0.8235,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, Bernie in Brighton, you're on KBIG 1090 with Irv and Joe.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Isn't Pocahontas a school mascot?",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Isn't Pocahontas the school mascot?",
+      "similarity": 0.9394,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Isn't Pocahontas the school mascot?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't think so.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "[laughing] I don't think so! Ernie, how are ya?",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't think so.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Ernie, how are you?",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "[laughing] I don't think so! Ernie, how are ya?",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ernie, how are you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Pretty good, thanks.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Pretty good, thanks. Evenin'. Um... I just wanted to share with you, maybe, a conversation I had with Red Miller, recently.",
+      "similarity": 0.9604,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Pretty good, thanks.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The evening.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Pretty good, thanks. Evenin'. Um... I just wanted to share with you, maybe, a conversation I had with Red Miller, recently.",
+      "similarity": 0.9604,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The evening.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I just wanted to share with you maybe a conversation I had with Red Miller recently.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Pretty good, thanks. Evenin'. Um... I just wanted to share with you, maybe, a conversation I had with Red Miller, recently.",
+      "similarity": 0.9604,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just wanted to share with you maybe a conversation I had with Red Miller recently.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "With who?",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "With who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "With who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Red Miller?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Red Miller.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Red Miller?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Red Miller, yeah.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Red Miller, yeah...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Red Miller, yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Go ahead, Ernie.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Go ahead, Ernie.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Go ahead, Ernie.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I had in the past spoke to him about Mark Gastino.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[slightly wavering pitch] I had spoken to him in the past about Mark Gastineau, and the fact that.. you know, that man knew what was going on on both sides of the football. Uh... we started talking about Otis King... [heavy pitch wobbling] and then... and then he... [scramble]",
+      "similarity": 0.7706,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I had in the past spoke to him about Mark Gastino.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And the fact that, you know, that man knew what was going on on both sides of the football.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[slightly wavering pitch] I had spoken to him in the past about Mark Gastineau, and the fact that.. you know, that man knew what was going on on both sides of the football. Uh... we started talking about Otis King... [heavy pitch wobbling] and then... and then he... [scramble]",
+      "similarity": 0.7706,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And the fact that, you know, that man knew what was going on on both sides of the football.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We started talking about Otis King and then.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[slightly wavering pitch] I had spoken to him in the past about Mark Gastineau, and the fact that.. you know, that man knew what was going on on both sides of the football. Uh... we started talking about Otis King... [heavy pitch wobbling] and then... and then he... [scramble]",
+      "similarity": 0.7706,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We started talking about Otis King and then.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We've got a real bad connection here.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Got a real bad connection, here. Ernie, please call back. Terrible connection. Let's go right to the phones...",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got a real bad connection here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Ernie, please call back.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Got a real bad connection, here. Ernie, please call back. Terrible connection. Let's go right to the phones...",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ernie, please call back.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Terrible connection.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Got a real bad connection, here. Ernie, please call back. Terrible connection. Let's go right to the phones...",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Terrible connection.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let's go right to the phones.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Got a real bad connection, here. Ernie, please call back. Terrible connection. Let's go right to the phones...",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's go right to the phones.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 18,
+    "total_wiki_lines": 11,
+    "matched_wiki_lines": 10,
+    "unmatched_wiki_lines": 1,
+    "matched": 18,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 1,
+    "text_group_review": 12,
+    "unmatched_json": 0
+  }
+}

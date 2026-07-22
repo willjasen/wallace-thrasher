@@ -1,0 +1,167 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:22.037455+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Fingerhut 2",
+  "track_slug": "fingerhut-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/fingerhut-2.json",
+  "json_sha256": "599e50d6208f81d9639fd8f613a6ba483e438a139b7ad07bb1907e88e4e52962",
+  "wiki_title": "Fingerhut 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Fingerhut_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "Robert",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Robert",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Robert",
+          "score": 2.8966,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.9774,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Robert Rico?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Robert Rico?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Robert Rico?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I just need to know where I'm supposed to put your zebra tomorrow.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um... I just need to... know where I'm supposed to put your zebra, tomorrow.",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um... I just need to... know where I'm supposed to put your zebra, tomorrow.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll tell you what you put your zebra.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "I tell ya where you put your zebra. I'm going to call UPS, and... Fingerhut, and find out what the hell's goin' on with this bullshit.",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll tell you what you put your zebra.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to call UPS and figure-ahead and find out what the hell is going on with this bullshit.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "I tell ya where you put your zebra. I'm going to call UPS, and... Fingerhut, and find out what the hell's goin' on with this bullshit.",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to call UPS and figure-ahead and find out what the hell is going on with this bullshit.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 5,
+    "matched_wiki_lines": 5,
+    "unmatched_wiki_lines": 0,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 0,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

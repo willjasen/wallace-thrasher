@@ -1,0 +1,142 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:17.693802+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Talkin Whip",
+  "track_slug": "talkin-whip",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/talkin-whip.json",
+  "json_sha256": "0d572eeb771169499587a245f4ae66183eb7bde12078e2d3022adc9defe3aa98",
+  "wiki_title": "Talkin' Whip",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Talkin%27_Whip",
+  "speaker_mapping": {},
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Larry",
+      "confidence": 0.5333,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Larry",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "LPC",
+          "score": 0.875,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You call up on the phone and you talk shit.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "You call up on the phone and you talk shit.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "You call up on the phone and you talk shit.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I ain't talking shit. I'm talking whip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I ain't talkin shit, I'm talkin' whip. [exhale]",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I ain't talkin shit, I'm talkin' whip. [exhale]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But you ain't bad. See, you can talk shit on the phone.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "But you ain't bad. See, you can talk shit on the phone.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If you ever came up to me at the whip, I'd fuck your ass up so hard.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "If you ever came up to me at the whip, I'd fuck your ass up so hard.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You wouldn't get out of the hospital for about three months, dude.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "You wouldn't get out of the hospital for about three months, dude.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Four months, dude.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Four months, dude.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 2,
+    "matched_wiki_lines": 2,
+    "unmatched_wiki_lines": 0,
+    "matched": 2,
+    "speakers_to_map": 0,
+    "text_auto_correct": 1,
+    "text_review": 0,
+    "text_group_review": 0,
+    "unmatched_json": 4
+  }
+}

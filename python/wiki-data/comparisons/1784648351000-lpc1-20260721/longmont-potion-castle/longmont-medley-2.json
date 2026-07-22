@@ -1,0 +1,559 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:55.182230+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Longmont Medley 2",
+  "track_slug": "longmont-medley-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/longmont-medley-2.json",
+  "json_sha256": "80c03f5d0fc8bf934068d8b10cc54757578c9423aaa3f539301561165396b421",
+  "wiki_title": "Longmont Medley 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Longmont_Medley_2",
+  "speaker_mapping": {
+    "SPEAKER_01": "Man (2)",
+    "SPEAKER_02": "Man (5)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman (8)",
+      "confidence": 0.5879,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman (8)",
+          "score": 2.8054,
+          "observations": 3
+        },
+        {
+          "name": "Woman (7)",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Woman (1)",
+          "score": 0.9667,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 1.6327,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man (5)",
+      "confidence": 1.0,
+      "observations": 6,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (5)",
+          "score": 5.804,
+          "observations": 6
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man (3)",
+      "confidence": 0.4982,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (3)",
+          "score": 2.8034,
+          "observations": 3
+        },
+        {
+          "name": "Man (4)",
+          "score": 1.8789,
+          "observations": 2
+        },
+        {
+          "name": "Man (6)",
+          "score": 0.9448,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't want to hear anything.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I... I don't want to hear anything.",
+      "similarity": 0.9667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I... I don't want to hear anything.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, you say you're going to eat bees?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Well...what... you're... You say you're gonna... eat bees? Well, that kills them. That's not rentin' 'em.",
+      "similarity": 0.8242,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you say you're going to eat bees?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, it kills them. That's not renting.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Well...what... you're... You say you're gonna... eat bees? Well, that kills them. That's not rentin' 'em.",
+      "similarity": 0.8242,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it kills them. That's not renting.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't want to sell them.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I don't wanna sell 'em.",
+      "similarity": 0.8085,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't wanna sell 'em.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Lotion for a pistol? Gums the own men?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "Lotion for pistol? Guns That Own Men?",
+      "similarity": 0.9014,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4,
+        6
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lotion for pistol? Guns That Own Men?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What are you talking about?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "What're you talkin' about?",
+      "similarity": 0.902,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What're you talkin' about?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "No, I do not have pellet pistols.",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "No, I do not have pellet pistols.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I do not have pellet pistols.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You're going to put fish in your mouth?",
+      "wiki_speaker": "Man (4)",
+      "wiki_text": "You're gonna put fish in your mouth?",
+      "similarity": 0.9041,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're gonna put fish in your mouth?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man (4)",
+      "wiki_text": "Uh, okay. You can come down and buy fish, rent fish. I don't care.",
+      "similarity": 0.9748,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You can come down and buy fish, rent fish, I don't care.",
+      "wiki_speaker": "Man (4)",
+      "wiki_text": "Uh, okay. You can come down and buy fish, rent fish. I don't care.",
+      "similarity": 0.9748,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can come down and buy fish, rent fish, I don't care.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Spitting up lotion?",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Spitting up lotion? Well, we're aerial photographers. Do you know what that means? It's...",
+      "similarity": 0.9689,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Spitting up lotion?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, we're aerial photographers.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Spitting up lotion? Well, we're aerial photographers. Do you know what that means? It's...",
+      "similarity": 0.9689,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, we're aerial photographers.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Do you know what that means?",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Spitting up lotion? Well, we're aerial photographers. Do you know what that means? It's...",
+      "similarity": 0.9689,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you know what that means?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, I'm afraid we don't do that kind of photography.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "No, I'm afraid we don't do that kind of photography.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I'm afraid we don't do that kind of photography.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What's your name, by the way?",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "What's your name, by the way?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's your name, by the way?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Nipper?",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Nipper?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nipper?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, Nipper, I'm afraid we can't help you.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Uh... well... Nipper, I'm afraid we can't help you. You'll have to find someone else.",
+      "similarity": 0.9306,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, Nipper, I'm afraid we can't help you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I have to find someone else.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "Uh... well... Nipper, I'm afraid we can't help you. You'll have to find someone else.",
+      "similarity": 0.9306,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have to find someone else.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm going to have to get on with my work, so you'll have to call someone else.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "--have to... I'm gonna have to get on with my work. So, you'll have to call someone else.",
+      "similarity": 0.9045,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "--have to... I'm gonna have to get on with my work. So, you'll have to call someone else.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Well, if your job is to deliver the package, you should know where I live, right?",
+      "wiki_speaker": "Man (6)",
+      "wiki_text": "Well, if-- '[beep]' --your job is to deliver the package, you should know where I live, right?",
+      "similarity": 0.9448,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man (6)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, if-- '[beep]' --your job is to deliver the package, you should know where I live, right?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And what's the name on the package?",
+      "wiki_speaker": "Woman (7)",
+      "wiki_text": "And what's the name on the package?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman (7)",
+      "speaker_action": "matched_line",
+      "proposed_text": "And what's the name on the package?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My lotion. Where is this lotion coming from?",
+      "wiki_speaker": "Woman (8)",
+      "wiki_text": "My lotion? Where is this lotion coming from?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Woman (8)",
+      "speaker_action": "matched_line",
+      "proposed_text": "My lotion. Where is this lotion coming from?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, why do I keep getting all these strange noises?",
+      "wiki_speaker": "Woman (8)",
+      "wiki_text": "Well... why... why do I keep getting all these strange noises?",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman (8)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well... why... why do I keep getting all these strange noises?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why are all these strange noises that you're gagging?",
+      "wiki_speaker": "Woman (8)",
+      "wiki_text": "Uh, why are all these strange noises... I hear gagging.",
+      "similarity": 0.8431,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman (8)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, why are all these strange noises... I hear gagging.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 25,
+    "total_wiki_lines": 30,
+    "matched_wiki_lines": 20,
+    "unmatched_wiki_lines": 10,
+    "matched": 24,
+    "speakers_to_map": 2,
+    "text_auto_correct": 7,
+    "text_review": 2,
+    "text_group_review": 9,
+    "unmatched_json": 1
+  }
+}

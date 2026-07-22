@@ -1,0 +1,2297 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:41:07.305151+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Circus Tickets",
+  "track_slug": "circus-tickets",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/circus-tickets.json",
+  "json_sha256": "2711a03a35c0d9f8065405daa3edc8fcb07c531b36950d999031e46211a1a506",
+  "wiki_title": "Circus Tickets",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Circus_Tickets",
+  "speaker_mapping": {
+    "SPEAKER_00": "Steve",
+    "SPEAKER_02": "Radio Host"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Steve",
+      "confidence": 0.806,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Steve",
+          "score": 2.7707,
+          "observations": 3
+        },
+        {
+          "name": "Tom",
+          "score": 0.6667,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Tom",
+      "confidence": 0.4476,
+      "observations": 14,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Tom",
+          "score": 12.6159,
+          "observations": 14
+        },
+        {
+          "name": "LPC",
+          "score": 11.6927,
+          "observations": 13
+        },
+        {
+          "name": "Steve",
+          "score": 3.0,
+          "observations": 3
+        },
+        {
+          "name": "Radio Host",
+          "score": 0.875,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Radio Host",
+      "confidence": 0.9803,
+      "observations": 36,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Radio Host",
+          "score": 33.2593,
+          "observations": 36
+        },
+        {
+          "name": "Tom",
+          "score": 0.6667,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, you got a few people there?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, you got a few people there?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, you got a few people there?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, we've got a few people here.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Yeah, we got a few people here.",
+      "similarity": 0.9508,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, we got a few people here.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, y'all set for this, Steve?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, you all set for this, Steve?",
+      "similarity": 0.9118,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, you all set for this, Steve?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm ready.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm ready.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm ready.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Wait, let me ask me a quick question.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Wait, let me ask you one quick question. Do we win some kind of prize?",
+      "similarity": 0.9313,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wait, let me ask me a quick question.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do we win some kind of prize?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Wait, let me ask you one quick question. Do we win some kind of prize?",
+      "similarity": 0.9313,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do we win some kind of prize?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, I guess you could.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Well, I guess you could. We've got circus tickets we can give you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I guess you could.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We've got circus tickets we can give you.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Well, I guess you could. We've got circus tickets we can give you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got circus tickets we can give you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "But you're going to have to come down to Denver to see it.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "But, uh, you're gonna... you're gonna have to come down to Denver to see it.",
+      "similarity": 0.8504,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "But, uh, you're gonna... you're gonna have to come down to Denver to see it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Here we go, okay.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Here we go, okay?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here we go, okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, go ahead.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, go ahead.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, go ahead.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I like to smoke a baby.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[singing] I like to smoke, baby / I do it every day / I like to smoke, baby / Don't care about tooth decay / I like to smoke, baby / I do it everyday / I like to smoke Whitmans / 'cause Whitmans are gonna kill you.",
+      "similarity": 0.6859,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I like to smoke a baby.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I do it every day.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[singing] I like to smoke, baby / I do it every day / I like to smoke, baby / Don't care about tooth decay / I like to smoke, baby / I do it everyday / I like to smoke Whitmans / 'cause Whitmans are gonna kill you.",
+      "similarity": 0.6859,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I do it every day.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I like to smoke, baby.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[singing] I like to smoke, baby / I do it every day / I like to smoke, baby / Don't care about tooth decay / I like to smoke, baby / I do it everyday / I like to smoke Whitmans / 'cause Whitmans are gonna kill you.",
+      "similarity": 0.6859,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I like to smoke, baby.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't care about two to decay.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[singing] I like to smoke, baby / I do it every day / I like to smoke, baby / Don't care about tooth decay / I like to smoke, baby / I do it everyday / I like to smoke Whitmans / 'cause Whitmans are gonna kill you.",
+      "similarity": 0.6859,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don't care about two to decay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Women?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[singing] I like to smoke, baby / I do it every day / I like to smoke, baby / Don't care about tooth decay / I like to smoke, baby / I do it everyday / I like to smoke Whitmans / 'cause Whitmans are gonna kill you.",
+      "similarity": 0.6859,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Women?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I like to smoke, baby.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "[singing] I like to smoke, baby / I do it every day / I like to smoke, baby / Don't care about tooth decay / I like to smoke, baby / I do it everyday / I like to smoke Whitmans / 'cause Whitmans are gonna kill you.",
+      "similarity": 0.6859,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I like to smoke, baby.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I do it every day.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I do it every day.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I like to smoke.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I like to smoke.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because Woodman's a little kiddie.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Because Woodman's a little kiddie.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, boy.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Oh, boy.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, boy.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, boy.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Ohh, boy.",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ohh, boy.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "About that gong out there?",
+      "wiki_speaker": "Steve",
+      "wiki_text": "You got that gong out there?",
+      "similarity": 0.8846,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got that gong out there?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, that's going to move right up the top ten chart there, guys.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "That's gonna move right up the, uh, the Top Ten chart there, guys.",
+      "similarity": 0.848,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's gonna move right up the, uh, the Top Ten chart there, guys.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Going up to number 50.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Going up to... number fifty.",
+      "similarity": 0.8444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Going up to... number fifty.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hey, thanks for the call.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Hey, thanks for the call.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, thanks for the call.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I wrote it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I wrote it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I wrote it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, yeah, you're pretty darned proud of it, aren't you?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Well, uh... yeah, you're pretty darn proud of it, aren't you?",
+      "similarity": 0.9533,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, uh... yeah, you're pretty darn proud of it, aren't you?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Thanks.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Thanks.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright. My, my, my.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "My, my, my.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright. My, my, my.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "My, my, my.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, we've got a call now from Burbank, California.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, we've got a call now from, uh, Burbank, California. Hey, Tom!",
+      "similarity": 0.96,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right, we've got a call now from Burbank, California.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hey, Tom.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, we've got a call now from, uh, Burbank, California. Hey, Tom!",
+      "similarity": 0.96,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Tom.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Greetings from California.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Greetings from California.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Greetings from California.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How are you?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "How are ya?",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "How are ya?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Not bad.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Not bad. We wanted the circus tickets.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not bad.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We wanted the circus tickets.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Not bad. We wanted the circus tickets.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "We wanted the circus tickets.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You want the circus tickets?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "You want the circus tickets?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "You want the circus tickets?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're prepared to earn them.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Uh huh, and we're prepared to earn 'em.",
+      "similarity": 0.7812,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh huh, and we're prepared to earn 'em.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let me get Steve Crutter on here for people for smokers' rights.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Let me get Steve Kroner on here for, uh... People for Smokers' Rights.",
+      "similarity": 0.9219,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let me get Steve Kroner on here for, uh... People for Smokers' Rights.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Steve?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Uh, Steve?",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, Steve?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, right here.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Yeah, right here.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, right here.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, we've got a couple of participants here.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Okay, we've got, uh, we've got a couple of participants here.",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, we've got, uh, we've got a couple of participants here.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Number two, huh?",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Number two, huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Number two, huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah. Alright, guys, uh... have you named this song?",
+      "similarity": 0.9438,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, guys, have you named this song?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah. Alright, guys, uh... have you named this song?",
+      "similarity": 0.9438,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right, guys, have you named this song?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, it's called Smoking Makes Me Feel Good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, it's called \"Smokin' Makes Me Feel Good\".",
+      "similarity": 0.9767,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, it's called \"Smokin' Makes Me Feel Good\".",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "All right.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What was the first song like?",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Hey, wait, wait, what was the first song like?",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, wait, wait, what was the first song like?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I definitely thought that had some high sound quality in it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I thought that one... I definitely thought that had some... had some high sound quality in it.",
+      "similarity": 0.8082,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I thought that one... I definitely thought that had some... had some high sound quality in it.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, it needed some work.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, it... it needed some work.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, it... it needed some work.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, so anything will do better, I think Steve will probably agree with what we had heard about 20 minutes ago.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, so anything will do better, I think, uh, Steve will probably agree, with what we, uh, had heard about, uh, twenty minutes ago.",
+      "similarity": 0.9205,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, so anything will do better, I think, uh, Steve will probably agree, with what we, uh, had heard about, uh, twenty minutes ago.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, you didn't like that one?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, you didn't like that one?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, you didn't like that one?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, it was fair.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Uh, it was fair.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, it was fair.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Alright.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right. This is Tom and who else?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright. Uh, alright, this is, uh, Tom, and who else?",
+      "similarity": 0.825,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright. Uh, alright, this is, uh, Tom, and who else?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And Flip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And, uh, Flip.",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And, uh, Flip.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Flip.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "[scoffs] Flip.",
+      "similarity": 0.5333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[scoffs] Flip.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right, Tom and Flip in Burbank, California.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, Tom and Flip in Burbank, California, and you know there's talent in California. Go ahead, guys.",
+      "similarity": 0.9899,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right, Tom and Flip in Burbank, California.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And you know there's talent in California.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, Tom and Flip in Burbank, California, and you know there's talent in California. Go ahead, guys.",
+      "similarity": 0.9899,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you know there's talent in California.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Go ahead, guys.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, Tom and Flip in Burbank, California, and you know there's talent in California. Go ahead, guys.",
+      "similarity": 0.9899,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Go ahead, guys.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Smoking makes me feel good.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Smoking makes me feel good.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Every time I light a cigarette.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[singing] Smokin' makes me feel good / Every time I light a cigarette / I time I smoke it / Every time I light a cigarette / Makes me feel so good / 'Cause we got high hopes, high hopes / Every time I see a Marlboro Red / Every time I smoke it / Every time I see a Marlboro Red / It does my heart some good / 'cause we like to smoke / We're smokers.",
+      "similarity": 0.6478,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Every time I light a cigarette.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Every time I smoke it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[singing] Smokin' makes me feel good / Every time I light a cigarette / I time I smoke it / Every time I light a cigarette / Makes me feel so good / 'Cause we got high hopes, high hopes / Every time I see a Marlboro Red / Every time I smoke it / Every time I see a Marlboro Red / It does my heart some good / 'cause we like to smoke / We're smokers.",
+      "similarity": 0.6478,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Every time I smoke it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Every time I light a cigarette makes me feel so good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[singing] Smokin' makes me feel good / Every time I light a cigarette / I time I smoke it / Every time I light a cigarette / Makes me feel so good / 'Cause we got high hopes, high hopes / Every time I see a Marlboro Red / Every time I smoke it / Every time I see a Marlboro Red / It does my heart some good / 'cause we like to smoke / We're smokers.",
+      "similarity": 0.6478,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Every time I light a cigarette makes me feel so good.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because we got high hoops.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[singing] Smokin' makes me feel good / Every time I light a cigarette / I time I smoke it / Every time I light a cigarette / Makes me feel so good / 'Cause we got high hopes, high hopes / Every time I see a Marlboro Red / Every time I smoke it / Every time I see a Marlboro Red / It does my heart some good / 'cause we like to smoke / We're smokers.",
+      "similarity": 0.6478,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Because we got high hoops.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "High hoops.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[singing] Smokin' makes me feel good / Every time I light a cigarette / I time I smoke it / Every time I light a cigarette / Makes me feel so good / 'Cause we got high hopes, high hopes / Every time I see a Marlboro Red / Every time I smoke it / Every time I see a Marlboro Red / It does my heart some good / 'cause we like to smoke / We're smokers.",
+      "similarity": 0.6478,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "High hoops.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Every time I see a marlbrade.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[singing] Smokin' makes me feel good / Every time I light a cigarette / I time I smoke it / Every time I light a cigarette / Makes me feel so good / 'Cause we got high hopes, high hopes / Every time I see a Marlboro Red / Every time I smoke it / Every time I see a Marlboro Red / It does my heart some good / 'cause we like to smoke / We're smokers.",
+      "similarity": 0.6478,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Every time I see a marlbrade.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Whoa.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Whoa.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Every time I smoke it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Every time I smoke it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Every time I see my marat does my heart some good.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Every time I see my marat does my heart some good.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because we like to smoke.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Because we like to smoke.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're smokers.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "We're smokers.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That's it?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "That's it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yep.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yep.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yep.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "All right.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, I like it.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Well, I liked it. It's not bad. Uh, Steve, on a scale of one to ten, what do you suppose you'd give that?",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I like it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That's not bad.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Well, I liked it. It's not bad. Uh, Steve, on a scale of one to ten, what do you suppose you'd give that?",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's not bad.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, Steve, on a scale of 1 to 10, what do you suppose you'd give that?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Well, I liked it. It's not bad. Uh, Steve, on a scale of one to ten, what do you suppose you'd give that?",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, Steve, on a scale of 1 to 10, what do you suppose you'd give that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, we're going to have to, that one's a little more up.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Well, we're gonna have to... that one's a little more upscale, I think we might give that one an eight, and maybe even work it into the November program we have.",
+      "similarity": 0.9241,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, we're going to have to, that one's a little more up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think we might give that one an 8 and maybe even work it into the November program you have.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Well, we're gonna have to... that one's a little more upscale, I think we might give that one an eight, and maybe even work it into the November program we have.",
+      "similarity": 0.9241,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86
+      ],
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think we might give that one an 8 and maybe even work it into the November program you have.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, I think so too. Uh, we have recorded that and we will probably play it, uh, back again, uh, periodically. Alright, uh, do you want these tickets, guys?",
+      "similarity": 0.9253,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I think so, too.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, I think so too. Uh, we have recorded that and we will probably play it, uh, back again, uh, periodically. Alright, uh, do you want these tickets, guys?",
+      "similarity": 0.9253,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think so, too.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We've recorded that, and we will probably play it back again periodically.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, I think so too. Uh, we have recorded that and we will probably play it, uh, back again, uh, periodically. Alright, uh, do you want these tickets, guys?",
+      "similarity": 0.9253,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've recorded that, and we will probably play it back again periodically.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, I think so too. Uh, we have recorded that and we will probably play it, uh, back again, uh, periodically. Alright, uh, do you want these tickets, guys?",
+      "similarity": 0.9253,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Would you want these tickets, guys?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, I think so too. Uh, we have recorded that and we will probably play it, uh, back again, uh, periodically. Alright, uh, do you want these tickets, guys?",
+      "similarity": 0.9253,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Would you want these tickets, guys?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, we're gonna give you four tickets to, uh, Ringling Brothers and Barnum and Bailey Circus, uh...",
+      "similarity": 0.8545,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We're going to give you four tickets to Ringling Brothers and Barnum and Bailey Circus at the New Calusium.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright, we're gonna give you four tickets to, uh, Ringling Brothers and Barnum and Bailey Circus, uh...",
+      "similarity": 0.8545,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're going to give you four tickets to Ringling Brothers and Barnum and Bailey Circus at the New Calusium.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's October 9th at 730, and are you guys originally from here or what?",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "...at the Denver Coliseum, uh, it's October 9th at, uh, 7.30, and, uh, you guys originally from here, or what?",
+      "similarity": 0.7904,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "...at the Denver Coliseum, uh, it's October 9th at, uh, 7.30, and, uh, you guys originally from here, or what?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Yeah, I--",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I don't know.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, my parents live out there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, well, yeah, well my parents live out there.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, well, yeah, well my parents live out there.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "There's a lot going on, you know.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "There's a lot going on, you know.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's a lot going on, you know.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You've got two live crew in town for a special Halloween concert.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "You've got, uh, 2 Live Crew, uh, in town for a special Halloween concert.",
+      "similarity": 0.9242,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "You've got, uh, 2 Live Crew, uh, in town for a special Halloween concert.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, really?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, really?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, really?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm easily offended, though.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm easily offended though, so... [unintelligible]",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm easily offended though, so... [unintelligible]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll see that.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "I'll have to see that.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll see that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "I'll have to see that.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, alright, well... and, and you'll be able to, of course, uh, enjoy these wonderful circus tickets.",
+      "similarity": 0.9205,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, and you'll be able to, of course, enjoy these.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, alright, well... and, and you'll be able to, of course, uh, enjoy these wonderful circus tickets.",
+      "similarity": 0.9205,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, and you'll be able to, of course, enjoy these.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "wonderful circus tickets.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, alright, well... and, and you'll be able to, of course, uh, enjoy these wonderful circus tickets.",
+      "similarity": 0.9205,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "wonderful circus tickets.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Yeah!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        97
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, hang on the line.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Okay, hang on the line, we'll get the information from you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        111,
+        112
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, hang on the line.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We'll get the information from you.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Okay, hang on the line, we'll get the information from you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        111,
+        112
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "We'll get the information from you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Thank you.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Thanks!",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thanks!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All right.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright. [sigh] My, my, my. Got some desperate listeners out there, Steve.",
+      "similarity": 0.9457,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "My, my, my.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright. [sigh] My, my, my. Got some desperate listeners out there, Steve.",
+      "similarity": 0.9457,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "My, my, my.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Got some desperate listeners out there, Steve.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Alright. [sigh] My, my, my. Got some desperate listeners out there, Steve.",
+      "similarity": 0.9457,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Got some desperate listeners out there, Steve.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They're good at this time of the night.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Oh, they're good at this time of the night.",
+      "similarity": 0.962,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, they're good at this time of the night.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, that's it.",
+      "wiki_speaker": "Radio Host",
+      "wiki_text": "Yeah, that's it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "Radio Host",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, that's it.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 118,
+    "total_wiki_lines": 83,
+    "matched_wiki_lines": 72,
+    "unmatched_wiki_lines": 11,
+    "matched": 104,
+    "speakers_to_map": 2,
+    "text_auto_correct": 18,
+    "text_review": 15,
+    "text_group_review": 43,
+    "unmatched_json": 14
+  }
+}

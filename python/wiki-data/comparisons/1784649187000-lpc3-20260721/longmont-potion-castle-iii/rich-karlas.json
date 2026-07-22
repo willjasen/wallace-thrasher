@@ -1,0 +1,316 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:45.748378+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Rich Karlas",
+  "track_slug": "rich-karlas",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/rich-karlas.json",
+  "json_sha256": "03fb76e2bcddb4bb9b733c1030f661879eca35cb6ac9a295cbd63d29b19f3de2",
+  "wiki_title": "Rich Karlas",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Rich_Karlas",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_03": "Radio Host 1"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.8408,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.5136,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Radio Host 2",
+      "confidence": 0.4876,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Radio Host 2",
+          "score": 1.7516,
+          "observations": 2
+        },
+        {
+          "name": "Radio Host 1",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "LPC",
+          "score": 0.8408,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Radio Host 1",
+      "confidence": 0.7328,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Radio Host 1",
+          "score": 2.7426,
+          "observations": 3
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "And we got Raymond in Golden next on K-Big 1090. Hi, Raymond.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Yeah, we got, um... Raymond in Golden, next on KBIG 1090. Hi, Raymond.",
+      "similarity": 0.9244,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, we got, um... Raymond in Golden, next on KBIG 1090. Hi, Raymond.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Gentlemen, gentlemen calling, was traveling through the Beaumar County recently and saw Ridge Carlos.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[unclear] Uh, gentlemen... Gentleman calling, uhhh... was, uh... traveling through the Bow Mar county recently, and I... saw Rich Karlis, and...",
+      "similarity": 0.8091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[unclear] Uh, gentlemen... Gentleman calling, uhhh... was, uh... traveling through the Bow Mar county recently, and I... saw Rich Karlis, and...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "We're having a hard time here, Raymond.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "We're having a hard time hearing you, Ray, uh... Raymond.",
+      "similarity": 0.8182,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're having a hard time hearing you, Ray, uh... Raymond.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You can't hear me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You can't hear me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can't hear me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, now we can. You're off the speaker. Go ahead.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Yeah, now we can. You're off the speaker, go ahead.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, now we can. You're off the speaker. Go ahead.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, as I was saying, D. Gentleman, I was traveling through the Beaumar County a few days ago and saw Rich.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay, as I was, uh... sayin' to you gentlemen, I was driving through, uh, uh... the Bow Mar county a few days ago, and saw, uh, uh... [pitch begins to lower] Rich Karlis, down there.",
+      "similarity": 0.7045,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, as I was, uh... sayin' to you gentlemen, I was driving through, uh, uh... the Bow Mar county a few days ago, and saw, uh, uh... [pitch begins to lower] Rich Karlis, down there.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Carlos down there and asked him a couple questions about",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[pitch continues to lower] And I asked him a couple questions about, uh... about some of the, the punting team this year, and how he felt about it, and, uh... if everything was gonna work out...",
+      "similarity": 0.8408,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Carlos down there and asked him a couple questions about",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "about some of the punting team this year and how we felt about it",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[pitch continues to lower] And I asked him a couple questions about, uh... about some of the, the punting team this year, and how he felt about it, and, uh... if everything was gonna work out...",
+      "similarity": 0.8408,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "about some of the punting team this year and how we felt about it",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and everything was going to work.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[pitch continues to lower] And I asked him a couple questions about, uh... about some of the, the punting team this year, and how he felt about it, and, uh... if everything was gonna work out...",
+      "similarity": 0.8408,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and everything was going to work.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This is going out on the early...",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "This is going out on--",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is going out on--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He sounds like lurch. You sound like lurch, Raymond.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "He sounds like Lurch! You sound like Lurch, Raymond.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "He sounds like lurch. You sound like lurch, Raymond.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, whatever. Thanks for your call. We just couldn't understand.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Well... whatever. Thanks for your call, we just couldn't understand--",
+      "similarity": 0.9516,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well... whatever. Thanks for your call, we just couldn't understand--",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 12,
+    "total_wiki_lines": 12,
+    "matched_wiki_lines": 10,
+    "unmatched_wiki_lines": 2,
+    "matched": 12,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 4,
+    "text_group_review": 3,
+    "unmatched_json": 0
+  }
+}

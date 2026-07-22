@@ -1,0 +1,2469 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:28.236962+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Longmont Theme 3",
+  "track_slug": "longmont-theme-3",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/longmont-theme-3.json",
+  "json_sha256": "4a27f787e9ec4f8279f161f4349eb1e78f9cbd8bdd76b59c6679631f59960bd6",
+  "wiki_title": "Longmont Theme 3",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Longmont_Theme_3",
+  "speaker_mapping": {
+    "SPEAKER_00": "Steve",
+    "SPEAKER_04": "Steve",
+    "SPEAKER_05": "Steve"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Steve",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Steve",
+          "score": 0.9138,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Ms. Hibbert (2)",
+      "confidence": 0.5118,
+      "observations": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Ms. Hibbert (2)",
+          "score": 3.6083,
+          "observations": 4
+        },
+        {
+          "name": "Man",
+          "score": 1.4841,
+          "observations": 2
+        },
+        {
+          "name": "Man (7)",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Woman (6)",
+          "score": 0.9574,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Ms. Hibbert (2)",
+      "confidence": 0.5104,
+      "observations": 15,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Ms. Hibbert (2)",
+          "score": 14.4842,
+          "observations": 15
+        },
+        {
+          "name": "Woman (1)",
+          "score": 10.1959,
+          "observations": 11
+        },
+        {
+          "name": "Woman (6)",
+          "score": 1.9558,
+          "observations": 2
+        },
+        {
+          "name": "Steve",
+          "score": 1.7429,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man",
+      "confidence": 0.3879,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.4892,
+          "observations": 3
+        },
+        {
+          "name": "Steve",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "Woman (1)",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man (7)",
+          "score": 0.9273,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Steve",
+      "confidence": 0.879,
+      "observations": 15,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Steve",
+          "score": 13.306,
+          "observations": 15
+        },
+        {
+          "name": "Man (7)",
+          "score": 0.9273,
+          "observations": 1
+        },
+        {
+          "name": "Man (5)",
+          "score": 0.9051,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_05": {
+      "name": "Steve",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Steve",
+          "score": 2.9716,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Are you warm enough, Miss Herbert?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Are you warm enough, Ms. Hibbert?",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you warm enough, Ms. Hibbert?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes, honey.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Yes, honey. I'm just fine.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, honey.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm just fine.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Yes, honey. I'm just fine.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm just fine.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'll just get some water, then I'll be right back.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I'll just get some water, then I'll be right back.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll just get some water, then I'll be right back.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Make it pretty hot, please.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Make it pretty hot, please. I just can't stand water that's lukewarm.",
+      "similarity": 0.9925,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Make it pretty hot, please.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I just can't stand water that's luke warm.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Make it pretty hot, please. I just can't stand water that's lukewarm.",
+      "similarity": 0.9925,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just can't stand water that's luke warm.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I tell you what, motherfucker here.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker.",
+      "similarity": 0.8235,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mmm, I'll tell you what, motherfucker.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Miss Herbert, can you raise your heart?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Miss Herbert, can you raise your heart?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Can you raise your head a little so I can untie your gown?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Ms. Hibbert, can you raise your head a little so I can untie your gown?",
+      "similarity": 0.912,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ms. Hibbert, can you raise your head a little so I can untie your gown?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh dear, you're going to take off my gown with a tube in my arm?",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Oh, dear. You're going to take off my gown with that tube in my arm?",
+      "similarity": 0.9764,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, dear. You're going to take off my gown with that tube in my arm?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes, it feels good.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Yes, it feels good.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, it feels good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[looped]' I'm trying to hang sausage. I'm trying to hang sausage.",
+      "similarity": 0.5778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "'[looped]' I'm trying to hang sausage. I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Is the water still going on in the service?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Is the water still warm enough, Ms. Hibbert?",
+      "similarity": 0.6024,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Is the water still warm enough, Ms. Hibbert?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, it's not as warm as I live.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Well, it's not as warm as I like.",
+      "similarity": 0.9677,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it's not as warm as I like.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, did that hurt?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, did that hurt?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "None",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes, I think I need a good physic.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Yes. I think I need a good physic.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, I think I need a good physic.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mr. Herbert, I'm ready to wash her back now.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Ms. Hibbert? I'm ready to wash your back now. Can you lie on your stomach?",
+      "similarity": 0.9209,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mr. Herbert, I'm ready to wash her back now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Can you lie on your stomach?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Ms. Hibbert? I'm ready to wash your back now. Can you lie on your stomach?",
+      "similarity": 0.9209,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can you lie on your stomach?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm not quite spry enough for that.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "I'm not quite spry enough for that, but I can get on my side pretty good if you give me a little shove.",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not quite spry enough for that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "But I can get on my side pretty good if you give me a little show.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "I'm not quite spry enough for that, but I can get on my side pretty good if you give me a little shove.",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "But I can get on my side pretty good if you give me a little show.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, that feels grand.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ahhh... that feels grand.",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ahhh... that feels grand.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mr. Herbert, would you like to finish your bath?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Ms. Hibbert, would you like to finish your bath?",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ms. Hibbert, would you like to finish your bath?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "My, my.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "My, my. All this washing, and we're not finished yet?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "My, my.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "All this washing and we're not finished yet?",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "My, my. All this washing, and we're not finished yet?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "All this washing and we're not finished yet?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Not quite.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Not quite, I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        29,
+        30,
+        31
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not quite.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I didn't wash between your legs yet.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Not quite, I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        29,
+        30,
+        31
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't wash between your legs yet.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Would you like me to do it for you?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Not quite, I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        29,
+        30,
+        31
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Would you like me to do it for you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, dear, no.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooh, dear, no. I can do that myself.",
+      "similarity": 0.9841,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, dear, no.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I can do that myself.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooh, dear, no. I can do that myself.",
+      "similarity": 0.9841,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can do that myself.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How do you feel?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "How do you feel?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "How do you feel?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I feel like a million dollars.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "I feel like a million dollars.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I feel like a million dollars.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You must be a magician, then.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ha-ha, you must be a magician, then.",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ha-ha, you must be a magician, then.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "This is a big bad motherfucker.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "You're a big, bad motherfucker. Let me see you say that in front of me.",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is a big bad motherfucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Let me see you say that in front of me.",
+      "wiki_speaker": "Man (5)",
+      "wiki_text": "You're a big, bad motherfucker. Let me see you say that in front of me.",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Man (5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let me see you say that in front of me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh!",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Ooooh!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm standing right out in parking lot. Come on.",
+      "wiki_speaker": "Woman (6)",
+      "wiki_text": "I'm standing right out in the parking lot, come on!",
+      "similarity": 0.9574,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Woman (6)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm standing right out in the parking lot, come on!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh, I tell you what, motherfucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker.",
+      "similarity": 0.8788,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mmm, I'll tell you what, motherfucker.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Pull in the parking lot, big and bad.",
+      "wiki_speaker": "Woman (6)",
+      "wiki_text": "Pull into the parking lot, big and bad!",
+      "similarity": 0.9722,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Woman (6)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Pull into the parking lot, big and bad!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, dear.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooh, dear.",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ooh, dear.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You think you're a big and bad, pull in the fucking parking lot.",
+      "wiki_speaker": "Woman (6)",
+      "wiki_text": "You think you're big and bad? Pull in the fucking parking lot!",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Woman (6)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You think you're big and bad? Pull in the fucking parking lot!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Oh.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Cogsucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Cogsucker.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh!",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Ooooh!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Cocksucker.",
+      "wiki_speaker": "Man (7)",
+      "wiki_text": "Cocksucker!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Man (7)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Cocksucker.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My, my.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "My, my.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "My, my.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "My.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I didn't wash between your legs yet.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't wash between your legs yet.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't wash between your legs yet.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Come on.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Come on, you're stroking me here, I... I'm trying to make sausage. I'm trying to hang sausage.",
+      "similarity": 0.8171,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "You're stroking me.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Come on, you're stroking me here, I... I'm trying to make sausage. I'm trying to hang sausage.",
+      "similarity": 0.8171,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're stroking me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "You're stroking me here.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Come on, you're stroking me here, I... I'm trying to make sausage. I'm trying to hang sausage.",
+      "similarity": 0.8171,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're stroking me here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Come on, you're stroking me here, I... I'm trying to make sausage. I'm trying to hang sausage.",
+      "similarity": 0.8171,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Who do you know?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Who do you know?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage. '[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.8548,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage. '[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.8548,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm trying to wash between your legs yet.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 0.9241,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to wash between your legs yet.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Would you like me to do it for you?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 0.9241,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Would you like me to do it for you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I don't want to do it.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I don't want to do it. I'm trying to hang sausage. I'm trying to make sausage. '[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65,
+        66
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't want to do it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to make sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I don't want to do it. I'm trying to hang sausage. I'm trying to make sausage. '[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65,
+        66
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to make sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I don't want to do it. I'm trying to hang sausage. I'm trying to make sausage. '[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65,
+        66
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, dear.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooh, dear.",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ooh, dear.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I didn't wash between your legs yet.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't wash between your legs yet.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't wash between your legs yet.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh, dear.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, dear.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, dear.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooh, dear.",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ooh, dear.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh! Ahh... Ahh...",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh! Ahh... Ahh...",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh! Ahh... Ahh...",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "None",
+      "json_text": "Ah.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh! Ahh... Ahh...",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Ah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "None",
+      "json_text": "Oh.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ooooh! Ahh... Ahh...",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I didn't wash between your legs yet.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        77,
+        78
+      ],
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't wash between your legs yet.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Would you like me to do it for you?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't wash between your legs yet. Would you like me to do it for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        77,
+        78
+      ],
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Would you like me to do it for you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "If you could give me a little shove.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "If you can give me a little shove...",
+      "similarity": 0.9118,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you can give me a little shove...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang saucy.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Who the fuck do you think you're talking to?",
+      "wiki_speaker": "Man (7)",
+      "wiki_text": "Who the fuck do you think you're talking to, cocksucker?",
+      "similarity": 0.9273,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man (7)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who the fuck do you think you're talking to?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Talks sucker.",
+      "wiki_speaker": "Man (7)",
+      "wiki_text": "Who the fuck do you think you're talking to, cocksucker?",
+      "similarity": 0.9273,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man (7)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Talks sucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll tell you up with this.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfuck--",
+      "similarity": 0.5763,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Mmm, I'll tell you what, motherfuck--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "They have a consuls to tell you the truth, so...",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I don't even know if cows have tonsils, to tell you the truth, so...",
+      "similarity": 0.7103,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even know if cows have tonsils, to tell you the truth, so...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Ah.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "Ahh...",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ahh...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang saucy.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That feels great.",
+      "wiki_speaker": "Ms. Hibbert (2)",
+      "wiki_text": "...that feels grand.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Ms. Hibbert (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "...that feels grand.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I tell you up, motherfucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker.",
+      "similarity": 0.7869,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mmm, I'll tell you what, motherfucker.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I tell you up, motherfucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker.",
+      "similarity": 0.7869,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mmm, I'll tell you what, motherfucker.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "None",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Sorry that I can't come to the phone right now,",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.8197,
+      "match_type": "similar",
+      "json_group": [
+        99,
+        100
+      ],
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry that I can't come to the phone right now,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "but we're busy making sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.8197,
+      "match_type": "similar",
+      "json_group": [
+        99,
+        100
+      ],
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "but we're busy making sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Sorry that I can't come to the phone right now, but I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[looped, pitch-shifted]' I'm trying to hang sausage. I'm trying to hang sausage. I'm trying to hang sausage.",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104,
+        105
+      ],
+      "wiki_indices": [
+        97
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry that I can't come to the phone right now, but I'm trying to hang sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[looped, pitch-shifted]' I'm trying to hang sausage. I'm trying to hang sausage. I'm trying to hang sausage.",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104,
+        105
+      ],
+      "wiki_indices": [
+        97
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[looped, pitch-shifted]' I'm trying to hang sausage. I'm trying to hang sausage. I'm trying to hang sausage.",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104,
+        105
+      ],
+      "wiki_indices": [
+        97
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Hi, this is trying to eat market.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.7952,
+      "match_type": "similar",
+      "json_group": [
+        106,
+        107,
+        108
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, this is trying to eat market.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Sorry that I can't come to the phone right now,",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.7952,
+      "match_type": "similar",
+      "json_group": [
+        106,
+        107,
+        108
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry that I can't come to the phone right now,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "phone right now, but we're busy making sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.7952,
+      "match_type": "similar",
+      "json_group": [
+        106,
+        107,
+        108
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "phone right now, but we're busy making sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm trying to hang sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[pitch-shifted]' I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, this is Steve's Meat Market.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        112,
+        113
+      ],
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, this is Steve's Meat Market.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sorry that I can't come to the phone right now, but we're busy making sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "'[pitch-shifted]' Hi, this is Steve's Meat Market. Sorry that I can't come to the phone right now, but we're busy makin' sausage.",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        112,
+        113
+      ],
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry that I can't come to the phone right now, but we're busy making sausage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I can't come to the phone right now, but we're busy making sausage.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "I'm trying to hang sausage.",
+      "similarity": 0.4176,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm trying to hang sausage.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Hi, this is Steve's meat market.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hi, this is Steve's meat market.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Hi, this is meat market.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hi, this is meat market.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Sorry that I can't come to the phone right now, but we're busy making sausage.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Sorry that I can't come to the phone right now, but we're busy making sausage.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "We got to eat.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Steve",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We got to eat.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Sauc.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Sauc.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Damn you!",
+      "wiki_speaker": "Man",
+      "wiki_text": "Goddamn you! You son of a bitch! You son of a bitch!",
+      "similarity": 0.6972,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121,
+        122
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Damn you!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're some of the bitch!",
+      "wiki_speaker": "Man",
+      "wiki_text": "Goddamn you! You son of a bitch! You son of a bitch!",
+      "similarity": 0.6972,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121,
+        122
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "They're some of the bitch!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're some of the bitch!",
+      "wiki_speaker": "Man",
+      "wiki_text": "Goddamn you! You son of a bitch! You son of a bitch!",
+      "similarity": 0.6972,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121,
+        122
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "They're some of the bitch!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're some of the bitch!",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "They're some of the bitch!",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're not telling you!",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[pitch-shifted, looped]' Goddamn you! You son of a bitch! Goddamn you! You son of a bitch!",
+      "similarity": 0.527,
+      "match_type": "similar",
+      "json_group": [
+        124,
+        125,
+        126
+      ],
+      "wiki_indices": [
+        107
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "They're not telling you!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 125,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're some of the bitch!",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[pitch-shifted, looped]' Goddamn you! You son of a bitch! Goddamn you! You son of a bitch!",
+      "similarity": 0.527,
+      "match_type": "similar",
+      "json_group": [
+        124,
+        125,
+        126
+      ],
+      "wiki_indices": [
+        107
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "They're some of the bitch!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 126,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "God damn you!",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[pitch-shifted, looped]' Goddamn you! You son of a bitch! Goddamn you! You son of a bitch!",
+      "similarity": 0.527,
+      "match_type": "similar",
+      "json_group": [
+        124,
+        125,
+        126
+      ],
+      "wiki_indices": [
+        107
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "God damn you!",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 126,
+    "total_wiki_lines": 107,
+    "matched_wiki_lines": 74,
+    "unmatched_wiki_lines": 33,
+    "matched": 106,
+    "speakers_to_map": 3,
+    "text_auto_correct": 18,
+    "text_review": 16,
+    "text_group_review": 42,
+    "unmatched_json": 20
+  }
+}

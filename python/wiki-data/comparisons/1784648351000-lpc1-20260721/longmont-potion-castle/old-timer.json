@@ -1,0 +1,127 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:41:07.671375+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Old-Timer",
+  "track_slug": "old-timer",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/old-timer.json",
+  "json_sha256": "9ec3e78b649ee9deffa05508323d1761dce1eaba62e2383107cac143e41e3c7c",
+  "wiki_title": "Old-Timer",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Old-Timer",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man",
+    "SPEAKER_01": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.0786,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 0.9706,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I might blow your fucking head off.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I might blow your fuckin' head off.",
+      "similarity": 0.9706,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I might blow your fuckin' head off.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're not going to stop me no matter.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You're not gonna talk to me in no [unintelligible].",
+      "similarity": 0.6118,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're not gonna talk to me in no [unintelligible].",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I got something to stop you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I got somethin' that'll stop ya.",
+      "similarity": 0.7931,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got somethin' that'll stop ya.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think my 12-day shot him takes for that.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I think my twelve-gauge shotgun will take care of that.",
+      "similarity": 0.6737,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think my twelve-gauge shotgun will take care of that.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 4,
+    "total_wiki_lines": 4,
+    "matched_wiki_lines": 4,
+    "unmatched_wiki_lines": 0,
+    "matched": 4,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 3,
+    "text_group_review": 0,
+    "unmatched_json": 0
+  }
+}

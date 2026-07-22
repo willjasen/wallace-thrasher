@@ -1,0 +1,2120 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:24.452727+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Evergreen Motel 2",
+  "track_slug": "evergreen-motel-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/evergreen-motel-2.json",
+  "json_sha256": "e28a782f26559a793fdb28de9a799500eb7c44f064e6ce691f6a64478678b359",
+  "wiki_title": "Evergreen Motel 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Evergreen_Motel_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.7354,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.7788,
+          "observations": 4
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 0.5744,
+      "observations": 30,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 26.364,
+          "observations": 30
+        },
+        {
+          "name": "LPC",
+          "score": 18.5629,
+          "observations": 21
+        },
+        {
+          "name": "Tom",
+          "score": 0.9737,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, you have a great motel?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, Evergreen Motel?",
+      "similarity": 0.5532,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Yeah, Evergreen Motel?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yep.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yep.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yep.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, let me tell you some, mister.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, lemme tell you somethin', mister. [exhale] Let me tell you a thing or two, mister. [exhale]",
+      "similarity": 0.8608,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, let me tell you some, mister.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Let me tell you a thing or two, mister.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, lemme tell you somethin', mister. [exhale] Let me tell you a thing or two, mister. [exhale]",
+      "similarity": 0.8608,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let me tell you a thing or two, mister.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, I'm listening.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, I'm listenin'.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, I'm listenin'.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna come out there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna come out there, I'm gonna rent me a room, and you're gonna be renting a clinic for the night when I'm done poundin' on ya. [exhale]",
+      "similarity": 0.9328,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna come out there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna rent me a room.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna come out there, I'm gonna rent me a room, and you're gonna be renting a clinic for the night when I'm done poundin' on ya. [exhale]",
+      "similarity": 0.9328,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna rent me a room.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And you're gonna be renting the clinic for the night when I'm down pounding on you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna come out there, I'm gonna rent me a room, and you're gonna be renting a clinic for the night when I'm done poundin' on ya. [exhale]",
+      "similarity": 0.9328,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you're gonna be renting the clinic for the night when I'm down pounding on you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what the fuck you're even talking about you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know who the fuck you're even talkin' to, old buddy.",
+      "similarity": 0.8246,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who the fuck you're even talkin' to, old buddy.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're gonna be talking to my foot after I fix it in the cheek.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You're gonna be talkin' to my foot, after I... fix it in your cheek. How does that sound?",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're gonna be talkin' to my foot, after I... fix it in your cheek. How does that sound?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll tell you what I was a fucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, motherfucker. You better know what the fuck you're talkin' about.",
+      "similarity": 0.9036,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll tell you what I was a fucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You better know what the fuck you're talking about.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, motherfucker. You better know what the fuck you're talkin' about.",
+      "similarity": 0.9036,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You better know what the fuck you're talking about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, my fists know what they're saying.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh... my fists know what they're saying, and they're going to be saying it rather loudly to your face, how's that sound? Huh?",
+      "similarity": 0.9251,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, my fists know what they're saying.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And they're gonna be saying it rather loudly to your face, as I sound.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh... my fists know what they're saying, and they're going to be saying it rather loudly to your face, how's that sound? Huh?",
+      "similarity": 0.9251,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And they're gonna be saying it rather loudly to your face, as I sound.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh... my fists know what they're saying, and they're going to be saying it rather loudly to your face, how's that sound? Huh?",
+      "similarity": 0.9251,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who's your choice?",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' Your choice, slug or buckshot?",
+      "similarity": 0.4375,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "'[delayed sample]' Your choice, slug or buckshot?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, talk to me a little bit more.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, talk to me a little bit more.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, talk to me a little bit more.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Talk sucker, if you're not who I'm thinking I'm talking to,",
+      "wiki_speaker": "Man",
+      "wiki_text": "Cocksucker, if... if you're not who I'm thinkin' I'm talkin to, you better know what the fuck you're talkin' to!",
+      "similarity": 0.9289,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Talk sucker, if you're not who I'm thinking I'm talking to,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you better know what the fuck you're talking to.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Cocksucker, if... if you're not who I'm thinkin' I'm talkin to, you better know what the fuck you're talkin' to!",
+      "similarity": 0.9289,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "you better know what the fuck you're talking to.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're gonna be talking to the ground after laying on it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You're gonna be talkin' to the ground, after you're layin' on it.",
+      "similarity": 0.9076,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're gonna be talkin' to the ground, after you're layin' on it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll tell you what.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, prick. Why don't you just tell me where to meet you, and I tell you what, I will be fucking there. 'Cause I don't want to hear your fucking shit, I don't want to tell you shit, motherfucker, you...",
+      "similarity": 0.9227,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll tell you what.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Pricks.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, prick. Why don't you just tell me where to meet you, and I tell you what, I will be fucking there. 'Cause I don't want to hear your fucking shit, I don't want to tell you shit, motherfucker, you...",
+      "similarity": 0.9227,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Pricks.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why don't you just tell me where to meet you and I'll tell you what?",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, prick. Why don't you just tell me where to meet you, and I tell you what, I will be fucking there. 'Cause I don't want to hear your fucking shit, I don't want to tell you shit, motherfucker, you...",
+      "similarity": 0.9227,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you just tell me where to meet you and I'll tell you what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I will be fucking there.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, prick. Why don't you just tell me where to meet you, and I tell you what, I will be fucking there. 'Cause I don't want to hear your fucking shit, I don't want to tell you shit, motherfucker, you...",
+      "similarity": 0.9227,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I will be fucking there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because I don't want to hear your fucking shit.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, prick. Why don't you just tell me where to meet you, and I tell you what, I will be fucking there. 'Cause I don't want to hear your fucking shit, I don't want to tell you shit, motherfucker, you...",
+      "similarity": 0.9227,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I don't want to hear your fucking shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't want to hold your shit.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'll tell you what, prick. Why don't you just tell me where to meet you, and I tell you what, I will be fucking there. 'Cause I don't want to hear your fucking shit, I don't want to tell you shit, motherfucker, you...",
+      "similarity": 0.9227,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't want to hold your shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Make sure you're gonna be there.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Make sure you're gonna be there.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you'll be there, but your lips ain't leaving.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you'll be there, but your lips ain't leavin', 'cause they're gonna be on the ground.",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you'll be there, but your lips ain't leaving.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're gonna be on the ground.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you'll be there, but your lips ain't leavin', 'cause they're gonna be on the ground.",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They're gonna be on the ground.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You talk real tough over the phone, kid.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You talk real tough over the phone, kid.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You talk real tough over the phone, kid.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I'm gonna bust your teeth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I'm gonna bust your teeth--",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'm gonna bust your teeth.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bring a fucking gun.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample, looped]' DO IT NOW! BRING A FUCKING GUN! BRING A FUCKING GUN!",
+      "similarity": 0.6842,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bring a fucking gun.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bring a fucking gun.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample, looped]' DO IT NOW! BRING A FUCKING GUN! BRING A FUCKING GUN!",
+      "similarity": 0.6842,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bring a fucking gun.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You ain't tough enough to the phone.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Tell you what, motherfucker. You ain't tough enough to bust my fuckin' teeth.",
+      "similarity": 0.7023,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You ain't tough enough to the phone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "bust my fucking teeth.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Tell you what, motherfucker. You ain't tough enough to bust my fuckin' teeth.",
+      "similarity": 0.7023,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "bust my fucking teeth.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm way too tough.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm way too tough, as a matter of fact.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm way too tough.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "As a matter of fact.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm way too tough, as a matter of fact.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "As a matter of fact.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Now, you're a fucking, you're a punk kid.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Naw, naw, you're a fuckin'... you're a punk kid.",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Naw, naw, you're a fuckin'... you're a punk kid.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bring a fucking gun.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' BRING A FUCKING GUN!",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[delayed sample]' BRING A FUCKING GUN!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you're gonna meet up my goat.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you're gonna meet up with my... my goat, he's a kid, I'm gonna--",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you're gonna meet up my goat.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He's a kid.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you're gonna meet up with my... my goat, he's a kid, I'm gonna--",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's a kid.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna leash him.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--I'm gonna leash him on ya.",
+      "similarity": 0.8636,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "--I'm gonna leash him on ya.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm in room 11.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'm in room 11, just fuckin' look me up.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm in room 11.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just fucking look me up.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'm in room 11, just fuckin' look me up.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just fucking look me up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I tell you what, I'll show you something",
+      "wiki_speaker": "Man",
+      "wiki_text": "And I tell you what, I'll show you something that you've never seen before in your fuckin' life...",
+      "similarity": 0.9894,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I tell you what, I'll show you something",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "that you've never seen before in your fucking life.",
+      "wiki_speaker": "Man",
+      "wiki_text": "And I tell you what, I'll show you something that you've never seen before in your fuckin' life...",
+      "similarity": 0.9894,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "that you've never seen before in your fucking life.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I got a whip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I got a whip.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got a whip.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't get a whip.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't give a fuck if you've got a whip, I don't give a fuck if you've got a chain, I don't give a fuck if you've got a shotgun. Don't fucking start--",
+      "similarity": 0.6475,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I don't get a whip.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't get fucking be in a chain.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't give a fuck if you've got a whip, I don't give a fuck if you've got a chain, I don't give a fuck if you've got a shotgun. Don't fucking start--",
+      "similarity": 0.6475,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I don't get fucking be in a chain.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't get fucking big of a shotgun.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't give a fuck if you've got a whip, I don't give a fuck if you've got a chain, I don't give a fuck if you've got a shotgun. Don't fucking start--",
+      "similarity": 0.6475,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I don't get fucking big of a shotgun.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't fucking down your fucking man, fucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't give a fuck if you've got a whip, I don't give a fuck if you've got a chain, I don't give a fuck if you've got a shotgun. Don't fucking start--",
+      "similarity": 0.6475,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Don't fucking down your fucking man, fucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're gonna be a horse whip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you're gonna meet up with my horse whip.",
+      "similarity": 0.6575,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you're gonna meet up with my horse whip.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you're a fucking cunt.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah, you're a fuckin' cunt. All you got to do is jack off and fuck someone in the fuckin' eye.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        53,
+        54
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you're a fucking cunt.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Or you know how to do to jack off and fuck somebody in the fucking eye.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah, you're a fuckin' cunt. All you got to do is jack off and fuck someone in the fuckin' eye.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        53,
+        54
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Or you know how to do to jack off and fuck somebody in the fucking eye.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You start it in, now, now.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' You started it, now BACK IT UP! BACK IT UP, ASSHOLE!",
+      "similarity": 0.4,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "'[delayed sample]' You started it, now BACK IT UP! BACK IT UP, ASSHOLE!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You come here and you fucking tell me about it.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[unintelligible] You come here, you fuckin' tell me about it.",
+      "similarity": 0.7961,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "[unintelligible] You come here, you fuckin' tell me about it.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Enough of this telephone shit.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Hey, enough of this telephone shit. We're coming right by there right now, fucker.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58
+      ],
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "Enough of this telephone shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're coming right by there right now, fucker.",
+      "wiki_speaker": "Tom",
+      "wiki_text": "Hey, enough of this telephone shit. We're coming right by there right now, fucker.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58
+      ],
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Tom",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're coming right by there right now, fucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, come by.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, come by. I'll tell you what, motherfucker, you better be... you better be packing a fuckin' gun, 'cause it's the only way you're fuckin'...",
+      "similarity": 0.8339,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, come by.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I tell you up, motherfucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, come by. I'll tell you what, motherfucker, you better be... you better be packing a fuckin' gun, 'cause it's the only way you're fuckin'...",
+      "similarity": 0.8339,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I tell you up, motherfucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You better be, you better be, you better.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, come by. I'll tell you what, motherfucker, you better be... you better be packing a fuckin' gun, 'cause it's the only way you're fuckin'...",
+      "similarity": 0.8339,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You better be, you better be, you better.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "be back at a fucking gun because it's the only way of your fucking gun.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, come by. I'll tell you what, motherfucker, you better be... you better be packing a fuckin' gun, 'cause it's the only way you're fuckin'...",
+      "similarity": 0.8339,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "be back at a fucking gun because it's the only way of your fucking gun.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bring a fucking gun.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' BRING A FUCKING GUN!",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[delayed sample]' BRING A FUCKING GUN!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Now I'm gonna come over with a brick, take it to your face.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna... come over with a brick, take it to your face. [exhale] How's that sound?",
+      "similarity": 0.8611,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now I'm gonna come over with a brick, take it to your face.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The sound.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna... come over with a brick, take it to your face. [exhale] How's that sound?",
+      "similarity": 0.8611,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The sound.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do it right now.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' DO IT RIGHT NOW! That's exactly what you're gonna have to do!",
+      "similarity": 0.7612,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do it right now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's exactly what you're going to have.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' DO IT RIGHT NOW! That's exactly what you're gonna have to do!",
+      "similarity": 0.7612,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's exactly what you're going to have.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Mr.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Mr.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You act pretty fucking tough.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You act pretty fuckin' tough.",
+      "similarity": 0.9643,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You act pretty fuckin' tough.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not acting pretty tough.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'm not actin' pretty tough, I am tough.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not acting pretty tough.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I am tough.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'm not actin' pretty tough, I am tough.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I am tough.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's gonna be tough for you to get away from my foot.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Gonna be tougher for you to get away from my foot--",
+      "similarity": 0.9307,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Gonna be tougher for you to get away from my foot--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who in the fuck are you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who in the fuck are you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who in the fuck are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "After I'm gonna kicky.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--after I'm done kickin' you.",
+      "similarity": 0.766,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "--after I'm done kickin' you.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Are you...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "little man, but I got big fist.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm a little man, but I got big fists. How's that sound?",
+      "similarity": 0.9293,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "little man, but I got big fist.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How's that sound?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm a little man, but I got big fists. How's that sound?",
+      "similarity": 0.9293,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How's that sound?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I tell you what, motherfucker.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker. You... you're not even close to where I'm fuckin' at. You... you're a fuckin' has been that never... never ain't fuckin'... hit this fuckin' world.",
+      "similarity": 0.8659,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I tell you what, motherfucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're not even close to where I'm fucking at.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker. You... you're not even close to where I'm fuckin' at. You... you're a fuckin' has been that never... never ain't fuckin'... hit this fuckin' world.",
+      "similarity": 0.8659,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're not even close to where I'm fucking at.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're a fucking half a man that ever, never even fucking hit this fucking world.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm, I'll tell you what, motherfucker. You... you're not even close to where I'm fuckin' at. You... you're a fuckin' has been that never... never ain't fuckin'... hit this fuckin' world.",
+      "similarity": 0.8659,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're a fucking half a man that ever, never even fucking hit this fucking world.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Come on, come on, come on, come on, come on.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' Come on, come on, come on. Nuh-uh. You'll be eating twelve gauge lead.",
+      "similarity": 0.5203,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "'[delayed sample]' Come on, come on, come on. Nuh-uh. You'll be eating twelve gauge lead.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I got a fucking chain I'm going to take to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I got a fuckin' chain I'm gonna take to... take to your lip.",
+      "similarity": 0.8431,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got a fuckin' chain I'm gonna take to... take to your lip.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm going to take to your lip.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I'm going to take to your lip.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got a fucking shot gun, motherfuckers.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't give a fuck if you've got a fuckin' shotgun, motherfucker. You're talkin' to the wrong fuckin' guy, here.",
+      "similarity": 0.8247,
+      "match_type": "similar",
+      "json_group": [
+        84,
+        85
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got a fucking shot gun, motherfuckers.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're talking to the wrong fucking guy here.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't give a fuck if you've got a fuckin' shotgun, motherfucker. You're talkin' to the wrong fuckin' guy, here.",
+      "similarity": 0.8247,
+      "match_type": "similar",
+      "json_group": [
+        84,
+        85
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're talking to the wrong fucking guy here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Nope.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Nope.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If you're a call on ass or somebody, you're fucking with the wrong guy.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You're callin', hasslin' somebody, you're fuckin' with the wrong guy. And I'll tell you what, if you pull in this fuckin' parking lot, you better fuckin' go back out.",
+      "similarity": 0.8902,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you're a call on ass or somebody, you're fucking with the wrong guy.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I'll tell you what, if you're pulling this fucking barking lot,",
+      "wiki_speaker": "Man",
+      "wiki_text": "You're callin', hasslin' somebody, you're fuckin' with the wrong guy. And I'll tell you what, if you pull in this fuckin' parking lot, you better fuckin' go back out.",
+      "similarity": 0.8902,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I'll tell you what, if you're pulling this fucking barking lot,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you better fucking pull back out.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You're callin', hasslin' somebody, you're fuckin' with the wrong guy. And I'll tell you what, if you pull in this fuckin' parking lot, you better fuckin' go back out.",
+      "similarity": 0.8902,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "you better fucking pull back out.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna bust your teeth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna bust your teeth.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna bust your teeth.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How's that sound in?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How's that sound to you?",
+      "similarity": 0.8095,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How's that sound to you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, well. Hey, buddy.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well... hey, buddy--",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well... hey, buddy--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Listen, I get you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' Listen up, you son of a bitch!",
+      "similarity": 0.6053,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Listen, I get you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Son of a big.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' Listen up, you son of a bitch!",
+      "similarity": 0.6053,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Son of a big.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We'll see what happens, okay.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[unintelligible] --over here, we'll see what happens, okay?",
+      "similarity": 0.6835,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "[unintelligible] --over here, we'll see what happens, okay?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're going to be seeing stars after I'm doing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, you- you're gonna be seein' stars, after I'm done with you.",
+      "similarity": 0.7358,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, you- you're gonna be seein' stars, after I'm done with you.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I hope the fuck you know who you're talking to.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[laughs] I hope the fuck you know who you're talkin' to.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] I hope the fuck you know who you're talkin' to.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You know who you're talking to.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "You know who you're talking to.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I got you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I got you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Drag your lip on the pavement?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Drag your lip on the pavement.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Drag your lip on the pavement?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you think so, eh.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah? You think so, eh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you think so, eh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Did he ain't going to show?",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' If you ain't gonna show, don't even blow.",
+      "similarity": 0.6346,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Did he ain't going to show?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't eat them blow.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed sample]' If you ain't gonna show, don't even blow.",
+      "similarity": 0.6346,
+      "match_type": "similar",
+      "json_group": [
+        103,
+        104
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Don't eat them blow.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't eat them blow.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Don't eat them blow.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, I'm not joking with your fucking tape recorder",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hey, I'm not jokin' with your fuckin' tape recorder, motherfucker.",
+      "similarity": 0.8496,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, I'm not jokin' with your fuckin' tape recorder, motherfucker.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "with your fucking tape recorder, motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "with your fucking tape recorder, motherfucker.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 107,
+    "total_wiki_lines": 73,
+    "matched_wiki_lines": 61,
+    "unmatched_wiki_lines": 12,
+    "matched": 99,
+    "speakers_to_map": 1,
+    "text_auto_correct": 8,
+    "text_review": 16,
+    "text_group_review": 62,
+    "unmatched_json": 8
+  }
+}

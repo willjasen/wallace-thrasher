@@ -1,0 +1,197 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:52.601833+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Longmont Medley 1",
+  "track_slug": "longmont-medley-1",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/longmont-medley-1.json",
+  "json_sha256": "09bc2bc312399efe43fe76780366a3f0fa2b145193662cbaf3e4ff5c60ca740b",
+  "wiki_title": "Longmont Medley 1",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Longmont_Medley_1",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (1)",
+    "SPEAKER_02": "Man (2)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (1)",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 1.9396,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 0.9134,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "Robotic Voice",
+      "json_text": "Alert condition, okay. The temperature is 77 degrees.",
+      "wiki_speaker": "Machine",
+      "wiki_text": "Alert condition: Okay. The temperature is seventy-seven degrees.",
+      "similarity": 0.8649,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Machine",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alert condition: Okay. The temperature is seventy-seven degrees.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "Robotic Voice",
+      "json_text": "The electricity is on.",
+      "wiki_speaker": "Machine",
+      "wiki_text": "The electricity is on. Sound level: Okay. Have a good day.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Machine",
+      "speaker_action": "matched_line",
+      "proposed_text": "The electricity is on.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "Robotic Voice",
+      "json_text": "Sound level, okay. Have a good day.",
+      "wiki_speaker": "Machine",
+      "wiki_text": "The electricity is on. Sound level: Okay. Have a good day.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Machine",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sound level, okay. Have a good day.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We don't have onions.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "We don't have onions.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have onions.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They're three-quarter mannequin forms and they're headless and armless.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[beep]' They're three-quarter mannequin forms, and they're headless and armless.",
+      "similarity": 0.9396,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[beep]' They're three-quarter mannequin forms, and they're headless and armless.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Who is this?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Who is this?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What is this? A gag or a gimmick? What are you talking about?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Uh... What is this? A... gag or some... A gimmick or... What are you talking about?",
+      "similarity": 0.9134,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh... What is this? A... gag or some... A gimmick or... What are you talking about?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "None",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Thank you.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 8,
+    "total_wiki_lines": 6,
+    "matched_wiki_lines": 5,
+    "unmatched_wiki_lines": 1,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 3,
+    "text_review": 0,
+    "text_group_review": 0,
+    "unmatched_json": 2
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:41.159617+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Green Beret",
+  "track_slug": "green-beret",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/green-beret.json",
+  "json_sha256": "902fc0bb05b7fc005269f13366248ef3bbc55fd2ffccad5574208d0eae342b99",
+  "wiki_title": "Green Beret",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Green_Beret",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Cliff (1)",
+    "SPEAKER_02": "Man (2)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Cliff (1)",
+      "confidence": 1.0,
+      "observations": 11,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Cliff (1)",
+          "score": 10.3479,
+          "observations": 11
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 2.6531,
+          "observations": 3
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This class, may help you?",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "This is Cliff, may I help you?",
+      "similarity": 0.7843,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Cliff, may I help you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, if you're trying to be funny, I don't appreciate it.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Well, if you're trying to be funny, I don't appreciate it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, if you're trying to be funny, I don't appreciate it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not understanding what you're talking about.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "I'm not understanding what you're talking about. What you're... you're, you're talking about a mule, we don't work with mules.",
+      "similarity": 0.9196,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not understanding what you're talking about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, you're talking about a mule.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "I'm not understanding what you're talking about. What you're... you're, you're talking about a mule, we don't work with mules.",
+      "similarity": 0.9196,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you're talking about a mule.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We don't work with mules.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "I'm not understanding what you're talking about. What you're... you're, you're talking about a mule, we don't work with mules.",
+      "similarity": 0.9196,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't work with mules.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think I've pretty much laid it on the line.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I think I've pretty much laid it on the line.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think I've pretty much laid it on the line.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Bunch about for service?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Bunch about for service?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, now, if you'll tell me what the hell you want and quit being such a wise ass, I'll work with you.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Well, now, if you tell me what the hell you want and quit being such a wiseass, I'll work with you, but until you... as long as you're being a dog... smartass, I don't have to put up with it, either!",
+      "similarity": 0.9477,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, now, if you'll tell me what the hell you want and quit being such a wise ass, I'll work with you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But as long as you're being a smart ass, I don't have to put up with it either.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Well, now, if you tell me what the hell you want and quit being such a wiseass, I'll work with you, but until you... as long as you're being a dog... smartass, I don't have to put up with it, either!",
+      "similarity": 0.9477,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "But as long as you're being a smart ass, I don't have to put up with it either.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, come on down and talk to me about it then.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well, come on down and talk to me about it then.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Talk to me about it then.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "What... come on down and talk to me about it, then! If you want to use fists, bring it on down!",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Talk to me about it then.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If you want to use fists, bring it on down.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "What... come on down and talk to me about it, then! If you want to use fists, bring it on down!",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you want to use fists, bring it on down.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Come on down and use your boots too if you think you're man enough.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Come on down and use your boots too, if you think you're man enough!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on down and use your boots too if you think you're man enough.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Come on down and talk to me about it then.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Come on down and talk to me about it, then!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on down and talk to me about it then.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm prepared to do whatever it takes.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "I'm prepared to do whatever it takes, as long as you wanna be all manly about it!",
+      "similarity": 0.9057,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm prepared to do whatever it takes.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "As long as you want to be a mouthy about it,",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "I'm prepared to do whatever it takes, as long as you wanna be all manly about it!",
+      "similarity": 0.9057,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "As long as you want to be a mouthy about it,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "would you like to come down and talk to me man to man like that?",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Would you like to come down and talk to me man-to-man like that? You're awful brave talkin' to me over the phone.",
+      "similarity": 0.991,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "would you like to come down and talk to me man to man like that?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're awful brave talking to me over the phone.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Would you like to come down and talk to me man-to-man like that? You're awful brave talkin' to me over the phone.",
+      "similarity": 0.991,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're awful brave talking to me over the phone.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I wasn't a green gray for 12 years for nothing, mister, so you come down and talk to me.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Uh, I wasn't a Green Beret for 12 years for nothing, mister, so you come down and talk to me.",
+      "similarity": 0.9425,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, I wasn't a Green Beret for 12 years for nothing, mister, so you come down and talk to me.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, well, you just sound like a real skinny little shithead,",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Oh, well, you just sound like a real skinny little shithead, talk to a man over the phone and not to his face.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, well, you just sound like a real skinny little shithead,",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "talk to a man over the phone and not to his face.",
+      "wiki_speaker": "Cliff (1)",
+      "wiki_text": "Oh, well, you just sound like a real skinny little shithead, talk to a man over the phone and not to his face.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "talk to a man over the phone and not to his face.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "phone and not to his face.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Cliff (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "phone and not to his face.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're pretty dumb.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "You... you... you're pretty dumb. A man that hasn't got any more to do than what you're doing is pretty useless.",
+      "similarity": 0.9388,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're pretty dumb.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "A man that hasn't any more to do than what you're doing is pretty useless.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "You... you... you're pretty dumb. A man that hasn't got any more to do than what you're doing is pretty useless.",
+      "similarity": 0.9388,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "A man that hasn't any more to do than what you're doing is pretty useless.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You ought to just go ahead and take the shotgun",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "You ought to just go ahead and take the shotgun and blow your brains out, 'cause you's not no good to nobody.",
+      "similarity": 0.9358,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You ought to just go ahead and take the shotgun",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and blow your brains out because there's not no good for nobody.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "You ought to just go ahead and take the shotgun and blow your brains out, 'cause you's not no good to nobody.",
+      "similarity": 0.9358,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "and blow your brains out because there's not no good for nobody.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm going to keep you on phone a bit.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I'm gonna keep you on the phone for a little bit. We've been having this trouble with you, and we got someone on the police tracing the calls so we can locate you.",
+      "similarity": 0.7785,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to keep you on phone a bit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We didn't have this trouble with him.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I'm gonna keep you on the phone for a little bit. We've been having this trouble with you, and we got someone on the police tracing the calls so we can locate you.",
+      "similarity": 0.7785,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We didn't have this trouble with him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We got someone in the police station calls so we can look at you.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I'm gonna keep you on the phone for a little bit. We've been having this trouble with you, and we got someone on the police tracing the calls so we can locate you.",
+      "similarity": 0.7785,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We got someone in the police station calls so we can look at you.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 30,
+    "total_wiki_lines": 16,
+    "matched_wiki_lines": 15,
+    "unmatched_wiki_lines": 1,
+    "matched": 26,
+    "speakers_to_map": 3,
+    "text_auto_correct": 1,
+    "text_review": 1,
+    "text_group_review": 16,
+    "unmatched_json": 4
+  }
+}

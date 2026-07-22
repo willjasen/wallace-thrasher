@@ -1,0 +1,321 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:58.664456+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Whistle-Blower",
+  "track_slug": "whistle-blower",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/whistle-blower.json",
+  "json_sha256": "d3f0b1858832ce2695ad268c6e474801fce89b9e4765b54550d9623c2593e077",
+  "wiki_title": "Whistle-Blower",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Whistle-Blower",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_02": "Woman (2)",
+    "SPEAKER_04": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.7692,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman (2)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman (2)",
+          "score": 0.8475,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Woman (2)",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman (2)",
+          "score": 3.0,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man (1)",
+      "confidence": 0.6585,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 1.8,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 0.9333,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.9091,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Well, you must be drunk because I'm not...",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well, you must be drunk, 'cause we don't have... not--",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you must be drunk, 'cause we don't have... not--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "No, I'm not interested in it.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "No, I'm not interested in it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I'm not interested in it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What do you want?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "What do you want?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I need to bring your package.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to bring you your package.",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to bring you your package.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You need to bring us a package.",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "You need to bring us a package?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need to bring us a package.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Right.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Of what?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Of what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Of what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Oh, your helium cakes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, uhh, your helium... cakes?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, uhh, your helium... cakes?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Brother, are you ever high?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "'[beep]' Brother, are you ever high.",
+      "similarity": 0.8475,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[beep]' Brother, are you ever high.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "What?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "None",
+      "json_text": "Ma'am?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Ma'am?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Ma'am?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ma'am? Wh...",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ma'am? Wh...",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 13,
+    "total_wiki_lines": 11,
+    "matched_wiki_lines": 11,
+    "unmatched_wiki_lines": 0,
+    "matched": 11,
+    "speakers_to_map": 3,
+    "text_auto_correct": 2,
+    "text_review": 3,
+    "text_group_review": 0,
+    "unmatched_json": 2
+  }
+}

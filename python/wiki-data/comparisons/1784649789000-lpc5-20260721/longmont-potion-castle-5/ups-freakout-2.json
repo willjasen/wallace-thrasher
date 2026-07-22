@@ -1,0 +1,1871 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:57.905650+00:00",
+  "snapshot": "1784649789000-lpc5-20260721",
+  "album": "Longmont Potion Castle 5",
+  "album_slug": "longmont-potion-castle-5",
+  "track": "UPS Freakout 2",
+  "track_slug": "ups-freakout-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-5/ups-freakout-2.json",
+  "json_sha256": "8b2774488918fa995581a2dbe0e25779e1cb5c4cd6a2966a09a03c3348b3f7c4",
+  "wiki_title": "UPS Freakout 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/UPS_Freakout_2",
+  "speaker_mapping": {
+    "SPEAKER_01": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.5042,
+      "observations": 31,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 29.2839,
+          "observations": 31
+        },
+        {
+          "name": "LPC",
+          "score": 28.7924,
+          "observations": 32
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 0.7791,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 3.5264,
+          "observations": 4
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, this is Bernie at United Parcel.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, this is Bernie, at... United Parcel. Callin' about your... uh, shipment here. It's, uh... negative four hundred and eighty dollars on the... invoice.",
+      "similarity": 0.8205,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, this is Bernie at United Parcel.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Calling about your shipment here, it's negative $480 on the invoice.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, this is Bernie, at... United Parcel. Callin' about your... uh, shipment here. It's, uh... negative four hundred and eighty dollars on the... invoice.",
+      "similarity": 0.8205,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Calling about your shipment here, it's negative $480 on the invoice.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What shipment?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What shipment, who are you calling, and what is this regarding?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What shipment?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you calling and what is this regarding?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What shipment, who are you calling, and what is this regarding?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you calling and what is this regarding?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's 480 pounds squid is what it is from Tokyo.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh... it's a four hundred and eighty pound squid is what it is, from, uh... Tokyo.",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh... it's a four hundred and eighty pound squid is what it is, from, uh... Tokyo.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And it's on our dock and we just got to get a good time to deliver and we need COD on that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And it's on our dock, and we just gotta get a good time to... to deliver, and we need C.O.D. on that.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And it's on our dock, and we just gotta get a good time to... to deliver, and we need C.O.D. on that.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, who are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, who are you calling?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, who are you calling?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That, in fact, we've certified funds.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, we... in fact, we need certified funds.",
+      "similarity": 0.8169,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, we... in fact, we need certified funds.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who are you calling?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you calling?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's on the packing slip. I got the P.O. number. I got your signature.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's on the packing slip, I've got the P.O. number, I've got a... your signature...",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's on the packing slip, I've got the P.O. number, I've got a... your signature...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "On the slip. You?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "...on the slip. You.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "On the slip. You?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Give me a name.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Give me a name.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Give me a name.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm Bernard.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm Bernard.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Bernard.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry?",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'm sorry?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Fuddle. I am. 24 years on the job.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Fuddle. I am. Twenty-four years on the job.",
+      "similarity": 0.8169,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fuddle. I am. Twenty-four years on the job.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who is the name that you're looking for?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who is the name that you're looking for?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is the name that you're looking for?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's from Tokyo Joe's Squid.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's from Tokyo Joe's Squid.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's from Tokyo Joe's Squid.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, you have the wrong number. I have no idea what you're talking about.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, you have the wrong number, I have no idea what you're talking about.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, you have the wrong number. I have no idea what you're talking about.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "talking about. I've got your signature and we need certified funds.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I've got your signature, and we need certified funds...",
+      "similarity": 0.8793,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've got your signature, and we need certified funds...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Which signature is it? Tell me the name of the signature.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, which signature is it? Tell me the name of the signature.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, which signature is it? Tell me the name of the signature.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I can, I can co-sign on the thing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I can... I can co-sign on the thing... [clears throat] ...and if you, uh, we can take you...",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "I can... I can co-sign on the thing... [clears throat] ...and if you, uh, we can take you...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And if you, now we can take you, we can take you to your bank.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We can take you to your bank.",
+      "similarity": 0.6437,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "We can take you to your bank.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're not listening to me.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You're not listening to me.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're not listening to me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't think you're acknowledging me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You... I don't think you're acknowledging me!",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You... I don't think you're acknowledging me!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who are you calling? What number--",
+      "similarity": 0.7949,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you calling?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What number are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who are you calling? What number--",
+      "similarity": 0.7949,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What number are you calling?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What number are you calling? I'm not expecting a package from Tokyo or any place else.",
+      "wiki_speaker": "Man",
+      "wiki_text": "What number were you calling? I'm not expecting a package, from Tokyo or any place else. What number are you calling--",
+      "similarity": 0.9259,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What number are you calling? I'm not expecting a package from Tokyo or any place else.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What number is you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What number were you calling? I'm not expecting a package, from Tokyo or any place else. What number are you calling--",
+      "similarity": 0.9259,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What number is you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This is a 480-pound squid, and we've got to move it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is a four hundred and eighty pound squid... and we gotta move it.",
+      "similarity": 0.7241,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is a four hundred and eighty pound squid... and we gotta move it.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care where you move it. You can't move it to the mouse.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hell, I don't care where you move it, you can't move it to my house. What's my... what's the address?",
+      "similarity": 0.7355,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hell, I don't care where you move it, you can't move it to my house. What's my... what's the address?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Did you just change your mind on the product?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Did you just change your mind? On the product?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Did you just change your mind on the product?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who are you calling? You haven't even identified who you're calling.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you calling?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You haven't even identified who you're calling.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who are you calling? You haven't even identified who you're calling.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You haven't even identified who you're calling.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I am Bernard Foote.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I am... I am B... I am Bernard Fuddle.",
+      "similarity": 0.6122,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "I am... I am B... I am Bernard Fuddle.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How do you know you've got the right number?",
+      "wiki_speaker": "Man",
+      "wiki_text": "How do you know you've got the right number?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "How do you know you've got the right number?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm with United Parcel.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm with United Parcel.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm with United Parcel.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care who are you with.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't care who you're with. Who are you calling?",
+      "similarity": 0.9278,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care who are you with.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't care who you're with. Who are you calling?",
+      "similarity": 0.9278,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you calling?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm calling right now, on the dock standing here with three deliverymen.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm calling right now, on the dock, standing here with three deliverymen.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm calling right now, on the dock standing here with three deliverymen.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Which number?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Which number?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Where is it supposed to go?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Where's it supposed to go?",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Where's it supposed to go?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm 1,800 pickups.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "1-800-PICK-UPS. 1-800...",
+      "similarity": 0.7027,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "1-800-PICK-UPS. 1-800...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you supposed to go?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Where's it supposed to go?",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Where's it supposed to go?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're supposed to go?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "You're supposed to go?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm in Commerce City.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm in Commerce City.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm in Commerce City.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's the address it's supposed to be delivered?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What's the address it's supposed to be delivered?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the address it's supposed to be delivered?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We're at 5621, Quebec Street, Commerce City.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We're at 5621 Quebec Street, Commerce City.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're at 5621, Quebec Street, Commerce City.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's the address it's supposed to go to?",
+      "wiki_speaker": "Man",
+      "wiki_text": "That's the address it's supposed to go to?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's the address it's supposed to go to?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's where we're located, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's where we're located, sir!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's where we're located, sir.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Where is it supposed to be delivered to?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Where is this supposed to be delivered to?",
+      "similarity": 0.95,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Where is this supposed to be delivered to?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You need to focus on the certified funds that we need.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You need to focus on the certified funds that we need.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need to focus on the certified funds that we need.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah. I don't know who you are, I don't have any shipment coming to me. You can't even tell me who you're talking to!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know who you are.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah. I don't know who you are, I don't have any shipment coming to me. You can't even tell me who you're talking to!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who you are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't have any shipment coming to me.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah. I don't know who you are, I don't have any shipment coming to me. You can't even tell me who you're talking to!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have any shipment coming to me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can't even tell me who you're talking to.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah. I don't know who you are, I don't have any shipment coming to me. You can't even tell me who you're talking to!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55,
+        56,
+        57
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can't even tell me who you're talking to.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you... and...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        58,
+        59
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you... and...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        58,
+        59
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Goodbye.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Goodbye.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Goodbye.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, this is Franklin Donovan, down at the United Parks Service.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Franklin Donovan, down at United Parcel Service. Uh, what appears to be the problem here? [heavy breathing]",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Franklin Donovan, down at the United Parks Service.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What appears to be the problem there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Franklin Donovan, down at United Parcel Service. Uh, what appears to be the problem here? [heavy breathing]",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What appears to be the problem there?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Somebody called and they didn't...",
+      "wiki_speaker": "Man",
+      "wiki_text": "I... somebody called, and they just told me...",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I... somebody called, and they just told me...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who are you calling?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who are you calling?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you calling?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They said who are you calling?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They said \"who are you calling\"?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They said who are you calling?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm asking you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I'm asking you. Whom are you calling...",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm asking you. Whom are you calling...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Whom are you calling with respect to some supposed delivery?",
+      "wiki_speaker": "Man",
+      "wiki_text": "...with respect to some supposed delivery?",
+      "similarity": 0.7835,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "...with respect to some supposed delivery?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're a squid here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Sir, your squid, here!",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sir, your squid, here!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't have a squid, sorry.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't have a squid, sorry.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have a squid, sorry.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This thing's a nuisance.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This thing's a nuisance.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This thing's a nuisance.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't have a squid.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't have one, I'm sorry. I don't know who you're calling.",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have a squid.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry. I don't know who you're calling.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't have one, I'm sorry. I don't know who you're calling.",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry. I don't know who you're calling.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, sir.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Yes, sir.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This is Ruben calling from United Parcel Service.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir? This is Ruben calling, from United Parcel Service. I'm an administrator here. And, uh... according to the notes, you spoke to, uh... Wallace? Some kind of squid, uh... large freight here. I mean, there's flags on the account here that... you are a problematic account, which is why I'm trying to call. [coughs]",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Ruben calling from United Parcel Service.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm an administrator here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir? This is Ruben calling, from United Parcel Service. I'm an administrator here. And, uh... according to the notes, you spoke to, uh... Wallace? Some kind of squid, uh... large freight here. I mean, there's flags on the account here that... you are a problematic account, which is why I'm trying to call. [coughs]",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm an administrator here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And according to the notes, you spoke to Wallace.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir? This is Ruben calling, from United Parcel Service. I'm an administrator here. And, uh... according to the notes, you spoke to, uh... Wallace? Some kind of squid, uh... large freight here. I mean, there's flags on the account here that... you are a problematic account, which is why I'm trying to call. [coughs]",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And according to the notes, you spoke to Wallace.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Some kind of squid, large freight here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir? This is Ruben calling, from United Parcel Service. I'm an administrator here. And, uh... according to the notes, you spoke to, uh... Wallace? Some kind of squid, uh... large freight here. I mean, there's flags on the account here that... you are a problematic account, which is why I'm trying to call. [coughs]",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Some kind of squid, large freight here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I mean, there's flags on the account here that you are a problematic account,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir? This is Ruben calling, from United Parcel Service. I'm an administrator here. And, uh... according to the notes, you spoke to, uh... Wallace? Some kind of squid, uh... large freight here. I mean, there's flags on the account here that... you are a problematic account, which is why I'm trying to call. [coughs]",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I mean, there's flags on the account here that you are a problematic account,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "which is why I'm trying to call.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir? This is Ruben calling, from United Parcel Service. I'm an administrator here. And, uh... according to the notes, you spoke to, uh... Wallace? Some kind of squid, uh... large freight here. I mean, there's flags on the account here that... you are a problematic account, which is why I'm trying to call. [coughs]",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "which is why I'm trying to call.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is the name on the account?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What is the name on the account?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is the name on the account?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Ruben Norman.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ruben Norman.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ruben Norman.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, what is the name on the account? Is that your name?",
+      "similarity": 0.8739,
+      "match_type": "similar",
+      "json_group": [
+        83,
+        84,
+        85,
+        86
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is the name on the account?",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, what is the name on the account? Is that your name?",
+      "similarity": 0.8739,
+      "match_type": "similar",
+      "json_group": [
+        83,
+        84,
+        85,
+        86
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is the name on the account?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "on the account.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, what is the name on the account? Is that your name?",
+      "similarity": 0.8739,
+      "match_type": "similar",
+      "json_group": [
+        83,
+        84,
+        85,
+        86
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "on the account.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Is that your name?",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, what is the name on the account? Is that your name?",
+      "similarity": 0.8739,
+      "match_type": "similar",
+      "json_group": [
+        83,
+        84,
+        85,
+        86
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that your name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can't you just extrapolate one to the other?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, can't you just extrapolate one to the other? [clears throat]",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, can't you just extrapolate one to the other? [clears throat]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is the name on the account?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What is the name on the account? It's a simple question, even a jackass like you could answer that.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is the name on the account?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's a simple question.",
+      "wiki_speaker": "Man",
+      "wiki_text": "What is the name on the account? It's a simple question, even a jackass like you could answer that.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's a simple question.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Even a jackass like you could answer that.",
+      "wiki_speaker": "Man",
+      "wiki_text": "What is the name on the account? It's a simple question, even a jackass like you could answer that.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Even a jackass like you could answer that.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What is your... [sighs] The name I just gave you.",
+      "similarity": 0.8533,
+      "match_type": "similar",
+      "json_group": [
+        91,
+        92
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The name I just gave you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What is your... [sighs] The name I just gave you.",
+      "similarity": 0.8533,
+      "match_type": "similar",
+      "json_group": [
+        91,
+        92
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The name I just gave you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Is that your name or the name on the...",
+      "wiki_speaker": "Man",
+      "wiki_text": "That... is that your name, or the name on the account?",
+      "similarity": 0.8471,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "That... is that your name, or the name on the account?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, it is.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, it is. And before we write off...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, it is.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And before we write off...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, it is. And before we write off...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And before we write off...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Before we write off this amount...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And before we write off this amount...",
+      "similarity": 0.9394,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And before we write off this amount...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Goodbye, I'm tall.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Goodbye, asshole.",
+      "similarity": 0.6452,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Goodbye, asshole.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 97,
+    "total_wiki_lines": 78,
+    "matched_wiki_lines": 70,
+    "unmatched_wiki_lines": 8,
+    "matched": 94,
+    "speakers_to_map": 1,
+    "text_auto_correct": 8,
+    "text_review": 17,
+    "text_group_review": 24,
+    "unmatched_json": 3
+  }
+}

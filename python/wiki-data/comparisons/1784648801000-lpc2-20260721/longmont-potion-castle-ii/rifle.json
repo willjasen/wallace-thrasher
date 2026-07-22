@@ -1,0 +1,180 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:26.033895+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Rifle",
+  "track_slug": "rifle",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/rifle.json",
+  "json_sha256": "6059fb142a06cefa0947c87e5153c68e800b837431f9cced2983ef2fed9ff4d8",
+  "wiki_title": "Rifle",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Rifle",
+  "speaker_mapping": {},
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.7805,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Larry",
+      "confidence": 0.5481,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Larry",
+          "score": 2.9206,
+          "observations": 3
+        },
+        {
+          "name": "LPC",
+          "score": 2.4083,
+          "observations": 3
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you, dude?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Who are you, dude?",
+      "similarity": 0.7805,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Who are you, dude?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My name's Larry.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "My name's Larry.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "My name's Larry.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you doing that, man?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] What are you doin' there, man?",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] What are you doin' there, man?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I live here.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "I live here.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "I live here.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, this is Jesse, dude.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Well, this is... well, Jesse, dude.",
+      "similarity": 0.7667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Well, this is... well, Jesse, dude.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I think he got the wrong number.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "I think you got the wrong number...",
+      "similarity": 0.9206,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think you got the wrong number...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, Mike picked up my rifle for me, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, Mike picked up my rifle for me, man.",
+      "similarity": 0.8916,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] No, Mike picked up my rifle for me, man.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 7,
+    "total_wiki_lines": 7,
+    "matched_wiki_lines": 7,
+    "unmatched_wiki_lines": 0,
+    "matched": 7,
+    "speakers_to_map": 0,
+    "text_auto_correct": 2,
+    "text_review": 3,
+    "text_group_review": 0,
+    "unmatched_json": 0
+  }
+}

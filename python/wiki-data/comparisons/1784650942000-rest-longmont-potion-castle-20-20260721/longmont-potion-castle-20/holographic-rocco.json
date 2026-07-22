@@ -1,0 +1,2281 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:28:49.743318+00:00",
+  "snapshot": "1784650942000-rest-longmont-potion-castle-20-20260721",
+  "album": "Longmont Potion Castle 20",
+  "album_slug": "longmont-potion-castle-20",
+  "track": "Holographic Rocco",
+  "track_slug": "holographic-rocco",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-20/holographic-rocco.json",
+  "json_sha256": "9051f43f8fa455c740dbc7c38f4d1e4124878cc7aa2ba1d1160f3911c08ca233",
+  "wiki_title": "Holographic Rocco",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Holographic_Rocco",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Roger",
+    "SPEAKER_03": "Man(3)",
+    "SPEAKER_04": "Man(1)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.8959,
+      "observations": 39,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 31.7146,
+          "observations": 39
+        },
+        {
+          "name": "Roger",
+          "score": 3.685,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Roger",
+      "confidence": 0.8483,
+      "observations": 11,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Roger",
+          "score": 9.1819,
+          "observations": 11
+        },
+        {
+          "name": "LPC",
+          "score": 1.642,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man(3)",
+      "confidence": 1.0,
+      "observations": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man(3)",
+          "score": 5.8676,
+          "observations": 8
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Man(1)",
+      "confidence": 1.0,
+      "observations": 9,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man(1)",
+          "score": 6.4795,
+          "observations": 9
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello, it's Roger.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Hello, it’s Roger. [exhales]",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello, it’s Roger. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, is Roger there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, is Roger there? Hey, Roger?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, is Roger there?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Roger?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, is Roger there? Hey, Roger?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Roger?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Yes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, yeah, my name's Rocco.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, yeah, my name’s Rocco. I just live a couple places down from you. Ah, how you doin’ today?",
+      "similarity": 0.9432,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, yeah, my name's Rocco.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just live a couple places down from you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, yeah, my name’s Rocco. I just live a couple places down from you. Ah, how you doin’ today?",
+      "similarity": 0.9432,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just live a couple places down from you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How are you doing today?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, yeah, my name’s Rocco. I just live a couple places down from you. Ah, how you doin’ today?",
+      "similarity": 0.9432,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How are you doing today?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you even know where I live?",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Do you even know where I live?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you even know where I live?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I got your number from Big Red, our other neighbor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I got your number from Big Red, our other neighbor. I’m just calling everyone in our street ‘cause I’m gonna be letting off some holograms outside. And I just kinda wanted to notify you and let you know what I’ll be doing, if you look outside. Maybe just stay inside for a couple of hours, if that’s okay with you?—",
+      "similarity": 0.9601,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I got your number from Big Red, our other neighbor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm just calling everyone on our street because I'm going to be letting off some holograms outside.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I got your number from Big Red, our other neighbor. I’m just calling everyone in our street ‘cause I’m gonna be letting off some holograms outside. And I just kinda wanted to notify you and let you know what I’ll be doing, if you look outside. Maybe just stay inside for a couple of hours, if that’s okay with you?—",
+      "similarity": 0.9601,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm just calling everyone on our street because I'm going to be letting off some holograms outside.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I just kind of want to notify you and let you know what I'll be doing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I got your number from Big Red, our other neighbor. I’m just calling everyone in our street ‘cause I’m gonna be letting off some holograms outside. And I just kinda wanted to notify you and let you know what I’ll be doing, if you look outside. Maybe just stay inside for a couple of hours, if that’s okay with you?—",
+      "similarity": 0.9601,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I just kind of want to notify you and let you know what I'll be doing.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If you look outside, maybe just stay inside for a couple of hours, if that's okay with you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I got your number from Big Red, our other neighbor. I’m just calling everyone in our street ‘cause I’m gonna be letting off some holograms outside. And I just kinda wanted to notify you and let you know what I’ll be doing, if you look outside. Maybe just stay inside for a couple of hours, if that’s okay with you?—",
+      "similarity": 0.9601,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you look outside, maybe just stay inside for a couple of hours, if that's okay with you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And where do you live?",
+      "wiki_speaker": "Roger",
+      "wiki_text": "And where—? And where do you live?",
+      "similarity": 0.8077,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "And where—? And where do you live?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The same street as you, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, same street as you, sir. He—he told me ta—",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, same street as you, sir. He—he told me ta—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He told me your number himself.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…your— your number himself—",
+      "similarity": 0.7778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "…your— your number himself—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you say the street?",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Why don’t you say the street?",
+      "similarity": 0.9643,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you say the street?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just moved here from Crested Butte, Colorado.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I just moved here from Crested Butte, Colorado—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just moved here from Crested Butte, Colorado.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm real new, like three days ago.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m real new—like three days ago.",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m real new—like three days ago.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Okay. Yeah, I’m not. I’ve been here a long time and—",
+      "similarity": 0.913,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I'm not.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Okay. Yeah, I’m not. I’ve been here a long time and—",
+      "similarity": 0.913,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'm not.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I've been here a long time.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Okay. Yeah, I’m not. I’ve been here a long time and—",
+      "similarity": 0.913,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've been here a long time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh-huh—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "A Colorado number calling me not to come out of my house.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "…a Colorado number callin’ tellin’ me not to come out of my house? Le—let’s make it real plain and simple. Somebody comes to my house? They may not survive the encounter.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "A Colorado number calling me not to come out of my house.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But let's make it real plain and simple.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "…a Colorado number callin’ tellin’ me not to come out of my house? Le—let’s make it real plain and simple. Somebody comes to my house? They may not survive the encounter.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "But let's make it real plain and simple.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If somebody comes to my house,",
+      "wiki_speaker": "Roger",
+      "wiki_text": "…a Colorado number callin’ tellin’ me not to come out of my house? Le—let’s make it real plain and simple. Somebody comes to my house? They may not survive the encounter.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "If somebody comes to my house,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "they may not survive the encounter.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "…a Colorado number callin’ tellin’ me not to come out of my house? Le—let’s make it real plain and simple. Somebody comes to my house? They may not survive the encounter.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "they may not survive the encounter.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, it's just an avatar.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well it’s—it’s just an avatar. It’s not a real person.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it's just an avatar.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's not a real person.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well it’s—it’s just an avatar. It’s not a real person.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's not a real person.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Then it may survive the encounter if it's not a real person, but a real person.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Then—then it may survive the encounter if it’s not a real person. But a real person probably wouldn’t survive the encounter comin’ here—",
+      "similarity": 0.9385,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Then it may survive the encounter if it's not a real person, but a real person.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Probably wouldn't survive the encounter coming in.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Then—then it may survive the encounter if it’s not a real person. But a real person probably wouldn’t survive the encounter comin’ here—",
+      "similarity": 0.9385,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Probably wouldn't survive the encounter coming in.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, no?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, no?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, no?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you mean there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Whadda you mean there? [emergency siren] Well I’ve got one avatar of, like, these shrunken heads. It just looks like they’re flyin’ up ’n down—",
+      "similarity": 0.8413,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you mean there?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I've got one avatar of like these shrunken heads.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Whadda you mean there? [emergency siren] Well I’ve got one avatar of, like, these shrunken heads. It just looks like they’re flyin’ up ’n down—",
+      "similarity": 0.8413,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I've got one avatar of like these shrunken heads.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It just looks like they're flying up and down, just flying by.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Whadda you mean there? [emergency siren] Well I’ve got one avatar of, like, these shrunken heads. It just looks like they’re flyin’ up ’n down—",
+      "similarity": 0.8413,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It just looks like they're flying up and down, just flying by.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So that's what I'll be doing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So that’s what I’ll be doing.",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So that’s what I’ll be doing.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know who the hell.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "I don’t know who the hell you— I don’t know who the hell you are and I don’t know how the hell you got my number, but I’m tellin’ ya— I’m tellin’ ya—",
+      "similarity": 0.7933,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who the hell.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know who the hell.",
+      "wiki_speaker": "Roger",
+      "wiki_text": "I don’t know who the hell you— I don’t know who the hell you are and I don’t know how the hell you got my number, but I’m tellin’ ya— I’m tellin’ ya—",
+      "similarity": 0.7933,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who the hell.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you are and i don't know how the hell you got my number but i'm from big red like i said okay i'm telling",
+      "wiki_speaker": "Roger",
+      "wiki_text": "I don’t know who the hell you— I don’t know who the hell you are and I don’t know how the hell you got my number, but I’m tellin’ ya— I’m tellin’ ya—",
+      "similarity": 0.7933,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "you are and i don't know how the hell you got my number but i'm from big red like i said okay i'm telling",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you yeah i'm to my house and we'll play really not in the mood to go around and around with you bud",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Come to my house and we’ll play. Really not in the mood to go ‘round and ‘round with ya, bud.",
+      "similarity": 0.8984,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come to my house and we’ll play. Really not in the mood to go ‘round and ‘round with ya, bud.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "roger i just think we got off on the wrong foot here oh i guarantee you we did so you do you in your",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Roger, I just think we got off on the wrong foot, here, okay?—",
+      "similarity": 0.7134,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Roger, I just think we got off on the wrong foot, here, okay?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "property i'll do me and my property if that's a problem we'll deal with it then listen i've just got",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Oh, I guarantee you we did. So you do you on your property and I’ll do me on my property. If that’s a problem, we’ll deal with it then.",
+      "similarity": 0.6435,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, I guarantee you we did. So you do you on your property and I’ll do me on my property. If that’s a problem, we’ll deal with it then.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "a hologram of a kangaroo buddy you continue to call me you're going to end up in jail you want to get",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Buddy, you continue to call me and you’re gonna end up in jail.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "matched_line",
+      "proposed_text": "Buddy, you continue to call me and you’re gonna end up in jail.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "into it guy because i can stop by be my guess dude i tried to tell you fair and square i got a",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You wanna get into it, guy? ‘Cause I can stop by—",
+      "similarity": 0.446,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You wanna get into it, guy? ‘Cause I can stop by—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "kangaroo hologram moving around it's perfectly safe okay like i said you do you on your property",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I tried to tell ya fair ’n square. I got a kangaroo hologram movin’ around. It’s perfectly safe—",
+      "similarity": 0.5241,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I tried to tell ya fair ’n square. I got a kangaroo hologram movin’ around. It’s perfectly safe—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "okay anybody comes to my property and they continue to say that they want to go round and round",
+      "wiki_speaker": "Roger",
+      "wiki_text": "Okay. Like I said: you do you on your property, m’kay? Anybody comes to my property and they continue to say that they wanna go ‘round and ‘round? My stuff isn’t holograms. Now, I’m at work. If you call—",
+      "similarity": 0.6341,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Roger",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay. Like I said: you do you on your property, m’kay? Anybody comes to my property and they continue to say that they wanna go ‘round and ‘round? My stuff isn’t holograms. Now, I’m at work. If you call—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "my stuff isn't holograms oh buddy i'll go round and round and round right now bring it if you want to",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, buddy, I’ll go ‘round and ‘round right now!",
+      "similarity": 0.5734,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, buddy, I’ll go ‘round and ‘round right now!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "get wild let's go bucko",
+      "wiki_speaker": "LPC",
+      "wiki_text": "If you wanna get wild let’s go, bucko!",
+      "similarity": 0.7458,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you wanna get wild let’s go, bucko!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "hello this is rocko i just moved in down the street how you doing roco yeah",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Rocco. I just moved in down the street. How ya doin’?",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Rocco. I just moved in down the street. How ya doin’?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "hey i was given your number by the superintendent he's a friend of mine over there he's got everybody's",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. Hey, I was given your number by the Superintendent; he’s a friend of mine over there. He’s got everybody’s number. But hey, listen! I’m gonna be outside settin’ off some holograms today and I just wanted to let ya know what I’ll be doing if you see me outside. Maybe you wanna stay inside for the next few hours, if that’s okay with you? [sniffs] [sfx, gust of wind]—",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "hey i was given your number by the superintendent he's a friend of mine over there he's got everybody's",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "number but hey listen i'm going to be outside setting off some holograms today and i just want to let",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. Hey, I was given your number by the Superintendent; he’s a friend of mine over there. He’s got everybody’s number. But hey, listen! I’m gonna be outside settin’ off some holograms today and I just wanted to let ya know what I’ll be doing if you see me outside. Maybe you wanna stay inside for the next few hours, if that’s okay with you? [sniffs] [sfx, gust of wind]—",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "number but hey listen i'm going to be outside setting off some holograms today and i just want to let",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "you all be doing if you see me outside maybe you want to stay inside for the next few hours if that's",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. Hey, I was given your number by the Superintendent; he’s a friend of mine over there. He’s got everybody’s number. But hey, listen! I’m gonna be outside settin’ off some holograms today and I just wanted to let ya know what I’ll be doing if you see me outside. Maybe you wanna stay inside for the next few hours, if that’s okay with you? [sniffs] [sfx, gust of wind]—",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "you all be doing if you see me outside maybe you want to stay inside for the next few hours if that's",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "okay with you what do you mean i'm not sure",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "What do you—? What do you mean by that? I’m not sure talking about, here.",
+      "similarity": 0.6306,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What do you—? What do you mean by that? I’m not sure talking about, here.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "what you're talking about oh like i have a hologram of a human cannonball it looks like he's",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh! Like I have a hologram of a human cannonball. It looks like he’s just flyin’ down the street. [continual gusts] it’s very realistic! Very lifelike! Um—",
+      "similarity": 0.5462,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh! Like I have a hologram of a human cannonball. It looks like he’s just flyin’ down the street. [continual gusts] it’s very realistic! Very lifelike! Um—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "just flying down the street it's very realistic very lifelike okay and who gave you my number",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "O—okay and who gave you number?",
+      "similarity": 0.4878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "O—okay and who gave you number?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "the superintendent of what of the district and also there's a chance the images might travel",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Of the District! And also—",
+      "similarity": 0.4138,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Of the District! And also—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "through your window they can't come through walls but it may periodically come through the window but i'll",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…there’s a chance the images might travel through your window. They can’t come through walls, but it may, periodically, come through the window. But I’ll try to keep that to a minimum—",
+      "similarity": 0.735,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "…there’s a chance the images might travel through your window. They can’t come through walls, but it may, periodically, come through the window. But I’ll try to keep that to a minimum—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "try to keep that to a minimum okay so you'll stay inside for a few hours then i'm not",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…okay? So you’ll stay inside for a few hours, then? [wind]",
+      "similarity": 0.7153,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "…okay? So you’ll stay inside for a few hours, then? [wind]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "i'm not home i mean stay away from home for a few hours then or or i mean i mean if i need to go",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I mean stay away from home for a few hours, then, or…? [delay] [wind]",
+      "similarity": 0.6752,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I mean stay away from home for a few hours, then, or…? [delay] [wind]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "home i'm gonna go home is there anything from vending me from getting in the house just a human",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "I mean—I mean, if I need to go home, I’mma go home. Uh— Is there anything preventing me from getting in the house?",
+      "similarity": 0.6961,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I mean—I mean, if I need to go home, I’mma go home. Uh— Is there anything preventing me from getting in the house?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "cannibal flying like wild down the street all right well yeah i guess i'll see what you're talking about",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just a human cannonball flyin’ like wild down the street!",
+      "similarity": 0.4906,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Just a human cannonball flyin’ like wild down the street!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "when i see it i'm not really sure i don't understand what's going on but i'm gonna be home when i want",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "…yeah, I guess I’ll see what you’re talkin’ ‘bout when I see it. I don’t— I’m not really sure. I don’t understand what’s goin’ on, but I’mma be home when I wanna go home, alright?—",
+      "similarity": 0.6815,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "…yeah, I guess I’ll see what you’re talkin’ ‘bout when I see it. I don’t— I’m not really sure. I don’t understand what’s goin’ on, but I’mma be home when I wanna go home, alright?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "to go home all right i might plug into your outlet outside too if that's okay all right i'm not",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I might plug into your outlet outside, too, if that’s okay. Alright?",
+      "similarity": 0.7925,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I might plug into your outlet outside, too, if that’s okay. Alright?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "approving you to plug into my condo's outlet not doing that you can plug into the buildings outlet but my",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "I’m not approvin’ you to plug into my condo’s outlet; not doin’ it. You can plug into the buildin’s outlet. But my condo? I’m not payin’ for yo shit!",
+      "similarity": 0.7967,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m not approvin’ you to plug into my condo’s outlet; not doin’ it. You can plug into the buildin’s outlet. But my condo? I’m not payin’ for yo shit!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "condo i'm not paying for your shit it's only for a few hours doll yeah so it's a few hours i can't go to",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s only for a few hours, dawg! [exhales]",
+      "similarity": 0.4366,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It’s only for a few hours, dawg! [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "my condo and then i got to pay for your electricity no i'm not doing that let me some skin blood come",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Yeah, so it’s a “few hours” that I can’t go to my condo and then I gotta pay for your electricity? No! I’m not doin’ that!",
+      "similarity": 0.6389,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, so it’s a “few hours” that I can’t go to my condo and then I gotta pay for your electricity? No! I’m not doin’ that!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "on bro i don't even know how did you get my number who's the super attendant that gave you my number",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "I don’t even know— How did you get my number? Who is this “Superintendent” that gave you my number?—",
+      "similarity": 0.8866,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don’t even know— How did you get my number? Who is this “Superintendent” that gave you my number?—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "come on jack slap me something bro i've never had a phone call like this i don't know what this is",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "I’ve never had a phone call like this. I don’t know what this is about. [laughs]",
+      "similarity": 0.7126,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’ve never had a phone call like this. I don’t know what this is about. [laughs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "about i need to work on my holograms outside that's all there is to it okay work on your holograms man",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to work on my holograms outside; that’s all there is to it!—",
+      "similarity": 0.759,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to work on my holograms outside; that’s all there is to it!—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "i mean i don't know how this affects me i'm going to get to my house if i need to get them out what if a",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Well h— Okay! Work on your holograms, man! I don’t—I mean—I don’t know how this affects me. I’m gonna get to my house if I need to get to my house.",
+      "similarity": 0.6776,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well h— Okay! Work on your holograms, man! I don’t—I mean—I don’t know how this affects me. I’m gonna get to my house if I need to get to my house.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "human cannibal is flying down the street now how you're going to like that",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What if a human cannonball’s flyin’ down the street? Now how you gon’ like that? [delay]",
+      "similarity": 0.8077,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What if a human cannonball’s flyin’ down the street? Now how you gon’ like that? [delay]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "the fuck is it who are you dude roco i got your number from the superintendent like i said",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Rocco. I got your number from the Superintendent, like I said. [wind]",
+      "similarity": 0.7532,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Rocco. I got your number from the Superintendent, like I said. [wind]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "the superintendent of what of the whole district man okay he do what you want to do what you want to do",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "The Superintendent of what?",
+      "similarity": 0.4031,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "The Superintendent of what?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "i'm gonna get to my house if i need to get to my house like have fun i don't care what you're doing",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Okay! Gee, do what you wanna do! I’m gonna get to my house if I need to get to my house. Like, have fun. I don’t care what you’re doin’, but I’mma get to my house.",
+      "similarity": 0.7589,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay! Gee, do what you wanna do! I’m gonna get to my house if I need to get to my house. Like, have fun. I don’t care what you’re doin’, but I’mma get to my house.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "but i'm gonna get to my house hello yeah this is rocko i just lived down yonder from you",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Rocco. I just live down yonder from you. I got your number from Rota the mail-lady. How are ya today?",
+      "similarity": 0.5051,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, this is Rocco. I just live down yonder from you. I got your number from Rota the mail-lady. How are ya today?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "i got your number from rhoda the male lady how are you today i'm doing okay what can i do for you",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "I’m doin’ okay. What can I do for you?",
+      "similarity": 0.5303,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m doin’ okay. What can I do for you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "good yeah i'm just calling everybody on the street because i'm gonna be uh setting off some holograms",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Good, yeah. I’m just calling everybody on the street—",
+      "similarity": 0.649,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Good, yeah. I’m just calling everybody on the street—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "outside out in front of the house and i just wanted to let you know what i'll be doing yeah okay",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…because I’m gonna be, ah, setting off some holograms outside—out in front of the house. And I just wanted to—",
+      "similarity": 0.5373,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "…because I’m gonna be, ah, setting off some holograms outside—out in front of the house. And I just wanted to—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "so maybe stay inside for a while if that's okay for two three hours stay inside",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So mayb—maybe stay inside for a while—if that’s okay?—for two, three hours?",
+      "similarity": 0.8742,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So mayb—maybe stay inside for a while—if that’s okay?—for two, three hours?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "well yeah just to avoid any confusion",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well yeah, just to avoid any confusion. Like, I have a hologram of, like, a human cannonball—looks like he’s just flyin’ down the street. And I’m kinda a pioneer with avatars and holograms [exhales]",
+      "similarity": 0.8063,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "well yeah just to avoid any confusion",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "like i have a hologram of like a human cannonball looks like he's just flying down the street",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well yeah, just to avoid any confusion. Like, I have a hologram of, like, a human cannonball—looks like he’s just flyin’ down the street. And I’m kinda a pioneer with avatars and holograms [exhales]",
+      "similarity": 0.8063,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "like i have a hologram of like a human cannonball looks like he's just flying down the street",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and i'm kind of a pioneer with avatars and holograms okay i'm just a little confused as to what exactly",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Okay. I’m just a little confused as to what exactly is going on. I’m a little confused. [chuckles] I’m—",
+      "similarity": 0.49,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay. I’m just a little confused as to what exactly is going on. I’m a little confused. [chuckles] I’m—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "is going on i'm a little confused well there's a chance that the hologram may travel through your",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well there’s a chance that the hologram may, ah, travel through your window. It can’t go through walls or anything but it may appear through your window inside your place. But I’ll try to keep that to a minimum. If that were—",
+      "similarity": 0.777,
+      "match_type": "similar",
+      "json_group": [
+        83,
+        84
+      ],
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "is going on i'm a little confused well there's a chance that the hologram may travel through your",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "window it can't go through walls or anything but it may appear through your window inside your place",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well there’s a chance that the hologram may, ah, travel through your window. It can’t go through walls or anything but it may appear through your window inside your place. But I’ll try to keep that to a minimum. If that were—",
+      "similarity": 0.777,
+      "match_type": "similar",
+      "json_group": [
+        83,
+        84
+      ],
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "window it can't go through walls or anything but it may appear through your window inside your place",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "but i'll try to keep that to a minimum i mean we have permission to do this and my should i be",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "I mean, do you have permission to do this and, like, should I be concerned? I’m—I’m confused. [inhales & clears throat]",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "I mean, do you have permission to do this and, like, should I be concerned? I’m—I’m confused. [inhales & clears throat]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "concerned i'm i'm confused yeah you probably want to stay indoors uh-huh do you have permission for",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you probably wanna stay indoors! Uh-huh! [telephone ringing] You think—",
+      "similarity": 0.6,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, you probably wanna stay indoors! Uh-huh! [telephone ringing] You think—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "this like oh yeah i talked to the male lady and everything about it she gave me your number i'm calling",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh yeah! I talked to the mail-lady about it and everything about it. She gave me your number. I’m callin’ everybody on the street. [exhales]",
+      "similarity": 0.7627,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh yeah! I talked to the mail-lady about it and everything about it. She gave me your number. I’m callin’ everybody on the street. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "everybody on the street i'm confused that's to why the male lady has any jurisdiction over when i can and",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "I’m confused as to why the mail-lady has any jurisdiction over when I can and can’t leave my house.",
+      "similarity": 0.8482,
+      "match_type": "similar",
+      "json_group": [
+        88,
+        89
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "everybody on the street i'm confused that's to why the male lady has any jurisdiction over when i can and",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "can't leave my house",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "I’m confused as to why the mail-lady has any jurisdiction over when I can and can’t leave my house.",
+      "similarity": 0.8482,
+      "match_type": "similar",
+      "json_group": [
+        88,
+        89
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "can't leave my house",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "well there's another avatar i have of like a kangaroo it looks like he's just bouncing like",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, there’s another avatar I have of, like, a kangaroo; it looks like he’s just bouncin’ like wild! [delay] Down the street. And so I’m just lettin’ ya know just to give ya a heads-up. So that’s why I said best, maybe, to stay inside—",
+      "similarity": 0.8413,
+      "match_type": "similar",
+      "json_group": [
+        90,
+        91
+      ],
+      "wiki_indices": [
+        106
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "well there's another avatar i have of like a kangaroo it looks like he's just bouncing like",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "wow wow wow down the street and so i'm just letting you know just to give you a heads up so that's why",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, there’s another avatar I have of, like, a kangaroo; it looks like he’s just bouncin’ like wild! [delay] Down the street. And so I’m just lettin’ ya know just to give ya a heads-up. So that’s why I said best, maybe, to stay inside—",
+      "similarity": 0.8413,
+      "match_type": "similar",
+      "json_group": [
+        90,
+        91
+      ],
+      "wiki_indices": [
+        106
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "wow wow wow down the street and so i'm just letting you know just to give you a heads up so that's why",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "i said do you have legal right to do this i don't know who you are i don't know why you have my phone",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Okay! I’m— Like I said, do you have legal right to do this? I don’t know who you are. I don’t know why you have my phone number, honestly; that’s a little disconcerting—",
+      "similarity": 0.7557,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        107
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay! I’m— Like I said, do you have legal right to do this? I don’t know who you are. I don’t know why you have my phone number, honestly; that’s a little disconcerting—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "number honestly it's a little from the male lady i don't care where you got it from i don't know who this",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "I don’t care [chuckles] who you got it from! I don’t know who this “mail lady” is! I don’t know why—",
+      "similarity": 0.5152,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        109
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don’t care [chuckles] who you got it from! I don’t know who this “mail lady” is! I don’t know why—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "male lady is i don't know why the male lady has my phone number",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "…the mail lady has my phone number. I don’t know who “Rota” is. I don’t care who she is—",
+      "similarity": 0.6527,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        111
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "male lady is i don't know why the male lady has my phone number",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "i don't know who rhoda is i don't care who she is the male person has no right to give out my",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "…the mail lady has my phone number. I don’t know who “Rota” is. I don’t care who she is—",
+      "similarity": 0.6527,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95
+      ],
+      "wiki_indices": [
+        111
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "i don't know who rhoda is i don't care who she is the male person has no right to give out my",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "personal information like my phone number and my name i don't understand who you are i'm upset",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "The mail-person has no right to give out my personal information like my phone number and my name! I don’t understand who you are! I’m upset, honestly, over this whole conversation [huffs]",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        113
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "The mail-person has no right to give out my personal information like my phone number and my name! I don’t understand who you are! I’m upset, honestly, over this whole conversation [huffs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "honestly over this whole conversation well just look out and maybe stay indoors the next few days",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, just look out and maybe stay indoors the next few days!",
+      "similarity": 0.7564,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        114
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, just look out and maybe stay indoors the next few days!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "i might i might have to call somebody to see what the hell's going on okay call who what i don't know we'll",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "I might—I might have to call somebody to see what the hell’s goin’ on. Okay?—",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        115
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I might—I might have to call somebody to see what the hell’s goin’ on. Okay?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "listen i'm a pioneer i'm just trying to work out the kinks you understand i don't like that",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen. I’m a pioneer. I’m just tryin’ to— …work out the kinks! Ya understand?—",
+      "similarity": 0.8395,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        120,
+        122
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen. I’m a pioneer. I’m just tryin’ to— …work out the kinks! Ya understand?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "you have my contact information in my name i don't appreciate it i don't care where you got it from",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Tha— I don’t like that you have my contact information and my name. I don’t appreciate it. I don’t care where you got it from. I don’t like it. I don’t appreciate it. Okay? [clears throat]",
+      "similarity": 0.6906,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        123
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tha— I don’t like that you have my contact information and my name. I don’t appreciate it. I don’t care where you got it from. I don’t like it. I don’t appreciate it. Okay? [clears throat]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "i don't like it i don't appreciate it i don't appreciate it okay i'm calling everybody on the street",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m callin’ everybody on the street, guy, just to give ya a heads-up—",
+      "similarity": 0.4121,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        124
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m callin’ everybody on the street, guy, just to give ya a heads-up—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "guy just to give you a heads up i'm doing you a favor here",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m doin’ you a favor here!",
+      "similarity": 0.6024,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        126
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m doin’ you a favor here!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "you're doing me a favor i'll listen dude do your thing do your thing do your thing",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "[nervous huffing] You’re doing me a favor? [laughs] Listen, dude [laughs] do your thing and we’ll see, okay?—",
+      "similarity": 0.6111,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        127
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[nervous huffing] You’re doing me a favor? [laughs] Listen, dude [laughs] do your thing and we’ll see, okay?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and we'll see hey guy i got holograms out the ying yang over here i have one of a matador",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, guy, I got holograms out the yingyang over here. I have one of a matador—",
+      "similarity": 0.908,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, guy, I got holograms out the yingyang over here. I have one of a matador—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "with like a real defiant stance that's the icing on the cake on that one you feel me i don't care",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…with, like, a real defiant stance; that’s the icing on the cake, on that one. Ya feel me?—",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        130
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "…with, like, a real defiant stance; that’s the icing on the cake, on that one. Ya feel me?—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "what you have so to stay inside and we'll be good to go understand no i don't i just don't",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So just stay inside and we’ll be good to go. Understand?",
+      "similarity": 0.6944,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        132
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So just stay inside and we’ll be good to go. Understand?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "understand why you have my contact and rest of still is upsetting to me that somebody i don't know",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "No, I don’t. I don’t unders—don’t understand why you have my contact infor— I still— It still is upsetting to me that somebody I don’t know, who I have no reason to have my contact information, has my contact information. The second part that’s upsetting is that you got it from my mail-lady who shouldn’t be giving out my information—",
+      "similarity": 0.8426,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        133
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "understand why you have my contact and rest of still is upsetting to me that somebody i don't know",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "who has no reason to have my contact information has my contact information has my contact information",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "No, I don’t. I don’t unders—don’t understand why you have my contact infor— I still— It still is upsetting to me that somebody I don’t know, who I have no reason to have my contact information, has my contact information. The second part that’s upsetting is that you got it from my mail-lady who shouldn’t be giving out my information—",
+      "similarity": 0.8426,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        133
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "who has no reason to have my contact information has my contact information has my contact information",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "the second part that's upsetting is that you got it from my mail lady who shouldn't be giving out my",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "No, I don’t. I don’t unders—don’t understand why you have my contact infor— I still— It still is upsetting to me that somebody I don’t know, who I have no reason to have my contact information, has my contact information. The second part that’s upsetting is that you got it from my mail-lady who shouldn’t be giving out my information—",
+      "similarity": 0.8426,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        133
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "the second part that's upsetting is that you got it from my mail lady who shouldn't be giving out my",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "information well i'm rogo that's my biggest concern that's my okay roco roco what hercules and i'll try to",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "information well i'm rogo that's my biggest concern that's my okay roco roco what hercules and i'll try to",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "keep it from going through your window i'll do my best bye this is a big deal guy hello yeah marvin please is",
+      "wiki_speaker": "LPC",
+      "wiki_text": "through your window! I’ll do my best!",
+      "similarity": 0.4722,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        140
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "through your window! I’ll do my best!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Marvin there yep hi this is rocko i'm just uh kind of calling everyone on the street",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, this is Rocco. I’m just, uh, kinda calling everyone on the street. I’m gonna be lettin’ off some, ah—",
+      "similarity": 0.6851,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        148
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, this is Rocco. I’m just, uh, kinda calling everyone on the street. I’m gonna be lettin’ off some, ah—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "i'm going to be letting off some uh what's street holograms later tonight so i just wanted to let you know",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…holograms later tonight, so I—",
+      "similarity": 0.4179,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        150
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "…holograms later tonight, so I—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "what i'll be doing okay i moved to flatbush from temecula california about three days ago okay",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I moved to Flatbush from Temecula, California about— …three days ago, okay?—",
+      "similarity": 0.8537,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        156,
+        158
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I moved to Flatbush from Temecula, California about— …three days ago, okay?—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "who did you get my number from uh from big red our other neighbor said to call him and call the other",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, from Big Red, our other neighbor; said to call him and call the other lady—",
+      "similarity": 0.7955,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        160
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, from Big Red, our other neighbor; said to call him and call the other lady—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "lady listen guy i just got holograms popping off i just wanted to let you know",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay] Listen, guy— I just got holograms poppin’ off. I just wanted ta let ya know; that’s all! I got one of, like, a kangaroo except it looks like he’s in a—",
+      "similarity": 0.646,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        162,
+        164
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[delay] Listen, guy— I just got holograms poppin’ off. I just wanted ta let ya know; that’s all! I got one of, like, a kangaroo except it looks like he’s in a—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "that's all i got one of like a kangaroo except it looks like he's in a kaleidoscope or something it's",
+      "wiki_speaker": "LPC",
+      "wiki_text": "…kaleidoscope or somethin’. It’s—",
+      "similarity": 0.4308,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        166
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "…kaleidoscope or somethin’. It’s—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "about six foot tall guy leave me alone please is that funny to you or something",
+      "wiki_speaker": "LPC",
+      "wiki_text": "’S that funny to you or somethin’?",
+      "similarity": 0.5636,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        170
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "’S that funny to you or somethin’?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "i've got one that looks like a maddor except there's all these stalagmites",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ve got one that looks like a matador except there’s all these stalagmites [sfx]",
+      "similarity": 0.9281,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        172
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’ve got one that looks like a matador except there’s all these stalagmites [sfx]",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 119,
+    "total_wiki_lines": 159,
+    "matched_wiki_lines": 95,
+    "unmatched_wiki_lines": 64,
+    "matched": 118,
+    "speakers_to_map": 4,
+    "text_auto_correct": 10,
+    "text_review": 60,
+    "text_group_review": 40,
+    "unmatched_json": 1
+  }
+}

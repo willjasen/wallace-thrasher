@@ -1,0 +1,160 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:28.385091+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Eel Bowel 1",
+  "track_slug": "eel-bowel-1",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/eel-bowel-1.json",
+  "json_sha256": "9ac3e4419b602ec57d9f3d789aa699fb9382cb50191aeff2d4e2cb8546337720",
+  "wiki_title": "Eel Bowel 1",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Eel_Bowel_1",
+  "speaker_mapping": {
+    "SPEAKER_00": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 0.7872,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 0.625,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, if you guys ever heard of eel bowel?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[in background] Hey, have you guys ever heard of \"eel bowel\"?",
+      "similarity": 0.7872,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "[in background] Hey, have you guys ever heard of \"eel bowel\"?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh, is that?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[in background] Oh, is that...? Is he...?",
+      "similarity": 0.625,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, is that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's me?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[in background] Oh, is that...? Is he...?",
+      "similarity": 0.625,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "It's me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "It is?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "It is?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sorry, we're not interested.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Sorry, we're not interested.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry, we're not interested.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 5,
+    "total_wiki_lines": 6,
+    "matched_wiki_lines": 3,
+    "unmatched_wiki_lines": 3,
+    "matched": 4,
+    "speakers_to_map": 1,
+    "text_auto_correct": 0,
+    "text_review": 1,
+    "text_group_review": 2,
+    "unmatched_json": 1
+  }
+}

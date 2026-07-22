@@ -1,0 +1,116 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:44.540076+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "I Dont Know Sister",
+  "track_slug": "i-dont-know-sister",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/i-dont-know-sister.json",
+  "json_sha256": "fe13588b480f4873d989aa0f2cb758874f9d07de37d1803e0866a571b71d6973",
+  "wiki_title": "I Don't Know, Sister",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/I_Don%27t_Know%2C_Sister",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.9375,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 0.8729,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, how you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, how you doin'?",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, how you doin'?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You know if you call here again or show your damn face, then you'd know how you were doing.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You know -- '[beep]' -- if you call here again, I'll show your damn face, and then you'd know how you were doin'. You know, I wish you would.",
+      "similarity": 0.8729,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know if you call here again or show your damn face, then you'd know how you were doing.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I wish you would.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You know -- '[beep]' -- if you call here again, I'll show your damn face, and then you'd know how you were doin'. You know, I wish you would.",
+      "similarity": 0.8729,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I wish you would.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 3,
+    "total_wiki_lines": 2,
+    "matched_wiki_lines": 2,
+    "unmatched_wiki_lines": 0,
+    "matched": 3,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 0,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

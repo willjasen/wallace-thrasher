@@ -1,0 +1,4785 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:29:11.356964+00:00",
+  "snapshot": "1784650942000-rest-longmont-potion-castle-20-20260721",
+  "album": "Longmont Potion Castle 20",
+  "album_slug": "longmont-potion-castle-20",
+  "track": "Normal Jarvis",
+  "track_slug": "normal-jarvis",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-20/normal-jarvis.json",
+  "json_sha256": "8c360e990f95cf6f98cc850146cb8d8ac373abb2832be2a2c22e84af1e60bf2a",
+  "wiki_title": "Normal Jarvis",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Normal_Jarvis",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Dan"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.7867,
+      "observations": 64,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 55.7323,
+          "observations": 64
+        },
+        {
+          "name": "Dan",
+          "score": 15.1114,
+          "observations": 17
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Dan",
+      "confidence": 0.9535,
+      "observations": 44,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Dan",
+          "score": 38.8756,
+          "observations": 44
+        },
+        {
+          "name": "LPC",
+          "score": 1.8952,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Dan.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Dan! My name’s Jarvis. I just, ah—",
+      "similarity": 0.7931,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Dan.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My name's Jarvis.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Dan! My name’s Jarvis. I just, ah—",
+      "similarity": 0.7931,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My name's Jarvis.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm new to the neighborhood here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I’m new to the neighborhood here! What’s goin’ on with you? I got your number from Big Red over on the other side.",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm new to the neighborhood here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's going on with you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I’m new to the neighborhood here! What’s goin’ on with you? I got your number from Big Red over on the other side.",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's going on with you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I got your number from Big Red over on the other side.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I’m new to the neighborhood here! What’s goin’ on with you? I got your number from Big Red over on the other side.",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got your number from Big Red over on the other side.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Fine.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Fine! What can I help you with?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fine.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What can I help you with?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Fine! What can I help you with?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What can I help you with?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'm new to the neighborhood, like I say,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, I'm new to the neighborhood, like I say,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "names Jarvis Buzzer.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "names Jarvis Buzzer.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So I moved down from normal about four days back.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, yeah, I’m new to the neighborhood, like I say. Name’s Jarvis Buzzer. So, yeah, I moved down from Normal about four days back. And I just got this new place and it—could—do you think there’s any way you could give me a hand, maybe, a little bit later? I just have this, ah, this sander; could you help me with it, just real fast? I can give you few dollars!",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So I moved down from normal about four days back.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I've just got this new place,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, yeah, I’m new to the neighborhood, like I say. Name’s Jarvis Buzzer. So, yeah, I moved down from Normal about four days back. And I just got this new place and it—could—do you think there’s any way you could give me a hand, maybe, a little bit later? I just have this, ah, this sander; could you help me with it, just real fast? I can give you few dollars!",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've just got this new place,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and do you think there's any way to give me a hand maybe a little bit later?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, yeah, I’m new to the neighborhood, like I say. Name’s Jarvis Buzzer. So, yeah, I moved down from Normal about four days back. And I just got this new place and it—could—do you think there’s any way you could give me a hand, maybe, a little bit later? I just have this, ah, this sander; could you help me with it, just real fast? I can give you few dollars!",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and do you think there's any way to give me a hand maybe a little bit later?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just have this, this sander.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, yeah, I’m new to the neighborhood, like I say. Name’s Jarvis Buzzer. So, yeah, I moved down from Normal about four days back. And I just got this new place and it—could—do you think there’s any way you could give me a hand, maybe, a little bit later? I just have this, ah, this sander; could you help me with it, just real fast? I can give you few dollars!",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just have this, this sander.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you help me with it just real fast?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, yeah, I’m new to the neighborhood, like I say. Name’s Jarvis Buzzer. So, yeah, I moved down from Normal about four days back. And I just got this new place and it—could—do you think there’s any way you could give me a hand, maybe, a little bit later? I just have this, ah, this sander; could you help me with it, just real fast? I can give you few dollars!",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you help me with it just real fast?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I can give a few dollars.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, yeah, I’m new to the neighborhood, like I say. Name’s Jarvis Buzzer. So, yeah, I moved down from Normal about four days back. And I just got this new place and it—could—do you think there’s any way you could give me a hand, maybe, a little bit later? I just have this, ah, this sander; could you help me with it, just real fast? I can give you few dollars!",
+      "similarity": 0.819,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can give a few dollars.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry, I'm still not clear on who I'm talking to.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "I’m sorry! I’m still not sure on who I’m talkin’ to.",
+      "similarity": 0.86,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m sorry! I’m still not sure on who I’m talkin’ to.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's J.B., Colin.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s J.B. callin’. What do you got goin’ on?—",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's J.B., Colin.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you got going on?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s J.B. callin’. What do you got goin’ on?—",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you got going on?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's Jarvis Buzzer.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s Jarvis Buzzer, okay?—",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's Jarvis Buzzer.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s Jarvis Buzzer, okay?—",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your real name, Jarvis?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—What’s the—what’s your real name, Jarvis?",
+      "similarity": 0.806,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—What’s the—what’s your real name, Jarvis?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That is my name.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That is my name. [exhales]",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That is my name. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's your real name, though?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "What’s your real name, though?",
+      "similarity": 0.9643,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s your real name, though?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you mean there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[sfx] What do you mean there?",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[sfx] What do you mean there?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who are you really?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Who are you really?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you really?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're just fiddling around because you don't want to help me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re just fiddlin’ around ‘cause you don’t wanna help me. I offered ya five, ten dollars fair ’n square! [exhales] I just wanna hook up a pulley in my house, here; that’s all’s I need!",
+      "similarity": 0.7812,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're just fiddling around because you don't want to help me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I offered you $5.10, fair and square.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re just fiddlin’ around ‘cause you don’t wanna help me. I offered ya five, ten dollars fair ’n square! [exhales] I just wanna hook up a pulley in my house, here; that’s all’s I need!",
+      "similarity": 0.7812,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I offered you $5.10, fair and square.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just want to hook up a pulley in my house here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re just fiddlin’ around ‘cause you don’t wanna help me. I offered ya five, ten dollars fair ’n square! [exhales] I just wanna hook up a pulley in my house, here; that’s all’s I need!",
+      "similarity": 0.7812,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just want to hook up a pulley in my house here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's all I need.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Who i—who are you?",
+      "similarity": 0.6522,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's all I need.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who are you?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Who i—who are you?",
+      "similarity": 0.6522,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm Jarvis.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m Jarvis. I’m from Normal. I lived here about a week now, alright? So, where do we stand, here, tough guy? [delay]",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Jarvis.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm from normal.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m Jarvis. I’m from Normal. I lived here about a week now, alright? So, where do we stand, here, tough guy? [delay]",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm from normal.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I lived here about a week now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m Jarvis. I’m from Normal. I lived here about a week now, alright? So, where do we stand, here, tough guy? [delay]",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I lived here about a week now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "All right, so where do we stand here, tough guy?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m Jarvis. I’m from Normal. I lived here about a week now, alright? So, where do we stand, here, tough guy? [delay]",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right, so where do we stand here, tough guy?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Good guy, guy, okay, okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Good guy, guy, okay, okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So does Justin have you do this?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "So, does—did Justin have you do this?",
+      "similarity": 0.9394,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "So, does—did Justin have you do this?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Justin.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Justin.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Justin.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Justin.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "“Justin”!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Justin.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Justin? Yeah, are you related to him?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Justin. A—ya—are you related to him?",
+      "similarity": 0.9118,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Justin. A—ya—are you related to him?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I'm not.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I’m not!",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I’m not!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Is your friend?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "’S he your friend?",
+      "similarity": 0.8667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "’S he your friend?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My brother helped me move here. Is that who you're talking about?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My brother helped me move here; is that who you’re talkin’ about?",
+      "similarity": 0.976,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My brother helped me move here; is that who you’re talkin’ about?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, what's his name?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Yeah, what’s his name?",
+      "similarity": 0.95,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, what’s his name?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Flavio, Buzzer, and I'm Jarvis Buzzer.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Flavio Buzzer and—",
+      "similarity": 0.6538,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Flavio Buzzer and—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Move down from normal.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I’m Jarvis Buzzer. Moved down from Normal.",
+      "similarity": 0.6885,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—I’m Jarvis Buzzer. Moved down from Normal.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So this is, do, like, record this and put it on the Internet, or you record it so he can listen to it?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "So this is—do you, like, record this and put it on the internet? Or you record it so he can listen to it?",
+      "similarity": 0.9798,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "So this is—do you, like, record this and put it on the internet? Or you record it so he can listen to it?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who? My brother?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        49,
+        50
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My brother?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who? My brother?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        49,
+        50
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My brother?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I need help at my time.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I—I need help at my house, here. Big Red said that you were a handy kinda guy and that you might help me. I guess he was wrong, though, because you don’t seem that willing to help me out. I’m new to the area here! Ya understand? [delay] Because that’s what I’m tryin’ ta—need your help with—",
+      "similarity": 0.8958,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I need help at my time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "my house here. Big Red said that you were a handy kind of guy and that you might help me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I—I need help at my house, here. Big Red said that you were a handy kinda guy and that you might help me. I guess he was wrong, though, because you don’t seem that willing to help me out. I’m new to the area here! Ya understand? [delay] Because that’s what I’m tryin’ ta—need your help with—",
+      "similarity": 0.8958,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "my house here. Big Red said that you were a handy kind of guy and that you might help me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I guess he was wrong, though, because you don't seem not willing to help me out. I'm new to the area here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I—I need help at my house, here. Big Red said that you were a handy kinda guy and that you might help me. I guess he was wrong, though, because you don’t seem that willing to help me out. I’m new to the area here! Ya understand? [delay] Because that’s what I’m tryin’ ta—need your help with—",
+      "similarity": 0.8958,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I guess he was wrong, though, because you don't seem not willing to help me out. I'm new to the area here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You understand? Because that's what I'm trying to...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I—I need help at my house, here. Big Red said that you were a handy kinda guy and that you might help me. I guess he was wrong, though, because you don’t seem that willing to help me out. I’m new to the area here! Ya understand? [delay] Because that’s what I’m tryin’ ta—need your help with—",
+      "similarity": 0.8958,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You understand? Because that's what I'm trying to...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, that's why I thought this was related to Justin, because he kind of talks like that.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Well that’s why I—that’s why I thought this was related Justin. Because he kinda talks like that.",
+      "similarity": 0.8791,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Well that’s why I—that’s why I thought this was related Justin. Because he kinda talks like that.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know who that is. No, I do who that is.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don’t know who that is.",
+      "similarity": 0.6765,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don’t know who that is.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Oh. Well that’s who I think it is.",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "json_group": [
+        58,
+        59
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, that's who I think it is.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Oh. Well that’s who I think it is.",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "json_group": [
+        58,
+        59
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, that's who I think it is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, you're dead wrong. How does that make you feel?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, you’re dead wrong! How’s that make ya feel? [delay]—",
+      "similarity": 0.8627,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you’re dead wrong! How’s that make ya feel? [delay]—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I think I'm right, so...",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Oh! I think I’m right, so…",
+      "similarity": 0.8837,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Oh! I think I’m right, so…",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think you're right about which part?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You think you’re right about which part? [sfx] That I’ll come over and whoop ya in the aaa?! [delay] ‘Cause, buddy, I’ll come over there and I’ll kick y’aaa! [exhales] [delay] Ya feel me? I talked to everybody on the street; I talked to Ernie, I talked to Gustavo, I frickin’ talked to Octavio up at the grocery store. They all said, “Oh, yeah! Call Dan up!” And all you’ve given me is a lump o’ coal, here, today! [exhales]",
+      "similarity": 0.6246,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I think you're right about which part?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That I'll come over and whoop you in the A?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You think you’re right about which part? [sfx] That I’ll come over and whoop ya in the aaa?! [delay] ‘Cause, buddy, I’ll come over there and I’ll kick y’aaa! [exhales] [delay] Ya feel me? I talked to everybody on the street; I talked to Ernie, I talked to Gustavo, I frickin’ talked to Octavio up at the grocery store. They all said, “Oh, yeah! Call Dan up!” And all you’ve given me is a lump o’ coal, here, today! [exhales]",
+      "similarity": 0.6246,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That I'll come over and whoop you in the A?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because, buddy, I'll come over there and I'll kick you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You think you’re right about which part? [sfx] That I’ll come over and whoop ya in the aaa?! [delay] ‘Cause, buddy, I’ll come over there and I’ll kick y’aaa! [exhales] [delay] Ya feel me? I talked to everybody on the street; I talked to Ernie, I talked to Gustavo, I frickin’ talked to Octavio up at the grocery store. They all said, “Oh, yeah! Call Dan up!” And all you’ve given me is a lump o’ coal, here, today! [exhales]",
+      "similarity": 0.6246,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because, buddy, I'll come over there and I'll kick you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You feel me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You think you’re right about which part? [sfx] That I’ll come over and whoop ya in the aaa?! [delay] ‘Cause, buddy, I’ll come over there and I’ll kick y’aaa! [exhales] [delay] Ya feel me? I talked to everybody on the street; I talked to Ernie, I talked to Gustavo, I frickin’ talked to Octavio up at the grocery store. They all said, “Oh, yeah! Call Dan up!” And all you’ve given me is a lump o’ coal, here, today! [exhales]",
+      "similarity": 0.6246,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You feel me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I talk to everybody on the street.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You think you’re right about which part? [sfx] That I’ll come over and whoop ya in the aaa?! [delay] ‘Cause, buddy, I’ll come over there and I’ll kick y’aaa! [exhales] [delay] Ya feel me? I talked to everybody on the street; I talked to Ernie, I talked to Gustavo, I frickin’ talked to Octavio up at the grocery store. They all said, “Oh, yeah! Call Dan up!” And all you’ve given me is a lump o’ coal, here, today! [exhales]",
+      "similarity": 0.6246,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I talk to everybody on the street.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I talk to Ernie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You think you’re right about which part? [sfx] That I’ll come over and whoop ya in the aaa?! [delay] ‘Cause, buddy, I’ll come over there and I’ll kick y’aaa! [exhales] [delay] Ya feel me? I talked to everybody on the street; I talked to Ernie, I talked to Gustavo, I frickin’ talked to Octavio up at the grocery store. They all said, “Oh, yeah! Call Dan up!” And all you’ve given me is a lump o’ coal, here, today! [exhales]",
+      "similarity": 0.6246,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I talk to Ernie.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I talked to Gustavo.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I talked to Gustavo.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I freaking talk to Octavio up at the grocery store.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I freaking talk to Octavio up at the grocery store.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They all said, oh, yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "They all said, oh, yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Call Dan up.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Call Dan up.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But all you've given me is a lump of coal here today.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "But all you've given me is a lump of coal here today.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you do this for fun",
+      "wiki_speaker": "Dan",
+      "wiki_text": "You do this for fun?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "you do this for fun",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and I don't like what I hear",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I don’t like what I hear! [delay] I don’t like what I’m hearin’ up here! [sfx]",
+      "similarity": 0.8794,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I don't like what I hear",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't like what I'm hearing up here",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I don’t like what I hear! [delay] I don’t like what I’m hearin’ up here! [sfx]",
+      "similarity": 0.8794,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't like what I'm hearing up here",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why don't you tell me who you really are?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Why don’t you tell me who you really are?",
+      "similarity": 0.975,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you tell me who you really are?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Jarvis Jarvis Jarvis for the 18th time",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Jarvis! Jarvis! Jarvis! For the eighteenth time! Born 'n reared!—",
+      "similarity": 0.7423,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jarvis! Jarvis! Jarvis! For the eighteenth time! Born 'n reared!—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's funny",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—That’s funny!—",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—That’s funny!—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why don't you tell me who you really are?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Who don’t you tell me you—who you really are? Who you really are?—",
+      "similarity": 0.7379,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Who don’t you tell me you—who you really are? Who you really are?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Born and reared up in normal",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Born 'n reared up in Normal!",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Born 'n reared up in Normal!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I come down here",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I come down here",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And then I got some neighbor of mine",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I come down here and then I got some neighbor of mine trottin’ around like he’s to cool for school—doesn’t believe a word I say! He wants to get buckwild. Well buddy, let’s get buckwile! I’ll twirl you aroun’! Ya got me figured out? I offered ya some money—",
+      "similarity": 0.7415,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And then I got some neighbor of mine",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Trotting around",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I come down here and then I got some neighbor of mine trottin’ around like he’s to cool for school—doesn’t believe a word I say! He wants to get buckwild. Well buddy, let’s get buckwile! I’ll twirl you aroun’! Ya got me figured out? I offered ya some money—",
+      "similarity": 0.7415,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Trotting around",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Like he's too cool for school",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I come down here and then I got some neighbor of mine trottin’ around like he’s to cool for school—doesn’t believe a word I say! He wants to get buckwild. Well buddy, let’s get buckwile! I’ll twirl you aroun’! Ya got me figured out? I offered ya some money—",
+      "similarity": 0.7415,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Like he's too cool for school",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Doesn't believe Orta",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I come down here and then I got some neighbor of mine trottin’ around like he’s to cool for school—doesn’t believe a word I say! He wants to get buckwild. Well buddy, let’s get buckwile! I’ll twirl you aroun’! Ya got me figured out? I offered ya some money—",
+      "similarity": 0.7415,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Doesn't believe Orta",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "to say. He wants to get",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I come down here and then I got some neighbor of mine trottin’ around like he’s to cool for school—doesn’t believe a word I say! He wants to get buckwild. Well buddy, let’s get buckwile! I’ll twirl you aroun’! Ya got me figured out? I offered ya some money—",
+      "similarity": 0.7415,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "to say. He wants to get",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Buck Wild. Well, buddy, let's get Buck",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I come down here and then I got some neighbor of mine trottin’ around like he’s to cool for school—doesn’t believe a word I say! He wants to get buckwild. Well buddy, let’s get buckwile! I’ll twirl you aroun’! Ya got me figured out? I offered ya some money—",
+      "similarity": 0.7415,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Buck Wild. Well, buddy, let's get Buck",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Wild. I'll twirl",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Wild. I'll twirl",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "you around.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "you around.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You got me figured out? I",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You got me figured out? I",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "offered you some money, Fearing, Square,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "offered you some money, Fearing, Square,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "to help me hook up my pulley here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—fair 'n square to help me hook up m’pulley here! And now you wanna get buckwile? [delay] Buddy, let’s get buckwile!",
+      "similarity": 0.8358,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "to help me hook up my pulley here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And now you want to get Buckwild?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—fair 'n square to help me hook up m’pulley here! And now you wanna get buckwile? [delay] Buddy, let’s get buckwile!",
+      "similarity": 0.8358,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And now you want to get Buckwild?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Buddy, let's get Buck Wild.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—fair 'n square to help me hook up m’pulley here! And now you wanna get buckwile? [delay] Buddy, let’s get buckwile!",
+      "similarity": 0.8358,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Buddy, let's get Buck Wild.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He's threatening me, Jarvis?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "You threatenin’ me? Jarvis?",
+      "similarity": 0.84,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "You threatenin’ me? Jarvis?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I offered you the money, Fair and Squill,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I offered ya the money fair 'n square to help me with my pulley! And you don’t believe where I’m from—",
+      "similarity": 0.5036,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I offered ya the money fair 'n square to help me with my pulley! And you don’t believe where I’m from—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "to help me with my pulley.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Don’t wanna help you—",
+      "similarity": 0.4,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Don’t wanna help you—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And you don't believe where I'm from. You don't believe",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And you don't believe where I'm from. You don't believe",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "my names. What do you want for me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—you don’t believe my names? What do you want from me?",
+      "similarity": 0.747,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—you don’t believe my names? What do you want from me?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Let's start with this.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "W—let’s start with this: tell me your real name.",
+      "similarity": 0.9556,
+      "match_type": "similar",
+      "json_group": [
+        100,
+        101
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's start with this.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tell me your real name.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "W—let’s start with this: tell me your real name.",
+      "similarity": 0.9556,
+      "match_type": "similar",
+      "json_group": [
+        100,
+        101
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tell me your real name.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm not going to say it again.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m not gonna say it again—",
+      "similarity": 0.8364,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m not gonna say it again—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your real address.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—And your real address. [exhales]",
+      "similarity": 0.7391,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—And your real address. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I've told you 20 times who I am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ve told ya 20 times who I am! And where I got your number! I’m new to the community over here!",
+      "similarity": 0.9626,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105,
+        106
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've told you 20 times who I am.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And where I got your number.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ve told ya 20 times who I am! And where I got your number! I’m new to the community over here!",
+      "similarity": 0.9626,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105,
+        106
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And where I got your number.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm new to the community over here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ve told ya 20 times who I am! And where I got your number! I’m new to the community over here!",
+      "similarity": 0.9626,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105,
+        106
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm new to the community over here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "‘Kay. [inhales] So, obviously, I don’t believe that. So why do you keep sayin’ it?",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So obviously I don't believe that.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "‘Kay. [inhales] So, obviously, I don’t believe that. So why do you keep sayin’ it?",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "So obviously I don't believe that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So why do you keep saying it?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "‘Kay. [inhales] So, obviously, I don’t believe that. So why do you keep sayin’ it?",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "So why do you keep saying it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So why not?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So why not? Big 'n Bad? What’s your real name?",
+      "similarity": 0.9425,
+      "match_type": "similar",
+      "json_group": [
+        110,
+        111,
+        112
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So why not?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Big and bad?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So why not? Big 'n Bad? What’s your real name?",
+      "similarity": 0.9425,
+      "match_type": "similar",
+      "json_group": [
+        110,
+        111,
+        112
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Big and bad?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's your real name?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So why not? Big 'n Bad? What’s your real name?",
+      "similarity": 0.9425,
+      "match_type": "similar",
+      "json_group": [
+        110,
+        111,
+        112
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's your real name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You tell me.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "You tell me!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "You tell me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I thought it was Dan.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[scoffs] I thought it was “Dan”! ‘Parenty you got everything figured out—you’re so much smarter than me—so, okay. What do I need to know around here, if nothing is as it seems, hm? [inhales] [exhales]",
+      "similarity": 0.8908,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I thought it was Dan.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Apparently you got everything figured out.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[scoffs] I thought it was “Dan”! ‘Parenty you got everything figured out—you’re so much smarter than me—so, okay. What do I need to know around here, if nothing is as it seems, hm? [inhales] [exhales]",
+      "similarity": 0.8908,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Apparently you got everything figured out.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're so much smart.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[scoffs] I thought it was “Dan”! ‘Parenty you got everything figured out—you’re so much smarter than me—so, okay. What do I need to know around here, if nothing is as it seems, hm? [inhales] [exhales]",
+      "similarity": 0.8908,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're so much smart.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "than me. So, okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[scoffs] I thought it was “Dan”! ‘Parenty you got everything figured out—you’re so much smarter than me—so, okay. What do I need to know around here, if nothing is as it seems, hm? [inhales] [exhales]",
+      "similarity": 0.8908,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "than me. So, okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do I need to know to live around here?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[scoffs] I thought it was “Dan”! ‘Parenty you got everything figured out—you’re so much smarter than me—so, okay. What do I need to know around here, if nothing is as it seems, hm? [inhales] [exhales]",
+      "similarity": 0.8908,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do I need to know to live around here?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If nothing is as it seems, hmm?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[scoffs] I thought it was “Dan”! ‘Parenty you got everything figured out—you’re so much smarter than me—so, okay. What do I need to know around here, if nothing is as it seems, hm? [inhales] [exhales]",
+      "similarity": 0.8908,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If nothing is as it seems, hmm?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is what I would tell you.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "I—this is what I would tell ya: If you don’t have anything to do with Justin, um, you talk just like him.",
+      "similarity": 0.9652,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121,
+        122
+      ],
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is what I would tell you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If you don't have anything to do with Justin,",
+      "wiki_speaker": "Dan",
+      "wiki_text": "I—this is what I would tell ya: If you don’t have anything to do with Justin, um, you talk just like him.",
+      "similarity": 0.9652,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121,
+        122
+      ],
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you don't have anything to do with Justin,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "um, you talk just like him.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "I—this is what I would tell ya: If you don’t have anything to do with Justin, um, you talk just like him.",
+      "similarity": 0.9652,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121,
+        122
+      ],
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "um, you talk just like him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who's just, just, just, just, just.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who’s “Justin”? [delay]",
+      "similarity": 0.4167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Who’s “Justin”? [delay]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The kind of guy that thinks this is funny and talks just like you.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "The kinda guy that think this is funny and talks just like you.",
+      "similarity": 0.9606,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "The kinda guy that think this is funny and talks just like you.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 125,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Talks just like me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "“Talks just like” me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Talks just like me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 126,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Buddy, I'm 59 years of age.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Buddy, I’m 59 years of age! Born 'n reared in Normal, Illinois. And I just moved down here a week ago! Was lookin’ for a hand from my neighbor! ‘Cause that’s the kinda guy I am; I’m a neighbor—",
+      "similarity": 0.8927,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Buddy, I'm 59 years of age.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 127,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Born in Reared Norman, Illinois.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Buddy, I’m 59 years of age! Born 'n reared in Normal, Illinois. And I just moved down here a week ago! Was lookin’ for a hand from my neighbor! ‘Cause that’s the kinda guy I am; I’m a neighbor—",
+      "similarity": 0.8927,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Born in Reared Norman, Illinois.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 128,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and I just moved down here a week ago.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Buddy, I’m 59 years of age! Born 'n reared in Normal, Illinois. And I just moved down here a week ago! Was lookin’ for a hand from my neighbor! ‘Cause that’s the kinda guy I am; I’m a neighbor—",
+      "similarity": 0.8927,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I just moved down here a week ago.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 129,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I was looking for a hand for my neighbor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Buddy, I’m 59 years of age! Born 'n reared in Normal, Illinois. And I just moved down here a week ago! Was lookin’ for a hand from my neighbor! ‘Cause that’s the kinda guy I am; I’m a neighbor—",
+      "similarity": 0.8927,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was looking for a hand for my neighbor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 130,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because that's the kind of guy I am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Buddy, I’m 59 years of age! Born 'n reared in Normal, Illinois. And I just moved down here a week ago! Was lookin’ for a hand from my neighbor! ‘Cause that’s the kinda guy I am; I’m a neighbor—",
+      "similarity": 0.8927,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because that's the kind of guy I am.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 131,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I'm not going to do it.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—W—well I’m not gonna do it! I’m not gonna do it for you—",
+      "similarity": 0.7308,
+      "match_type": "similar",
+      "json_group": [
+        131,
+        132
+      ],
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I'm not going to do it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 132,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to do it.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—W—well I’m not gonna do it! I’m not gonna do it for you—",
+      "similarity": 0.7308,
+      "match_type": "similar",
+      "json_group": [
+        131,
+        132
+      ],
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not going to do it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 133,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why not?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Why not?!—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why not?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 134,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So what do you want from me?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—So whadda ya want from me?",
+      "similarity": 0.8462,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—So whadda ya want from me?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 135,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh? It would take ya all of walkin’ across the street; is that too much to ask up here, or what do you think? [delay]",
+      "similarity": 0.9541,
+      "match_type": "similar",
+      "json_group": [
+        135,
+        136,
+        137,
+        138
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 136,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It would take you all of walking across the street.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh? It would take ya all of walkin’ across the street; is that too much to ask up here, or what do you think? [delay]",
+      "similarity": 0.9541,
+      "match_type": "similar",
+      "json_group": [
+        135,
+        136,
+        137,
+        138
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It would take you all of walking across the street.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 137,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Is that too much to ask up here?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh? It would take ya all of walkin’ across the street; is that too much to ask up here, or what do you think? [delay]",
+      "similarity": 0.9541,
+      "match_type": "similar",
+      "json_group": [
+        135,
+        136,
+        137,
+        138
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that too much to ask up here?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 138,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Or what do you think?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh? It would take ya all of walkin’ across the street; is that too much to ask up here, or what do you think? [delay]",
+      "similarity": 0.9541,
+      "match_type": "similar",
+      "json_group": [
+        135,
+        136,
+        137,
+        138
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Or what do you think?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 139,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Wait, wing, wait.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Dan",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Wait, wing, wait.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 140,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, like I said, give me your address.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Well like I said, gimme your address. I’ll walk over there; I said that yesterday—",
+      "similarity": 0.7941,
+      "match_type": "similar",
+      "json_group": [
+        140,
+        141
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, like I said, give me your address.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 141,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll walk over there.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Well like I said, gimme your address. I’ll walk over there; I said that yesterday—",
+      "similarity": 0.7941,
+      "match_type": "similar",
+      "json_group": [
+        140,
+        141
+      ],
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll walk over there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 142,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, so now you want the money.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Oh, so now you want the money; is that it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        142,
+        143
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, so now you want the money.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 143,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Is that it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Oh, so now you want the money; is that it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        142,
+        143
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 144,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I just want to meet you.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "No! I just wanna meet you.",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "No! I just wanna meet you.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 145,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, why is that?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, why is that? You don’t even believe a flippin’ word I say!",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "json_group": [
+        145,
+        146
+      ],
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, why is that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 146,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You don't even believe a flipping word I say.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, why is that? You don’t even believe a flippin’ word I say!",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "json_group": [
+        145,
+        146
+      ],
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't even believe a flipping word I say.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 147,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, maybe if I met you in person.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "I like—well, maybe if I met ya in person…",
+      "similarity": 0.8611,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "I like—well, maybe if I met ya in person…",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 148,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, maybe if I met you in person, I'll talk.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Maybe if I met ya in person I’ll kick y’aaa! [delay] [cracks up] [sfx]",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah! Maybe if I met ya in person I’ll kick y’aaa! [delay] [cracks up] [sfx]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 149,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the address again?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "What’s the address, again?",
+      "similarity": 0.9583,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s the address, again?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 150,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm at 6022.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m at 6022.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m at 6022.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 151,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the street, dumbass?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "What’s the street, dumbass?",
+      "similarity": 0.96,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s the street, dumbass?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 152,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Same street as you, tough guy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Same street as you, Tough Guy!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Same street as you, tough guy.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 153,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What street is that?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "What street is that?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What street is that?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 154,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll come on over to your place.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ll come on over to your place! Are you there now? I’ll come over there now! Show ya how we do things in Normal!—",
+      "similarity": 0.9464,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156
+      ],
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll come on over to your place.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 155,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Are you there now? I'll come over there now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ll come on over to your place! Are you there now? I’ll come over there now! Show ya how we do things in Normal!—",
+      "similarity": 0.9464,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156
+      ],
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you there now? I'll come over there now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 156,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll show you how we do things in normal.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ll come on over to your place! Are you there now? I’ll come over there now! Show ya how we do things in Normal!—",
+      "similarity": 0.9464,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156
+      ],
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll show you how we do things in normal.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 157,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll head right over.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—No! I’ll—I’ll head right over. Just tell me the street name.",
+      "similarity": 0.8515,
+      "match_type": "similar",
+      "json_group": [
+        157,
+        158
+      ],
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll head right over.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 158,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just tell me the street.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—No! I’ll—I’ll head right over. Just tell me the street name.",
+      "similarity": 0.8515,
+      "match_type": "similar",
+      "json_group": [
+        157,
+        158
+      ],
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just tell me the street.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 159,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "street name.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Dan",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "street name.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 160,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And then you'll know my name.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And then you’ll know my name!—Jarvis Buzzer—all day long!",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        160,
+        161
+      ],
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And then you'll know my name.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 161,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Jarvis Buzzer all day long.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And then you’ll know my name!—Jarvis Buzzer—all day long!",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        160,
+        161
+      ],
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jarvis Buzzer all day long.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 162,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your street name there?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "What’s your s—what’s your street name, there—?",
+      "similarity": 0.7778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s your s—what’s your street name, there—?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 163,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "There's only one of me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—There’s only one o’ me!—",
+      "similarity": 0.9302,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—There’s only one o’ me!—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 164,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Same freaking street as you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Same frickin’ street as you!",
+      "similarity": 0.9057,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Same frickin’ street as you!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 165,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "6-022, what's the street?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Six-Zero-Two-Two. What’s the street? Why can’t you answer that? What’s wrong with you? Say the street name.",
+      "similarity": 0.8705,
+      "match_type": "similar",
+      "json_group": [
+        165,
+        166,
+        167,
+        168
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "6-022, what's the street?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 166,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why can't you answer that?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Six-Zero-Two-Two. What’s the street? Why can’t you answer that? What’s wrong with you? Say the street name.",
+      "similarity": 0.8705,
+      "match_type": "similar",
+      "json_group": [
+        165,
+        166,
+        167,
+        168
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why can't you answer that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 167,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's wrong with you?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Six-Zero-Two-Two. What’s the street? Why can’t you answer that? What’s wrong with you? Say the street name.",
+      "similarity": 0.8705,
+      "match_type": "similar",
+      "json_group": [
+        165,
+        166,
+        167,
+        168
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's wrong with you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 168,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Say the street name.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Six-Zero-Two-Two. What’s the street? Why can’t you answer that? What’s wrong with you? Say the street name.",
+      "similarity": 0.8705,
+      "match_type": "similar",
+      "json_group": [
+        165,
+        166,
+        167,
+        168
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Say the street name.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 169,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm on Mocal Drive.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m on Mocal Drive! D’you understand?—",
+      "similarity": 0.6415,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m on Mocal Drive! D’you understand?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 170,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you understand?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Oh really? That’s weird!",
+      "similarity": 0.6154,
+      "match_type": "similar",
+      "json_group": [
+        170,
+        171
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Do you understand?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 171,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's weird.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Oh really? That’s weird!",
+      "similarity": 0.6154,
+      "match_type": "similar",
+      "json_group": [
+        170,
+        171
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That's weird.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 172,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, yeah?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh yeah? [delay]",
+      "similarity": 0.7,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh yeah? [delay]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 173,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I probably suppose you don't believe.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Prolly suppose you don’t believe that, either, do ya?",
+      "similarity": 0.8952,
+      "match_type": "similar",
+      "json_group": [
+        173,
+        174
+      ],
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I probably suppose you don't believe.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 174,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "that either, do you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Prolly suppose you don’t believe that, either, do ya?",
+      "similarity": 0.8952,
+      "match_type": "similar",
+      "json_group": [
+        173,
+        174
+      ],
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "that either, do you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 175,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I don't believe that.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Nah, I don’t believe it.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nah, I don’t believe it.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 176,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why is that?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why’s that?",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        106
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why’s that?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 177,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you said it's the street I live on.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "‘Cause you said it’s the street I live on! That’s not the street I live on!",
+      "similarity": 0.9589,
+      "match_type": "similar",
+      "json_group": [
+        177,
+        178
+      ],
+      "wiki_indices": [
+        107
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because you said it's the street I live on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 178,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's not the street I live on.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "‘Cause you said it’s the street I live on! That’s not the street I live on!",
+      "similarity": 0.9589,
+      "match_type": "similar",
+      "json_group": [
+        177,
+        178
+      ],
+      "wiki_indices": [
+        107
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's not the street I live on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 179,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, it's sure the hell is.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, it sure the hell is!",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        108
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, it sure the hell is!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 180,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's not.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "It’s not.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        109
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s not.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 181,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen, Big Red told me I should...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen, Big Red told me I should—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        110
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, Big Red told me I should...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 182,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So who are you?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—So who are you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        111
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "So who are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 183,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want to put up a towel holder in my new residence.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I wanna put up a towel holder in my new residence. But apparently, that’s—",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        183,
+        184
+      ],
+      "wiki_indices": [
+        112
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want to put up a towel holder in my new residence.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 184,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But apparently that's...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I wanna put up a towel holder in my new residence. But apparently, that’s—",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        183,
+        184
+      ],
+      "wiki_indices": [
+        112
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But apparently that's...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 185,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, really? What color?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Oh really? What color?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        113
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, really? What color?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 186,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I haven't pulled the trigger yet on that one.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, uh [waffles] I haven’t pulled the trigger yet on that one! [delay] ‘Kay? But I need a hand up here—",
+      "similarity": 0.6621,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        114
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, uh [waffles] I haven’t pulled the trigger yet on that one! [delay] ‘Kay? But I need a hand up here—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 187,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Okay—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        117
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 188,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But I need a hand up here, big guy.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "But I need a hand up here, big guy.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 189,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I need to put up here,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And I need to put up here,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 190,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "some new face plates for my power outlets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—put up some new face places for my power outlets. And I thought you could give me a hand!",
+      "similarity": 0.9461,
+      "match_type": "similar",
+      "json_group": [
+        190,
+        191
+      ],
+      "wiki_indices": [
+        118
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "some new face plates for my power outlets.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 191,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I thought you could give me a hand.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—put up some new face places for my power outlets. And I thought you could give me a hand!",
+      "similarity": 0.9461,
+      "match_type": "similar",
+      "json_group": [
+        190,
+        191
+      ],
+      "wiki_indices": [
+        118
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I thought you could give me a hand.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 192,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Okay. Why—why did you think that?",
+      "similarity": 0.931,
+      "match_type": "similar",
+      "json_group": [
+        192,
+        193
+      ],
+      "wiki_indices": [
+        119
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 193,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why did you think that?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Okay. Why—why did you think that?",
+      "similarity": 0.931,
+      "match_type": "similar",
+      "json_group": [
+        192,
+        193
+      ],
+      "wiki_indices": [
+        119
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why did you think that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 194,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Big Red said you're a helpful kind of guy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Big Red said you were a helpful kinda guy. He had to go to work! Buddy, you’ve just given me nothin’ but a runaround up here! [delay]",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        194,
+        195,
+        196
+      ],
+      "wiki_indices": [
+        120
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Big Red said you're a helpful kind of guy.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 195,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He had to go to work.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Big Red said you were a helpful kinda guy. He had to go to work! Buddy, you’ve just given me nothin’ but a runaround up here! [delay]",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        194,
+        195,
+        196
+      ],
+      "wiki_indices": [
+        120
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He had to go to work.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 196,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But you've just given me nothing but a runaround up here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Big Red said you were a helpful kinda guy. He had to go to work! Buddy, you’ve just given me nothin’ but a runaround up here! [delay]",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        194,
+        195,
+        196
+      ],
+      "wiki_indices": [
+        120
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But you've just given me nothing but a runaround up here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 197,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hmm.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Hm.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        121
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hm.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 198,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So that's why I say.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So that’s why I say maybe I should just come over and, ah, [layered & pitch fx] just settle the score with ya here, one time! How ‘bout I come up and settle the score, big guy?—",
+      "similarity": 0.563,
+      "match_type": "similar",
+      "json_group": [
+        198,
+        199,
+        200
+      ],
+      "wiki_indices": [
+        122
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "So that's why I say.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 199,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Maybe I should just come over and...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So that’s why I say maybe I should just come over and, ah, [layered & pitch fx] just settle the score with ya here, one time! How ‘bout I come up and settle the score, big guy?—",
+      "similarity": 0.563,
+      "match_type": "similar",
+      "json_group": [
+        198,
+        199,
+        200
+      ],
+      "wiki_indices": [
+        122
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Maybe I should just come over and...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 200,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So that's why I say.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So that’s why I say maybe I should just come over and, ah, [layered & pitch fx] just settle the score with ya here, one time! How ‘bout I come up and settle the score, big guy?—",
+      "similarity": 0.563,
+      "match_type": "similar",
+      "json_group": [
+        198,
+        199,
+        200
+      ],
+      "wiki_indices": [
+        122
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "So that's why I say.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 201,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Maybe I should just go to score with you here one time.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Alright, what would you wanna—what—what score to settle? What do you want?",
+      "similarity": 0.448,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        124
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Alright, what would you wanna—what—what score to settle? What do you want?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 202,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How about I come up and settle a score, big guy?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How about I come up and settle a score, big guy?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 203,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to level you with my bullwhip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m gonna level you with my bullwhip! [exhales]",
+      "similarity": 0.7952,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        125
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m gonna level you with my bullwhip! [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 204,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bullwhip.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Bullwhip.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 205,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's a good one.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "That’s a good one!",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        126
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "That’s a good one!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 206,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I may make it sense to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Am I makin’ sense to you? Dan? [exhales]",
+      "similarity": 0.6462,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        127
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Am I makin’ sense to you? Dan? [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 207,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to level you with my damn.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm going to level you with my damn.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 208,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bullwhip.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Bullwhip.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 209,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What'd you say?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What'd you say?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 210,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because I'll come up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "‘Cause I’ll come up and kick ya ass!",
+      "similarity": 0.642,
+      "match_type": "similar",
+      "json_group": [
+        210,
+        211
+      ],
+      "wiki_indices": [
+        129
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because I'll come up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 211,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I make it sense to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "‘Cause I’ll come up and kick ya ass!",
+      "similarity": 0.642,
+      "match_type": "similar",
+      "json_group": [
+        210,
+        211
+      ],
+      "wiki_indices": [
+        129
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And I make it sense to you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 212,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to level you with down.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm going to level you with down.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 213,
+      "json_speaker": "None",
+      "json_text": "Bullwhip.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Bullwhip.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 214,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Okay! What’s you name?",
+      "similarity": 0.9268,
+      "match_type": "similar",
+      "json_group": [
+        214,
+        215
+      ],
+      "wiki_indices": [
+        130
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 215,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your name?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Okay! What’s you name?",
+      "similarity": 0.9268,
+      "match_type": "similar",
+      "json_group": [
+        214,
+        215
+      ],
+      "wiki_indices": [
+        130
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's your name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 216,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Jarvis.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Jarvis.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        131
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jarvis.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 217,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your real name, Jarvis?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "What’s your real name, Jarvis?",
+      "similarity": 0.9643,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        132
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s your real name, Jarvis?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 218,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Jarvis buzzer.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Jarvis Buzzer. Put me into your search engine, if you don’t believe me!",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        218,
+        219,
+        220
+      ],
+      "wiki_indices": [
+        133
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jarvis buzzer.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 219,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Put me into your job.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Jarvis Buzzer. Put me into your search engine, if you don’t believe me!",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        218,
+        219,
+        220
+      ],
+      "wiki_indices": [
+        133
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Put me into your job.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 220,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "search engine. If you don't believe me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Jarvis Buzzer. Put me into your search engine, if you don’t believe me!",
+      "similarity": 0.9571,
+      "match_type": "similar",
+      "json_group": [
+        218,
+        219,
+        220
+      ],
+      "wiki_indices": [
+        133
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "search engine. If you don't believe me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 221,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay. I'll plug it into my search engine. What would I find?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Okay! I’ll plug it into my search engine! What would I find?",
+      "similarity": 0.9825,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        134
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay! I’ll plug it into my search engine! What would I find?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 222,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That I'm from normal Illinois. I just moved here about seven, ten days ago.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That I’m from Normal, Illinois. I just moved here about seven, ten days ago.",
+      "similarity": 0.9861,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        135
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That I’m from Normal, Illinois. I just moved here about seven, ten days ago.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 223,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Put me into your search engine. If you don't believe me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Put me into your search engine. If you don't believe me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 224,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why is it echoing like that?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Why is it echoing like that?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        136
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why is it echoing like that?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 225,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just moved here about ten days ago, seven, ten days ago.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I just moved here about ten days ago, seven, ten days ago.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 226,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, why do you keep echoing? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Why do you keep echoing? “What’s your name?” “What’s your name?” “What’s your name?” “What’s your name?” “What’s your name?” Why don’t you just get in gear, guy? Get with the program already! Huh? I’m new to the community over here!—",
+      "similarity": 0.6074,
+      "match_type": "similar",
+      "json_group": [
+        226,
+        227
+      ],
+      "wiki_indices": [
+        137
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, why do you keep echoing? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name? What's your name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 227,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm new to the community over here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah! Why do you keep echoing? “What’s your name?” “What’s your name?” “What’s your name?” “What’s your name?” “What’s your name?” Why don’t you just get in gear, guy? Get with the program already! Huh? I’m new to the community over here!—",
+      "similarity": 0.6074,
+      "match_type": "similar",
+      "json_group": [
+        226,
+        227
+      ],
+      "wiki_indices": [
+        137
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm new to the community over here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 228,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's a lot of software, voice manipulation or something, so this is like a prank call app.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—and somethin’. So this is, like, a prank call app?—",
+      "similarity": 0.6519,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        140
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—and somethin’. So this is, like, a prank call app?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 229,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm new to the community over here.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Dan",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm new to the community over here.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 230,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Where do you have a computer rig that does it or what?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "—Do you have a computer rig that does this or what?",
+      "similarity": 0.902,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        142
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Do you have a computer rig that does this or what?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 231,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're into software?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[clears throat] You’re into software?",
+      "similarity": 0.7037,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        143
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[clears throat] You’re into software?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 232,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm new to the community over here.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm new to the community over here.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 233,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, okay. Well, why don't you take a break?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, okay! Well why don’t you take a break—get off your rear end—and come help me like a real man? With my towel holder!",
+      "similarity": 0.9913,
+      "match_type": "similar",
+      "json_group": [
+        233,
+        234
+      ],
+      "wiki_indices": [
+        145
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, okay. Well, why don't you take a break?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 234,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Get off your rear end and come help me like a real man with my towel holder.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, okay! Well why don’t you take a break—get off your rear end—and come help me like a real man? With my towel holder!",
+      "similarity": 0.9913,
+      "match_type": "similar",
+      "json_group": [
+        233,
+        234
+      ],
+      "wiki_indices": [
+        145
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Get off your rear end and come help me like a real man with my towel holder.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 235,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you take a break? Get off your rear in and come help.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why don't you take a break? Get off your rear in and come help.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 236,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Turn off the reverb.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Tu—turn off the reverb, bro. Take—take off the reverb. You’re gonna call every day?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "wiki_indices": [
+        146
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Turn off the reverb.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 237,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A real man with my towel holder.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Tu—turn off the reverb, bro. Take—take off the reverb. You’re gonna call every day?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "wiki_indices": [
+        146
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "A real man with my towel holder.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 238,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you take a break?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Tu—turn off the reverb, bro. Take—take off the reverb. You’re gonna call every day?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "wiki_indices": [
+        146
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you take a break?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 239,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Take off the reverb.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Tu—turn off the reverb, bro. Take—take off the reverb. You’re gonna call every day?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "wiki_indices": [
+        146
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Take off the reverb.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 240,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're going to call every day?",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Tu—turn off the reverb, bro. Take—take off the reverb. You’re gonna call every day?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "wiki_indices": [
+        146
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're going to call every day?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 241,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Call you every day?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Call you every day?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        147
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Call you every day?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 242,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's right.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Dan",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That's right.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 243,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, you're going to come over, help me with my pulley and my sander, like I originally asked, because it's a two-man job.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—No, you’re gonna come over—help me with my pulley and my sander like I originally asked!—‘cause it’s a two-man job. And then we’ll—we’ll call it good. I’ll leave you be!",
+      "similarity": 0.9292,
+      "match_type": "similar",
+      "json_group": [
+        243,
+        244
+      ],
+      "wiki_indices": [
+        149
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you're going to come over, help me with my pulley and my sander, like I originally asked, because it's a two-man job.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 244,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And then we'll call it good. I'll leave you be.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—No, you’re gonna come over—help me with my pulley and my sander like I originally asked!—‘cause it’s a two-man job. And then we’ll—we’ll call it good. I’ll leave you be!",
+      "similarity": 0.9292,
+      "match_type": "similar",
+      "json_group": [
+        243,
+        244
+      ],
+      "wiki_indices": [
+        149
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And then we'll call it good. I'll leave you be.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 245,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right.",
+      "wiki_speaker": "Dan",
+      "wiki_text": "Alright.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        150
+      ],
+      "proposed_speaker": "Dan",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 246,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay. Goodbye.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay! Goodbye!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        151
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay. Goodbye.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 246,
+    "total_wiki_lines": 147,
+    "matched_wiki_lines": 127,
+    "unmatched_wiki_lines": 20,
+    "matched": 215,
+    "speakers_to_map": 2,
+    "text_auto_correct": 33,
+    "text_review": 27,
+    "text_group_review": 127,
+    "unmatched_json": 31
+  }
+}

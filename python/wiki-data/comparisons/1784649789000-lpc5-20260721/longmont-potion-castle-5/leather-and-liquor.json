@@ -1,0 +1,1666 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:09:00.920928+00:00",
+  "snapshot": "1784649789000-lpc5-20260721",
+  "album": "Longmont Potion Castle 5",
+  "album_slug": "longmont-potion-castle-5",
+  "track": "Leather And Liquor",
+  "track_slug": "leather-and-liquor",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-5/leather-and-liquor.json",
+  "json_sha256": "77d254f7c8cdabd0cbaf7219316435f807d98ab85c2c510458fdb632c1171650",
+  "wiki_title": "Leather And Liquor",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Leather_And_Liquor",
+  "speaker_mapping": {},
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (1)",
+      "confidence": 0.491,
+      "observations": 8,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 7.4054,
+          "observations": 8
+        },
+        {
+          "name": "Man (2)",
+          "score": 6.678,
+          "observations": 7
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (1)",
+      "confidence": 0.4414,
+      "observations": 17,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 15.3455,
+          "observations": 17
+        },
+        {
+          "name": "Man (2)",
+          "score": 8.7377,
+          "observations": 10
+        },
+        {
+          "name": "Kat",
+          "score": 7.7481,
+          "observations": 8
+        },
+        {
+          "name": "Woman",
+          "score": 2.9328,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm here.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I’m here, I can hear you.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I can hear you.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I’m here, I can hear you.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can hear you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What, you call me?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Why’d you call me?",
+      "similarity": 0.8485,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why’d you call me?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You must have to call me.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You must’ve called me.",
+      "similarity": 0.8444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You must’ve called me.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I didn't call you.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I didn’t call you.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn’t call you.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You did not call me.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You did not call me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You did not call me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who were you trying to get hold of?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "[laughs] Who are you trying to get a hold of?",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Who are you trying to get a hold of?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I was sitting here watching television in the phone rang.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I was sittin’ here watchin’ television and the phone rang.",
+      "similarity": 0.955,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was sittin’ here watchin’ television and the phone rang.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, that's interesting.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well that’s interesting. I’m sittin’ here talking to another salesman and our phone rang.",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, that's interesting.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sitting here talking to another salesman in our phone ring.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well that’s interesting. I’m sittin’ here talking to another salesman and our phone rang.",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sitting here talking to another salesman in our phone ring.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Ah, okay.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Aha. Okay!",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Aha. Okay!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's really interesting.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Real interesting!",
+      "similarity": 0.8205,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Real interesting!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Have a nice day.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Have a nice day!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Have a nice day.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, you too.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yeah, you too!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you too.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Here is right here.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "[to person in room] Here it is right here. [into phone] Frontier Wine and Liquor.",
+      "similarity": 0.7313,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here is right here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's right here.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "[to person in room] Here it is right here. [into phone] Frontier Wine and Liquor.",
+      "similarity": 0.7313,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's right here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Frontier wine and liquor.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "[to person in room] Here it is right here. [into phone] Frontier Wine and Liquor.",
+      "similarity": 0.7313,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Frontier wine and liquor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yes, can I help you?",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Can I help you?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yes, can I help you?",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I help you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, we got a problem.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Okay, we got a problem. This is a liquor store and we think we’ve got some phones goin’ on. Where’re you at?",
+      "similarity": 0.9557,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, we got a problem.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is a liquor store and we think we got some phones on and where are you at?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Okay, we got a problem. This is a liquor store and we think we’ve got some phones goin’ on. Where’re you at?",
+      "similarity": 0.9557,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is a liquor store and we think we got some phones on and where are you at?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm at your oil mall.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I’m in the Aurora mall, and I’m Frontier Leathers. [laughs]",
+      "similarity": 0.7327,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm at your oil mall.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I'm Frontier Leathers.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I’m in the Aurora mall, and I’m Frontier Leathers. [laughs]",
+      "similarity": 0.7327,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I'm Frontier Leathers.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're Frontier Leathers and we're Frontier Liquor.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "You’re Frontier Leathers and we’re Frontier Liquor! Okay, hold on.",
+      "similarity": 0.9683,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're Frontier Leathers and we're Frontier Liquor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, hold on.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "You’re Frontier Leathers and we’re Frontier Liquor! Okay, hold on.",
+      "similarity": 0.9683,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, hold on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what's going to talk to you earlier.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I don't know what's going to talk to you earlier.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what's going on, but we also got a call from Frontier Bar.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "I’m the one that talked to ya earlier. This is... I don’t know what’s goin’ on but we just also got a call from Frontier Bar.",
+      "similarity": 0.7021,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m the one that talked to ya earlier. This is... I don’t know what’s goin’ on but we just also got a call from Frontier Bar.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just a second, just second.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "So there’s a...? Just a second, just a second! There’s a... there’s a Frontier Bar? I’m sorry, I’m talking to some customers, sir.",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just a second, just second.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's a Frontier Bar.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "So there’s a...? Just a second, just a second! There’s a... there’s a Frontier Bar? I’m sorry, I’m talking to some customers, sir.",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's a Frontier Bar.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's a Frontier Bar.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "So there’s a...? Just a second, just a second! There’s a... there’s a Frontier Bar? I’m sorry, I’m talking to some customers, sir.",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's a Frontier Bar.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm sorry, I'm talking to some questions.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "So there’s a...? Just a second, just a second! There’s a... there’s a Frontier Bar? I’m sorry, I’m talking to some customers, sir.",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry, I'm talking to some questions.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's all right.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "That’s alright. Yeah, I don’t know what’s goin’ on. Your phone rang and you picked it up, right?",
+      "similarity": 0.9508,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39,
+        40
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's all right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I don't know what's going on.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "That’s alright. Yeah, I don’t know what’s goin’ on. Your phone rang and you picked it up, right?",
+      "similarity": 0.9508,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39,
+        40
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I don't know what's going on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your phone rang and you picked it up, right?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "That’s alright. Yeah, I don’t know what’s goin’ on. Your phone rang and you picked it up, right?",
+      "similarity": 0.9508,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39,
+        40
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your phone rang and you picked it up, right?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, mine rang and we picked it up.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Okay, mine rang and we picked it up. This is the second time you and I have spoken, I think.",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, mine rang and we picked it up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The second time you and I have spoken, I think.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Okay, mine rang and we picked it up. This is the second time you and I have spoken, I think.",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "The second time you and I have spoken, I think.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Wow, that's weird, dude.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Wow, that’s weird, dude!",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wow, that’s weird, dude!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, and...",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Okay, and then--",
+      "similarity": 0.7619,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, and then--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your number?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "What’s your number?",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s your number?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Uh...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, my number...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "No, my number...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, my number is...",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "No, my... my number is 3-0-3--",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": [
+        49,
+        50
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, my number is...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "303-9.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "No, my... my number is 3-0-3--",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": [
+        49,
+        50
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "303-9.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You hear it on our voice,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "'[sampled]' --you hear it in our voice--",
+      "similarity": 0.7667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[sampled]' --you hear it in our voice--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "because when you increase",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "because when you increase",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "because when you increase up oxygen,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "'[sampled]' --rgy, because when you intake that oxygen--",
+      "similarity": 0.6744,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[sampled]' --rgy, because when you intake that oxygen--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you increase the energy...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "'[sampled]' --you increase the energy--",
+      "similarity": 0.7931,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[sampled]' --you increase the energy--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's something going on because",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "There’s something going on because every time my phone rings, it’s either you guys or Frontier Bar...",
+      "similarity": 0.8876,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's something going on because",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "every time my phone rings, it's either you guys...",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "There’s something going on because every time my phone rings, it’s either you guys or Frontier Bar...",
+      "similarity": 0.8876,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "every time my phone rings, it's either you guys...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Joy, are you feeling...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "'[sampled]' Joanne, are you feeling sick, are you doing store? Are you feeling like you’re aging?",
+      "similarity": 0.6986,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Joy, are you feeling...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you feeling like you're aging?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "'[sampled]' Joanne, are you feeling sick, are you doing store? Are you feeling like you’re aging?",
+      "similarity": 0.6986,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you feeling like you're aging?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm sorry, man.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I’m sorry, man... [unclear] ...something wrong or somethin’.",
+      "similarity": 0.7579,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I get this up wrong or something.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I’m sorry, man... [unclear] ...something wrong or somethin’.",
+      "similarity": 0.7579,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I get this up wrong or something.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right, well, I'll call a soap company take care of it.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Alright, well I’ll... I’ll call the phone company, take care of it.",
+      "similarity": 0.8276,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, well I’ll... I’ll call the phone company, take care of it.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You bet, bro.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You bet, bro.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You bet, bro.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Later.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Later.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Later.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Watch your brother.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Watch your brother.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is the Frontier Club again.",
+      "wiki_speaker": "Kat",
+      "wiki_text": "This is The Frontier Club again.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is the Frontier Club again.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Johnny.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Johnny.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Kat",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are we doing here?",
+      "wiki_speaker": "Kat",
+      "wiki_text": "[chuckles] What are we doing here?",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "[chuckles] What are we doing here?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Nancy?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Nancy?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nancy?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "Kat",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Is it Nancy?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Is this Nancy?",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is this Nancy?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, this is Cap.",
+      "wiki_speaker": "Kat",
+      "wiki_text": "No, this is Kat at The Frontier Club.",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": [
+        73,
+        74
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, this is Cap.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "at the Frontier Club.",
+      "wiki_speaker": "Kat",
+      "wiki_text": "No, this is Kat at The Frontier Club.",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": [
+        73,
+        74
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "at the Frontier Club.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's that?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "What's that?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "At the bar?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "At the bar?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Ah, Sue's not here, honey.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "[laughs] Uh, Sue’s not here, honey!",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Uh, Sue’s not here, honey!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Huh?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shoots not here, honey.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Shoots not here, honey.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "Kat",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shoo's not here.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Shoo's not here.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I wasn't calling.",
+      "wiki_speaker": "Kat",
+      "wiki_text": "I wasn’t calling. Somebody was calling me.",
+      "similarity": 0.975,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "I wasn't calling.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Somebody was calling me.",
+      "wiki_speaker": "Kat",
+      "wiki_text": "I wasn’t calling. Somebody was calling me.",
+      "similarity": 0.975,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "Somebody was calling me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, no, I wasn't. I just got a phone call coming in on my line, honey.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Oh, no, I wasn’t. I just got a phone call comin’ in on my line, honey.",
+      "similarity": 0.9767,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, no, I wasn’t. I just got a phone call comin’ in on my line, honey.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Kat",
+      "wiki_text": "Okay!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Kat",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right, Bob.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Alright, I... I’m sorry.",
+      "similarity": 0.8095,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "All right, Bob.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm sorry.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Alright, I... I’m sorry.",
+      "similarity": 0.8095,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 87,
+    "total_wiki_lines": 65,
+    "matched_wiki_lines": 55,
+    "unmatched_wiki_lines": 10,
+    "matched": 76,
+    "speakers_to_map": 0,
+    "text_auto_correct": 6,
+    "text_review": 13,
+    "text_group_review": 38,
+    "unmatched_json": 11
+  }
+}

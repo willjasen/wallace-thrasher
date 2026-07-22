@@ -1,0 +1,409 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:21.831920+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Extra Large Sausages",
+  "track_slug": "extra-large-sausages",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/extra-large-sausages.json",
+  "json_sha256": "b62a322e4651dc337c67c78f0cb9b5a0cf18ac3ac85c955802814b5aa860edbe",
+  "wiki_title": "Extra Large Sausages",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Extra_Large_Sausages",
+  "speaker_mapping": {
+    "SPEAKER_00": "Sarah",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Sarah",
+      "confidence": 1.0,
+      "observations": 9,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Sarah",
+          "score": 8.3842,
+          "observations": 9
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 7.863,
+          "observations": 8
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "South West, this is Sarah. How can I help you?",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Julius Southwest, this is Sarah, how can I help you?",
+      "similarity": 0.913,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Julius Southwest, this is Sarah, how can I help you?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi, do you serve sausages?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, do you serve sausages?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, do you serve sausages?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What the fuck do you want, you stupid fuckhead?",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "What the fuck do you want, you stupid fuckhead?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "What the fuck do you want, you stupid fuckhead?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you? Right, what's that all about?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you? I... What's that all about, I'm just...",
+      "similarity": 0.9512,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you? Right, what's that all about?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm just...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you? I... What's that all about, I'm just...",
+      "similarity": 0.9512,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm just...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sausages?",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Sausages?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sausages?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Right.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, we said sausages.",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Yeah, we serve sausages.",
+      "similarity": 0.8372,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, we serve sausages.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you have, um, extra large sausages?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you have, um... extra large sausages?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you have, um, extra large sausages?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you have an extra large sausage, fuckhead?",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Do you have an extra large sausage, fuckhead?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you have an extra large sausage, fuckhead?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's this tonality all about? I don't understand.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's this tonality all about? I don't understand.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's this tonality all about? I don't understand.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Southwrest, this is Sarah. How can I help you?",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Southwest, this is Sarah, how can I help you?",
+      "similarity": 0.9882,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Southwest, this is Sarah, how can I help you?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, do you serve leprecha?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, do you serve leprecha?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, do you serve Leprocon Julius?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, do you serve Leprechaun Julius?",
+      "similarity": 0.9118,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, do you serve Leprechaun Julius?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Leprocon Julius.",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Leprechaun Julius?",
+      "similarity": 0.8125,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Leprechaun Julius?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh huh. It's the... green one.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's the green one?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh huh. It's the... green one.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's the green one?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The green kind?",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "The green kind?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "The green kind?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, we do.",
+      "wiki_speaker": "Sarah",
+      "wiki_text": "Mmm... yeah, we do.",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Sarah",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mmm... yeah, we do.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 20,
+    "total_wiki_lines": 17,
+    "matched_wiki_lines": 17,
+    "unmatched_wiki_lines": 0,
+    "matched": 19,
+    "speakers_to_map": 2,
+    "text_auto_correct": 3,
+    "text_review": 3,
+    "text_group_review": 2,
+    "unmatched_json": 1
+  }
+}

@@ -1,0 +1,1159 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:09:19.750437+00:00",
+  "snapshot": "1784649995000-lpc9-20260721",
+  "album": "Longmont Potion Castle 9",
+  "album_slug": "longmont-potion-castle-9",
+  "track": "Cables From Guam",
+  "track_slug": "cables-from-guam",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-9/cables-from-guam.json",
+  "json_sha256": "b9fa94a8b4e6f47fa0128bd9fa82978d3e4ea047781ac96e1546d9180f685d0a",
+  "wiki_title": "Cables From Guam",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Cables_From_Guam",
+  "speaker_mapping": {
+    "SPEAKER_00": "Dick",
+    "SPEAKER_01": "Lana",
+    "SPEAKER_02": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Dick",
+      "confidence": 0.9534,
+      "observations": 16,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Dick",
+          "score": 13.9711,
+          "observations": 16
+        },
+        {
+          "name": "LPC",
+          "score": 0.6835,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Lana",
+      "confidence": 0.7937,
+      "observations": 7,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Lana",
+          "score": 6.0814,
+          "observations": 7
+        },
+        {
+          "name": "Dick",
+          "score": 1.5806,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 0.8841,
+      "observations": 16,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 12.7182,
+          "observations": 16
+        },
+        {
+          "name": "Dick",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Lana",
+          "score": 0.6667,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello? Hello?",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Hello? Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello? Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, this is Dustin at D-HL.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Dustin at DHL… Uhh… [exhales]And, uh, we got some cargo here that was attempted to be delivered. No one answered the door.",
+      "similarity": 0.9339,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Dustin at D-HL.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And we got some cargo here that was attempted to be delivered.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Dustin at DHL… Uhh… [exhales]And, uh, we got some cargo here that was attempted to be delivered. No one answered the door.",
+      "similarity": 0.9339,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And we got some cargo here that was attempted to be delivered.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No one answered the door.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Dustin at DHL… Uhh… [exhales]And, uh, we got some cargo here that was attempted to be delivered. No one answered the door.",
+      "similarity": 0.9339,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No one answered the door.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, you don't have to. You just open up the white metal door and just put it inside.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "No, you don’t have to, you just open up the white metal door and just put it inside.",
+      "similarity": 0.9877,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you don’t have to, you just open up the white metal door and just put it inside.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, this one's from Guam. It's a little bit different.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, this one’s from Guam; it’s a little bit different. Uh—",
+      "similarity": 0.9358,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, this one’s from Guam; it’s a little bit different. Uh—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What is it?",
+      "wiki_speaker": "Dick",
+      "wiki_text": "What is it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "CABling from Guam, and it's COD, and we need you up here, front and center with an ID.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, cabling from Guam and it’s C.O.D. and, uh, we need ya up here—front and center—with an I.D.",
+      "similarity": 0.9186,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, cabling from Guam and it’s C.O.D. and, uh, we need ya up here—front and center—with an I.D.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, I can't...",
+      "wiki_speaker": "Dick",
+      "wiki_text": "No, I can’t…",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I can’t…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, you're going to have to do something.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Uh, they’re gonna have to do somethin’.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, they’re gonna have to do somethin’.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, yeah, that's the alarm. We gotta get this resolved tonight.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "''[groans] [delay]Okay, yeah, that’s the alarm. We gotta get this resolved tonight! [exhales][exhales] [delay]",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "''[groans] [delay]Okay, yeah, that’s the alarm. We gotta get this resolved tonight! [exhales][exhales] [delay]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is all that noise in the background?",
+      "wiki_speaker": "Dick",
+      "wiki_text": "What is that loud noise in the background?",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is that loud noise in the background?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We're on the docks over by the water.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’re on the dock, sir, by the water.",
+      "similarity": 0.8857,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We’re on the dock, sir, by the water.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, all right. All right. And it's COD? I didn't buy anything.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Alright, and— and it’s C.O.D? I didn’t buy anything.",
+      "similarity": 0.7619,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, and— and it’s C.O.D? I didn’t buy anything.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That's none of my affair.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That’s none o’ my affair.",
+      "similarity": 0.9362,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That’s none o’ my affair.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "All right, well, send it back. Thanks a lot.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Alright, well send it back. Thanks a lot.",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, well send it back. Thanks a lot.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We'll be out there in 10 minutes, 15 minutes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’ll be out there in ten minutes, fifteen minutes.",
+      "similarity": 0.8261,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We’ll be out there in ten minutes, fifteen minutes.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, no, you've got to get no money. That's it.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Well no, you’re gonna get no money; that’s it.",
+      "similarity": 0.8506,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well no, you’re gonna get no money; that’s it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We want a check cut or PayPal.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We want a check cut or a PayPal payment. [exhales] [delay]",
+      "similarity": 0.7073,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We want a check cut or a PayPal payment. [exhales] [delay]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "payment. But you're not going to get nothing. Well, sir, you haven't even looked at the goods inside.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, sir, you haven’t even looked at the goods inside.",
+      "similarity": 0.6892,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, sir, you haven’t even looked at the goods inside.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't want it. What's all that noise up there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[groans] [delay, reverb]What’s all that noise up ‘ere?[groans] [delay, reverb]",
+      "similarity": 0.5614,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[groans] [delay, reverb]What’s all that noise up ‘ere?[groans] [delay, reverb]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes, my head. Yeah, this is Dustin, a DHL shipping. What appears to be the trouble up there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[belches] [delay, pitch-shifted]Yeah, this is, uh, Dustin at DHL shipping. What appears to be the trouble up here? [belches] [delay, pitch-shifted]",
+      "similarity": 0.7489,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[belches] [delay, pitch-shifted]Yeah, this is, uh, Dustin at DHL shipping. What appears to be the trouble up here? [belches] [delay, pitch-shifted]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I have no idea. I have, uh, you told me that you had some stuff that, uh, we're supposed to get and",
+      "wiki_speaker": "Dick",
+      "wiki_text": "I have no idea. I have— Uh, you told me that you had some stuff that, uh, we’re supposed to get—",
+      "similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have no idea. I have— Uh, you told me that you had some stuff that, uh, we’re supposed to get—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "we're supposed to pay for it. I have not ordered anything. I have ordered. It's a Christmas gift. Hold on",
+      "wiki_speaker": "Lana",
+      "wiki_text": "[in background] I have ordered! It’s a Christmas gift! Hold on a second.",
+      "similarity": 0.5595,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[in background] I have ordered! It’s a Christmas gift! Hold on a second.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We've got four boxes from Guam sitting here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’ve got four boxes—",
+      "similarity": 0.6032,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We’ve got four boxes—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right. Hold on a minute. This is my wife.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Alright, hold on a minute. This is my wife.",
+      "similarity": 0.9756,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright, hold on a minute. This is my wife.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay. Hello.",
+      "wiki_speaker": "Lana",
+      "wiki_text": "Hello?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Now, what in the heck's going on up here?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Now what in the heck’s goin’ on up, uh, here?! [pitch-down]",
+      "similarity": 0.8132,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now what in the heck’s goin’ on up, uh, here?! [pitch-down]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have no idea. I've been gone shopping.",
+      "wiki_speaker": "Lana",
+      "wiki_text": "I have no idea. I’ve been gone shopping.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have no idea. I’ve been gone shopping.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Dick, what's going on? You need to tell me.",
+      "wiki_speaker": "Lana",
+      "wiki_text": "Dick, what’s going on? You need to tell me.",
+      "similarity": 0.975,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick, what’s going on? You need to tell me.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay. I got so. I see you. I got you. I got you. I got you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay, I got ya, I see. I got ya. [pitch-down]I see. I understand.—[pitch-up]",
+      "similarity": 0.55,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, I got ya, I see. I got ya. [pitch-down]I see. I understand.—[pitch-up]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think. Not a step.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "[in background to Lana] I have no idea. He said something about a big thing from Guam—somewhere. It has nothin’ to do with you, I don’t think.",
+      "similarity": 0.5314,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I think. Not a step.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It has nothing to do with you. I don't think. I got you.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "[in background to Lana] I have no idea. He said something about a big thing from Guam—somewhere. It has nothin’ to do with you, I don’t think.",
+      "similarity": 0.5314,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It has nothing to do with you. I don't think. I got you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want to talk.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Dick",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I want to talk.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Honey, I ordered some stuff.",
+      "wiki_speaker": "Lana",
+      "wiki_text": "Honey, I’ve ordered some stuff!—",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "Honey, I’ve ordered some stuff!—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, but where is this coming from?",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Yeah, but, uh…[to LPC ]'' Where’s this coming from?",
+      "similarity": 0.825,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, but, uh…[to LPC ]'' Where’s this coming from?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This is coming from.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is comin’ from Guam. [pitch-down]",
+      "similarity": 0.6792,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is comin’ from Guam. [pitch-down]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "for Guam. Did you order something from Guam? From Guam. Hold on. Hello. Yeah. This is",
+      "wiki_speaker": "Dick",
+      "wiki_text": "[to Lana] Did you order somethin’ from Guam?",
+      "similarity": 0.605,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[to Lana] Did you order somethin’ from Guam?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Dustin, a D.H.L colleague. Yes, Dustin. I need to see some ID tonight. Okay. I don't know what",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to see some I.D. tonight!",
+      "similarity": 0.4915,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I need to see some I.D. tonight!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you're talking about. My husband doesn't know what you're talking about. Is there a, what are you talking",
+      "wiki_speaker": "Lana",
+      "wiki_text": "Okay, I don’t know what you’re talking about, my husband doesn’t know what you’re talking about.—",
+      "similarity": 0.6872,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, I don’t know what you’re talking about, my husband doesn’t know what you’re talking about.—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "about? My husband is a professional musician. He is Dick Dale King of the surf guitar. And we don't",
+      "wiki_speaker": "Lana",
+      "wiki_text": "Is there—? What are you talking about? My husband is a professional musician. He is Dick Dale, King of the Surf Guitar. And we don’t have any idea what you’re talking about.",
+      "similarity": 0.7252,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is there—? What are you talking about? My husband is a professional musician. He is Dick Dale, King of the Surf Guitar. And we don’t have any idea what you’re talking about.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "have any idea what you're talking about. Well, this stuff has come a long way by boat. Do you",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well this stuff has come a long way!—by boat!—d’you understand? [pitch-down]",
+      "similarity": 0.6087,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well this stuff has come a long way!—by boat!—d’you understand? [pitch-down]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "understand? We don't understand this. First of all, I thought you were talking about Christmas",
+      "wiki_speaker": "Lana",
+      "wiki_text": "We don’t understand this! First of all, I thought you were talking about Christmas stuff that I just recently ordered—little things! I didn’t know you were talking about wires from Guam! And I don’t know who would’ve ordered it, because Dick is a professional! I mean, he— he wouldn’t order something and tell you that he didn’t order it! I mean, that would be—",
+      "similarity": 0.9357,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44,
+        45,
+        46
+      ],
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "understand? We don't understand this. First of all, I thought you were talking about Christmas",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "stuff that I just recently ordered little things. I didn't know you were talking about wires from",
+      "wiki_speaker": "Lana",
+      "wiki_text": "We don’t understand this! First of all, I thought you were talking about Christmas stuff that I just recently ordered—little things! I didn’t know you were talking about wires from Guam! And I don’t know who would’ve ordered it, because Dick is a professional! I mean, he— he wouldn’t order something and tell you that he didn’t order it! I mean, that would be—",
+      "similarity": 0.9357,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44,
+        45,
+        46
+      ],
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "stuff that I just recently ordered little things. I didn't know you were talking about wires from",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Guam. And I don't know who would have ordered it because Dick is a professional. I mean, he wouldn't",
+      "wiki_speaker": "Lana",
+      "wiki_text": "We don’t understand this! First of all, I thought you were talking about Christmas stuff that I just recently ordered—little things! I didn’t know you were talking about wires from Guam! And I don’t know who would’ve ordered it, because Dick is a professional! I mean, he— he wouldn’t order something and tell you that he didn’t order it! I mean, that would be—",
+      "similarity": 0.9357,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44,
+        45,
+        46
+      ],
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "Guam. And I don't know who would have ordered it because Dick is a professional. I mean, he wouldn't",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "order something and tell you that he didn't order it. I mean, that would be a hell of a thing to",
+      "wiki_speaker": "Lana",
+      "wiki_text": "We don’t understand this! First of all, I thought you were talking about Christmas stuff that I just recently ordered—little things! I didn’t know you were talking about wires from Guam! And I don’t know who would’ve ordered it, because Dick is a professional! I mean, he— he wouldn’t order something and tell you that he didn’t order it! I mean, that would be—",
+      "similarity": 0.9357,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44,
+        45,
+        46
+      ],
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "order something and tell you that he didn't order it. I mean, that would be a hell of a thing to",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "to somebody like that. So I don't understand what's going on. I just got home.",
+      "wiki_speaker": "Lana",
+      "wiki_text": "—a hell of a thing to do to somebody, like that.So, I don’t understand what’s going on. I just got home!",
+      "similarity": 0.8391,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "matched_line",
+      "proposed_text": "—a hell of a thing to do to somebody, like that.So, I don’t understand what’s going on. I just got home!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's a scam. It's a scam? Oh, okay. All right. He's not a scam. He's saying it's a scam.",
+      "wiki_speaker": "Lana",
+      "wiki_text": "It’s a scam? Oh, okay. Alright.—",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Lana",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It’s a scam? Oh, okay. Alright.—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just hang. Okay, I'm hanging out. I need a check. I want to talk to the second. That has nothing to do with me",
+      "wiki_speaker": "Dick",
+      "wiki_text": "I wanna talk to the [unclear]. That has nothing to do with me—",
+      "similarity": 0.6135,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I wanna talk to the [unclear]. That has nothing to do with me—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "or anybody else. Well, I think I can read my own handwriting, sir. I can see what's on the screen.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, I think I can read my own handwriting, sir. I can see what’s on the screen.",
+      "similarity": 0.8941,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I think I can read my own handwriting, sir. I can see what’s on the screen.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What's on the screen? It says detailed description of contents. This came from Guam by boat. I need a check. We've been",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It says, uh, “Detailed description o’ contents”. This came from Guam by boat. I need a check. I’ve been out there twice. Ya know, quit horsin’ around! Tell ya— I don’t know what ta tell ya!—",
+      "similarity": 0.7881,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's on the screen? It says detailed description of contents. This came from Guam by boat. I need a check. We've been",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "out there twice, you know, quit horsing around.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It says, uh, “Detailed description o’ contents”. This came from Guam by boat. I need a check. I’ve been out there twice. Ya know, quit horsin’ around! Tell ya— I don’t know what ta tell ya!—",
+      "similarity": 0.7881,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "out there twice, you know, quit horsing around.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Don't tell me about horsing around, pal, okay?",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Don’t tell me a— about horsing around, pal! Okay?—",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don’t tell me a— about horsing around, pal! Okay?—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So don't give you that crap.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "So don’t give me that crap.",
+      "similarity": 0.8679,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "So don’t give me that crap.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I didn't order anything from Guam. I got no money. I bought nothing",
+      "wiki_speaker": "Dick",
+      "wiki_text": "I didn’t order anything from Guam. I got no money— Uh, I bought nothing from Guam. I have no cases or cables, so don’t say I’m messing around, okay?",
+      "similarity": 0.964,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't order anything from Guam. I got no money. I bought nothing",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "from Guam. I have no cases or cable, so don't say I'm messing around, okay?",
+      "wiki_speaker": "Dick",
+      "wiki_text": "I didn’t order anything from Guam. I got no money— Uh, I bought nothing from Guam. I have no cases or cables, so don’t say I’m messing around, okay?",
+      "similarity": 0.964,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "from Guam. I have no cases or cable, so don't say I'm messing around, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I need $4,200.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I need $4,200.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, you'll get it from someplace else, okay? That's it.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Goddamn—! No, you get it from someplace else, okay?",
+      "similarity": 0.7629,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Goddamn—! No, you get it from someplace else, okay?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Let me talk to your wife. I need to talk to your wife.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to talk to your wife.",
+      "similarity": 0.6835,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to talk to your wife.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Don't call me anymore.",
+      "wiki_speaker": "Dick",
+      "wiki_text": "Don’t call me anymore!",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Dick",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don’t call me anymore!",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 60,
+    "total_wiki_lines": 86,
+    "matched_wiki_lines": 50,
+    "unmatched_wiki_lines": 36,
+    "matched": 58,
+    "speakers_to_map": 3,
+    "text_auto_correct": 17,
+    "text_review": 26,
+    "text_group_review": 13,
+    "unmatched_json": 2
+  }
+}

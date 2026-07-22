@@ -1,0 +1,535 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:19.772640+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Coalition 2",
+  "track_slug": "coalition-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/coalition-2.json",
+  "json_sha256": "00d00871df7d0ede1a56846b10e15aecbf1639db2d931d707988e9e5668dd98c",
+  "wiki_title": "Coalition 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Coalition_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Gary"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.8637,
+      "observations": 12,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 10.9861,
+          "observations": 12
+        },
+        {
+          "name": "Gary",
+          "score": 1.7333,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Gary",
+      "confidence": 0.8264,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Gary",
+          "score": 4.6242,
+          "observations": 5
+        },
+        {
+          "name": "LPC",
+          "score": 0.9714,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Lunchroom.",
+      "wiki_speaker": "Gary",
+      "wiki_text": "Lunch room?",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lunch room?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi.",
+      "wiki_speaker": "Gary",
+      "wiki_text": "Hi.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, how you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, how you doin'? Who is this please?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, how you doing?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who is this, please?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, how you doin'? Who is this please?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this, please?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are you doin'?",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you doin'?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you doing?",
+      "wiki_speaker": "Gary",
+      "wiki_text": "What am I doin'?",
+      "similarity": 0.7273,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "What am I doin'?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. Um... um...",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah. Um... um...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I was calling because I'm interested in engendering a coalition.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um, I was-- [beep] --calling, because I'm interested in... uh... uh... engendering a coalition.",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, I was-- [beep] --calling, because I'm interested in... uh... uh... engendering a coalition.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Say what?",
+      "wiki_speaker": "Gary",
+      "wiki_text": "Say what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "Say what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm starting a coalition with the Vatican City.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm say... in starting a coalition?",
+      "similarity": 0.6234,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm say... in starting a coalition?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Someone there that can represent the teaching staff.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Someone there that can represent, uh-- [beep] --the teaching staff. You know, I'm calling from the Vatican City, right now.",
+      "similarity": 0.9179,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Someone there that can represent the teaching staff.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm calling from the Vatican City right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Someone there that can represent, uh-- [beep] --the teaching staff. You know, I'm calling from the Vatican City, right now.",
+      "similarity": 0.9179,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm calling from the Vatican City right now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You want to talk to somebody in the main office?",
+      "wiki_speaker": "Gary",
+      "wiki_text": "[sigh] You want to talk to somebody in the main office.",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "[sigh] You want to talk to somebody in the main office.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No. They referred me here, because they said this was--",
+      "similarity": 0.9703,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They referred me here because they said this is...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No. They referred me here, because they said this was--",
+      "similarity": 0.9703,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They referred me here because they said this is...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "None",
+      "json_text": "This is just a lunchroom.",
+      "wiki_speaker": "Gary",
+      "wiki_text": "Well, this is... this is just the lunch room, I happened to be walking through.",
+      "similarity": 0.4742,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Well, this is... this is just the lunch room, I happened to be walking through.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm looking for someone who deals with science.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm looking for, uh... uh... someone who deals with science.",
+      "similarity": 0.9388,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm looking for, uh... uh... someone who deals with science.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who deals with science?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm looking for, uh... uh... someone who deals with science.",
+      "similarity": 0.5946,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm looking for, uh... uh... someone who deals with science.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because science plays a vital role in the coalition.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who deals with science? Because science... uh, plays a vital role in the coalition. And I'm calling from Vatican City, so I need your help with it.",
+      "similarity": 0.8968,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because science plays a vital role in the coalition.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I'm calling from Vatican City, so I need your help with it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who deals with science? Because science... uh, plays a vital role in the coalition. And I'm calling from Vatican City, so I need your help with it.",
+      "similarity": 0.8968,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I'm calling from Vatican City, so I need your help with it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We're going to be...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We're... going to be de--",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're... going to be de--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Probably didn't want to talk to the department at that.",
+      "wiki_speaker": "Gary",
+      "wiki_text": "Probably want to talk to the science-- '[beep]' --department head, then.",
+      "similarity": 0.7333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "Probably want to talk to the science-- '[beep]' --department head, then.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But we were going to be dealing with wire, mostly amalgamations of wire, you see.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "But we were going to be dealing with wire. Mo... mostly amalgamations of wire, you see.",
+      "similarity": 0.9811,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But we were going to be dealing with wire. Mo... mostly amalgamations of wire, you see.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's something that's tangible.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Is that something that's tangible?",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that something that's tangible?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Right.",
+      "wiki_speaker": "Gary",
+      "wiki_text": "Right...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Gary",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 26,
+    "total_wiki_lines": 57,
+    "matched_wiki_lines": 22,
+    "unmatched_wiki_lines": 35,
+    "matched": 26,
+    "speakers_to_map": 2,
+    "text_auto_correct": 8,
+    "text_review": 6,
+    "text_group_review": 8,
+    "unmatched_json": 0
+  }
+}

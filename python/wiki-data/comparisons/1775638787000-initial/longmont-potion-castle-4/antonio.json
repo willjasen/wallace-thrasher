@@ -1,0 +1,528 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:20.748534+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Antonio",
+  "track_slug": "antonio",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/antonio.json",
+  "json_sha256": "850d894537bb0e502d6f728b41fd042793ca160a2727039e28683e30a6e46355",
+  "wiki_title": "Antonio",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Antonio",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "LPC",
+    "SPEAKER_03": "Man",
+    "SPEAKER_04": "Mike"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.7427,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.8865,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.6837,
+      "observations": 7,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 5.9159,
+          "observations": 7
+        },
+        {
+          "name": "Man",
+          "score": 2.7368,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.9333,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Mike",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Mike",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's up?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What's up?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's up?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "S'up?",
+      "similarity": 0.4615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "S'up?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yes.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's going on down there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's goin' on down there?",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's goin' on down there?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Same old stuff, naked women and beer.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, same old stuff, naked women and beer.",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, same old stuff, naked women and beer.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sitting in a luxury chair right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm sittin' in the luxury chair right now.",
+      "similarity": 0.925,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sittin' in the luxury chair right now.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Uh-huh. Okay.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh huh? Okay?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh. Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So, uh, what's happening now?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So, uh... what's, uh... what's happenin' now? [clears throat]",
+      "similarity": 0.6579,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So, uh... what's, uh... what's happenin' now? [clears throat]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Nothing. Who's this?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Nothing. Who's this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nothing. Who's this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Antonio.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] This is Antonio.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] This is Antonio.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Antonio, I am.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Antonio?",
+      "similarity": 0.7368,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Antonio?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, yeah, yeah. I'm a little west side down here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accent intensifies] Yeah, yeah, yeah. Lower west side, down here. [clears throat]",
+      "similarity": 0.64,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, yeah, yeah. I'm a little west side down here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accent intensifies] Yeah, yeah, yeah. Lower west side, down here. [clears throat]",
+      "similarity": 0.64,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hold on just a second.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hold on just a second.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hold on just a second.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you trying to?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What're you tryin' to...",
+      "similarity": 0.8837,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What're you tryin' to...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My phone.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "My phone.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Hello.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I got a whole lot of time.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I ain't got a whole lot of time, I gotta go to the toilet, partner. But this is Antonio.",
+      "similarity": 0.9651,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I got a whole lot of time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I gotta go to the toilet partner, but this is Antonio.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I ain't got a whole lot of time, I gotta go to the toilet, partner. But this is Antonio.",
+      "similarity": 0.9651,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I gotta go to the toilet partner, but this is Antonio.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Yeah?",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's going on?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's going on?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's going on?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "What's up?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Mike",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What's up?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got any of those baked potatoes down there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You got any of those baked potatoes down there?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got any of those baked potatoes down there.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 25,
+    "total_wiki_lines": 23,
+    "matched_wiki_lines": 20,
+    "unmatched_wiki_lines": 3,
+    "matched": 22,
+    "speakers_to_map": 4,
+    "text_auto_correct": 4,
+    "text_review": 4,
+    "text_group_review": 4,
+    "unmatched_json": 3
+  }
+}

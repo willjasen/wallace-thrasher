@@ -1,0 +1,1827 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:55.760650+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Gomez",
+  "track_slug": "gomez",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/gomez.json",
+  "json_sha256": "f99aff12e050bd51858599b0d8cffcfa6fe25c077364ea5f148c4c2aeb6c609d",
+  "wiki_title": "Gomez",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Gomez",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.8095,
+      "observations": 25,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 21.1053,
+          "observations": 25
+        },
+        {
+          "name": "Woman",
+          "score": 4.9679,
+          "observations": 5
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 0.9739,
+      "observations": 26,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 24.8742,
+          "observations": 26
+        },
+        {
+          "name": "LPC",
+          "score": 0.6667,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I need to talk to Gomez and stuff.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Yeah, I need to talk to Gomez, and stuff.",
+      "similarity": 0.8941,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Yeah, I need to talk to Gomez, and stuff.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is not the Gomez residence.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "This is not the Gomez residence.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is not the Gomez residence.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This number has been ours for over a year, but we get Gomez calls all the time.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "This number has been ours for over a year, but we get Gomez calls all the time.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This number has been ours for over a year, but we get Gomez calls all the time.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I am Gomez, I said.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, I am Gomez, I said.",
+      "similarity": 0.8163,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] No, I am Gomez, I said.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You are?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You are?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You are?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I asked.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I asked.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need to know what my call activity has been over the last 15 or 18 months.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I need to know what my call activity has been over the last, uh, 15 or 18 months.",
+      "similarity": 0.9259,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I need to know what my call activity has been over the last, uh, 15 or 18 months.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why do you need to know that?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, why do you need to know that? Why... why do I have your telephone number and I keep getting all your phone calls?",
+      "similarity": 0.9585,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why do you need to know that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why do I have your telephone number and I keep getting all your phone calls?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, why do you need to know that? Why... why do I have your telephone number and I keep getting all your phone calls?",
+      "similarity": 0.9585,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why do I have your telephone number and I keep getting all your phone calls?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, that's exactly what car.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Ah... that's exactly why I'm calling. I... frankly, I don't like the attitude that you've been giving my, uh... my customers, you know.",
+      "similarity": 0.8644,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, that's exactly what car.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Frankly, I don't like the attitude that you've been giving my customers, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Ah... that's exactly why I'm calling. I... frankly, I don't like the attitude that you've been giving my, uh... my customers, you know.",
+      "similarity": 0.8644,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Frankly, I don't like the attitude that you've been giving my customers, you know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Excuse.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I, uh... excuse me, this is my residence. All I said was...",
+      "similarity": 0.7013,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Excuse.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is my residence.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I, uh... excuse me, this is my residence. All I said was...",
+      "similarity": 0.7013,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is my residence.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But this is my business, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] But... but, this is my business, you know.",
+      "similarity": 0.8312,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] But... but, this is my business, you know.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No one ever said it was a business.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Listen-- no one ever said it was a business. They call, they ask for Gomez.",
+      "similarity": 0.9197,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No one ever said it was a business.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They called, they asked for Gomez.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Listen-- no one ever said it was a business. They call, they ask for Gomez.",
+      "similarity": 0.9197,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "They called, they asked for Gomez.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So and so Gomez, by a lady's name usually.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "So-and-so Gomez, by a lady's name, usually.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So and so Gomez, by a lady's name usually.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Don't talk to me about my business, young lady.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Don't... don't talk to me about my business, young lady. Okay? That's what I have to say to you.",
+      "similarity": 0.9171,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don't talk to me about my business, young lady.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, that's what I have to say to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Don't... don't talk to me about my business, young lady. Okay? That's what I have to say to you.",
+      "similarity": 0.9171,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, that's what I have to say to you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello, ma'am.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello, ma'am.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Mr. Gomez, if you have a problem because people are calling me for you,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "M... Mr. Gomez, if you have a problem because people are calling me for you, you need to call the phone company.",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mr. Gomez, if you have a problem because people are calling me for you,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you need to call a phone company.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "M... Mr. Gomez, if you have a problem because people are calling me for you, you need to call the phone company.",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "you need to call a phone company.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What I intend to do as soon as I hang up the phone.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Which is what I intend to do as soon as I hang up the phone.",
+      "similarity": 0.9174,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Which is what I intend to do as soon as I hang up the phone.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, you know, look, you give me a problem.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, you know, look... you... you, you give me problems about my business.",
+      "similarity": 0.7673,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you know, look, you give me a problem.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You give me a problem.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, you know, look... you... you, you give me problems about my business.",
+      "similarity": 0.7673,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You give me a problem.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "problems about my business.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, you know, look... you... you, you give me problems about my business.",
+      "similarity": 0.7673,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "problems about my business.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, excuse me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, no. Excuse me, I don't give you problems about your business. When people call here, they ask for... Ruben Gomez or some other woman, I say \"I'm sorry, this isn't the Gomez residence.\"",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, excuse me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't give you problems about your business.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, no. Excuse me, I don't give you problems about your business. When people call here, they ask for... Ruben Gomez or some other woman, I say \"I'm sorry, this isn't the Gomez residence.\"",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't give you problems about your business.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "When people call here, they ask for Ruben Gomez or some other woman I say,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, no. Excuse me, I don't give you problems about your business. When people call here, they ask for... Ruben Gomez or some other woman, I say \"I'm sorry, this isn't the Gomez residence.\"",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "When people call here, they ask for Ruben Gomez or some other woman I say,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm sorry, this isn't a Gomez resident.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, no. Excuse me, I don't give you problems about your business. When people call here, they ask for... Ruben Gomez or some other woman, I say \"I'm sorry, this isn't the Gomez residence.\"",
+      "similarity": 0.9709,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry, this isn't a Gomez resident.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, have you...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No, have you...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's my answer.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "That's my answer.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's my answer.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what you do for a business.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know what you do for a business. I could care less.",
+      "similarity": 0.9298,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what you do for a business.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I could care what.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know what you do for a business. I could care less.",
+      "similarity": 0.9298,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I could care what.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I deal with Elastico Gomez, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I deal with Elastico Gomez, ma'am.",
+      "similarity": 0.8169,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I deal with Elastico Gomez, ma'am.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know that name.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know that name.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know that name.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is your name, you know?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] What is your name, you know?",
+      "similarity": 0.8525,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] What is your name, you know?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the difference?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What's the difference? This is my phone number, I don't need to give you any information. This is the number that was assigned to me more than a year ago.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the difference?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is my phone number.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What's the difference? This is my phone number, I don't need to give you any information. This is the number that was assigned to me more than a year ago.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is my phone number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't need to give you any information.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What's the difference? This is my phone number, I don't need to give you any information. This is the number that was assigned to me more than a year ago.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't need to give you any information.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is the number that was assigned to me more than a year ago.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What's the difference? This is my phone number, I don't need to give you any information. This is the number that was assigned to me more than a year ago.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is the number that was assigned to me more than a year ago.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You know, I have many people.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You know, I have many people.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You know, I have many people.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] You know, I have many people in my line of work, you know.",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know, I have many people.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "my line of work, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] You know, I have many people in my line of work, you know.",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "my line of work, you know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "So?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm a very wealthy man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I'm a very wealthy man.",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I'm a very wealthy man.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Very powerful man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Very powerful man, very...",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Very powerful man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Very...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Very powerful man, very...",
+      "similarity": 0.8302,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Very...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't care.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't care.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care. All I'm saying is, we get phone calls all the time for Gomez, we always say \"this isn't the Gomez residence, we've had this number for about a year now... and I don't know who Mr. Gomez is...\"",
+      "similarity": 0.9679,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All I'm saying is we get phone calls all the time for Gomez.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care. All I'm saying is, we get phone calls all the time for Gomez, we always say \"this isn't the Gomez residence, we've had this number for about a year now... and I don't know who Mr. Gomez is...\"",
+      "similarity": 0.9679,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "All I'm saying is we get phone calls all the time for Gomez.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We always say this isn't the Gomez residence.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care. All I'm saying is, we get phone calls all the time for Gomez, we always say \"this isn't the Gomez residence, we've had this number for about a year now... and I don't know who Mr. Gomez is...\"",
+      "similarity": 0.9679,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We always say this isn't the Gomez residence.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We've had this number for about a year now.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care. All I'm saying is, we get phone calls all the time for Gomez, we always say \"this isn't the Gomez residence, we've had this number for about a year now... and I don't know who Mr. Gomez is...\"",
+      "similarity": 0.9679,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've had this number for about a year now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I don't know who...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care. All I'm saying is, we get phone calls all the time for Gomez, we always say \"this isn't the Gomez residence, we've had this number for about a year now... and I don't know who Mr. Gomez is...\"",
+      "similarity": 0.9679,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I don't know who...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you want?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What do you want?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you want?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] What do you want, jewels?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] What do you want, jewels?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you want?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Wealth? What do you want?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Wealth? What do you want?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I want you off my phone.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I want you off my phone. I don't want you to call me again, either.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want you off my phone.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't want you to call me again either.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I want you off my phone. I don't want you to call me again, either.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't want you to call me again either.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Would you like jewels, madam?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Would you like jewels, madam?",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Would you like jewels, madam?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't want you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't want you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Listen, if you don't get off the phone and you call me again, I'm going to call the police.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I... listen, if you don't get off the phone and you call me again, I'm gonna call the police.",
+      "similarity": 0.9486,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I... listen, if you don't get off the phone and you call me again, I'm gonna call the police.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Jewel's on my business.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Jewels are my business.",
+      "similarity": 0.717,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Jewels are my business.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm an extravagant man, that's what I am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I'm an extravagant man, that's what I am.",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I'm an extravagant man, that's what I am.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's my business right there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] That's my business, right there.",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] That's my business, right there.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Now look, do you want wealth?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Now, look... do you want wealth?",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Now, look... do you want wealth?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you want me to do when people call?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "This is not your phone number... what do you want me to do when people call?",
+      "similarity": 0.7368,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is not your phone number... what do you want me to do when people call?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Travel the world?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Travel the world? What do you want?",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Travel the world?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you want?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Travel the world? What do you want?",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't want anything.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't want anything, I just don't want you to call me. If people call for you, I just say this is the wrong number.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't want anything.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I just don't want you to call me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't want anything, I just don't want you to call me. If people call for you, I just say this is the wrong number.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just don't want you to call me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If people call for you, I just say this is the wrong number.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't want anything, I just don't want you to call me. If people call for you, I just say this is the wrong number.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        78,
+        79,
+        80
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "If people call for you, I just say this is the wrong number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I've been all around the world, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I've been all around the world, you know.",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I've been all around the world, you know.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can care that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I could care less.",
+      "similarity": 0.4706,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I could care less.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm a very, very elegant man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I'm a very, very, uh... elegant man.",
+      "similarity": 0.8182,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I'm a very, very, uh... elegant man.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you want for me?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What do you want from me? What do you want me to do, when people call?",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        84,
+        85
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want for me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you want me to do when people call?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What do you want from me? What do you want me to do, when people call?",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        84,
+        85
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want me to do when people call?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I would like you to come work for my business.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I would like you to come work for my business.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I would like you to come work for my business.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, right.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[scoffs] Yeah, right. I'm... I, I'm hanging up, and I don't wish for you to call back here.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm hanging up and I don't wish for you to call back.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[scoffs] Yeah, right. I'm... I, I'm hanging up, and I don't wish for you to call back here.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm hanging up and I don't wish for you to call back.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Look, I am Gomez, okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Look. I am Gomez, okay?",
+      "similarity": 0.8163,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Look. I am Gomez, okay?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's who I am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] That's who I am.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] That's who I am.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you want, jewels, gold?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] What do you want, jewels? Gold? What do you want?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want, jewels, gold?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you want?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] What do you want, jewels? Gold? What do you want?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Goodbye.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Goodbye.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Goodbye.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 94,
+    "total_wiki_lines": 68,
+    "matched_wiki_lines": 57,
+    "unmatched_wiki_lines": 11,
+    "matched": 85,
+    "speakers_to_map": 2,
+    "text_auto_correct": 11,
+    "text_review": 12,
+    "text_group_review": 38,
+    "unmatched_json": 9
+  }
+}

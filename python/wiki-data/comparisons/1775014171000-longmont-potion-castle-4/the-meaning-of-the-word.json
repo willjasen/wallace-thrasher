@@ -1,0 +1,123 @@
+{
+  "snapshot": "1775014171000-longmont-potion-castle-4",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "The Meaning Of The Word",
+  "track_slug": "the-meaning-of-the-word",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/the-meaning-of-the-word.json",
+  "wiki_title": "The Meaning Of The Word",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/The_Meaning_Of_The_Word",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_03": "Man",
+    "SPEAKER_00": "LPC",
+    "SPEAKER_02": "Man"
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're thirsty.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They're thirsty.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "proposed_speaker": "LPC",
+      "proposed_text": "They're thirsty.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Is that place the chihull?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "proposed_speaker": "Man",
+      "proposed_text": "Is that place the chihull?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm about ready to teach you the mean of the words.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm about ready to teach you the meanin' of the word. [exhales]",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "proposed_speaker": "LPC",
+      "proposed_text": "I'm about ready to teach you the meanin' of the word. [exhales]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "None",
+      "json_text": "What do you do, punk?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah, you do it, punk.",
+      "similarity": 0.6842,
+      "match_type": "similar",
+      "proposed_speaker": "None",
+      "proposed_text": "Yeah, you do it, punk.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So I throw you in there and light the door.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Once I throw you in there, and lock the door. [exhales]",
+      "similarity": 0.7957,
+      "match_type": "similar",
+      "proposed_speaker": "LPC",
+      "proposed_text": "Once I throw you in there, and lock the door. [exhales]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What the fuck are you doing?",
+      "wiki_speaker": "Man",
+      "wiki_text": "The fuck are you doing?",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "proposed_speaker": "Man",
+      "proposed_text": "The fuck are you doing?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who in the fuck do you think you're talking to?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who in the fuck do you think you're talkin' to?",
+      "similarity": 0.9783,
+      "match_type": "similar",
+      "proposed_speaker": "LPC",
+      "proposed_text": "Who in the fuck do you think you're talkin' to?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're talking to.",
+      "wiki_speaker": "Man",
+      "wiki_text": "You talkin' to me, punk.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "proposed_speaker": "Man",
+      "proposed_text": "You talkin' to me, punk.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 8,
+    "total_wiki_lines": 7,
+    "matched": 7,
+    "speakers_to_map": 4,
+    "text_auto_correct": 4,
+    "text_review": 2,
+    "unmatched_json": 1
+  }
+}

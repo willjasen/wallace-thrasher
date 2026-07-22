@@ -1,0 +1,457 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:21.083521+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Crash Out",
+  "track_slug": "crash-out",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/crash-out.json",
+  "json_sha256": "1c9e3a047320d3923bc8b87a6d317d72b8c939b86d35577f9731755cd1fe2312",
+  "wiki_title": "Crash Out",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Crash_Out",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Man",
+    "SPEAKER_02": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 9,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 7.9232,
+          "observations": 9
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 1.8033,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 7.4233,
+          "observations": 8
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you make room for me here this morning?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you make room for me here this, uh... this morning?",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you make room for me here this, uh... this morning?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I haven't got any room for about 10 to 15 minutes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I haven't got any room for about 10 to 15 minutes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I haven't got any rooms.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I haven't got any rooms.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I haven't got any rooms.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I can't make room for you in a room I haven't got.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I haven't got any rooms. I can't make room for you in a room I haven't got.",
+      "similarity": 0.8033,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I haven't got any rooms. I can't make room for you in a room I haven't got.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you make room for just about 10 to 15 minutes?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you make, uh... could you make room for, uh... for just about ten to fifteen minutes?",
+      "similarity": 0.7068,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you make, uh... could you make room for, uh... for just about ten to fifteen minutes?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, I'm not going to put you in somebody's room for 10 or 15 minutes.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, I'm not going to put you in somebody's room for ten or fifteen minutes.",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I'm not going to put you in somebody's room for ten or fifteen minutes.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They'll be asleep.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They... well, they'll be asleep. They'll be none the wiser.",
+      "similarity": 0.8958,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They'll be asleep.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They'll be none the wiser.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They... well, they'll be asleep. They'll be none the wiser.",
+      "similarity": 0.8958,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They'll be none the wiser.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No. You'll have to try some place else.",
+      "similarity": 0.9863,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You'll have to try someplace else.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No. You'll have to try some place else.",
+      "similarity": 0.9863,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You'll have to try someplace else.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can I just like crash out in your room for a few minutes?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Can I just, like... crash out in your room for a few minutes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I just like crash out in your room for a few minutes?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "For like 10 minutes?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "For, like, ten minutes?",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "For, like, ten minutes?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just, you know, it'll be rejuvenating somewhat, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just, you know... it'll he... it'll be rejuvenating somewhat, you know?",
+      "similarity": 0.9217,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just, you know... it'll he... it'll be rejuvenating somewhat, you know?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, I have to try someplace else.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, you'll have to try some place else.",
+      "similarity": 0.8824,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you'll have to try some place else.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But you're in my neighborhood?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hmm... but you're... in my neighborhood?",
+      "similarity": 0.9355,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hmm... but you're... in my neighborhood?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't know, I'll tell you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know what to tell you.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what to tell you.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you work on my feet for a little while?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you... could you work on my feet for a little while? [laughing]",
+      "similarity": 0.8224,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you... could you work on my feet for a little while? [laughing]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why don't you go fuck yourself, man?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, why don't you go fuck yourself, man?",
+      "similarity": 0.9315,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, why don't you go fuck yourself, man?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Fucking idiot.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Fuckin' idiot!",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fuckin' idiot!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you trying to say?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are you trying to say? [laughing]",
+      "similarity": 0.8525,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you trying to say? [laughing]",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 22,
+    "total_wiki_lines": 20,
+    "matched_wiki_lines": 19,
+    "unmatched_wiki_lines": 1,
+    "matched": 21,
+    "speakers_to_map": 3,
+    "text_auto_correct": 9,
+    "text_review": 4,
+    "text_group_review": 4,
+    "unmatched_json": 1
+  }
+}

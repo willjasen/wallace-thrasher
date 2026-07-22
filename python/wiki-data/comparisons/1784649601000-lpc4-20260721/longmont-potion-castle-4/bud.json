@@ -1,0 +1,329 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:36.235429+00:00",
+  "snapshot": "1784649601000-lpc4-20260721",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Bud",
+  "track_slug": "bud",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/bud.json",
+  "json_sha256": "b297da30a2b4a46778cf407be61b32e166fe5c627df3fa315442fdcd04cd44b5",
+  "wiki_title": "Bud",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Bud",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.5195,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.8852,
+          "observations": 2
+        },
+        {
+          "name": "Man",
+          "score": 1.7436,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 0.5618,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.5644,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hey, Doo.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, du'.",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, du'.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who's this?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who's this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who's this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This is Bud.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is, uh... Bud.",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is, uh... Bud.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm gonna cruise down, but I gotta hop on the toilet first partner.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I g... I'm gonna cruise down, but I gotta hop on the toilet first, partner.",
+      "similarity": 0.9701,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I g... I'm gonna cruise down, but I gotta hop on the toilet first, partner.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who the fuck is this?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who the fuck is this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who the fuck is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Bud.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Bud.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bud.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Bud?",
+      "wiki_speaker": "Man",
+      "wiki_text": "[mocking] \"Bud\"? You need to shut the fuck up and quit callin' up here, 'cause I'm really startin' to get pissed off at you.",
+      "similarity": 0.9163,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bud?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You need to shut the fuck up and quit calling up here, because I'm really starting to get pissed off of you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[mocking] \"Bud\"? You need to shut the fuck up and quit callin' up here, 'cause I'm really startin' to get pissed off at you.",
+      "similarity": 0.9163,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need to shut the fuck up and quit calling up here, because I'm really starting to get pissed off of you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you talking about then?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are you talkin' about, man?",
+      "similarity": 0.8852,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you talkin' about, man?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are we gonna hop on the toilet?",
+      "wiki_speaker": "Man",
+      "wiki_text": "[mocking] \"Err, you're going to hop on the toilet\"? Yeah, c'mon, hop on the toilet, and come down here and I'll beat the fuckin' shit out of you.",
+      "similarity": 0.8273,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are we gonna hop on the toilet?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, come on, hop on the toilet, come down here and I'll beat the fucking shit at you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[mocking] \"Err, you're going to hop on the toilet\"? Yeah, c'mon, hop on the toilet, and come down here and I'll beat the fuckin' shit out of you.",
+      "similarity": 0.8273,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, come on, hop on the toilet, come down here and I'll beat the fucking shit at you.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 14,
+    "total_wiki_lines": 12,
+    "matched_wiki_lines": 11,
+    "unmatched_wiki_lines": 1,
+    "matched": 13,
+    "speakers_to_map": 1,
+    "text_auto_correct": 3,
+    "text_review": 1,
+    "text_group_review": 4,
+    "unmatched_json": 1
+  }
+}

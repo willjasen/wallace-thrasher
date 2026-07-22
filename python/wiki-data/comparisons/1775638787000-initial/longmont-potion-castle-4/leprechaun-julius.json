@@ -1,0 +1,186 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:23.382367+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Leprechaun Julius",
+  "track_slug": "leprechaun-julius",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/leprechaun-julius.json",
+  "json_sha256": "b09fca239c978bd5c3a2928b3680bb5d0db5789ef4f655dc0ed1e399a5e36a8a",
+  "wiki_title": "Leprechaun Julius",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Leprechaun_Julius",
+  "speaker_mapping": {
+    "SPEAKER_01": "Man (1)",
+    "SPEAKER_02": "Girl"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_01": {
+      "name": "Man (1)",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 1.9615,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Girl",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Girl",
+          "score": 0.9667,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Girl",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Girl",
+          "score": 0.7797,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Do you have leprechaun julius?",
+      "wiki_speaker": "Girl",
+      "wiki_text": "--o, do you have leprechaun julius?",
+      "similarity": 0.9667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Girl",
+      "speaker_action": "matched_line",
+      "proposed_text": "--o, do you have leprechaun julius?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes, we have urine julius's.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yes, we have urine juliuses.",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, we have urine juliuses.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They're delicious.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "They're delicious. Fuck off, you little shit!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "They're delicious.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Fuck off, you little shit.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "They're delicious. Fuck off, you little shit!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fuck off, you little shit.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Lepricon Julius.",
+      "wiki_speaker": "Girl",
+      "wiki_text": "[laughs] Leprechaun julius. Excuse me?",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Girl",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lepricon Julius.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Excuse me?",
+      "wiki_speaker": "Girl",
+      "wiki_text": "[laughs] Leprechaun julius. Excuse me?",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Girl",
+      "speaker_action": "matched_line",
+      "proposed_text": "Excuse me?",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 4,
+    "matched_wiki_lines": 4,
+    "unmatched_wiki_lines": 0,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 0,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

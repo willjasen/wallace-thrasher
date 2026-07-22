@@ -1,0 +1,179 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:55.190025+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Spit Peaches",
+  "track_slug": "spit-peaches",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/spit-peaches.json",
+  "json_sha256": "7e63870cacf70ad27601200d7c1435fcb415a95e57ede817150f8c61b40d69f1",
+  "wiki_title": "Spit Peaches",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Spit_Peaches",
+  "speaker_mapping": {},
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.5944,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.8371,
+          "observations": 3
+        },
+        {
+          "name": "LPC",
+          "score": 1.9362,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why would you want to?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Why... why would you want to?",
+      "similarity": 0.913,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why... why would you want to?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why would I want to why?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why would I want to what?",
+      "similarity": 0.9362,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why would I want to what?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Spid peaches at me.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Spit peaches at me. I'm just hanging up now then, alright?",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Spid peaches at me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm just hanging up now then, alright?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Spit peaches at me. I'm just hanging up now then, alright?",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm just hanging up now then, alright?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I don't want to get kicked.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, I don't wanna get kicked. That wouldn't feel good.",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I don't want to get kicked.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That wouldn't feel good.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, I don't wanna get kicked. That wouldn't feel good.",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "That wouldn't feel good.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 7,
+    "total_wiki_lines": 5,
+    "matched_wiki_lines": 5,
+    "unmatched_wiki_lines": 0,
+    "matched": 7,
+    "speakers_to_map": 0,
+    "text_auto_correct": 2,
+    "text_review": 0,
+    "text_group_review": 4,
+    "unmatched_json": 0
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:21.687312+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Les",
+  "track_slug": "les",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/les.json",
+  "json_sha256": "f060feacb53024d1fdc95afbfe1499c1c1dfbe53b62f665e878708fd985ff3a8",
+  "wiki_title": "Les",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Les",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.5766,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.925,
+          "observations": 1
+        },
+        {
+          "name": "Man",
+          "score": 0.6792,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.925,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey!",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I told you it's none of your goddamn business.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[looped]' [coughing] I told you, it's none of your god-- '[beep]' --damn business. '[looped]' Will you stop bothering me? Will you stop bothering me?",
+      "similarity": 0.6792,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I told you it's none of your goddamn business.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Will you stop bothering me?",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[looped]' [coughing] I told you, it's none of your god-- '[beep]' --damn business. '[looped]' Will you stop bothering me? Will you stop bothering me?",
+      "similarity": 0.6792,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Will you stop bothering me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Will you stop bothering me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm not bothering you. This is Les, dude.",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "I'm not bothering you. This is Les, dude.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm not bothering you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm not bothering you. This is Les, dude.",
+      "similarity": 0.925,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not bothering you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is it last, dude.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm not bothering you. This is Les, dude.",
+      "similarity": 0.925,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is it last, dude.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bless your ass.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Bless your ass.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 7,
+    "total_wiki_lines": 32,
+    "matched_wiki_lines": 4,
+    "unmatched_wiki_lines": 28,
+    "matched": 6,
+    "speakers_to_map": 1,
+    "text_auto_correct": 0,
+    "text_review": 2,
+    "text_group_review": 4,
+    "unmatched_json": 1
+  }
+}

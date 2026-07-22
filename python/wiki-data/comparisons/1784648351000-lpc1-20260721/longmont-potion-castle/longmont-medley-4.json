@@ -1,0 +1,93 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:59.044307+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Longmont Medley 4",
+  "track_slug": "longmont-medley-4",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/longmont-medley-4.json",
+  "json_sha256": "441c934274de903d2cb88378662de148dc3b63d7f507593bb75d4d35e9fd73da",
+  "wiki_title": "Longmont Medley 4",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Longmont_Medley_4",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (2)",
+    "SPEAKER_01": "Woman (1)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 0.9109,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman (1)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman (1)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We don't sell nectarines here.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "We don't sell nectarines here.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't sell nectarines here.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A denim clacket. I don't even know what that is.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "[scoffing] A denim clacket. I don't even know what that is.",
+      "similarity": 0.9109,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "[scoffing] A denim clacket. I don't even know what that is.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 2,
+    "total_wiki_lines": 2,
+    "matched_wiki_lines": 2,
+    "unmatched_wiki_lines": 0,
+    "matched": 2,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 0,
+    "text_group_review": 0,
+    "unmatched_json": 0
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:49.038889+00:00",
+  "snapshot": "1784649789000-lpc5-20260721",
+  "album": "Longmont Potion Castle 5",
+  "album_slug": "longmont-potion-castle-5",
+  "track": "Loud Tones",
+  "track_slug": "loud-tones",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-5/loud-tones.json",
+  "json_sha256": "f5644297cb27f91e41982376a36ee540116edb27fb675a2fb5dac859acb3441c",
+  "wiki_title": "Loud Tones",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Loud_Tones",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "LPC",
+    "SPEAKER_02": "LPC",
+    "SPEAKER_03": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.6949,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "Man",
+          "score": 0.878,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.6182,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 0.8298,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 3.0,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 0.6154,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "LPC",
+      "confidence": 0.7177,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.6117,
+          "observations": 2
+        },
+        {
+          "name": "Man",
+          "score": 0.6341,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How are you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How's it going? How are you doing today?",
+      "similarity": 0.6182,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How's it going? How are you doing today?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Okay, that's fair.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, that's better. [laughs]",
+      "similarity": 0.6341,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, that's better. [laughs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, how are you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, how are you doing? How's it going?",
+      "similarity": 0.8312,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, how are you doing?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "None",
+      "json_text": "How are you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, how are you doing? How's it going?",
+      "similarity": 0.8312,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How are you doing?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "How are you doing today?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How are you doing today?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "How are you doing today?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "...how ya doin' today?",
+      "similarity": 0.7805,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "...how ya doin' today?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is this?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What is this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What have I reached?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What have I reached?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What have I reached?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Um, you reached a personal cell phone.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um... you've reached a personal cell phone. [laughs]",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um... you've reached a personal cell phone. [laughs]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That sounds good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That sounds good. Does that work for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That sounds good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Does that work for you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That sounds good. Does that work for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Does that work for you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "None",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Does that tone work for you or what?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Does that tone work for you, or what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Does that tone work for you or what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What's it?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What?",
+      "similarity": 0.6154,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Not.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Not.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Or not?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "...or not?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Or not?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "None",
+      "json_text": "Um...",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um...",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 18,
+    "total_wiki_lines": 21,
+    "matched_wiki_lines": 13,
+    "unmatched_wiki_lines": 8,
+    "matched": 15,
+    "speakers_to_map": 4,
+    "text_auto_correct": 1,
+    "text_review": 4,
+    "text_group_review": 2,
+    "unmatched_json": 3
+  }
+}

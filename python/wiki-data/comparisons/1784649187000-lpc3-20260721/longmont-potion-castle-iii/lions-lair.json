@@ -1,0 +1,599 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:56.594740+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Lions Lair",
+  "track_slug": "lions-lair",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/lions-lair.json",
+  "json_sha256": "511c57f06fe0dc0e0c2a34c9e9b2a931c6fa58d4f67cd7f327f1eb25ec16818d",
+  "wiki_title": "Lion's Lair",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Lion%27s_Lair",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.554,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.1574,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 1.7368,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man",
+      "confidence": 0.6283,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.6667,
+          "observations": 3
+        },
+        {
+          "name": "LPC",
+          "score": 1.5773,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "LPC",
+      "confidence": 0.5434,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.1799,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 1.8315,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Brian's where?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Brian's where?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Can you please help me real, real fast?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[wobbling pitch] Can you help me real... real, real, fast?",
+      "similarity": 0.6897,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[wobbling pitch] Can you help me real... real, real, fast?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What's your problem?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What's your problem?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's your problem?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I needed to find somebody that's in there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[wobbling pitch] I needed to find somebody... that's in there.",
+      "similarity": 0.8454,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[wobbling pitch] I needed to find somebody... that's in there.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, who?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's um, Collette Clitoroochie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[wobbling pitch] It's... um, Colette Clittatucci?",
+      "similarity": 0.6197,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "[wobbling pitch] It's... um, Colette Clittatucci?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Collette Clitoroochee.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[wobbling pitch] Colette Clittatucci?",
+      "similarity": 0.4727,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "[wobbling pitch] Colette Clittatucci?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hold on.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hold on, it's--",
+      "similarity": 0.7368,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hold on, it's--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Wait, wait, hello.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Wait, wait, hello? Hello? Wait, hello?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wait, wait, hello.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Wait, wait, hello? Hello? Wait, hello?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Hello?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Wait, wait, hello? Hello? Wait, hello?",
+      "similarity": 0.6923,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "No response.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No response.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No response.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Wait, well, what do you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Wait, what, what are you... what are you saying?",
+      "similarity": 0.6,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Wait, well, what do you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What is it saying?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Wait, what, what are you... what are you saying?",
+      "similarity": 0.6,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "What is it saying?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Well, speaking.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Bye! Well, speak English, so I can understand you!",
+      "similarity": 0.8315,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, speaking.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "English saying, understand you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Bye! Well, speak English, so I can understand you!",
+      "similarity": 0.8315,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "English saying, understand you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, I'd be interested in having some drinks there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Yeah, I'd be interested in having some drinks there. How much would that cost?",
+      "similarity": 0.8876,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'd be interested in having some drinks there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How much would that cost?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavy pitch wobble] Yeah, I'd be interested in having some drinks there. How much would that cost?",
+      "similarity": 0.8876,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How much would that cost?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why don't you speak proper English?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Why don't you... why don't you speak proper English? What's your problem?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you... why don't you speak proper English? What's your problem?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How much would that cause?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavily wobbling pitch] How much would that cost for me to do that? [scramble]",
+      "similarity": 0.5667,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "How much would that cause?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Tell me to do you la.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[heavily wobbling pitch] How much would that cost for me to do that? [scramble]",
+      "similarity": 0.5667,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Tell me to do you la.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, wow.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, wow.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, yeah.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 28,
+    "total_wiki_lines": 18,
+    "matched_wiki_lines": 16,
+    "unmatched_wiki_lines": 2,
+    "matched": 22,
+    "speakers_to_map": 1,
+    "text_auto_correct": 0,
+    "text_review": 6,
+    "text_group_review": 11,
+    "unmatched_json": 6
+  }
+}

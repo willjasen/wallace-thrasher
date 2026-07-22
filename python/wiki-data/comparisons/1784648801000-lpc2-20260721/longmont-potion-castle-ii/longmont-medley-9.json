@@ -1,0 +1,185 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:38.899206+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Longmont Medley 9",
+  "track_slug": "longmont-medley-9",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/longmont-medley-9.json",
+  "json_sha256": "cf473f05074791f0f2193a010e40e3e03749abf9f6c4827c97abecd7f3ef9000",
+  "wiki_title": "Longmont Medley 9",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Longmont_Medley_9",
+  "speaker_mapping": {
+    "SPEAKER_01": "Aunt Bee Taylor",
+    "SPEAKER_02": "Andy Taylor"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.5797,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man",
+          "score": 0.7251,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Aunt Bee Taylor",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Aunt Bee Taylor",
+          "score": 0.9508,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Andy Taylor",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Andy Taylor",
+          "score": 1.6762,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, ain't he don't hear this old country guitar.",
+      "wiki_speaker": "Andy Taylor",
+      "wiki_text": "Ohhh, Aunt Bee, she don't want to hear this ol' country guitar.",
+      "similarity": 0.8113,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Andy Taylor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ohhh, Aunt Bee, she don't want to hear this ol' country guitar.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He played and he sings well too.",
+      "wiki_speaker": "Aunt Bee Taylor",
+      "wiki_text": "He plays, and he sings well, too!",
+      "similarity": 0.9508,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Aunt Bee Taylor",
+      "speaker_action": "matched_line",
+      "proposed_text": "He plays, and he sings well, too!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, it's not good, but it's loud.",
+      "wiki_speaker": "Andy Taylor",
+      "wiki_text": "Ah, well... it's not good, but it's loud. [laughs]",
+      "similarity": 0.8649,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Andy Taylor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ah, well... it's not good, but it's loud. [laughs]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "There's someone I'm going to tell everybody in Denver for what I did.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed]' [indecipherable] I'll be home soon... you know, pay everybody in Denver what I did. So... so many people that cared for me, and I... and I just... I screwed them over, and I'm sorry.",
+      "similarity": 0.7251,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's someone I'm going to tell everybody in Denver for what I did.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So many people that care for me and help me and I just, I screwed him over and I'm sorry.",
+      "wiki_speaker": "Man",
+      "wiki_text": "'[delayed]' [indecipherable] I'll be home soon... you know, pay everybody in Denver what I did. So... so many people that cared for me, and I... and I just... I screwed them over, and I'm sorry.",
+      "similarity": 0.7251,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "So many people that care for me and help me and I just, I screwed him over and I'm sorry.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Compilation from D.U. Records.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--compilation from D.U. Records.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Compilation from D.U. Records.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 5,
+    "matched_wiki_lines": 5,
+    "unmatched_wiki_lines": 0,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 1,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

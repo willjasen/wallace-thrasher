@@ -100,13 +100,32 @@ class AlignmentTests(unittest.TestCase):
 
 
 class ArgumentTests(unittest.TestCase):
+    def test_generated_data_uses_the_unified_kebab_case_layout(self):
+        self.assertEqual(wiki.DATA_DIR.name, "wiki-data")
+        self.assertEqual(wiki.SNAPSHOTS_DIR.relative_to(wiki.DATA_DIR), Path("scrapes"))
+        self.assertEqual(wiki.COMPARE_DIR.relative_to(wiki.DATA_DIR), Path("comparisons"))
+        self.assertEqual(wiki.BACKUP_DIR.relative_to(wiki.DATA_DIR), Path("merge-backups"))
+        self.assertEqual(wiki.LATEST_FILE.relative_to(wiki.DATA_DIR), Path("latest-scrape"))
+
+    def test_generated_run_id_is_a_unix_timestamp_in_milliseconds(self):
+        with mock.patch.object(wiki.time, "time_ns", return_value=1_775_667_781_123_456_789):
+            self.assertEqual(wiki._unix_timestamp_ms(), "1775667781123")
+
     def test_ratio_must_be_in_range(self):
         with self.assertRaises(Exception):
             wiki._ratio_arg("1.1")
 
     def test_snapshot_cannot_escape_cache_directory(self):
-        with self.assertRaisesRegex(ValueError, "Snapshot names"):
+        with self.assertRaisesRegex(ValueError, "Snapshot IDs"):
             wiki._validate_snapshot_name("../outside")
+
+    def test_snapshot_id_requires_a_unix_timestamp_prefix(self):
+        with self.assertRaisesRegex(ValueError, "13-digit Unix timestamp"):
+            wiki._validate_snapshot_name("my-label")
+        self.assertEqual(
+            wiki._validate_snapshot_name("1775667781123-my-label"),
+            "1775667781123-my-label",
+        )
 
     def test_album_specific_wiki_title_is_tried_first(self):
         self.assertEqual(

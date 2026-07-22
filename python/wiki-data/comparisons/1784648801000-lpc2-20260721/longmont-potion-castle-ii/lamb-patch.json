@@ -1,0 +1,585 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:25.149092+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Lamb Patch",
+  "track_slug": "lamb-patch",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/lamb-patch.json",
+  "json_sha256": "935f0204a8c21cce947ad92d3171263fb676877de9555cf2b2923b8217725f09",
+  "wiki_title": "Lamb Patch",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Lamb_Patch",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (1)",
+    "SPEAKER_01": "Man (2)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (1)",
+      "confidence": 1.0,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 4.7813,
+          "observations": 5
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (2)",
+      "confidence": 0.7183,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 4.5678,
+          "observations": 5
+        },
+        {
+          "name": "Woman (3)",
+          "score": 1.7912,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's quite a lamb you have there, son.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "That's quite a lamb you have there, sir.",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's quite a lamb you have there, sir.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Only trouble is, it's black.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Only trouble is, it's black. Uhh, kinda puts your lamb in a class by himself.",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Only trouble is, it's black.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Kind of put you a lamb in a class by himself.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Only trouble is, it's black. Uhh, kinda puts your lamb in a class by himself.",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Kind of put you a lamb in a class by himself.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "None",
+      "json_text": "Oh, get out the way, old and patch,",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "[singing] Oh, get out the way, oh lamb patch",
+      "similarity": 0.7778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "[singing] Oh, get out the way, oh lamb patch",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "eat little old and patch, get out the way, old and patch, get, get out the way.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "eat little old and patch, get out the way, old and patch, get, get out the way.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm not trying to be funny.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Now, I'm not trying to be funny, folks, this lamb is in a class by himself. It's what you do with what you got that counts. This little lamb is a champion in every sense of the word.",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not trying to be funny.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, folks, this lamb is in a class by himself.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Now, I'm not trying to be funny, folks, this lamb is in a class by himself. It's what you do with what you got that counts. This little lamb is a champion in every sense of the word.",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, folks, this lamb is in a class by himself.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's what you do with what you got that counts.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Now, I'm not trying to be funny, folks, this lamb is in a class by himself. It's what you do with what you got that counts. This little lamb is a champion in every sense of the word.",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's what you do with what you got that counts.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This little lamb is a champion in every sense of the word.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Now, I'm not trying to be funny, folks, this lamb is in a class by himself. It's what you do with what you got that counts. This little lamb is a champion in every sense of the word.",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "This little lamb is a champion in every sense of the word.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Therefore, it is the unanimous decision of your judging committee",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Therefore, it is the unanimous decision of your judgin' committee, that there be awarded the breeder a special prize.",
+      "similarity": 0.9912,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Therefore, it is the unanimous decision of your judging committee",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "that there be awarded the breeder a special prize.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Therefore, it is the unanimous decision of your judgin' committee, that there be awarded the breeder a special prize.",
+      "similarity": 0.9912,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "that there be awarded the breeder a special prize.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A special blue ribbon for merit to Jeremiah Kincaid.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "A special blue ribbon of merit for Jeremiah Kincaid. Congratulations, Mr. Kincaid!",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "A special blue ribbon for merit to Jeremiah Kincaid.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Congratulations, Mr. Kimcaid.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "A special blue ribbon of merit for Jeremiah Kincaid. Congratulations, Mr. Kincaid!",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Congratulations, Mr. Kimcaid.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "O'Re! Mr. Kincaid!",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "O'Re! Mr. Kincaid!",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you got a ring, hem, jeez everything for that.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Heh. Well, you've gotta rear 'em, haven't you, you ever think of that? That's a little ol' lamb's that weren't even born yet. But suddenly I heard a sound from over in the far corner of the pen.",
+      "similarity": 0.7865,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you got a ring, hem, jeez everything for that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And some little old lambs that weren't even born yet.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Heh. Well, you've gotta rear 'em, haven't you, you ever think of that? That's a little ol' lamb's that weren't even born yet. But suddenly I heard a sound from over in the far corner of the pen.",
+      "similarity": 0.7865,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "And some little old lambs that weren't even born yet.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But suddenly I heard a sound from over in the far corner of the pen.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Heh. Well, you've gotta rear 'em, haven't you, you ever think of that? That's a little ol' lamb's that weren't even born yet. But suddenly I heard a sound from over in the far corner of the pen.",
+      "similarity": 0.7865,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "But suddenly I heard a sound from over in the far corner of the pen.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Something seemed to be moving in the shadows over there.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Something seemed to be moving in the shadows over there.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Something seemed to be moving in the shadows over there.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There was another baby lamb, and he wasn't white like lambs were supposed to be.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "There was another baby lamb! And he wasn't quite like lambs were supposed to be, he was black all over.",
+      "similarity": 0.98,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "There was another baby lamb, and he wasn't white like lambs were supposed to be.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He was black all over.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "There was another baby lamb! And he wasn't quite like lambs were supposed to be, he was black all over.",
+      "similarity": 0.98,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "He was black all over.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, well, I know the nature of these black sheep.",
+      "wiki_speaker": "Woman (3)",
+      "wiki_text": "Oh, well, I know the nature of these black sheep.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, well, I know the nature of these black sheep.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I had traded in my dream of a champion racehorse for no count.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "And I've traded in my dream of a champion racehorse for an ol' [unintelligible] black lamb.",
+      "similarity": 0.8655,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I had traded in my dream of a champion racehorse for no count.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "little black lamb.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "And I've traded in my dream of a champion racehorse for an ol' [unintelligible] black lamb.",
+      "similarity": 0.8655,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "little black lamb.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But I had a funny feeling that something good was going to come of it.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "But I had a funny feeling that something good was going to come of it. That little black lamb had happened along just at that particular time, for a reason. What could we do now?",
+      "similarity": 0.9358,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "But I had a funny feeling that something good was going to come of it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That little black lamb had happened along just at that particular time for a reason.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "But I had a funny feeling that something good was going to come of it. That little black lamb had happened along just at that particular time, for a reason. What could we do now?",
+      "similarity": 0.9358,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "That little black lamb had happened along just at that particular time for a reason.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And that's the way to turn out.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And that's the way to turn out.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, now, if this ain't a fine how to do.",
+      "wiki_speaker": "Woman (3)",
+      "wiki_text": "Well! [chuckles] Well now, if this ain't a fine howdy-do.",
+      "similarity": 0.7912,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well! [chuckles] Well now, if this ain't a fine howdy-do.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 27,
+    "total_wiki_lines": 13,
+    "matched_wiki_lines": 13,
+    "unmatched_wiki_lines": 0,
+    "matched": 24,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 2,
+    "text_group_review": 17,
+    "unmatched_json": 3
+  }
+}

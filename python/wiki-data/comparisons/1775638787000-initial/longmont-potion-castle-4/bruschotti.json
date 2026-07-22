@@ -1,0 +1,1373 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:20.246559+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Bruschotti",
+  "track_slug": "bruschotti",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/bruschotti.json",
+  "json_sha256": "767067c5ca6612d019ff3ac91e6c9dcb1a61641a7c77aa6224d2221f55123447",
+  "wiki_title": "Bruschotti",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Bruschotti",
+  "speaker_mapping": {
+    "SPEAKER_00": "Paul",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Paul",
+      "confidence": 0.8809,
+      "observations": 23,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Paul",
+          "score": 21.2476,
+          "observations": 23
+        },
+        {
+          "name": "LPC",
+          "score": 2.8718,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.8496,
+      "observations": 23,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 20.4783,
+          "observations": 23
+        },
+        {
+          "name": "Paul",
+          "score": 3.625,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Ray Cahue, this is Paula.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Eatery Italia, this is Paul.",
+      "similarity": 0.6792,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Eatery Italia, this is Paul.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, Paul, how you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Paul, how are ya doin'?",
+      "similarity": 0.8085,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Paul, how are ya doin'?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Good.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Good.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I need to give some broushti, if I could.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I need to get some bruschotti, if I could. [slight echo]",
+      "similarity": 0.8119,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I need to get some bruschotti, if I could. [slight echo]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Excuse me?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Excuse me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Excuse me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Bruchotty.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Schotti?",
+      "similarity": 0.625,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Schotti?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Shottie?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. A shot of bruschotti. [slight echo]",
+      "similarity": 0.5672,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Shottie?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. A shot of bruschotti. [slight echo]",
+      "similarity": 0.5672,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I shot a broushti.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. A shot of bruschotti. [slight echo]",
+      "similarity": 0.5672,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I shot a broushti.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sorry, I can't hear you, man.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Sorry, I can't hear you, man.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry, I can't hear you, man.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I need a shot of broushattie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need a shot of bruschotti. [slight echo]",
+      "similarity": 0.7761,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need a shot of bruschotti. [slight echo]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bouchet?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Bruschetti?",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bruschetti?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, Bruchette.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[slight echo] Yeah, bruschetti, schotti. If I could.",
+      "similarity": 0.7848,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, Bruchette.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shottie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[slight echo] Yeah, bruschetti, schotti. If I could.",
+      "similarity": 0.7848,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Shottie.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If I could.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[slight echo] Yeah, bruschetti, schotti. If I could.",
+      "similarity": 0.7848,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If I could.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Ah, dude, I can't hear you.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Ahh... dude, I can't hear you...",
+      "similarity": 0.9796,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ahh... dude, I can't hear you...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're like breaking up.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "...you're like... breaking up.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're like breaking up.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, well, how late y'all open, but?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah... well, how late y'all open, bud? [echoes, upwards pitch shift]",
+      "similarity": 0.7097,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah... well, how late y'all open, bud? [echoes, upwards pitch shift]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, nine o'clock?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Uh, nine o'clock.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, nine o'clock?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Cool, I need some Biscati.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cool. I need some bru... uh, bru... biscotti... and fruschetta... and bruschotti! [slight echo]",
+      "similarity": 0.704,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Cool, I need some Biscati.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "at Frucetta and Bouchi.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cool. I need some bru... uh, bru... biscotti... and fruschetta... and bruschotti! [slight echo]",
+      "similarity": 0.704,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "at Frucetta and Bouchi.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, are you gonna come in later?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "[laughs] Okay, are you gonna come in later?",
+      "similarity": 0.9014,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Okay, are you gonna come in later?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You damn right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You're damn right.",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're damn right.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna hustle up Biscatti.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna... hustle up biscotti. [echoes] Manicotti will shock you.",
+      "similarity": 0.6792,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna hustle up Biscatti.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Man, a Cahoochetti.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna... hustle up biscotti. [echoes] Manicotti will shock you.",
+      "similarity": 0.6792,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Man, a Cahoochetti.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who is this?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Who is this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shataki.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Shataki.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Kawasaki.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Paul",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Kawasaki.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "All right, hold on, dude, right?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Alright. Hold on, dude, alright?",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Alright. Hold on, dude, alright?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hold on one second.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hold on one second. N-now, what is in the Pumpkin Brew?",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hold on one second.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Now, what is in the pumpkin brew?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hold on one second. N-now, what is in the Pumpkin Brew?",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now, what is in the pumpkin brew?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The what?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "The what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "The what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The pumpkin brew.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "The Pumpkin Brew.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The pumpkin brew.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Paul",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't know.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I have no idea what you were talking about.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "I, uh... I dunno... I got no idea what you're talking about.",
+      "similarity": 0.766,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "I, uh... I dunno... I got no idea what you're talking about.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I had it at Thanksgiving.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had it at Thanksgiving. It was coffee.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I had it at Thanksgiving.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It was coffee.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had it at Thanksgiving. It was coffee.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It was coffee.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Pumpkin brew?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Pumpkin Brew?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Pumpkin brew?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know, I'm new, so.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Paul",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't know, I'm new, so.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I just talk to someone else, hold on, right?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Here, I'll just talk to someone else. Hold on, alright?",
+      "similarity": 0.8866,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here, I'll just talk to someone else. Hold on, alright?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I can't really hold.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Wait, I can't... I can't really hold, I don't have a lot of time here.",
+      "similarity": 0.887,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can't really hold.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't have a lot of time here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Wait, I can't... I can't really hold, I don't have a lot of time here.",
+      "similarity": 0.887,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have a lot of time here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But, uh...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "But, um. Hey... do you guys, uh...",
+      "similarity": 0.96,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But, uh...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, do you guys, uh...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "But, um. Hey... do you guys, uh...",
+      "similarity": 0.96,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, do you guys, uh...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You guys wear wigs down there at all?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You guys wear wigs down there at all?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You guys wear wigs down there at all?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do we wait?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Do we wait?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do we wait?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you wear wigs ever?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you wear wigs, ever?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you wear wigs ever?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, we don't wear wigs.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "No, we don't wear wigs.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, we don't wear wigs.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's up?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What's up?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you wear wigs?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Do you wear wigs?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you wear wigs?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Maybe I do.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Paul",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Maybe I do.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Maybe you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[echoing] Maybe, man. Do you want me to come down and find out, or what?",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Maybe you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Want me to come down and find out, or what?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[echoing] Maybe, man. Do you want me to come down and find out, or what?",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57
+      ],
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Want me to come down and find out, or what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, so I can fuck ya.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Yeah! Fuckin' fuck ya!",
+      "similarity": 0.7317,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah! Fuckin' fuck ya!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How's that sound, man?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How's that sound, man?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How's that sound, man?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'm gonna hit you.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Yeah, I'm gonna hit ya.",
+      "similarity": 0.9302,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'm gonna hit ya.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm gonna hit you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Paul",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm gonna hit you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna hit you with my knee bone, buddy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna hit you with my kneebone, buddy.",
+      "similarity": 0.9877,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna hit you with my kneebone, buddy.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'm gonna hit you your throat.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Yeah, I'm gonna hit you in your throat. Yeah.",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'm gonna hit you your throat.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Yeah, I'm gonna hit you in your throat. Yeah.",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, it's exactly right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My kneebone. Yeah. That's exactly right.",
+      "similarity": 0.7333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My kneebone. Yeah. That's exactly right.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Precisely, precisely what you're gonna be saying when you're laying on the flippet",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Precisely. Precisely what you're gonna be sayin' when you're layin' on the flippin' sidewalk, holmes.",
+      "similarity": 0.9326,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Precisely, precisely what you're gonna be saying when you're laying on the flippet",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "sidewalk, ohms.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Precisely. Precisely what you're gonna be sayin' when you're layin' on the flippin' sidewalk, holmes.",
+      "similarity": 0.9326,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "sidewalk, ohms.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'm gonna break your job.",
+      "wiki_speaker": "Paul",
+      "wiki_text": "Yeah? I'm gonna break your jaw!",
+      "similarity": 0.931,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        62,
+        64
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah? I'm gonna break your jaw!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shut out.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Shut out.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I doubt that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I doubt that--",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I doubt that.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I doubt that shit, real seriously, ombrey.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I doubt that shit real seriously, hombre.",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I doubt that shit real seriously, hombre.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What the fuck are you?",
+      "wiki_speaker": "Paul",
+      "wiki_text": "What the fuck are... [laughs]",
+      "similarity": 0.8444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Paul",
+      "speaker_action": "matched_line",
+      "proposed_text": "What the fuck are... [laughs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm gonna hit you on the cheekbone, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna hit you in the cheekbone, man.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna hit you in the cheekbone, man.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 73,
+    "total_wiki_lines": 68,
+    "matched_wiki_lines": 53,
+    "unmatched_wiki_lines": 15,
+    "matched": 65,
+    "speakers_to_map": 2,
+    "text_auto_correct": 10,
+    "text_review": 11,
+    "text_group_review": 22,
+    "unmatched_json": 8
+  }
+}

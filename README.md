@@ -49,7 +49,18 @@ i am using [this python tool](https://github.com/willjasen/srt-to-json) to conve
 
 ### 🔎 Comparing Subtitles with Talkin' Whipapedia 🔎
 
-`python/wiki_scrape_and_merge.py` downloads wiki transcripts into dated snapshots, aligns them with this project's timestamped JSON subtitles, and prepares speaker and text corrections for review. It uses only the Python 3.10+ standard library.
+`python/wiki_scrape_and_merge.py` downloads wiki transcripts into snapshots identified by a 13-digit Unix timestamp, aligns them with this project's timestamped JSON subtitles, and prepares speaker and text corrections for review. Generated data has one consistent layout:
+
+```text
+python/wiki-data/
+├── scrapes/<unix-timestamp>/
+├── comparisons/<unix-timestamp>/
+├── merge-backups/<unix-timestamp>/
+├── legacy-cache/                 # optional pre-snapshot data
+└── latest-scrape
+```
+
+The comparison directory uses the same timestamp as its source scrape. The script uses only the Python 3.10+ standard library.
 
 Run the workflow from the project root:
 
@@ -61,7 +72,7 @@ python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4 -
 python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4
 ```
 
-Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `python/wiki_merge_backups/` before it is written.
+Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `python/wiki-data/merge-backups/<unix-timestamp>/` before it is written.
 
 ### 💽 JSON for Albums and Tracks 💽
 

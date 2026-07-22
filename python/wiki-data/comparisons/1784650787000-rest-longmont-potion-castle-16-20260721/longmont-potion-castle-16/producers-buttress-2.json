@@ -1,0 +1,2847 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:27:46.226980+00:00",
+  "snapshot": "1784650787000-rest-longmont-potion-castle-16-20260721",
+  "album": "Longmont Potion Castle 16",
+  "album_slug": "longmont-potion-castle-16",
+  "track": "Producers Buttress 2",
+  "track_slug": "producers-buttress-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-16/producers-buttress-2.json",
+  "json_sha256": "06cc60f7173e4605286fce4ffa1da126506e21a4f08515752799b2d2de582d4f",
+  "wiki_title": "Producer's Buttress 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Producer%27s_Buttress_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Christian",
+    "SPEAKER_03": "Man",
+    "SPEAKER_04": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 18,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 16.2275,
+          "observations": 18
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Christian",
+      "confidence": 0.77,
+      "observations": 31,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Christian",
+          "score": 28.5591,
+          "observations": 31
+        },
+        {
+          "name": "Man",
+          "score": 7.5323,
+          "observations": 9
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Christian",
+      "confidence": 0.5166,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Christian",
+          "score": 1.8481,
+          "observations": 2
+        },
+        {
+          "name": "Man",
+          "score": 1.7294,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 3.579,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, Christian.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Christian?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Christian.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Christian. Who is this?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, this is Christian. Uh, who is, uh, who is this?",
+      "similarity": 0.7838,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, this is Christian. Uh, who is, uh, who is this?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This is Barney, Colin. How are you doing today?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, this is Barney callin’. How ya doin’ today?",
+      "similarity": 0.8372,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, this is Barney callin’. How ya doin’ today?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi there. How you doing?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Hi there! How ya doin’?",
+      "similarity": 0.9048,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi there! How ya doin’?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah? Yeah? Well, hey, I need to talk to you a little bit about some equipment, here. We got a couple problems up here.",
+      "similarity": 0.9868,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, hey, I need to talk to you a little bit about some equipment here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah? Yeah? Well, hey, I need to talk to you a little bit about some equipment, here. We got a couple problems up here.",
+      "similarity": 0.9868,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, hey, I need to talk to you a little bit about some equipment here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We've got a couple problems up here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah? Yeah? Well, hey, I need to talk to you a little bit about some equipment, here. We got a couple problems up here.",
+      "similarity": 0.9868,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got a couple problems up here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Specifically, I think you picked up a couple of my pieces of equipment, and I have yet to get them back.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Specifically, I think you picked up a couple o’ my pieces of equipment and I have yet to get them back.",
+      "similarity": 0.995,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Specifically, I think you picked up a couple of my pieces of equipment, and I have yet to get them back.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm actually not sure what this is pertaining to.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, I’m actually not sure what this is pertaining to. Um, you’re saying this is Barney?",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm actually not sure what this is pertaining to.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're saying this is Barney?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, I’m actually not sure what this is pertaining to. Um, you’re saying this is Barney?",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're saying this is Barney?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's what I'm saying.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That’s what I’m saying!",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That’s what I’m saying!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, what is the equipment you're referring to?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Okay! What, uh, what is the equipment you’re referring to?",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay! What, uh, what is the equipment you’re referring to?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I've got a non-agonical harness,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, I’ve got a nonagonical harness. [exhales] And I’ve got a hydraulic buttress and a number o’ rotors that’re all gone now. You picked ‘em up inadvertently and took ‘em, is what you did.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I've got a non-agonical harness,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and I've got a hydraulic buttress and a number of rotors that are all gone now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, I’ve got a nonagonical harness. [exhales] And I’ve got a hydraulic buttress and a number o’ rotors that’re all gone now. You picked ‘em up inadvertently and took ‘em, is what you did.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I've got a hydraulic buttress and a number of rotors that are all gone now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You picked them up inadvertently and took them as what you did.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, I’ve got a nonagonical harness. [exhales] And I’ve got a hydraulic buttress and a number o’ rotors that’re all gone now. You picked ‘em up inadvertently and took ‘em, is what you did.",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You picked them up inadvertently and took them as what you did.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What is this in context, though, sir?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Eh—what is this in context of?",
+      "similarity": 0.7937,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Eh—what is this in context of?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I got your number from Luigi up at UEG.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I got your number from Luigi up at UEG. [sniffs]",
+      "similarity": 0.9157,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got your number from Luigi up at UEG. [sniffs]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I got to be honest, I don't know what the context of.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "I gotta be honest. I don’t know what the context of this is at all. Where are you talking about me supposedly have picked this stuff up?",
+      "similarity": 0.9425,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got to be honest, I don't know what the context of.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "this is at all. Where are you talking about me supposed to pick this stuff up?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "I gotta be honest. I don’t know what the context of this is at all. Where are you talking about me supposedly have picked this stuff up?",
+      "similarity": 0.9425,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "this is at all. Where are you talking about me supposed to pick this stuff up?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "See, that doesn't surprise me. I've lived nine years in the business, my friend.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "See, that doesn’t surprise me. I’ve lived nine years in the business, my friend. So I understand that you don’t know the technicality of what I’m talkin’ about, here. But I just wanna get my items back with a clean coat o’ WD-40, at this point, atop everything. You got me there, Christian?",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "See, that doesn't surprise me. I've lived nine years in the business, my friend.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So I understand that you don't know the technicality of what I'm talking about here,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "See, that doesn’t surprise me. I’ve lived nine years in the business, my friend. So I understand that you don’t know the technicality of what I’m talkin’ about, here. But I just wanna get my items back with a clean coat o’ WD-40, at this point, atop everything. You got me there, Christian?",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So I understand that you don't know the technicality of what I'm talking about here,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "but I just want to get my items back with a clean code of WD40 at this point,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "See, that doesn’t surprise me. I’ve lived nine years in the business, my friend. So I understand that you don’t know the technicality of what I’m talkin’ about, here. But I just wanna get my items back with a clean coat o’ WD-40, at this point, atop everything. You got me there, Christian?",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "but I just want to get my items back with a clean code of WD40 at this point,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "atop everything. You got me there? Christian.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "See, that doesn’t surprise me. I’ve lived nine years in the business, my friend. So I understand that you don’t know the technicality of what I’m talkin’ about, here. But I just wanna get my items back with a clean coat o’ WD-40, at this point, atop everything. You got me there, Christian?",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "atop everything. You got me there? Christian.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who? Who? I don't even know what this is in reference to. I don't, what business is as part of.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, who—who? Y—I don’t even know who—what this is in reference to. I don’t—what business is this part of? I’m a tech director. I do directing. I’m not sure what you’re asking me about. I don’t know who Luigi is.",
+      "similarity": 0.9073,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who? Who? I don't even know what this is in reference to. I don't, what business is as part of.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm a tech director. I do directing. I do directing.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, who—who? Y—I don’t even know who—what this is in reference to. I don’t—what business is this part of? I’m a tech director. I do directing. I’m not sure what you’re asking me about. I don’t know who Luigi is.",
+      "similarity": 0.9073,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm a tech director. I do directing. I do directing.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not sure what you're asking me about.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, who—who? Y—I don’t even know who—what this is in reference to. I don’t—what business is this part of? I’m a tech director. I do directing. I’m not sure what you’re asking me about. I don’t know who Luigi is.",
+      "similarity": 0.9073,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not sure what you're asking me about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know who Luigi is.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, who—who? Y—I don’t even know who—what this is in reference to. I don’t—what business is this part of? I’m a tech director. I do directing. I’m not sure what you’re asking me about. I don’t know who Luigi is.",
+      "similarity": 0.9073,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who Luigi is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, see, that's what I mean.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, see, that’s what I mean. You just t—didn’t know what you were doing. You didn’t know what you were lookin’ at. You thought it was somethin’ else. You know, you don’t understand the technicality in that aspect of that, in that facet of it. So, if I could get my belongings back, I won’t need to go to the Union and file a Grievance.",
+      "similarity": 0.9502,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, see, that's what I mean.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You just didn't know what you were doing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, see, that’s what I mean. You just t—didn’t know what you were doing. You didn’t know what you were lookin’ at. You thought it was somethin’ else. You know, you don’t understand the technicality in that aspect of that, in that facet of it. So, if I could get my belongings back, I won’t need to go to the Union and file a Grievance.",
+      "similarity": 0.9502,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You just didn't know what you were doing.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You didn't know what you were looking at.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, see, that’s what I mean. You just t—didn’t know what you were doing. You didn’t know what you were lookin’ at. You thought it was somethin’ else. You know, you don’t understand the technicality in that aspect of that, in that facet of it. So, if I could get my belongings back, I won’t need to go to the Union and file a Grievance.",
+      "similarity": 0.9502,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You didn't know what you were looking at.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He thought it was something else.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, see, that’s what I mean. You just t—didn’t know what you were doing. You didn’t know what you were lookin’ at. You thought it was somethin’ else. You know, you don’t understand the technicality in that aspect of that, in that facet of it. So, if I could get my belongings back, I won’t need to go to the Union and file a Grievance.",
+      "similarity": 0.9502,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He thought it was something else.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You know, you don't understand the technicality in that aspect of it and that facet of it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, see, that’s what I mean. You just t—didn’t know what you were doing. You didn’t know what you were lookin’ at. You thought it was somethin’ else. You know, you don’t understand the technicality in that aspect of that, in that facet of it. So, if I could get my belongings back, I won’t need to go to the Union and file a Grievance.",
+      "similarity": 0.9502,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know, you don't understand the technicality in that aspect of it and that facet of it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So if I can get my belongings back, I won't need to go to the union and file a grievance.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, see, that’s what I mean. You just t—didn’t know what you were doing. You didn’t know what you were lookin’ at. You thought it was somethin’ else. You know, you don’t understand the technicality in that aspect of that, in that facet of it. So, if I could get my belongings back, I won’t need to go to the Union and file a Grievance.",
+      "similarity": 0.9502,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So if I can get my belongings back, I won't need to go to the union and file a grievance.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I understand what you're saying, but I don't even know where the shoot you're referring to is.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Well, I understand what you’re saying—",
+      "similarity": 0.5263,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well, I understand what you’re saying—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Like, where would this stuff have been that I would have taken it?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—but I don’t—I don’t even know where the shoot you’re referring to is. Like where—where would this stuff have been that I would’ve taken it?",
+      "similarity": 0.6169,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—but I don’t—I don’t even know where the shoot you’re referring to is. Like where—where would this stuff have been that I would’ve taken it?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If you're not familiar with that side of the business, I put nine and a half",
+      "wiki_speaker": "LPC",
+      "wiki_text": "If you’re not familiar with that side of the business, I’ve put nine and a half years in the business, my friend!",
+      "similarity": 0.977,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you're not familiar with that side of the business, I put nine and a half",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "years in the business, my friend.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "If you’re not familiar with that side of the business, I’ve put nine and a half years in the business, my friend!",
+      "similarity": 0.977,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "years in the business, my friend.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, you can go ahead and file a grievance.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Okay! Um, y—you can go ahead and file a Grievance. I’m not sure what this is in reference to—",
+      "similarity": 0.8469,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, you can go ahead and file a grievance.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not sure what this is in reference to or who this is part of.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Okay! Um, y—you can go ahead and file a Grievance. I’m not sure what this is in reference to—",
+      "similarity": 0.8469,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not sure what this is in reference to or who this is part of.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't have time for this today.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—or who this is part of. I don’t have time for this today. I have to go and do my business. So, I’m gonna hang up now. But thank you very much for you time!—",
+      "similarity": 0.7054,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have time for this today.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have to go and do my business.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—or who this is part of. I don’t have time for this today. I have to go and do my business. So, I’m gonna hang up now. But thank you very much for you time!—",
+      "similarity": 0.7054,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have to go and do my business.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So I'm going to hang up now.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—or who this is part of. I don’t have time for this today. I have to go and do my business. So, I’m gonna hang up now. But thank you very much for you time!—",
+      "similarity": 0.7054,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "So I'm going to hang up now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I've got 10 years in the business, my friend.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I’ve got ten years in the business, my friend!",
+      "similarity": 0.9195,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—I’ve got ten years in the business, my friend!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's great.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[laughs] That’s great! I do, too. Um, thank you very much, sir. I don’t know where this is reference to—",
+      "similarity": 0.9171,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's great.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I do too.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[laughs] That’s great! I do, too. Um, thank you very much, sir. I don’t know where this is reference to—",
+      "similarity": 0.9171,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I do too.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Thank you very much, sir.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[laughs] That’s great! I do, too. Um, thank you very much, sir. I don’t know where this is reference to—",
+      "similarity": 0.9171,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thank you very much, sir.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know where this is referenced to.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[laughs] That’s great! I do, too. Um, thank you very much, sir. I don’t know where this is reference to—",
+      "similarity": 0.9171,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know where this is referenced to.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, you do?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Oh, you do?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, you do?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I'll tell you exactly what it's in reference to.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Oh, I’ll tell you exactly what it’s in reference to. It’s in reference to—",
+      "similarity": 0.748,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Oh, I’ll tell you exactly what it’s in reference to. It’s in reference to—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's in reference to my buttress, my harness.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—my buttress, my harness.",
+      "similarity": 0.6769,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—my buttress, my harness.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Christian.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Christian!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Christian.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Speaking.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Speaking.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Speaking.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen, guys, let me get my harness up there real freaking quick, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen, guy, lemme get my harness up there real frickin’ quick, okay?!",
+      "similarity": 0.9313,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, guy, lemme get my harness up there real frickin’ quick, okay?!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Where do you think your harness is?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Where do you think your harness is? Like where would this have been? What shoot are you referring to?",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Where do you think your harness is?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Like, where would this have been?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Where do you think your harness is? Like where would this have been? What shoot are you referring to?",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Like, where would this have been?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What shooter you're referring to?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Where do you think your harness is? Like where would this have been? What shoot are you referring to?",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "What shooter you're referring to?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, my buttress, my harness, my rotors, they're all missing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, my buttress, my harness, my rotors, they’re all missing! On account o’ what ya done!—",
+      "similarity": 0.9461,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, my buttress, my harness, my rotors, they're all missing.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "On account of what you're done.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, my buttress, my harness, my rotors, they’re all missing! On account o’ what ya done!—",
+      "similarity": 0.9461,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "On account of what you're done.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know anything about this.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—I don’t know anything about this. I haven’t done anything. I would appreciate to know what this is in context to.",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know anything about this.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I haven't done anything.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—I don’t know anything about this. I haven’t done anything. I would appreciate to know what this is in context to.",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I haven't done anything.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I would appreciate to know what this is in context to.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—I don’t know anything about this. I haven’t done anything. I would appreciate to know what this is in context to.",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I would appreciate to know what this is in context to.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You want to sit down with my union steward, or what do you want me to do up there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You wanna sit down with my Union Steward or whadda you want me to do up here?!",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You wanna sit down with my Union Steward or whadda you want me to do up here?!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Where would this stuff supposedly be, sir?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—where would this stuff supposedly be, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Where would this stuff supposedly be, sir?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's supposed to be in my possession on my toe.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s supposed to be in my possession on my tool belt right now! My name’s Barney Blaha. I’m with Local 2—",
+      "similarity": 0.6081,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It’s supposed to be in my possession on my tool belt right now! My name’s Barney Blaha. I’m with Local 2—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "tool belt right now. My name's Barney Blaha. I'm a local too, and I need to know what's going on",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—and I need to know what’s goin’ on around here!—",
+      "similarity": 0.4638,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—and I need to know what’s goin’ on around here!—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "around. Barney Blaha. Okay. Well, I don't know where those are. I wouldn't know anything about it,",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—“Barney Blaha”. Okay! Well, I don’t know where those are. Uh, I wouldn’t know anything about it. But I am at work and I’m gonna have to go talk to some people. So, um, if you want, you can go ahead and, uh, contact your Union Rep and we’ll take care of it that way!",
+      "similarity": 0.9381,
+      "match_type": "similar",
+      "json_group": [
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "around. Barney Blaha. Okay. Well, I don't know where those are. I wouldn't know anything about it,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "but I am at work, and I'm going to have to go talk to some people. So, if you want, you can go ahead",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—“Barney Blaha”. Okay! Well, I don’t know where those are. Uh, I wouldn’t know anything about it. But I am at work and I’m gonna have to go talk to some people. So, um, if you want, you can go ahead and, uh, contact your Union Rep and we’ll take care of it that way!",
+      "similarity": 0.9381,
+      "match_type": "similar",
+      "json_group": [
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "but I am at work, and I'm going to have to go talk to some people. So, if you want, you can go ahead",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and contact your union rep, and we'll take care of it that way.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—“Barney Blaha”. Okay! Well, I don’t know where those are. Uh, I wouldn’t know anything about it. But I am at work and I’m gonna have to go talk to some people. So, um, if you want, you can go ahead and, uh, contact your Union Rep and we’ll take care of it that way!",
+      "similarity": 0.9381,
+      "match_type": "similar",
+      "json_group": [
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "and contact your union rep, and we'll take care of it that way.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi. Yes, what can I do for you?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Yes, what can I do for ya?",
+      "similarity": 0.8846,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, what can I do for ya?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Someone transferred you to me.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um, someone transferred you to me! About a safety harness?—",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Someone transferred you to me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "About a safety harness? No?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um, someone transferred you to me! About a safety harness?—",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "About a safety harness? No?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No. Actually, let me ask you this. I was getting a phone call this morning about some sort of a safety harness issue.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "No. Uh, actually, lemme ask you this: I was getting a phone call this morning about some sort of a safety harness issue. What business is this? Who am I speaking to right now?",
+      "similarity": 0.982,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "No. Actually, let me ask you this. I was getting a phone call this morning about some sort of a safety harness issue.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What business is this? Who am I speaking to right now?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "No. Uh, actually, lemme ask you this: I was getting a phone call this morning about some sort of a safety harness issue. What business is this? Who am I speaking to right now?",
+      "similarity": 0.982,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "What business is this? Who am I speaking to right now?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Keoti.",
+      "wiki_speaker": "Man",
+      "wiki_text": "This is Quixote.",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "This is Keoti.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Keoti?",
+      "wiki_speaker": "Man",
+      "wiki_text": "This is Quixote.",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Keoti?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What kind of phone call?",
+      "wiki_speaker": "Man",
+      "wiki_text": "—And you’re getting a—a what kind of phone call?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—And you’re getting a—a what kind of phone call?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I was getting a phone call from someone that they were asking me about a harness and a rotor and something else.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "I was getting a phone call from someone that—they were asking me about a harness and a rotor and something else—since you were saying that I was transferred to you—and I didn’t initiate this phone call. Can I just ask where is this call from? Like who—who am I speaking to? What is the business?",
+      "similarity": 0.9826,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was getting a phone call from someone that they were asking me about a harness and a rotor and something else.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Since you're saying that I was transferred to you and I didn't initiate this phone call,",
+      "wiki_speaker": "Christian",
+      "wiki_text": "I was getting a phone call from someone that—they were asking me about a harness and a rotor and something else—since you were saying that I was transferred to you—and I didn’t initiate this phone call. Can I just ask where is this call from? Like who—who am I speaking to? What is the business?",
+      "similarity": 0.9826,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Since you're saying that I was transferred to you and I didn't initiate this phone call,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "can I just ask, where is this call from? Like, who am I speaking to?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "I was getting a phone call from someone that—they were asking me about a harness and a rotor and something else—since you were saying that I was transferred to you—and I didn’t initiate this phone call. Can I just ask where is this call from? Like who—who am I speaking to? What is the business?",
+      "similarity": 0.9826,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "can I just ask, where is this call from? Like, who am I speaking to?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "what is the business?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "I was getting a phone call from someone that—they were asking me about a harness and a rotor and something else—since you were saying that I was transferred to you—and I didn’t initiate this phone call. Can I just ask where is this call from? Like who—who am I speaking to? What is the business?",
+      "similarity": 0.9826,
+      "match_type": "similar",
+      "json_group": [
+        81,
+        82,
+        83,
+        84
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "what is the business?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "This is Keote production supplies, but I have no idea who I spoke to on the phone before you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh, this is Quixote Production Supplies. But I have no idea who I—I spoke to on the phone before you. They made it sound like you were their client interested in a safety harness and then transferred you to me. [unclear]—",
+      "similarity": 0.954,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Keote production supplies, but I have no idea who I spoke to on the phone before you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "They made it sound like you were their client interested in a safety harness and then transferred you to me.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh, this is Quixote Production Supplies. But I have no idea who I—I spoke to on the phone before you. They made it sound like you were their client interested in a safety harness and then transferred you to me. [unclear]—",
+      "similarity": 0.954,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "They made it sound like you were their client interested in a safety harness and then transferred you to me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, okay. I understand. You're probably in the dark, too.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—No. Okay. I understand. You’re probably in the dark too. Okay, cool! I’ve been getting a phone call this morning. Someone was claiming that I had taken their equipment and they wouldn’t tell me what shoot or anything it was connected with. So… Alright! Well, I am so sorry to have bothered you today—",
+      "similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, okay. I understand. You're probably in the dark, too.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, cool. I've been getting a phone call this morning. Someone was claiming that I had taken some of their equipment,",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—No. Okay. I understand. You’re probably in the dark too. Okay, cool! I’ve been getting a phone call this morning. Someone was claiming that I had taken their equipment and they wouldn’t tell me what shoot or anything it was connected with. So… Alright! Well, I am so sorry to have bothered you today—",
+      "similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, cool. I've been getting a phone call this morning. Someone was claiming that I had taken some of their equipment,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and they wouldn't tell me what shoot or anything it was connected with. So, all right.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—No. Okay. I understand. You’re probably in the dark too. Okay, cool! I’ve been getting a phone call this morning. Someone was claiming that I had taken their equipment and they wouldn’t tell me what shoot or anything it was connected with. So… Alright! Well, I am so sorry to have bothered you today—",
+      "similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "and they wouldn't tell me what shoot or anything it was connected with. So, all right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I am sorry to have bothered you today.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—No. Okay. I understand. You’re probably in the dark too. Okay, cool! I’ve been getting a phone call this morning. Someone was claiming that I had taken their equipment and they wouldn’t tell me what shoot or anything it was connected with. So… Alright! Well, I am so sorry to have bothered you today—",
+      "similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": [
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I am sorry to have bothered you today.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "as it's been happening to me.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—as it’s been happening to me.",
+      "similarity": 0.9643,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "—as it’s been happening to me.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Not at all, man.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Not at all, man. Um, but yeah, some weirdo—",
+      "similarity": 0.7541,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93
+      ],
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not at all, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But, yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Not at all, man. Um, but yeah, some weirdo—",
+      "similarity": 0.7541,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93
+      ],
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "But, yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—Okay! Uh, the guy who called me claimed he was Barney. I didn’t initiate the call. I don’t know how they, uh, they linked me through here.",
+      "similarity": 0.9402,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95,
+        96,
+        97
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The guy who called me claimed he was Barney.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—Okay! Uh, the guy who called me claimed he was Barney. I didn’t initiate the call. I don’t know how they, uh, they linked me through here.",
+      "similarity": 0.9402,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95,
+        96,
+        97
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "The guy who called me claimed he was Barney.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I didn't initiate the call.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—Okay! Uh, the guy who called me claimed he was Barney. I didn’t initiate the call. I don’t know how they, uh, they linked me through here.",
+      "similarity": 0.9402,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95,
+        96,
+        97
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't initiate the call.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know how they linked me through here.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—Okay! Uh, the guy who called me claimed he was Barney. I didn’t initiate the call. I don’t know how they, uh, they linked me through here.",
+      "similarity": 0.9402,
+      "match_type": "similar",
+      "json_group": [
+        94,
+        95,
+        96,
+        97
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know how they linked me through here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No problem.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No problem! Um, there’s a “Gloria Duterte”? Does that mean anything to you? That’s the person who called me—",
+      "similarity": 0.7294,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99,
+        100,
+        101
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No problem.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Um, does it Gloria Duterte,",
+      "wiki_speaker": "Man",
+      "wiki_text": "No problem! Um, there’s a “Gloria Duterte”? Does that mean anything to you? That’s the person who called me—",
+      "similarity": 0.7294,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99,
+        100,
+        101
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, does it Gloria Duterte,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "is that mean anything to you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "No problem! Um, there’s a “Gloria Duterte”? Does that mean anything to you? That’s the person who called me—",
+      "similarity": 0.7294,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99,
+        100,
+        101
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "is that mean anything to you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No problem! Um, there’s a “Gloria Duterte”? Does that mean anything to you? That’s the person who called me—",
+      "similarity": 0.7294,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99,
+        100,
+        101
+      ],
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[chuckles] N—no. What was the name you just said?",
+      "similarity": 0.8916,
+      "match_type": "similar",
+      "json_group": [
+        102,
+        103,
+        104
+      ],
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[chuckles] N—no. What was the name you just said?",
+      "similarity": 0.8916,
+      "match_type": "similar",
+      "json_group": [
+        102,
+        103,
+        104
+      ],
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What was the name you just said?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "[chuckles] N—no. What was the name you just said?",
+      "similarity": 0.8916,
+      "match_type": "similar",
+      "json_group": [
+        102,
+        103,
+        104
+      ],
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "What was the name you just said?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, Gloria, and then the last name is D-U-A-R-T-E.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh, Gloria. And then the last name is “D-U-A-R-T-E”.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, Gloria, and then the last name is D-U-A-R-T-E.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Duarte.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Duarte.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Duerte? Uh, no, I don't know.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Duarte? Uh, no, I don’t know. Uh, do you know how she was connected with it?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Duerte? Uh, no, I don't know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, do you know how?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Duarte? Uh, no, I don’t know. Uh, do you know how she was connected with it?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, do you know how?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "she was connected with it?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Duarte? Uh, no, I don’t know. Uh, do you know how she was connected with it?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109
+      ],
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "she was connected with it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Well, um.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well, um.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—Okay—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Super weird, man.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—[unclear] super weird, man.",
+      "similarity": 0.7895,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—[unclear] super weird, man.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It just occurred.",
+      "wiki_speaker": null,
+      "wiki_text": "[ sample of Wayne Bent ] It just occured.",
+      "similarity": 0.5769,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[ sample of Wayne Bent ] It just occured.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—W—what? It—there’s another voice on the line now? What’s going on?",
+      "similarity": 0.9256,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's another voice on the line now?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—W—what? It—there’s another voice on the line now? What’s going on?",
+      "similarity": 0.9256,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's another voice on the line now?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's going on?",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—W—what? It—there’s another voice on the line now? What’s going on?",
+      "similarity": 0.9256,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118
+      ],
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's going on?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Christian",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What is going on?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What is goin’ on?",
+      "similarity": 0.9677,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is goin’ on?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, I have no idea what this is.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, I have no idea what this is. I’m gonna hang up—",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122
+      ],
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, I have no idea what this is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm going to hang up.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "Uh, I have no idea what this is. I’m gonna hang up—",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122
+      ],
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to hang up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It wasn't.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "It wasn't.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Thank you very much for your time.",
+      "wiki_speaker": "Christian",
+      "wiki_text": "—Uh, thank you very much for your time.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Christian",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Uh, thank you very much for your time.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 125,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "It wasn't.",
+      "wiki_speaker": null,
+      "wiki_text": "[ sample of Wayne Bent ] It wasn’t—",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "It wasn't.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 126,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It wasn't.",
+      "wiki_speaker": null,
+      "wiki_text": "[ sample of Wayne Bent ] It wasn’t—",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "It wasn't.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 127,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It wasn't at my instruction or behest.",
+      "wiki_speaker": null,
+      "wiki_text": "[ sample of Wayne Bent ] It wasn’t at my instruction or behest.",
+      "similarity": 0.7579,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "[ sample of Wayne Bent ] It wasn’t at my instruction or behest.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 128,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Who is this?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who is this?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 129,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Well, um, I am the embodiment.",
+      "wiki_speaker": null,
+      "wiki_text": "[ samples of Wayne Bent ] Well, um— I am the embodiment of God. I am Divinity and humanity combined.",
+      "similarity": 0.791,
+      "match_type": "similar",
+      "json_group": [
+        129,
+        130
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well, um, I am the embodiment.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 130,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "the embodiment of God. I am divinity and humanity combined.",
+      "wiki_speaker": null,
+      "wiki_text": "[ samples of Wayne Bent ] Well, um— I am the embodiment of God. I am Divinity and humanity combined.",
+      "similarity": 0.791,
+      "match_type": "similar",
+      "json_group": [
+        129,
+        130
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "the embodiment of God. I am divinity and humanity combined.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 131,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You got the wrong number, pal.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Think you got the wrong number, pal.",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Think you got the wrong number, pal.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 132,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "No.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No?—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 133,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": "[ samples of Wayne Bent ] —It wasn’t— It wasn’t— It is a defining moment and God’s people are going to be vindicated—",
+      "similarity": 0.6979,
+      "match_type": "similar",
+      "json_group": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 134,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "It wasn't.",
+      "wiki_speaker": null,
+      "wiki_text": "[ samples of Wayne Bent ] —It wasn’t— It wasn’t— It is a defining moment and God’s people are going to be vindicated—",
+      "similarity": 0.6979,
+      "match_type": "similar",
+      "json_group": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "It wasn't.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 135,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "It wasn't.",
+      "wiki_speaker": null,
+      "wiki_text": "[ samples of Wayne Bent ] —It wasn’t— It wasn’t— It is a defining moment and God’s people are going to be vindicated—",
+      "similarity": 0.6979,
+      "match_type": "similar",
+      "json_group": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "It wasn't.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 136,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "It is a defining moment and God's people are going to be vindicated and the world is going to be judged.",
+      "wiki_speaker": null,
+      "wiki_text": "[ samples of Wayne Bent ] —It wasn’t— It wasn’t— It is a defining moment and God’s people are going to be vindicated—",
+      "similarity": 0.6979,
+      "match_type": "similar",
+      "json_group": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "It is a defining moment and God's people are going to be vindicated and the world is going to be judged.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 137,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "It's final.",
+      "wiki_speaker": null,
+      "wiki_text": "[ sample of Wayne Bent ] —and the world is going to be judged. It’s final. You can take that to the bank.",
+      "similarity": 0.5693,
+      "match_type": "similar",
+      "json_group": [
+        137,
+        138
+      ],
+      "wiki_indices": [
+        97
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "It's final.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 138,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "You can take that to the bank.",
+      "wiki_speaker": null,
+      "wiki_text": "[ sample of Wayne Bent ] —and the world is going to be judged. It’s final. You can take that to the bank.",
+      "similarity": 0.5693,
+      "match_type": "similar",
+      "json_group": [
+        137,
+        138
+      ],
+      "wiki_indices": [
+        97
+      ],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "You can take that to the bank.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 138,
+    "total_wiki_lines": 89,
+    "matched_wiki_lines": 73,
+    "unmatched_wiki_lines": 16,
+    "matched": 134,
+    "speakers_to_map": 4,
+    "text_auto_correct": 12,
+    "text_review": 13,
+    "text_group_review": 93,
+    "unmatched_json": 4
+  }
+}

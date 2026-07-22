@@ -1,0 +1,171 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:39.021571+00:00",
+  "snapshot": "1784649601000-lpc4-20260721",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Kill The Whip",
+  "track_slug": "kill-the-whip",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/kill-the-whip.json",
+  "json_sha256": "9c1332d5c2d5e309ba5d1095db5b4f0b916e7d9b891e531de4ec8523653a88e0",
+  "wiki_title": "Kill The Whip",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Kill_The_Whip",
+  "speaker_mapping": {
+    "SPEAKER_00": "Larry"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Larry",
+      "confidence": 0.7253,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Larry",
+          "score": 1.8436,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 0.6984,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Larry",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Larry",
+          "score": 0.8,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm busy. I'm off to smack you as I said.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm 'bout to smack ya, how does that sound?",
+      "similarity": 0.575,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm 'bout to smack ya, how does that sound?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm busy. You can't smack me around because I'll kill you.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "I'm busy. You can't smack me around, 'cause I'll kill you.",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm busy. You can't smack me around, 'cause I'll kill you.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You want me up with my whip?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You gonna meet up wi' my whip? [exhale]",
+      "similarity": 0.6984,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You gonna meet up wi' my whip? [exhale]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll kill the whip. I'll kill them all.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "I'll kill the whip. |I'll kill 'em all. You wouldn't come close. You hear what I'm talkin'?",
+      "similarity": 0.8706,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll kill the whip. I'll kill them all.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Wouldn't come close. You hear we're not talking.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "I'll kill the whip. |I'll kill 'em all. You wouldn't come close. You hear what I'm talkin'?",
+      "similarity": 0.8706,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wouldn't come close. You hear we're not talking.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shit.",
+      "wiki_speaker": "Larry",
+      "wiki_text": "Shiiit.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Larry",
+      "speaker_action": "matched_line",
+      "proposed_text": "Shiiit.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 6,
+    "matched_wiki_lines": 5,
+    "unmatched_wiki_lines": 1,
+    "matched": 6,
+    "speakers_to_map": 1,
+    "text_auto_correct": 1,
+    "text_review": 3,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

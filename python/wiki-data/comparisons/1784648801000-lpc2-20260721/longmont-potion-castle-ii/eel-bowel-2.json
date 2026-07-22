@@ -1,0 +1,366 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:45.043429+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Eel Bowel 2",
+  "track_slug": "eel-bowel-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/eel-bowel-2.json",
+  "json_sha256": "fcadbf05e43dc35da6f84ded67ff46fdcb5a6da66a33ec5ae1f806d12404522a",
+  "wiki_title": "Eel Bowel 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Eel_Bowel_2",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_03": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.6909,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.7409,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.8595,
+          "observations": 4
+        },
+        {
+          "name": "Woman",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Woman",
+      "confidence": 0.8113,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 4.1987,
+          "observations": 5
+        },
+        {
+          "name": "Man",
+          "score": 0.9767,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You are you store? No. No, I know I want a new record.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, I... No, I... I want a new record.",
+      "similarity": 0.7045,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] No, I... No, I... I want a new record.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, what do you want?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, what do you want?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, what do you want?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, the I'll beaul. How you say?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Uhhh... the Eel Bowel? Is that... how you say?",
+      "similarity": 0.6316,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[accented] Uhhh... the Eel Bowel? Is that... how you say?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'll hear about 65 times.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You've called here about sixty-five times.",
+      "similarity": 0.6154,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You've called here about sixty-five times.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I, um, I, um, I'll bow is important to my family.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Eh... An eel bowel is important to my family.",
+      "similarity": 0.7234,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Eh... An eel bowel is important to my family.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, well, it's important to my family too, but we can't get it anymore.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yeah, well, it's important to my family too, but we can't get it anymore, so...",
+      "similarity": 0.9787,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, well, it's important to my family too, but we can't get it anymore, so...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can't get what?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] You can't get what?",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] You can't get what?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Ilbao.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Who will have...",
+      "similarity": 0.5556,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Ilbao.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who have...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Who will have...",
+      "similarity": 0.5556,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Who have...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's an import, 4999.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "It's an import, $49.99.",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's an import, $49.99.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you have got it, Elbao?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] You have got Eel Bowel?",
+      "similarity": 0.6909,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] You have got Eel Bowel?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, she said she has it in a bag, 4998.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yes, she said she has it in the bag. $49.98.",
+      "similarity": 0.8974,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, she said she has it in the bag. $49.98.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Which release to you, Kenny, of I'm not really sure.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Which one... Which release do you carry, of, uh, Eel Bowel?",
+      "similarity": 0.4909,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "[accented] Which one... Which release do you carry, of, uh, Eel Bowel?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I think we just have the one.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I'm not really sure, I think we just have the one. \"Eel Bowel's Greatest Hits\".",
+      "similarity": 0.7328,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I think we just have the one.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Eel Bial Bial's greatest tip.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I'm not really sure, I think we just have the one. \"Eel Bowel's Greatest Hits\".",
+      "similarity": 0.7328,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Eel Bial Bial's greatest tip.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Here's a D.U. Records compilation called Longmont Potion Castle 2.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Here's a D.U. Records compilation called Longmont Potion Castle II.",
+      "similarity": 0.9767,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here's a D.U. Records compilation called Longmont Potion Castle II.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 16,
+    "total_wiki_lines": 17,
+    "matched_wiki_lines": 14,
+    "unmatched_wiki_lines": 3,
+    "matched": 16,
+    "speakers_to_map": 2,
+    "text_auto_correct": 4,
+    "text_review": 7,
+    "text_group_review": 4,
+    "unmatched_json": 0
+  }
+}

@@ -1,0 +1,515 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:52.862802+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Rolo",
+  "track_slug": "rolo",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/rolo.json",
+  "json_sha256": "6d8bb0fb490512653cebc00fed0360e40a3c62b186d33243928667f6067cbd55",
+  "wiki_title": "Rolo",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Rolo",
+  "speaker_mapping": {
+    "SPEAKER_00": "Mike"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Mike",
+      "confidence": 0.677,
+      "observations": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Mike",
+          "score": 7.7852,
+          "observations": 8
+        },
+        {
+          "name": "LPC",
+          "score": 3.7143,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.651,
+      "observations": 5,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 4.8915,
+          "observations": 5
+        },
+        {
+          "name": "Mike",
+          "score": 2.6222,
+          "observations": 3
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you sure you're in a safe way? This mic can help you.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Safeway, this is Mike. Can I help you?",
+      "similarity": 0.6222,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Safeway, this is Mike. Can I help you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, do you have rollo candies?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, do you have Rolo candies?",
+      "similarity": 0.9831,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, do you have Rolo candies?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have a problem repeating things.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I have a problem repeating things.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have a problem repeating things.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah?",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So do you have them?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So, do you have them?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So do you have them?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just said yes.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "I just said yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just said yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Rollo candies?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Rollo candies?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Right.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Right.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How much are they?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How much are they?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How much are they?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know, I'd have to check.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "I don't know, I'd have to check.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know, I'd have to check.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you repeat that?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you repeat that?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you repeat that?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Was this kind of type of joke?",
+      "wiki_speaker": "Mike",
+      "wiki_text": "What is this, some type of joke? Why do you want me to repeat everything?",
+      "similarity": 0.9065,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Was this kind of type of joke?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why do you want me to repeat everything?",
+      "wiki_speaker": "Mike",
+      "wiki_text": "What is this, some type of joke? Why do you want me to repeat everything?",
+      "similarity": 0.9065,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why do you want me to repeat everything?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Can you repeat the word rollo?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Can you repeat the word \"Rolo\"?",
+      "similarity": 0.9825,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can you repeat the word \"Rolo\"?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Safeway, this Mike can help you.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Safeway, this is Mike. Can I help you?",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Safeway, this is Mike. Can I help you?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, Mike, I just wanted you to bounce that word back to me to make sure I'm pronouncing it right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, Mike, um... I just wanted you to bounce that word back to me, make sure I'm pronouncing it right. The word \"Rolo\".",
+      "similarity": 0.9427,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, Mike, I just wanted you to bounce that word back to me to make sure I'm pronouncing it right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The word roll though.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, Mike, um... I just wanted you to bounce that word back to me, make sure I'm pronouncing it right. The word \"Rolo\".",
+      "similarity": 0.9427,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The word roll though.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why?",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Why?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you want me to check on this product for you or not?",
+      "wiki_speaker": "Mike",
+      "wiki_text": "Do you want me to check on this product for you or not?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you want me to check on this product for you or not?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can you say the word?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just, can you, um... can you say the word?",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just, can you, um... can you say the word?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm not getting in. I don't play games.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "I'm not getting in... I don't play games. Uh, I'll check on this product if you want. Otherwise, quit--",
+      "similarity": 0.9556,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not getting in. I don't play games.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll check on this product if you want otherwise.",
+      "wiki_speaker": "Mike",
+      "wiki_text": "I'm not getting in... I don't play games. Uh, I'll check on this product if you want. Otherwise, quit--",
+      "similarity": 0.9556,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Mike",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll check on this product if you want otherwise.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I am interested in the product and I'm prepared to buy it and I realize this is a little unorthodox.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I... I am interested in the product, and I'm prepared to buy it, I... and I realize this is a little unorthodox. If you would just...",
+      "similarity": 0.9832,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I am interested in the product and I'm prepared to buy it and I realize this is a little unorthodox.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If you would just...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I... I am interested in the product, and I'm prepared to buy it, I... and I realize this is a little unorthodox. If you would just...",
+      "similarity": 0.9832,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you would just...",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 25,
+    "total_wiki_lines": 23,
+    "matched_wiki_lines": 20,
+    "unmatched_wiki_lines": 3,
+    "matched": 24,
+    "speakers_to_map": 1,
+    "text_auto_correct": 3,
+    "text_review": 2,
+    "text_group_review": 8,
+    "unmatched_json": 1
+  }
+}

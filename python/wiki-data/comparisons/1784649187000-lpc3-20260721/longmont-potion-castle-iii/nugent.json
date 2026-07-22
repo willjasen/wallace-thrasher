@@ -1,0 +1,863 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:47.087339+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Nugent",
+  "track_slug": "nugent",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/nugent.json",
+  "json_sha256": "306349bbfa40e64e98e252581bbc369ded542a6008d5de897b04a9c47201e483",
+  "wiki_title": "Nugent",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Nugent",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.9203,
+      "observations": 18,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 17.2199,
+          "observations": 18
+        },
+        {
+          "name": "LPC",
+          "score": 1.4916,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.9116,
+      "observations": 13,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 10.3156,
+          "observations": 13
+        },
+        {
+          "name": "Man",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Rodney? There's no Rodney here?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Rodney? There's no Rodney here.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Rodney? There's no Rodney here?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Randy?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Randy?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No?",
+      "wiki_speaker": "Man",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My brother Randy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] My brother, Randy.",
+      "similarity": 0.7805,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] My brother, Randy.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, this is 8607602.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, this is 860-7602.",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, this is 860-7602.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes, that is his number, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Yes, that is the number, man. Rodney, man.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Yes, that is the number, man. Rodney, man.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, nobody here by that name?",
+      "wiki_speaker": "Man",
+      "wiki_text": "No. No. Nobody here by that name.",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No. No. Nobody here by that name.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, the Nugent Records.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, the, um... the Nugent records.",
+      "similarity": 0.7241,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] No, the, um... the Nugent records.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I have no idea what you're talking about.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I have no idea what you're talking about.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have no idea what you're talking about.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The Nugent records, man. The Nugent albums, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] The Nugent records, man. The Nugent albums, man.",
+      "similarity": 0.9072,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] The Nugent records, man. The Nugent albums, man.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know what you're talking about.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know what you're talkin' about.",
+      "similarity": 0.9737,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what you're talkin' about.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Man, Rodney's Nugent tape, man. You know, the Nugent, Ted Nugent, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Man... Rodney's Nugent tape, man. You know, the Nugent... Ted Nugent?",
+      "similarity": 0.9008,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Man... Rodney's Nugent tape, man. You know, the Nugent... Ted Nugent?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He's got that tape of Nugent.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] He got that tape of Nugent doin'...",
+      "similarity": 0.7536,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] He got that tape of Nugent doin'...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, you got the wrong number, man.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, you got the wrong number, man.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you got the wrong number, man.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, man, come on, please, the Nusia record.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, man, come on. Please. The Nugent record. It's the one record, man, I need to get from him.",
+      "similarity": 0.9111,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, man, come on, please, the Nusia record.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's the one record, man, I need to get from him.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, man, come on. Please. The Nugent record. It's the one record, man, I need to get from him.",
+      "similarity": 0.9111,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's the one record, man, I need to get from him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, this isn't Rodney's house.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, this isn't Rodney's house. [laughing]",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, this isn't Rodney's house. [laughing]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, Rodney, Randy, you know, whoever, you know, got the Nusia.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] No, Ran... Rodney, Randy, you know, whoever, you know, got the Nugent.",
+      "similarity": 0.8387,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] No, Ran... Rodney, Randy, you know, whoever, you know, got the Nugent.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, nobody's here by that name.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, nobody's here by that name.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, nobody's here by that name.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got that Nusia tape, man?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] You got that Nugent tape, man?",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] You got that Nugent tape, man?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I sure don't. I don't even have a tape player.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, I sure don't. I don't even have a tape player.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I sure don't. I don't even have a tape player.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You what?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You what?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't even have a tape player.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't even have a tape player.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even have a tape player.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What am I supposed to do about this record, bro?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[sigh] [accented] What am I supposed to do about this record, bro?",
+      "similarity": 0.8679,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[sigh] [accented] What am I supposed to do about this record, bro?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know, man.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know, man.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know, man.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your choice, bro.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Your choice, bro.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Your choice, bro.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know, man. Sorry.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know, man. Sorry.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know, man. Sorry.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you recommend, bro?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Well, what do you recommend, bro?",
+      "similarity": 0.7812,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] Well, what do you recommend, bro?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know, um.... Should try a record store... [laughing] Or, I don't know what to tell you. You've got the wrong number.",
+      "similarity": 0.8673,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Try a record star.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know, um.... Should try a record store... [laughing] Or, I don't know what to tell you. You've got the wrong number.",
+      "similarity": 0.8673,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Try a record star.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know what to tell you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know, um.... Should try a record store... [laughing] Or, I don't know what to tell you. You've got the wrong number.",
+      "similarity": 0.8673,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what to tell you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You got the wrong number.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know, um.... Should try a record store... [laughing] Or, I don't know what to tell you. You've got the wrong number.",
+      "similarity": 0.8673,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got the wrong number.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Wrong number, man.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] The wrong number, man?",
+      "similarity": 0.7111,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] The wrong number, man?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, you got the wrong number.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah, you've got the wrong number.",
+      "similarity": 0.9508,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you've got the wrong number.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Rodney lives at A6-076 or whatever, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Rodney lives at eight-six- uh... fuckin' zero-seven-six, uh... two-oh-six or whatever, you know? He got that Nugent tape on disc, you know?",
+      "similarity": 0.6577,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Rodney lives at A6-076 or whatever, you know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got that neutral tape on disk, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Rodney lives at eight-six- uh... fuckin' zero-seven-six, uh... two-oh-six or whatever, you know? He got that Nugent tape on disc, you know?",
+      "similarity": 0.6577,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got that neutral tape on disk, you know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know what to tell you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I don't know. I don't know what to tell you.",
+      "similarity": 0.8169,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know. I don't know what to tell you.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen, I got somebody on the line. I gotta go. You got the wrong number, okay?",
+      "wiki_speaker": "Man",
+      "wiki_text": "This-- uh, listen, I've got somebody on the line. I gotta go. You got the wrong number, okay?",
+      "similarity": 0.9308,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "This-- uh, listen, I've got somebody on the line. I gotta go. You got the wrong number, okay?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, it's bad when it gets into that phone, you know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Well, it's... it's bad when he gets into that funk, you know? Nugent.",
+      "similarity": 0.7874,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it's bad when it gets into that phone, you know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "None",
+      "json_text": "Nuge.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Well, it's... it's bad when he gets into that funk, you know? Nugent.",
+      "similarity": 0.7874,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nuge.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, listen, I'm sorry.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um... well, listen. I'm sorry. You've got the wrong number. Call... call somebody else.",
+      "similarity": 0.8904,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, listen, I'm sorry.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You got some.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um... well, listen. I'm sorry. You've got the wrong number. Call... call somebody else.",
+      "similarity": 0.8904,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got some.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "the wrong number. Call somebody else.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um... well, listen. I'm sorry. You've got the wrong number. Call... call somebody else.",
+      "similarity": 0.8904,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "the wrong number. Call somebody else.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 44,
+    "total_wiki_lines": 36,
+    "matched_wiki_lines": 34,
+    "unmatched_wiki_lines": 2,
+    "matched": 42,
+    "speakers_to_map": 2,
+    "text_auto_correct": 9,
+    "text_review": 10,
+    "text_group_review": 13,
+    "unmatched_json": 2
+  }
+}

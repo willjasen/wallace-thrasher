@@ -1,0 +1,391 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:52.800352+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Nouget",
+  "track_slug": "nouget",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/nouget.json",
+  "json_sha256": "febf60b709d6ad14d82444983aa12563204ceec7d5dc497c7476f8879de5e426",
+  "wiki_title": "Nouget",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Nouget",
+  "speaker_mapping": {
+    "SPEAKER_00": "Doctor"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Doctor",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Doctor",
+          "score": 1.8765,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Doctor",
+      "confidence": 0.5734,
+      "observations": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Doctor",
+          "score": 3.8148,
+          "observations": 4
+        },
+        {
+          "name": "LPC",
+          "score": 2.8377,
+          "observations": 3
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Dan, hi.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "Dan, hi.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dan, hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello there.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello there.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How are you, sir?",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "How are you, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "How are you, sir?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Great.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Great, how are ya?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Great.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How are you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Great, how are ya?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How are you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm good, thanks.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "I'm good, thanks.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm good, thanks.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "LPC",
+      "json_text": "I recently had someone come by my residence and kind of pitch, a sales pitch about",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um, I s... I recently had someone come by my residence, and kind of pitch a sales pitch about uh... about nougat...",
+      "similarity": 0.8757,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, I s... I recently had someone come by my residence, and kind of pitch a sales pitch about uh... about nougat...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "LPC",
+      "json_text": "about Nuget and the sale thereof, basically.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "...and the sale thereof, basically.",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "...and the sale thereof, basically.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And what is it?",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "So what is it?",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "So what is it?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "LPC",
+      "json_text": "Nuget.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Nougat?",
+      "similarity": 0.7273,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nougat?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "LPC",
+      "json_text": "Some kind of edible.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Umm, some kind of edible. Anyway...",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Some kind of edible.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Anyway.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Umm, some kind of edible. Anyway...",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Anyway.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, okay.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "Oh, okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "LPC",
+      "json_text": "Apparently, apparently...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ap... Apparently, um...",
+      "similarity": 0.7027,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ap... Apparently, um...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We've got a roll tonight, yes.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "We're on a roll tonight! Yes, we're getting the same guy over and over again, 1-800-634-7--",
+      "similarity": 0.8765,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got a roll tonight, yes.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We're getting this.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "We're on a roll tonight! Yes, we're getting the same guy over and over again, 1-800-634-7--",
+      "similarity": 0.8765,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're getting this.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "same guy over and over again.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "We're on a roll tonight! Yes, we're getting the same guy over and over again, 1-800-634-7--",
+      "similarity": 0.8765,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "same guy over and over again.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "One eight hundred six, three, four, seventy.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "One eight hundred six, three, four, seventy.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 18,
+    "total_wiki_lines": 17,
+    "matched_wiki_lines": 13,
+    "unmatched_wiki_lines": 4,
+    "matched": 17,
+    "speakers_to_map": 1,
+    "text_auto_correct": 1,
+    "text_review": 4,
+    "text_group_review": 7,
+    "unmatched_json": 1
+  }
+}

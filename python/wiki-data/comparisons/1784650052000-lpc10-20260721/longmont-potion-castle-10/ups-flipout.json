@@ -1,0 +1,4889 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:09:24.789863+00:00",
+  "snapshot": "1784650052000-lpc10-20260721",
+  "album": "Longmont Potion Castle 10",
+  "album_slug": "longmont-potion-castle-10",
+  "track": "UPS Flipout",
+  "track_slug": "ups-flipout",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-10/ups-flipout.json",
+  "json_sha256": "b0edf7df6ebaf862eb809ec0f12e582ccc942642aa49ac7da2cad6c35d0c8c0c",
+  "wiki_title": "UPS Flipout",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/UPS_Flipout",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.9718,
+      "observations": 36,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 34.4708,
+          "observations": 36
+        },
+        {
+          "name": "Woman",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 0.9638,
+      "observations": 33,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 26.5919,
+          "observations": 33
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This is Dick calling from UPS.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Dick calling from UPS. Hey, I’ve been trying to bring a box to your, uh, place, there, for the last three days but you guys are making so much noise you don’t hear me!",
+      "similarity": 0.979,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Dick calling from UPS.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, I've been trying to bring a box to your place there for the last three days,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Dick calling from UPS. Hey, I’ve been trying to bring a box to your, uh, place, there, for the last three days but you guys are making so much noise you don’t hear me!",
+      "similarity": 0.979,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, I've been trying to bring a box to your place there for the last three days,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "but you guys are making so much noise.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Dick calling from UPS. Hey, I’ve been trying to bring a box to your, uh, place, there, for the last three days but you guys are making so much noise you don’t hear me!",
+      "similarity": 0.979,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "but you guys are making so much noise.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You don't hear me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Dick calling from UPS. Hey, I’ve been trying to bring a box to your, uh, place, there, for the last three days but you guys are making so much noise you don’t hear me!",
+      "similarity": 0.979,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't hear me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's nobody in the house between 8 and 4.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "There’s nobody at the house between eight and four.",
+      "similarity": 0.8172,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "There’s nobody at the house between eight and four.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "When UPS comes to the door, you best listen up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—comes to the door, you best listen up; d’you understand?",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "When UPS comes to the door, you best listen up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you understand?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—comes to the door, you best listen up; d’you understand?",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you understand?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what you're talking about.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don’t know—I don’t know what you’re talking about. I don’t know what---w—who sent, the boss or what?",
+      "similarity": 0.8023,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what you're talking about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know who fit the box or what.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don’t know—I don’t know what you’re talking about. I don’t know what---w—who sent, the boss or what?",
+      "similarity": 0.8023,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who fit the box or what.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen up here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen up, here.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen up here.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "When you tell me to listen up, that's what you shut me out.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "When you tell me to listen up, that’s when you sh—shut me out, okay?",
+      "similarity": 0.9291,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "When you tell me to listen up, that's what you shut me out.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "When you tell me to listen up, that’s when you sh—shut me out, okay?",
+      "similarity": 0.9291,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need a credit card payment.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need a credit card payment on this thing: C.O.D. $242.",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need a credit card payment.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "this thing, COD, $242.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need a credit card payment on this thing: C.O.D. $242.",
+      "similarity": 0.9495,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "this thing, COD, $242.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "$242.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "$242? Just return it, because I don’t know what that is; I don’t know who it is; I don’t know—",
+      "similarity": 0.7286,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "$242.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just return it, because I don't know what that is.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "$242? Just return it, because I don’t know what that is; I don’t know who it is; I don’t know—",
+      "similarity": 0.7286,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just return it, because I don't know what that is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Return it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Return it? Not an option!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Return it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Not an option.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Return it? Not an option!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not an option.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What is this?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What is it?",
+      "similarity": 0.8182,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is it?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's outrageous.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s outrageous!",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s outrageous!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't know who I am.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You don’t know who I am; you don’t know anything about me—return it!",
+      "similarity": 0.9394,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't know who I am.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't know anything about it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You don’t know who I am; you don’t know anything about me—return it!",
+      "similarity": 0.9394,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't know anything about it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Return it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You don’t know who I am; you don’t know anything about me—return it!",
+      "similarity": 0.9394,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Return it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Not an option.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Not an option!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not an option.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, then what do you want me to do?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, but, th—okay, then what do you want me to do? It’s not my box. What do you want me to do?—",
+      "similarity": 0.695,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, then what do you want me to do?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's not my boss.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, but, th—okay, then what do you want me to do? It’s not my box. What do you want me to do?—",
+      "similarity": 0.695,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's not my boss.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Read me your credit card number and I'll just leave it by your door.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Read me your credit card number and I’ll just leave it by your door—",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Read me your credit card number and I’ll just leave it by your door—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to give you my credit card number because it's not my boss.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I’m not gonna give you my credit card number, ‘cause it’s not my box—I don’t even know what—you can’t even tell me what it is, so how am I supposed to know what I’m paying for?!",
+      "similarity": 0.9133,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not going to give you my credit card number because it's not my boss.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I didn't know what you can't even tell me what it is.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I’m not gonna give you my credit card number, ‘cause it’s not my box—I don’t even know what—you can’t even tell me what it is, so how am I supposed to know what I’m paying for?!",
+      "similarity": 0.9133,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't know what you can't even tell me what it is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So how am I supposed to know what I'm paying?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I’m not gonna give you my credit card number, ‘cause it’s not my box—I don’t even know what—you can’t even tell me what it is, so how am I supposed to know what I’m paying for?!",
+      "similarity": 0.9133,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So how am I supposed to know what I'm paying?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "for?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I’m not gonna give you my credit card number, ‘cause it’s not my box—I don’t even know what—you can’t even tell me what it is, so how am I supposed to know what I’m paying for?!",
+      "similarity": 0.9133,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "for?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's from goosepuss.com.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s from GoosePuss.com.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s from GoosePuss.com.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Goose purge?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Goose Purse?! I don’t even know what that is!",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Goose purge?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't even know what that is.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Goose Purse?! I don’t even know what that is!",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even know what that is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, it's none of my concern.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, it’s none of my concern—",
+      "similarity": 0.9643,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it’s none of my concern—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why isn't it?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—And why d—why—why isn’t it—why isn’t it returnable?",
+      "similarity": 0.7391,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why isn't it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why isn't it?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—And why d—why—why isn’t it—why isn’t it returnable?",
+      "similarity": 0.7391,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why isn't it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're returnable.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—And why d—why—why isn’t it—why isn’t it returnable?",
+      "similarity": 0.7391,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're returnable.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's company policy, miss.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s company policy, miss—",
+      "similarity": 0.9583,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s company policy, miss—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I was with you PS.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I’ve worked—I work with UPS! I work with UPS! You guys can return it, okay? So don’t tell me you cannot return it!",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I was with you PS.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I won't put you PS.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I’ve worked—I work with UPS! I work with UPS! You guys can return it, okay? So don’t tell me you cannot return it!",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I won't put you PS.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You get to return it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I’ve worked—I work with UPS! I work with UPS! You guys can return it, okay? So don’t tell me you cannot return it!",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You get to return it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I’ve worked—I work with UPS! I work with UPS! You guys can return it, okay? So don’t tell me you cannot return it!",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So those parties can I return it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I’ve worked—I work with UPS! I work with UPS! You guys can return it, okay? So don’t tell me you cannot return it!",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "So those parties can I return it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You drag us out there three times in the pouring rain and then you say you don't want it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You drag us out there three times in the pourin’ rain and then you say you don’t want it? Nah, it’s a little late for that!",
+      "similarity": 0.9664,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You drag us out there three times in the pouring rain and then you say you don't want it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, it's a little late for that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You drag us out there three times in the pourin’ rain and then you say you don’t want it? Nah, it’s a little late for that!",
+      "similarity": 0.9664,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, it's a little late for that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, no, no, no, no, no.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yo—no no no no no no! I’ve never ordered anything from there, so I don’t know what you’re talking about!—",
+      "similarity": 0.9548,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, no, no, no, no, no.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I've never ordered anything from there, so I don't know what you're talking about.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yo—no no no no no no! I’ve never ordered anything from there, so I don’t know what you’re talking about!—",
+      "similarity": 0.9548,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've never ordered anything from there, so I don't know what you're talking about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I hear that every day.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I hear that every day!—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I hear that every day.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "242. Okay, this is the first time I've ever heard of this company, who's curse?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—So I’m not gonna pay $242—Okay! This is—is the first I’ve ever heard of this company—Goose Purse?! It’s the first I’ve ever heard from you! And you call telling me that I’m outrageous, disrespecting me! Don’t—don’t—d—don’t talk to me like that! You don’t know who I am, okay? You don’t know anything about me for you to disrespect me like that. And what’s your name, again?",
+      "similarity": 0.8423,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "242. Okay, this is the first time I've ever heard of this company, who's curse?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's the first time I've ever heard from you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—So I’m not gonna pay $242—Okay! This is—is the first I’ve ever heard of this company—Goose Purse?! It’s the first I’ve ever heard from you! And you call telling me that I’m outrageous, disrespecting me! Don’t—don’t—d—don’t talk to me like that! You don’t know who I am, okay? You don’t know anything about me for you to disrespect me like that. And what’s your name, again?",
+      "similarity": 0.8423,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's the first time I've ever heard from you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And he's calling me and telling me that I'm outrageous, but disrespecting me, don't, don't talk to me like that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—So I’m not gonna pay $242—Okay! This is—is the first I’ve ever heard of this company—Goose Purse?! It’s the first I’ve ever heard from you! And you call telling me that I’m outrageous, disrespecting me! Don’t—don’t—d—don’t talk to me like that! You don’t know who I am, okay? You don’t know anything about me for you to disrespect me like that. And what’s your name, again?",
+      "similarity": 0.8423,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And he's calling me and telling me that I'm outrageous, but disrespecting me, don't, don't talk to me like that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't know who I am, okay? You don't know anything about it, or you could just spit me like that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—So I’m not gonna pay $242—Okay! This is—is the first I’ve ever heard of this company—Goose Purse?! It’s the first I’ve ever heard from you! And you call telling me that I’m outrageous, disrespecting me! Don’t—don’t—d—don’t talk to me like that! You don’t know who I am, okay? You don’t know anything about me for you to disrespect me like that. And what’s your name, again?",
+      "similarity": 0.8423,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't know who I am, okay? You don't know anything about it, or you could just spit me like that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your name again?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—So I’m not gonna pay $242—Okay! This is—is the first I’ve ever heard of this company—Goose Purse?! It’s the first I’ve ever heard from you! And you call telling me that I’m outrageous, disrespecting me! Don’t—don’t—d—don’t talk to me like that! You don’t know who I am, okay? You don’t know anything about me for you to disrespect me like that. And what’s your name, again?",
+      "similarity": 0.8423,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's your name again?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Dick.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Dick.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Dick? Okay, what? Listen, Dick. You don't know me?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Dick?! Okay, wha—Listen, Dick: You don’t know me t—to d—disrespect me like that, okay? If—if there’s nobody there to sign the package, then you know what? You can return it back, okay? Nobody talks to me like that!",
+      "similarity": 0.87,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick? Okay, what? Listen, Dick. You don't know me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is just disfitting me like that, okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Dick?! Okay, wha—Listen, Dick: You don’t know me t—to d—disrespect me like that, okay? If—if there’s nobody there to sign the package, then you know what? You can return it back, okay? Nobody talks to me like that!",
+      "similarity": 0.87,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is just disfitting me like that, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If there's nobody there in time packets, then you know what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Dick?! Okay, wha—Listen, Dick: You don’t know me t—to d—disrespect me like that, okay? If—if there’s nobody there to sign the package, then you know what? You can return it back, okay? Nobody talks to me like that!",
+      "similarity": 0.87,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "If there's nobody there in time packets, then you know what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can we turn it back. Nobody talks to me like that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Dick?! Okay, wha—Listen, Dick: You don’t know me t—to d—disrespect me like that, okay? If—if there’s nobody there to sign the package, then you know what? You can return it back, okay? Nobody talks to me like that!",
+      "similarity": 0.87,
+      "match_type": "similar",
+      "json_group": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can we turn it back. Nobody talks to me like that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just read the credit card number.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just read the credit card number and I’ll leave it at your door.",
+      "similarity": 0.9841,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just read the credit card number.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and I'll leave it at your door.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just read the credit card number and I’ll leave it at your door.",
+      "similarity": 0.9841,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I'll leave it at your door.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, no, I'm not going to give you a credit card, because I don't know what to hire you should be at $242.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh—no! I’m not gonna give you a credit card. Do you not know [unclear] your shit-eating at $242!",
+      "similarity": 0.7053,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh—no! I’m not gonna give you a credit card. Do you not know [unclear] your shit-eating at $242!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Goosepuss.com.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "GoosePuss.com.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Goosepuss.com.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What is goose pursed on?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What is Goose Purse dot—I don’t even know what that is! How did I—stuff I didn’t order things of a card [sic]. ‘Cause I got the card, a while back.",
+      "similarity": 0.7133,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is goose pursed on?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't even know what that is.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What is Goose Purse dot—I don’t even know what that is! How did I—stuff I didn’t order things of a card [sic]. ‘Cause I got the card, a while back.",
+      "similarity": 0.7133,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even know what that is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How do you know somebody did it or something about a card?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What is Goose Purse dot—I don’t even know what that is! How did I—stuff I didn’t order things of a card [sic]. ‘Cause I got the card, a while back.",
+      "similarity": 0.7133,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "How do you know somebody did it or something about a card?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because I lost a card, I want that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What is Goose Purse dot—I don’t even know what that is! How did I—stuff I didn’t order things of a card [sic]. ‘Cause I got the card, a while back.",
+      "similarity": 0.7133,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I lost a card, I want that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're full of excuses.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re full of excuses!",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You’re full of excuses!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I'm not following excuses.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No, I'm not following excuses.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because I'm telling you that I did not order anything from there.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m nat full of excuses! Why am I full of excuses, because I’m telling you that I did not order anything from there? Obviously, this is the first time I ever heard UPS disrespect somebody th—this way, ever! I know the manager! I know them all! So don’t tell me that—that—you cannot ret—return the box; it’s not an option And yes, it is an option! ‘Cause I did not order anything from there!",
+      "similarity": 0.7818,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I'm telling you that I did not order anything from there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Obviously, it's the first time I ever heard you, yes, disrespect somebody's it this way, ever.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m nat full of excuses! Why am I full of excuses, because I’m telling you that I did not order anything from there? Obviously, this is the first time I ever heard UPS disrespect somebody th—this way, ever! I know the manager! I know them all! So don’t tell me that—that—you cannot ret—return the box; it’s not an option And yes, it is an option! ‘Cause I did not order anything from there!",
+      "similarity": 0.7818,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Obviously, it's the first time I ever heard you, yes, disrespect somebody's it this way, ever.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "None",
+      "json_text": "Ever.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m nat full of excuses! Why am I full of excuses, because I’m telling you that I did not order anything from there? Obviously, this is the first time I ever heard UPS disrespect somebody th—this way, ever! I know the manager! I know them all! So don’t tell me that—that—you cannot ret—return the box; it’s not an option And yes, it is an option! ‘Cause I did not order anything from there!",
+      "similarity": 0.7818,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ever.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I know the manager. I know them all.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m nat full of excuses! Why am I full of excuses, because I’m telling you that I did not order anything from there? Obviously, this is the first time I ever heard UPS disrespect somebody th—this way, ever! I know the manager! I know them all! So don’t tell me that—that—you cannot ret—return the box; it’s not an option And yes, it is an option! ‘Cause I did not order anything from there!",
+      "similarity": 0.7818,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I know the manager. I know them all.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't tell me that you can't ever turn the box.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m nat full of excuses! Why am I full of excuses, because I’m telling you that I did not order anything from there? Obviously, this is the first time I ever heard UPS disrespect somebody th—this way, ever! I know the manager! I know them all! So don’t tell me that—that—you cannot ret—return the box; it’s not an option And yes, it is an option! ‘Cause I did not order anything from there!",
+      "similarity": 0.7818,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don't tell me that you can't ever turn the box.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's not an option. Yes, it is an option.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m nat full of excuses! Why am I full of excuses, because I’m telling you that I did not order anything from there? Obviously, this is the first time I ever heard UPS disrespect somebody th—this way, ever! I know the manager! I know them all! So don’t tell me that—that—you cannot ret—return the box; it’s not an option And yes, it is an option! ‘Cause I did not order anything from there!",
+      "similarity": 0.7818,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's not an option. Yes, it is an option.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because I did not order anything to be from there.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because I did not order anything to be from there.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're in fantasy land, lady.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re in fantasy land, lady!",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You’re in fantasy land, lady!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, okay. What's your last name?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, okay, what’s your last name? Wh—Dick what?",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        79,
+        80
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, okay. What's your last name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Dick what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, okay, what’s your last name? Wh—Dick what?",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": [
+        79,
+        80
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, no.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Nono—",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nono—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, no, no. I'm not serious. What's your death name?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Dick what? No no no no no! I’m serious! What’s your last name?",
+      "similarity": 0.7238,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Dick what? No no no no no! I’m serious! What’s your last name?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Dick? No, no.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Dick? No, no.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Dick, no, no.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Dick Nono—",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick Nono—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Dick what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Dick what? Dick what?—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        85,
+        86
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "None",
+      "json_text": "Dick what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Dick what? Dick what?—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        85,
+        86
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Dick what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, no.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Nono",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Nono",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, no, no. Don't talk to me like that. I'm asking you. What's your name?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No, no, no. Don't talk to me like that. I'm asking you. What's your name?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you know you're doing wrong.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because you know you're doing wrong.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll go back and I'll talk to a main manager. I'll call the original manager",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'll go back and I'll talk to a main manager. I'll call the original manager",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and I'll talk to him.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and I'll talk to him.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll tell my God they're really just to spend a whole call.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'll tell my God they're really just to spend a whole call.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is the first I've heard of it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "This is the first I've heard of it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You guys are obnoxious.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You guys are obnoxious.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't know me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You don't know me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I mean, I didn't have fancy to them.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I mean, I didn't have fancy to them.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I think what you make.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I think what you make.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They don't know who you're talking to, okay?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "They don't know who you're talking to, okay?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just relax.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Just relax.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Relax.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Relax.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You should return that box.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You should return that box.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And there's not even about the boss of money.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And there's not even about the boss of money.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's about the way you're talking to me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It's about the way you're talking to me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The way you're talking to me, like I owe you?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "The way you're talking to me, like I owe you?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know you anything, okay?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't know you anything, okay?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know anybody anything that I don't know what the hell it is.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't know anybody anything that I don't know what the hell it is.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can't tell me anything else.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You can't tell me anything else.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They can't tell me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "They can't tell me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "can't return and you cannot tell me he's going to have to pay for it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "can't return and you cannot tell me he's going to have to pay for it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "$242.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "$242, even!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        112,
+        113
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "$242.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Even.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "$242, even!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        112,
+        113
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Even.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, I don't mind if $1.452 dollars, believe me, I don't have the money.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, I—I—I don’t mind $242! Believe me: I have the money! But don’t talk to me like that! I’m not gonna give you the credit card! Have somebody else call me!",
+      "similarity": 0.8313,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, I don't mind if $1.452 dollars, believe me, I don't have the money.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But don't talk to me like that.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, I—I—I don’t mind $242! Believe me: I have the money! But don’t talk to me like that! I’m not gonna give you the credit card! Have somebody else call me!",
+      "similarity": 0.8313,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "But don't talk to me like that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to keep you the credit if I'd have somebody else call me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, I—I—I don’t mind $242! Believe me: I have the money! But don’t talk to me like that! I’m not gonna give you the credit card! Have somebody else call me!",
+      "similarity": 0.8313,
+      "match_type": "similar",
+      "json_group": [
+        114,
+        115,
+        116
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not going to keep you the credit if I'd have somebody else call me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You need to turn around, go home, wait by the door, and listen up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You need to turn around, go home, wait by the door, and listen up!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need to turn around, go home, wait by the door, and listen up.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I'm not going to turn around.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No, I'm not going to turn around.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is a sucker, I'm not going to turn around because you know what?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "This is a sucker, I'm not going to turn around because you know what?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you say so?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because you say so?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you pay so.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because you pay so.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm supposed to skip my job and don't pick up a Twitter and $242.4 box.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm supposed to skip my job and don't pick up a Twitter and $242.4 box.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have no idea what it is.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I have no idea what it is.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, I don't know who would have ordered it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, I don't know who would have ordered it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 125,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And you're telling me I'm turning around?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m not gonna turn around! Listen, fucker, I’m not gonna turn around, because you know what? Because you say so! Because UPS says so, I’m supposed to skip my job and go pick up a $242 box that I have no idea what it is? Because I don’t know who in the heck ordered it! And you’re telling me I have to turn around?! You need to be in fantasy land! You know what? I have a life besides waiting for UPS for something to deliver that I did not order! Right now, I’m not gonna turn around and go home and pick up a stupid box at $242 that I did not order!—",
+      "similarity": 0.6027,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And you're telling me I'm turning around?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 126,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You need to be in front to see lying.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m not gonna turn around! Listen, fucker, I’m not gonna turn around, because you know what? Because you say so! Because UPS says so, I’m supposed to skip my job and go pick up a $242 box that I have no idea what it is? Because I don’t know who in the heck ordered it! And you’re telling me I have to turn around?! You need to be in fantasy land! You know what? I have a life besides waiting for UPS for something to deliver that I did not order! Right now, I’m not gonna turn around and go home and pick up a stupid box at $242 that I did not order!—",
+      "similarity": 0.6027,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You need to be in front to see lying.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 127,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you know what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m not gonna turn around! Listen, fucker, I’m not gonna turn around, because you know what? Because you say so! Because UPS says so, I’m supposed to skip my job and go pick up a $242 box that I have no idea what it is? Because I don’t know who in the heck ordered it! And you’re telling me I have to turn around?! You need to be in fantasy land! You know what? I have a life besides waiting for UPS for something to deliver that I did not order! Right now, I’m not gonna turn around and go home and pick up a stupid box at $242 that I did not order!—",
+      "similarity": 0.6027,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because you know what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 128,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have a lie.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m not gonna turn around! Listen, fucker, I’m not gonna turn around, because you know what? Because you say so! Because UPS says so, I’m supposed to skip my job and go pick up a $242 box that I have no idea what it is? Because I don’t know who in the heck ordered it! And you’re telling me I have to turn around?! You need to be in fantasy land! You know what? I have a life besides waiting for UPS for something to deliver that I did not order! Right now, I’m not gonna turn around and go home and pick up a stupid box at $242 that I did not order!—",
+      "similarity": 0.6027,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I have a lie.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 129,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Besides, waiting for UPS for something to deliver that I did not order.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m not gonna turn around! Listen, fucker, I’m not gonna turn around, because you know what? Because you say so! Because UPS says so, I’m supposed to skip my job and go pick up a $242 box that I have no idea what it is? Because I don’t know who in the heck ordered it! And you’re telling me I have to turn around?! You need to be in fantasy land! You know what? I have a life besides waiting for UPS for something to deliver that I did not order! Right now, I’m not gonna turn around and go home and pick up a stupid box at $242 that I did not order!—",
+      "similarity": 0.6027,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Besides, waiting for UPS for something to deliver that I did not order.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 130,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Right now, I'm not going to turn around and go home and think of a stupid boss of $242 that I did not order.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I’m not gonna turn around! Listen, fucker, I’m not gonna turn around, because you know what? Because you say so! Because UPS says so, I’m supposed to skip my job and go pick up a $242 box that I have no idea what it is? Because I don’t know who in the heck ordered it! And you’re telling me I have to turn around?! You need to be in fantasy land! You know what? I have a life besides waiting for UPS for something to deliver that I did not order! Right now, I’m not gonna turn around and go home and pick up a stupid box at $242 that I did not order!—",
+      "similarity": 0.6027,
+      "match_type": "similar",
+      "json_group": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Right now, I'm not going to turn around and go home and think of a stupid boss of $242 that I did not order.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 131,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just read me the credit card number.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Just read me the credit card number!—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just read me the credit card number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 132,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 133,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to read you know about that credit card number.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not going to read you know about that credit card number.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 134,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Have somebody else call me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Have somebody else call me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 135,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's how to talk to me like I'm going to damn you and me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That's how to talk to me like I'm going to damn you and me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 136,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 137,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you have obviously a big customer service call.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because you have obviously a big customer service call.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 138,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huge customer service problem.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Huge customer service problem.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 139,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, so I need to touch somebody else.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, so I need to touch somebody else.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 140,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because this is bullshit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because this is bullshit.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 141,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That you piss me off.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That you piss me off.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 142,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to hear around and go back home,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not going to hear around and go back home,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 143,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't just to go pick up a spurt because you said so.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't just to go pick up a spurt because you said so.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 144,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is bullshit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "This is bullshit.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 145,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't talk shit about my house.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Don't talk shit about my house.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 146,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't talk smack about anything about my life.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Don't talk smack about anything about my life.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 147,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't know me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You don't know me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 148,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't know anything about me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You don't know anything about me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 149,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm telling you, I'm not that fucking read your, my card number.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm telling you, I'm not that fucking read your, my card number.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 150,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you not get it?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Do you not get it?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 151,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How am I going to keep me my car number over the flight?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How am I going to keep me my car number over the flight?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 152,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You have retarded?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You have retarded?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 153,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who are the last night on your UPS?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Who are the last night on your UPS?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 154,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Lady, go home.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lady, go home, wait for my call!—",
+      "similarity": 0.9206,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155
+      ],
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lady, go home.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 155,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "home, wait for my call.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lady, go home, wait for my call!—",
+      "similarity": 0.9206,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155
+      ],
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "home, wait for my call.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 156,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, fucker. Listen, you shut the fuck up and missin' nothing.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, fucker! Fucker, listen: You shut the fuck up and listen, now, ‘cause now you’re getting me fuckin’ pissed off, okay? And n—I’m not in the mood to listen to you! How do I know you’re UPS?",
+      "similarity": 0.8393,
+      "match_type": "similar",
+      "json_group": [
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, fucker. Listen, you shut the fuck up and missin' nothing.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 157,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm getting me fucking pissed off, okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, fucker! Fucker, listen: You shut the fuck up and listen, now, ‘cause now you’re getting me fuckin’ pissed off, okay? And n—I’m not in the mood to listen to you! How do I know you’re UPS?",
+      "similarity": 0.8393,
+      "match_type": "similar",
+      "json_group": [
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm getting me fucking pissed off, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 158,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I'm not in the way to listen to you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, fucker! Fucker, listen: You shut the fuck up and listen, now, ‘cause now you’re getting me fuckin’ pissed off, okay? And n—I’m not in the mood to listen to you! How do I know you’re UPS?",
+      "similarity": 0.8393,
+      "match_type": "similar",
+      "json_group": [
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I'm not in the way to listen to you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 159,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How do I know you, UPS?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, fucker! Fucker, listen: You shut the fuck up and listen, now, ‘cause now you’re getting me fuckin’ pissed off, okay? And n—I’m not in the mood to listen to you! How do I know you’re UPS?",
+      "similarity": 0.8393,
+      "match_type": "similar",
+      "json_group": [
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "How do I know you, UPS?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 160,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because I worked here for 12 years, that's how.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Because I worked here for 12 years, that’s how!",
+      "similarity": 0.9778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I worked here for 12 years, that’s how!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 161,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, oh, oh, it's okay, and I'm psyched.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, oh, oh, it's okay, and I'm psyched.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 162,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm supposed to know that.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm supposed to know that.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 163,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's the fact.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That's the fact.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 164,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The fact is that you, I'm supposed to know that.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "The fact is that you, I'm supposed to know that.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 165,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I've pulled with the UPS for 10 years,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I've pulled with the UPS for 10 years,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 166,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and nobody's ever asked you for a credit card unless I call them.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and nobody's ever asked you for a credit card unless I call them.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 167,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, you're calling me, asking me for a credit card for $2 for $2.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, you're calling me, asking me for a credit card for $2 for $2.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 168,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That I don't know nothing about.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "That I don't know nothing about.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 169,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I'm supposed to be.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And I'm supposed to be.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 170,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you my credit card number, if you got retarded,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "you my credit card number, if you got retarded,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 171,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "so if you're the retarded one,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "so if you're the retarded one,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 172,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "because if you can see what credit card numbers over your phone",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "because if you can see what credit card numbers over your phone",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 173,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "without knowing if they are your kids or not,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "without knowing if they are your kids or not,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 174,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "then you're the retarded one, okay?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "then you're the retarded one, okay?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 175,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's like you can meet me and your",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It's like you can meet me and your",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 176,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "my social security number over the phone.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "my social security number over the phone.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 177,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's not going to happen.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "It's not going to happen.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 178,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So if you want me to get a credit card number,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "So if you want me to get a credit card number,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 179,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "you have somebody else call me",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "you have somebody else call me",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 180,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "that can't buy that you are UPS.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "that can't buy that you are UPS.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 181,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Give me your last name",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Give me your last name",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 182,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "or all things that are going to get very ugly, okay?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "or all things that are going to get very ugly, okay?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 183,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm telling you that right now, because UPS",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm telling you that right now, because UPS",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 184,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "every day and they drop off and they drop off",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "every day and they drop off and they drop off",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 185,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and they pick up and drop off.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and they pick up and drop off.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 186,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But I don't know what the hell you're talking about.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "But I don't know what the hell you're talking about.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 187,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's the expiration date on your visa?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What’s the expiration date on your Visa?",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What’s the expiration date on your Visa?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 188,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I don't think so.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think so! I don’t think so! You’re retarded; you are retarded if you think I’m gonna give you my credit card!—",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I don't think so.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 189,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't think so.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think so! I don’t think so! You’re retarded; you are retarded if you think I’m gonna give you my credit card!—",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't think so.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 190,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're all retarded.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think so! I don’t think so! You’re retarded; you are retarded if you think I’m gonna give you my credit card!—",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're all retarded.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 191,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You are retarded.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think so! I don’t think so! You’re retarded; you are retarded if you think I’m gonna give you my credit card!—",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You are retarded.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 192,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're going to get my credit card.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, I don’t think so! I don’t think so! You’re retarded; you are retarded if you think I’m gonna give you my credit card!—",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        188,
+        189,
+        190,
+        191,
+        192
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're going to get my credit card.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 193,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Jesus Christ, are you stupid?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Jesus Christ, are you stupid?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 194,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you stupid?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Are you stupid?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 195,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're out to be anything like my credit card or my phone?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're out to be anything like my credit card or my phone?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 196,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How many stupid people do you get to do that for you?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How many stupid people do you get to do that for you?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 197,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "When you treat them like this,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "When you treat them like this,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 198,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "threatening them in.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "threatening them in.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 199,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you to put me in jail?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What are you to put me in jail?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 200,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because I mean my credit card number?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Jesus Christ! Are you stupid?! Are you stupid?—You’re asking me—I need—me [sic] credit card number over the phone? How many stupid people do you get to do this for you when you treat ‘em like this? Threatening them and stu— What are you—do, put me in jail ‘cause I’m—give you my credit card number?! [unclear]. There is no noise in my house!; we have no dogs in our house! Okay, so, if you tell me either go to my house, obviously you’re going to the wrong house; obviously you’re talking to the wrong person: H—has that crossed your mind? Has that crossed your mind?",
+      "similarity": 0.5399,
+      "match_type": "similar",
+      "json_group": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because I mean my credit card number?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 201,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There is no noise in my house.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Jesus Christ! Are you stupid?! Are you stupid?—You’re asking me—I need—me [sic] credit card number over the phone? How many stupid people do you get to do this for you when you treat ‘em like this? Threatening them and stu— What are you—do, put me in jail ‘cause I’m—give you my credit card number?! [unclear]. There is no noise in my house!; we have no dogs in our house! Okay, so, if you tell me either go to my house, obviously you’re going to the wrong house; obviously you’re talking to the wrong person: H—has that crossed your mind? Has that crossed your mind?",
+      "similarity": 0.5399,
+      "match_type": "similar",
+      "json_group": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "There is no noise in my house.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 202,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We have no dogs in our house.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Jesus Christ! Are you stupid?! Are you stupid?—You’re asking me—I need—me [sic] credit card number over the phone? How many stupid people do you get to do this for you when you treat ‘em like this? Threatening them and stu— What are you—do, put me in jail ‘cause I’m—give you my credit card number?! [unclear]. There is no noise in my house!; we have no dogs in our house! Okay, so, if you tell me either go to my house, obviously you’re going to the wrong house; obviously you’re talking to the wrong person: H—has that crossed your mind? Has that crossed your mind?",
+      "similarity": 0.5399,
+      "match_type": "similar",
+      "json_group": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We have no dogs in our house.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 203,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, so if you tell me either go to my house,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Jesus Christ! Are you stupid?! Are you stupid?—You’re asking me—I need—me [sic] credit card number over the phone? How many stupid people do you get to do this for you when you treat ‘em like this? Threatening them and stu— What are you—do, put me in jail ‘cause I’m—give you my credit card number?! [unclear]. There is no noise in my house!; we have no dogs in our house! Okay, so, if you tell me either go to my house, obviously you’re going to the wrong house; obviously you’re talking to the wrong person: H—has that crossed your mind? Has that crossed your mind?",
+      "similarity": 0.5399,
+      "match_type": "similar",
+      "json_group": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, so if you tell me either go to my house,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 204,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "obviously you're going to the house,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Jesus Christ! Are you stupid?! Are you stupid?—You’re asking me—I need—me [sic] credit card number over the phone? How many stupid people do you get to do this for you when you treat ‘em like this? Threatening them and stu— What are you—do, put me in jail ‘cause I’m—give you my credit card number?! [unclear]. There is no noise in my house!; we have no dogs in our house! Okay, so, if you tell me either go to my house, obviously you’re going to the wrong house; obviously you’re talking to the wrong person: H—has that crossed your mind? Has that crossed your mind?",
+      "similarity": 0.5399,
+      "match_type": "similar",
+      "json_group": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "obviously you're going to the house,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 205,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not talking to the wrong person.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Jesus Christ! Are you stupid?! Are you stupid?—You’re asking me—I need—me [sic] credit card number over the phone? How many stupid people do you get to do this for you when you treat ‘em like this? Threatening them and stu— What are you—do, put me in jail ‘cause I’m—give you my credit card number?! [unclear]. There is no noise in my house!; we have no dogs in our house! Okay, so, if you tell me either go to my house, obviously you’re going to the wrong house; obviously you’re talking to the wrong person: H—has that crossed your mind? Has that crossed your mind?",
+      "similarity": 0.5399,
+      "match_type": "similar",
+      "json_group": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not talking to the wrong person.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 206,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Has that caught your mind?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Has that caught your mind?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 207,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Has that caught your mind?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Has that caught your mind?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 208,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I know.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "A—no, I’m a professional, okay?",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        208,
+        209
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I know.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 209,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm a professional, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "A—no, I’m a professional, okay?",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        208,
+        209
+      ],
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm a professional, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 210,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, you're not acting like one?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, you're not acting like one?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 211,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you sure to tell her?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Are you sure to tell her?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 212,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not acting like one?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, you’re not acting like one!; you sure as hell are not acting like one!—Start acting like one, then, if you’re a professional! A customer service manager does not talk like that to customers, okay? Mister, stop calling me lady, okay? I’ll tell you w—this much: you are not a professional, and you know what? You don’t even know who you’re talking to! Stop blowing up my phone, okay? I’m telling you right now! I’m not gonna talk to you; I’m not gonna give you my credit card over the phone!",
+      "similarity": 0.6031,
+      "match_type": "similar",
+      "json_group": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not acting like one?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 213,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Sorry, acting like one then if you're a professional.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, you’re not acting like one!; you sure as hell are not acting like one!—Start acting like one, then, if you’re a professional! A customer service manager does not talk like that to customers, okay? Mister, stop calling me lady, okay? I’ll tell you w—this much: you are not a professional, and you know what? You don’t even know who you’re talking to! Stop blowing up my phone, okay? I’m telling you right now! I’m not gonna talk to you; I’m not gonna give you my credit card over the phone!",
+      "similarity": 0.6031,
+      "match_type": "similar",
+      "json_group": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Sorry, acting like one then if you're a professional.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 214,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "A customer service manager does not talk like that to customers, okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, you’re not acting like one!; you sure as hell are not acting like one!—Start acting like one, then, if you’re a professional! A customer service manager does not talk like that to customers, okay? Mister, stop calling me lady, okay? I’ll tell you w—this much: you are not a professional, and you know what? You don’t even know who you’re talking to! Stop blowing up my phone, okay? I’m telling you right now! I’m not gonna talk to you; I’m not gonna give you my credit card over the phone!",
+      "similarity": 0.6031,
+      "match_type": "similar",
+      "json_group": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "A customer service manager does not talk like that to customers, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 215,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Mr.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, you’re not acting like one!; you sure as hell are not acting like one!—Start acting like one, then, if you’re a professional! A customer service manager does not talk like that to customers, okay? Mister, stop calling me lady, okay? I’ll tell you w—this much: you are not a professional, and you know what? You don’t even know who you’re talking to! Stop blowing up my phone, okay? I’m telling you right now! I’m not gonna talk to you; I’m not gonna give you my credit card over the phone!",
+      "similarity": 0.6031,
+      "match_type": "similar",
+      "json_group": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Mr.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 216,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Stop telling you a lady, okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, you’re not acting like one!; you sure as hell are not acting like one!—Start acting like one, then, if you’re a professional! A customer service manager does not talk like that to customers, okay? Mister, stop calling me lady, okay? I’ll tell you w—this much: you are not a professional, and you know what? You don’t even know who you’re talking to! Stop blowing up my phone, okay? I’m telling you right now! I’m not gonna talk to you; I’m not gonna give you my credit card over the phone!",
+      "similarity": 0.6031,
+      "match_type": "similar",
+      "json_group": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Stop telling you a lady, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 217,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll tell you with this, but you are not a professional.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, you’re not acting like one!; you sure as hell are not acting like one!—Start acting like one, then, if you’re a professional! A customer service manager does not talk like that to customers, okay? Mister, stop calling me lady, okay? I’ll tell you w—this much: you are not a professional, and you know what? You don’t even know who you’re talking to! Stop blowing up my phone, okay? I’m telling you right now! I’m not gonna talk to you; I’m not gonna give you my credit card over the phone!",
+      "similarity": 0.6031,
+      "match_type": "similar",
+      "json_group": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'll tell you with this, but you are not a professional.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 218,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And you know what?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And you know what?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 219,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You don't even know who you're talking to.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You don't even know who you're talking to.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 220,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Stop on my phone, okay?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Stop on my phone, okay?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 221,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm telling you right now.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm telling you right now.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 222,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to talk to you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not going to talk to you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 223,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm not going to eat my credit card over the phone.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not going to eat my credit card over the phone.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 224,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to put your box.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m gonna put your box in the dumpster!",
+      "similarity": 0.6032,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m gonna put your box in the dumpster!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 225,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, yeah, I don't care.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No, yeah, I don't care.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 226,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, yeah, I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Th—yeah, I don’t care, so go ‘head! I’m not paying for it! So, you’re gonna go ahead and throw it in—dumpster. How do you like that?",
+      "similarity": 0.68,
+      "match_type": "similar",
+      "json_group": [
+        226,
+        227,
+        228
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, yeah, I don't care.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 227,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So you can't go ahead and dump, sir.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Th—yeah, I don’t care, so go ‘head! I’m not paying for it! So, you’re gonna go ahead and throw it in—dumpster. How do you like that?",
+      "similarity": 0.68,
+      "match_type": "similar",
+      "json_group": [
+        226,
+        227,
+        228
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So you can't go ahead and dump, sir.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 228,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How do you like that?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Th—yeah, I don’t care, so go ‘head! I’m not paying for it! So, you’re gonna go ahead and throw it in—dumpster. How do you like that?",
+      "similarity": 0.68,
+      "match_type": "similar",
+      "json_group": [
+        226,
+        227,
+        228
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "How do you like that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 229,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need your credit card number, PDQ.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need your credit card number PDQ!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need your credit card number, PDQ.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 230,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, you're not, okay, next to answer, give it to me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I don’t care! It’s—it’s [unclear] fucking—it’s—answer—listen to me! What’s my name?! Why can’t you give me my name if you’re so sure it’s my package?! Give me a tracking number and I’ll find out where it’s coming from!",
+      "similarity": 0.74,
+      "match_type": "similar",
+      "json_group": [
+        230,
+        231,
+        232,
+        233
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, you're not, okay, next to answer, give it to me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 231,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's my name?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I don’t care! It’s—it’s [unclear] fucking—it’s—answer—listen to me! What’s my name?! Why can’t you give me my name if you’re so sure it’s my package?! Give me a tracking number and I’ll find out where it’s coming from!",
+      "similarity": 0.74,
+      "match_type": "similar",
+      "json_group": [
+        230,
+        231,
+        232,
+        233
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's my name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 232,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Like, I can see my name, because you're so sure, it's my package.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I don’t care! It’s—it’s [unclear] fucking—it’s—answer—listen to me! What’s my name?! Why can’t you give me my name if you’re so sure it’s my package?! Give me a tracking number and I’ll find out where it’s coming from!",
+      "similarity": 0.74,
+      "match_type": "similar",
+      "json_group": [
+        230,
+        231,
+        232,
+        233
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Like, I can see my name, because you're so sure, it's my package.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 233,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Get me a tracking number and I'll find out where it's going from.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—I don’t care! It’s—it’s [unclear] fucking—it’s—answer—listen to me! What’s my name?! Why can’t you give me my name if you’re so sure it’s my package?! Give me a tracking number and I’ll find out where it’s coming from!",
+      "similarity": 0.74,
+      "match_type": "similar",
+      "json_group": [
+        230,
+        231,
+        232,
+        233
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Get me a tracking number and I'll find out where it's going from.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 234,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Your name's mud, as far as UPS is concerned.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Your name’s Mud as far as UPS is concerned!",
+      "similarity": 0.9762,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your name’s Mud as far as UPS is concerned!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 235,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'll find out where it's coming from.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—give me a tracking number and I’ll find out where it’s coming from!",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "—give me a tracking number and I’ll find out where it’s coming from!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 236,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I ain't gonna give you anything to you, give me a credit card number.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I ain’t gonna give you anything ’til you give me a credit card number!",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I ain’t gonna give you anything ’til you give me a credit card number!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 237,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, you know what's, I ain't gonna give you shit either.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, y—you know what? I ain’t gonna give you shit either! How’s that? How’s that? [unclear]—",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": [
+        237,
+        238,
+        239
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, you know what's, I ain't gonna give you shit either.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 238,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How's that?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, y—you know what? I ain’t gonna give you shit either! How’s that? How’s that? [unclear]—",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": [
+        237,
+        238,
+        239
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "How's that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 239,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How's that?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, y—you know what? I ain’t gonna give you shit either! How’s that? How’s that? [unclear]—",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": [
+        237,
+        238,
+        239
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "How's that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 240,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need you to turn around.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I need you to turn around—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need you to turn around.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 241,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I'm not gonna fucking turn around.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, I’m not gonna fucking turn around; I’m at work! How am I gonna turn around and go and pick up stupid fucking package at $242! [unclear]—",
+      "similarity": 0.8352,
+      "match_type": "similar",
+      "json_group": [
+        241,
+        242,
+        243
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I'm not gonna fucking turn around.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 242,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm at work.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, I’m not gonna fucking turn around; I’m at work! How am I gonna turn around and go and pick up stupid fucking package at $242! [unclear]—",
+      "similarity": 0.8352,
+      "match_type": "similar",
+      "json_group": [
+        241,
+        242,
+        243
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm at work.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 243,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tom, I'm gonna turn around and go back and pick up to this fucking tacking to $242.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, I’m not gonna fucking turn around; I’m at work! How am I gonna turn around and go and pick up stupid fucking package at $242! [unclear]—",
+      "similarity": 0.8352,
+      "match_type": "similar",
+      "json_group": [
+        241,
+        242,
+        243
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tom, I'm gonna turn around and go back and pick up to this fucking tacking to $242.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 244,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How about I just open the box, help myself?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—How ‘bout I just open the box, help myself—",
+      "similarity": 0.9877,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—How ‘bout I just open the box, help myself—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 245,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, I help yourself for this conversation.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Yeah, help yourself for [unclear]! Can I talk to your supervisor?",
+      "similarity": 0.8485,
+      "match_type": "similar",
+      "json_group": [
+        245,
+        246
+      ],
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I help yourself for this conversation.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 246,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Can I talk to your supervisor?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Yeah, help yourself for [unclear]! Can I talk to your supervisor?",
+      "similarity": 0.8485,
+      "match_type": "similar",
+      "json_group": [
+        245,
+        246
+      ],
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I talk to your supervisor?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 247,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "About what?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "About what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "About what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 248,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Not about your attitude.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "About your attitude! Can I talk to your supervisor now?!",
+      "similarity": 0.9636,
+      "match_type": "similar",
+      "json_group": [
+        248,
+        249
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not about your attitude.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 249,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Can I talk to your supervisor now?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "About your attitude! Can I talk to your supervisor now?!",
+      "similarity": 0.9636,
+      "match_type": "similar",
+      "json_group": [
+        248,
+        249
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I talk to your supervisor now?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 250,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm driving right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m driving right now; I’m drivin’ a truck!",
+      "similarity": 0.9383,
+      "match_type": "similar",
+      "json_group": [
+        250,
+        251
+      ],
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm driving right now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 251,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm driving a truck.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m driving right now; I’m drivin’ a truck!",
+      "similarity": 0.9383,
+      "match_type": "similar",
+      "json_group": [
+        250,
+        251
+      ],
+      "wiki_indices": [
+        77
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm driving a truck.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 252,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, then you know what?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, then you know what?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 253,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "To transfer me, transfer over into the office.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, then you know what? Just answer me—transfer over into the office. You think I’m retarded or something! But you know what? People like you are the ones that—making yourselves look like fools, because you don’t even know what my name is! I n—I know y—you transfer me over to the office and—have a supervisor talk to me. But you know you’re talking shit!",
+      "similarity": 0.757,
+      "match_type": "similar",
+      "json_group": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "To transfer me, transfer over into the office.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 254,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You think I'm retarded or something.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, then you know what? Just answer me—transfer over into the office. You think I’m retarded or something! But you know what? People like you are the ones that—making yourselves look like fools, because you don’t even know what my name is! I n—I know y—you transfer me over to the office and—have a supervisor talk to me. But you know you’re talking shit!",
+      "similarity": 0.757,
+      "match_type": "similar",
+      "json_group": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You think I'm retarded or something.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 255,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "But you know what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, then you know what? Just answer me—transfer over into the office. You think I’m retarded or something! But you know what? People like you are the ones that—making yourselves look like fools, because you don’t even know what my name is! I n—I know y—you transfer me over to the office and—have a supervisor talk to me. But you know you’re talking shit!",
+      "similarity": 0.757,
+      "match_type": "similar",
+      "json_group": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "But you know what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 256,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "People like you are the ones that are making yourselves looking at full,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, then you know what? Just answer me—transfer over into the office. You think I’m retarded or something! But you know what? People like you are the ones that—making yourselves look like fools, because you don’t even know what my name is! I n—I know y—you transfer me over to the office and—have a supervisor talk to me. But you know you’re talking shit!",
+      "similarity": 0.757,
+      "match_type": "similar",
+      "json_group": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "People like you are the ones that are making yourselves looking at full,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 257,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "but you don't even know what my name is.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, then you know what? Just answer me—transfer over into the office. You think I’m retarded or something! But you know what? People like you are the ones that—making yourselves look like fools, because you don’t even know what my name is! I n—I know y—you transfer me over to the office and—have a supervisor talk to me. But you know you’re talking shit!",
+      "similarity": 0.757,
+      "match_type": "similar",
+      "json_group": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "but you don't even know what my name is.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 258,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I know you should transfer into the office",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, then you know what? Just answer me—transfer over into the office. You think I’m retarded or something! But you know what? People like you are the ones that—making yourselves look like fools, because you don’t even know what my name is! I n—I know y—you transfer me over to the office and—have a supervisor talk to me. But you know you’re talking shit!",
+      "similarity": 0.757,
+      "match_type": "similar",
+      "json_group": [
+        253,
+        254,
+        255,
+        256,
+        257,
+        258
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I know you should transfer into the office",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 259,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and have a supervisor talk to me,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and have a supervisor talk to me,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 260,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "but you know you're talking shit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "but you know you're talking shit.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 260,
+    "total_wiki_lines": 77,
+    "matched_wiki_lines": 71,
+    "unmatched_wiki_lines": 6,
+    "matched": 157,
+    "speakers_to_map": 2,
+    "text_auto_correct": 15,
+    "text_review": 6,
+    "text_group_review": 119,
+    "unmatched_json": 103
+  }
+}

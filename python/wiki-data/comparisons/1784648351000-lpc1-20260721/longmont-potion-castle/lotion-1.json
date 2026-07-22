@@ -1,0 +1,505 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:52.574495+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Lotion 1",
+  "track_slug": "lotion-1",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/lotion-1.json",
+  "json_sha256": "05ec91e380bb03a375b7f7901e0f69dae83d727bae221c2375e4fd769a2070a5",
+  "wiki_title": "Lotion 1",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Lotion_1",
+  "speaker_mapping": {
+    "SPEAKER_01": "Woman (2)",
+    "SPEAKER_03": "Man (1)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_01": {
+      "name": "Woman (2)",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman (2)",
+          "score": 3.9041,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Woman (3)",
+      "confidence": 0.6363,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman (3)",
+          "score": 2.9259,
+          "observations": 3
+        },
+        {
+          "name": "Woman (4)",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man (1)",
+          "score": 0.6726,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man (1)",
+      "confidence": 0.7797,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 3.5387,
+          "observations": 4
+        },
+        {
+          "name": "Woman (3)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hold on, hold up.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Hold on. Hold on. Hold up. [to someone in the background:] The lotion you ordered?",
+      "similarity": 0.6726,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hold on, hold up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "The lotion you ordered?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Hold on. Hold on. Hold up. [to someone in the background:] The lotion you ordered?",
+      "similarity": 0.6726,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "The lotion you ordered?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I didn't order lotion.",
+      "wiki_speaker": "Woman (3)",
+      "wiki_text": "I didn't order lotion.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Woman (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't order lotion.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I didn't order any lotion.",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "I didn't order any lotion.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't order any lotion.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I didn't order any lotion.",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "I didn't order any lotion.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't order any lotion.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're the wrong number, you dumb ass.",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "You have the wrong number, you dumbass.",
+      "similarity": 0.9041,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You have the wrong number, you dumbass.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, but I didn't order lotion.",
+      "wiki_speaker": "Woman (3)",
+      "wiki_text": "Yeah, but, I didn't order lotion.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, but I didn't order lotion.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "LPC",
+      "json_text": "Do you know what a lamb is?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So, d'you know what a lamb is?",
+      "similarity": 0.9259,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So, d'you know what a lamb is?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, it's next door to me.",
+      "wiki_speaker": "Woman (3)",
+      "wiki_text": "Yeah... I- I- It's next door to me.",
+      "similarity": 0.9259,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Woman (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah... I- I- It's next door to me.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh, don't talk to me like that.",
+      "wiki_speaker": "Woman (3)",
+      "wiki_text": "Oh, don't talk to me like that!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Woman (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, don't talk to me like that.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Bring it by the package.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Bring by the package? Yeah, bring it on by man. Bring the motherfucker right on by, right now. Okay?",
+      "similarity": 0.9447,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bring it by the package.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, bring it on by, man.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Bring by the package? Yeah, bring it on by man. Bring the motherfucker right on by, right now. Okay?",
+      "similarity": 0.9447,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, bring it on by, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Bring them by, man.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Bring by the package? Yeah, bring it on by man. Bring the motherfucker right on by, right now. Okay?",
+      "similarity": 0.9447,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bring them by, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "motherfucker right on by right now, okay?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Bring by the package? Yeah, bring it on by man. Bring the motherfucker right on by, right now. Okay?",
+      "similarity": 0.9447,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "motherfucker right on by right now, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, bring it by, motherfucker.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yeah. Bring it by, motherfucker. Come on! We'll wait.",
+      "similarity": 0.9677,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, bring it by, motherfucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Come on.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yeah. Bring it by, motherfucker. Come on! We'll wait.",
+      "similarity": 0.9677,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "We wait.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yeah. Bring it by, motherfucker. Come on! We'll wait.",
+      "similarity": 0.9677,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We wait.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Bring it by, man.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Bring it by man! '[beep]' Bring it by!",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bring it by, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Bring it by.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Bring it by man! '[beep]' Bring it by!",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bring it by.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Just paying for with your motherfucking ass, punk.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Be careful with your motherfuckin' ass punk.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Be careful with your motherfuckin' ass punk.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Head lotion?",
+      "wiki_speaker": "Woman (4)",
+      "wiki_text": "Head lotion?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Woman (4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Head lotion?",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 22,
+    "total_wiki_lines": 18,
+    "matched_wiki_lines": 15,
+    "unmatched_wiki_lines": 3,
+    "matched": 22,
+    "speakers_to_map": 2,
+    "text_auto_correct": 3,
+    "text_review": 1,
+    "text_group_review": 11,
+    "unmatched_json": 0
+  }
+}

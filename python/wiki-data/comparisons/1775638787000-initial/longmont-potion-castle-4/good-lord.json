@@ -1,0 +1,136 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:20.452058+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Good Lord",
+  "track_slug": "good-lord",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/good-lord.json",
+  "json_sha256": "aa27c6e37de06201652fbd319d6576ecd5605e2b515c04fb8a7006a5e3eef64c",
+  "wiki_title": "Good Lord",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Good_Lord",
+  "speaker_mapping": {},
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.5327,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "Woman",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Preacher",
+          "score": 0.7547,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want you to listen to me that was a male, he said to the good Lord, he said, I bless you, cannot get her, hey, hello.",
+      "wiki_speaker": "Preacher",
+      "wiki_text": "'[sampled]' I want you to listen to me, there was a man-uhh! He said to the good Lord-uhh! He said I bless you-uhh! Can I get a aaaa-men-uhh? I said, hello-uhh?",
+      "similarity": 0.7547,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Preacher",
+      "speaker_action": "matched_line",
+      "proposed_text": "'[sampled]' I want you to listen to me, there was a man-uhh! He said to the good Lord-uhh! He said I bless you-uhh! Can I get a aaaa-men-uhh? I said, hello-uhh?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So I said...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "So I said...",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 5,
+    "total_wiki_lines": 5,
+    "matched_wiki_lines": 4,
+    "unmatched_wiki_lines": 1,
+    "matched": 4,
+    "speakers_to_map": 0,
+    "text_auto_correct": 0,
+    "text_review": 1,
+    "text_group_review": 0,
+    "unmatched_json": 1
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:59.238678+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Listen Steve",
+  "track_slug": "listen-steve",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/listen-steve.json",
+  "json_sha256": "c256ea26cac8be0af798000d51f486b8c8b834ed12523aa5fca660a9dbe57076",
+  "wiki_title": "Listen, Steve",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Listen%2C_Steve",
+  "speaker_mapping": {
+    "SPEAKER_00": "Matt"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Matt",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Matt",
+          "score": 0.8615,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Steve",
+      "confidence": 0.6483,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Steve",
+          "score": 1.8432,
+          "observations": 2
+        },
+        {
+          "name": "Matt",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, Matt. Looks good for tomorrow night, man. Everybody's psyched. I got everything lined up. I just figure I need about ten bucks from everyone to cover what I'm out.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "Hey, Matt! Looks good for tomorrow night, man. Everybody's psyched. I got everything lined up. I just figure I-- I need about 10 bucks from everyone to cover what I'm out--",
+      "similarity": 0.9783,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Matt! Looks good for tomorrow night, man. Everybody's psyched. I got everything lined up. I just figure I-- I need about 10 bucks from everyone to cover what I'm out--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Listen, Steve. Forget it. You can't use my room and I don't want your stuff.",
+      "wiki_speaker": "Matt",
+      "wiki_text": "Listen, Steve. Forget it. You can't use my room and I don't want your stuff.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Matt",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, Steve. Forget it. You can't use my room and I don't want your stuff.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What? Hey, wait a minute, man. You're going to ruin everything I lined up.",
+      "wiki_speaker": "Steve",
+      "wiki_text": "What? Hey, wait a minute, man. You're gonna ruin everything I lined up. ...Come on, Matt.",
+      "similarity": 0.8649,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Steve",
+      "speaker_action": "matched_line",
+      "proposed_text": "What? Hey, wait a minute, man. You're gonna ruin everything I lined up. ...Come on, Matt.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Come on, Matt. Steve, listen to me very carefully. I'm not going to drink and I'm not going to smoke pot. Period.",
+      "wiki_speaker": "Matt",
+      "wiki_text": "Steve, listen to me very carefully. I'm not gonna drink and I'm not gonna smoke pot. Period.",
+      "similarity": 0.8615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Matt",
+      "speaker_action": "matched_line",
+      "proposed_text": "Steve, listen to me very carefully. I'm not gonna drink and I'm not gonna smoke pot. Period.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 4,
+    "total_wiki_lines": 4,
+    "matched_wiki_lines": 4,
+    "unmatched_wiki_lines": 0,
+    "matched": 4,
+    "speakers_to_map": 1,
+    "text_auto_correct": 3,
+    "text_review": 0,
+    "text_group_review": 0,
+    "unmatched_json": 0
+  }
+}

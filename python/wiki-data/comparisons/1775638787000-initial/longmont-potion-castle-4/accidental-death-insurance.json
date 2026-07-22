@@ -1,0 +1,964 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:22.596609+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Accidental Death Insurance",
+  "track_slug": "accidental-death-insurance",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/accidental-death-insurance.json",
+  "json_sha256": "61dd36645ef86b89ccb5887e1451d81b18b6f2f64b4f9e7a3aef768cb2e919b2",
+  "wiki_title": "Accidental Death Insurance",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Accidental_Death_Insurance",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Robert"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 12,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 11.1134,
+          "observations": 12
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Robert",
+      "confidence": 0.7964,
+      "observations": 21,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Robert",
+          "score": 19.5532,
+          "observations": 21
+        },
+        {
+          "name": "LPC",
+          "score": 5.0,
+          "observations": 5
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My name is Robert Lewis, and I'm calling today because your Capital One credit card company",
+      "wiki_speaker": "Robert",
+      "wiki_text": "My name is Robert Lewis, and I'm calling today because your Capital One credit card company...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "My name is Robert Lewis, and I'm calling today because your Capital One credit card company",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "would like to show their appreciation to you as a valued member and send you a three-month review period of up to $1 million of accidental death insurance at no cost to you.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "...would like to show their appreciation to you as a valued member, and send you a three month review period of up to one million dollars of accidental insurance at no cost to you. And sir, this is just our way of saying thank you, and to introduce you to the coverage...",
+      "similarity": 0.9538,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "would like to show their appreciation to you as a valued member and send you a three-month review period of up to $1 million of accidental death insurance at no cost to you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And, sir, this is just their way of saying thank you and to introduce you to the coverage.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "...would like to show their appreciation to you as a valued member, and send you a three month review period of up to one million dollars of accidental insurance at no cost to you. And sir, this is just our way of saying thank you, and to introduce you to the coverage...",
+      "similarity": 0.9538,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "And, sir, this is just their way of saying thank you and to introduce you to the coverage.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What, I'm in danger?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What... what, I'm in danger?",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What... what, I'm in danger?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, this is just accidental death insurance, sir.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "No, this is just accidental death insurance, sir.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, this is just accidental death insurance, sir.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sounds good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Sounds good.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sounds good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And also, just before the three-month period is over, they will send you a way of",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And... also, just before the three month period is over, they will send you a reminder asking you if you would like to continue with it or not, and if you choose to continue with it, the premium is only seven dollars and ninety-five cents a month. This will never increase at any time...",
+      "similarity": 0.9098,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "And also, just before the three-month period is over, they will send you a way of",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "reminder asking you if you would like to continue with it or not, and if you choose to continue",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And... also, just before the three month period is over, they will send you a reminder asking you if you would like to continue with it or not, and if you choose to continue with it, the premium is only seven dollars and ninety-five cents a month. This will never increase at any time...",
+      "similarity": 0.9098,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "reminder asking you if you would like to continue with it or not, and if you choose to continue",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "with it, the premium is only $7.95 a month, and this will never increase at any time.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And... also, just before the three month period is over, they will send you a reminder asking you if you would like to continue with it or not, and if you choose to continue with it, the premium is only seven dollars and ninety-five cents a month. This will never increase at any time...",
+      "similarity": 0.9098,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8,
+        9
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "with it, the premium is only $7.95 a month, and this will never increase at any time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "With the $1 million, one-time charge?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "With a one million dollar one-time charge?",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "With a one million dollar one-time charge?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Huh? Huh, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh, sir?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Huh? Huh, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh, sir?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Is that what you're saying?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Is that what you're saying?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that what you're saying?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Huh. The one million dollars?",
+      "similarity": 0.7273,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The $1 million?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Huh. The one million dollars?",
+      "similarity": 0.7273,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "The $1 million?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's $1 million for accidents?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "It's one million dollars per accident or...",
+      "similarity": 0.6857,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's one million dollars per accident or...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "A month, or?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "A month, or...?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "A month, or?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, a month.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Yeah, a month. Seven ninety dollars a month.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, a month.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "$7.95 a month.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Yeah, a month. Seven ninety dollars a month.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "$7.95 a month.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And this will never increase.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And this will never increase. And if you choose not to continue with it, there is a 1-800 number that you can call at any time to cancel...",
+      "similarity": 0.9534,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "And this will never increase.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And if you choose not to continue.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And this will never increase. And if you choose not to continue with it, there is a 1-800 number that you can call at any time to cancel...",
+      "similarity": 0.9534,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "And if you choose not to continue.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "with it, there is a 1-800 number that you can call it any time to cancel, and you'll",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And this will never increase. And if you choose not to continue with it, there is a 1-800 number that you can call at any time to cancel...",
+      "similarity": 0.9534,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "with it, there is a 1-800 number that you can call it any time to cancel, and you'll",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "know nothing for the plan.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "...and you will owe nothing for the plan.",
+      "similarity": 0.7742,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "...and you will owe nothing for the plan.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Robert",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay, okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And your middle initial is D, sir?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "And your middle initial is V, sir?",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "And your middle initial is V, sir?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yep.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yep.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yep.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, hold on.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Oh, hold on...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, hold on.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Wait a minute.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Wait a minute...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wait a minute.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "None",
+      "json_text": "Hmm?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Hmm?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hmm?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, so unless I die, it's not...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh... so, unless I die, it's not--",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, so unless I die, it's not...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, you don't really have to die just to get it, sir.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "You don't really have to die just to get it, sir.",
+      "similarity": 0.9691,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't really have to die just to get it, sir.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't want to, you know...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't wanna... you know.",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't wanna... you know.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, there's a dismemberment clause in there, too.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Oh, you... there's a dismemberment clause in there, too.",
+      "similarity": 0.9583,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, you... there's a dismemberment clause in there, too.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Robert",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Like if you lose eyesight or something, or if you lose a limb?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "...like, if you lose eyesight or something, or if you lose a limb.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Like if you lose eyesight or something, or if you lose a limb?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Wait, are you telling me I'm in some kind of danger here, part?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Wait, are you telling me I'm in some kind of danger here, partner?",
+      "similarity": 0.9756,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wait, are you telling me I'm in some kind of danger here, partner?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, sir, it's just accidental death insurance.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "No, sir. It's just accidental death insurance. It's something you can review in your own home while being covered for it also, for three full months.",
+      "similarity": 0.9861,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, sir, it's just accidental death insurance.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's something you can review in your own home while being covered for it also for three, four months.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "No, sir. It's just accidental death insurance. It's something you can review in your own home while being covered for it also, for three full months.",
+      "similarity": 0.9861,
+      "match_type": "similar",
+      "json_group": [
+        41,
+        42
+      ],
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's something you can review in your own home while being covered for it also for three, four months.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll tell you he's going to be dismembered.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'll tell you who's gonna be dismembered.",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll tell you who's gonna be dismembered.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who?",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But I'll think you're gonna like it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "But I don't think you're gonna like it. [exhales]",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But I don't think you're gonna like it. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, sir.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Okay, sir...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, sir.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I don't wish to get the coverage.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, I don't... I don't wish to get the coverage.",
+      "similarity": 0.8974,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I don't... I don't wish to get the coverage.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But if I'm dismembered, I'll give you a holler.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "But if I'm dismembered, I'll give you a holler.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "But if I'm dismembered, I'll give you a holler.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, thanks.",
+      "wiki_speaker": "Robert",
+      "wiki_text": "Okay, thanks.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Robert",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, thanks.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Thanks.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Thanks.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thanks.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 50,
+    "total_wiki_lines": 46,
+    "matched_wiki_lines": 39,
+    "unmatched_wiki_lines": 7,
+    "matched": 48,
+    "speakers_to_map": 2,
+    "text_auto_correct": 8,
+    "text_review": 4,
+    "text_group_review": 14,
+    "unmatched_json": 2
+  }
+}

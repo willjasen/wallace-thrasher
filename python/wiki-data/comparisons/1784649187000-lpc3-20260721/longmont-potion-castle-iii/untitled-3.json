@@ -1,0 +1,357 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:58.958896+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Untitled 3",
+  "track_slug": "untitled-3",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/untitled-3.json",
+  "json_sha256": "3aa17546eb953f37155214c885c798dda3fdee9afadd0f8aa94b11662ba4fdec",
+  "wiki_title": "Untitled 3",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Untitled_3",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_02": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.4849,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 1.8503,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Woman",
+          "score": 0.9655,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.9231,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 0.9655,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 0.8,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Man",
+      "confidence": 0.54,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 0.9565,
+          "observations": 1
+        },
+        {
+          "name": "LPC",
+          "score": 0.8148,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "None",
+      "json_text": "Bhaar!",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Bhaar!",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "None",
+      "json_text": "Bhaar!",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Bhaar!",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I need to bring your nectarine.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to bring you your nectarines.",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to bring you your nectarines.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, that's okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, that's okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, that's okay.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Ohh... that's okay.",
+      "similarity": 0.9655,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ohh... that's okay.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, that's okay.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Ohh... that's okay.",
+      "similarity": 0.9655,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ohh... that's okay.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Nectrine?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Nectarine?",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nectarine?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, sorry, but I think you do have a wrong number.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Aw, sorry bud... you... I think you do have the wrong number. Are you lookin' for a grocery store or somethin'?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, sorry, but I think you do have a wrong number.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Are you looking for a grocery store or something?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Aw, sorry bud... you... I think you do have the wrong number. Are you lookin' for a grocery store or somethin'?",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you looking for a grocery store or something?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I have not a clue what you do with magnetic butt off putty.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I have not a clue what you do with \"magnetic buttock putty\".",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have not a clue what you do with \"magnetic buttock putty\".",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Well, you must...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, you must... you must have--",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you must...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Well, you must...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, you must... you must have--",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, you must...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You could use any buttocks as far as I'm concerned.",
+      "wiki_speaker": "Man",
+      "wiki_text": "And you can use it for your buttocks, as far as I'm concerned.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you can use it for your buttocks, as far as I'm concerned.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 14,
+    "total_wiki_lines": 9,
+    "matched_wiki_lines": 9,
+    "unmatched_wiki_lines": 0,
+    "matched": 11,
+    "speakers_to_map": 2,
+    "text_auto_correct": 5,
+    "text_review": 1,
+    "text_group_review": 4,
+    "unmatched_json": 3
+  }
+}

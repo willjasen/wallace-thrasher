@@ -1,0 +1,1815 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:27:37.964928+00:00",
+  "snapshot": "1784650787000-rest-longmont-potion-castle-16-20260721",
+  "album": "Longmont Potion Castle 16",
+  "album_slug": "longmont-potion-castle-16",
+  "track": "Flashback Takeout",
+  "track_slug": "flashback-takeout",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-16/flashback-takeout.json",
+  "json_sha256": "f80051898b1f14c8c3e3b6997679ab4134e330598b1d37a1177fb9174c63eec8",
+  "wiki_title": "Flashback Takeout",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Flashback_Takeout",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.8999,
+      "observations": 30,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 25.0983,
+          "observations": 30
+        },
+        {
+          "name": "Man",
+          "score": 2.7926,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 0.9129,
+      "observations": 18,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 15.2462,
+          "observations": 18
+        },
+        {
+          "name": "LPC",
+          "score": 1.4553,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Boss, I'm gonna help you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—Glass Nickel. How can I help you?",
+      "similarity": 0.5185,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Glass Nickel. How can I help you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, how are you doing tonight?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Hi! How’re you doin’ tonight? Hey!—",
+      "similarity": 0.7324,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[delay & reverb] Hi! How’re you doin’ tonight? Hey!—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Good, how are you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "—I’m good! How’re you?",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—I’m good! How’re you?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Good, I'd like to place an order, please.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Good! I’d like to place an order, please. [to self] Oh, fu—",
+      "similarity": 0.8222,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good! I’d like to place an order, please. [to self] Oh, fu—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, are you at a hotel?",
+      "wiki_speaker": "Man",
+      "wiki_text": "—‘Kay, are you at a hotel?",
+      "similarity": 0.9778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—‘Kay, are you at a hotel?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I'm just gonna come pick it up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No— —I’m just gonna come pick it up, if I can pick up, please?—",
+      "similarity": 0.9825,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        7,
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I'm just gonna come pick it up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If I can pick up, please.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No— —I’m just gonna come pick it up, if I can pick up, please?—",
+      "similarity": 0.9825,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        7,
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If I can pick up, please.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Your name?",
+      "wiki_speaker": "Man",
+      "wiki_text": "—Your name?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your name?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, Dick.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, Dick.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, Dick.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, what can I get for you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, what can I get for you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, what can I get for you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can I get like a small pineapple and then like an extra large pineapple?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um, can I get, like, a small pineapple [delay & reverb] and, uh, and, like, a extra large pineapple? And, ah, just go ahead with that and then go do, like, a triple, uh, triple pepperoni—just a regular-sized pizza but with a triple portion—",
+      "similarity": 0.9038,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I get like a small pineapple and then like an extra large pineapple?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And just go ahead with that and then go and do like a...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um, can I get, like, a small pineapple [delay & reverb] and, uh, and, like, a extra large pineapple? And, ah, just go ahead with that and then go do, like, a triple, uh, triple pepperoni—just a regular-sized pizza but with a triple portion—",
+      "similarity": 0.9038,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And just go ahead with that and then go and do like a...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "triple pepperoni, just a regular-sized pizza, but with a triple portion.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um, can I get, like, a small pineapple [delay & reverb] and, uh, and, like, a extra large pineapple? And, ah, just go ahead with that and then go do, like, a triple, uh, triple pepperoni—just a regular-sized pizza but with a triple portion—",
+      "similarity": 0.9038,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "triple pepperoni, just a regular-sized pizza, but with a triple portion.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I can't really hear you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—Uh, I’m sorry, I—I can’t really hear ya.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Uh, I’m sorry, I—I can’t really hear ya.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just like a triple, large pineapple is what I got?",
+      "wiki_speaker": "Man",
+      "wiki_text": "—So, “small pineapple, large pineapple”, is what I got.",
+      "similarity": 0.7917,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—So, “small pineapple, large pineapple”, is what I got.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, and like a triple portion of pepperoni, you know what I mean?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, and like a triple portion of pepperoni, you know what I mean? Just whatever the normal portion is, just times that by, uh, [delay & reverb] by triple and then just get that goin’ on that one for me. And then maybe some breadsticks—",
+      "similarity": 0.9311,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, and like a triple portion of pepperoni, you know what I mean?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just whatever the normal portion is, just times that by triple, and then just get that going on that one for me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, and like a triple portion of pepperoni, you know what I mean? Just whatever the normal portion is, just times that by, uh, [delay & reverb] by triple and then just get that goin’ on that one for me. And then maybe some breadsticks—",
+      "similarity": 0.9311,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just whatever the normal portion is, just times that by triple, and then just get that going on that one for me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Maybe some breadsticks.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, and like a triple portion of pepperoni, you know what I mean? Just whatever the normal portion is, just times that by, uh, [delay & reverb] by triple and then just get that goin’ on that one for me. And then maybe some breadsticks—",
+      "similarity": 0.9311,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Maybe some breadsticks.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You want triple pineapple, you want triple pepperoni on the large pineapple?",
+      "wiki_speaker": "Man",
+      "wiki_text": "—You want—you want triple pine—[chuckles]—you want triple pineapple—you want triple pepperoni on the large pineapple?",
+      "similarity": 0.7914,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—You want—you want triple pine—[chuckles]—you want triple pineapple—you want triple pepperoni on the large pineapple?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want triple pineapple.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I want triple pineapple.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want triple pineapple.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] I want triple pineapple on the triple pepperoni and then if you could put pepper—",
+      "similarity": 0.8068,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want triple pineapple.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "pineapple on the triple pepperoni.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] I want triple pineapple on the triple pepperoni and then if you could put pepper—",
+      "similarity": 0.8068,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "pineapple on the triple pepperoni.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And if you can put pepper.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] I want triple pineapple on the triple pepperoni and then if you could put pepper—",
+      "similarity": 0.8068,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And if you can put pepper.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There's a delay on the phone, so I can't really hear anything here.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—so I—I can’t really hear anything you’re, uh—",
+      "similarity": 0.6111,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—so I—I can’t really hear anything you’re, uh—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If you could put pineapple on the breadsticks,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—If you could put pep—pineapple on the breadsticks and then just trip—",
+      "similarity": 0.7965,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—If you could put pep—pineapple on the breadsticks and then just trip—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and then triple that amount, whatever you would normally put,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] triple that amount—whatever you would normally put, just triple that and then we could put that together with my pizza and then just put that together.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and then triple that amount, whatever you would normally put,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "just triple that, and we can put that together with my pizzas and put that together.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] triple that amount—whatever you would normally put, just triple that and then we could put that together with my pizza and then just put that together.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "just triple that, and we can put that together with my pizzas and put that together.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, I'm having a hard time hearing you, so right now I got a small pineapple pizza.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh, okay. I’m havin’ a hard time hearin’ ya, so right now, I got a small pineapple pizza, a large pineapple pizza—",
+      "similarity": 0.8191,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, okay. I’m havin’ a hard time hearin’ ya, so right now, I got a small pineapple pizza, a large pineapple pizza—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Small pineapple pizza, okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Small pineapple pizza. Okay. You got a small pineapple pizza, uh-huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        30,
+        31
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Small pineapple pizza, okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You got a small pineapple pizza, uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Small pineapple pizza. Okay. You got a small pineapple pizza, uh-huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        30,
+        31
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got a small pineapple pizza, uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh, and a large pineapple pizza.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh-huh. And a large pineapple pizza.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh, and a large pineapple pizza.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, and then the breadsticks.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh! And then the breadsticks. [delay & reverb] Now, if you could take the breadsticks—",
+      "similarity": 0.5143,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh! And then the breadsticks. [delay & reverb] Now, if you could take the breadsticks—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Now, if you could take breadsticks, if you have, you have breadsticks, right?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] If you—you have—you have breadsticks, right?",
+      "similarity": 0.6772,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—[delay & reverb] If you—you have—you have breadsticks, right?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We have breadsticks.",
+      "wiki_speaker": "Man",
+      "wiki_text": "We have breadsticks.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "We have breadsticks.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, if you could take the pineapples and triple what the normal portion, you do, put them on the breadsticks, put it together that way.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Yeah, if you could take the pineapples and triples what the normal portion you do—put ‘em on the breadsticks—so put it together that way, that would be the best for my order—",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, if you could take the pineapples and triple what the normal portion, you do, put them on the breadsticks, put it together that way.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That would be the best of my way.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Yeah, if you could take the pineapples and triples what the normal portion you do—put ‘em on the breadsticks—so put it together that way, that would be the best for my order—",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That would be the best of my way.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm sorry.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I can't hear you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I can hear you fine!",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can hear you fine!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, so then what do you need me to repeat?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay, so then what—what do you need me to repeat?",
+      "similarity": 0.9438,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, so then what—what do you need me to repeat?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So order of breadsticks?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Um, I—so an order of breadsticks?",
+      "similarity": 0.8519,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, I—so an order of breadsticks?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes, just a regular order of breadsticks.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yes. Just a regular order of breadsticks?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, just a regular order of breadsticks.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, regular breadsticks, yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Well, regular breadsticks, yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, regular breadsticks, yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Well y—regular breadsticks, yeah, but if you took the pineapple—the, like, that you put on the pizza—?",
+      "similarity": 0.8824,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, regular breadsticks, yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, but if you took the pineapple, like, that you put on the pizza?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Well y—regular breadsticks, yeah, but if you took the pineapple—the, like, that you put on the pizza—?",
+      "similarity": 0.8824,
+      "match_type": "similar",
+      "json_group": [
+        48,
+        49
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, but if you took the pineapple, like, that you put on the pizza?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Is there any way you could triple, like, multiply the normal portion that you would use and put it on the breadsticks?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] Is there any way you could triple, like, multiply the normal portion that you would use and put it on the breadsticks? That would be the best for—to put that with my pizza. That’d be good.",
+      "similarity": 0.943,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is there any way you could triple, like, multiply the normal portion that you would use and put it on the breadsticks?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That would be the best for them. Put that with my pizzas. That would be good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] Is there any way you could triple, like, multiply the normal portion that you would use and put it on the breadsticks? That would be the best for—to put that with my pizza. That’d be good.",
+      "similarity": 0.943,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That would be the best for them. Put that with my pizzas. That would be good.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's weird. Every time you, so when. Once again, I, I'm sorry.",
+      "wiki_speaker": "Man",
+      "wiki_text": "It’s weird! Every time you s—so when [laughs]",
+      "similarity": 0.7347,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s weird! Every time you s—so when [laughs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're like repeating. I'm sorry. You're like repeating. I can't really hear what you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—I can’t really hear what you’re…",
+      "similarity": 0.4779,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—I can’t really hear what you’re…",
+      "text_action": "review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Every time I say something, you repeat that you can't hear, you're like repeating yourself or something.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Every time I say something you repeat that you can’t hear—you’re like repeating yourself, or something. Can’t really understand what you’re saying—",
+      "similarity": 0.9722,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Every time I say something, you repeat that you can't hear, you're like repeating yourself or something.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can't really understand what you're saying.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Every time I say something you repeat that you can’t hear—you’re like repeating yourself, or something. Can’t really understand what you’re saying—",
+      "similarity": 0.9722,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can't really understand what you're saying.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah. Maybe there is a delay on.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—Yeah. Maybe there is a delay on both of our phones that—on both sides. Um—",
+      "similarity": 0.5941,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Yeah. Maybe there is a delay on both of our phones that—on both sides. Um—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "of our phones on both sides. Can you do that with the breadstick? I really couldn't hear",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Can’t really understand what you’re sayin’ but can you do that with the breadstick?",
+      "similarity": 0.5509,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Can’t really understand what you’re sayin’ but can you do that with the breadstick?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "anything that you said with the breadsticks. With the pineapples? Like the same pineapple you put",
+      "wiki_speaker": "Man",
+      "wiki_text": "I—I really couldn’t hear anything that you said with the breadsticks—",
+      "similarity": 0.5276,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I—I really couldn’t hear anything that you said with the breadsticks—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "on the pizza? You know? Just put that on the breadstick and put it in triple the quantity that you would",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] Just put that on the pi—on the breadstick and then put it in triple the quantity that you would put on the pizza but just put it on—on the breadsticks instead of that.",
+      "similarity": 0.605,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—[delay & reverb] Just put that on the pi—on the breadstick and then put it in triple the quantity that you would put on the pizza but just put it on—on the breadsticks instead of that.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "put on the pizza, but just put it on the breadsticks instead of that. We can't put pineapples on the",
+      "wiki_speaker": "Man",
+      "wiki_text": "We can’t put pineapples on the breadsticks.",
+      "similarity": 0.4143,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We can’t put pineapples on the breadsticks.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "breadsticks on the breadsticks instead and kind of go with that way instead? Maybe it's a custom order. I don't",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Well, I mean, okay, you can put pepperoni on the breadsticks instead and kinda go it that way instead? You know?",
+      "similarity": 0.5939,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[delay & reverb] Well, I mean, okay, you can put pepperoni on the breadsticks instead and kinda go it that way instead? You know?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "know. I don't have a copy of your menu.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "know. I don't have a copy of your menu.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We could do pineapple on the pie. Yeah. If you put the cheese bed on the pineapple, that'd be",
+      "wiki_speaker": "Man",
+      "wiki_text": "—We could do pineapple on cheese bread, if you’d like—",
+      "similarity": 0.539,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—We could do pineapple on cheese bread, if you’d like—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "super and put it on the breadstick. That'd be good. That'd be good in the pineapple. You know? If you, I know",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] Yeah! If you put the cheese bread on the pineapple, bud, on the pepperoni, that’d be super—and put it on the breadstick, that’d be good—instead of the pineapple, you know? If you—I—I know you’re particular about the way you like to—it’s what I’m hearing—you’re particular about the way you do that. So—",
+      "similarity": 0.6602,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "super and put it on the breadstick. That'd be good. That'd be good in the pineapple. You know? If you, I know",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "your particular, it's what I'm hearing, you're particular about the way you do that. So scratch the breadstick.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] Yeah! If you put the cheese bread on the pineapple, bud, on the pepperoni, that’d be super—and put it on the breadstick, that’d be good—instead of the pineapple, you know? If you—I—I know you’re particular about the way you like to—it’s what I’m hearing—you’re particular about the way you do that. So—",
+      "similarity": 0.6602,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "your particular, it's what I'm hearing, you're particular about the way you do that. So scratch the breadstick.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Take the cheese stick and put the triple pineapple instead of the pepperoni on the cheese stick and the pepperon.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—don’t do the breadsticks. Scratch the breadstick. [delay & reverb] Take the cheese stick and put the triple, ah, pineapple instead of the pepperoni, on the cheese stick and the pepperoni—on the pepper—",
+      "similarity": 0.7393,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—don’t do the breadsticks. Scratch the breadstick. [delay & reverb] Take the cheese stick and put the triple, ah, pineapple instead of the pepperoni, on the cheese stick and the pepperoni—on the pepper—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay. Yeah. Yeah. Yeah. Do you have a large, large order or something like on the pepperoni?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay? D’you have a large—",
+      "similarity": 0.422,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay? D’you have a large—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, and on the pep and I'm being told that I want to add a sausage on the pepperoni pieces.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—large order [delay & reverb] or something like in the pepperoni? Oh, and on the pepp—and I’m—I’m being told I wanna add, uh, sausage onto the pepperoni pizza. So triple sausage, triple pepperoni as well as the pineapple and something like that. [delay] Can we do all three of those? And, um, looking for a coupon, here. I think I have a coupon somewhere—",
+      "similarity": 0.6981,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, and on the pep and I'm being told that I want to add a sausage on the pepperoni pieces.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So triple sausage, pepperoni as well as to the pineapple.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—large order [delay & reverb] or something like in the pepperoni? Oh, and on the pepp—and I’m—I’m being told I wanna add, uh, sausage onto the pepperoni pizza. So triple sausage, triple pepperoni as well as the pineapple and something like that. [delay] Can we do all three of those? And, um, looking for a coupon, here. I think I have a coupon somewhere—",
+      "similarity": 0.6981,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So triple sausage, pepperoni as well as to the pineapple.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Something, something, something, something, something.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—large order [delay & reverb] or something like in the pepperoni? Oh, and on the pepp—and I’m—I’m being told I wanna add, uh, sausage onto the pepperoni pizza. So triple sausage, triple pepperoni as well as the pineapple and something like that. [delay] Can we do all three of those? And, um, looking for a coupon, here. I think I have a coupon somewhere—",
+      "similarity": 0.6981,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Something, something, something, something, something.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can we do all three of those? And I'm looking for a coupon here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—large order [delay & reverb] or something like in the pepperoni? Oh, and on the pepp—and I’m—I’m being told I wanna add, uh, sausage onto the pepperoni pizza. So triple sausage, triple pepperoni as well as the pineapple and something like that. [delay] Can we do all three of those? And, um, looking for a coupon, here. I think I have a coupon somewhere—",
+      "similarity": 0.6981,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can we do all three of those? And I'm looking for a coupon here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I think I got a triple pineapple. Triple pineapple.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—I’ve got—so triple—[laughs]—triple pineapple on the cheese bread with pi—?",
+      "similarity": 0.521,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—I’ve got—so triple—[laughs]—triple pineapple on the cheese bread with pi—?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Triple pineapple.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Triple pineapple.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "With pepperoni. With pepperoni. Is that right? Yeah. Yeah, exactly. Yeah, exactly.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—With pepperoni? Is that right?—",
+      "similarity": 0.549,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—With pepperoni? Is that right?—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So you can do that. I'm with you. I'm with you. Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] With pepperoni on it, yeah. Yeah, exactly! Okay, so you’re gonna do that. I’m with you, uh-huh.",
+      "similarity": 0.4768,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—[delay & reverb] With pepperoni on it, yeah. Yeah, exactly! Okay, so you’re gonna do that. I’m with you, uh-huh.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, that was all correct. You're like dropping out. I can't really hear what you're saying.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—You’re—you’re like dropping out. I can’t really hear what you’re saying. But go ‘head. [delay & reverb] So ye—so r—",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—You’re—you’re like dropping out. I can’t really hear what you’re saying. But go ‘head. [delay & reverb] So ye—so r—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But you want triple pineapple and triple pepperoni on an order.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—You—you want triple pineapple—",
+      "similarity": 0.5934,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—You—you want triple pineapple—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, exactly. Exactly. Exactly. Right. Yeah. Right. Yeah. Right. Right. So if you could put those together, put the pineapple on the cheese bread and then you put the pineapple and then I was being told I want to have sausage on the regular pizza. You can put those together. And then you can put those together for me. That'd be excellent.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—[delay & reverb] I wanna trip—yeah, exactly. Exactly, right, yeah! [delay] So, if you could put those together—put the pineapple on the cheese bread and then put the pineapple and the pepperoni on the pizza and I was being told I wanna add sausage on the pep—on the regular pizza if you could put those together and then you could do—and then you could put those together for me that’d be excellent! Super. Super, super. Super! And I have a coup—",
+      "similarity": 0.7507,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—[delay & reverb] I wanna trip—yeah, exactly. Exactly, right, yeah! [delay] So, if you could put those together—put the pineapple on the cheese bread and then put the pineapple and the pepperoni on the pizza and I was being told I wanna add sausage on the pep—on the regular pizza if you could put those together and then you could do—and then you could put those together for me that’d be excellent! Super. Super, super. Super! And I have a coup—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Super, super, super, super. And I have a group. Sounds like there's like a million of you talking at once.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—It sounds like there’s, like, a million of you talkin’ at once [chuckles]",
+      "similarity": 0.6786,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—It sounds like there’s, like, a million of you talkin’ at once [chuckles]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] And then I’ve got—I’ve got a coupon someplace. I’m not sure. Not sure where that is, but, uh, I’m looking f—",
+      "similarity": 0.6553,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And then I've got, I've got it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] And then I’ve got—I’ve got a coupon someplace. I’m not sure. Not sure where that is, but, uh, I’m looking f—",
+      "similarity": 0.6553,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And then I've got, I've got it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "a coupon someplace. I'm not sure. Not sure where that is. But I'm looking for. I'm sorry, man. We're getting busy. If you want to call back from another",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] And then I’ve got—I’ve got a coupon someplace. I’m not sure. Not sure where that is, but, uh, I’m looking f—",
+      "similarity": 0.6553,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "a coupon someplace. I'm not sure. Not sure where that is. But I'm looking for. I'm sorry, man. We're getting busy. If you want to call back from another",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "call, I don't get your order. Well, no. I've got the coupon right here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] Well, no. I’ve got the—I’ve got the coupon right here!",
+      "similarity": 0.6308,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[delay & reverb] Well, no. I’ve got the—I’ve got the coupon right here!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay. Yeah, I can't, I don't have your order complete. I can't understand what you're ordering.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Okay, yeah, I can’t—I don’t have your order completed. I can’t understand what your—what you were ordering, so—",
+      "similarity": 0.8776,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, yeah, I can’t—I don’t have your order completed. I can’t understand what your—what you were ordering, so—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, which part do you need me to repeat?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Oh, which part do you need me to repeat?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        96
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, which part do you need me to repeat?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I had a call back from another phone number, I think. My phone number is 313.",
+      "wiki_speaker": "Man",
+      "wiki_text": "It’d be best if you just called back from another, uh, phone number, I think.",
+      "similarity": 0.6531,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’d be best if you just called back from another, uh, phone number, I think.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I got a call ID here, so I've got the. Oh, you've got a phone number here.",
+      "wiki_speaker": "Man",
+      "wiki_text": "—I’ve got caller ID here, so I got the—I got your phone number, here—",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        100
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "—I’ve got caller ID here, so I got the—I got your phone number, here—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So if you just put all that together, I'll pay cash when I get there. I'll be there in, what, 45 minutes, to an hour, an hour, something like that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—3-88-35 [delay & reverb]—oh, you got—good, okay, great. So, if you just put it all together I’ll pay cash when I get there. I’ll be there in—what?—45 minutes to an hour—something like th—[delay] ‘Bout fourty-five minutes to an hour? Is that enough time or…?",
+      "similarity": 0.6928,
+      "match_type": "similar",
+      "json_group": [
+        88,
+        89
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So if you just put all that together, I'll pay cash when I get there. I'll be there in, what, 45 minutes, to an hour, an hour, something like that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Something like, thing like, about 45 minutes to an hour?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—3-88-35 [delay & reverb]—oh, you got—good, okay, great. So, if you just put it all together I’ll pay cash when I get there. I’ll be there in—what?—45 minutes to an hour—something like th—[delay] ‘Bout fourty-five minutes to an hour? Is that enough time or…?",
+      "similarity": 0.6928,
+      "match_type": "similar",
+      "json_group": [
+        88,
+        89
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Something like, thing like, about 45 minutes to an hour?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Carrier time is different. I haven't been able to complete your order because I can't really hear what you're...",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh, carry out time is different—I haven’t been able to complete your order ‘cause I can’t really hear what you’re—",
+      "similarity": 0.9132,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        102
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, carry out time is different—I haven’t been able to complete your order ‘cause I can’t really hear what you’re—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, what part do you need me to repeat?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Okay, what part do you need me to repeat?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        103
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, what part do you need me to repeat?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Large pineapple pizza and a 10-inch pineapple pizza. Yeah, I'm just going to have to have you call up for another phone number, man. I can't complete the order.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I got a large pineapple pizza and a 10-inch pineapple pizza—is that someone laughin’?",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I got a large pineapple pizza and a 10-inch pineapple pizza—is that someone laughin’?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The cheese bread was the only thing I need left.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "The cheese bread was the only thing I need left.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        112
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The cheese bread was the only thing I need left.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "A regular order of cheese bread?",
+      "wiki_speaker": "Man",
+      "wiki_text": "A regular order of cheese bread?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        113
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "A regular order of cheese bread?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No. No. I need to put the...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] No. I need to put the pepperoni and the pineapple on the cheese bread and b—and do triple the portion. So just take the pineapple and the pepperoni, put it on the cheese bread, put it all together, and then just put it o—like pineapple cheese bread with pepperoni on it, too. Just something like— [delay] And then we’ll be good!",
+      "similarity": 0.8167,
+      "match_type": "similar",
+      "json_group": [
+        95,
+        96
+      ],
+      "wiki_indices": [
+        114
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No. No. I need to put the...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "pepperoni and the pineapple on the cheese bread and do triple the portion. So just take the pineapple and the pepperoni, put it on the cheesebread, put it all together and then put it like pineapple cheese bread with pepperoni on it too, something like that, something, something, something, something, something, something, something, something, something, and then we'll be good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delay & reverb] No. I need to put the pepperoni and the pineapple on the cheese bread and b—and do triple the portion. So just take the pineapple and the pepperoni, put it on the cheese bread, put it all together, and then just put it o—like pineapple cheese bread with pepperoni on it, too. Just something like— [delay] And then we’ll be good!",
+      "similarity": 0.8167,
+      "match_type": "similar",
+      "json_group": [
+        95,
+        96
+      ],
+      "wiki_indices": [
+        114
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "pepperoni and the pineapple on the cheese bread and do triple the portion. So just take the pineapple and the pepperoni, put it on the cheesebread, put it all together and then put it like pineapple cheese bread with pepperoni on it too, something like that, something, something, something, something, something, something, something, something, something, and then we'll be good.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 96,
+    "total_wiki_lines": 103,
+    "matched_wiki_lines": 68,
+    "unmatched_wiki_lines": 35,
+    "matched": 88,
+    "speakers_to_map": 2,
+    "text_auto_correct": 6,
+    "text_review": 34,
+    "text_group_review": 34,
+    "unmatched_json": 8
+  }
+}

@@ -12,15 +12,15 @@ errors.  This tool bridges the two sources.
 
 Scrape snapshots
 ────────────────
-Each `scrape` run creates a timestamped snapshot under wiki_cache/snapshots/.
+Each `scrape` run creates a Unix-timestamped snapshot under wiki-data/scrapes/.
 All subsequent commands default to the most-recent snapshot (recorded in
-wiki_cache/latest).  Pass --snapshot <name> to target a specific one.
+wiki-data/latest-scrape).  Pass --snapshot <name> to target a specific one.
 
 Usage
 ─────
   # 1. Fetch & cache wiki transcripts (creates a new snapshot)
   python wiki_scrape_and_merge.py scrape
-  python wiki_scrape_and_merge.py scrape --snapshot my-label   # custom name
+  python wiki_scrape_and_merge.py scrape --snapshot 1775667781000-my-label
   python wiki_scrape_and_merge.py scrape --album longmont-potion-castle-4
   python wiki_scrape_and_merge.py scrape --album longmont-potion-castle-4 --track a-simple-inquiry
   python wiki_scrape_and_merge.py scrape --force               # overwrite existing snapshot
@@ -33,13 +33,13 @@ Usage
 
   # 4. Compare wiki transcripts with local JSON files
   python wiki_scrape_and_merge.py compare
-  python wiki_scrape_and_merge.py compare --snapshot 20260408-142301
+  python wiki_scrape_and_merge.py compare --snapshot 1775667781000
   python wiki_scrape_and_merge.py compare --album longmont-potion-castle-4
   python wiki_scrape_and_merge.py compare --threshold 0.5   # lower = more permissive alignment
 
   # 5. Merge approved changes from compare output into source JSON files
   python wiki_scrape_and_merge.py merge
-  python wiki_scrape_and_merge.py merge --snapshot 20260408-142301
+  python wiki_scrape_and_merge.py merge --snapshot 1775667781000
   python wiki_scrape_and_merge.py merge --album longmont-potion-castle-4 --track a-simple-inquiry
   python wiki_scrape_and_merge.py merge --dry-run           # show changes without writing
   python wiki_scrape_and_merge.py merge --auto-threshold 0.85  # min similarity to auto-apply text
@@ -47,12 +47,12 @@ Usage
 
   # 6. Print a readable summary of compare results
   python wiki_scrape_and_merge.py report
-  python wiki_scrape_and_merge.py report --snapshot 20260408-142301
+  python wiki_scrape_and_merge.py report --snapshot 1775667781000
   python wiki_scrape_and_merge.py report --album longmont-potion-castle-4 --track a-simple-inquiry
 
-  # 7. Migrate legacy flat wiki_cache/ structure into a named snapshot
+  # 7. Migrate a legacy flat cache into a named snapshot
   python wiki_scrape_and_merge.py migrate
-  python wiki_scrape_and_merge.py migrate --snapshot initial  # custom name
+  python wiki_scrape_and_merge.py migrate --snapshot 1775667781000-initial
 
 Dependencies: Python 3.10+ standard library only (urllib, json, re, difflib, etc.)
 """
@@ -81,18 +81,24 @@ PROJECT_ROOT   = SCRIPT_DIR.parent
 JEKYLL_DIR     = PROJECT_ROOT / "jekyll"
 JSON_SRC_DIR   = JEKYLL_DIR / "assets" / "json"
 DATA_JSON      = JSON_SRC_DIR / "data.json"
-CACHE_DIR      = SCRIPT_DIR / "wiki_cache"
-SNAPSHOTS_DIR  = CACHE_DIR / "snapshots"   # each scrape run creates a subdir here
-LATEST_FILE    = CACHE_DIR / "latest"      # plain-text file containing the active snapshot name
-COMPARE_DIR    = SCRIPT_DIR / "wiki_compare_output"
-BACKUP_DIR     = SCRIPT_DIR / "wiki_merge_backups"
+DATA_DIR       = SCRIPT_DIR / "wiki-data"
+SNAPSHOTS_DIR  = DATA_DIR / "scrapes"       # one Unix-timestamped directory per scrape
+LATEST_FILE    = DATA_DIR / "latest-scrape" # active scrape ID, stored as plain text
+COMPARE_DIR    = DATA_DIR / "comparisons"
+BACKUP_DIR     = DATA_DIR / "merge-backups"
+LEGACY_CACHE_DIR = DATA_DIR / "legacy-cache"
 
 # ── Wiki API ──────────────────────────────────────────────────────────────────
 
 WIKI_API       = "https://talkinwhipapedia.fandom.com/api.php"
 REQUEST_DELAY  = 0.8   # seconds between requests (be polite)
 USER_AGENT     = "wallace-thrasher-wiki-scraper/1.0 (github.com/willjasen/wallace-thrasher)"
-SNAPSHOT_RE    = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,79}\Z")
+SNAPSHOT_RE    = re.compile(r"\d{13}(?:-[A-Za-z0-9][A-Za-z0-9._-]{0,65})?\Z")
+
+
+def _unix_timestamp_ms() -> str:
+    """Return a sortable Unix timestamp with millisecond precision."""
+    return str(time.time_ns() // 1_000_000)
 
 # ── Helpers: HTTP ─────────────────────────────────────────────────────────────
 
@@ -685,7 +691,8 @@ def _resolve_snapshot(snapshot: str | None) -> str | None:
 def _validate_snapshot_name(snapshot: str) -> str:
     if not SNAPSHOT_RE.fullmatch(snapshot):
         raise ValueError(
-            "Snapshot names must be 1-80 letters, numbers, dots, underscores, or hyphens."
+            "Snapshot IDs must start with a 13-digit Unix timestamp and may have "
+            "a hyphenated label."
         )
     return snapshot
 
@@ -848,9 +855,7 @@ def cmd_scrape(args) -> None:
     """Fetch wiki transcripts and cache them to disk as a named snapshot."""
     data = load_data_json()
 
-    snapshot = _validate_snapshot_name(
-        args.snapshot or datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    )
+    snapshot = _validate_snapshot_name(args.snapshot or _unix_timestamp_ms())
     snapshot_dir = _snapshot_cache_dir(snapshot)
 
     if snapshot_dir.exists() and not args.force:
@@ -1050,7 +1055,7 @@ def cmd_compare(args) -> None:
             "album_slug":   a_slug,
             "track":        track.get("Track_Title", ""),
             "track_slug":   t_slug,
-            "json_path":    str(track_file),
+            "json_path":    track_file.relative_to(PROJECT_ROOT).as_posix(),
             "json_sha256":  _file_sha256(track_file),
             "wiki_title":   cached.get("wiki_title"),
             "wiki_url":     cached.get("wiki_url"),
@@ -1099,7 +1104,7 @@ def cmd_merge(args) -> None:
         sys.exit("No snapshot found. Run 'scrape' and 'compare' first, or pass --snapshot <name>.")
 
     applied = skipped = low_coverage = no_compare = stale = 0
-    backup_run = datetime.datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+    backup_run = _unix_timestamp_ms()
 
     for album, track in iter_tracks(data, args.album, args.track):
         a_slug    = album["Album_Slug"]
@@ -1302,31 +1307,31 @@ def cmd_list_snapshots(args) -> None:
 # ── Subcommand: use ───────────────────────────────────────────────────────────
 
 def cmd_use(args) -> None:
-    """Set a snapshot as the active default (updates wiki/cache/latest)."""
+    """Set a snapshot as the active default (updates wiki-data/latest-scrape)."""
     snapshot = _validate_snapshot_name(args.snapshot)
     if not _snapshot_cache_dir(snapshot).exists():
         sys.exit(f"Snapshot '{snapshot}' not found under {SNAPSHOTS_DIR}.")
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     LATEST_FILE.write_text(snapshot, encoding="utf-8")
     print(f"Latest → {snapshot}")
 
 # ── Subcommand: migrate ───────────────────────────────────────────────────────
 
 def cmd_migrate(args) -> None:
-    """Migrate legacy flat wiki_cache/<album>/ structure into a named snapshot."""
-    if not CACHE_DIR.exists():
-        print("wiki_cache/ does not exist. Nothing to migrate.")
+    """Migrate wiki-data/legacy-cache/<album>/ into a named snapshot."""
+    if not LEGACY_CACHE_DIR.exists():
+        print("wiki-data/legacy-cache/ does not exist. Nothing to migrate.")
         return
 
     legacy_dirs = [
-        d for d in CACHE_DIR.iterdir()
+        d for d in LEGACY_CACHE_DIR.iterdir()
         if d.is_dir() and d.name != "snapshots"
     ]
     if not legacy_dirs:
-        print("No legacy album directories found directly under wiki_cache/.")
+        print("No album directories found under wiki-data/legacy-cache/.")
         return
 
-    snapshot = _validate_snapshot_name(args.snapshot or "initial")
+    snapshot = _validate_snapshot_name(args.snapshot or _unix_timestamp_ms())
     dest_dir = _snapshot_cache_dir(snapshot)
 
     if dest_dir.exists() and not args.force:
@@ -1349,7 +1354,7 @@ def cmd_migrate(args) -> None:
         print(f"Note: 'latest' still points to '{_resolve_snapshot(None)}'; not changed.")
         print(f"      Run 'use {snapshot}' to switch if desired.")
 
-    print(f"\nMigration complete. Original files remain in wiki_cache/<album>/.")
+    print(f"\nMigration complete. Original files remain in wiki-data/legacy-cache/<album>/.")
     print("Delete them manually once you have verified the snapshot.")
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -1374,7 +1379,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     # ── scrape ──
     p_scrape = sub.add_parser("scrape", help="Fetch wiki transcripts and cache them as a new snapshot.")
-    p_scrape.add_argument("--snapshot", help="Snapshot name (default: YYYYMMDD-HHMMSS timestamp).")
+    p_scrape.add_argument("--snapshot", help="Snapshot ID (default: Unix timestamp in milliseconds).")
     p_scrape.add_argument("--album",    help="Limit to a single album slug.")
     p_scrape.add_argument("--track",    help="Limit to a single track slug.")
     p_scrape.add_argument("--force",    action="store_true", help="Overwrite snapshot if it already exists.")
@@ -1419,8 +1424,8 @@ def build_parser() -> argparse.ArgumentParser:
                        help="Show individual alignment entries.")
 
     # ── migrate ──
-    p_mig = sub.add_parser("migrate", help="Migrate legacy flat wiki/cache/ structure into a snapshot.")
-    p_mig.add_argument("--snapshot", help="Snapshot name for migrated data (default: 'initial').")
+    p_mig = sub.add_parser("migrate", help="Migrate wiki-data/legacy-cache/ into a snapshot.")
+    p_mig.add_argument("--snapshot", help="Snapshot ID for migrated data (default: Unix timestamp in milliseconds).")
     p_mig.add_argument("--force",    action="store_true", help="Merge into snapshot if it already exists.")
 
     return parser

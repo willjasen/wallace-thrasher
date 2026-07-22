@@ -1,0 +1,326 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:52.736443+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Desmond",
+  "track_slug": "desmond",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/desmond.json",
+  "json_sha256": "8ec407281d369c67e7c54b6fd68f96ef6ccd8ce15ccdf592a3a34eac44d629fa",
+  "wiki_title": "Desmond",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Desmond",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_02": "Doctor",
+    "SPEAKER_03": "Doctor"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.6951,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 4.5605,
+          "observations": 5
+        },
+        {
+          "name": "Doctor",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Doctor",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Doctor",
+          "score": 1.8366,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Doctor",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Doctor",
+          "score": 1.6312,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Hey, there's nothing more important than what we talk about. It's your money. It's your life.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "And there's nothing more important than what we talk about. It's your money, it's your life! Let's go to Orlando, Florida. WDBO. Desmond, welcome to the show.",
+      "similarity": 0.9701,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, there's nothing more important than what we talk about. It's your money. It's your life.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Let's go to Orlando, Florida. W.D.O. Desmond, welcome to the show.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "And there's nothing more important than what we talk about. It's your money, it's your life! Let's go to Orlando, Florida. WDBO. Desmond, welcome to the show.",
+      "similarity": 0.9701,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's go to Orlando, Florida. W.D.O. Desmond, welcome to the show.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Good evening, Doctor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Good evening, Doctor.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good evening, Doctor.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Good evening, Desmond.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "Good evening, Desmond.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good evening, Desmond.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm phoning you tonight regarding what I feel is the sure...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uhhm.. phoning you tonight, regarding what I feel.. is the surefire--",
+      "similarity": 0.9244,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uhhm.. phoning you tonight, regarding what I feel.. is the surefire--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You have a surefire?",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "You have a sure fire? What?",
+      "similarity": 0.8636,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "You have a sure fire? What?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The sure fire investment idea for 95.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "A surefire investment idea for '95. Now, is this--",
+      "similarity": 0.7805,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "A surefire investment idea for '95. Now, is this--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "A surefire? No, wait a minute, surefire?",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "A sure fire? No, wait a minute. Sure fire?",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "A sure fire? No, wait a minute. Sure fire?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, sir.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Cool. What is it?",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "Cool! What is it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "Cool. What is it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And is this something that's going to...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And... is this something that's going to incite the proverbial \"riot in the streets\"? I don't think so. Is this something that's gonna make a whole lot of money? Yes it is. [downward pitch shift] It involves the, uh, sale of mangoes, uh, from the Caribbean Islands, I'll be frank with you... [muddled speech]",
+      "similarity": 0.8556,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And is this something that's going to...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "to incite the proverbial riot in the streets? I don't think so. Is it something that's going to make a whole lot of money? Yes, it is. It involves the sale of mangoes. Now, I'm at the Caribbean Islands to be fired with you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And... is this something that's going to incite the proverbial \"riot in the streets\"? I don't think so. Is this something that's gonna make a whole lot of money? Yes it is. [downward pitch shift] It involves the, uh, sale of mangoes, uh, from the Caribbean Islands, I'll be frank with you... [muddled speech]",
+      "similarity": 0.8556,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "to incite the proverbial riot in the streets? I don't think so. Is it something that's going to make a whole lot of money? Yes, it is. It involves the sale of mangoes. Now, I'm at the Caribbean Islands to be fired with you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You know, he has one of those, one of those spy phones, one of those gadget phones. And Desmond did the crackpot with a cool little knobby on his phone.",
+      "wiki_speaker": "Doctor",
+      "wiki_text": "[laughs] You know, uh, he has one of those, uh, one of those spy phones, one of those gadget phones--",
+      "similarity": 0.6611,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] You know, uh, he has one of those, uh, one of those spy phones, one of those gadget phones--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Doctor",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Thank you.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 14,
+    "total_wiki_lines": 16,
+    "matched_wiki_lines": 11,
+    "unmatched_wiki_lines": 5,
+    "matched": 13,
+    "speakers_to_map": 3,
+    "text_auto_correct": 3,
+    "text_review": 2,
+    "text_group_review": 4,
+    "unmatched_json": 1
+  }
+}

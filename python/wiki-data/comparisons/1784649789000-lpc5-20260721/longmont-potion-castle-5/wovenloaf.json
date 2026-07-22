@@ -1,0 +1,1208 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:56.002438+00:00",
+  "snapshot": "1784649789000-lpc5-20260721",
+  "album": "Longmont Potion Castle 5",
+  "album_slug": "longmont-potion-castle-5",
+  "track": "Wovenloaf",
+  "track_slug": "wovenloaf",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-5/wovenloaf.json",
+  "json_sha256": "5b79ee77c3042827313966618ca10c32712d9d720cd8629e24d5e78db243b6a1",
+  "wiki_title": "Wovenloaf",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Wovenloaf",
+  "speaker_mapping": {
+    "SPEAKER_00": "Woman",
+    "SPEAKER_01": "Woman",
+    "SPEAKER_02": "LPC",
+    "SPEAKER_03": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 15,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 13.7166,
+          "observations": 15
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 0.8637,
+      "observations": 7,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 6.3355,
+          "observations": 7
+        },
+        {
+          "name": "Voice",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.8723,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "LPC",
+      "confidence": 0.9081,
+      "observations": 11,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 9.8771,
+          "observations": 11
+        },
+        {
+          "name": "Woman",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Albertson's bakery, home with the hot fresh bread.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Albertsons Bakery, home of the hot fresh bread. Can I help you?",
+      "similarity": 0.9431,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Albertson's bakery, home with the hot fresh bread.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can I help you?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Albertsons Bakery, home of the hot fresh bread. Can I help you?",
+      "similarity": 0.9431,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I help you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, I'd like to get into a baguette if I could.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I'd like to get, uh, into a baguette if I could.",
+      "similarity": 0.9691,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'd like to get, uh, into a baguette if I could.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I'm sorry?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Some kind of baguette or twisted bread.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Some kind of baguette or twisted bread. [delayed exhale]",
+      "similarity": 0.8352,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Some kind of baguette or twisted bread. [delayed exhale]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We have some baguettes, yes.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "We have some baguettes, yes. Uh, what exactly are you asking?",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We have some baguettes, yes.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What exactly are you asking?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "We have some baguettes, yes. Uh, what exactly are you asking?",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What exactly are you asking?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Like a...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like, uhhh... [heavy delay] ...probably, um... challah bread. [delay continues]",
+      "similarity": 0.6237,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Like a...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Probably chala bread.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like, uhhh... [heavy delay] ...probably, um... challah bread. [delay continues]",
+      "similarity": 0.6237,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Probably chala bread.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Uh...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like, uhhh... [heavy delay] ...probably, um... challah bread. [delay continues]",
+      "similarity": 0.6237,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Uh...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Challa?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "\"Chelleh\"?",
+      "similarity": 0.6154,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "\"Chelleh\"?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Something of that type.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Something of that... of that type. [clears throat, high pitched and delayed]",
+      "similarity": 0.4835,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Something of that... of that type. [clears throat, high pitched and delayed]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can you spell that place?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Can you spell that, please?",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can you spell that, please?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "A woven bread.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "A woven bread.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "A woven bread.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, can you spell it?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, can... can you spell it?",
+      "similarity": 0.9048,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, can... can you spell it?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "W-O-V-E-N?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "W-O-V-E-N.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "W-O-V-E-N?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, no, I'm...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, no, no... [laughing] Never mind. We have baguettes, but we do not have woven bread.",
+      "similarity": 0.795,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, no, I'm...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Never mind.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, no, no... [laughing] Never mind. We have baguettes, but we do not have woven bread.",
+      "similarity": 0.795,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Never mind.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, we have bag...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, no, no... [laughing] Never mind. We have baguettes, but we do not have woven bread.",
+      "similarity": 0.795,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, we have bag...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We have baggats, but we do not have woven bread.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, no, no... [laughing] Never mind. We have baguettes, but we do not have woven bread.",
+      "similarity": 0.795,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We have baggats, but we do not have woven bread.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I mean, like a woven bread.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[low-pitched] I need... I need... I need, like a... like a woven bread.",
+      "similarity": 0.5301,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[low-pitched] I need... I need... I need, like a... like a woven bread.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I'm sorry?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You know, like...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You know, like... [low-pitched] ...bread that's woven together.",
+      "similarity": 0.8723,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know, like...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Bread that's woven together.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You know, like... [low-pitched] ...bread that's woven together.",
+      "similarity": 0.8723,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bread that's woven together.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, we don't have...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, we don't have...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We don't have...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yeah, we don't have... we do not have woven bread.",
+      "similarity": 0.9048,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We don't have woven bread.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Yeah, we don't have... we do not have woven bread.",
+      "similarity": 0.9048,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have woven bread.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We have baguettes, which are the long, skinny bread.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "We have baguettes, which are the long, skinny... ...bread...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20,
+        22
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We have baguettes, which are the long, skinny bread.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "But we do not have woven bread.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "...but we do not have woven bread.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "But we do not have woven bread.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, sir?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, sir?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "So...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So, uhh... I'd like an orange... [low-pitched] donut.",
+      "similarity": 0.6562,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'd like an orange...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So, uhh... I'd like an orange... [low-pitched] donut.",
+      "similarity": 0.6562,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'd like an orange...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Is that possible?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Is that possible?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that possible?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I did not hear you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I did not hear you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I did not hear you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Orange donut.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Orange donut?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Orange donut.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Orange donut?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[high-pitched] Orange donut!",
+      "similarity": 0.5106,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Orange donut?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[high-pitched] Orange donut!",
+      "similarity": 0.5106,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm sorry.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I can't help you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Um... I'm sorry. I can't help you.",
+      "similarity": 0.7111,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um... I'm sorry. I can't help you.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry, I can't help you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I... I'm sorry, I can't help you. Bye bye.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry, I can't help you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bye-bye.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I... I'm sorry, I can't help you. Bye bye.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bye-bye.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your call is very, right, right, right, right, right.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your call is very, right, right, right, right, right.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your call is very important to us.",
+      "wiki_speaker": "Voice",
+      "wiki_text": "Your call is very important to us. Please stay on the line--",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Voice",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your call is very important to us.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Please stay on the line.",
+      "wiki_speaker": "Voice",
+      "wiki_text": "Your call is very important to us. Please stay on the line--",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Voice",
+      "speaker_action": "matched_line",
+      "proposed_text": "Please stay on the line.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello? Can I help you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        45,
+        46
+      ],
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Can I help you?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello? Can I help you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        45,
+        46
+      ],
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I help you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Hi.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hi!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What are your store hours?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are your store hours?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are your store hours?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're open from 9 a.m. to 9 p.m.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I'm, uh... we're open from nine AM to nine PM.",
+      "similarity": 0.7324,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm, uh... we're open from nine AM to nine PM.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I really, frankly.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I really, frankly, I couldn't see... I couldn't make head or tail or whatever of...",
+      "similarity": 0.8636,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I really, frankly.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I couldn't make head or tail or whatever.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I really, frankly, I couldn't see... I couldn't make head or tail or whatever of...",
+      "similarity": 0.8636,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I couldn't make head or tail or whatever.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It sounded like it was a scramble or something going on,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "It sounded like it... it was a scrambler or somethin' going on...",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It sounded like it... it was a scrambler or somethin' going on...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "because he couldn't understand what you were saying.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "...'cause we couldn't understand what you were sayin'.",
+      "similarity": 0.9307,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "...'cause we couldn't understand what you were sayin'.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Couldn't, hold on, hold on, hold.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[delayed, looped] Couldn't'a, couldn't'a, houldn't'a, houldn't'a.... [unclear]",
+      "similarity": 0.4632,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[delayed, looped] Couldn't'a, couldn't'a, houldn't'a, houldn't'a.... [unclear]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "There you go.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "There ya go! Are you havin' fun?",
+      "similarity": 0.918,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "There you go.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you having fun?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "There ya go! Are you havin' fun?",
+      "similarity": 0.918,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you having fun?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'd like to talk chewing this. That sounds fun to me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'd like to talk chewiness, that sounds fun to me.",
+      "similarity": 0.9293,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'd like to talk chewiness, that sounds fun to me.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Talk to you later.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Talk to you later.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Talk to you later. Bye-bye.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[laughs] Talk to you later, buh-bye.",
+      "similarity": 0.807,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Talk to you later, buh-bye.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 60,
+    "total_wiki_lines": 44,
+    "matched_wiki_lines": 41,
+    "unmatched_wiki_lines": 3,
+    "matched": 56,
+    "speakers_to_map": 4,
+    "text_auto_correct": 6,
+    "text_review": 8,
+    "text_group_review": 25,
+    "unmatched_json": 4
+  }
+}

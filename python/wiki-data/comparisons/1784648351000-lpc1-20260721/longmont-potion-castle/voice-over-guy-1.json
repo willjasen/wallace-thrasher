@@ -1,0 +1,161 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:58.530525+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Voice-Over Guy 1",
+  "track_slug": "voice-over-guy-1",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/voice-over-guy-1.json",
+  "json_sha256": "4b4579226cb2d9efc15f777f438f06ab33262c5f8bb598739bd44f7eef3022e2",
+  "wiki_title": "Voice-Over Guy 1",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Voice-Over_Guy_1",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Voice-Over Guy"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Voice-Over Guy",
+      "confidence": 1.0,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Voice-Over Guy",
+          "score": 4.7738,
+          "observations": 5
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the beeper for?",
+      "wiki_speaker": "Voice-Over Guy",
+      "wiki_text": "What's the beeper for?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Voice-Over Guy",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the beeper for?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's my package, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's my package, sir.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's my package, sir.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your package? What kind of package?",
+      "wiki_speaker": "Voice-Over Guy",
+      "wiki_text": "[cough] Your package? What kind of package?",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Voice-Over Guy",
+      "speaker_action": "matched_line",
+      "proposed_text": "[cough] Your package? What kind of package?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What language are you speaking?",
+      "wiki_speaker": "Voice-Over Guy",
+      "wiki_text": "What language are you speaking?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Voice-Over Guy",
+      "speaker_action": "matched_line",
+      "proposed_text": "What language are you speaking?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, that's your... You got a smart-ass remark for everything.",
+      "wiki_speaker": "Voice-Over Guy",
+      "wiki_text": "Okay, that's it-- '[beep]' --you've got a smart ass remark for everything.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Voice-Over Guy",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, that's it-- '[beep]' --you've got a smart ass remark for everything.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, well, I'll hang you, pal. I'll hang you.",
+      "wiki_speaker": "Voice-Over Guy",
+      "wiki_text": "Okay, well... I'll hang you, pal. I'll hang you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Voice-Over Guy",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, well, I'll hang you, pal. I'll hang you.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 6,
+    "total_wiki_lines": 7,
+    "matched_wiki_lines": 6,
+    "unmatched_wiki_lines": 1,
+    "matched": 6,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 0,
+    "text_group_review": 0,
+    "unmatched_json": 0
+  }
+}

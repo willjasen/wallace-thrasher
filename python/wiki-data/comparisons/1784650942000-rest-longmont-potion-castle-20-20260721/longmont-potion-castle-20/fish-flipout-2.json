@@ -1,0 +1,4311 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:29:12.669637+00:00",
+  "snapshot": "1784650942000-rest-longmont-potion-castle-20-20260721",
+  "album": "Longmont Potion Castle 20",
+  "album_slug": "longmont-potion-castle-20",
+  "track": "Fish Flipout 2",
+  "track_slug": "fish-flipout-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-20/fish-flipout-2.json",
+  "json_sha256": "198b89632f2762f66d67d57c61efca809155075b08564de1ad632499b1c99d92",
+  "wiki_title": "Fish Flipout 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Fish_Flipout_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Joe",
+    "SPEAKER_03": "Chris",
+    "SPEAKER_05": "Chris"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.8514,
+      "observations": 39,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 36.4057,
+          "observations": 39
+        },
+        {
+          "name": "Chris",
+          "score": 5.3522,
+          "observations": 6
+        },
+        {
+          "name": "Joe",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Joe",
+      "confidence": 0.8477,
+      "observations": 6,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Joe",
+          "score": 5.5681,
+          "observations": 6
+        },
+        {
+          "name": "Chris",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man(2)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man(2)",
+          "score": 0.7831,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Chris",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Chris",
+          "score": 3.619,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Chris",
+      "confidence": 0.5224,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Chris",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man(1)",
+          "score": 0.9143,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_05": {
+      "name": "Chris",
+      "confidence": 0.8932,
+      "observations": 36,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Chris",
+          "score": 33.1267,
+          "observations": 36
+        },
+        {
+          "name": "Man(1)",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 1.9622,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Chris, you there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey Chris, you there?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Chris, you there?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Who's us?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Who’s this?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who’s this?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's Donnie here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s Donny here. Customer.",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's Donnie here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Customer.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s Donny here. Customer.",
+      "similarity": 0.898,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Customer.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Don't know who you are, man.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Don't know who you are, man.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don't know who you are, man.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'm a customer.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I'm a customer, I had an issue with my lobster I got from ye.",
+      "similarity": 0.9844,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'm a customer.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I had an issue with my lobster I got from me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I'm a customer, I had an issue with my lobster I got from ye.",
+      "similarity": 0.9844,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I had an issue with my lobster I got from me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "From who, me?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "From who, me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "From who, me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, from you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, from you! This product was woefully inadequate, I’m sorry to say!",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, from you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This product was woefully inadequate.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, from you! This product was woefully inadequate, I’m sorry to say!",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This product was woefully inadequate.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry to say.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, from you! This product was woefully inadequate, I’m sorry to say!",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm sorry to say.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Well, that's too bad, because I never...",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Well that’s too bad, because I haven’t sold any lobsters!",
+      "similarity": 0.8598,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, that's too bad, because I never...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "sold me lobsters.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Well that’s too bad, because I haven’t sold any lobsters!",
+      "similarity": 0.8598,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "sold me lobsters.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, this thing is just not cutting it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, this thing is just not cutting it guy, I came to you, ‘cause my deal is, I only take a bite out of fish from international waters, so I said I'll call Chris, get some lobsters!",
+      "similarity": 0.9914,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, this thing is just not cutting it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Guy, I came to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, this thing is just not cutting it guy, I came to you, ‘cause my deal is, I only take a bite out of fish from international waters, so I said I'll call Chris, get some lobsters!",
+      "similarity": 0.9914,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Guy, I came to you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because my deal is I only take a bite out of fish from international waters.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, this thing is just not cutting it guy, I came to you, ‘cause my deal is, I only take a bite out of fish from international waters, so I said I'll call Chris, get some lobsters!",
+      "similarity": 0.9914,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because my deal is I only take a bite out of fish from international waters.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So I said, I'll call Chris get some lobster.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, this thing is just not cutting it guy, I came to you, ‘cause my deal is, I only take a bite out of fish from international waters, so I said I'll call Chris, get some lobsters!",
+      "similarity": 0.9914,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So I said, I'll call Chris get some lobster.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hey, you can take a bite out of my fucking ass, you piece of shit.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "[laughing] You can take a bite out of my fucking ass you piece of shit!",
+      "similarity": 0.9313,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughing] You can take a bite out of my fucking ass you piece of shit!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "What do you want, you fucking freak?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "What do you want, you fucking freak?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want, you fucking freak?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, I've seen lobster rolls bigger than this thing you sold me, guy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, I've seen lobster rolls bigger than this thing you sold me guy, now whaddya wanna do?",
+      "similarity": 0.8627,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, I've seen lobster rolls bigger than this thing you sold me guy, now whaddya wanna do?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Now, what do you want to do?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I have a - [laughs] I'm gonna tell you what I'm gonna do.",
+      "similarity": 0.4615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I have a - [laughs] I'm gonna tell you what I'm gonna do.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I never said.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I never said.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I've never said it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I've never said it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I've never said it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I've never said it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "going to do.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "going to do.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "If I can see you face to face, I'd break your fucking neck.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "If I can see you face to face, I'll break your fuckin neck!",
+      "similarity": 0.9649,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "If I can see you face to face, I'll break your fuckin neck!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Look, I'm looking real seriously at whooping you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "look, I'm lookin’ real seriously at whoopin you, ‘cause im fixing to whoop you, ok-k-k-k-k?",
+      "similarity": 0.8743,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Look, I'm looking real seriously at whooping you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because I'm fixing to whoopee.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "look, I'm lookin’ real seriously at whoopin you, ‘cause im fixing to whoop you, ok-k-k-k-k?",
+      "similarity": 0.8743,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I'm fixing to whoopee.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "look, I'm lookin’ real seriously at whoopin you, ‘cause im fixing to whoop you, ok-k-k-k-k?",
+      "similarity": 0.8743,
+      "match_type": "similar",
+      "json_group": [
+        29,
+        30,
+        31
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Come on out.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "[laughing] Come on out, come on, whoop me man.",
+      "similarity": 0.8767,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on out.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Come on, whoop me, man.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "[laughing] Come on out, come on, whoop me man.",
+      "similarity": 0.8767,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come on, whoop me, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, and then what's with that frozen Ziploc stuff you sold me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And hey, what’s with that frozen ziplock stuff you sold me, these scallops, I threw em out the window, Im not gonna lie to you, I can’t exchange them, I just want a refund or a gift caaaird. Can I get a gift card, or-",
+      "similarity": 0.926,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, and then what's with that frozen Ziploc stuff you sold me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "These scallops, I threw them out the window.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And hey, what’s with that frozen ziplock stuff you sold me, these scallops, I threw em out the window, Im not gonna lie to you, I can’t exchange them, I just want a refund or a gift caaaird. Can I get a gift card, or-",
+      "similarity": 0.926,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "These scallops, I threw them out the window.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm not going to lie to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And hey, what’s with that frozen ziplock stuff you sold me, these scallops, I threw em out the window, Im not gonna lie to you, I can’t exchange them, I just want a refund or a gift caaaird. Can I get a gift card, or-",
+      "similarity": 0.926,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not going to lie to you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I can't exchange him.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And hey, what’s with that frozen ziplock stuff you sold me, these scallops, I threw em out the window, Im not gonna lie to you, I can’t exchange them, I just want a refund or a gift caaaird. Can I get a gift card, or-",
+      "similarity": 0.926,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can't exchange him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just want a refund or a gift card.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And hey, what’s with that frozen ziplock stuff you sold me, these scallops, I threw em out the window, Im not gonna lie to you, I can’t exchange them, I just want a refund or a gift caaaird. Can I get a gift card, or-",
+      "similarity": 0.926,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just want a refund or a gift card.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can I get a gift card?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And hey, what’s with that frozen ziplock stuff you sold me, these scallops, I threw em out the window, Im not gonna lie to you, I can’t exchange them, I just want a refund or a gift caaaird. Can I get a gift card, or-",
+      "similarity": 0.926,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I get a gift card?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Can I get a gift card?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Go fuck yourself. Go fuck off.",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Can I get a gift card?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Go fuck on.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Go fuck yourself. Go fuck off.",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Go fuck on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you be professional for a change?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why don’t you be professional, for a change?",
+      "similarity": 0.9762,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you be professional, for a change?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Fucked off and leave me alone, man.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "[laughs] fuck off and leave me alone man, I don’t even know who you are.",
+      "similarity": 0.916,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fucked off and leave me alone, man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I don't even know who you are.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "[laughs] fuck off and leave me alone man, I don’t even know who you are.",
+      "similarity": 0.916,
+      "match_type": "similar",
+      "json_group": [
+        43,
+        44
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even know who you are.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Donnie Rollins, my name.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Donnie Rollon’s my name, ok?",
+      "similarity": 0.9057,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Donnie Rollins, my name.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Donnie Rollon’s my name, ok?",
+      "similarity": 0.9057,
+      "match_type": "similar",
+      "json_group": [
+        45,
+        46
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Yeah, I remember you from a long time back, you fucking freak.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Yeah, I remember you from a long time back, you fucking freak, you one of them fucking people on the other end of a phone, aggravating somebody. Now why don’t you fuck yourself and find something better to do.",
+      "similarity": 0.9707,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I remember you from a long time back, you fucking freak.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "You one of them fucking people on the other end of a phone, aggravation somebody.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Yeah, I remember you from a long time back, you fucking freak, you one of them fucking people on the other end of a phone, aggravating somebody. Now why don’t you fuck yourself and find something better to do.",
+      "similarity": 0.9707,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You one of them fucking people on the other end of a phone, aggravation somebody.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Then why don't you go fuck yourself and find something better to do?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Yeah, I remember you from a long time back, you fucking freak, you one of them fucking people on the other end of a phone, aggravating somebody. Now why don’t you fuck yourself and find something better to do.",
+      "similarity": 0.9707,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48,
+        49
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Then why don't you go fuck yourself and find something better to do?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need to eat.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to eat.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to eat.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And how about you hook me up?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And how about you hook me up?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Good, well, go fucking buy something.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Good, well go fucking buy something!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good, well, go fucking buy something.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'd bought some from you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I bought something from you!",
+      "similarity": 0.8627,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I bought something from you!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's he want?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "What do you want?",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, it's DR calling.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "yeah, it’s DR calling.",
+      "similarity": 0.95,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "yeah, it’s DR calling.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen, listen closely, guy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen - listen closely guy, I'm lookin real seriously at whoopin you, you understand?",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, listen closely, guy.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm looking real seriously at whooping you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen - listen closely guy, I'm lookin real seriously at whoopin you, you understand?",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm looking real seriously at whooping you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You understand?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen - listen closely guy, I'm lookin real seriously at whoopin you, you understand?",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You understand?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Oh, man, I love a good.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, man, I love a good.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I love a good wop man.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Oh man I love a good whooping, why don’t you come whoop me, man?",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I love a good wop man.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Why don't you go whoop me, man?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Oh man I love a good whooping, why don’t you come whoop me, man?",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you go whoop me, man?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you give me a real scallop?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "well why don’t you give me a real scallop? How about some real scallops for a change and do your job up here.",
+      "similarity": 0.9665,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you give me a real scallop?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How about some real scallops for a change and do your job up here?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "well why don’t you give me a real scallop? How about some real scallops for a change and do your job up here.",
+      "similarity": 0.9665,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How about some real scallops for a change and do your job up here?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I don't know how it's job.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I don’t know how-I don’t know-I don’t know scalloping(?)",
+      "similarity": 0.735,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know how it's job.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I don't know how it's going to scallop.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I don’t know how-I don’t know-I don’t know scalloping(?)",
+      "similarity": 0.735,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know how it's going to scallop.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to scallop your lips and my cleats.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "i’m gonna scallop your lips with my cleats.",
+      "similarity": 0.814,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "i’m gonna scallop your lips with my cleats.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Because I'm tired of fiddling around.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cause im tired of fiddling around. You've been messing me around everytime I come to your stupid place. Each and every time. This lobster’s the size of my thumb nail, here. Am I making sense to you?",
+      "similarity": 0.9622,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I'm tired of fiddling around.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You've been messing me around each and every time I come to your stupid place.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cause im tired of fiddling around. You've been messing me around everytime I come to your stupid place. Each and every time. This lobster’s the size of my thumb nail, here. Am I making sense to you?",
+      "similarity": 0.9622,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You've been messing me around each and every time I come to your stupid place.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Each and every time.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cause im tired of fiddling around. You've been messing me around everytime I come to your stupid place. Each and every time. This lobster’s the size of my thumb nail, here. Am I making sense to you?",
+      "similarity": 0.9622,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Each and every time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This lobster is the size of my thumbnail here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cause im tired of fiddling around. You've been messing me around everytime I come to your stupid place. Each and every time. This lobster’s the size of my thumb nail, here. Am I making sense to you?",
+      "similarity": 0.9622,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This lobster is the size of my thumbnail here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Am I making sense to you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Cause im tired of fiddling around. You've been messing me around everytime I come to your stupid place. Each and every time. This lobster’s the size of my thumb nail, here. Am I making sense to you?",
+      "similarity": 0.9622,
+      "match_type": "similar",
+      "json_group": [
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Am I making sense to you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Yeah, I hope you choke on it.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Yeah, I hope you choke on it, you hear me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        72,
+        73
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I hope you choke on it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You hear me?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Yeah, I hope you choke on it, you hear me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        72,
+        73
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You hear me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you give me a gift card?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "why don’t you give me a gift card?",
+      "similarity": 0.9697,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "why don’t you give me a gift card?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Why don't you go fuck off?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Why don’t you fuck off?",
+      "similarity": 0.8936,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you fuck off?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just give me a gift certificate.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just give me a gift certificate, I'll try it one more time, and that’s THE last time I'm-",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77,
+        78,
+        79
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just give me a gift certificate.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll try it one more time.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just give me a gift certificate, I'll try it one more time, and that’s THE last time I'm-",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77,
+        78,
+        79
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll try it one more time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And that's the...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just give me a gift certificate, I'll try it one more time, and that’s THE last time I'm-",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77,
+        78,
+        79
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And that's the...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The last time.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Just give me a gift certificate, I'll try it one more time, and that’s THE last time I'm-",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77,
+        78,
+        79
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The last time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm giving you fucking shit.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I'm not giving you fucking shit, I don’t know who you are, why don’t you leave me the fuck alone?",
+      "similarity": 0.9399,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm giving you fucking shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I don't know who you are.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I'm not giving you fucking shit, I don’t know who you are, why don’t you leave me the fuck alone?",
+      "similarity": 0.9399,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know who you are.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Why don't you leave me to fuck alone?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I'm not giving you fucking shit, I don’t know who you are, why don’t you leave me the fuck alone?",
+      "similarity": 0.9399,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82
+      ],
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you leave me to fuck alone?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, I paid cash on the barrel, Mr. Sister.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, I paid cash on the barrel, mister sister.",
+      "similarity": 0.9512,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, I paid cash on the barrel, mister sister.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Good to you. Yeah, cool.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Good for you! Yeah, cool. N-nice.",
+      "similarity": 0.8667,
+      "match_type": "similar",
+      "json_group": [
+        84,
+        85
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good to you. Yeah, cool.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "That nice.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Good for you! Yeah, cool. N-nice.",
+      "similarity": 0.8667,
+      "match_type": "similar",
+      "json_group": [
+        84,
+        85
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "That nice.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I've seen lobster rolls bigger than this lobster you sold me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I've seen lobster rolls bigger than this lobster you sold me.im just tired of it. It’s a rip off. You're ripping me off, its highway robbery is what I'm talking about.",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've seen lobster rolls bigger than this lobster you sold me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm just tired of it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I've seen lobster rolls bigger than this lobster you sold me.im just tired of it. It’s a rip off. You're ripping me off, its highway robbery is what I'm talking about.",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm just tired of it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's a rip-off.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I've seen lobster rolls bigger than this lobster you sold me.im just tired of it. It’s a rip off. You're ripping me off, its highway robbery is what I'm talking about.",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's a rip-off.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're ripping me off.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I've seen lobster rolls bigger than this lobster you sold me.im just tired of it. It’s a rip off. You're ripping me off, its highway robbery is what I'm talking about.",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're ripping me off.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's highway robbery, is what I'm talking about.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I've seen lobster rolls bigger than this lobster you sold me.im just tired of it. It’s a rip off. You're ripping me off, its highway robbery is what I'm talking about.",
+      "similarity": 0.9878,
+      "match_type": "similar",
+      "json_group": [
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's highway robbery, is what I'm talking about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's fucking horrible, isn't it?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "That’s fuckin horrible isnt it?",
+      "similarity": 0.8667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "That’s fuckin horrible isnt it?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Guy, I'm not.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Guy, I'm gonna whoop ye! You understand me? Next time I see you-or you give me a gift caaaird, it’s your call.",
+      "similarity": 0.9108,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Guy, I'm not.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "going to whoopee.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Guy, I'm gonna whoop ye! You understand me? Next time I see you-or you give me a gift caaaird, it’s your call.",
+      "similarity": 0.9108,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "going to whoopee.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You understand me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Guy, I'm gonna whoop ye! You understand me? Next time I see you-or you give me a gift caaaird, it’s your call.",
+      "similarity": 0.9108,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You understand me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Next time I see you, or you give me a gift card.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Guy, I'm gonna whoop ye! You understand me? Next time I see you-or you give me a gift caaaird, it’s your call.",
+      "similarity": 0.9108,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Next time I see you, or you give me a gift card.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's your call.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Guy, I'm gonna whoop ye! You understand me? Next time I see you-or you give me a gift caaaird, it’s your call.",
+      "similarity": 0.9108,
+      "match_type": "similar",
+      "json_group": [
+        92,
+        93,
+        94,
+        95,
+        96
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's your call.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, well, you can go fuck yourself.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Yeah, well you can go fuck yourself",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, well, you can go fuck yourself.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you be professional?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why don’t you be professional?",
+      "similarity": 0.9655,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you be professional?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Why don’t you kiss my ass",
+      "similarity": 0.7727,
+      "match_type": "similar",
+      "json_group": [
+        99,
+        100
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "You kiss my ass.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Why don’t you kiss my ass",
+      "similarity": 0.7727,
+      "match_type": "similar",
+      "json_group": [
+        99,
+        100
+      ],
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You kiss my ass.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to meet...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm going to meet...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen, listen to me carefully.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen, listen to me carefully.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, listen to me carefully.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Why don't you go fuck yourself and leave me alone?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Why don’t you go fuck yourself and leave me alone?",
+      "similarity": 0.9796,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you go fuck yourself and leave me alone?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Meet me at 11 o'clock tonight.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Meet me at 11 o’clock tonight, and we’ll work it out. Ok?",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Meet me at 11 o'clock tonight.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And we'll work it out.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Meet me at 11 o’clock tonight, and we’ll work it out. Ok?",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": [
+        104,
+        105
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And we'll work it out.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Listen.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Listen.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Listen, go fuck off.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Listen, go fuck off",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        69
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, go fuck off.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And I either.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I either want a real lobster or a gift caaaaaaird, ok?",
+      "similarity": 0.9074,
+      "match_type": "similar",
+      "json_group": [
+        109,
+        110,
+        111
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I either.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "want a real lobster or a gift care.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I either want a real lobster or a gift caaaaaaird, ok?",
+      "similarity": 0.9074,
+      "match_type": "similar",
+      "json_group": [
+        109,
+        110,
+        111
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "want a real lobster or a gift care.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I either want a real lobster or a gift caaaaaaird, ok?",
+      "similarity": 0.9074,
+      "match_type": "similar",
+      "json_group": [
+        109,
+        110,
+        111
+      ],
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You ain't getting shit.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You ain’t getting shit!",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You ain’t getting shit!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Because I don't know you.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Because I don’t know you!",
+      "similarity": 0.9583,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I don’t know you!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm a customer. I'm a paying customer over here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Im a customer! I'm a paying customer over here.",
+      "similarity": 0.989,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Im a customer! I'm a paying customer over here.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "You're a fucking jackass. But you are.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You're a fucking jackass is what you are, and I know who you are. You're either Jerome or the hellfrog and listen, if you wanna whoop me you come whoop me you little crack, I'll be waiting for you, see you later have a good night.",
+      "similarity": 0.8874,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're a fucking jackass. But you are.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "And I know who you are. You're either Jerome or you're the hell frog.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You're a fucking jackass is what you are, and I know who you are. You're either Jerome or the hellfrog and listen, if you wanna whoop me you come whoop me you little crack, I'll be waiting for you, see you later have a good night.",
+      "similarity": 0.8874,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I know who you are. You're either Jerome or you're the hell frog.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Listen, if you want to wop me, you come wop me, you little practice.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You're a fucking jackass is what you are, and I know who you are. You're either Jerome or the hellfrog and listen, if you wanna whoop me you come whoop me you little crack, I'll be waiting for you, see you later have a good night.",
+      "similarity": 0.8874,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, if you want to wop me, you come wop me, you little practice.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'll be waiting to see. I'll see you later. Have a good night.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You're a fucking jackass is what you are, and I know who you are. You're either Jerome or the hellfrog and listen, if you wanna whoop me you come whoop me you little crack, I'll be waiting for you, see you later have a good night.",
+      "similarity": 0.8874,
+      "match_type": "similar",
+      "json_group": [
+        116,
+        117,
+        118,
+        119
+      ],
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll be waiting to see. I'll see you later. Have a good night.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll push you into traffic. I'm done fussing with you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ill push you into traffic. Im done fussing with youuuu. I'm gone whoop ye-e-e-e-e-e!",
+      "similarity": 0.8143,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll push you into traffic. I'm done fussing with you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm on.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ill push you into traffic. Im done fussing with youuuu. I'm gone whoop ye-e-e-e-e-e!",
+      "similarity": 0.8143,
+      "match_type": "similar",
+      "json_group": [
+        120,
+        121
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm on.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Chris.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey Chris.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Chris.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 125,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hey.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hey.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 126,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, it's DR, the doctor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "hey it’s DR, the doctor, Donnie. You never showed up. You never showed up yesterday, at Yarmoth.",
+      "similarity": 0.9834,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, it's DR, the doctor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 127,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Donnie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "hey it’s DR, the doctor, Donnie. You never showed up. You never showed up yesterday, at Yarmoth.",
+      "similarity": 0.9834,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Donnie.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 128,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You never showed up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "hey it’s DR, the doctor, Donnie. You never showed up. You never showed up yesterday, at Yarmoth.",
+      "similarity": 0.9834,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You never showed up.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 129,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You never showed up yesterday.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "hey it’s DR, the doctor, Donnie. You never showed up. You never showed up yesterday, at Yarmoth.",
+      "similarity": 0.9834,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You never showed up yesterday.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 130,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "At Yarmouth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "hey it’s DR, the doctor, Donnie. You never showed up. You never showed up yesterday, at Yarmoth.",
+      "similarity": 0.9834,
+      "match_type": "similar",
+      "json_group": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "wiki_indices": [
+        82
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "At Yarmouth.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 131,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "You didn't tell me to meet you in Yarmouth, you cock, sucker you.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You didn’t tell me, you weren’t in Yarmoth you cocksucker, you.",
+      "similarity": 0.8361,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You didn’t tell me, you weren’t in Yarmoth you cocksucker, you.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 132,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, I did it at 11 o'clock.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes I did! At 11 o’clock! [exhales]",
+      "similarity": 0.7719,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes I did! At 11 o’clock! [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 133,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Fuck off, you goddamn fucking freak you.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Fuck off you goddamn fucking freak, you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fuck off, you goddamn fucking freak you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 134,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, listen, there was a guy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well listen, there was a guy with me, when you sold me the lobster, alright? And he saw what happened-",
+      "similarity": 0.9898,
+      "match_type": "similar",
+      "json_group": [
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, listen, there was a guy.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 135,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "with me when you sold me the lobster, all right?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well listen, there was a guy with me, when you sold me the lobster, alright? And he saw what happened-",
+      "similarity": 0.9898,
+      "match_type": "similar",
+      "json_group": [
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "with me when you sold me the lobster, all right?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 136,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And he saw what happened.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well listen, there was a guy with me, when you sold me the lobster, alright? And he saw what happened-",
+      "similarity": 0.9898,
+      "match_type": "similar",
+      "json_group": [
+        134,
+        135,
+        136
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And he saw what happened.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 137,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I don't remember that's telling you that's lobster.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Is that right? Yeah, well I don’t remember selling you that lobster. Who is this, anyway? Is this the hellfrog or is this the peacock!",
+      "similarity": 0.8347,
+      "match_type": "similar",
+      "json_group": [
+        137,
+        138
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't remember that's telling you that's lobster.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 138,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Who is this, anyway? Is this the howl frog or is this the peacock?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Is that right? Yeah, well I don’t remember selling you that lobster. Who is this, anyway? Is this the hellfrog or is this the peacock!",
+      "similarity": 0.8347,
+      "match_type": "similar",
+      "json_group": [
+        137,
+        138
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this, anyway? Is this the howl frog or is this the peacock?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 139,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm Johnny.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm Donnie.",
+      "similarity": 0.7,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        88
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Donnie.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 140,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "You know either one of those fucking perverts.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "You're either one of those fucking perverts.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're either one of those fucking perverts.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 141,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "This is Donnie, all right?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Donnie, alright?",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        90
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Donnie, alright?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 142,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "This is Donnie who.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "This is Donnie who? Donnie Hellfrog from East Pumpnicko(?)?",
+      "similarity": 0.8704,
+      "match_type": "similar",
+      "json_group": [
+        142,
+        143
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Donnie who.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 143,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Donnie Howlfrog from East Budney Co?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "This is Donnie who? Donnie Hellfrog from East Pumpnicko(?)?",
+      "similarity": 0.8704,
+      "match_type": "similar",
+      "json_group": [
+        142,
+        143
+      ],
+      "wiki_indices": [
+        91
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Donnie Howlfrog from East Budney Co?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 144,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Donnie Roleon, friend.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Donnie Rolland, friend!",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        92
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Donnie Rolland, friend!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 145,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Donnie Roll on, friend.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "‘Donnie Rolland friend,’ you sound like a peacock to me from fucking ai-a-e [stuttering] horseback",
+      "similarity": 0.7654,
+      "match_type": "similar",
+      "json_group": [
+        145,
+        146
+      ],
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Donnie Roll on, friend.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 146,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Sounds like a peacock to me from fucking Almond.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "‘Donnie Rolland friend,’ you sound like a peacock to me from fucking ai-a-e [stuttering] horseback",
+      "similarity": 0.7654,
+      "match_type": "similar",
+      "json_group": [
+        145,
+        146
+      ],
+      "wiki_indices": [
+        93
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sounds like a peacock to me from fucking Almond.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 147,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "No new prospect.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No new prospect.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 148,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "My friend.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My friend-",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        94
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My friend.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 149,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I'm not at the forest of hell from me.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "My dad hunts forests of hellfrogs from east Pumpnicko(?), why don’t you go fuck off",
+      "similarity": 0.6914,
+      "match_type": "similar",
+      "json_group": [
+        149,
+        150
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm not at the forest of hell from me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 150,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "He's probably going, why don't you go fuck off?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "My dad hunts forests of hellfrogs from east Pumpnicko(?), why don’t you go fuck off",
+      "similarity": 0.6914,
+      "match_type": "similar",
+      "json_group": [
+        149,
+        150
+      ],
+      "wiki_indices": [
+        95
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's probably going, why don't you go fuck off?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 151,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Listen, if you don't fuck off,",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Listen. If you don’t fuck off, if I can ever find out who you are, I will pluck your teeth out one by one.",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "json_group": [
+        151,
+        152,
+        153
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, if you don't fuck off,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 152,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "if I can ever find you who you are,",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Listen. If you don’t fuck off, if I can ever find out who you are, I will pluck your teeth out one by one.",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "json_group": [
+        151,
+        152,
+        153
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "if I can ever find you who you are,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 153,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I will pluck your teeth out one by one.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Listen. If you don’t fuck off, if I can ever find out who you are, I will pluck your teeth out one by one.",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "json_group": [
+        151,
+        152,
+        153
+      ],
+      "wiki_indices": [
+        98
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I will pluck your teeth out one by one.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 154,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Chris, my friend Joe is here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Chris, my friend Joe was here, he can back up everything I'm saying. He was there the same time as me. Joe, pick up the phone and talk-Chris is on the phone. Hey, he’s getting on the phone right now, you tell him you talked to me, he saw the lobster and everything.",
+      "similarity": 0.8465,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Chris, my friend Joe is here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 155,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He can back up everything I'm saying.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Chris, my friend Joe was here, he can back up everything I'm saying. He was there the same time as me. Joe, pick up the phone and talk-Chris is on the phone. Hey, he’s getting on the phone right now, you tell him you talked to me, he saw the lobster and everything.",
+      "similarity": 0.8465,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He can back up everything I'm saying.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 156,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He was there the same time as me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Chris, my friend Joe was here, he can back up everything I'm saying. He was there the same time as me. Joe, pick up the phone and talk-Chris is on the phone. Hey, he’s getting on the phone right now, you tell him you talked to me, he saw the lobster and everything.",
+      "similarity": 0.8465,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He was there the same time as me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 157,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Joe, pick up the phone and talk Chris is on the phone.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Chris, my friend Joe was here, he can back up everything I'm saying. He was there the same time as me. Joe, pick up the phone and talk-Chris is on the phone. Hey, he’s getting on the phone right now, you tell him you talked to me, he saw the lobster and everything.",
+      "similarity": 0.8465,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Joe, pick up the phone and talk Chris is on the phone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 158,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, he.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Chris, my friend Joe was here, he can back up everything I'm saying. He was there the same time as me. Joe, pick up the phone and talk-Chris is on the phone. Hey, he’s getting on the phone right now, you tell him you talked to me, he saw the lobster and everything.",
+      "similarity": 0.8465,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, he.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 159,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He's getting on the phone right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, Chris, my friend Joe was here, he can back up everything I'm saying. He was there the same time as me. Joe, pick up the phone and talk-Chris is on the phone. Hey, he’s getting on the phone right now, you tell him you talked to me, he saw the lobster and everything.",
+      "similarity": 0.8465,
+      "match_type": "similar",
+      "json_group": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ],
+      "wiki_indices": [
+        99
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's getting on the phone right now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 160,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You tell him you talk to me.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You tell him you talk to me.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 161,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You saw the lobster and everything.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You saw the lobster and everything.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 162,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Joe, blow?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Chris",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Joe, blow?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 163,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I had to eat borsh and breadcrumbs for dinner after you sold me that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had to eat borscht and breadcrumbs for dinner after you sold me that-whatever that was there. Joe, pick up the phone!",
+      "similarity": 0.9617,
+      "match_type": "similar",
+      "json_group": [
+        163,
+        164,
+        165,
+        166
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I had to eat borsh and breadcrumbs for dinner after you sold me that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 164,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Whatever, though.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had to eat borscht and breadcrumbs for dinner after you sold me that-whatever that was there. Joe, pick up the phone!",
+      "similarity": 0.9617,
+      "match_type": "similar",
+      "json_group": [
+        163,
+        164,
+        165,
+        166
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Whatever, though.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 165,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It was there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had to eat borscht and breadcrumbs for dinner after you sold me that-whatever that was there. Joe, pick up the phone!",
+      "similarity": 0.9617,
+      "match_type": "similar",
+      "json_group": [
+        163,
+        164,
+        165,
+        166
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It was there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 166,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Joe, pick up the phone.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had to eat borscht and breadcrumbs for dinner after you sold me that-whatever that was there. Joe, pick up the phone!",
+      "similarity": 0.9617,
+      "match_type": "similar",
+      "json_group": [
+        163,
+        164,
+        165,
+        166
+      ],
+      "wiki_indices": [
+        101
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Joe, pick up the phone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 167,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Hello? Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        167,
+        168
+      ],
+      "wiki_indices": [
+        103
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 168,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Hello? Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        167,
+        168
+      ],
+      "wiki_indices": [
+        103
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 169,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "YEAH! HELLO!?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        169,
+        170
+      ],
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 170,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "YEAH! HELLO!?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        169,
+        170
+      ],
+      "wiki_indices": [
+        104
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 171,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Criminal.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Criminal. You piece of shit. And You're just a drop dead motherfucking chicken shit piece of shit. You mother fucker piece of shit!",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Criminal.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 172,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You piece of shit.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Criminal. You piece of shit. And You're just a drop dead motherfucking chicken shit piece of shit. You mother fucker piece of shit!",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "You piece of shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 173,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I need you to drop that motherfucker chicken shit.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Criminal. You piece of shit. And You're just a drop dead motherfucking chicken shit piece of shit. You mother fucker piece of shit!",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need you to drop that motherfucker chicken shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 174,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're a piece of shit.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Criminal. You piece of shit. And You're just a drop dead motherfucking chicken shit piece of shit. You mother fucker piece of shit!",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're a piece of shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 175,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You motherfucker.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Criminal. You piece of shit. And You're just a drop dead motherfucking chicken shit piece of shit. You mother fucker piece of shit!",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "You motherfucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 176,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "piece of shit.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Criminal. You piece of shit. And You're just a drop dead motherfucking chicken shit piece of shit. You mother fucker piece of shit!",
+      "similarity": 0.8638,
+      "match_type": "similar",
+      "json_group": [
+        171,
+        172,
+        173,
+        174,
+        175,
+        176
+      ],
+      "wiki_indices": [
+        105
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "piece of shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 177,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hello.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        108
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 178,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        109
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 179,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        110
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 180,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Hello.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Hello, I can hear you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        180,
+        181
+      ],
+      "wiki_indices": [
+        111
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 181,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I can hear you.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Hello, I can hear you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        180,
+        181
+      ],
+      "wiki_indices": [
+        111
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can hear you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 182,
+      "json_speaker": "None",
+      "json_text": "I can hear you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "I can hear you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 183,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I can fucking hear you too.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I can fucking hear you too, what do you want?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        183,
+        184
+      ],
+      "wiki_indices": [
+        112
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can fucking hear you too.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 184,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "What do you want?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "I can fucking hear you too, what do you want?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        183,
+        184
+      ],
+      "wiki_indices": [
+        112
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you want?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 185,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "You were wanting to get lobsters?",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "you were wanting to get lobster? I’m confused as to what’s going on hear.",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        185,
+        186
+      ],
+      "wiki_indices": [
+        113
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You were wanting to get lobsters?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 186,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I'm confused of what's going on here.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "you were wanting to get lobster? I’m confused as to what’s going on hear.",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": [
+        185,
+        186
+      ],
+      "wiki_indices": [
+        113
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm confused of what's going on here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 187,
+      "json_speaker": "None",
+      "json_text": "Hello.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        116
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 188,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Hello. Hello.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        188,
+        189
+      ],
+      "wiki_indices": [
+        117
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 189,
+      "json_speaker": "None",
+      "json_text": "Hello.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Hello. Hello.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        188,
+        189
+      ],
+      "wiki_indices": [
+        117
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 190,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Fuck off.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Fuck off.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        118
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fuck off.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 191,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who is it?",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Who is this.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        119
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who is this.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 192,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Who the fuck are you?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Who the fuck are you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        120
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who the fuck are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 193,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        121
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 194,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Who the fuck are you?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Who the fuck are you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        122
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who the fuck are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 195,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Drop that, son of a bitch.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Drop dead son of a bitch. Drop dead you motherfucker! Drop dead! You piece of shit! Shit! Shit! Shit.",
+      "similarity": 0.9043,
+      "match_type": "similar",
+      "json_group": [
+        195,
+        196,
+        197,
+        198
+      ],
+      "wiki_indices": [
+        123
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Drop that, son of a bitch.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 196,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Drop that, you motherfucker.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Drop dead son of a bitch. Drop dead you motherfucker! Drop dead! You piece of shit! Shit! Shit! Shit.",
+      "similarity": 0.9043,
+      "match_type": "similar",
+      "json_group": [
+        195,
+        196,
+        197,
+        198
+      ],
+      "wiki_indices": [
+        123
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Drop that, you motherfucker.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 197,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Drop that, you piece of shit.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Drop dead son of a bitch. Drop dead you motherfucker! Drop dead! You piece of shit! Shit! Shit! Shit.",
+      "similarity": 0.9043,
+      "match_type": "similar",
+      "json_group": [
+        195,
+        196,
+        197,
+        198
+      ],
+      "wiki_indices": [
+        123
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Drop that, you piece of shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 198,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shit, shit, shit.",
+      "wiki_speaker": "Joe",
+      "wiki_text": "Drop dead son of a bitch. Drop dead you motherfucker! Drop dead! You piece of shit! Shit! Shit! Shit.",
+      "similarity": 0.9043,
+      "match_type": "similar",
+      "json_group": [
+        195,
+        196,
+        197,
+        198
+      ],
+      "wiki_indices": [
+        123
+      ],
+      "proposed_speaker": "Joe",
+      "speaker_action": "matched_line",
+      "proposed_text": "Shit, shit, shit.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 199,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Fuck off, you freak.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Fuck off you freak.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        124
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fuck off, you freak.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 200,
+      "json_speaker": "None",
+      "json_text": "Hello.",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Hello.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        127
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 201,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello, yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Hello, yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 202,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "The only lobster variation of an entree that we have is a lobster roll.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "The only lobster variation of an entree that we have is a lobster roll.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 203,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's cold.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "It's cold.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 204,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's cold.",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Hello yes, uh, the only good lobster, variation of an entrée that we have is a lobster roll; it’s cold and mayonnaise based on a hot roll. We don’t have any lobster-live lobster or whole-body lobsters, anything of that nature. I can suggest that maybe you can call Scott’s Seafood and they’ll be able to accommodate you on that matter.",
+      "similarity": 0.7831,
+      "match_type": "similar",
+      "json_group": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's cold.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 205,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "on a hot roll.",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Hello yes, uh, the only good lobster, variation of an entrée that we have is a lobster roll; it’s cold and mayonnaise based on a hot roll. We don’t have any lobster-live lobster or whole-body lobsters, anything of that nature. I can suggest that maybe you can call Scott’s Seafood and they’ll be able to accommodate you on that matter.",
+      "similarity": 0.7831,
+      "match_type": "similar",
+      "json_group": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "on a hot roll.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 206,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We don't have any lobster, live lobster,",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Hello yes, uh, the only good lobster, variation of an entrée that we have is a lobster roll; it’s cold and mayonnaise based on a hot roll. We don’t have any lobster-live lobster or whole-body lobsters, anything of that nature. I can suggest that maybe you can call Scott’s Seafood and they’ll be able to accommodate you on that matter.",
+      "similarity": 0.7831,
+      "match_type": "similar",
+      "json_group": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have any lobster, live lobster,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 207,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "or whole body lobsters, anything of that nature.",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Hello yes, uh, the only good lobster, variation of an entrée that we have is a lobster roll; it’s cold and mayonnaise based on a hot roll. We don’t have any lobster-live lobster or whole-body lobsters, anything of that nature. I can suggest that maybe you can call Scott’s Seafood and they’ll be able to accommodate you on that matter.",
+      "similarity": 0.7831,
+      "match_type": "similar",
+      "json_group": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "or whole body lobsters, anything of that nature.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 208,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I can suggest that maybe you can call Scott's seafood",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Hello yes, uh, the only good lobster, variation of an entrée that we have is a lobster roll; it’s cold and mayonnaise based on a hot roll. We don’t have any lobster-live lobster or whole-body lobsters, anything of that nature. I can suggest that maybe you can call Scott’s Seafood and they’ll be able to accommodate you on that matter.",
+      "similarity": 0.7831,
+      "match_type": "similar",
+      "json_group": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can suggest that maybe you can call Scott's seafood",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 209,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and they'll be able to accommodate you on that matter.",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Hello yes, uh, the only good lobster, variation of an entrée that we have is a lobster roll; it’s cold and mayonnaise based on a hot roll. We don’t have any lobster-live lobster or whole-body lobsters, anything of that nature. I can suggest that maybe you can call Scott’s Seafood and they’ll be able to accommodate you on that matter.",
+      "similarity": 0.7831,
+      "match_type": "similar",
+      "json_group": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "wiki_indices": [
+        128
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "and they'll be able to accommodate you on that matter.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 210,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Why don't you all go fuck off?",
+      "wiki_speaker": "Chris",
+      "wiki_text": "Why don’t you all fuck off!",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        129
+      ],
+      "proposed_speaker": "Chris",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you all fuck off!",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 210,
+    "total_wiki_lines": 105,
+    "matched_wiki_lines": 100,
+    "unmatched_wiki_lines": 5,
+    "matched": 192,
+    "speakers_to_map": 4,
+    "text_auto_correct": 19,
+    "text_review": 8,
+    "text_group_review": 122,
+    "unmatched_json": 18
+  }
+}

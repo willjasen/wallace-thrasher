@@ -1,0 +1,452 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:25.258078+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Table For 2",
+  "track_slug": "table-for-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/table-for-2.json",
+  "json_sha256": "ba0dd877c36cc4f6982f15deb90bc1d28b2672bc2940e9e0ee0eecbce68de2d5",
+  "wiki_title": "Table For 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Table_For_2",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.6944,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 4.5439,
+          "observations": 5
+        },
+        {
+          "name": "Man",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 7.0808,
+          "observations": 8
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You want a table for two at 7.30, is that right?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You want a table for two at 7:30, is that right?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You want a table for two at 7.30, is that right?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, and I'm prepared to spend $6,700.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Yes, and I am prepared to spend six to seven hundred dollars.",
+      "similarity": 0.5825,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[accented] Yes, and I am prepared to spend six to seven hundred dollars.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's your name?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Great, what's your name?",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Great, what's your name?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Philippe.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Philippe.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And the telephone number?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "And your telephone number?",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And your telephone number?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm at 322-772727.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I am at 3-2-2-7-7-2-7.",
+      "similarity": 0.5957,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[accented] I am at 3-2-2-7-7-2-7.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And you want a bottle of champagne on the table?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "And you want a... bottle of, uh, champagne on the table?",
+      "similarity": 0.9691,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you want a... bottle of, uh, champagne on the table?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, and I will need eel prepared.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Yes, and I will need, uhh... eel prepared. I would like to read mystery novels while eating... if those can be brought to me.",
+      "similarity": 0.9447,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, and I will need eel prepared.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I would like to read mystery novels while eating, if those can be brought to me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Yes, and I will need, uhh... eel prepared. I would like to read mystery novels while eating... if those can be brought to me.",
+      "similarity": 0.9447,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I would like to read mystery novels while eating, if those can be brought to me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is, do you want me to go over some of the items on our menu because we don't have anything you've mentioned so far?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "This is... do you want me to go over some of the items on our menu? Because we don't have anything you've mentioned so far.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is, do you want me to go over some of the items on our menu because we don't have anything you've mentioned so far?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need...",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I need...",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Just let me know what you need. I've got a table for...",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Just let me know what you need. I've got a table for two at 7:30...",
+      "similarity": 0.8947,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just let me know what you need. I've got a table for two at 7:30...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need the finest grapes, hand-fed to me and my wife.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I need the finest grapes hand-fed to me, and my wife.",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I need the finest grapes hand-fed to me, and my wife.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is a joke, right?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[laughs] This is a joke, right?",
+      "similarity": 0.8511,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] This is a joke, right?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Ma'am, I thought a restaurant of your caliber would be...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[sighs] [accented] Ma'am, I thought, uh... a restaurant of your caliber would be, uhh...",
+      "similarity": 0.8281,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[sighs] [accented] Ma'am, I thought, uh... a restaurant of your caliber would be, uhh...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We don't hand-feed you grapes.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "We don't... we don't have... Fuji grapes.",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't... we don't have... Fuji grapes.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Flame grapes will do.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Flame grapes will do. They are to be placed in my mouth.",
+      "similarity": 0.8522,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Flame grapes will do.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Flame grapes will do. They are to be placed in my mouth.",
+      "similarity": 0.8522,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "to be placed in my mouth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] Flame grapes will do. They are to be placed in my mouth.",
+      "similarity": 0.8522,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "to be placed in my mouth.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Did you tape that?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Did you tape that?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Did you tape that?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, my God.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Oh, my god!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, my God.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 22,
+    "total_wiki_lines": 19,
+    "matched_wiki_lines": 17,
+    "unmatched_wiki_lines": 2,
+    "matched": 20,
+    "speakers_to_map": 2,
+    "text_auto_correct": 5,
+    "text_review": 5,
+    "text_group_review": 5,
+    "unmatched_json": 2
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:22.016856+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Grover Loaf",
+  "track_slug": "grover-loaf",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/grover-loaf.json",
+  "json_sha256": "0f9fa4fec46debab82cd93dc6f73aed3d166b6d98a248fdf92878be70b5123af",
+  "wiki_title": "Grover Loaf",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Grover_Loaf",
+  "speaker_mapping": {
+    "SPEAKER_00": "Troy",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Troy",
+      "confidence": 0.6704,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Troy",
+          "score": 3.9,
+          "observations": 4
+        },
+        {
+          "name": "LPC",
+          "score": 1.9173,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.9322,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Thank you for calling Domino's Pizza. This is Troy. Would you like to try our Colorado Special?",
+      "wiki_speaker": "Troy",
+      "wiki_text": "Thank you for calling Domino's Pizza, this is Troy. Would you like to try our... Colorado Special?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Troy",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thank you for calling Domino's Pizza. This is Troy. Would you like to try our Colorado Special?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Toy, how are you doing tonight, sir?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Troy, how are you doing tonight, sir?",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Troy, how are you doing tonight, sir?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm alive.",
+      "wiki_speaker": "Troy",
+      "wiki_text": "I'm alive.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Troy",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm alive.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sensational to hear from you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Sensational to hear from you. Um... I'd like to order a grover loaf.",
+      "similarity": 0.9322,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sensational to hear from you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Um, I'd order a Grover Loaf.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Sensational to hear from you. Um... I'd like to order a grover loaf.",
+      "similarity": 0.9322,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, I'd order a Grover Loaf.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A Grover Loaf?",
+      "wiki_speaker": "Troy",
+      "wiki_text": "A grover loaf?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Troy",
+      "speaker_action": "matched_line",
+      "proposed_text": "A Grover Loaf?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Right.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No kidding.",
+      "wiki_speaker": "Troy",
+      "wiki_text": "No kiddin'.",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Troy",
+      "speaker_action": "matched_line",
+      "proposed_text": "No kiddin'.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 8,
+    "total_wiki_lines": 7,
+    "matched_wiki_lines": 7,
+    "unmatched_wiki_lines": 0,
+    "matched": 8,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 0,
+    "text_group_review": 2,
+    "unmatched_json": 0
+  }
+}

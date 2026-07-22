@@ -1,0 +1,759 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:41:01.605704+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Lamb",
+  "track_slug": "lamb",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/lamb.json",
+  "json_sha256": "995d6da8786e420fa41dc2d0dde042bef27db8b39b7485bf788141695e38ac43",
+  "wiki_title": "Lamb",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Lamb",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "LPC",
+    "SPEAKER_02": "Woman"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 3.0,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.8272,
+      "observations": 10,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 9.5754,
+          "observations": 10
+        },
+        {
+          "name": "Woman",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Woman",
+      "confidence": 0.8369,
+      "observations": 11,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 10.2599,
+          "observations": 11
+        },
+        {
+          "name": "LPC",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What do you mean?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What do you mean?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you mean?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I've seen what you're doing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, what... I was seeing what you were doing.",
+      "similarity": 0.7568,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, what... I was seeing what you were doing.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Why?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because it's important to me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Because it's important to me.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because it's important to me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "To who?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "To who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "To who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "To me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "To me... and... uh...",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "To me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "To me... and... uh...",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I was curious.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "...I was curious.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was curious.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't know why.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know why.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know why.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the matter?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's the matter?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the matter?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I can feed.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I can feed.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I need to bring over lamb.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need to bring over a lamb.",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need to bring over a lamb.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What number do you want?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What number do you want?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What number do you want?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This one?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This one.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This one?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, you don't.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "No, you don't.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you don't.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes, ma'am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, ma'am. I have the lamb, at this point.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, ma'am.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have the lamb at this point.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, ma'am. I have the lamb, at this point.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have the lamb at this point.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Is that feasible?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Is that feasible?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that feasible?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Not?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Not?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Nope.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Nope. Sure ain't.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nope.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Sure ain't.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Nope. Sure ain't.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sure ain't.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why not?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why not?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, it could have been.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Why should it be?",
+      "similarity": 0.5128,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why should it be?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Lamb.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lamb. You can't deny lamb.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lamb.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can't deny lamb.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lamb. You can't deny lamb.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        25,
+        26
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can't deny lamb.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, I don't give you the cops phone numbers.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Nope. I can give you the cops' phone number.",
+      "similarity": 0.881,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nope. I can give you the cops' phone number.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Do you want to talk to the cops?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Do you wanna talk to the cops?",
+      "similarity": 0.9,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you wanna talk to the cops?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you talking about?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are you talking about?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you talking about?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "My husband's home now.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, my husband's home now. He [unintelligible] the Jefferson County cop.",
+      "similarity": 0.7097,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My husband's home now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He's down to a Jackson County cop.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, my husband's home now. He [unintelligible] the Jefferson County cop.",
+      "similarity": 0.7097,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's down to a Jackson County cop.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He talked to him.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You can talk to him, he came home to eat.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He talked to him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He came home for eight.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You can talk to him, he came home to eat.",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "He came home for eight.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you talking about?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are you talking about?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you talking about?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You know what I mean.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You know what I mean!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know what I mean.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 38,
+    "total_wiki_lines": 30,
+    "matched_wiki_lines": 29,
+    "unmatched_wiki_lines": 1,
+    "matched": 35,
+    "speakers_to_map": 3,
+    "text_auto_correct": 3,
+    "text_review": 2,
+    "text_group_review": 6,
+    "unmatched_json": 3
+  }
+}

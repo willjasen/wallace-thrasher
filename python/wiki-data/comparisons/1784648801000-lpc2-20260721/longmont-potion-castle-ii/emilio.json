@@ -1,0 +1,425 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:21.938616+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Emilio",
+  "track_slug": "emilio",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/emilio.json",
+  "json_sha256": "b13e913b8965043c8ccf5e536f127c9448d11f8e28999d7fa2cf49b612c7124c",
+  "wiki_title": "Emilio",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Emilio",
+  "speaker_mapping": {
+    "SPEAKER_02": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.5362,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.9589,
+          "observations": 1
+        },
+        {
+          "name": "Man",
+          "score": 0.8293,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.6005,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.8582,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 1.9014,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man",
+      "confidence": 0.7097,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 4.8883,
+          "observations": 5
+        },
+        {
+          "name": "LPC",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sure, can I help you?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Mmm... Sir, can I help you?",
+      "similarity": 0.8293,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mmm... Sir, can I help you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I'd like to process some wasps.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, uh, I'd like to process some wasps.",
+      "similarity": 0.9589,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, uh, I'd like to process some wasps.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, I don't even know what wasp are.",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, I don't even know what wasps are. You mean, like a bee?",
+      "similarity": 0.9908,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I don't even know what wasp are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You mean like a bee?",
+      "wiki_speaker": "Man",
+      "wiki_text": "No, I don't even know what wasps are. You mean, like a bee?",
+      "similarity": 0.9908,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You mean like a bee?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's meat.",
+      "wiki_speaker": "Man",
+      "wiki_text": "It's meat?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's meat.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, what do you mean by a process?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What do you mean by process? Grind up, or...?",
+      "similarity": 0.9398,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, what do you mean by a process?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Grind up or...",
+      "wiki_speaker": "Man",
+      "wiki_text": "What do you mean by process? Grind up, or...?",
+      "similarity": 0.9398,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Grind up or...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, just ground up.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Oh, just ground up?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, just ground up.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, what do you do with wasp meat?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Uh, yeah... what do you do with wasp meat?",
+      "similarity": 0.9577,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, yeah... what do you do with wasp meat?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, it's for eating.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, it's for eating.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, it's for eating.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, it's for eating.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Oh, it's for eating?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, it's for eating.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Ahhh.",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Ahhh.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Could you grind Emilio for me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you... could you grind Emilio for me? Would that be a problem?",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you grind Emilio for me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Would that be a problem?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you... could you grind Emilio for me? Would that be a problem?",
+      "similarity": 0.9138,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Would that be a problem?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't even know what Emilio is.",
+      "wiki_speaker": "Man",
+      "wiki_text": "I have... I don't even know what Emilio is.",
+      "similarity": 0.9014,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have... I don't even know what Emilio is.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "None",
+      "json_text": "I don't know.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "I don't know.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 19,
+    "total_wiki_lines": 17,
+    "matched_wiki_lines": 15,
+    "unmatched_wiki_lines": 2,
+    "matched": 18,
+    "speakers_to_map": 1,
+    "text_auto_correct": 4,
+    "text_review": 2,
+    "text_group_review": 4,
+    "unmatched_json": 1
+  }
+}

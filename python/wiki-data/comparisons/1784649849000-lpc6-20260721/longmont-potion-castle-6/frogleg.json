@@ -1,0 +1,1470 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:09:13.087449+00:00",
+  "snapshot": "1784649849000-lpc6-20260721",
+  "album": "Longmont Potion Castle 6",
+  "album_slug": "longmont-potion-castle-6",
+  "track": "Frogleg",
+  "track_slug": "frogleg",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-6/frogleg.json",
+  "json_sha256": "1d40acf97645603e611e2c96e92d06fb1b1f21796be46491cfe365a6088f6c65",
+  "wiki_title": "Frogleg",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Frogleg",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (1)",
+    "SPEAKER_03": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (1)",
+      "confidence": 0.7659,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 2.1176,
+          "observations": 3
+        },
+        {
+          "name": "Man (2)",
+          "score": 0.6471,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.5848,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "Man (1)",
+          "score": 1.4199,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man (1)",
+      "confidence": 0.5975,
+      "observations": 30,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 28.2327,
+          "observations": 30
+        },
+        {
+          "name": "LPC",
+          "score": 19.0155,
+          "observations": 20
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 3.5463,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Yes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yeah, I want food.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I want food.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I want food.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "For?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "For...?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "For?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "For my mouth?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "For my mouth?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "For pickup or for your, um?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "For pick-up? Or for your, um...",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "For pick-up? Or for your, um...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I pick-in-up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I pick it up.",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I pick it up.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'd like to get some frog leg.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'd like to get some frogleg.",
+      "similarity": 0.9825,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'd like to get some frogleg.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're not funny, okay?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You're not funny, okay?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're not funny, okay?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're not funny.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You're not funny. We don't serve frog legs.",
+      "similarity": 0.8941,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're not funny.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We don't sell frog legs, sir.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You're not funny. We don't serve frog legs.",
+      "similarity": 0.8941,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't sell frog legs, sir.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What... [unclear] ...frog?",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Or just frog?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What... [unclear] ...frog?",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Or just frog?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We don't have frogs.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "We don't have frog.",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have frog.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Boy, it doesn't matter.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What... what's the matter?",
+      "similarity": 0.4651,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "What... what's the matter?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We not.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "We not--",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We not.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I want a frog in my mouth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[accented] I want frog in my mouth.",
+      "similarity": 0.807,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "[accented] I want frog in my mouth.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "In my mouth?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "In my mouth?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Tom, you can go to his leg.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Um, you can go to the lake.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, you can go to the lake.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You can go jump in the leg, pal.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, you can go jump in the lake, pal!",
+      "similarity": 0.9062,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you can go jump in the lake, pal!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Well, we don't have frogs, sir.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well, we don't have frogs here.",
+      "similarity": 0.9123,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, we don't have frogs here.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I want to put frog legs into my mouth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I want to put frog legs into my mouth.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want to put frog legs into my mouth.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And then go somewhere else.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Then go... somewhere else.",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Then go... somewhere else.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why don't you come down?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why don't you come down?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you come down?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Come down, where?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Come down where?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Come down, where?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "To my how?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "To my hou'.",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "To my hou'.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We don't have frog legs.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "We don't have frog legs.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have frog legs.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Can you give me a frog?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Can you... gimme a frog?",
+      "similarity": 0.9048,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can you... gimme a frog?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Can you?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Can you? We don't have frog legs.",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We don't have frog leg.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Can you? We don't have frog legs.",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have frog leg.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How about a turtle?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How 'bout a turtle?",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How 'bout a turtle?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We're sorry, we don't have turtle.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "We're sorry, we don't have turtle.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're sorry, we don't have turtle.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why not?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why not?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why not?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What do you mean?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "What do you mean, \"why not?\"",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you mean, \"why not?\"",
+      "text_action": "review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I want to put turtle in my mouth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I want to put turtle in my mouth.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want to put turtle in my mouth.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We live in America, no more of, okay.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "We... live in America. No more, uhh... okay?",
+      "similarity": 0.9275,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We... live in America. No more, uhh... okay?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You don't live in...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You don't live in...?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You don't live in...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You go back to Vietnam?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "[in background] ...S.O.B.. You can go back to Vietnam...",
+      "similarity": 0.6471,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "[in background] ...S.O.B.. You can go back to Vietnam...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I want to eat a turtle?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I... want to eat a turtle.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want to eat a turtle?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You want to eat a turtle?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You want to eat a turtle?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You want to eat a turtle?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Maybe your backyard has to do you.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Maybe your backyard has turtles.",
+      "similarity": 0.8125,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Maybe your backyard has turtles.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You have to go to your backyard?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You have to go to your backyard?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You have to go to your backyard?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "To your backyard.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "To your backyard.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "To your backyard.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How much is it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How much is it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How much is it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "For your turtle?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "For your turtle?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "For your turtle?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Free in your backyard.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Free, in your backyard.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Free in your backyard.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I want the turtle.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I want the turtle.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want the turtle.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "In your backyard.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "In your backyard.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In your backyard.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And I want a frog leg",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I want a frog leg, and I wan'... scorpion.",
+      "similarity": 0.9639,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I want a frog leg",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and I want...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I want a frog leg, and I wan'... scorpion.",
+      "similarity": 0.9639,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I want...",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Scorpions.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I want a frog leg, and I wan'... scorpion.",
+      "similarity": 0.9639,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55,
+        56
+      ],
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Scorpions.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You want scorpions?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You want scorpion?",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You want scorpion?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, um, let me see.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay, um... let me see, scorpions... okay, this not funny, okay?",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, um, let me see.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Scorpions.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay, um... let me see, scorpions... okay, this not funny, okay?",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Scorpions.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, this is not funny, okay?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay, um... let me see, scorpions... okay, this not funny, okay?",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        59,
+        60,
+        61
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, this is not funny, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What...?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You keep harassing me, I call the police.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You keep harassing me, I call the police. I... you want me call the police right now? They can trace your phone right now... your number right now.",
+      "similarity": 0.8933,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You keep harassing me, I call the police.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You want me to call the police right now?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You keep harassing me, I call the police. I... you want me call the police right now? They can trace your phone right now... your number right now.",
+      "similarity": 0.8933,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You want me to call the police right now?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "They can trace your phone right now.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "You keep harassing me, I call the police. I... you want me call the police right now? They can trace your phone right now... your number right now.",
+      "similarity": 0.8933,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65
+      ],
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "They can trace your phone right now.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I want the turtle.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I want the turtle.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want the turtle.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "They can trace, they can trace anything, okay?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "They can trace... they can trace anything, okay?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "They can trace, they can trace anything, okay?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled]' --in America.",
+      "similarity": 0.6977,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled]' --in America.",
+      "similarity": 0.6977,
+      "match_type": "similar",
+      "json_group": [
+        68,
+        69
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled]' --in America.",
+      "similarity": 0.6977,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled]' --in America.",
+      "similarity": 0.6977,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled, looped]' --in America. --in America.",
+      "similarity": 0.7222,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled, looped]' --in America. --in America.",
+      "similarity": 0.7222,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled, looped]' --in America. --in America.",
+      "similarity": 0.7222,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73,
+        74
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "None",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled]' --in America.",
+      "similarity": 0.6977,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "In America.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "'[sampled]' --in America.",
+      "similarity": 0.6977,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76
+      ],
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "In America.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 76,
+    "total_wiki_lines": 66,
+    "matched_wiki_lines": 59,
+    "unmatched_wiki_lines": 7,
+    "matched": 73,
+    "speakers_to_map": 2,
+    "text_auto_correct": 11,
+    "text_review": 7,
+    "text_group_review": 24,
+    "unmatched_json": 3
+  }
+}

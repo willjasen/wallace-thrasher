@@ -1,0 +1,787 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:41:07.659139+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Putty 2",
+  "track_slug": "putty-2",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/putty-2.json",
+  "json_sha256": "3104e954e697ca17870067a4f90407afbc7738ef9fb217137a4ec825217144d7",
+  "wiki_title": "Putty 2",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Putty_2",
+  "speaker_mapping": {
+    "SPEAKER_01": "Man (1)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.6093,
+      "observations": 8,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 7.1595,
+          "observations": 8
+        },
+        {
+          "name": "Man (1)",
+          "score": 4.5905,
+          "observations": 5
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (1)",
+      "confidence": 0.8095,
+      "observations": 9,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 8.4992,
+          "observations": 9
+        },
+        {
+          "name": "LPC",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A Puddy package, who are you?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Putty package? Who are you?",
+      "similarity": 0.8846,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Putty package? Who are you?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A package of Pottie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "A package of putty. [exhale]",
+      "similarity": 0.7727,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "A package of putty. [exhale]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "To who?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "To who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "To who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "For who?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "For who?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "None",
+      "json_text": "To you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "To you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "To you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I order no package.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I ain't order no-- '[beep]' --package.",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I ain't order no-- '[beep]' --package.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You ordered it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You ordered it. When can I go ahead and ship it? [exhale]",
+      "similarity": 0.8776,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You ordered it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "One can I go ahead and ship it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You ordered it. When can I go ahead and ship it? [exhale]",
+      "similarity": 0.8776,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "One can I go ahead and ship it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Ship it to who?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Ship it to who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ship it to who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "To you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "To you.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "To you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, what's my name?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well, what's my name?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, what's my name?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's on the package.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's on the package. [inhale] Now, I need to go ahead and bring it. When would be the best time to do so, sir?",
+      "similarity": 0.9239,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's on the package.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Now I need to go ahead and bring it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's on the package. [inhale] Now, I need to go ahead and bring it. When would be the best time to do so, sir?",
+      "similarity": 0.9239,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now I need to go ahead and bring it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Wouldn't be the best time to do so, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's on the package. [inhale] Now, I need to go ahead and bring it. When would be the best time to do so, sir?",
+      "similarity": 0.9239,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wouldn't be the best time to do so, sir.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm trying to find out who until the package is for.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I'm-- '[beep]' --tryin' to find out who... to the package is for.",
+      "similarity": 0.8519,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm-- '[beep]' --tryin' to find out who... to the package is for.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm telling it's to you, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm tellin' ya, it's to you, sir.",
+      "similarity": 0.9123,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm tellin' ya, it's to you, sir.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, it's not my package.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well, it's not my package. I... I don't have no package.",
+      "similarity": 0.9796,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, it's not my package.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't have no package.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well, it's not my package. I... I don't have no package.",
+      "similarity": 0.9796,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have no package.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I know not yet.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I know, not yet. I'll bring it to you, though.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I know not yet.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll bring it to you, though.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I know, not yet. I'll bring it to you, though.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll bring it to you, though.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I don't want it.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Well, I don't want it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I don't want it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You won't take it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You gon' take it.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You gon' take it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "No!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You can't deny a package, sure.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You can't deny your package, sir. I will, um, I can be there at about 1.30.",
+      "similarity": 0.8154,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can't deny a package, sure.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I could be there at about 1.30.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You can't deny your package, sir. I will, um, I can be there at about 1.30.",
+      "similarity": 0.8154,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I could be there at about 1.30.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't want the package.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I don't want the package, you keep it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't want the package.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You keep it.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I don't want the package, you keep it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You keep it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's putty?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, it's putty. You can't just ship back putty, okay?",
+      "similarity": 0.9485,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's putty?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You can't just ship back putty, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, it's putty. You can't just ship back putty, okay?",
+      "similarity": 0.9485,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can't just ship back putty, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I didn't order no puddy.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I didn't order no putty!",
+      "similarity": 0.913,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't order no putty!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't order no putty.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "I ain't order-- '[beep]' --no putty!",
+      "similarity": 0.7547,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I ain't order-- '[beep]' --no putty!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Putty package.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Putty package? Who are you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Putty package.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who are you?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Putty package? Who are you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Ship it to who?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Ship it to who?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ship it to who?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you detach?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Could you detach?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Could you detach?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you, uh, detach the saxophone figurine?",
+      "similarity": 0.5517,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Could you, uh, detach the saxophone figurine?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "the saxophone figurine?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Uh-- '[beep]' --no, I couldn't.",
+      "similarity": 0.5246,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "the saxophone figurine?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I couldn't.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Uh-- '[beep]' --no, I couldn't.",
+      "similarity": 0.5246,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "No, I couldn't.",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 39,
+    "total_wiki_lines": 28,
+    "matched_wiki_lines": 27,
+    "unmatched_wiki_lines": 1,
+    "matched": 37,
+    "speakers_to_map": 1,
+    "text_auto_correct": 5,
+    "text_review": 4,
+    "text_group_review": 13,
+    "unmatched_json": 2
+  }
+}

@@ -1,0 +1,1345 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:22.073653+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Dick Trickle",
+  "track_slug": "dick-trickle",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/dick-trickle.json",
+  "json_sha256": "9308f41e4c526be3f048ce9690304d4aa6e3b10c9d7f768f405a85bf88d255d1",
+  "wiki_title": "Dick Trickle",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Dick_Trickle",
+  "speaker_mapping": {},
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.5838,
+      "observations": 10,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 9.5559,
+          "observations": 10
+        },
+        {
+          "name": "Radio Host 1",
+          "score": 2.9474,
+          "observations": 3
+        },
+        {
+          "name": "Radio Host 2",
+          "score": 1.9351,
+          "observations": 2
+        },
+        {
+          "name": "Radio Host 4",
+          "score": 1.931,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Radio Host 1",
+      "confidence": 0.5613,
+      "observations": 5,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Radio Host 1",
+          "score": 4.683,
+          "observations": 5
+        },
+        {
+          "name": "Radio Host 2",
+          "score": 1.7538,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Radio Host 4",
+          "score": 0.906,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Radio Host 2",
+      "confidence": 0.5415,
+      "observations": 8,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Radio Host 2",
+          "score": 7.1384,
+          "observations": 8
+        },
+        {
+          "name": "Radio Host 1",
+          "score": 3.3375,
+          "observations": 4
+        },
+        {
+          "name": "Radio Host 3",
+          "score": 1.7059,
+          "observations": 2
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You know, I know it's Friday, but you've got to work on that sitting structure.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "--ets... you know, I know it's Friday, but you've got to work on that sentence structure. Let's go to Bret on 760--",
+      "similarity": 0.9135,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know, I know it's Friday, but you've got to work on that sitting structure.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Let's go to Brett on 7.60s.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "--ets... you know, I know it's Friday, but you've got to work on that sentence structure. Let's go to Bret on 760--",
+      "similarity": 0.9135,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's go to Brett on 7.60s.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He dated the girl from Arizona.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "He dated, uhh... he dated the... the girl from Arizona.",
+      "similarity": 0.7792,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "He dated, uhh... he dated the... the girl from Arizona.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No, no, no, no. He dated the singer.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "No, no, no, he dated the singer.",
+      "similarity": 0.9492,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, no, no, he dated the singer.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Yeah. I can't remember.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I can't remember.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Yeah. I can't remember.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can't remember.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Let's go to Brett.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Let's go to Bret. Bret, you're on 760 with--",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's go to Brett.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Brett, you're on 760.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Let's go to Bret. Bret, you're on 760 with--",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Brett, you're on 760.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I say what she sang, you and I.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "I'll tell you what she sang. [singing] \"You and I...\" Yeah, Linda Ronstadt. How are you doing?",
+      "similarity": 0.592,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "I say what she sang, you and I.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Linda, I said.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "I'll tell you what she sang. [singing] \"You and I...\" Yeah, Linda Ronstadt. How are you doing?",
+      "similarity": 0.592,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Linda, I said.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are you doin'?",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you doin'?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, we're singing.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Well, we're... singing.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, we're singing.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "All righty.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Alrighty. Well, hey, that's appropriate. Here's a stumper for you guys.",
+      "similarity": 0.8788,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "All righty.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, well, that's appropriate.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Alrighty. Well, hey, that's appropriate. Here's a stumper for you guys.",
+      "similarity": 0.8788,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, well, that's appropriate.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Here's a stuff for you guys.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Alrighty. Well, hey, that's appropriate. Here's a stumper for you guys.",
+      "similarity": 0.8788,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Here's a stuff for you guys.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What German rock and roll band was Tom Gugliata once a member of?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Um... what German rock and roll band was Tom Gugliotta once a member of?",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um... what German rock and roll band was Tom Gugliotta once a member of?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You two?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "You two?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Scorpions.",
+      "wiki_speaker": "Radio Host 3",
+      "wiki_text": "Scorpions.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Radio Host 3",
+      "speaker_action": "matched_line",
+      "proposed_text": "Scorpions.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The Scorpions.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "The Scorpions.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The Scorpions.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I knew that.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "I knew that!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "I knew that.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Thanks, Eric.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Thanks, Eric.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thanks, Eric.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Drummer from the Scorpions.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "The drummer from the Scorpions.",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The drummer from the Scorpions.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He'll be out.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "He'll be out.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Another guy said he wouldn't play from 17.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Another guy said he wouldn't play from 17.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, is that playing in Denver?",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Either that, or playing in Denver... Eric's trying to get control of the dogs.",
+      "similarity": 0.7538,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, is that playing in Denver?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Eric's trying to talk a dog.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Either that, or playing in Denver... Eric's trying to get control of the dogs.",
+      "similarity": 0.7538,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Eric's trying to talk a dog.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Got a little gas.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "[chuckling] He's got a little gas. [laughs]",
+      "similarity": 0.5926,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "[chuckling] He's got a little gas. [laughs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You still there?",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "[laughs] You still there?",
+      "similarity": 0.8108,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] You still there?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What?",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "What? I thought was our cart or something, sound effect. That was legit?",
+      "similarity": 0.8254,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I thought that was our card or something.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "What? I thought was our cart or something, sound effect. That was legit?",
+      "similarity": 0.8254,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "I thought that was our card or something.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Sound effect.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "What? I thought was our cart or something, sound effect. That was legit?",
+      "similarity": 0.8254,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32,
+        33
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sound effect.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That was legit.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "[unclear] ...that was Bert.",
+      "similarity": 0.6286,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "[unclear] ...that was Bert.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That was his phone.",
+      "wiki_speaker": "Radio Host 3",
+      "wiki_text": "That was legit, that was his phone.",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Radio Host 3",
+      "speaker_action": "matched_line",
+      "proposed_text": "That was legit, that was his phone.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Bert, you're in big trouble.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Bert, you're in big trouble.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bert, you're in big trouble.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Did he get in the hunt?",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Did he... did he get in a... [unclear]",
+      "similarity": 0.6538,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Did he... did he get in a... [unclear]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't remember.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "I don't remember.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Wallace call back.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Wallace, call back. Let's go to Mark. Boy, I thought that was our sound effect. Mark, you're on 760 K-Talk, we've got some lines available.",
+      "similarity": 0.9847,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wallace call back.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let's go to Mark.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Wallace, call back. Let's go to Mark. Boy, I thought that was our sound effect. Mark, you're on 760 K-Talk, we've got some lines available.",
+      "similarity": 0.9847,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's go to Mark.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Boy, I thought that was our sound effect.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Wallace, call back. Let's go to Mark. Boy, I thought that was our sound effect. Mark, you're on 760 K-Talk, we've got some lines available.",
+      "similarity": 0.9847,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Boy, I thought that was our sound effect.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mark, you're on 760K trial.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Wallace, call back. Let's go to Mark. Boy, I thought that was our sound effect. Mark, you're on 760 K-Talk, we've got some lines available.",
+      "similarity": 0.9847,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mark, you're on 760K trial.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We've got some lines available.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Wallace, call back. Let's go to Mark. Boy, I thought that was our sound effect. Mark, you're on 760 K-Talk, we've got some lines available.",
+      "similarity": 0.9847,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got some lines available.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Jerome Lane.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Jerome Lane.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jerome Lane.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let's go to Oscar, and that's enough out of you, Eric.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Let's go to Oscar, and that's enough out of you... Eric.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let's go to Oscar, and that's enough out of you, Eric.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, I do it.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Hi, I do it.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oscar, you're back?",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Oscar, you're back... yeah, that's better. Yeah--",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oscar, you're back?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, that's better.",
+      "wiki_speaker": "Radio Host 2",
+      "wiki_text": "Oscar, you're back... yeah, that's better. Yeah--",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Radio Host 2",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, that's better.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, we were talking about Craig Morton, you know, versus John.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, we were talking about Craig Morton... um... you know, versus John Elway, uh... conceivably, it's like, there wasn't... even on Craig Morton's best day, a whole... wasn't a whole lot of athleticism out there on the football field.",
+      "similarity": 0.974,
+      "match_type": "similar",
+      "json_group": [
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, we were talking about Craig Morton, you know, versus John.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "away, uh, conceivably, it's like, there wasn't, even on Craig Morn's best day, a whole,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, we were talking about Craig Morton... um... you know, versus John Elway, uh... conceivably, it's like, there wasn't... even on Craig Morton's best day, a whole... wasn't a whole lot of athleticism out there on the football field.",
+      "similarity": 0.974,
+      "match_type": "similar",
+      "json_group": [
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "away, uh, conceivably, it's like, there wasn't, even on Craig Morn's best day, a whole,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "it wasn't a whole lot of athleticism out there on the football field.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, we were talking about Craig Morton... um... you know, versus John Elway, uh... conceivably, it's like, there wasn't... even on Craig Morton's best day, a whole... wasn't a whole lot of athleticism out there on the football field.",
+      "similarity": 0.974,
+      "match_type": "similar",
+      "json_group": [
+        49,
+        50,
+        51
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "it wasn't a whole lot of athleticism out there on the football field.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, not after he heard his, he was a hell of an athlete college.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Well, not after he hurt his... he... he was a hell of an athlete in college.",
+      "similarity": 0.916,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, not after he hurt his... he... he was a hell of an athlete in college.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He should have seen him and played baseball at Grand Junction.",
+      "wiki_speaker": "Radio Host 4",
+      "wiki_text": "You should have seen him play baseball at Grand Junction.",
+      "similarity": 0.906,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Radio Host 4",
+      "speaker_action": "matched_line",
+      "proposed_text": "You should have seen him play baseball at Grand Junction.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, he was an option quarterback in college, but, you know, he had knee injuries and everything,",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Yeah, he was an option quarterback in college, but... you know, he had knee injuries and everything, and towards the end of his career he could barely walk.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, he was an option quarterback in college, but, you know, he had knee injuries and everything,",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and towards the end of his career, he could barely walk.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Yeah, he was an option quarterback in college, but... you know, he had knee injuries and everything, and towards the end of his career he could barely walk.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55
+      ],
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "and towards the end of his career, he could barely walk.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He was a prospect of baseball.",
+      "wiki_speaker": "Radio Host 4",
+      "wiki_text": "He was a prospect in baseball.",
+      "similarity": 0.931,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Radio Host 4",
+      "speaker_action": "matched_line",
+      "proposed_text": "He was a prospect in baseball.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, I saw the family over the holidays, and, uh, boy, his son, his son can throw the frisbee.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I saw the family over the holidays, and, uh, boy... the... his... his son, his son can throw the frisbee. Uh... I had no idea.",
+      "similarity": 0.8756,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I saw the family over the holidays, and, uh, boy... the... his... his son, his son can throw the frisbee. Uh... I had no idea.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, he was almost, uh, he was a prospect of baseball. Uh, he was a prospect.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Uh, he was almost, uh, he was a prospect of baseball. Uh, he was a prospect.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I had no idea.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "I had no idea.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, but as far as athletes, I mean, there might not ever been a better athlete to my quarterback than John Elway in the league.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Hey, but as far as athletes, I mean, there might not have ever been a better athlete, like, quarterback, than... John Elway in the league.",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, but as far as athletes, I mean, there might not have ever been a better athlete, like, quarterback, than... John Elway in the league.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What do you guys know about, um...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What do you guys know about, um...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you guys know about, um...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Not just comparing Craig Morton, compare any of them to it.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Not just comparing Craig Morton, compare any of 'em to him.",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Not just comparing Craig Morton, compare any of 'em to him.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hell, I'd compare him to Dick Trickle, gets behind the steering wheel.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hell, I'd compare him to Dick Trickle. Gets behind the steering wheel.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hell, I'd compare him to Dick Trickle, gets behind the steering wheel.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Well.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What else?",
+      "wiki_speaker": "Radio Host 4",
+      "wiki_text": "What else?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Radio Host 4",
+      "speaker_action": "matched_line",
+      "proposed_text": "What else?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is that? NASCAR? Yeah. I guess.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "What is that? What is that, NASCAR?",
+      "similarity": 0.5938,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "What is that? What is that, NASCAR?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Radio Host 1",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "Radio Host 1",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 67,
+    "total_wiki_lines": 51,
+    "matched_wiki_lines": 42,
+    "unmatched_wiki_lines": 9,
+    "matched": 59,
+    "speakers_to_map": 0,
+    "text_auto_correct": 10,
+    "text_review": 7,
+    "text_group_review": 24,
+    "unmatched_json": 8
+  }
+}

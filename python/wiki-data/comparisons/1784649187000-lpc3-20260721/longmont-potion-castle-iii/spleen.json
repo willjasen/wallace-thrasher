@@ -1,0 +1,986 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:55.983723+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "Spleen",
+  "track_slug": "spleen",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/spleen.json",
+  "json_sha256": "beb70c536ce82c93cf702483437525aea4183a4f9a3b2df0ddb9cf9805fc7632",
+  "wiki_title": "Spleen",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Spleen",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman (1)",
+      "confidence": 0.3648,
+      "observations": 7,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman (1)",
+          "score": 6.6024,
+          "observations": 7
+        },
+        {
+          "name": "LPC",
+          "score": 6.0717,
+          "observations": 7
+        },
+        {
+          "name": "Man (3)",
+          "score": 4.4233,
+          "observations": 5
+        },
+        {
+          "name": "Woman (2)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.8763,
+      "observations": 15,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 14.1654,
+          "observations": 15
+        },
+        {
+          "name": "Man (3)",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you going to bring?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Wh... now, what are you gonna bring?",
+      "similarity": 0.7586,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wh... now, what are you gonna bring?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm going to bring your spleen to you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm gonna bring your spleen to ya.",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm gonna bring your spleen to ya.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A what?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "A what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "A what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Splean.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Spleen. Mmhmm. That's right. What's the best time of day on that, madam?",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Splean.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Spleen. Mmhmm. That's right. What's the best time of day on that, madam?",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the best time of day on that, madam?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Spleen. Mmhmm. That's right. What's the best time of day on that, madam?",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the best time of day on that, madam?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "A spleen?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "A spleen?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "A spleen?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh huh.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen to me now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen to me now, I don't know what games you kids are playing, but you need to listen up.",
+      "similarity": 0.9943,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen to me now.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what games your kids are playing, but you need to listen up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen to me now, I don't know what games you kids are playing, but you need to listen up.",
+      "similarity": 0.9943,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what games your kids are playing, but you need to listen up.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You need to listen up right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You need to listen up right now.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need to listen up right now.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "What?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the best time to bring your spleen to you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's the best time to bring your spleen to ya?",
+      "similarity": 0.9684,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the best time to bring your spleen to ya?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Go ahead.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "Go ahead.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got the wrong number.",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "You got the wrong number.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got the wrong number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the best number?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's the best time to bring your bladder on down, partner?",
+      "similarity": 0.9431,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the best number?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Time to bring your bladder on down, partner.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's the best time to bring your bladder on down, partner?",
+      "similarity": 0.9431,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Time to bring your bladder on down, partner.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What bladder?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "What bladder?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You've heard right?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You heard right.",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You heard right.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What you got going on over there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What you got going on over there? Damn, uh... rodeo, or somethin'?",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What you got going on over there?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Damn rodeo or something?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What you got going on over there? Damn, uh... rodeo, or somethin'?",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Damn rodeo or something?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "No...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Put your old man on the line, would you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Put your old man on the line, would ya? Appreciate that.",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Put your old man on the line, would you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Appreciate that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Put your old man on the line, would ya? Appreciate that.",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": [
+        26,
+        27
+      ],
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Appreciate that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "He's not important right now, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's not important right now, okay. Why don't you go on and fetch him? Appreciate it.",
+      "similarity": 0.9045,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He's not important right now, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why don't you go on, betcha?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's not important right now, okay. Why don't you go on and fetch him? Appreciate it.",
+      "similarity": 0.9045,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you go on, betcha?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Appreciate it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's not important right now, okay. Why don't you go on and fetch him? Appreciate it.",
+      "similarity": 0.9045,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29,
+        30
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Appreciate it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you doing, a bladder?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "What are you \"damn\" bringing, a bladder?",
+      "similarity": 0.8438,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you \"damn\" bringing, a bladder?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[inhale] That's right. Damn right! [exhale]",
+      "similarity": 0.7667,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Damn right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "[inhale] That's right. Damn right! [exhale]",
+      "similarity": 0.7667,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Damn right.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "He said, damn right",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "He said, damn right",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, hello!",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, hello?",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, hello?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, hello!",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, HELLO? HELLO?!",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, hello!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello!",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, HELLO? HELLO?!",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37
+      ],
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello!",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, hello!",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah, hello!",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, hello?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "Yeah, hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, what's the best time of day to bring your spleen to you, partner?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, what's the best time of day to bring your spleen to ya, partner?",
+      "similarity": 0.9778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, what's the best time of day to bring your spleen to ya, partner?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is that, though?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "What is that stuff?",
+      "similarity": 0.8108,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is that stuff?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, partner?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, partner... what's the best time of day to deliver your spleen to ya?",
+      "similarity": 0.9784,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, partner?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the best time of day to deliver your spleen to you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, partner... what's the best time of day to deliver your spleen to ya?",
+      "similarity": 0.9784,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43
+      ],
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the best time of day to deliver your spleen to you?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Weekly?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "Wh... weekly.",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Wh... weekly.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Your spleen, brother.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Your spleen, brother!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your spleen, brother.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What is that?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "What is that?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is that?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's the best time to see that?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's the best time to ship it? Aw-haw-haw-haw-haw-haw-haw!",
+      "similarity": 0.6444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "What's the best time to ship it? Aw-haw-haw-haw-haw-haw-haw!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "For how many people?",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "For... how many people?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "For how many people?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you talking about?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What're you talkin' 'bout?",
+      "similarity": 0.8627,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What're you talkin' 'bout?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You need a room to see this motel.",
+      "wiki_speaker": "Man (3)",
+      "wiki_text": "You need a room? This is a motel.",
+      "similarity": 0.8125,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "Man (3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need a room? This is a motel.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 50,
+    "total_wiki_lines": 42,
+    "matched_wiki_lines": 35,
+    "unmatched_wiki_lines": 7,
+    "matched": 46,
+    "speakers_to_map": 1,
+    "text_auto_correct": 6,
+    "text_review": 6,
+    "text_group_review": 18,
+    "unmatched_json": 4
+  }
+}

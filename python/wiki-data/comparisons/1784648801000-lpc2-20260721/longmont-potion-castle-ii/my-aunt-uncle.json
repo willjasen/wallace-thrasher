@@ -1,0 +1,148 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:31.732344+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "My Aunt  Uncle",
+  "track_slug": "my-aunt-uncle",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/my-aunt-uncle.json",
+  "json_sha256": "0214584135cf09a0563a8c8a6dec38ac3deb149ae07240a2255315484c7b206a",
+  "wiki_title": "My Aunt & Uncle",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/My_Aunt_%26_Uncle",
+  "speaker_mapping": {
+    "SPEAKER_02": "Man",
+    "SPEAKER_03": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_02": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 0.972,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man",
+      "confidence": 0.7129,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 1.8624,
+          "observations": 2
+        },
+        {
+          "name": "Woman",
+          "score": 0.75,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Well, now that's really bizarre. I've never had it to ever hear a message like that in my life, now.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, now, that's really bizarre. I tell you, I've never had a-- ...To ever hear a message... like that in my life, now that, I must say--",
+      "similarity": 0.8624,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0,
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, now, that's really bizarre. I tell you, I've never had a-- ...To ever hear a message... like that in my life, now that, I must say--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "That's great you guys.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[in background] That's great, you guys!",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "[in background] That's great, you guys!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "That is really bizarre.",
+      "wiki_speaker": "Man",
+      "wiki_text": "That is really bizarre.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "That is really bizarre.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "There. You got your toys and I've got mine. How's that?",
+      "wiki_speaker": "Man",
+      "wiki_text": "There. You've got your toys, and I've got mine. How's that?",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "There. You've got your toys, and I've got mine. How's that?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "None",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Thank you.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 5,
+    "total_wiki_lines": 5,
+    "matched_wiki_lines": 5,
+    "unmatched_wiki_lines": 0,
+    "matched": 4,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 1,
+    "text_group_review": 0,
+    "unmatched_json": 1
+  }
+}

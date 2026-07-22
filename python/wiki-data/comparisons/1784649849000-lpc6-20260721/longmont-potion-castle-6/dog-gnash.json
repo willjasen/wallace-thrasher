@@ -1,0 +1,2325 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:09:12.324239+00:00",
+  "snapshot": "1784649849000-lpc6-20260721",
+  "album": "Longmont Potion Castle 6",
+  "album_slug": "longmont-potion-castle-6",
+  "track": "Dog Gnash",
+  "track_slug": "dog-gnash",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-6/dog-gnash.json",
+  "json_sha256": "d0480c58ad2649105ff61f58d9dc05f7ddda2b186b7c17670d3077d2adf18b9b",
+  "wiki_title": "Dog Gnash",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Dog_Gnash",
+  "speaker_mapping": {
+    "SPEAKER_00": "Woman",
+    "SPEAKER_01": "Woman",
+    "SPEAKER_02": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 20,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 18.8895,
+          "observations": 20
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman",
+      "confidence": 0.9512,
+      "observations": 20,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 19.4849,
+          "observations": 20
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 0.9479,
+      "observations": 36,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 34.9818,
+          "observations": 36
+        },
+        {
+          "name": "Woman",
+          "score": 1.9231,
+          "observations": 2
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, this is Franklin.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Franklin. [exhales]",
+      "similarity": 0.84,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Franklin. [exhales]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Franklin?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "\"Franklin\"?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Franklin?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. Matter of fact, it is.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Matter of fact, it is.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah. Matter of fact, it is.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Matter of fact, it is.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know Franklin.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know \"Franklin\".",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know Franklin.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't know that I care for what's going on over there at your place.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't know that I care for what's... uh, goin' on over there at your place.",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know that I care for what's... uh, goin' on over there at your place.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Um, I think you might have the wrong number?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Um, I think you might have the wrong number?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, I think you might have the wrong number?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Absolutely not, young lady.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Absolutely not, young lady.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Absolutely not, young lady.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This is a place with all the dogs going back and forth, right?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is the place with all the dogs goin' back and forth, right? Gnashin' and everything else?",
+      "similarity": 0.9551,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is a place with all the dogs going back and forth, right?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Nashin and everything else?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is the place with all the dogs goin' back and forth, right? Gnashin' and everything else?",
+      "similarity": 0.9551,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nashin and everything else?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Mashin?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Mashin?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mashin?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "\"Mashin'\"?",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "\"Mashin'\"?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Won't stand for it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Won't stand for it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Won't stand for it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what you're talking about.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't know what you're talking about.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what you're talking about.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I... I... I don't know what you're talking about. I--",
+      "similarity": 0.9268,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I... I... I don't know what you're talking about. I--",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I will not stand for it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Will not stand for it.",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Will not stand for it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't have time to speak with you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't have time to speak with you. I don't know who you are, or why you're bothering me at this time.",
+      "similarity": 0.9208,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have time to speak with you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have no clue who you are or why you're bothering me at this time.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't have time to speak with you. I don't know who you are, or why you're bothering me at this time.",
+      "similarity": 0.9208,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have no clue who you are or why you're bothering me at this time.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's my bother, ma'am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's p... my bother, ma'am!",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's p... my bother, ma'am!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't understand what's your bother at this time.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't understand what's your bother at this time. You're bothering me, I'm trying to get going, and get things done. I just got home from work. I don't know what your problem is, or who you are.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't understand what's your bother at this time.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're bothering me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't understand what's your bother at this time. You're bothering me, I'm trying to get going, and get things done. I just got home from work. I don't know what your problem is, or who you are.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're bothering me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm trying to get going and get things done.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't understand what's your bother at this time. You're bothering me, I'm trying to get going, and get things done. I just got home from work. I don't know what your problem is, or who you are.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm trying to get going and get things done.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I just got home from work.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't understand what's your bother at this time. You're bothering me, I'm trying to get going, and get things done. I just got home from work. I don't know what your problem is, or who you are.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just got home from work.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what your problem is or who you are.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't understand what's your bother at this time. You're bothering me, I'm trying to get going, and get things done. I just got home from work. I don't know what your problem is, or who you are.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what your problem is or who you are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I will not stand.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I will not stand... this community will not stand for dogs gnashing at one another.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I will not stand.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This community will not stand for dogs gnashing at one another.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I will not stand... this community will not stand for dogs gnashing at one another.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        27,
+        28
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This community will not stand for dogs gnashing at one another.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mashing?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "\"Mashing\"?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mashing?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Anything you engage in of that nature is going to be reported.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Anything you engage in, of that nature, is going to be reported.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Anything you engage in of that nature is going to be reported.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have no clue what you're talking about.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I have no clue what you're talking about!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have no clue what you're talking about.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Canine?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Canine...",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Canine?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "dogs? I have two dogs, two puppies that play.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What do you mean, \"all my dogs\"? I have two dogs, two puppies, that play.",
+      "similarity": 0.7778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you mean, \"all my dogs\"? I have two dogs, two puppies, that play.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What are their names?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are their names?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are their names?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "None of your business is what their names are.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "None of your business, is what their names are!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "None of your business is what their names are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Could you spell it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Could you spell it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you spell it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can just go to hell, okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You can... just... go to hell, okay? 'Cause I don't know who you are or why you're bothering me.",
+      "similarity": 0.9651,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can just go to hell, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because I don't know who you are, why you're bothering me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You can... just... go to hell, okay? 'Cause I don't know who you are or why you're bothering me.",
+      "similarity": 0.9651,
+      "match_type": "similar",
+      "json_group": [
+        37,
+        38
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I don't know who you are, why you're bothering me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, I'm calling about these dogs over there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, I'm callin' about these dogs over there?",
+      "similarity": 0.9773,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I'm callin' about these dogs over there?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My dogs are doing nothing.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs are doing nothing.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My dogs are doing nothing.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know what the problem is. They haven't done anything.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know what the problem is, they haven't done anything. I don't know where you live or who you are, so I wish you would quit bothering me, before I have to call the police and tell them that there's somebody harassing me!",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what the problem is. They haven't done anything.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know where you live or who you are,",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know what the problem is, they haven't done anything. I don't know where you live or who you are, so I wish you would quit bothering me, before I have to call the police and tell them that there's somebody harassing me!",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know where you live or who you are,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "so I wish you'd quit bother me before I had to call the police",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know what the problem is, they haven't done anything. I don't know where you live or who you are, so I wish you would quit bothering me, before I have to call the police and tell them that there's somebody harassing me!",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "so I wish you'd quit bother me before I had to call the police",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and tell them that there's somebody harassing me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't know what the problem is, they haven't done anything. I don't know where you live or who you are, so I wish you would quit bothering me, before I have to call the police and tell them that there's somebody harassing me!",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43,
+        44,
+        45
+      ],
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "and tell them that there's somebody harassing me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your dogs are harassing me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Your dogs are harassing me!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        36
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your dogs are harassing me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "My dogs are doing nothing.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "My dogs are doing nothing.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My dogs are doing nothing.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs are doing nothing.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My dogs are doing nothing.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What are their names?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What are their names?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        38
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are their names?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "None of your business is what their names are.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "None of your business is what their names are!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "None of your business is what their names are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That won't do.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That won't do.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That won't do.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's fine.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "That's fine, I don't care! It's none of your business what the names of my animals are! They have done nothing wrong!",
+      "similarity": 0.9956,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's fine.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "That's fine, I don't care! It's none of your business what the names of my animals are! They have done nothing wrong!",
+      "similarity": 0.9956,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's none of your business what the name of my animals are.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "That's fine, I don't care! It's none of your business what the names of my animals are! They have done nothing wrong!",
+      "similarity": 0.9956,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's none of your business what the name of my animals are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "They have done nothing wrong.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "That's fine, I don't care! It's none of your business what the names of my animals are! They have done nothing wrong!",
+      "similarity": 0.9956,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "They have done nothing wrong.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "In the terms of law they have.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "In the terms of the law, they have.",
+      "similarity": 0.9355,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "In the terms of the law, they have.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, excuse me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, excuse me, would you like to tell me what they've done \"in the terms of the law\"?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        57,
+        58
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, excuse me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Would you like to tell me what they've done in the terms of the law?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, excuse me, would you like to tell me what they've done \"in the terms of the law\"?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        57,
+        58
+      ],
+      "wiki_indices": [
+        43
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Would you like to tell me what they've done in the terms of the law?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Nashing, for one.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Gnashing, for one.",
+      "similarity": 0.9677,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        44
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Gnashing, for one.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What is bashing?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What is \"mashing\"?",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What is \"mashing\"?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I saw a prairie dog getting gnashed by your animals recently.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I saw a prairie dog getting gnashed by your animals, recently.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I saw a prairie dog getting gnashed by your animals recently.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My dogs have not hurt any animals.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs have not hurt any animals. We don't have any prairie dogs. My dogs do not hurt other animals. I've done nothing wrong, and my animals have done nothing wrong. They were on private property in my yard. So I don't know who you are, or why you're bothering me, but stop calling this number!",
+      "similarity": 0.993,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My dogs have not hurt any animals.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We don't have any prairie dogs.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs have not hurt any animals. We don't have any prairie dogs. My dogs do not hurt other animals. I've done nothing wrong, and my animals have done nothing wrong. They were on private property in my yard. So I don't know who you are, or why you're bothering me, but stop calling this number!",
+      "similarity": 0.993,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We don't have any prairie dogs.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My dogs do not hurt other animals.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs have not hurt any animals. We don't have any prairie dogs. My dogs do not hurt other animals. I've done nothing wrong, and my animals have done nothing wrong. They were on private property in my yard. So I don't know who you are, or why you're bothering me, but stop calling this number!",
+      "similarity": 0.993,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "My dogs do not hurt other animals.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I've done not.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs have not hurt any animals. We don't have any prairie dogs. My dogs do not hurt other animals. I've done nothing wrong, and my animals have done nothing wrong. They were on private property in my yard. So I don't know who you are, or why you're bothering me, but stop calling this number!",
+      "similarity": 0.993,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've done not.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "wrong and my animals have done nothing wrong. They were on private property in my yard.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs have not hurt any animals. We don't have any prairie dogs. My dogs do not hurt other animals. I've done nothing wrong, and my animals have done nothing wrong. They were on private property in my yard. So I don't know who you are, or why you're bothering me, but stop calling this number!",
+      "similarity": 0.993,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "wrong and my animals have done nothing wrong. They were on private property in my yard.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So I don't know who you are or why you're bothering me, but stop calling this number.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs have not hurt any animals. We don't have any prairie dogs. My dogs do not hurt other animals. I've done nothing wrong, and my animals have done nothing wrong. They were on private property in my yard. So I don't know who you are, or why you're bothering me, but stop calling this number!",
+      "similarity": 0.993,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "wiki_indices": [
+        47
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "So I don't know who you are or why you're bothering me, but stop calling this number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "There's a whole lot of commotion coming out of there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "There's a whole lot of commotion comin' out of there.",
+      "similarity": 0.9808,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "There's a whole lot of commotion comin' out of there.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do you mean?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "What do you mean?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do you mean?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What do I mean? I don't like what I'm hearing from there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What do I mean? I mean I don't like what I'm hearin' from there.",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do I mean? I mean I don't like what I'm hearin' from there.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What are you hearing?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[laughing] What are you hearing?",
+      "similarity": 0.8163,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughing] What are you hearing?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Commotion up and down and all over the place.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Commotion, up and down and all over the place.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        53
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Commotion up and down and all over the place.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't even have a clue what you're talking about.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I... don't even have a clue what you're talking about.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even have a clue what you're talking about.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm Bobo.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm Bobo.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Bobo.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, if you were Bobo, you would really say what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, if you were Bobo, you would really say what your really... what your real name is.",
+      "similarity": 0.8844,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, if you were Bobo, you would really say what?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "your real name is?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, if you were Bobo, you would really say what your really... what your real name is.",
+      "similarity": 0.8844,
+      "match_type": "similar",
+      "json_group": [
+        75,
+        76
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "your real name is?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Bo Tucci.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Bo Tucci. And--",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bo Tucci. And--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The dogs are not even barking.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs are not even barking. I don't even know what you're talking about.",
+      "similarity": 0.9655,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "The dogs are not even barking.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't even know what you're talking about.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "My dogs are not even barking. I don't even know what you're talking about.",
+      "similarity": 0.9655,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even know what you're talking about.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This community will not tolerate it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This community will not tolerate it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This community will not tolerate it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's quiet.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "It's quiet.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's quiet.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm Bobo.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm Bobo.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Bobo.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care who you are.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care who you are.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care who you are.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "If you have a problem, then you need to call the police.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "If you have a problem then you need to call the police.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you have a problem, then you need to call the police.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I might just do that.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I might just do that.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        65
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I might just do that.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just go right ahead and do it.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Just go right ahead and do it.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        66
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just go right ahead and do it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let me have your Social Security number.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Let me have your social security number.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        67
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let me have your Social Security number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I shouldn't give it to you.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I shouldn't give it to you. Jerk.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        88,
+        89
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I shouldn't give it to you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Jerk.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I shouldn't give it to you. Jerk.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        88,
+        89
+      ],
+      "wiki_indices": [
+        68
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Jerk.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I will call the police and have this phone call trait.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I will call the police and have this phone call traced.",
+      "similarity": 0.9533,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        70
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I will call the police and have this phone call traced.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't like the sounds I'm hearing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't like the sounds I'm hearin'.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        71
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't like the sounds I'm hearin'.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't care.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care whatever sounds you're hearing. You are nuts.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        92,
+        93
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't care.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Whatever sounds you're hearing, you are nuts.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "I don't care whatever sounds you're hearing. You are nuts.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        92,
+        93
+      ],
+      "wiki_indices": [
+        72
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Whatever sounds you're hearing, you are nuts.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's getting a little late, and I don't want to hear a bunch of commotion up and down and left and right over there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's gettin' a little late. And I don't wanna hear a bunch of commotion up and down and left and right over there.",
+      "similarity": 0.9646,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        73
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's gettin' a little late. And I don't wanna hear a bunch of commotion up and down and left and right over there.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, Bobo, you are a bunch of Bobo.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[laughs] Yeah, Bobo. You are... a bunch of Bobo.",
+      "similarity": 0.9041,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        74
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Yeah, Bobo. You are... a bunch of Bobo.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You got me straight or what?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You got me straight, or what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        75
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got me straight or what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You know what?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You know what? You need to stop calling this number. You have been bothering me for the last ten minutes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        97,
+        98,
+        99
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You need to stop calling this number.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You know what? You need to stop calling this number. You have been bothering me for the last ten minutes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        97,
+        98,
+        99
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You need to stop calling this number.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You have been bothering me for the last ten minutes.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "You know what? You need to stop calling this number. You have been bothering me for the last ten minutes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        97,
+        98,
+        99
+      ],
+      "wiki_indices": [
+        76
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You have been bothering me for the last ten minutes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You are calling my number.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Stop calling my number.",
+      "similarity": 0.8085,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        78
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Stop calling my number.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You better quiet down.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You better quiet down.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        79
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You better quiet down.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, asshole.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh... no, asshole!",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        80
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh... no, asshole!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh?!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        81
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay, Bobo.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, Bobo. I'm going to call the police.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        104,
+        105
+      ],
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, Bobo.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to call the police.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, Bobo. I'm going to call the police.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        104,
+        105
+      ],
+      "wiki_indices": [
+        83
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to call the police.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I already called them.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, I already called them! I'm--",
+      "similarity": 0.8235,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        84
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I already called them! I'm--",
+      "text_action": "review"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, good. That way they can cut them.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, good! That way they can come to my house and I can tell them that you are crazy! I don't know what you're saying about my dogs. You are, just, totally nuts.",
+      "similarity": 0.9539,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109,
+        110
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, good. That way they can cut them.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "to my house and I can tell them, you are crazy.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, good! That way they can come to my house and I can tell them that you are crazy! I don't know what you're saying about my dogs. You are, just, totally nuts.",
+      "similarity": 0.9539,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109,
+        110
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "to my house and I can tell them, you are crazy.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't know what you're saying about my dog.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, good! That way they can come to my house and I can tell them that you are crazy! I don't know what you're saying about my dogs. You are, just, totally nuts.",
+      "similarity": 0.9539,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109,
+        110
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't know what you're saying about my dog.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You are just totally nuts.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh, good! That way they can come to my house and I can tell them that you are crazy! I don't know what you're saying about my dogs. You are, just, totally nuts.",
+      "similarity": 0.9539,
+      "match_type": "similar",
+      "json_group": [
+        107,
+        108,
+        109,
+        110
+      ],
+      "wiki_indices": [
+        85
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "You are just totally nuts.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Like hell I am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like hell I am! I'm gonna go and get a close, personal friend of mine. Perhaps you've heard of him: his name is Mr. John Elway.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Like hell I am.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm going to go and get a close personal friend of mine.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like hell I am! I'm gonna go and get a close, personal friend of mine. Perhaps you've heard of him: his name is Mr. John Elway.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm going to go and get a close personal friend of mine.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Perhaps you've heard of him.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like hell I am! I'm gonna go and get a close, personal friend of mine. Perhaps you've heard of him: his name is Mr. John Elway.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Perhaps you've heard of him.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "His name is Mr. John Elway.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Like hell I am! I'm gonna go and get a close, personal friend of mine. Perhaps you've heard of him: his name is Mr. John Elway.",
+      "similarity": 0.9714,
+      "match_type": "similar",
+      "json_group": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "wiki_indices": [
+        86
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "His name is Mr. John Elway.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Good. Bring him.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Good! Bring him! Good! Very good.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        115,
+        116,
+        117
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good. Bring him.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Good.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Good! Bring him! Good! Very good.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        115,
+        116,
+        117
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Very good.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Good! Bring him! Good! Very good.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        115,
+        116,
+        117
+      ],
+      "wiki_indices": [
+        87
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Very good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to tell him what a wacko you are, asshole you are.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "And I'll tell him what... what a wacko you are. Asshole.",
+      "similarity": 0.7339,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        89
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I'll tell him what... what a wacko you are. Asshole.",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 118,
+    "total_wiki_lines": 84,
+    "matched_wiki_lines": 79,
+    "unmatched_wiki_lines": 5,
+    "matched": 115,
+    "speakers_to_map": 3,
+    "text_auto_correct": 16,
+    "text_review": 7,
+    "text_group_review": 22,
+    "unmatched_json": 3
+  }
+}

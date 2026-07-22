@@ -1,0 +1,761 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:58.621021+00:00",
+  "snapshot": "1784649187000-lpc3-20260721",
+  "album": "Longmont Potion Castle III",
+  "album_slug": "longmont-potion-castle-iii",
+  "track": "DeFrancos Boots",
+  "track_slug": "defrancos-boots",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-iii/defrancos-boots.json",
+  "json_sha256": "85c4acf349d4cac7239f13c54f21f114a759cf27469a7e501f4e94ad1d5348e0",
+  "wiki_title": "DeFranco's Boots",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/DeFranco%27s_Boots",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man",
+      "confidence": 0.8013,
+      "observations": 12,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 11.465,
+          "observations": 12
+        },
+        {
+          "name": "LPC",
+          "score": 2.8434,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.7182,
+      "observations": 11,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 10.195,
+          "observations": 11
+        },
+        {
+          "name": "Man",
+          "score": 4.0,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's how do you?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What's how do you?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Pardon me?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Pardon me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Pardon me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What sound to you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How-- [beep] --does that sound to you?",
+      "similarity": 0.7083,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How-- [beep] --does that sound to you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "How does what sound to me?",
+      "wiki_speaker": "Man",
+      "wiki_text": "How does what sound to me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "How does what sound to me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Me coming out, kicking my boots around.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Me coming out, kicking my boots around.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Me coming out, kicking my boots around.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "For what?",
+      "wiki_speaker": "Man",
+      "wiki_text": "For what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "For what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "To get what I need?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "To get what I need.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "To get what I need?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, if you don't have it, sir, we can't help you.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, if we don't have it, sir, we can't help you.",
+      "similarity": 0.9462,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, if we don't have it, sir, we can't help you.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Who am I speaking to?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who am I speakin' to?",
+      "similarity": 0.95,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who am I speakin' to?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Huh?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Huh?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Huh?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What am I speaking to?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Who am I speakin' to?",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who am I speakin' to?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is DeFranco.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is DeFranco.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is DeFranco.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah? And why should we get your boots, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And why should we get your boots, sir?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah? And why should we get your boots, sir?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "And why should we get your boots, sir?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Because you don't, I need my elastic, you're gonna meet up my boob.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "'Cause you don't... I need my elastic, or you're gonna meet up w' my boot. That's the bottom line.",
+      "similarity": 0.9385,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because you don't, I need my elastic, you're gonna meet up my boob.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's the bottom line.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "'Cause you don't... I need my elastic, or you're gonna meet up w' my boot. That's the bottom line.",
+      "similarity": 0.9385,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's the bottom line.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What boots are you talking about?",
+      "wiki_speaker": "Man",
+      "wiki_text": "What boots are you talking about?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "What boots are you talking about?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The boots are my foot.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "The boots-- [beep] --on my foot.",
+      "similarity": 0.8261,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "The boots-- [beep] --on my foot.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, what's wrong with them?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah, what's wrong with them?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, what's wrong with them?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "They're gonna make my boot.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They're gonna meet up with your lip.",
+      "similarity": 0.8434,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "They're gonna make my boot.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "meet up with your lip.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "They're gonna meet up with your lip.",
+      "similarity": 0.8434,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21
+      ],
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "meet up with your lip.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah?",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I just need my elastic outfit if I could.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I just need my elastic outfit, if I could.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just need my elastic outfit if I could.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Your elastic outfit?",
+      "wiki_speaker": "Man",
+      "wiki_text": "The \"elastic outfit\"?",
+      "similarity": 0.8108,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "The \"elastic outfit\"?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "For what?",
+      "wiki_speaker": "Man",
+      "wiki_text": "For what?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        23
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "For what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "For me to wear.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "For me to wear.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "For me to wear.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I don't know what kind of outfit you're talking about it.",
+      "wiki_speaker": "Man",
+      "wiki_text": "For... how... how... I don't know what kind of outfit you're-- '[beep]' --talkin' about, if you're... you're welcome to call one of our stores and see if they have it.",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I don't know what kind of outfit you're talking about it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're welcome to call one of our stores and see if they have it.",
+      "wiki_speaker": "Man",
+      "wiki_text": "For... how... how... I don't know what kind of outfit you're-- '[beep]' --talkin' about, if you're... you're welcome to call one of our stores and see if they have it.",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're welcome to call one of our stores and see if they have it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I need an elastic purchase.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need an elastic purchase, though, is what I need to make. And if you don't provide it, you're gonna meet up w' my fist. How's tha--",
+      "similarity": 0.8787,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need an elastic purchase.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's what I need to make.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need an elastic purchase, though, is what I need to make. And if you don't provide it, you're gonna meet up w' my fist. How's tha--",
+      "similarity": 0.8787,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's what I need to make.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And if you don't provide it, you're going to meet up my fist.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I need an elastic purchase, though, is what I need to make. And if you don't provide it, you're gonna meet up w' my fist. How's tha--",
+      "similarity": 0.8787,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31,
+        32
+      ],
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And if you don't provide it, you're going to meet up my fist.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Fine.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Fine. Sounds like a winner.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Fine.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sounds like a winner.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Fine. Sounds like a winner.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sounds like a winner.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Get the trade gone.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[to someone in background] Get... get the trace going. [to LPC] 'Kay...",
+      "similarity": 0.506,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Get the trade gone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[to someone in background] Get... get the trace going. [to LPC] 'Kay...",
+      "similarity": 0.506,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Keep talking.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Keep talking.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Keep talking.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Shut up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Shut up.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Shut up.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 38,
+    "total_wiki_lines": 32,
+    "matched_wiki_lines": 29,
+    "unmatched_wiki_lines": 3,
+    "matched": 37,
+    "speakers_to_map": 2,
+    "text_auto_correct": 3,
+    "text_review": 3,
+    "text_group_review": 11,
+    "unmatched_json": 1
+  }
+}

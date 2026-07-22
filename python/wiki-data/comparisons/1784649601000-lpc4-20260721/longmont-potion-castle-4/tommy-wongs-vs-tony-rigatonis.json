@@ -1,0 +1,452 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:08:41.021394+00:00",
+  "snapshot": "1784649601000-lpc4-20260721",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Tommy Wongs Vs Tony Rigatonis",
+  "track_slug": "tommy-wongs-vs-tony-rigatonis",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/tommy-wongs-vs-tony-rigatonis.json",
+  "json_sha256": "d841984fe123373fe35e828d008fa492a71e35c864b1a6aa203dcc12f54d7f82",
+  "wiki_title": "Tommy Wong's Vs. Tony Rigatoni's",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Tommy_Wong%27s_Vs._Tony_Rigatoni%27s",
+  "speaker_mapping": {
+    "SPEAKER_00": "Man (2)",
+    "SPEAKER_01": "Man (1)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Man (2)",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man (1)",
+      "confidence": 0.8482,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 4.6239,
+          "observations": 5
+        },
+        {
+          "name": "Man (2)",
+          "score": 0.8276,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man (1)",
+      "confidence": 0.5,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (1)",
+          "score": 2.0,
+          "observations": 2
+        },
+        {
+          "name": "Man (2)",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Man (2)",
+      "confidence": 0.6403,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man (2)",
+          "score": 1.78,
+          "observations": 2
+        },
+        {
+          "name": "Man (1)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Hello.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Tony Rigotones?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Tony Rigatoni's?",
+      "similarity": 0.8276,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tony Rigatoni's?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, yes, this is Tommy Wang's.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Uh, yes, this, uh, Tommy Wong's?",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, yes, this, uh, Tommy Wong's?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tony Rigotones?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Tony Rigatoni's?",
+      "similarity": 0.8276,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tony Rigatoni's?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tony's?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Tony's? This is Chinese, uh, restaurant.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Tony's?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Chinese restaurant.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Tony's? This is Chinese, uh, restaurant.",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Chinese restaurant.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "No, this is Tony Rigotones.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "No, this is Tony Rigatoni's. It's an Italian restaurant.",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, this is Tony Rigotones.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's an Italian restaurant.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "No, this is Tony Rigatoni's. It's an Italian restaurant.",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's an Italian restaurant.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh, Italian restaurant?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Ah, Italian restaurant.",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ah, Italian restaurant.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Uh-huh.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Uh-huh.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, uh, uh, what, do you need to be delivered or?",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay, uh... and... uh... what... you going to be deliver, or...?",
+      "similarity": 0.8261,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, uh... and... uh... what... you going to be deliver, or...?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, you called us?",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "No, you called us.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, you called us?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "No.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, I did somebody call over there and they say,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Oh, I did somebody call over there and they say,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Um, no, this is definitely not.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Um, no... this is definitely not... we didn't call.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, no, this is definitely not.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We didn't call.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Um, no... this is definitely not... we didn't call.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We didn't call.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, okay.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Oh, okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Sorry.",
+      "wiki_speaker": "Man (2)",
+      "wiki_text": "Sorry.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Man (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sorry.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay.",
+      "wiki_speaker": "Man (1)",
+      "wiki_text": "Okay.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Man (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 20,
+    "total_wiki_lines": 16,
+    "matched_wiki_lines": 14,
+    "unmatched_wiki_lines": 2,
+    "matched": 17,
+    "speakers_to_map": 2,
+    "text_auto_correct": 2,
+    "text_review": 3,
+    "text_group_review": 4,
+    "unmatched_json": 3
+  }
+}

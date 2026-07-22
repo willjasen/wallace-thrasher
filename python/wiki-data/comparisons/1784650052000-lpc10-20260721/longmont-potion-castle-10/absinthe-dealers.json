@@ -1,0 +1,894 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:09:25.066560+00:00",
+  "snapshot": "1784650052000-lpc10-20260721",
+  "album": "Longmont Potion Castle 10",
+  "album_slug": "longmont-potion-castle-10",
+  "track": "Absinthe Dealers",
+  "track_slug": "absinthe-dealers",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-10/absinthe-dealers.json",
+  "json_sha256": "525d97ad30ef2111d0197db81f5d3f589ffa1d4ced5cdac5b35d42a9044191db",
+  "wiki_title": "Absinthe Dealers",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Absinthe_Dealers",
+  "speaker_mapping": {
+    "SPEAKER_00": "Woman",
+    "SPEAKER_01": "Jackson"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Jackson",
+      "confidence": 0.7177,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Jackson",
+          "score": 2.5421,
+          "observations": 3
+        },
+        {
+          "name": "Man(5)",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Jackson",
+      "confidence": 0.4931,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Jackson",
+          "score": 1.8198,
+          "observations": 2
+        },
+        {
+          "name": "Woman",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man(1)",
+          "score": 0.871,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Jackson",
+      "confidence": 0.6133,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Jackson",
+          "score": 2.8537,
+          "observations": 3
+        },
+        {
+          "name": "Man(4)",
+          "score": 1.7996,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_04": {
+      "name": "Man(1)",
+      "confidence": 0.3572,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Man(1)",
+          "score": 1.871,
+          "observations": 2
+        },
+        {
+          "name": "Man(5)",
+          "score": 1.7143,
+          "observations": 2
+        },
+        {
+          "name": "Man(2)",
+          "score": 0.8299,
+          "observations": 1
+        },
+        {
+          "name": "Man(3)",
+          "score": 0.8232,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Absent? Yeah, we have some absence.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Absinthe? Yeah, we have some absinthe; we’ve got Kübler and Pernod.",
+      "similarity": 0.871,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Absent? Yeah, we have some absence.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "We've got Kubler and Pernaud.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Absinthe? Yeah, we have some absinthe; we’ve got Kübler and Pernod.",
+      "similarity": 0.871,
+      "match_type": "similar",
+      "json_group": [
+        1,
+        2
+      ],
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got Kubler and Pernaud.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Pernault.",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Pernod?",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "Pernod?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Right.",
+      "wiki_speaker": "Man(1)",
+      "wiki_text": "Right.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "Man(1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I got Pernaud, but like green moon.",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Uhh, I don’t got Pernod but, uh, like, ah, Green Moon. You’re looking for absinthe, right?",
+      "similarity": 0.8299,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I got Pernaud, but like green moon.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "You're looking for absent, right?",
+      "wiki_speaker": "Man(2)",
+      "wiki_text": "Uhh, I don’t got Pernod but, uh, like, ah, Green Moon. You’re looking for absinthe, right?",
+      "similarity": 0.8299,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man(2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You're looking for absent, right?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Real green stuff.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "Real green stuff.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "The classic is Vieux Pontellier right here.",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Real green stuff, ah, the classic is Vieux Pontarlier, right here. That’s the real deal; ’s the right stuff. I also have Verte la Sorcière, which is real green. Uh, I have Swiss absinthe: Kübler Verte. It’s not as green as the Pontarlier—",
+      "similarity": 0.8232,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "The classic is Vieux Pontellier right here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "That's the real deal.",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Real green stuff, ah, the classic is Vieux Pontarlier, right here. That’s the real deal; ’s the right stuff. I also have Verte la Sorcière, which is real green. Uh, I have Swiss absinthe: Kübler Verte. It’s not as green as the Pontarlier—",
+      "similarity": 0.8232,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's the real deal.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "It's great stuff.",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Real green stuff, ah, the classic is Vieux Pontarlier, right here. That’s the real deal; ’s the right stuff. I also have Verte la Sorcière, which is real green. Uh, I have Swiss absinthe: Kübler Verte. It’s not as green as the Pontarlier—",
+      "similarity": 0.8232,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's great stuff.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I also have the Lausia, which is real green.",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Real green stuff, ah, the classic is Vieux Pontarlier, right here. That’s the real deal; ’s the right stuff. I also have Verte la Sorcière, which is real green. Uh, I have Swiss absinthe: Kübler Verte. It’s not as green as the Pontarlier—",
+      "similarity": 0.8232,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I also have the Lausia, which is real green.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I have Swiss absin duplevert.",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Real green stuff, ah, the classic is Vieux Pontarlier, right here. That’s the real deal; ’s the right stuff. I also have Verte la Sorcière, which is real green. Uh, I have Swiss absinthe: Kübler Verte. It’s not as green as the Pontarlier—",
+      "similarity": 0.8232,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have Swiss absin duplevert.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "It's not as green as the Pontellier.",
+      "wiki_speaker": "Man(3)",
+      "wiki_text": "Real green stuff, ah, the classic is Vieux Pontarlier, right here. That’s the real deal; ’s the right stuff. I also have Verte la Sorcière, which is real green. Uh, I have Swiss absinthe: Kübler Verte. It’s not as green as the Pontarlier—",
+      "similarity": 0.8232,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man(3)",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's not as green as the Pontellier.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Dahlia.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Dahlia.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Excuse me, sir?",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "—Excuse me, sir?—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "Excuse me, sir?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh, yes, sir.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Oh, yes sir! Um, we have Leopold Brothers, Absinthe Verte, Lucid, Absinthe Superieure, and Absente, Absente Refined.",
+      "similarity": 0.9073,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, yes, sir.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "We have Leopold Brothers, Absent Verte, Lucid, Absent Superior, and Absenta, Absenta Refined.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Oh, yes sir! Um, we have Leopold Brothers, Absinthe Verte, Lucid, Absinthe Superieure, and Absente, Absente Refined.",
+      "similarity": 0.9073,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "We have Leopold Brothers, Absent Verte, Lucid, Absent Superior, and Absenta, Absenta Refined.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Is that what you look?",
+      "wiki_speaker": "Man(4)",
+      "wiki_text": "Is that what you’re looki—wh—are you looking for something, or...?",
+      "similarity": 0.9107,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man(4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is that what you look?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Are you looking for something?",
+      "wiki_speaker": "Man(4)",
+      "wiki_text": "Is that what you’re looki—wh—are you looking for something, or...?",
+      "similarity": 0.9107,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Man(4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you looking for something?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I was on the line with someone who was asking for Batson.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "I was on the line with someone who was asking for vatten.",
+      "similarity": 0.9464,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was on the line with someone who was asking for vatten.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Oh.",
+      "wiki_speaker": "Man(4)",
+      "wiki_text": "Oh, uhh, you remember who—",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man(4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Do you remember who?",
+      "wiki_speaker": "Man(4)",
+      "wiki_text": "Oh, uhh, you remember who—",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Man(4)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you remember who?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "—No! No, I—",
+      "similarity": 0.4444,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "—No! No, I—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You know, I, we do have some nice sparkling rosés, though.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "We do have some nice, uh, sparkling Rosés, though. But, yeah, we don’t carry—",
+      "similarity": 0.8514,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "You know, I, we do have some nice sparkling rosés, though.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "But, yeah, we don't agree.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "We do have some nice, uh, sparkling Rosés, though. But, yeah, we don’t carry—",
+      "similarity": 0.8514,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "wiki_indices": [
+        19
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "But, yeah, we don't agree.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello?",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Hello? Hey, this is Jackson. Am I still on the phone?—",
+      "similarity": 0.9684,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hey, this Jackson.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Hello? Hey, this is Jackson. Am I still on the phone?—",
+      "similarity": 0.9684,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, this Jackson.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Am I still on the phone?",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Hello? Hey, this is Jackson. Am I still on the phone?—",
+      "similarity": 0.9684,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "Am I still on the phone?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, you are?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—Yes, you are—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, you are?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, no, actually, you called me.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "—No, no. Actually, you called me.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, no, actually, you called me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, I'm sorry about that.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Oh, I’m sorry about that; I dropped the phone.",
+      "similarity": 0.9767,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, I'm sorry about that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I dropped the phone.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "Oh, I’m sorry about that; I dropped the phone.",
+      "similarity": 0.9767,
+      "match_type": "similar",
+      "json_group": [
+        32,
+        33
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "I dropped the phone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "How can I help you?",
+      "wiki_speaker": "Man(5)",
+      "wiki_text": "How can I help you?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Man(5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "How can I help you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I can drop the phone.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "I dropped the phone. I mean, I—I answered the phone and I couldn’t understand what—what the question was.",
+      "similarity": 0.9192,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36
+      ],
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "I can drop the phone.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I mean, I answered the phone, and I couldn't understand what the question was.",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "I dropped the phone. I mean, I—I answered the phone and I couldn’t understand what—what the question was.",
+      "similarity": 0.9192,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36
+      ],
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "matched_line",
+      "proposed_text": "I mean, I answered the phone, and I couldn't understand what the question was.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, what are you looking for?",
+      "wiki_speaker": "Man(5)",
+      "wiki_text": "—Okay, what are you looking for?—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Man(5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, what are you looking for?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, you guys called me?",
+      "wiki_speaker": "Jackson",
+      "wiki_text": "—Uh, thi—and this—Oh! You guys called me! [laughs]",
+      "similarity": 0.6462,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "Jackson",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "—Uh, thi—and this—Oh! You guys called me! [laughs]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "I don't think so.",
+      "wiki_speaker": "Man(5)",
+      "wiki_text": "Uh, I don’t think so. [laughs]",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Man(5)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, I don’t think so. [laughs]",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 39,
+    "total_wiki_lines": 25,
+    "matched_wiki_lines": 22,
+    "unmatched_wiki_lines": 3,
+    "matched": 37,
+    "speakers_to_map": 2,
+    "text_auto_correct": 1,
+    "text_review": 4,
+    "text_group_review": 25,
+    "unmatched_json": 2
+  }
+}

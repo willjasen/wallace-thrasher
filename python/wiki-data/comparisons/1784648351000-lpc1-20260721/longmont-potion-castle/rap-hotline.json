@@ -1,0 +1,432 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:41:08.412477+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Rap Hotline",
+  "track_slug": "rap-hotline",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/rap-hotline.json",
+  "json_sha256": "3d2455579f7de6cecc5076de519058140a1040d809d7011d4b8c31a7a59e0b1d",
+  "wiki_title": "Rap Hotline",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Rap_Hotline",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "Woman",
+      "confidence": 0.5885,
+      "observations": 5,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Woman",
+          "score": 4.2904,
+          "observations": 5
+        },
+        {
+          "name": "LPC",
+          "score": 3.0,
+          "observations": 3
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 0.6896,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.871,
+          "observations": 2
+        },
+        {
+          "name": "Woman",
+          "score": 0.8421,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.6,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "None",
+      "json_text": "Hello?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We got two people on this line?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "We've got two people on this line? [laughs]",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got two people on this line? [laughs]",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, me and you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--me and you. What're you doing?",
+      "similarity": 0.871,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, me and you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--me and you. What're you doing?",
+      "similarity": 0.871,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What are you doing?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm fine.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Oh. I'm fine.",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh. I'm fine.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, yeah.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't understand.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't understand.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't understand.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't either.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "I don't either.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't either.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[laughing] I don't either. '[beep]'",
+      "similarity": 0.6333,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "I don't either.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's up two?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "[laughing] I don't either. '[beep]'",
+      "similarity": 0.6333,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "SPEAKER_00",
+      "speaker_action": "keep",
+      "proposed_text": "What's up two?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Uh, have I got two different people on this line?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Uh, have I got two different people on this line?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, have I got two different people on this line?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, I could call the rap hot line, for sure.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, I called the rap hotline, just... [unintelligible]",
+      "similarity": 0.6,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Uh, I called the rap hotline, just... [unintelligible]",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, this is the rap hot line.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, this isn't the rap hotline, now who is the other guy, wants embroidery, right?",
+      "similarity": 0.8933,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, this is the rap hot line.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Now, who's the other guy?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, this isn't the rap hotline, now who is the other guy, wants embroidery, right?",
+      "similarity": 0.8933,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now, who's the other guy?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want embroidery.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Well, this isn't the rap hotline, now who is the other guy, wants embroidery, right?",
+      "similarity": 0.8933,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15,
+        16
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want embroidery.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want embroidery.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I want embroidery.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want embroidery.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, the rap hotline... can hang up, okay?",
+      "similarity": 0.9067,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "The wrap hotlines to hang up, okay?",
+      "wiki_speaker": "Woman",
+      "wiki_text": "Okay, the rap hotline... can hang up, okay?",
+      "similarity": 0.9067,
+      "match_type": "similar",
+      "json_group": [
+        18,
+        19
+      ],
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Woman",
+      "speaker_action": "matched_line",
+      "proposed_text": "The wrap hotlines to hang up, okay?",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 19,
+    "total_wiki_lines": 15,
+    "matched_wiki_lines": 13,
+    "unmatched_wiki_lines": 2,
+    "matched": 18,
+    "speakers_to_map": 1,
+    "text_auto_correct": 1,
+    "text_review": 2,
+    "text_group_review": 9,
+    "unmatched_json": 1
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:55:26.026126+00:00",
+  "snapshot": "1784648801000-lpc2-20260721",
+  "album": "Longmont Potion Castle II",
+  "album_slug": "longmont-potion-castle-ii",
+  "track": "Square Dance",
+  "track_slug": "square-dance",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-ii/square-dance.json",
+  "json_sha256": "990c80abfe380811202ccc9744421232e2333b8aed873f2493d3ef4484d367e9",
+  "wiki_title": "Square Dance",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Square_Dance",
+  "speaker_mapping": {
+    "SPEAKER_01": "Man",
+    "SPEAKER_02": "Man"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.5953,
+      "observations": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 2.9423,
+          "observations": 3
+        },
+        {
+          "name": "Man",
+          "score": 2.0,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 0.8627,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Man",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Man",
+          "score": 0.9024,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, no, this is a shop.",
+      "wiki_speaker": "Man",
+      "wiki_text": "[laughs] Well, no, this is a shop.",
+      "similarity": 0.8627,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "[laughs] Well, no, this is a shop.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Right.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Right.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Right.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Yeah.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I was wondering if I could square dance for a little bit in there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I was wondering if I could square dance for a little bit, in there.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was wondering if I could square dance for a little bit in there.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I don't think so.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Well, I don't think so.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, I don't think so.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I have this little actor I hold snakes in my mouth.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I have this little act where I hold snakes in my mouth.",
+      "similarity": 0.9423,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have this little act where I hold snakes in my mouth.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Just saying I've got a... someone called in.",
+      "wiki_speaker": "Man",
+      "wiki_text": "Just saying... I've got, uh... someone calling in.",
+      "similarity": 0.9024,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "Just saying... I've got, uh... someone calling in.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 7,
+    "total_wiki_lines": 7,
+    "matched_wiki_lines": 7,
+    "unmatched_wiki_lines": 0,
+    "matched": 7,
+    "speakers_to_map": 2,
+    "text_auto_correct": 3,
+    "text_review": 0,
+    "text_group_review": 0,
+    "unmatched_json": 0
+  }
+}

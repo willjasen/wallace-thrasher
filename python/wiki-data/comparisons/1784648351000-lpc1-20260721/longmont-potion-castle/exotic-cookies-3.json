@@ -1,0 +1,366 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:40:57.928683+00:00",
+  "snapshot": "1784648351000-lpc1-20260721",
+  "album": "Longmont Potion Castle",
+  "album_slug": "longmont-potion-castle",
+  "track": "Exotic Cookies 3",
+  "track_slug": "exotic-cookies-3",
+  "json_path": "jekyll/assets/json/longmont-potion-castle/exotic-cookies-3.json",
+  "json_sha256": "369366daf86e007d6904db23dca8d42a1ff579ba21df049687e22f984ad31a2f",
+  "wiki_title": "Exotic Cookies 3",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Exotic_Cookies_3",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Woman (1)",
+    "SPEAKER_02": "Woman (2)"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 3.5468,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Woman (1)",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman (1)",
+          "score": 3.7285,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Woman (2)",
+      "confidence": 0.8229,
+      "observations": 3,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Woman (2)",
+          "score": 2.9174,
+          "observations": 3
+        },
+        {
+          "name": "LPC",
+          "score": 0.6279,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't know. I didn't order nothing.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "Look, I don't know... '[beep]' I didn't order nothin'!",
+      "similarity": 0.8095,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Look, I don't know... '[beep]' I didn't order nothin'!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You ordered the helium cookies, though?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You ordered the helium cookies, though.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        1
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You ordered the helium cookies, though?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I didn't.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "No, I didn't!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I didn't.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your what?",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "You what?",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "You what?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "When can it bring in your box package?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "When can I bring you your box package?",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "When can I bring you your box package?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I didn't order no box package. I'm telling you.",
+      "wiki_speaker": "Woman (1)",
+      "wiki_text": "I didn't order no box package, I'm tellin' you!",
+      "similarity": 0.9778,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "Woman (1)",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't order no box package, I'm tellin' you!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Concerting a helium lotion.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--concer... considering... uh, concerning, uh... helium lotion. Right.",
+      "similarity": 0.6279,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Concerting a helium lotion.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Wait.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "--concer... considering... uh, concerning, uh... helium lotion. Right.",
+      "similarity": 0.6279,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Wait.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And your name?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "And your name?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "And your name?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Nipper.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Nipper.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nipper.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Nipper?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Nipper?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Nipper?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "None",
+      "json_text": "Yes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mr. Nipper?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Mr. Nipper? '[beep]' That's your last name? Is it Mr. Nipper, or...",
+      "similarity": 0.9174,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Mr. Nipper?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "That's your last name?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Mr. Nipper? '[beep]' That's your last name? Is it Mr. Nipper, or...",
+      "similarity": 0.9174,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's your last name?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Is it Mr. Nipper or?",
+      "wiki_speaker": "Woman (2)",
+      "wiki_text": "Mr. Nipper? '[beep]' That's your last name? Is it Mr. Nipper, or...",
+      "similarity": 0.9174,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14,
+        15
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is it Mr. Nipper or?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "for our.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Woman (2)",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "for our.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 16,
+    "total_wiki_lines": 13,
+    "matched_wiki_lines": 12,
+    "unmatched_wiki_lines": 1,
+    "matched": 15,
+    "speakers_to_map": 3,
+    "text_auto_correct": 3,
+    "text_review": 1,
+    "text_group_review": 5,
+    "unmatched_json": 1
+  }
+}

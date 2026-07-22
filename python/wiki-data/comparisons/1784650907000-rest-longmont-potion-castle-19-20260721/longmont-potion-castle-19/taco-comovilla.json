@@ -1,0 +1,1743 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T16:28:08.267425+00:00",
+  "snapshot": "1784650907000-rest-longmont-potion-castle-19-20260721",
+  "album": "Longmont Potion Castle 19",
+  "album_slug": "longmont-potion-castle-19",
+  "track": "Taco Comovilla",
+  "track_slug": "taco-comovilla",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-19/taco-comovilla.json",
+  "json_sha256": "960defce903f98c96342e388250d20013037f4c89a093f75774fb448950c34be",
+  "wiki_title": "Taco Comovilla",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Taco_Comovilla",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Mario",
+    "SPEAKER_02": "Mario"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 0.7622,
+      "observations": 24,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 22.0355,
+          "observations": 24
+        },
+        {
+          "name": "Mario",
+          "score": 6.875,
+          "observations": 7
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Mario",
+      "confidence": 1.0,
+      "observations": 5,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Mario",
+          "score": 4.5426,
+          "observations": 5
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Mario",
+      "confidence": 0.8969,
+      "observations": 16,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Mario",
+          "score": 14.8238,
+          "observations": 16
+        },
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        },
+        {
+          "name": "Man",
+          "score": 0.7033,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, my name's Helmut with Ascap. How are we today?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi! My name’s Helmut with ASCAP. How are we today?",
+      "similarity": 0.9787,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi! My name’s Helmut with ASCAP. How are we today?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm good.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "I’m good.",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m good.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Good. I know you are under new management, so I thought I'd give you a call and introduce myself.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Good! I know you are under new management, so I thought I’d give you a call and introduce myself; I’m your new account rep. here at ASCAP.",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Good. I know you are under new management, so I thought I'd give you a call and introduce myself.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm your new account rep here at Ascab.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Good! I know you are under new management, so I thought I’d give you a call and introduce myself; I’m your new account rep. here at ASCAP.",
+      "similarity": 0.9774,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm your new account rep here at Ascab.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, I'm the old manager. You're calling the wrong person.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "No, I’m the old manager; you’re calling the wrong person.",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, I’m the old manager; you’re calling the wrong person.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, well, I'm new to the account, so...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, well I’m new to the account, so, ah—",
+      "similarity": 0.9315,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, well I’m new to the account, so, ah—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, I just leased a place. I have nothing to do with Northern Lights anymore.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Well I’m—I just leased the place; I have nothing to do with Northern D’Lites anymore.",
+      "similarity": 0.879,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Well I’m—I just leased the place; I have nothing to do with Northern D’Lites anymore.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, you got live music up there, don't you?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well you got live music up there, don’t ya?",
+      "similarity": 0.9398,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well you got live music up there, don’t ya?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't have anything.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "I don’t have anything. Let me spell it out to you again: I do not own the place anymore; I sold it last week. Bye—",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have anything.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let me spell it out to you again.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "I don’t have anything. Let me spell it out to you again: I do not own the place anymore; I sold it last week. Bye—",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Let me spell it out to you again.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I do not own the place anymore.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "I don’t have anything. Let me spell it out to you again: I do not own the place anymore; I sold it last week. Bye—",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I do not own the place anymore.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I sold it last week.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "I don’t have anything. Let me spell it out to you again: I do not own the place anymore; I sold it last week. Bye—",
+      "similarity": 0.972,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I sold it last week.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you guys got chickens on the sidewalk up there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Do you guys got chickens on the sidewalk up ‘ere?",
+      "similarity": 0.9792,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Do you guys got chickens on the sidewalk up ‘ere?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sir, it's Helmut Frick with Askup.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, sir, it’s Helmut Frick with ASCAP. I just had a couple quick questions for you today, okay?",
+      "similarity": 0.9492,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sir, it's Helmut Frick with Askup.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I just had a couple quick questions for you today, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, sir, it’s Helmut Frick with ASCAP. I just had a couple quick questions for you today, okay?",
+      "similarity": 0.9492,
+      "match_type": "similar",
+      "json_group": [
+        16,
+        17
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I just had a couple quick questions for you today, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sure, whatever you say.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Sure! Whatever you say!",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        15
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sure, whatever you say.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We just would like to get a small deposit.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We just would like to get a small deposit just so that—",
+      "similarity": 0.8632,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We just would like to get a small deposit just so that—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I am not the owners. Do you understand? Can you understand me? I released the place as of the 19th of last week. I do not have anything to do with Northern whites.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—I am not the owner! Do you understand? Can you understand me? I s—w—leased the place as of the 19th of last week; I do not have anything to do with Northern D’Lites.",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        17
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "—I am not the owner! Do you understand? Can you understand me? I s—w—leased the place as of the 19th of last week; I do not have anything to do with Northern D’Lites.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Just so you don't get behind, okay? If we could get just a $200 deposit, we'll be all set, okay, on your account here today.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—you don’t get behind, okay? If we could just get a $200 deposit we’ll be all set, okay, on your account here, today. Okay?",
+      "similarity": 0.8918,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        20
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—you don’t get behind, okay? If we could just get a $200 deposit we’ll be all set, okay, on your account here, today. Okay?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Listen, fuck face. I don't owe you anything because I am not the owner. Do you understand English?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Listen, fuckface: I don’t owe you anything ‘cause I am not the owner! Do you understand English?",
+      "similarity": 0.973,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        21
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, fuckface: I don’t owe you anything ‘cause I am not the owner! Do you understand English?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's not how it works, sir. This is asking.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That’s not how it works, sir; this is ASCAP calling, okay?",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's not how it works, sir. This is asking.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Saskap calling, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That’s not how it works, sir; this is ASCAP calling, okay?",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "wiki_indices": [
+        22
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Saskap calling, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Hello?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        24
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes, Mario, this is ASCAP calling, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, Mario, this is ASCAP calling, okay? Now—",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        25
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, Mario, this is ASCAP calling, okay? Now—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, I gather that.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Yeah, I gathered that, now you listen to me: I don’t have anything to do with Northern D’Lites anymore—",
+      "similarity": 0.9543,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, I gather that.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Now, you listen to me.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Yeah, I gathered that, now you listen to me: I don’t have anything to do with Northern D’Lites anymore—",
+      "similarity": 0.9543,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now, you listen to me.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I don't have anything to do with Northern Delights anymore.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Yeah, I gathered that, now you listen to me: I don’t have anything to do with Northern D’Lites anymore—",
+      "similarity": 0.9543,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28,
+        29
+      ],
+      "wiki_indices": [
+        26
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't have anything to do with Northern Delights anymore.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Okay!—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        27
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I told it last week.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—I sold it last week!—",
+      "similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        28
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "—I sold it last week!—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Okay!—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        29
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You said to me, you know it's under new management.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "You’ve said to me you know it’s under new management. Why are you bothering me?",
+      "similarity": 0.9669,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "You said to me, you know it's under new management.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why are you bothering me?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "You’ve said to me you know it’s under new management. Why are you bothering me?",
+      "similarity": 0.9669,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34
+      ],
+      "wiki_indices": [
+        30
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why are you bothering me?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, before last week, you were playing the song by Don Komovia called Taco",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, before last week, you were playing the song by Don Comovilla called, “Taco Comovilla, Taco Comovilla!”—",
+      "similarity": 0.9648,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, before last week, you were playing the song by Don Komovia called Taco",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Comovia.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, before last week, you were playing the song by Don Comovilla called, “Taco Comovilla, Taco Comovilla!”—",
+      "similarity": 0.9648,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Comovia.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Taco Como Villa.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well, before last week, you were playing the song by Don Comovilla called, “Taco Comovilla, Taco Comovilla!”—",
+      "similarity": 0.9648,
+      "match_type": "similar",
+      "json_group": [
+        35,
+        36,
+        37
+      ],
+      "wiki_indices": [
+        31
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Taco Como Villa.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How about playing your mother's pussy, you fucking asshole, your four-eyed fuck?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—How ‘bout playing your mother’s pussy ya fuckin’ asshole, ya four-eyed fuck?!—",
+      "similarity": 0.9262,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        32
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "—How ‘bout playing your mother’s pussy ya fuckin’ asshole, ya four-eyed fuck?!—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And you owe us $200, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—and you owe us $200, Okay?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        33
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you owe us $200, okay?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm not going to come up and fucking gutcha, you, you motherfucker.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "[unintelligible] I’m gonna come up there and fuckin’ gut ya, you motherfucker!—",
+      "similarity": 0.7007,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        34
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "[unintelligible] I’m gonna come up there and fuckin’ gut ya, you motherfucker!—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—Now—",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        35
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Now—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Oh, fuck Christ, Sam. Why don't you stop it?",
+      "wiki_speaker": "Man",
+      "wiki_text": "[In background] Oh, for Christ sake! Why don’t you stop?!",
+      "similarity": 0.7033,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        37
+      ],
+      "proposed_speaker": "Man",
+      "speaker_action": "matched_line",
+      "proposed_text": "[In background] Oh, for Christ sake! Why don’t you stop?!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Hello?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        39
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello, sir, when are you going to pay us for Taco Como Villa?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello? Sir, when are you going to pay us for “Taco Comovilla, Taco Comovilla!” the song that you’ve been playing?",
+      "similarity": 0.9813,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hello, sir, when are you going to pay us for Taco Como Villa?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Taco Como Villa, the song, that you've been playing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hello? Sir, when are you going to pay us for “Taco Comovilla, Taco Comovilla!” the song that you’ve been playing?",
+      "similarity": 0.9813,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45
+      ],
+      "wiki_indices": [
+        40
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Taco Como Villa, the song, that you've been playing?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How Mo Villa?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout Como my ass again. Listen to me: I don’t own it anymore!; I don’t owe you any money! As a matter of fact, you owe me money, so bust off and go fuck yourself!",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "How Mo Villa?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "again. Listen to me, I don't own it anymore. I don't owe you any money. As a matter of fact,",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout Como my ass again. Listen to me: I don’t own it anymore!; I don’t owe you any money! As a matter of fact, you owe me money, so bust off and go fuck yourself!",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "again. Listen to me, I don't own it anymore. I don't owe you any money. As a matter of fact,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "you owe me money. So bust off and go fuck yourself.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout Como my ass again. Listen to me: I don’t own it anymore!; I don’t owe you any money! As a matter of fact, you owe me money, so bust off and go fuck yourself!",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47,
+        48
+      ],
+      "wiki_indices": [
+        41
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "you owe me money. So bust off and go fuck yourself.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Taco Como Villa. Okay.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Taco Comovilla, [sfx] okay?",
+      "similarity": 0.8837,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        42
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Taco Comovilla, [sfx] okay?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh? Yes, sir. We're just going to send a rep out to pick a checkup, okay, this evening, all right?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes, sir. We’re just gonna send a rep. out to pick a check up, okay? This evening, alright?",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        45
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes, sir. We’re just gonna send a rep. out to pick a check up, okay? This evening, alright?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Sure, that's fine. No problem. $200, we're done.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Sure! That’s fine! No problem!",
+      "similarity": 0.7536,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        46
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sure! That’s fine! No problem!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "$200?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "$200 and you’re done for playing one song!",
+      "similarity": 0.975,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "$200?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "and you're done for playing one song.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "$200 and you’re done for playing one song!",
+      "similarity": 0.975,
+      "match_type": "similar",
+      "json_group": [
+        52,
+        53
+      ],
+      "wiki_indices": [
+        48
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "and you're done for playing one song.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah, Taco Como Villa.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah: “Taco Comovilla, Taco Comovilla!” This is ASCAP calling—",
+      "similarity": 0.86,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, Taco Como Villa.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Taco Como. This is Ascac.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah: “Taco Comovilla, Taco Comovilla!” This is ASCAP calling—",
+      "similarity": 0.86,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55
+      ],
+      "wiki_indices": [
+        49
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Taco Como. This is Ascac.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Do you know what Cocoa commovia means?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Do you know what “Taco Comovilla” means?",
+      "similarity": 0.8919,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        50
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "—Do you know what “Taco Comovilla” means?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh, no, sir!",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        51
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uh, no, sir!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I mean, stick it up your ass, you asshole.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "It means, “stick it up your ass, ya asshole!”",
+      "similarity": 0.9367,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        52
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "It means, “stick it up your ass, ya asshole!”",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yeah?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Yeah?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        54
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Sir, this is Helmut Frick with Ascab.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Sir, this is Helmut Frick with ASCAP. What do we need to do to get through with ya here, today?",
+      "similarity": 0.9418,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Sir, this is Helmut Frick with Ascab.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What do we need to do to do to get through with you here today?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Sir, this is Helmut Frick with ASCAP. What do we need to do to get through with ya here, today?",
+      "similarity": 0.9418,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "wiki_indices": [
+        55
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What do we need to do to do to get through with you here today?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How about listening?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Mario",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How about listening?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Take the fucking shit out of your ears",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout listening? Take the fuckin’ shit out of your ears and listen to what I’m saying: I do not own it anymore; I’ve been closed for fucking the last year, douchebag! How ‘bout that? Can you understand that now?!",
+      "similarity": 0.9235,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Take the fucking shit out of your ears",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and listen to what I'm saying.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout listening? Take the fuckin’ shit out of your ears and listen to what I’m saying: I do not own it anymore; I’ve been closed for fucking the last year, douchebag! How ‘bout that? Can you understand that now?!",
+      "similarity": 0.9235,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "and listen to what I'm saying.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I do not own it anymore.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout listening? Take the fuckin’ shit out of your ears and listen to what I’m saying: I do not own it anymore; I’ve been closed for fucking the last year, douchebag! How ‘bout that? Can you understand that now?!",
+      "similarity": 0.9235,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I do not own it anymore.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I've been closed for fucking the last year, douchebag.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout listening? Take the fuckin’ shit out of your ears and listen to what I’m saying: I do not own it anymore; I’ve been closed for fucking the last year, douchebag! How ‘bout that? Can you understand that now?!",
+      "similarity": 0.9235,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I've been closed for fucking the last year, douchebag.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How about that?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout listening? Take the fuckin’ shit out of your ears and listen to what I’m saying: I do not own it anymore; I’ve been closed for fucking the last year, douchebag! How ‘bout that? Can you understand that now?!",
+      "similarity": 0.9235,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "How about that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Do you understand that now?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "How ‘bout listening? Take the fuckin’ shit out of your ears and listen to what I’m saying: I do not own it anymore; I’ve been closed for fucking the last year, douchebag! How ‘bout that? Can you understand that now?!",
+      "similarity": 0.9235,
+      "match_type": "similar",
+      "json_group": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "wiki_indices": [
+        56
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you understand that now?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want to come over and pick a checkup is what I need from you here today.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I wanna come over and pick a check up, is what I need from ya here today!—",
+      "similarity": 0.9306,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        57
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I wanna come over and pick a check up, is what I need from ya here today!—",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, come on over there.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Yeah, come on over, then! No problem! I’ll be here! [exhales]",
+      "similarity": 0.8713,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, come on over there.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No problem. I'll be here.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—Yeah, come on over, then! No problem! I’ll be here! [exhales]",
+      "similarity": 0.8713,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "wiki_indices": [
+        58
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "No problem. I'll be here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You played the song by Don Como Villa.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You played the song by Don Comovilla; that’s $200 price tag associated with that song, okay? [sfx]",
+      "similarity": 0.9613,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You played the song by Don Como Villa.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "That's $200 price tag associated with that song, okay?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You played the song by Don Comovilla; that’s $200 price tag associated with that song, okay? [sfx]",
+      "similarity": 0.9613,
+      "match_type": "similar",
+      "json_group": [
+        72,
+        73
+      ],
+      "wiki_indices": [
+        59
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's $200 price tag associated with that song, okay?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, no problem.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Yeah, no problem! I—I—Matter of fact, I played it twice that evening! I’ll pay you $400! How’s that?",
+      "similarity": 0.9348,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, no problem.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "As a matter of fact, I played it twice that even.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Yeah, no problem! I—I—Matter of fact, I played it twice that evening! I’ll pay you $400! How’s that?",
+      "similarity": 0.9348,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "As a matter of fact, I played it twice that even.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'll pay you $400. How's that?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "Yeah, no problem! I—I—Matter of fact, I played it twice that evening! I’ll pay you $400! How’s that?",
+      "similarity": 0.9348,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75,
+        76
+      ],
+      "wiki_indices": [
+        60
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'll pay you $400. How's that?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'll send a wrap over.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’ll send a rep. over and I want you—",
+      "similarity": 0.6429,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        61
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’ll send a rep. over and I want you—",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You do that, sir.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—You do that, sir!—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        62
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "You do that, sir.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want you to be serious when he shows up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "—I want you to be serious when he shows up—",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        63
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want you to be serious when he shows up.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Meanwhile, why don't you take some fucking toilet paper?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—And meanwhile, why don’t you take some fuckin’ toilet paper? Because I’m gonna drive down there after you pick the check up and I’m gonna pull your asshole up to your fuckin’ ears so I don’t have to fuck—you can’t hear me anymore, ya fuck!",
+      "similarity": 0.9277,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Meanwhile, why don't you take some fucking toilet paper?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Because I'm going to drive down there after you pick the checkup,",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—And meanwhile, why don’t you take some fuckin’ toilet paper? Because I’m gonna drive down there after you pick the check up and I’m gonna pull your asshole up to your fuckin’ ears so I don’t have to fuck—you can’t hear me anymore, ya fuck!",
+      "similarity": 0.9277,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "Because I'm going to drive down there after you pick the checkup,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and I'm going to pull your asshole up to your fucking ears,",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—And meanwhile, why don’t you take some fuckin’ toilet paper? Because I’m gonna drive down there after you pick the check up and I’m gonna pull your asshole up to your fuckin’ ears so I don’t have to fuck—you can’t hear me anymore, ya fuck!",
+      "similarity": 0.9277,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "and I'm going to pull your asshole up to your fucking ears,",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "so I don't have to fuck.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—And meanwhile, why don’t you take some fuckin’ toilet paper? Because I’m gonna drive down there after you pick the check up and I’m gonna pull your asshole up to your fuckin’ ears so I don’t have to fuck—you can’t hear me anymore, ya fuck!",
+      "similarity": 0.9277,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "so I don't have to fuck.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You can't hear me anymore.",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—And meanwhile, why don’t you take some fuckin’ toilet paper? Because I’m gonna drive down there after you pick the check up and I’m gonna pull your asshole up to your fuckin’ ears so I don’t have to fuck—you can’t hear me anymore, ya fuck!",
+      "similarity": 0.9277,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "You can't hear me anymore.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You fuck?",
+      "wiki_speaker": "Mario",
+      "wiki_text": "—And meanwhile, why don’t you take some fuckin’ toilet paper? Because I’m gonna drive down there after you pick the check up and I’m gonna pull your asshole up to your fuckin’ ears so I don’t have to fuck—you can’t hear me anymore, ya fuck!",
+      "similarity": 0.9277,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "wiki_indices": [
+        64
+      ],
+      "proposed_speaker": "Mario",
+      "speaker_action": "matched_line",
+      "proposed_text": "You fuck?",
+      "text_action": "group_review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 85,
+    "total_wiki_lines": 58,
+    "matched_wiki_lines": 53,
+    "unmatched_wiki_lines": 5,
+    "matched": 84,
+    "speakers_to_map": 3,
+    "text_auto_correct": 19,
+    "text_review": 6,
+    "text_group_review": 48,
+    "unmatched_json": 1
+  }
+}

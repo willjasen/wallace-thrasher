@@ -1,0 +1,562 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-07-21T15:29:22.285180+00:00",
+  "snapshot": "1775638787000-initial",
+  "album": "Longmont Potion Castle 4",
+  "album_slug": "longmont-potion-castle-4",
+  "track": "Lipitor",
+  "track_slug": "lipitor",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-4/lipitor.json",
+  "json_sha256": "4416611b2d016504c038a9280525286d684608ef2fbfa69829815e9eb1344594",
+  "wiki_title": "Lipitor",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Lipitor",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "Jim",
+    "SPEAKER_03": "Jim"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 6,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 5.9249,
+          "observations": 6
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "Jim",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Jim",
+          "score": 1.824,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "Jim",
+      "confidence": 0.6609,
+      "observations": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "Jim",
+          "score": 1.9487,
+          "observations": 2
+        },
+        {
+          "name": "Voice recording",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_03": {
+      "name": "Jim",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "Jim",
+          "score": 3.6836,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Please hold to speak to one of our pharmacy staff.",
+      "wiki_speaker": "Voice recording",
+      "wiki_text": "Please hold to speak to one of our pharmacy staff.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        0
+      ],
+      "proposed_speaker": "Voice recording",
+      "speaker_action": "matched_line",
+      "proposed_text": "Please hold to speak to one of our pharmacy staff.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'll help you.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "May I help you?",
+      "similarity": 0.7407,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        2
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "May I help you?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Lipitor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lipitor.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        3
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lipitor.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Hi, Lipitor.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Hi, Lipitor. This is Jim, may I help you?",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, Lipitor.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "This is Jim.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Hi, Lipitor. This is Jim, may I help you?",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Jim.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I help you.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Hi, Lipitor. This is Jim, may I help you?",
+      "similarity": 0.9429,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5,
+        6
+      ],
+      "wiki_indices": [
+        4
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "I help you.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm interested in Lipitor this evening, Jim.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm interested in Lipitor this evenin', Jim.",
+      "similarity": 0.9762,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        5
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm interested in Lipitor this evenin', Jim.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Excuse me?",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Excuse me?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        6
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Excuse me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Lipitor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lipitor.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        7
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lipitor.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Yes.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Yes?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": null,
+      "wiki_indices": [
+        8
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Looking for it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lookin' for it. Need some answers on it.",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Looking for it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I need some answers on it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lookin' for it. Need some answers on it.",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12
+      ],
+      "wiki_indices": [
+        9
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I need some answers on it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Okay. What would you like to know about Lipitor?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What would you like to know about Lipitor?",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Okay. What would you like to know about Lipitor?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        13,
+        14
+      ],
+      "wiki_indices": [
+        10
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "What would you like to know about Lipitor?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Lipitor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lipitor. Um... are you familiar with it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Lipitor.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Um, are you familiar with it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Lipitor. Um... are you familiar with it?",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        15,
+        16
+      ],
+      "wiki_indices": [
+        11
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Um, are you familiar with it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Yeah. What would you like to know about it?",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "What would like to know about it?",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Yeah. What would you like to know about it?",
+      "similarity": 0.9487,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "wiki_indices": [
+        12
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "What would like to know about it?",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Benefits.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Benefits. Possible disadvantages to the product.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Benefits.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "possible disadvantages to the product.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Benefits. Possible disadvantages to the product.",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        19,
+        20
+      ],
+      "wiki_indices": [
+        13
+      ],
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "possible disadvantages to the product.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, at lowest cholesterol, it's effective in a wide ride of people here.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Um... alright, lowers cholesterol, effective in a... wide variety of people here, some insurances don't cover it...",
+      "similarity": 0.8878,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, at lowest cholesterol, it's effective in a wide ride of people here.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Some insurances don't cover it.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "Um... alright, lowers cholesterol, effective in a... wide variety of people here, some insurances don't cover it...",
+      "similarity": 0.8878,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "wiki_indices": [
+        14
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "Some insurances don't cover it.",
+      "text_action": "group_review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You have to have blood.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "...um, you have to have blood...",
+      "similarity": 0.9362,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        16
+      ],
+      "proposed_speaker": "Jim",
+      "speaker_action": "matched_line",
+      "proposed_text": "...um, you have to have blood...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You have blood level strong to make sure that you have the second liver to all medications in that class.",
+      "wiki_speaker": "Jim",
+      "wiki_text": "...you have to have blood levels drawn... you have to...",
+      "similarity": 0.4768,
+      "match_type": "similar",
+      "json_group": null,
+      "wiki_indices": [
+        18
+      ],
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "...you have to have blood levels drawn... you have to...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "None",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Thank you.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 25,
+    "total_wiki_lines": 17,
+    "matched_wiki_lines": 16,
+    "unmatched_wiki_lines": 1,
+    "matched": 24,
+    "speakers_to_map": 3,
+    "text_auto_correct": 2,
+    "text_review": 2,
+    "text_group_review": 9,
+    "unmatched_json": 1
+  }
+}
