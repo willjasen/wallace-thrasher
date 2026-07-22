@@ -17,32 +17,38 @@ body {
 
 /* Footer layout for side-by-side columns */
 .footer-col-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: flex-start;
   column-gap: 2em;
   row-gap: 0.75em;
 }
 .footer-col {
-  flex: 1;
   min-width: 0;
 }
 
 .footer-col-1 {
   box-sizing: border-box;
-  flex: 1 1 auto;
-  flex-basis: auto;
+  grid-column: 1;
   min-width: 0;
   overflow-wrap: anywhere;
   width: auto !important;
 }
 
+.netlify-building-badge {
+  align-self: center;
+  grid-column: 2;
+  line-height: 0;
+}
+
+.netlify-building-badge[hidden] {
+  display: none;
+}
+
 .footer-col-2 {
   box-sizing: border-box;
-  flex: 0 0 auto;
-  margin-left: auto;
+  grid-column: 3;
+  justify-self: end;
   min-width: max-content;
   padding-right: 0;
   text-align: left !important;
@@ -51,8 +57,8 @@ body {
 
 .footer-details {
   display: none;
-  flex: 0 0 100%;
   font-size: smaller;
+  grid-column: 1 / -1;
   text-align: center;
 }
 

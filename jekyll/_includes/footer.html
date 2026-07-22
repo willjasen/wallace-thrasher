@@ -14,7 +14,23 @@
            willjasen
         </a>
       </div>
-      
+
+      <a
+        id="netlify-building-badge"
+        class="netlify-building-badge"
+        href="https://app.netlify.com/sites/wallace-thrasher/deploys"
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label="View the Netlify deployment in progress"
+        hidden
+      >
+        <img
+          data-src="https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status"
+          alt="Netlify deployment status"
+          width="118"
+          height="20"
+        >
+      </a>
 
       <div class="footer-col footer-col-2" style="text-align: right;">
         <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank">
@@ -79,6 +95,38 @@
       window.addEventListener('resize', queueFooterUpdate);
       window.addEventListener('load', queueFooterUpdate);
       queueFooterUpdate();
+    })();
+
+    // Show the Netlify badge only while a production deployment is building.
+    (() => {
+      const badge = document.getElementById('netlify-building-badge');
+      const badgeImage = badge?.querySelector('img');
+      if (!badge || !badgeImage) return;
+
+      const buildingDeploysUrl = 'https://api.netlify.com/api/v1/sites/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploys?production=true&state=building&per_page=1';
+
+      const updateNetlifyBadge = async () => {
+        try {
+          const response = await fetch(buildingDeploysUrl, { cache: 'no-store' });
+          if (!response.ok) throw new Error(`Netlify returned ${response.status}`);
+
+          const deployments = await response.json();
+          const isBuilding = Array.isArray(deployments) && deployments.length > 0;
+          badge.hidden = !isBuilding;
+
+          if (isBuilding) {
+            badgeImage.src = `${badgeImage.dataset.src}?${Date.now()}`;
+          } else {
+            badgeImage.removeAttribute('src');
+          }
+        } catch (error) {
+          badge.hidden = true;
+          badgeImage.removeAttribute('src');
+        }
+      };
+
+      updateNetlifyBadge();
+      window.setInterval(updateNetlifyBadge, 15000);
     })();
 
     // Fetch latest GitHub tag
