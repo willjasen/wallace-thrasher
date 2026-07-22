@@ -9,7 +9,7 @@ a website project involving the works of [longmont potion castle](https://en.wik
 
 ### 🧭 Overview 🧭
 
-this website allows for searching through subtitles and speakers within the longmont potion castle discography.
+this website allows for searching through data like subtitles within the longmont potion castle discography.
 
 for help on how to use the web app, refer to the [instructions]({{ site.baseurl }}/instructions) page.
 
