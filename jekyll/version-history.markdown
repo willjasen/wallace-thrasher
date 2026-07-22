@@ -189,7 +189,10 @@ this minor release is mostly to stash any changes that haven't been merged yet n
   function buildTOC() {
     // Remove any stale TOC left by a previous visit (soft-nav re-execution)
     var existing = document.getElementById("version-history-toc");
-    if (existing) existing.remove();
+    if (existing) {
+      if (existing.cleanup) existing.cleanup();
+      existing.remove();
+    }
     document.body.classList.remove("version-history-page");
 
     const content = document.querySelector(".post-content") || document.querySelector(".page-content .wrapper");
@@ -237,17 +240,47 @@ this minor release is mostly to stash any changes that haven't been merged yet n
       });
     });
 
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          links.forEach(function (a) { a.classList.remove("active"); });
-          const active = nav.querySelector('[data-target-id="' + entry.target.id + '"]');
-          if (active) active.classList.add("active");
-        }
-      });
-    }, { rootMargin: "0px 0px -80% 0px" });
+    function setActive(heading) {
+      links.forEach(function (a) { a.classList.remove("active"); });
+      const active = nav.querySelector('[data-target-id="' + heading.id + '"]');
+      if (active) active.classList.add("active");
+    }
 
-    headings.forEach(function (h) { observer.observe(h); });
+    function updateActiveLink() {
+      var atPageEnd = window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 2;
+      var activeHeading = headings[0];
+
+      if (atPageEnd) {
+        activeHeading = headings[headings.length - 1];
+      } else {
+        var activationLine = window.innerHeight * 0.2;
+        headings.forEach(function (h) {
+          if (h.getBoundingClientRect().top <= activationLine) activeHeading = h;
+        });
+      }
+
+      setActive(activeHeading);
+    }
+
+    var updateQueued = false;
+    function queueActiveLinkUpdate() {
+      if (updateQueued) return;
+      updateQueued = true;
+      window.requestAnimationFrame(function () {
+        updateQueued = false;
+        updateActiveLink();
+      });
+    }
+
+    window.addEventListener("scroll", queueActiveLinkUpdate, { passive: true });
+    window.addEventListener("resize", queueActiveLinkUpdate);
+    updateActiveLink();
+
+    nav.cleanup = function () {
+      window.removeEventListener("scroll", queueActiveLinkUpdate);
+      window.removeEventListener("resize", queueActiveLinkUpdate);
+    };
   }
 
   // Run immediately if DOM is ready (soft-nav re-execution), otherwise wait
@@ -262,7 +295,10 @@ this minor release is mostly to stash any changes that haven't been merged yet n
     var url = (e.detail && e.detail.url) || "";
     if (!url.match(/\/version-history\/?$/)) {
       var toc = document.getElementById("version-history-toc");
-      if (toc) toc.remove();
+      if (toc) {
+        if (toc.cleanup) toc.cleanup();
+        toc.remove();
+      }
       document.body.classList.remove("version-history-page");
       document.removeEventListener("soft-nav", onSoftNav);
     }
