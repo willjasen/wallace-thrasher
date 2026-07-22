@@ -16,12 +16,12 @@
       </div>
 
       <a
-        id="netlify-building-badge"
-        class="netlify-building-badge"
+        id="netlify-status-badge"
+        class="netlify-status-badge"
         href="https://app.netlify.com/sites/wallace-thrasher/deploys"
         rel="noopener noreferrer"
         target="_blank"
-        aria-label="View the Netlify deployment in progress"
+        aria-label="View the latest Netlify deployment"
         hidden
       >
         <img
@@ -97,31 +97,65 @@
       queueFooterUpdate();
     })();
 
-    // Show the Netlify badge only while a production deployment is building.
+    // Show the Netlify badge while building and briefly after a successful build.
     (() => {
-      const badge = document.getElementById('netlify-building-badge');
+      const badge = document.getElementById('netlify-status-badge');
       const badgeImage = badge?.querySelector('img');
       if (!badge || !badgeImage) return;
 
-      const buildingDeploysUrl = 'https://api.netlify.com/api/v1/sites/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploys?production=true&state=building&per_page=1';
+      const latestDeployUrl = 'https://api.netlify.com/api/v1/sites/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploys?production=true&per_page=1';
+      let hideTimer;
+      let lastDisplayedSuccessId;
+      let updateInProgress = false;
+
+      const hideBadge = () => {
+        window.clearTimeout(hideTimer);
+        hideTimer = undefined;
+        badge.hidden = true;
+        badgeImage.removeAttribute('src');
+      };
+
+      const showBadge = (hideAfter) => {
+        window.clearTimeout(hideTimer);
+        hideTimer = undefined;
+
+        badgeImage.onload = () => {
+          badge.hidden = false;
+
+          if (hideAfter) {
+            hideTimer = window.setTimeout(hideBadge, hideAfter);
+          }
+        };
+        badgeImage.onerror = hideBadge;
+        badgeImage.src = `${badgeImage.dataset.src}?${Date.now()}`;
+      };
 
       const updateNetlifyBadge = async () => {
+        if (updateInProgress) return;
+        updateInProgress = true;
+
         try {
-          const response = await fetch(buildingDeploysUrl, { cache: 'no-store' });
+          const response = await fetch(latestDeployUrl, { cache: 'no-store' });
           if (!response.ok) throw new Error(`Netlify returned ${response.status}`);
 
           const deployments = await response.json();
-          const isBuilding = Array.isArray(deployments) && deployments.length > 0;
-          badge.hidden = !isBuilding;
+          const latestDeploy = Array.isArray(deployments) ? deployments[0] : undefined;
 
-          if (isBuilding) {
-            badgeImage.src = `${badgeImage.dataset.src}?${Date.now()}`;
-          } else {
-            badgeImage.removeAttribute('src');
+          if (latestDeploy?.state === 'building') {
+            showBadge();
+          } else if (
+            latestDeploy?.state === 'ready' &&
+            latestDeploy.id !== lastDisplayedSuccessId
+          ) {
+            lastDisplayedSuccessId = latestDeploy.id;
+            showBadge(3000);
+          } else if (latestDeploy?.state !== 'ready') {
+            hideBadge();
           }
         } catch (error) {
-          badge.hidden = true;
-          badgeImage.removeAttribute('src');
+          hideBadge();
+        } finally {
+          updateInProgress = false;
         }
       };
 
