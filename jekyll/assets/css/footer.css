@@ -1,3 +1,20 @@
+/* Keep the logo row visible while reserving room for the fixed footer. */
+body {
+  padding-bottom: 8rem;
+}
+
+.site-footer {
+  background: var(--minima-background-color, #fdfdfd);
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  padding: 0.75rem 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 /* Footer layout for side-by-side columns */
 .footer-col-wrapper {
   display: flex;
@@ -33,7 +50,12 @@
 }
 
 .footer-details {
+  display: none;
   flex: 0 0 100%;
   font-size: smaller;
   text-align: center;
+}
+
+.site-footer.is-page-bottom .footer-details {
+  display: block;
 }

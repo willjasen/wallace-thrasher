@@ -56,6 +56,31 @@
 
   <link rel="stylesheet" href="/assets/css/footer.css">
   <script>
+    // Keep the compact footer visible, and reveal its details at the page bottom.
+    (() => {
+      const footer = document.querySelector('.site-footer');
+      if (!footer) return;
+
+      let updateQueued = false;
+      const updateFooter = () => {
+        const scrollBottom = window.scrollY + window.innerHeight;
+        const pageBottom = document.documentElement.scrollHeight;
+        footer.classList.toggle('is-page-bottom', scrollBottom >= pageBottom - 2);
+        updateQueued = false;
+      };
+
+      const queueFooterUpdate = () => {
+        if (updateQueued) return;
+        updateQueued = true;
+        window.requestAnimationFrame(updateFooter);
+      };
+
+      window.addEventListener('scroll', queueFooterUpdate, { passive: true });
+      window.addEventListener('resize', queueFooterUpdate);
+      window.addEventListener('load', queueFooterUpdate);
+      queueFooterUpdate();
+    })();
+
     // Fetch latest GitHub tag
     fetch('https://api.github.com/repos/willjasen/wallace-thrasher/tags')
       .then(response => response.json())
