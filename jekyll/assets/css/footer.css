@@ -2,6 +2,7 @@
 .footer-col-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2em;
@@ -28,4 +29,10 @@
   padding-right: 0;
   text-align: left !important;
   width: auto !important;
+}
+
+.footer-details {
+  flex: 0 0 100%;
+  font-size: smaller;
+  text-align: center;
 }
