@@ -43,7 +43,7 @@
       activeSubtitle = null;
     }
 
-    function updateHighlight() {
+    function updateHighlight(scrollActiveSubtitle) {
       if (audio.paused || audio.ended) {
         clearHighlight();
         return;
@@ -57,12 +57,25 @@
       if (nextElement === activeSubtitle) return;
       if (activeSubtitle) activeSubtitle.classList.remove('subtitle-active');
       activeSubtitle = nextElement;
-      if (activeSubtitle) activeSubtitle.classList.add('subtitle-active');
+      if (activeSubtitle) {
+        activeSubtitle.classList.add('subtitle-active');
+        if (scrollActiveSubtitle) {
+          activeSubtitle.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
     }
 
-    audio.addEventListener('timeupdate', updateHighlight, { signal: abortController.signal });
-    audio.addEventListener('seeked', updateHighlight, { signal: abortController.signal });
-    audio.addEventListener('play', updateHighlight, { signal: abortController.signal });
+    audio.addEventListener('timeupdate', function () {
+      updateHighlight(true);
+    }, { signal: abortController.signal });
+    audio.addEventListener('seeked', function () {
+      updateHighlight(true);
+    }, { signal: abortController.signal });
+    // Paused playback lets the listener browse elsewhere on the page. On
+    // resume, return to the subtitle that is active at the current playhead.
+    audio.addEventListener('play', function () {
+      updateHighlight(true);
+    }, { signal: abortController.signal });
     audio.addEventListener('pause', clearHighlight, { signal: abortController.signal });
     audio.addEventListener('ended', clearHighlight, { signal: abortController.signal });
     audio.addEventListener('emptied', clearHighlight, { signal: abortController.signal });
