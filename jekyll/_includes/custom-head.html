@@ -8,6 +8,9 @@
 {% if page.wiki_vault %}
   <link rel="stylesheet" href="{{ '/assets/css/wiki-vault.css' | relative_url }}">
 {% endif %}
+{% if page.taxonomy_page %}
+  <link rel="stylesheet" href="{{ '/assets/css/taxonomy-index.css' | relative_url }}">
+{% endif %}
 <script
   src="{{ site.baseurl }}/assets/js/data-api.js"
   data-source="{{ site.baseurl }}/assets/json/data.combined.json"

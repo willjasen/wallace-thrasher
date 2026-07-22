@@ -1,0 +1,74 @@
+<div class="taxonomy-page">
+  <section class="taxonomy-search" aria-labelledby="taxonomy-search-heading">
+    <div class="taxonomy-search-copy">
+      <p class="taxonomy-eyebrow">Discography index</p>
+      <h2 id="taxonomy-search-heading">Find {{ page.taxonomy_article }} {{ page.taxonomy_singular }}</h2>
+      <p>Search every track, or browse the complete collection by album below.</p>
+    </div>
+    <div class="search-flex-row taxonomy-search-control">
+      <label class="taxonomy-search-label" for="{{ page.taxonomy_key }}-search-input">
+        Search {{ page.taxonomy_label | downcase }}
+      </label>
+      <input
+        type="search"
+        id="{{ page.taxonomy_key }}-search-input"
+        placeholder="Search {{ page.taxonomy_label | downcase }}…"
+        autocomplete="off"
+        spellcheck="false">
+      {%- include load-search-with-progress.html -%}
+    </div>
+    <ul id="{{ page.taxonomy_key }}-search-results" class="taxonomy-search-results" aria-live="polite"></ul>
+  </section>
+
+  <section class="taxonomy-catalog" aria-labelledby="taxonomy-catalog-heading">
+    <div class="taxonomy-catalog-heading">
+      <p class="taxonomy-eyebrow">Complete collection</p>
+      <h2 id="taxonomy-catalog-heading">Browse by album</h2>
+    </div>
+
+    {% include variables.liquid %}
+    {% assign sorted_albums = site.data.albums.Albums | sort: "Year" %}
+    {% for album in sorted_albums %}
+      {% assign album_has_values = false %}
+      {% for track in album.Tracks %}
+        {% assign track_values = track[page.taxonomy_field] %}
+        {% if track_values and track_values.size > 0 %}
+          {% assign album_has_values = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% if album_has_values %}
+        <section class="taxonomy-album">
+          <header class="taxonomy-album-header">
+            <a class="taxonomy-album-cover" href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}" aria-label="View {{ album.Album }}">
+              <img src="{{ site.baseurl }}/assets/img/albums/{{ album.Album_Picture }}" alt="" width="64" height="64" loading="lazy">
+            </a>
+            <div>
+              <h3><a href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}">{{ album.Album }}</a></h3>
+              <p>{{ album.Year }}</p>
+            </div>
+          </header>
+
+          <ol class="taxonomy-track-list">
+            {% for track in album.Tracks %}
+              {% assign track_values = track[page.taxonomy_field] %}
+              {% if track_values and track_values.size > 0 %}
+                <li class="taxonomy-track">
+                  <div class="taxonomy-track-heading">
+                    <span class="taxonomy-track-number" aria-label="Track {{ track.Track_Number }}">{{ track.Track_Number }}</span>
+                    <a href="{{ site.baseurl }}/tracks/?album={{ album.Album_Slug }}&amp;track={{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+                  </div>
+                  <ul class="taxonomy-values" aria-label="{{ page.taxonomy_label }} in {{ track.Track_Title }}">
+                    {% for value in track_values %}
+                      <li>{{ value }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ol>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </section>
+</div>

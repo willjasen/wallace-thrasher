@@ -63,6 +63,8 @@ function handleSearchParameter() {
         // Determine the input field based on the page context
         const subtitlesSearchInput = document.querySelector('#subtitles-search-input');
         const speakersSearchInput = document.querySelector('#speakers-search-input');
+        const aliasesSearchInput = document.querySelector('#aliases-search-input');
+        const establishmentsSearchInput = document.querySelector('#establishments-search-input');
 
         if (subtitlesSearchInput) {
             subtitlesSearchInput.value = searchParam;
@@ -70,6 +72,12 @@ function handleSearchParameter() {
         } else if (speakersSearchInput) {
             speakersSearchInput.value = searchParam;
             speakersSearchInput.dispatchEvent(new Event('input'));
+        } else if (aliasesSearchInput) {
+            aliasesSearchInput.value = searchParam;
+            aliasesSearchInput.dispatchEvent(new Event('input'));
+        } else if (establishmentsSearchInput) {
+            establishmentsSearchInput.value = searchParam;
+            establishmentsSearchInput.dispatchEvent(new Event('input'));
         }
     }
 }
@@ -195,10 +203,12 @@ async function main(callback) {
                         trackDocs.push({
                             id: `${album.Album}|||${track.Track_Title}`,
                             Album: album.Album,
+                            Album_Year: album.Year,
                             Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
                             Track_Title: track.Track_Title,
                             Track_Slug: track.Track_Slug,
-                            Aliases: (Array.isArray(track.Aliases) ? track.Aliases.join(', ') : (track.Aliases || '')),
+                            Aliases: (Array.isArray(track.Aliases) ? track.Aliases : (track.Aliases ? [track.Aliases] : [])),
                             Album_Picture: album.Album_Picture
                         });
                     });
@@ -222,10 +232,12 @@ async function main(callback) {
                         trackDocs.push({
                             id: `${album.Album}|||${track.Track_Title}`,
                             Album: album.Album,
+                            Album_Year: album.Year,
                             Album_Slug: album.Album_Slug,
+                            Track_Number: track.Track_Number,
                             Track_Title: track.Track_Title,
                             Track_Slug: track.Track_Slug,
-                            Establishments: (Array.isArray(track.Establishments) ? track.Establishments.join(', ') : (track.Establishments || '')),
+                            Establishments: (Array.isArray(track.Establishments) ? track.Establishments : (track.Establishments ? [track.Establishments] : [])),
                             Album_Picture: album.Album_Picture
                         });
                     });
@@ -463,77 +475,70 @@ async function main(callback) {
             })(e.target);
         });
 
-        // Set up the aliases search input listener (delegated)
+        function appendTaxonomyValueList(container, values, query) {
+            const valueList = document.createElement('ul');
+            valueList.className = 'taxonomy-values';
+            values.forEach(function (value) {
+                const item = document.createElement('li');
+                item.textContent = value;
+                if (value.toLowerCase().includes(query)) item.classList.add('is-match');
+                valueList.appendChild(item);
+            });
+            container.appendChild(valueList);
+        }
+
+        function renderTaxonomySearch(input, docs, field, singularLabel) {
+            const query = input.value.trim().toLowerCase();
+            const resultList = document.querySelector(`#${field.toLowerCase()}-search-results`);
+            resultList.replaceChildren();
+            if (!query) return;
+
+            const matches = docs.filter(function (doc) {
+                return doc[field].some(value => value.toLowerCase().includes(query));
+            });
+
+            const countItem = document.createElement('li');
+            countItem.className = 'taxonomy-result-count';
+            countItem.textContent = `${matches.length} ${matches.length === 1 ? 'track' : 'tracks'} found`;
+            resultList.appendChild(countItem);
+
+            matches.forEach(function (doc) {
+                const resultItem = document.createElement('li');
+                resultItem.className = 'taxonomy-search-result';
+
+                const cover = document.createElement('img');
+                cover.src = `${BASE_URL}/assets/img/albums/${doc.Album_Picture}`;
+                cover.alt = '';
+                cover.width = 48;
+                cover.height = 48;
+                cover.loading = 'lazy';
+                resultItem.appendChild(cover);
+
+                const content = document.createElement('div');
+                const title = document.createElement('a');
+                title.className = 'taxonomy-result-title';
+                title.href = `${BASE_URL}/tracks/?album=${encodeURIComponent(doc.Album_Slug)}&track=${encodeURIComponent(doc.Track_Slug)}`;
+                title.textContent = doc.Track_Title;
+                content.appendChild(title);
+
+                const meta = document.createElement('p');
+                meta.className = 'taxonomy-result-meta';
+                meta.textContent = `${doc.Album} (${doc.Album_Year}) · Track ${doc.Track_Number} · ${doc[field].length} ${doc[field].length === 1 ? singularLabel : field.toLowerCase()}`;
+                content.appendChild(meta);
+
+                appendTaxonomyValueList(content, doc[field], query);
+                resultItem.appendChild(content);
+                resultList.appendChild(resultItem);
+            });
+        }
+
+        // Set up the alias and establishment search inputs (delegated).
         document.addEventListener('input', function (e) {
-            if (!e.target.matches('#aliases-search-input')) return;
-            (function (input) {
-                const query = input.value.trim().toLowerCase();
-                const resultList = document.querySelector('#aliases-search-results');
-                resultList.innerHTML = '';
-                if (query === "") return;
-
-                let tracksWithAliases = new Set();
-                let matchCount = 0;
-                trackAliasDocs.forEach(function (doc) {
-                    // Lowercase aliases for case-insensitive search
-                    const aliasesStr = (doc.Aliases || '').toLowerCase();
-                    if (aliasesStr.includes(query)) {
-                        const key = `${doc.Album}|||${doc.Track_Title}`;
-                        if (!tracksWithAliases.has(key)) {
-                            tracksWithAliases.add(key);
-                            matchCount++;
-                            const albumAndTitleItem = document.createElement('li');
-                            albumAndTitleItem.innerHTML = `
-                                <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
-                                <i><a href="${BASE_URL}/tracks/?album=${doc.Album_Slug}&track=${doc.Track_Slug}">${doc.Track_Title}</a></i> --
-                                <b>Aliases:</b> ${doc.Aliases ? doc.Aliases : '<em>None</em>'} --
-                                ${doc.Album}
-                            `;
-                            resultList.appendChild(albumAndTitleItem);
-                        }
-                    }
-                });
-                const totalCountContainer = document.createElement('div');
-                totalCountContainer.style.marginBottom = '25px';
-                totalCountContainer.innerHTML = `<br/><p>Unique track-alias combinations: ${matchCount}</p>`;
-                resultList.insertBefore(totalCountContainer, resultList.firstChild);
-            })(e.target);
-        });
-
-        // Set up the establishments search input listener (delegated)
-        document.addEventListener('input', function (e) {
-            if (!e.target.matches('#establishments-search-input')) return;
-            (function (input) {
-                const query = input.value.trim().toLowerCase();
-                const resultList = document.querySelector('#establishments-search-results');
-                resultList.innerHTML = '';
-                if (query === "") return;
-
-                let tracksWithEstablishments = new Set();
-                let matchCount = 0;
-                trackEstablishmentDocs.forEach(function (doc) {
-                    const establishmentsStr = (doc.Establishments || '').toLowerCase();
-                    if (establishmentsStr.includes(query)) {
-                        const key = `${doc.Album}|||${doc.Track_Title}`;
-                        if (!tracksWithEstablishments.has(key)) {
-                            tracksWithEstablishments.add(key);
-                            matchCount++;
-                            const albumAndTitleItem = document.createElement('li');
-                            albumAndTitleItem.innerHTML = `
-                                <img src="${BASE_URL}/assets/img/albums/${doc.Album_Picture}" alt="${doc.Album}" width="25" height="25">
-                                <i><a href="${BASE_URL}/tracks/?album=${doc.Album_Slug}&track=${doc.Track_Slug}">${doc.Track_Title}</a></i> --
-                                <b>Establishments:</b> ${doc.Establishments ? doc.Establishments : '<em>None</em>'} --
-                                ${doc.Album}
-                            `;
-                            resultList.appendChild(albumAndTitleItem);
-                        }
-                    }
-                });
-                const totalCountContainer = document.createElement('div');
-                totalCountContainer.style.marginBottom = '25px';
-                totalCountContainer.innerHTML = `<br/><p>Unique track-establishment combinations: ${matchCount}</p>`;
-                resultList.insertBefore(totalCountContainer, resultList.firstChild);
-            })(e.target);
+            if (e.target.matches('#aliases-search-input')) {
+                renderTaxonomySearch(e.target, trackAliasDocs, 'Aliases', 'alias');
+            } else if (e.target.matches('#establishments-search-input')) {
+                renderTaxonomySearch(e.target, trackEstablishmentDocs, 'Establishments', 'establishment');
+            }
         });
 
         // Cache the Alex Trebek count so the lunr search only runs once ever.
