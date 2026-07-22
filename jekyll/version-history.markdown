@@ -21,6 +21,7 @@ appearance
 
 other
 
+ - add an unlinked transcriptions page to monitor Whisper WebUI
  - better SEO
 
 ---
