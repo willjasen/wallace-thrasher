@@ -5,10 +5,13 @@
 jekyll/_site/*
 !jekyll/_site/.gitkeep
 /.vscode
-python/__pycache__
+**/__pycache__/
 node_modules/
 package-lock.json
 # Local Netlify folder
 .netlify
 # Local secrets — never commit
 .env
+
+# Local Whisper-WebUI track analyses (review artifacts, not source data yet)
+/analysis/whisper-webui/

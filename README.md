@@ -166,6 +166,32 @@ list methods accept `offset` and `limit`. `getTracks()` returns `{ album, track 
 
 the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
 
+### 🎙️ Local transcript analysis 🎙️
+
+tracks on the LPC USB can be analyzed through a locally hosted Whisper-WebUI over HTTP or HTTPS. the workflow resolves a track from its album and track slugs, enables speaker diarization, and saves a review bundle under `analysis/whisper-webui/`. that directory is intentionally ignored by git. no transcript changes are applied to the site automatically.
+
+set `WHISPER_WEBUI_URL` to the reachable Whisper-WebUI base URL, then run:
+
+```shell
+python3 python/lpc_whisper_analysis.py analyze \
+  --album longmont-potion-castle-12 \
+  --track game-stop \
+  --usb-root "/Volumes/LPC USB"
+```
+
+the client supports Whisper-WebUI's polling REST API and its Gradio browser API. optional Basic Auth can be supplied with `WHISPER_WEBUI_USERNAME` and `WHISPER_WEBUI_PASSWORD`. if the diarization model still needs authorization, supply `HF_TOKEN`. these values can be placed in the repository's git-ignored `.env` file instead of being entered on the command line; credentials are never written to analysis artifacts. use `--insecure` only for a trusted local deployment with a self-signed certificate.
+
+an existing diarized SRT generated manually in Whisper-WebUI can be imported without running the model again:
+
+```shell
+python3 python/lpc_whisper_analysis.py import-srt \
+  --album longmont-potion-castle-12 \
+  --track game-stop \
+  /path/to/game-stop.srt
+```
+
+each completed bundle includes the original SRT, normalized segments, repository-shaped candidate subtitles, suggested mappings from diarized speakers to current speaker names, and review leads for aliases and establishments. these are evidence for manual curation rather than automatic edits.
+
 ### 🛠️ Building 🛠️
 
 to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
