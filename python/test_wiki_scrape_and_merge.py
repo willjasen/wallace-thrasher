@@ -49,6 +49,16 @@ class WikitextParsingTests(unittest.TestCase):
         )
         self.assertEqual(wiki._prefer_existing_specific_speaker("SPEAKER_01", "Alex"), "Alex")
 
+    def test_all_caps_wiki_speaker_does_not_replace_existing_name_case(self):
+        self.assertEqual(
+            wiki._prefer_existing_specific_speaker("Eddie Money", "EDDIE MONEY"),
+            "Eddie Money",
+        )
+        self.assertEqual(
+            wiki._prefer_existing_specific_speaker("eddie money", "EDDIE MONEY"),
+            "eddie money",
+        )
+
 
 class AlignmentTests(unittest.TestCase):
     def test_alignment_does_not_group_by_incorrect_diariser_code(self):
