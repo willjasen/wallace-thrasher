@@ -192,6 +192,26 @@ python3 python/lpc_whisper_analysis.py import-srt \
 
 each completed bundle includes the original SRT, normalized segments, repository-shaped candidate subtitles, suggested mappings from diarized speakers to current speaker names, and review leads for aliases and establishments. these are evidence for manual curation rather than automatic edits.
 
+compare a completed analysis with both `data.json` and the current track subtitle JSON:
+
+```shell
+python3 python/whisper_compare_and_merge.py compare \
+  --album longmont-potion-castle-7 \
+  --track alex-trebek
+
+python3 python/whisper_compare_and_merge.py report \
+  --album longmont-potion-castle-7 \
+  --track alex-trebek
+
+python3 python/whisper_compare_and_merge.py merge --dry-run \
+  --album longmont-potion-castle-7 \
+  --track alex-trebek
+```
+
+the comparison is written as `comparison.json` inside the git-ignored analysis run. repository subtitle text and named speakers remain authoritative: Whisper differences use the `review` action and are merged only after that individual action, or an intended speaker mapping, is changed to `approved`. exact mentions of aliases or establishments already known elsewhere in the catalog use `auto_add`. a real merge validates hashes for the analysis artifacts, `data.json`, and the track JSON, then creates ignored backups under `analysis/whisper-webui/merge-backups/` before writing atomically.
+
+subtitle entries may contain a boolean `Reviewed` field. when this field is missing, the merge initializes it from the track's existing `Subtitles_Adjusted` value; an explicitly approved Whisper text or speaker change is always written with `Reviewed: true`. this preserves the repository version by default while recording human review at line level.
+
 ### 🛠️ Building 🛠️
 
 to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`

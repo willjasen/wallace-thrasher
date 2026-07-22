@@ -190,7 +190,9 @@ class WhisperWebUIClient:
                 audio_path, model, language, diarize, diarization_device,
                 hf_token, poll_interval, max_wait,
             )
-        return self._transcribe_gradio(audio_path, model, diarize, hf_token)
+        return self._transcribe_gradio(
+            audio_path, model, language, diarize, diarization_device, hf_token
+        )
 
     def _transcribe_rest(
         self,
@@ -235,7 +237,8 @@ class WhisperWebUIClient:
         raise WhisperWebUIError(f"Whisper-WebUI task did not finish within {max_wait:g} seconds")
 
     def _transcribe_gradio(self, audio_path: Path, model: Optional[str],
-                           diarize: bool, hf_token: Optional[str]) -> Dict[str, Any]:
+                           language: Optional[str], diarize: bool,
+                           diarization_device: str, hf_token: Optional[str]) -> Dict[str, Any]:
         config = None
         for config_path in ("/config", "/gradio_api/config"):
             status, candidate = self.http.json("GET", config_path)
@@ -258,7 +261,10 @@ class WhisperWebUIClient:
             upload_error = (status, uploaded)
         if upload_path is None:
             raise WhisperWebUIError(f"Gradio upload failed: {upload_error}")
-        data = _gradio_input_data(config, dependency, audio_path, upload_path, model, diarize, hf_token)
+        data = _gradio_input_data(
+            config, dependency, audio_path, upload_path, model, language,
+            diarize, diarization_device, hf_token,
+        )
         api_name = str(dependency.get("api_name") or "transcribe_file").lstrip("/")
         status, started = self.http.json("POST", f"/gradio_api/call/{urllib.parse.quote(api_name)}", {"data": data})
         if 200 <= status < 300 and isinstance(started, dict) and started.get("event_id"):
@@ -324,12 +330,39 @@ def _find_transcription_dependency(config: Dict[str, Any]) -> Tuple[Dict[str, An
     return dependency, index
 
 
+def _choice_values(props: Dict[str, Any]) -> List[Any]:
+    values = []
+    for choice in props.get("choices") or []:
+        values.append(choice[-1] if isinstance(choice, (list, tuple)) else choice)
+    return values
+
+
+def _available_choice(props: Dict[str, Any], candidates: Iterable[Any]) -> Optional[Any]:
+    choices = _choice_values(props)
+    for candidate in candidates:
+        if candidate in choices:
+            return candidate
+    return None
+
+
+def _model_choice(props: Dict[str, Any], model: str) -> Optional[str]:
+    return _available_choice(props, (model, model.rsplit("/", 1)[-1]))
+
+
+def _language_choice(props: Dict[str, Any], language: str) -> Optional[str]:
+    aliases = {"en": "english"}
+    normalized = language.strip().lower()
+    return _available_choice(props, (language, normalized, aliases.get(normalized)))
+
+
 def _gradio_input_data(config: Dict[str, Any], dependency: Dict[str, Any], audio_path: Path,
-                        uploaded_path: str, model: Optional[str], diarize: bool,
+                        uploaded_path: str, model: Optional[str], language: Optional[str],
+                        diarize: bool, diarization_device: str,
                         hf_token: Optional[str]) -> List[Any]:
     components = {component.get("id"): component for component in config.get("components", [])}
     values: List[Any] = []
     file_assigned = False
+    in_diarization_section = False
     for component_id in dependency.get("inputs", []):
         component = components.get(component_id, {})
         props = component.get("props", {})
@@ -347,11 +380,18 @@ def _gradio_input_data(config: Dict[str, Any], dependency: Dict[str, Any], audio
             value = [file_data] if component_type == "files" or props.get("file_count") == "multiple" else file_data
             file_assigned = True
         elif label == "model" and model:
-            value = model
+            value = _model_choice(props, model) or value
+        elif label == "language" and language:
+            value = _language_choice(props, language) or value
         elif "enable diarization" in label:
             value = diarize
+            in_diarization_section = True
+        elif label == "device" and in_diarization_section:
+            value = _available_choice(props, (diarization_device,)) or value
         elif "huggingface token" in label:
             value = hf_token or ""
+        elif "enable background music remover" in label:
+            in_diarization_section = False
         elif "file format" in label:
             value = "SRT"
         elif "add a timestamp" in label:
