@@ -453,16 +453,6 @@ def merge(args: argparse.Namespace) -> dict[str, Any]:
         track["Speakers_Adjusted"] = True
     if changed_text:
         track["Subtitles_Adjusted"] = True
-    if aliases_added or establishments_added or changed_speaker or changed_text:
-        previous = track.get("Whisper_WebUI") if isinstance(track.get("Whisper_WebUI"), dict) else {}
-        track["Whisper_WebUI"] = {
-            "Source_Run": source.get("run_path"),
-            "Audio_SHA256": source.get("audio_sha256"),
-            "Aliases": _append_unique(previous.get("Aliases") or [], [item["value"] for item in aliases]),
-            "Establishments": _append_unique(
-                previous.get("Establishments") or [], [item["value"] for item in establishments]
-            ),
-        }
 
     result = {
         "dry_run": bool(args.dry_run),
@@ -488,13 +478,33 @@ def merge(args: argparse.Namespace) -> dict[str, Any]:
     }
 
     if not args.dry_run and any((changed_text, changed_speaker, review_flags_added, aliases_added, establishments_added)):
-        backup_run = args.backup_root / _run_id()
+        merge_id = _run_id()
+        backup_run = args.backup_root / merge_id
         _copy_backup(data_path, backup_run)
         if changed_text or changed_speaker or review_flags_added:
             _copy_backup(subtitle_path, backup_run)
             _write_json_atomic(subtitle_path, subtitles)
         _write_json_atomic(data_path, data)
         result["backup"] = backup_run.relative_to(PROJECT_ROOT).as_posix()
+        receipt_path = run_dir / "merge-receipts" / f"{merge_id}.json"
+        receipt = {
+            "format_version": 1,
+            "merged_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "source": {
+                "run": source.get("run_path"),
+                "audio_sha256": source.get("audio_sha256"),
+            },
+            "applied": {
+                "aliases": [item["value"] for item in aliases],
+                "establishments": [item["value"] for item in establishments],
+                "speakers_changed": changed_speaker,
+                "text_changed": changed_text,
+                "review_flags_added": review_flags_added,
+            },
+            "backup": result["backup"],
+        }
+        _write_json_atomic(receipt_path, receipt)
+        result["receipt"] = receipt_path.relative_to(PROJECT_ROOT).as_posix()
     print(json.dumps(result, indent=2, sort_keys=True))
     if args.dry_run:
         print("Dry run only — no project files were modified.")

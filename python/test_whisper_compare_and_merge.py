@@ -169,10 +169,15 @@ class WhisperComparisonTests(unittest.TestCase):
             track = data["Albums"][0]["Tracks"][0]
             self.assertIn("New Alias", track["Aliases"])
             self.assertIn("Known Place", track["Establishments"])
-            self.assertEqual(track["Whisper_WebUI"]["Audio_SHA256"], "audio-hash")
+            self.assertNotIn("Whisper_WebUI", track)
             subtitles = json.loads(fixture.subtitle_path.read_text(encoding="utf-8"))
             self.assertTrue(subtitles[0]["Reviewed"])
             self.assertTrue((fixture.backup_root / "1234567890123" / "jekyll" / "assets" / "json" / "data.json").is_file())
+            receipt = json.loads(
+                (fixture.run_dir / "merge-receipts" / "1234567890123.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(receipt["source"]["audio_sha256"], "audio-hash")
+            self.assertEqual(receipt["applied"]["establishments"], ["Known Place"])
             self.assertEqual(result["text_changed"], 0)
 
     def test_approved_text_replaces_one_line_and_marks_it_reviewed(self):
