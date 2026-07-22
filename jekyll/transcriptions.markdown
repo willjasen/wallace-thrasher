@@ -2,6 +2,7 @@
 layout: page
 title: Transcriptions
 permalink: /transcriptions/
+noindex: true
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/transcriptions.css' | relative_url }}">
