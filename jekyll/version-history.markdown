@@ -6,6 +6,8 @@ permalink: /version-history/
 published: true
 ---
 
+browse the Talkin' Whipapedia scrape, comparison, and merge archive on the [wiki data]({{ site.baseurl }}/wiki-data/) page.
+
 ### v2.1.0 (beta)
 
  - merged & scraped data from Talkin'Whipapedia
