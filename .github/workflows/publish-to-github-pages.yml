@@ -4,7 +4,7 @@
 name: Publish to GitHub Pages
 
 # Specifies to run this workflow whenever a push is made (commits are
-# added) to the branch named `main`.
+# added) to the branch named `dev`.
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest # This job uses a GitHub-hosted runner.
 
     steps:
-      # Checkout the source from the `main` branch.
+      # Checkout the source from the triggering `dev` branch.
       - uses: actions/checkout@v4
 
       # Set up Ruby for Jekyll.

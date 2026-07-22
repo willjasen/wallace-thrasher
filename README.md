@@ -154,16 +154,12 @@ when deploying to production, `JEKYLL_ENV` must be changed to `production`. the 
 
 ### 📤 Deployment 📤
 
-commits to the main branch trigger two [github actions](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows):
+commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
 
-- `deploy-production-build.yml`:
-  - runs `jekyll build --baseurl ""` to generate the site on the "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" branch
+commits to the dev branch trigger the `publish-to-github-pages.yml` [github action](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows/publish-to-github-pages.yml):
 
-- `publish-to-github-pages.yml`:
-  - runs `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch
-  - a separate action then uses the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch to deploy to github pages
-
-the commit to "[production-build](https://github.com/willjasen/wallace-thrasher/tree/production-build)" is pulled by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys) to redeploy its copy of the site.
+- runs `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch
+- a separate action then uses the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch to deploy to github pages
 
 ### ✍️ How to Contribute ✍️
 
@@ -201,8 +197,6 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 ### 🤓 Technical Details 🤓
 
 here are various badges related to this project's code and its deployments
-
-[![Deploy a Production Build](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/deploy-production-build.yml) -- GitHub Action to publish the production website
 
 [![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
 
