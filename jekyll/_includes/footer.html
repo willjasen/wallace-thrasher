@@ -104,8 +104,8 @@
       if (!badge || !badgeImage) return;
 
       const latestDeployUrl = 'https://api.netlify.com/api/v1/sites/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploys?production=true&per_page=1';
+      let activeBuildId;
       let hideTimer;
-      let lastDisplayedSuccessId;
       let updateInProgress = false;
 
       const hideBadge = () => {
@@ -142,14 +142,21 @@
           const latestDeploy = Array.isArray(deployments) ? deployments[0] : undefined;
 
           if (latestDeploy?.state === 'building') {
+            activeBuildId = latestDeploy.id;
             showBadge();
           } else if (
             latestDeploy?.state === 'ready' &&
-            latestDeploy.id !== lastDisplayedSuccessId
+            latestDeploy.id === activeBuildId
           ) {
-            lastDisplayedSuccessId = latestDeploy.id;
+            activeBuildId = undefined;
             showBadge(3000);
-          } else if (latestDeploy?.state !== 'ready') {
+          } else {
+            if (
+              latestDeploy?.state === 'error' &&
+              latestDeploy.id === activeBuildId
+            ) {
+              activeBuildId = undefined;
+            }
             hideBadge();
           }
         } catch (error) {
