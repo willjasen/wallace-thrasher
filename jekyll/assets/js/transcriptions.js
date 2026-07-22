@@ -2,6 +2,17 @@
   const byId = (id) => document.getElementById(id);
   const text = (id, value) => { byId(id).textContent = value; };
   const formatDate = (value) => value ? new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "medium" }).format(new Date(value)) : "—";
+  const formatDuration = (startedAt, completedAt) => {
+    if (!startedAt) return null;
+    const elapsed = Math.max(0, new Date(completedAt || Date.now()).getTime() - new Date(startedAt).getTime());
+    const totalSeconds = Math.floor(elapsed / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    if (hours) return `${hours}h ${minutes}m ${seconds}s`;
+    if (minutes) return `${minutes}m ${seconds}s`;
+    return `${seconds}s`;
+  };
   const render = ({ whisper, batch }) => {
     const dot = byId("connection-dot");
     dot.className = `status-dot ${whisper.online && whisper.transcription_api ? "online" : "offline"}`;
@@ -20,7 +31,9 @@
     text("progress-percent", `${percent}%`);
     byId("progress-bar").style.width = `${percent}%`;
     byId("progress-bar").parentElement.setAttribute("aria-valuenow", String(percent));
-    text("current-track", batch.current_track ? `Now analyzing: ${batch.current_track.number}. ${batch.current_track.title}` : (batch.status?.startsWith("completed") ? "Batch finished." : "Preparing the next track…"));
+    const activeTrack = (batch.tracks || []).find((track) => track.status === "running");
+    const activeDuration = activeTrack && formatDuration(activeTrack.started_at);
+    text("current-track", batch.current_track ? `Now analyzing: ${batch.current_track.number}. ${batch.current_track.title}${activeDuration ? ` · Running for ${activeDuration}` : ""}` : (batch.status?.startsWith("completed") ? "Batch finished." : "Preparing the next track…"));
     for (const name of ["completed", "running", "pending", "failed"]) text(`total-${name}`, totals[name] || 0);
     const list = byId("track-list");
     list.replaceChildren();
@@ -28,7 +41,12 @@
       const row = document.createElement("li");
       const number = document.createElement("span"); number.className = "track-number"; number.textContent = String(track.number).padStart(2, "0");
       const title = document.createElement("span"); title.className = "track-title"; title.textContent = track.title;
-      const meta = document.createElement("span"); meta.className = "track-meta"; meta.textContent = track.completed_at ? formatDate(track.completed_at) : "";
+      const meta = document.createElement("span");
+      meta.className = "track-meta";
+      const duration = formatDuration(track.started_at, track.completed_at);
+      if (track.completed_at) meta.textContent = `${duration ? `Took ${duration} · ` : ""}Finished ${formatDate(track.completed_at)}`;
+      else if (track.status === "running" && duration) meta.textContent = `Running for ${duration}`;
+      else meta.textContent = track.status === "pending" ? "Waiting" : "";
       const state = document.createElement("span"); state.className = `track-state ${track.status}`; state.textContent = track.status === "failed" ? "Needs attention" : track.status;
       row.append(number, title, meta, state); list.append(row);
     }

@@ -44,4 +44,4 @@ noindex: true
   </section>
 </main>
 
-<script src="{{ '/assets/js/transcriptions.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/transcriptions.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
