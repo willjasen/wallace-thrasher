@@ -10,7 +10,7 @@
   data-source="{{ site.baseurl }}/assets/json/data.combined.json"
   data-cache-version="{{ site.time | date: "%s" }}"></script>
 
-{% if jekyll.environment != "production" or page.noindex %}
+{% if page.noindex %}
   <meta name="robots" content="noindex, nofollow">
 {% endif %}
 

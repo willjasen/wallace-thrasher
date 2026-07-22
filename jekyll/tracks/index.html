@@ -86,7 +86,6 @@ noindex: true
 <script>
 (async function () {
   const BASE_URL = '{{ site.baseurl }}';
-  const JEKYLL_ENV = '{{ jekyll.environment }}';
   const GITHUB_CLIENT_ID = '{{ site.github_client_id }}';
 
   const params = new URLSearchParams(window.location.search);
@@ -216,26 +215,6 @@ noindex: true
     reviewP.textContent = 'This track has been reviewed! \uD83D\uDE0A';
   }
   frag.appendChild(reviewP);
-
-  // ---- Dev-environment metadata (non-production only) ----
-  if (JEKYLL_ENV !== 'production') {
-    frag.appendChild(hr());
-    if (track.Last_Modified) {
-      const d = new Date(track.Last_Modified * 1000);
-      const iso = d.toISOString().replace(/\.\d{3}Z$/, '').replace('T', 'T');
-      frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -10px; margin-bottom: 30px;' }, 'Last modified: ' + iso));
-    }
-    if (track.Whisper_Model) {
-      frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 30px;' }, 'Model used: ' + track.Whisper_Model));
-    }
-    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 30px;' },
-      'Speakers adjusted? ' + (track.Speakers_Adjusted !== undefined ? track.Speakers_Adjusted : false)));
-    frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 30px;' },
-      'Subtitles adjusted? ' + (track.Subtitles_Adjusted !== undefined ? track.Subtitles_Adjusted : false)));
-    if (track.To_Do) {
-      frag.appendChild(textEl('h5', { style: 'text-align: center; margin-top: -30px; margin-bottom: 40px;' }, 'To-Do: ' + track.To_Do));
-    }
-  }
 
   frag.appendChild(hr());
 
@@ -376,12 +355,6 @@ noindex: true
 
     // ---- View span (default display) ----
     const viewSpan = el('span', { class: 'sub-view' });
-    if (JEKYLL_ENV !== 'production') {
-      const idxEl = document.createElement('i');
-      idxEl.textContent = sub.Index;
-      viewSpan.appendChild(idxEl);
-      viewSpan.appendChild(document.createTextNode(' -- '));
-    }
     const strong = document.createElement('strong');
     strong.textContent = sub.Speaker + ':';
     viewSpan.appendChild(strong);

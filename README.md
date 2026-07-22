@@ -13,7 +13,6 @@ for help on how to use the web app, refer to the [instructions](https://stretchi
 this website can currently be viewed at:
 
 - primary domain --> [stretchie.net](https://stretchie.net)
-- for development only --> [dev.stretchie.net](https://dev.stretchie.net) & [github pages](https://willjasen.github.io/wallace-thrasher/)
 
 ### 🎮 Features 🎮
 
@@ -144,20 +143,13 @@ the keys of `USB_Directory` and `USB_Filename` refer to the respective directory
 
 to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
 
-to build, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll build`
+to build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
 
-to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=development bundle exec jekyll serve`
-
-when deploying to production, `JEKYLL_ENV` must be changed to `production`. the development environment tends to display information within data.json more so than the production environment.
+to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
 
 ### 📤 Deployment 📤
 
 commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
-
-commits to the dev branch trigger the `publish-to-github-pages.yml` [github action](https://github.com/willjasen/wallace-thrasher/blob/main/.github/workflows/publish-to-github-pages.yml):
-
-- runs `jekyll build --baseurl "/wallace-thrasher"` to generate the site on the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch
-- a separate action then uses the "[gh-pages](https://github.com/willjasen/wallace-thrasher/tree/gh-pages)" branch to deploy to github pages
 
 ### ✍️ How to Contribute ✍️
 
@@ -195,8 +187,6 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 ### 🤓 Technical Details 🤓
 
 here are various badges related to this project's code and its deployments
-
-[![Publish to GitHub Pages](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg)](https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml) -- GitHub Action to publish to GitHub Pages
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- production deployment status to Netlify
 

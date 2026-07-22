@@ -134,7 +134,6 @@ async function main(callback) {
         const rawDataJson = await window.WallaceThrasherAPI.getData();
 
     try {
-        var jekyll_env = '{{ jekyll.environment }}';
         dataStructure = await loadData(rawDataJson);
         const dataMap = new Map(dataStructure.map(doc => [doc.id, doc]));
 

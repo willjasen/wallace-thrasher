@@ -36,19 +36,6 @@ layout: base
   }
 </style>
 
-{% if jekyll.environment != "production" %}
-  <details class="track-dev-details">
-    <summary>Track data</summary>
-    <div class="track-dev-grid">
-      {% if last_modified_detail %}<p>Last modified: {{ last_modified_detail | date: "%Y-%m-%dT%H:%M:%S" }}</p>{% endif %}
-      {% if whisper_model_detail %}<p>Model: {{ whisper_model_detail }}</p>{% endif %}
-      <p>Speakers adjusted: {{ track_speakers_detail | default: false }}</p>
-      <p>Subtitles adjusted: {{ track_subtitles_detail | default: false }}</p>
-      {% if to_do_detail %}<p>To-do: {{ to_do_detail }}</p>{% endif %}
-    </div>
-  </details>
-{% endif %}
-
 {% if apple_music_link_detail %}
 <script>
 (function () {
@@ -164,18 +151,12 @@ layout: base
   {% if track_subtitles %}
     {% for trackText in track_subtitles %}
       <li class="subtitle-line" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-        {% if jekyll.environment != "production" %}
-          <i>{{ trackText.Index }}</i> -- 
-        {% endif %}
         <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
       </li>
     {% endfor %}
   {% else %}
     {% for trackText in track %}
     <li class="subtitle-line" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-      {% if jekyll.environment != "production" %}
-          <i>{{ trackText.Index }}</i> -- 
-      {% endif %}
       <strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}<br>
     </li>
     {% endfor %}

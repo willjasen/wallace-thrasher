@@ -17,7 +17,7 @@
     : '/assets/json/data.combined.json';
   var cacheVersion = script && script.dataset.cacheVersion
     ? script.dataset.cacheVersion
-    : 'development';
+    : 'unversioned';
   var dataPromise = null;
 
   function assertResponse(response) {

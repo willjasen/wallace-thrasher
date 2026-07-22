@@ -16,20 +16,11 @@
       </div>
       
 
-      {% if jekyll.environment != "production" %}
-        <div class="footer-col footer-col-2" style="text-align: center;">
-          <p style="color: greenyellow;">** this is the dev version **</p>
-          <a href="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml">
-            <img src="https://github.com/willjasen/wallace-thrasher/actions/workflows/publish-to-github-pages.yml/badge.svg" alt="Publish to GitHub Pages">
-          </a>
-        </div>
-      {% else %}
-        <div class="footer-col footer-col-2" style="text-align: right;">
-          <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank">
-            <img src="{{ site.baseurl }}/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC
-          </a>
+      <div class="footer-col footer-col-2" style="text-align: right;">
+        <a href="http://longmontpotioncastle.com/" rel="noopener noreferrer" target="_blank">
+          <img src="{{ site.baseurl }}/assets/img/lpc_logo.jpg" alt="LPC logo" width="15" height="15"> LPC
+        </a>
       </div>
-      {% endif %}
 
       <div class="footer-details">
         <div id="latest-tag">
@@ -39,12 +30,7 @@
           </a>
         </div>
         <div id="build-time">
-          Built:
-          {% if jekyll.environment != "production" %}
-            {{ site.time | date: '%-m/%-d/%y, %-I:%M:%S %p %Z' }}
-          {% else %}
-            {{ site.time | date: '%-m/%-d/%y, %-I:%M %p %Z' }}
-          {% endif %}
+          Built: {{ site.time | date: '%-m/%-d/%y, %-I:%M %p %Z' }}
         </div>
         <div>
           data licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener noreferrer" target="_blank">CC-BY-SA 3.0</a>
