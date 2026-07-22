@@ -21,6 +21,7 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = REPO_ROOT / "jekyll" / "assets" / "json" / "data.json"
 DEFAULT_ANALYSIS_ROOT = REPO_ROOT / "analysis" / "whisper-webui"
+DEFAULT_WHISPER_MODEL = "distil-large-v3"
 CLIENT_PATH = REPO_ROOT / "pinokio_agent" / "skills" / "api" / "whisper-webui.git" / "clients" / "transcribe.py"
 SPEAKER_PREFIX = re.compile(r"^\s*([^|\n]{1,64})\|(.*)$", re.DOTALL)
 SRT_TIMING = re.compile(
@@ -403,6 +404,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
     audio_path = args.audio.resolve() if args.audio else resolve_usb_audio(
         args.usb_root.resolve(), album["USB_Directory"], track["USB_Filename"]
     )
+    selected_model = args.model or DEFAULT_WHISPER_MODEL
     manifest: Dict[str, Any] = {
         "schema_version": 1,
         "status": "running",
@@ -423,7 +425,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
         },
         "request": {
             "base_url": public_base_url(args.url),
-            "model": args.model or track.get("Whisper_Model"),
+            "model": selected_model,
             "language": args.language,
             "diarization": not args.no_diarization,
             "diarization_device": args.diarization_device,
@@ -441,7 +443,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
         ))
         response = client.transcribe(
             audio_path,
-            model=args.model or track.get("Whisper_Model"),
+            model=selected_model,
             language=args.language,
             diarize=not args.no_diarization,
             diarization_device=args.diarization_device,
@@ -526,7 +528,7 @@ def build_parser() -> argparse.ArgumentParser:
     analyze.add_argument("--url", default=os.environ.get("WHISPER_WEBUI_URL"))
     analyze.add_argument("--username", default=os.environ.get("WHISPER_WEBUI_USERNAME"))
     analyze.add_argument("--password", default=os.environ.get("WHISPER_WEBUI_PASSWORD"))
-    analyze.add_argument("--model")
+    analyze.add_argument("--model", default=DEFAULT_WHISPER_MODEL)
     analyze.add_argument("--language", default="en")
     analyze.add_argument("--diarization-device", default="cpu")
     analyze.add_argument("--no-diarization", action="store_true")

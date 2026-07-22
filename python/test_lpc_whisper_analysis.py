@@ -37,6 +37,16 @@ class FakeWhisperHttp:
 
 
 class LpcWhisperAnalysisTests(unittest.TestCase):
+    def test_default_model_is_workflow_configuration_not_track_metadata(self):
+        args = analysis.build_parser().parse_args([
+            "analyze",
+            "--album", "album-one",
+            "--track", "track-one",
+            "--audio", "/tmp/track.mp3",
+            "--url", "http://127.0.0.1:7860",
+        ])
+        self.assertEqual(args.model, "distil-large-v3")
+
     def test_parse_diarized_srt(self):
         content = """1
 00:00:00,000 --> 00:00:02,500

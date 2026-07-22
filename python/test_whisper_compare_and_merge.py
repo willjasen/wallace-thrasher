@@ -72,6 +72,7 @@ class WhisperMergeFixture:
             "status": "completed",
             "track": {"album_slug": self.album_slug, "track_slug": self.track_slug},
             "audio": {"sha256": "audio-hash"},
+            "request": {"model": "test-model"},
         }
         self.review = {
             "speaker_mapping_suggestions": [{
@@ -118,6 +119,14 @@ class WhisperMergeFixture:
 
 
 class WhisperComparisonTests(unittest.TestCase):
+    def test_metadata_already_present_in_current_track_is_not_reproposed(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = WhisperMergeFixture(temporary)
+            track = fixture.data["Albums"][0]["Tracks"][0]
+            track["Establishments"].append("Known Place")
+            proposals = merge_tool._metadata_proposals(fixture.data, track, fixture.review)
+            self.assertEqual(proposals["establishments"], [])
+
     def test_compare_marks_machine_text_for_review_and_known_metadata_for_auto_add(self):
         with tempfile.TemporaryDirectory() as temporary:
             fixture = WhisperMergeFixture(temporary)
@@ -177,6 +186,7 @@ class WhisperComparisonTests(unittest.TestCase):
                 (fixture.run_dir / "merge-receipts" / "1234567890123.json").read_text(encoding="utf-8")
             )
             self.assertEqual(receipt["source"]["audio_sha256"], "audio-hash")
+            self.assertEqual(receipt["source"]["model"], "test-model")
             self.assertEqual(receipt["applied"]["establishments"], ["Known Place"])
             self.assertEqual(result["text_changed"], 0)
 

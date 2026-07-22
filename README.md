@@ -111,8 +111,7 @@ the main JSON data file resides at `/assets/data.json`
           },
           "Speakers_Adjusted": "false",
           "Subtitles_Adjusted": "false",
-          "USB_Filename": "longmont-theme-1.mp3",
-          "Whisper_Model": "distil-whisper/distil-large-v3"
+          "USB_Filename": "longmont-theme-1.mp3"
         }
       ]
     }
@@ -190,7 +189,7 @@ python3 python/lpc_whisper_analysis.py import-srt \
   /path/to/game-stop.srt
 ```
 
-each completed bundle includes the original SRT, normalized segments, repository-shaped candidate subtitles, suggested mappings from diarized speakers to current speaker names, and review leads for aliases and establishments. these are evidence for manual curation rather than automatic edits.
+each completed bundle includes the original SRT, normalized segments, repository-shaped candidate subtitles, suggested mappings from diarized speakers to current speaker names, and review leads for aliases and establishments. these are evidence for manual curation rather than automatic edits. the selected Whisper model is recorded in the ignored run manifest and merge receipts rather than in each public `data.json` track.
 
 compare a completed analysis with both `data.json` and the current track subtitle JSON:
 

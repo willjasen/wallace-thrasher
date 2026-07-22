@@ -152,19 +152,24 @@ def _catalog_type(data: dict[str, Any], establishment: str) -> str:
     return types.most_common(1)[0][0] if types else "unspecified"
 
 
-def _metadata_proposals(data: dict[str, Any], review: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+def _metadata_proposals(data: dict[str, Any], track: dict[str, Any],
+                        review: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
     metadata = review.get("metadata") or {}
+    current_aliases = {_normalize(value) for value in track.get("Aliases") or []}
+    current_establishments = {_normalize(value) for value in track.get("Establishments") or []}
     aliases = [{
         "value": value,
         "action": "auto_add",
         "reason": "Known catalog alias appears in the local Whisper transcript.",
-    } for value in metadata.get("known_aliases_detected_but_missing_from_track") or []]
+    } for value in metadata.get("known_aliases_detected_but_missing_from_track") or []
+        if _normalize(value) not in current_aliases]
     establishments = [{
         "value": value,
         "type": _catalog_type(data, value),
         "action": "auto_add",
         "reason": "Known catalog establishment appears in the local Whisper transcript.",
-    } for value in metadata.get("known_establishments_detected_but_missing_from_track") or []]
+    } for value in metadata.get("known_establishments_detected_but_missing_from_track") or []
+        if _normalize(value) not in current_establishments]
     return {"aliases": aliases, "establishments": establishments}
 
 
@@ -277,7 +282,7 @@ def build_comparison(data: dict[str, Any], album_slug: str, track_slug: str, run
     alignments = _transform_alignments(
         raw_alignments, mapping, threshold, reviewed_by_index, reviewed_default
     )
-    metadata = _metadata_proposals(data, review)
+    metadata = _metadata_proposals(data, track, review)
 
     return {
         "format_version": FORMAT_VERSION,
@@ -287,6 +292,7 @@ def build_comparison(data: dict[str, Any], album_slug: str, track_slug: str, run
             "run": run_dir.name,
             "run_path": run_dir.relative_to(PROJECT_ROOT).as_posix(),
             "audio_sha256": manifest.get("audio", {}).get("sha256"),
+            "model": manifest.get("request", {}).get("model"),
             "candidate_sha256": _sha256(candidate_path),
             "manifest_sha256": _sha256(manifest_path),
         },
@@ -493,6 +499,7 @@ def merge(args: argparse.Namespace) -> dict[str, Any]:
             "source": {
                 "run": source.get("run_path"),
                 "audio_sha256": source.get("audio_sha256"),
+                "model": source.get("model"),
             },
             "applied": {
                 "aliases": [item["value"] for item in aliases],
