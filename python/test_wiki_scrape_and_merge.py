@@ -42,6 +42,13 @@ class WikitextParsingTests(unittest.TestCase):
         raw = "Call [https://example.test/wiki/Person Evonne Goolagong] today."
         self.assertEqual(wiki._clean_wiki_text(raw), "Call Evonne Goolagong today.")
 
+    def test_short_wiki_speaker_does_not_replace_existing_full_name(self):
+        self.assertEqual(
+            wiki._prefer_existing_specific_speaker("Alex Trebek", "Alex"),
+            "Alex Trebek",
+        )
+        self.assertEqual(wiki._prefer_existing_specific_speaker("SPEAKER_01", "Alex"), "Alex")
+
 
 class AlignmentTests(unittest.TestCase):
     def test_alignment_does_not_group_by_incorrect_diariser_code(self):

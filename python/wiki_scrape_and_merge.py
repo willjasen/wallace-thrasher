@@ -239,6 +239,20 @@ def _extract_speaker_name(cell_content: str) -> str | None:
     return cleaned if cleaned else None
 
 
+def _prefer_existing_specific_speaker(existing: str, wiki_speaker: str) -> str:
+    """Keep a full existing name when the wiki uses only its first word."""
+    existing_clean = existing.strip()
+    wiki_clean = wiki_speaker.strip()
+    if (
+        existing_clean
+        and wiki_clean
+        and " " in existing_clean
+        and existing_clean.casefold().startswith(f"{wiki_clean.casefold()} ")
+    ):
+        return existing_clean
+    return wiki_clean
+
+
 def parse_transcript_from_wikitext(wikitext: str) -> list[tuple[str | None, str]]:
     """
     Parse the == Transcript == section from wikitext.
@@ -1005,7 +1019,9 @@ def cmd_compare(args) -> None:
             if aln.get("wiki_speaker") and sim >= 0.65:
                 # Prefer the speaker attached to this particular matched line.
                 # The global map is only a fallback for unmatched/weak lines.
-                aln["proposed_speaker"] = aln["wiki_speaker"]
+                aln["proposed_speaker"] = _prefer_existing_specific_speaker(
+                    code, aln["wiki_speaker"]
+                )
                 aln["speaker_action"] = "matched_line"
             elif code in speaker_map:
                 aln["proposed_speaker"] = speaker_map[code]
