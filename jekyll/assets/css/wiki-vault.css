@@ -1,0 +1,420 @@
+.wiki-vault {
+  --vault-ink: #eff6f4;
+  --vault-muted: #9caaa8;
+  --vault-panel: #111a1d;
+  --vault-panel-soft: #162226;
+  --vault-line: #2b3d40;
+  --vault-aqua: #75e6d5;
+  --vault-amber: #ffc56e;
+  --vault-red: #ff8d8d;
+  color: var(--vault-ink);
+  margin: 0 calc(50% - 50vw);
+  padding: 1rem max(1.25rem, calc((100vw - 1120px) / 2)) 4rem;
+  background:
+    radial-gradient(circle at 88% 3%, rgba(117, 230, 213, 0.12), transparent 24rem),
+    linear-gradient(180deg, #0d1517 0%, #10191c 48%, #0b1214 100%);
+  min-height: 70vh;
+}
+
+.wiki-vault * { box-sizing: border-box; }
+
+.vault-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--vault-line);
+}
+
+.vault-eyebrow,
+.vault-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--vault-aqua);
+  font: 700 0.72rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.vault-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.3rem, 7vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.vault-intro {
+  max-width: 700px;
+  margin: 1rem 0 0;
+  color: var(--vault-muted);
+  font-size: 1.04rem;
+}
+
+.vault-seal {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 92px;
+  display: grid;
+  place-content: center;
+  border: 1px solid var(--vault-aqua);
+  border-radius: 50%;
+  color: var(--vault-aqua);
+  text-align: center;
+  box-shadow: inset 0 0 0 5px #0d1517, inset 0 0 0 6px rgba(117, 230, 213, 0.35);
+  transform: rotate(7deg);
+}
+
+.vault-seal span { font: 800 1.8rem/1 ui-monospace, monospace; }
+.vault-seal small { font: 700 0.55rem/1.2 ui-monospace, monospace; letter-spacing: 0.22em; }
+
+.vault-status {
+  margin: 1rem 0;
+  color: var(--vault-muted);
+  font: 0.78rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vault-status.is-error { color: var(--vault-red); }
+
+.vault-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1px;
+  margin: 1rem 0 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--vault-line);
+  border-radius: 12px;
+  background: var(--vault-line);
+}
+
+.vault-stats article {
+  padding: 1rem 1.15rem;
+  background: var(--vault-panel);
+}
+
+.vault-stats span {
+  display: block;
+  color: var(--vault-amber);
+  font: 750 clamp(1.4rem, 3vw, 2rem)/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vault-stats small {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--vault-muted);
+  letter-spacing: 0.04em;
+}
+
+.vault-pipeline,
+.vault-merges {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--vault-line);
+  border-radius: 14px;
+  background: rgba(17, 26, 29, 0.82);
+}
+
+.vault-pipeline h2,
+.vault-browser-heading h2,
+.vault-merges h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+}
+
+.vault-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.vault-pipeline-grid article {
+  position: relative;
+  min-width: 0;
+  padding: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--vault-line);
+  border-radius: 10px;
+  background: #0e1719;
+}
+
+.vault-pipeline-grid article > span {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.8rem;
+  color: rgba(117, 230, 213, 0.17);
+  font: 800 2rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vault-pipeline-grid h3 {
+  position: relative;
+  margin: 0 0 0.55rem;
+  color: var(--vault-aqua);
+  font-size: 1rem;
+}
+
+.vault-pipeline-grid p,
+.vault-browser-heading p,
+.vault-section-intro {
+  margin: 0;
+  color: var(--vault-muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.vault-browser,
+.vault-track-panel {
+  border: 1px solid var(--vault-line);
+  border-radius: 14px;
+  background: rgba(17, 26, 29, 0.94);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+.vault-browser { padding: 1rem; }
+
+.vault-browser-heading {
+  align-items: flex-end;
+  margin: 0 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--vault-line);
+}
+
+.vault-browser-heading > p { max-width: 520px; text-align: right; }
+
+.vault-controls {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.vault-controls label > span,
+.vault-filter-bar label > span:not(.sr-only) {
+  display: block;
+  margin: 0 0 0.4rem 0.15rem;
+  color: var(--vault-muted);
+  font: 700 0.67rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.wiki-vault select,
+.wiki-vault input[type="search"] {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  border: 1px solid var(--vault-line);
+  border-radius: 8px;
+  background: #0c1416;
+  color: var(--vault-ink);
+  font: inherit;
+}
+
+.wiki-vault select { padding: 0.65rem 2.2rem 0.65rem 0.75rem; }
+.wiki-vault input[type="search"] { padding: 0.65rem 0.8rem; }
+.wiki-vault select:focus,
+.wiki-vault input:focus { outline: 2px solid var(--vault-aqua); outline-offset: 1px; }
+
+.vault-run-note {
+  min-height: 1.4rem;
+  margin: 0.7rem 0 0;
+  color: var(--vault-muted);
+  font: 0.72rem/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vault-track-panel {
+  margin-top: 0.5rem;
+  overflow: hidden;
+  background: var(--vault-panel-soft);
+}
+
+.vault-track-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.4rem;
+  background: var(--vault-panel);
+  border-bottom: 1px solid var(--vault-line);
+}
+
+.vault-track-heading h2 { margin: 0; color: #fff; font-size: clamp(1.5rem, 4vw, 2.3rem); }
+.vault-muted { color: var(--vault-muted); }
+#vault-track-meta { margin: 0.45rem 0 0; font-size: 0.82rem; }
+
+.vault-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  gap: 0.45rem;
+}
+
+.vault-source-links a {
+  display: inline-flex;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--vault-line);
+  border-radius: 999px;
+  color: var(--vault-aqua);
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+
+.vault-source-links a:hover { border-color: var(--vault-aqua); }
+
+.vault-track-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid var(--vault-line);
+}
+
+.vault-track-stats article {
+  min-width: 0;
+  padding: 1rem 1.1rem;
+  border-right: 1px solid var(--vault-line);
+}
+
+.vault-track-stats article:last-child { border-right: 0; }
+.vault-track-stats strong { display: block; color: #fff; font: 700 1.25rem/1 ui-monospace, monospace; }
+.vault-track-stats small { display: block; margin-top: 0.35rem; color: var(--vault-muted); font-size: 0.7rem; }
+
+.vault-mapping-section,
+.vault-alignments { padding: 1.3rem 1.4rem; }
+.vault-mapping-section { border-bottom: 1px solid var(--vault-line); }
+
+.vault-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.vault-section-heading h3 { margin: 0; color: #fff; font-size: 1rem; }
+.vault-speaker-map { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.vault-speaker-map:empty::after { content: "No accepted speaker mappings"; color: var(--vault-muted); font-size: 0.84rem; }
+
+.vault-speaker-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--vault-line);
+  border-radius: 7px;
+  background: #0e1719;
+  font: 0.76rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vault-speaker-chip b { color: var(--vault-aqua); }
+.vault-speaker-chip i { color: var(--vault-muted); font-style: normal; }
+
+.vault-alignment-heading { align-items: flex-end; }
+.vault-filter-bar { display: grid; grid-template-columns: minmax(220px, 1fr) 170px; gap: 0.5rem; width: min(100%, 520px); }
+.vault-alignment-list { display: grid; gap: 0.65rem; }
+
+.vault-line-card {
+  overflow: hidden;
+  border: 1px solid var(--vault-line);
+  border-left: 3px solid var(--vault-aqua);
+  border-radius: 9px;
+  background: #0e1719;
+}
+
+.vault-line-card.is-review { border-left-color: var(--vault-amber); }
+.vault-line-card.is-unmatched { border-left-color: var(--vault-red); }
+
+.vault-line-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--vault-line);
+  color: var(--vault-muted);
+  font: 0.7rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.vault-line-index { color: #fff; font-weight: 700; }
+.vault-badge { margin-left: auto; padding: 0.18rem 0.4rem; border-radius: 999px; background: rgba(117, 230, 213, 0.12); color: var(--vault-aqua); }
+.is-review .vault-badge { background: rgba(255, 197, 110, 0.12); color: var(--vault-amber); }
+.is-unmatched .vault-badge { background: rgba(255, 141, 141, 0.12); color: var(--vault-red); }
+
+.vault-line-body { display: grid; grid-template-columns: 1fr 1fr; }
+.vault-line-body.is-single { grid-template-columns: 1fr; }
+.vault-line-body.is-single .vault-dialogue { border: 0; }
+.vault-dialogue { min-width: 0; padding: 0.8rem 0.9rem 0.9rem; }
+.vault-dialogue + .vault-dialogue { border-left: 1px solid var(--vault-line); }
+.vault-dialogue small { display: block; margin-bottom: 0.35rem; color: var(--vault-muted); font: 0.66rem/1.3 ui-monospace, monospace; text-transform: uppercase; letter-spacing: 0.08em; }
+.vault-dialogue b { color: var(--vault-aqua); font-weight: 650; }
+.vault-dialogue p { margin: 0; color: var(--vault-ink); line-height: 1.45; overflow-wrap: anywhere; }
+.vault-dialogue .vault-no-match { color: var(--vault-muted); font-style: italic; }
+
+.vault-empty {
+  margin-top: 0.5rem;
+  padding: 3rem 1rem;
+  border: 1px dashed var(--vault-line);
+  border-radius: 10px;
+  color: var(--vault-muted);
+  text-align: center;
+}
+
+.vault-empty strong,
+.vault-empty span { display: block; }
+.vault-empty strong { margin-bottom: 0.25rem; color: var(--vault-ink); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.vault-section-intro { margin: -0.35rem 0 1rem; max-width: 760px; }
+.vault-merge-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+
+.vault-merge-card {
+  min-width: 0;
+  padding: 0.9rem;
+  border: 1px solid var(--vault-line);
+  border-radius: 10px;
+  background: #0e1719;
+}
+
+.vault-merge-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.vault-merge-heading strong,
+.vault-merge-heading small { display: block; }
+.vault-merge-heading strong { color: #fff; font-size: 0.86rem; }
+.vault-merge-heading small { margin-top: 0.25rem; color: var(--vault-muted); font: 0.64rem/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+.vault-merge-total { flex: 0 0 auto; color: var(--vault-amber); font: 700 0.76rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.vault-merge-albums { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; }
+.vault-merge-albums span { padding: 0.28rem 0.42rem; border-radius: 5px; background: rgba(117, 230, 213, 0.08); color: var(--vault-muted); font-size: 0.68rem; }
+.vault-merge-albums .is-empty { background: transparent; padding-left: 0; font-style: italic; }
+
+@media (max-width: 960px) {
+  .vault-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .wiki-vault { padding-inline: 1rem; }
+  .vault-hero { align-items: flex-start; }
+  .vault-seal { width: 68px; height: 68px; flex-basis: 68px; }
+  .vault-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vault-pipeline-grid,
+  .vault-merge-list { grid-template-columns: 1fr; }
+  .vault-browser-heading { align-items: flex-start; display: block; }
+  .vault-browser-heading > p { margin-top: 0.65rem; text-align: left; }
+  .vault-controls { grid-template-columns: 1fr; }
+  .vault-track-heading { display: block; }
+  .vault-source-links { justify-content: flex-start; margin-top: 1rem; }
+  .vault-track-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vault-track-stats article { border-bottom: 1px solid var(--vault-line); }
+  .vault-alignment-heading { display: block; }
+  .vault-filter-bar { grid-template-columns: 1fr; width: 100%; margin-top: 0.8rem; }
+  .vault-line-body { grid-template-columns: 1fr; }
+  .vault-dialogue + .vault-dialogue { border-left: 0; border-top: 1px solid var(--vault-line); }
+}
+
+@media (max-width: 480px) {
+  .vault-seal { display: none; }
+  .vault-stats { grid-template-columns: 1fr 1fr; }
+  .vault-mapping-section,
+  .vault-alignments,
+  .vault-track-heading { padding: 1rem; }
+}

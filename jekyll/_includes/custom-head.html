@@ -5,6 +5,9 @@
 {% if page.collection == "albums" %}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/album-page.css" data-soft-nav-style>
 {% endif %}
+{% if page.wiki_vault %}
+  <link rel="stylesheet" href="{{ '/assets/css/wiki-vault.css' | relative_url }}">
+{% endif %}
 <script
   src="{{ site.baseurl }}/assets/js/data-api.js"
   data-source="{{ site.baseurl }}/assets/json/data.combined.json"

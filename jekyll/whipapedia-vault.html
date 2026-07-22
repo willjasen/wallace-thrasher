@@ -1,0 +1,149 @@
+---
+layout: base
+title: Wiki Data
+description: Browse Talkin' Whipapedia scrape, comparison, and merge history.
+permalink: /wiki-data/
+wiki_vault: true
+---
+
+<div class="wiki-vault" data-manifest-url="{{ '/assets/wiki-data/manifest.json' | relative_url }}">
+  <header class="vault-hero">
+    <div>
+      <p class="vault-eyebrow">Talkin' Whipapedia pipeline</p>
+      <h1>Wiki Data</h1>
+      <p class="vault-intro">See what was scraped, how wiki transcripts compare with the local catalogue, and which source files were backed up during merges.</p>
+    </div>
+    <div class="vault-seal" aria-hidden="true">
+      <span>WT</span>
+      <small>DATA</small>
+    </div>
+  </header>
+
+  <p id="vault-status" class="vault-status" role="status">Opening the archive…</p>
+
+  <section class="vault-stats" aria-label="Wiki data summary">
+    <article><span id="stat-scrape-records">—</span><small>scraped tracks</small></article>
+    <article><span id="stat-wiki-pages">—</span><small>wiki pages found</small></article>
+    <article><span id="stat-missing-pages">—</span><small>pages not found</small></article>
+    <article><span id="stat-comparison-tracks">—</span><small>comparisons</small></article>
+    <article><span id="stat-merged-files">—</span><small>merge backups</small></article>
+    <article><span id="stat-runs">—</span><small>recorded runs</small></article>
+  </section>
+
+  <section class="vault-pipeline" aria-labelledby="vault-pipeline-title">
+    <div class="vault-section-heading">
+      <div>
+        <p class="vault-kicker">How the data moves</p>
+        <h2 id="vault-pipeline-title">Scrape → compare → merge</h2>
+      </div>
+    </div>
+    <div class="vault-pipeline-grid">
+      <article>
+        <span>01</span>
+        <h3>Scrape</h3>
+        <p>Fetch a track page from Talkin' Whipapedia and save its human-curated transcript as an immutable run snapshot.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Compare</h3>
+        <p>Align wiki dialogue with local subtitle lines, calculate similarity, and propose speaker or text corrections for review.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Merge</h3>
+        <p>Apply approved high-confidence changes to the catalogue after preserving the previous local files in a dated backup run.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="vault-browser" aria-label="Wiki scrape and comparison browser">
+    <div class="vault-section-heading vault-browser-heading">
+      <div>
+        <p class="vault-kicker">Run explorer</p>
+        <h2>Scrapes and comparisons</h2>
+      </div>
+      <p>Choose a run, album, and track to inspect the saved wiki transcript or its comparison with local subtitles.</p>
+    </div>
+    <div class="vault-controls">
+      <label>
+        <span>Run</span>
+        <select id="vault-run"></select>
+      </label>
+      <label>
+        <span>Album</span>
+        <select id="vault-album"></select>
+      </label>
+      <label>
+        <span>Track</span>
+        <select id="vault-track"></select>
+      </label>
+    </div>
+
+    <div id="vault-run-note" class="vault-run-note"></div>
+
+    <article id="vault-track-panel" class="vault-track-panel" hidden>
+      <div class="vault-track-heading">
+        <div>
+          <p id="vault-album-label" class="vault-kicker"></p>
+          <h2 id="vault-track-title"></h2>
+          <p id="vault-track-meta" class="vault-muted"></p>
+        </div>
+        <div id="vault-source-links" class="vault-source-links"></div>
+      </div>
+
+      <section id="vault-track-stats" class="vault-track-stats" aria-label="Track comparison summary"></section>
+
+      <section class="vault-mapping-section">
+        <div class="vault-section-heading">
+          <h3 id="vault-mapping-title">Speaker map</h3>
+          <span id="vault-mapping-count" class="vault-muted"></span>
+        </div>
+        <div id="vault-speaker-map" class="vault-speaker-map"></div>
+      </section>
+
+      <section class="vault-alignments">
+        <div class="vault-section-heading vault-alignment-heading">
+          <div>
+            <h3 id="vault-alignment-title">Alignment review</h3>
+            <span id="vault-result-count" class="vault-muted"></span>
+          </div>
+          <div class="vault-filter-bar">
+            <label class="vault-search">
+              <span class="sr-only">Search alignment text or speakers</span>
+              <input id="vault-search" type="search" placeholder="Search dialogue or speaker…" autocomplete="off">
+            </label>
+            <label>
+              <span class="sr-only">Filter alignment status</span>
+              <select id="vault-filter">
+                <option value="all">All lines</option>
+                <option value="review">Needs review</option>
+                <option value="changes">Proposed changes</option>
+                <option value="unmatched">Unmatched</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div id="vault-alignment-list" class="vault-alignment-list"></div>
+      </section>
+    </article>
+
+    <div id="vault-empty" class="vault-empty" hidden>
+      <strong>No track records in this run.</strong>
+      <span>Choose another run to browse its scrape or comparison data.</span>
+    </div>
+  </section>
+
+  <section class="vault-merges" aria-labelledby="vault-merges-title">
+    <div class="vault-section-heading">
+      <div>
+        <p class="vault-kicker">Safety history</p>
+        <h2 id="vault-merges-title">Merge backup runs</h2>
+      </div>
+      <span id="vault-merge-count" class="vault-muted"></span>
+    </div>
+    <p class="vault-section-intro">Every real merge saves the previous version of each affected local track before writing approved changes.</p>
+    <div id="vault-merge-list" class="vault-merge-list"></div>
+  </section>
+</div>
+
+<script src="{{ '/assets/js/wiki-vault.js' | relative_url }}" defer></script>

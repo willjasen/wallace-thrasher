@@ -74,6 +74,15 @@ python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4
 
 Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `python/wiki-data/merge-backups/<unix-timestamp>/` before it is written.
 
+Aliases and organizations can be reconciled separately from Talkin' Whipapedia's maintained index pages. The importer uses explicit wiki track groupings first, then searches album-scoped local transcripts for aliases and the full local catalog for otherwise-unassociated organizations:
+
+```bash
+python3 python/wiki_metadata_merge.py --dry-run
+python3 python/wiki_metadata_merge.py --write
+```
+
+The project continues to call organizations `Establishments`. Each imported organization retains the wiki's `real-world` or `created` classification in `Establishment_Types`; entries found only in the wiki's unclassified “Just a big list” use `unspecified`. `Talkin_Whipapedia` records the values added by the importer so later runs can update or remove stale imports without disturbing hand-maintained metadata. The source material is available under CC BY-SA from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/wiki/Home#Navigation).
+
 ### 💽 JSON for Albums and Tracks 💽
 
 the main JSON data file resides at `/assets/data.json`
@@ -91,10 +100,17 @@ the main JSON data file resides at `/assets/data.json`
           "Track_Number": 1,
           "Track_JSONPath": "longmont-theme-1.json",
           "Track_Slug": "longmont-theme-1",
-          "Aliases": "Wallace Thrasher",
-          "Establishments": "UPS",
+          "Aliases": ["Wallace Thrasher"],
+          "Establishments": ["UPS"],
+          "Establishment_Notes": {"UPS": "Optional context shown in a pop-up on the track page."},
+          "Establishment_Types": {"UPS": "real-world"},
+          "Talkin_Whipapedia": {
+            "Source": "https://talkinwhipapedia.fandom.com/wiki/Home#Navigation",
+            "Aliases": ["Wallace Thrasher"],
+            "Establishments": ["UPS"]
+          },
           "Speakers_Adjusted": "false",
-          "Subtitles_Adjusted": "false"
+          "Subtitles_Adjusted": "false",
           "USB_Filename": "longmont-theme-1.mp3",
           "Whisper_Model": "distil-whisper/distil-large-v3"
         }
