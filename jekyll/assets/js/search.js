@@ -316,6 +316,13 @@ async function main(callback) {
         document.addEventListener('input', function (e) {
             if (!e.target.matches('#subtitles-search-input')) return;
             (function (input) {
+                const resultList = document.querySelector('#subtitles-search-results');
+                const status = document.querySelector('#subtitles-search-status');
+                if (!resultList) return;
+
+                resultList.innerHTML = '';
+                if (status) status.textContent = '';
+
                 if (input.value.trim() != "") {
                     const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
                     const results = idxText.search(query).sort(function (a, b) {
@@ -346,44 +353,50 @@ async function main(callback) {
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
 
-                    // Clear previous results
-                    const resultList = document.querySelector('#subtitles-search-results');
-                    resultList.innerHTML = '';
-
                     // Display search results
-                    let resultCount = 0;
                     results.forEach(function (result) {
-
-                        resultCount++;
                         const matchedDoc = dataMap.get(result.ref);
 
                         const albumAndTitleItem = document.createElement('li');
-                        albumAndTitleItem.innerHTML = `
-                            <img src="${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}" alt="${matchedDoc.Album}" width="25" height="25">
-                            <strong>${matchedDoc.Album}</strong> - 
-                            <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i>
-                        `;
+                        albumAndTitleItem.className = 'subtitle-search-result';
 
-                        if (!window.fileMap || Object.keys(window.fileMap).length === 0) {
-                            albumAndTitleItem.innerHTML += `
-                                <small> @ ${matchedDoc.StartTime}</small>
-                            `;
-                        }
-                        else {
-                            albumAndTitleItem.innerHTML += `
-                                <small> @ </small>
-                            `;
+                        const albumImage = document.createElement('img');
+                        albumImage.className = 'subtitle-search-result__artwork';
+                        albumImage.src = `${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}`;
+                        albumImage.alt = '';
+                        albumImage.width = 56;
+                        albumImage.height = 56;
+                        albumImage.loading = 'lazy';
 
-                            // Create a clickable link
+                        const body = document.createElement('div');
+                        body.className = 'subtitle-search-result__body';
+
+                        const header = document.createElement('div');
+                        header.className = 'subtitle-search-result__header';
+
+                        const trackLink = document.createElement('a');
+                        trackLink.className = 'subtitle-search-result__track';
+                        trackLink.href = `${BASE_URL}/tracks/?album=${encodeURIComponent(matchedDoc.Album_Slug)}&track=${encodeURIComponent(matchedDoc.Track_Slug)}`;
+                        trackLink.textContent = matchedDoc.Track_Title;
+                        header.appendChild(trackLink);
+
+                        let startTime = document.createElement('span');
+                        startTime.className = 'subtitle-search-result__time';
+                        startTime.textContent = matchedDoc.StartTime;
+
+                        if (window.fileMap && Object.keys(window.fileMap).length > 0) {
                             const startTimeLink = document.createElement('a');
+                            startTimeLink.className = 'subtitle-search-result__time';
                             startTimeLink.href = "#" + matchedDoc.StartTime;
-                            startTimeLink.textContent = matchedDoc.StartTime;
+                            startTimeLink.textContent = `Play at ${matchedDoc.StartTime}`;
+                            startTimeLink.setAttribute('aria-label', `Play ${matchedDoc.Track_Title} at ${matchedDoc.StartTime}`);
                             
                             // Parse minutes and seconds. For format "HH:MM:SS,ms"
                             const timeParts = matchedDoc.StartTime.split(":");
-                            const minutes = parseInt(timeParts[1], 10);
-                            const seconds = parseInt(timeParts[2].split(",")[0], 10);
-                            const secondsConverted = (minutes * 60) + seconds;
+                            const hours = parseInt(timeParts[0], 10) || 0;
+                            const minutes = parseInt(timeParts[1], 10) || 0;
+                            const seconds = parseFloat(timeParts[2].replace(',', '.')) || 0;
+                            const secondsConverted = (hours * 3600) + (minutes * 60) + seconds;
                             startTimeLink.addEventListener('click', function(e) {
                                 e.preventDefault();
                                 const usbFilename = matchedDoc.Track_USB_Filename || (matchedDoc.Track_Title + '.mp3');
@@ -407,21 +420,34 @@ async function main(callback) {
                                     audioPlayer.play();
                                 }
                             });
-                            albumAndTitleItem.appendChild(startTimeLink);
+                            startTime = startTimeLink;
                         }
+                        header.appendChild(startTime);
 
-                        const subtitleItem = document.createElement('ul'); // Create a new ul for indentation
-                        const subtitleItemLi = document.createElement('li');
-                        subtitleItemLi.innerHTML = `${matchedDoc.Speaker}: "${matchedDoc.Text}"`;
-                        subtitleItem.appendChild(subtitleItemLi); // Append the subtitle item to the ul
+                        const album = document.createElement('div');
+                        album.className = 'subtitle-search-result__album';
+                        album.textContent = matchedDoc.Album;
 
-                        albumAndTitleItem.appendChild(subtitleItem); // Append the ul to the albumAndTitleItem
-                        resultList.appendChild(albumAndTitleItem); // Finally, append the albumAndTitleItem to the resultList
+                        const quote = document.createElement('p');
+                        quote.className = 'subtitle-search-result__quote';
+                        const speaker = document.createElement('span');
+                        speaker.className = 'subtitle-search-result__speaker';
+                        speaker.textContent = `${matchedDoc.Speaker || 'Unknown speaker'}: `;
+                        quote.appendChild(speaker);
+                        quote.appendChild(document.createTextNode(`“${matchedDoc.Text}”`));
+
+                        body.appendChild(header);
+                        body.appendChild(album);
+                        body.appendChild(quote);
+                        albumAndTitleItem.appendChild(albumImage);
+                        albumAndTitleItem.appendChild(body);
+                        resultList.appendChild(albumAndTitleItem);
                     });
-                    const totalCountContainer = document.createElement('div');
-                    totalCountContainer.style.marginBottom = '25px';
-                    totalCountContainer.innerHTML = `Subtitles found: ${resultCount}`;
-                    resultList.insertBefore(totalCountContainer, resultList.firstChild);
+                    if (status) {
+                        status.textContent = results.length === 1
+                            ? '1 subtitle found'
+                            : `${results.length.toLocaleString()} subtitles found`;
+                    }
                 }
             })(e.target);
         });

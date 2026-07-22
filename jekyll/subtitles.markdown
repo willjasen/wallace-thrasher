@@ -10,7 +10,9 @@ search_menu: true
 {%- include embed-audio-dir-for-search.html -%}
 
 <div class="search-flex-row">
-  <input type="text" id="subtitles-search-input" placeholder="Search...">
+  <label class="visually-hidden" for="subtitles-search-input">Search subtitles</label>
+  <input type="search" id="subtitles-search-input" placeholder="Search spoken words..." autocomplete="off">
   {%- include load-search-with-progress.html -%}
 </div>
-<ul id="subtitles-search-results"></ul>
+<p id="subtitles-search-status" class="subtitles-search-status" aria-live="polite"></p>
+<ul id="subtitles-search-results" class="subtitles-search-results" aria-label="Subtitle search results"></ul>
