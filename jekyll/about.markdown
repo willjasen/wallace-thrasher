@@ -5,7 +5,9 @@ description: Learn about stretchie, a searchable Longmont Potion Castle subtitle
 permalink: /about/
 ---
 
-a website project involving the works of [longmont potion castle](https://en.wikipedia.org/wiki/Longmont_Potion_Castle) - you can call me stretchie
+a website project involving the works of [longmont potion castle](https://en.wikipedia.org/wiki/Longmont_Potion_Castle)
+
+<p style="text-align: center;">you can call me stretchie</p>
 
 ### 🧭 Overview 🧭
 
