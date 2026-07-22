@@ -118,6 +118,63 @@
   font-size: 0.82rem;
   line-height: 1.25;
 }
+.track-fact-values .track-fact-value-with-note { padding: 0; }
+.track-fact-note-trigger {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border: 0;
+  color: #ffcc80;
+  background: rgba(255, 167, 38, 0.1);
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.track-fact-note-trigger:hover,
+.track-fact-note-trigger:focus-visible {
+  color: #ffcc80;
+}
+.track-fact-note-trigger:focus-visible {
+  border-radius: 999px;
+  outline: 2px solid #ffcc80;
+  outline-offset: 2px;
+}
+.track-fact-note-label {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.track-fact-note-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.track-fact-note-popover {
+  box-sizing: border-box;
+  width: min(320px, calc(100vw - 40px));
+  padding: 18px;
+  border: 1px solid #ffcc80;
+  border-radius: 12px;
+  color: #f5f5f5;
+  background: #1e1e3a;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+  line-height: 1.45;
+}
+.track-fact-note-popover::backdrop { background: rgba(0, 0, 0, 0.22); }
+.track-fact-note-popover strong { color: #ffcc80; }
+.track-fact-note-popover p { margin: 8px 0 0; }
 .track-fact-aliases .track-fact-icon { color: #90caf9; background: rgba(66, 165, 245, 0.16); }
 .track-fact-establishments .track-fact-icon { color: #ffcc80; background: rgba(255, 167, 38, 0.16); }
 .track-fact-deliveries .track-fact-icon { color: #a5d6a7; background: rgba(102, 187, 106, 0.16); }

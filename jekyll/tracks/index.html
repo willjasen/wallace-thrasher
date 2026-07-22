@@ -227,7 +227,7 @@ noindex: true
 
   const factGroups = [
     { key: 'Aliases', className: 'track-fact-aliases', icon: 'A' },
-    { key: 'Establishments', className: 'track-fact-establishments', icon: 'E' },
+    { key: 'Establishments', className: 'track-fact-establishments', icon: 'E', notes: track.Establishment_Notes || {} },
     { key: 'Deliveries', className: 'track-fact-deliveries', icon: 'D' },
   ].map(function (fact) {
     fact.values = normalizeFactValues(track[fact.key]);
@@ -248,8 +248,36 @@ noindex: true
       group.appendChild(label);
 
       const values = el('ul', { class: 'track-fact-values' });
-      fact.values.forEach(function (value) {
-        values.appendChild(textEl('li', {}, String(value)));
+      fact.values.forEach(function (value, valueIndex) {
+        const valueText = String(value);
+        const note = fact.notes && fact.notes[valueText];
+        if (!note) {
+          values.appendChild(textEl('li', {}, valueText));
+          return;
+        }
+
+        const popoverId = 'establishment-note-' + valueIndex;
+        const item = el('li', { class: 'track-fact-value-with-note' });
+        const trigger = el('button', {
+          class: 'track-fact-note-trigger',
+          type: 'button',
+          popovertarget: popoverId,
+          'aria-label': 'More information about ' + valueText,
+        });
+        trigger.appendChild(textEl('span', { class: 'track-fact-note-label' }, valueText));
+        trigger.appendChild(textEl('span', { class: 'track-fact-note-icon', 'aria-hidden': 'true' }, 'i'));
+        item.appendChild(trigger);
+
+        const popover = el('div', {
+          class: 'track-fact-note-popover',
+          id: popoverId,
+          popover: 'auto',
+          'aria-label': 'More information about ' + valueText,
+        });
+        popover.appendChild(textEl('strong', {}, valueText));
+        popover.appendChild(textEl('p', {}, String(note)));
+        item.appendChild(popover);
+        values.appendChild(item);
       });
       group.appendChild(values);
       factsGrid.appendChild(group);

@@ -122,7 +122,32 @@ layout: base
             <h2>Establishments</h2>
           </div>
           <ul class="track-fact-values">
-            {% for establishment in track_establishments_detail %}<li>{{ establishment }}</li>{% endfor %}
+            {% for establishment in track_establishments_detail %}
+              {% assign establishment_note = track_establishment_notes_detail[establishment] %}
+              {% if establishment_note %}
+                {% assign establishment_popover_id = "establishment-note-" | append: forloop.index %}
+                <li class="track-fact-value-with-note">
+                  <button
+                    class="track-fact-note-trigger"
+                    type="button"
+                    popovertarget="{{ establishment_popover_id }}"
+                    aria-label="More information about {{ establishment | escape }}">
+                    <span class="track-fact-note-label">{{ establishment | escape }}</span>
+                    <span class="track-fact-note-icon" aria-hidden="true">i</span>
+                  </button>
+                  <div
+                    class="track-fact-note-popover"
+                    id="{{ establishment_popover_id }}"
+                    popover="auto"
+                    aria-label="More information about {{ establishment | escape }}">
+                    <strong>{{ establishment | escape }}</strong>
+                    <p>{{ establishment_note | escape }}</p>
+                  </div>
+                </li>
+              {% else %}
+                <li>{{ establishment | escape }}</li>
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       {% endif %}
