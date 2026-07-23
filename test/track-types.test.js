@@ -36,10 +36,27 @@ test('LPC medleys are calls and LPC interludes are music', () => {
     .forEach((track) => assert.equal(Object.hasOwn(track, 'Track_Type'), false, `${track.Track_Title} should be unclassified`));
 });
 
+test('theme tracks are music', () => {
+  const themes = data.Albums
+    .flatMap((album) => album.Tracks)
+    .filter((track) => track.Track_Title.includes('Theme'));
+
+  themes.forEach((track) => {
+    assert.equal(track.Track_Type, 'music', `${track.Track_Title} should be music`);
+  });
+});
+
 test('LPC 7 medley examples have the expected types', () => {
   const album = data.Albums.find((item) => item.Album === 'Longmont Potion Castle 7');
   const trackType = (title) => album.Tracks.find((track) => track.Track_Title === title).Track_Type;
 
   assert.equal(trackType('LPC 7 Medley 1'), 'call');
   assert.equal(trackType('LPC 7 Medley 2'), 'call');
+});
+
+test('LPC 7 Theme 2 is classified as music', () => {
+  const album = data.Albums.find((item) => item.Album === 'Longmont Potion Castle 7');
+  const track = album.Tracks.find((item) => item.Track_Title === 'LPC 7 Theme 2');
+
+  assert.equal(track.Track_Type, 'music');
 });
