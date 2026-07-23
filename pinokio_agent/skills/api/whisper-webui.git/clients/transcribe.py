@@ -177,6 +177,7 @@ class WhisperWebUIClient:
         language: Optional[str] = "en",
         diarize: bool = True,
         diarization_device: str = "cpu",
+        remove_background_music: bool = False,
         hf_token: Optional[str] = None,
         poll_interval: float = 3.0,
         max_wait: float = 7200.0,
@@ -188,10 +189,11 @@ class WhisperWebUIClient:
         if "/transcription/" in paths or "/transcription" in paths:
             return self._transcribe_rest(
                 audio_path, model, language, diarize, diarization_device,
-                hf_token, poll_interval, max_wait,
+                remove_background_music, hf_token, poll_interval, max_wait,
             )
         return self._transcribe_gradio(
-            audio_path, model, language, diarize, diarization_device, hf_token
+            audio_path, model, language, diarize, diarization_device,
+            remove_background_music, hf_token
         )
 
     def _transcribe_rest(
@@ -201,6 +203,7 @@ class WhisperWebUIClient:
         language: Optional[str],
         diarize: bool,
         diarization_device: str,
+        remove_background_music: bool,
         hf_token: Optional[str],
         poll_interval: float,
         max_wait: float,
@@ -212,6 +215,7 @@ class WhisperWebUIClient:
             "word_timestamps": True,
             "is_diarize": diarize,
             "diarization_device": diarization_device,
+            "is_separate_bgm": remove_background_music,
             "hf_token": hf_token,
             "enable_offload": True,
         }
@@ -238,7 +242,8 @@ class WhisperWebUIClient:
 
     def _transcribe_gradio(self, audio_path: Path, model: Optional[str],
                            language: Optional[str], diarize: bool,
-                           diarization_device: str, hf_token: Optional[str]) -> Dict[str, Any]:
+                           diarization_device: str, remove_background_music: bool,
+                           hf_token: Optional[str]) -> Dict[str, Any]:
         config = None
         for config_path in ("/config", "/gradio_api/config"):
             status, candidate = self.http.json("GET", config_path)
@@ -263,7 +268,7 @@ class WhisperWebUIClient:
             raise WhisperWebUIError(f"Gradio upload failed: {upload_error}")
         data = _gradio_input_data(
             config, dependency, audio_path, upload_path, model, language,
-            diarize, diarization_device, hf_token,
+            diarize, diarization_device, remove_background_music, hf_token,
         )
         api_name = str(dependency.get("api_name") or "transcribe_file").lstrip("/")
         status, started = self.http.json("POST", f"/gradio_api/call/{urllib.parse.quote(api_name)}", {"data": data})
@@ -358,6 +363,7 @@ def _language_choice(props: Dict[str, Any], language: str) -> Optional[str]:
 def _gradio_input_data(config: Dict[str, Any], dependency: Dict[str, Any], audio_path: Path,
                         uploaded_path: str, model: Optional[str], language: Optional[str],
                         diarize: bool, diarization_device: str,
+                        remove_background_music: bool,
                         hf_token: Optional[str]) -> List[Any]:
     components = {component.get("id"): component for component in config.get("components", [])}
     values: List[Any] = []
@@ -391,6 +397,7 @@ def _gradio_input_data(config: Dict[str, Any], dependency: Dict[str, Any], audio
         elif "huggingface token" in label:
             value = hf_token or ""
         elif "enable background music remover" in label:
+            value = remove_background_music
             in_diarization_section = False
         elif "file format" in label:
             value = "SRT"
@@ -456,6 +463,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--language", default="en")
     parser.add_argument("--diarization-device", default="cpu")
     parser.add_argument("--no-diarization", action="store_true")
+    parser.add_argument("--remove-background-music", action="store_true")
     parser.add_argument("--username", default=os.environ.get("WHISPER_WEBUI_USERNAME"))
     parser.add_argument("--password", default=os.environ.get("WHISPER_WEBUI_PASSWORD"))
     parser.add_argument("--insecure", action="store_true", help="Disable HTTPS certificate verification")
@@ -471,6 +479,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         language=args.language,
         diarize=not args.no_diarization,
         diarization_device=args.diarization_device,
+        remove_background_music=args.remove_background_music,
         hf_token=os.environ.get("HF_TOKEN"),
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)

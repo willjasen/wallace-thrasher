@@ -72,6 +72,12 @@ def find_track(catalog: Dict[str, Any], album_slug: str, track_slug: str) -> Tup
     return album, track
 
 
+def track_transcription_settings(track: Dict[str, Any]) -> Tuple[Optional[str], bool]:
+    """Return the normalized catalog type and whether Whisper should remove music."""
+    track_type = str(track.get("Track_Type") or "").strip().casefold() or None
+    return track_type, track_type == "music"
+
+
 def normalize_name(value: str, loose: bool = False) -> str:
     text = unicodedata.normalize("NFKD", str(value))
     text = "".join(character for character in text if not unicodedata.combining(character))
@@ -379,6 +385,8 @@ def write_summary(path: Path, album: Dict[str, Any], track: Dict[str, Any], mani
         f"- Status: {manifest.get('status')}",
         f"- Created: {manifest.get('created_at')}",
         f"- Source: {manifest.get('source_type')}",
+        f"- Track type: {manifest.get('track', {}).get('type') or 'unspecified'}",
+        f"- Background music removal: {'enabled' if manifest.get('request', {}).get('background_music_removal') else 'disabled'}",
     ]
     if review:
         summary = review["summary"]
@@ -405,6 +413,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
         args.usb_root.resolve(), album["USB_Directory"], track["USB_Filename"]
     )
     selected_model = args.model or DEFAULT_WHISPER_MODEL
+    track_type, remove_background_music = track_transcription_settings(track)
     manifest: Dict[str, Any] = {
         "schema_version": 1,
         "status": "running",
@@ -415,6 +424,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
             "album_slug": args.album,
             "track": track.get("Track_Title"),
             "track_slug": args.track,
+            "type": track_type,
             "usb_directory": album.get("USB_Directory"),
             "usb_filename": track.get("USB_Filename"),
         },
@@ -429,6 +439,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
             "language": args.language,
             "diarization": not args.no_diarization,
             "diarization_device": args.diarization_device,
+            "background_music_removal": remove_background_music,
         },
     }
     write_json(run_dir / "manifest.json", manifest)
@@ -447,6 +458,7 @@ def run_analysis(args: argparse.Namespace) -> Path:
             language=args.language,
             diarize=not args.no_diarization,
             diarization_device=args.diarization_device,
+            remove_background_music=remove_background_music,
             hf_token=os.environ.get("HF_TOKEN"),
             poll_interval=args.poll_interval,
             max_wait=args.max_wait,

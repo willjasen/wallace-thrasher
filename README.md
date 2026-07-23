@@ -167,7 +167,7 @@ the keys of `USB_Directory` and `USB_Filename` refer to the respective directory
 
 ### 🎙️ Local transcript analysis 🎙️
 
-tracks on the LPC USB can be analyzed through a locally hosted Whisper-WebUI over HTTP or HTTPS. the workflow resolves a track from its album and track slugs, enables speaker diarization, and saves a review bundle under `analysis/whisper-webui/`. that directory is intentionally ignored by git. no transcript changes are applied to the site automatically.
+tracks on the LPC USB can be analyzed through a locally hosted Whisper-WebUI over HTTP or HTTPS. the workflow resolves a track from its album and track slugs, reviews its `Track_Type`, enables speaker diarization, and saves a review bundle under `analysis/whisper-webui/`. tracks classified as `music` automatically enable Whisper-WebUI's background music remover before transcription; `call` and unclassified tracks use the original audio. the selected type and preprocessing choice are recorded in the run manifest. the analysis directory is intentionally ignored by git, and no transcript changes are applied to the site automatically.
 
 set `WHISPER_WEBUI_URL` to the reachable Whisper-WebUI base URL, then run:
 

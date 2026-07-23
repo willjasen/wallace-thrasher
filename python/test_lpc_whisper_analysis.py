@@ -32,11 +32,17 @@ class FakeWhisperHttp:
 
     def multipart_file(self, path, field, file_path, query=None):
         if path == "/transcription/" and field == "file" and file_path.is_file():
+            self.query = query
             return 201, {"identifier": "test-task", "status": "queued", "message": "queued"}
         return 404, {"detail": "not found"}
 
 
 class LpcWhisperAnalysisTests(unittest.TestCase):
+    def test_track_type_controls_background_music_removal(self):
+        self.assertEqual(analysis.track_transcription_settings({"Track_Type": "call"}), ("call", False))
+        self.assertEqual(analysis.track_transcription_settings({"Track_Type": "music"}), ("music", True))
+        self.assertEqual(analysis.track_transcription_settings({}), (None, False))
+
     def test_default_model_is_workflow_configuration_not_track_metadata(self):
         args = analysis.build_parser().parse_args([
             "analyze",
@@ -117,10 +123,11 @@ SPEAKER_01|General Kenobi.
             audio = Path(temporary) / "track.mp3"
             audio.write_bytes(b"fake mp3")
             client = client_module.WhisperWebUIClient(FakeWhisperHttp())
-            result = client.transcribe(audio, poll_interval=0, max_wait=1)
+            result = client.transcribe(audio, remove_background_music=True, poll_interval=0, max_wait=1)
             self.assertEqual(result["adapter"], "rest")
             self.assertEqual(result["task"]["result"][0]["text"], "SPEAKER_00|Hello")
             self.assertEqual(result["task"]["task_params"]["diarization"]["hf_token"], "[redacted]")
+            self.assertTrue(client.http.query["is_separate_bgm"])
 
 
 if __name__ == "__main__":

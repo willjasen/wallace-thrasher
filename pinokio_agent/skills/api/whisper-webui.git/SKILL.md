@@ -21,7 +21,7 @@ Use `clients/transcribe.py` for file transcription. It auto-detects the document
 - Audio file path and output JSON path.
 - Optional Basic Auth supplied through `WHISPER_WEBUI_USERNAME` and `WHISPER_WEBUI_PASSWORD`.
 - Optional `HF_TOKEN` for the diarization model; never persist it in output.
-- Optional model, language, diarization device, and TLS verification settings.
+- Optional model, language, diarization device, background music removal, and TLS verification settings.
 
 ## Outputs
 
@@ -31,5 +31,6 @@ The client writes JSON containing the selected adapter and the completed API res
 
 - Prefer the REST API when both interfaces are exposed because it returns structured segments and durable task status.
 - The Gradio adapter discovers component defaults at runtime so input order can change without hardcoded host settings.
+- Pass `remove_background_music=True` to enable Whisper-WebUI's UVR filter before transcription.
 - Regenerate the client if Whisper-WebUI returns a 404/405 for its documented operations or a 400/422 caused by a changed request schema.
 - On Intel macOS, the verified local stack uses PyTorch/TorchAudio 2.2.2, NumPy 1.26.4, SciPy 1.11.4, Gradio 5.29.0, and huggingface-hub 0.28.1. Guard every `torch.xpu.is_available()` call with `hasattr(torch, "xpu")` because this PyTorch build does not expose the XPU namespace.

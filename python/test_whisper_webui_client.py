@@ -43,6 +43,7 @@ class GradioInputDataTests(unittest.TestCase):
                 "en",
                 True,
                 "cpu",
+                True,
                 "secret-token",
             )
 
@@ -52,7 +53,7 @@ class GradioInputDataTests(unittest.TestCase):
         self.assertTrue(values[3])
         self.assertEqual(values[4], "cpu")
         self.assertEqual(values[5], "secret-token")
-        self.assertFalse(values[6])
+        self.assertTrue(values[6])
         self.assertEqual(values[7], "UVR-MDX")
         self.assertEqual(values[8], "mps")
 
