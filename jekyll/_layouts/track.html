@@ -14,7 +14,7 @@ layout: base
   <div>
     <a class="track-hero-album" href="{{ site.baseurl }}/albums/{{ matched_album_slug }}/">{{ matched_album_title }} · {{ matched_album_year }}</a>
     <h1>{{ page.track_title }}</h1>
-    <p class="track-hero-meta">Track {{ page.track_number }}{% if track_type_detail %} · Type: {{ track_type_detail | capitalize }}{% endif %}{% if track_length_detail %} · {{ track_length_detail }} seconds{% endif %}</p>
+    <p class="track-hero-meta">Track {{ page.track_number }}{% if track_type_detail %} · Type: {% if track_type_detail == "call" %}📞 {% elsif track_type_detail == "music" %}🎵 {% endif %}{{ track_type_detail | capitalize }}{% endif %}{% if track_length_detail %} · {{ track_length_detail }} seconds{% endif %}</p>
     {% if track_speakers_detail != true or track_subtitles_detail != true %}
       <p class="track-review-status needs-review">Needs review <a href="https://github.com/willjasen/wallace-thrasher/blob/main/CONTRIBUTING.md">Lend a hand →</a></p>
     {% else %}

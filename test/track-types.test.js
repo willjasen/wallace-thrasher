@@ -7,6 +7,10 @@ const data = JSON.parse(fs.readFileSync(
   path.join(__dirname, '..', 'jekyll', 'assets', 'json', 'data.json'),
   'utf8'
 ));
+const trackLayout = fs.readFileSync(
+  path.join(__dirname, '..', 'jekyll', '_layouts', 'track.html'),
+  'utf8'
+);
 
 test('only classified tracks have a valid type', () => {
   const tracks = data.Albums.flatMap((album) => album.Tracks);
@@ -59,4 +63,10 @@ test('LPC 7 Theme 2 is classified as music', () => {
   const track = album.Tracks.find((item) => item.Track_Title === 'LPC 7 Theme 2');
 
   assert.equal(track.Track_Type, 'music');
+});
+
+test('track type icons are presentation-only', () => {
+  assert.match(trackLayout, /track_type_detail == "call" %}📞/);
+  assert.match(trackLayout, /track_type_detail == "music" %}🎵/);
+  assert.doesNotMatch(JSON.stringify(data), /📞|🎵/);
 });
