@@ -16,12 +16,14 @@ data
 
 appearance
 
+ - group searched subtitle results into their same tracks
  - fix highlighting of table of contents menu
  - include instructions for the LPC USB player
 
 other
 
  - add an unlinked transcriptions page to monitor Whisper WebUI
+ - make the default produciton build "indexable" (places track information as HTML into their pages)
  - better SEO
 
 ---
