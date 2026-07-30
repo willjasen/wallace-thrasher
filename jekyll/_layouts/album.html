@@ -20,7 +20,12 @@ layout: base
       <ol class="album-track-list">
         {% for track in all_tracks_on_album %}
           <li>
-            <a href="{{ site.baseurl }}/tracks/{{ matched_album_slug }}/{{ track.Track_Slug }}/">
+            {% if site.indexable %}
+              {% assign track_url = site.baseurl | append: "/tracks/" | append: matched_album_slug | append: "/" | append: track.Track_Slug | append: "/" %}
+            {% else %}
+              {% assign track_url = site.baseurl | append: "/tracks/?album=" | append: matched_album_slug | append: "&track=" | append: track.Track_Slug %}
+            {% endif %}
+            <a href="{{ track_url }}">
               <span class="album-track-number">{{ track.Track_Number }}</span>
               <span>{{ track.Track_Title }}</span>
             </a>

@@ -18,10 +18,12 @@ layout: null
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
   {% endfor %}
-  {% for track in site.tracks %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}{{ track.url | xml_escape }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-  </url>
-  {% endfor %}
+  {% if site.indexable %}
+    {% for track in site.tracks %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ track.url | xml_escape }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    </url>
+    {% endfor %}
+  {% endif %}
 </urlset>

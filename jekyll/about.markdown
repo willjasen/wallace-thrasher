@@ -117,6 +117,8 @@ to install the project's dependencies, ensure Ruby is installed, then install it
 
 to build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
 
+to create an indexable production build with one fully rendered HTML page per track, run: `JEKYLL_ENV=production INDEXABLE=true bundle exec jekyll build`
+
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
 
 ### 📤 Deployment 📤

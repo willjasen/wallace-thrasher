@@ -19,10 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 
-# Browser-side data access goes exclusively through assets/json/data.combined.json.
-# Track pages are rendered dynamically client-side via tracks/index.html using that API.
-# Album pages only need track metadata (title, number, slug) which is available in data.json
-# The Jekyll build only loads data.json at build time; data.combined.json is fetched client-side as needed
+# Browser-side search uses assets/json/data.combined.json. With INDEXABLE=true,
+# track pages are rendered at build time from those same combined records, so
+# their metadata and subtitles are present in the generated HTML for indexing.
 
 ##########
 

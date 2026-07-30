@@ -6,7 +6,11 @@ module Jekyll
     priority :low
 
     def generate(site)
-      data_path = File.join(site.source, 'assets', 'json', 'data.json')
+      indexable = ENV['INDEXABLE'] == 'true' || Jekyll.env == 'indexable'
+      site.config['indexable'] = indexable
+      return unless indexable
+
+      data_path = File.join(site.source, 'assets', 'json', 'data.combined.json')
       return unless File.exist?(data_path)
 
       albums = JSON.parse(File.read(data_path)).fetch('Albums', [])
@@ -24,7 +28,7 @@ module Jekyll
       track_slug = track_data['Track_Slug'] || Jekyll::Utils.slugify(track_data['Track_Title'])
       filename = "#{album_slug}-#{track_slug}.md"
       path = File.join(site.source, '_tracks', filename)
-      subtitles = load_subtitles(site, album_slug, track_data['Track_JSONPath'])
+      subtitles = track_data.fetch('Subtitles', [])
       summary = subtitle_summary(subtitles)
       title = "#{track_data['Track_Title']} - #{album_data['Album']}"
 
@@ -37,23 +41,14 @@ module Jekyll
       doc.data['track_slug'] = track_slug
       doc.data['track_length'] = track_data['Track_Length']
       doc.data['track_subtitles'] = subtitles
+      # Keep the complete combined record available to Liquid so the layout can
+      # render the same data that powers the client-side search index.
+      doc.data['track_data'] = track_data
       doc.data['title'] = title
       doc.data['description'] = summary.empty? ? "Subtitles, speaker notes, and track details for #{title}." : summary
       doc.data['image'] = "/assets/img/albums/#{album_data['Album_Picture']}"
       doc.data['permalink'] = "/tracks/#{album_slug}/#{track_slug}/"
       doc
-    end
-
-    def load_subtitles(site, album_slug, json_path)
-      return [] if json_path.nil? || json_path.empty?
-
-      path = File.join(site.source, 'assets', 'json', album_slug, json_path)
-      return [] unless File.exist?(path)
-
-      JSON.parse(File.read(path))
-    rescue JSON::ParserError => e
-      Jekyll.logger.warn 'TrackPagesGenerator:', "Could not parse #{path}: #{e.message}"
-      []
     end
 
     def subtitle_summary(subtitles)

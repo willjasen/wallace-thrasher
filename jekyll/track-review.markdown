@@ -69,7 +69,12 @@ hide_from_nav: true
         {% assign track_color = "green" %}
       {% endif %}
       <li style="margin: 0px; color: {{ track_color }};">
-        Track {{ track.Track_Number }}: <a href="{{ site.baseurl }}/tracks/?album={{ album.Album_Slug }}&track={{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+        Track {{ track.Track_Number }}:
+        {% if site.indexable %}
+          <a href="{{ site.baseurl }}/tracks/{{ album.Album_Slug }}/{{ track.Track_Slug }}/">{{ track.Track_Title }}</a>
+        {% else %}
+          <a href="{{ site.baseurl }}/tracks/?album={{ album.Album_Slug }}&track={{ track.Track_Slug }}">{{ track.Track_Title }}</a>
+        {% endif %}
       </li>
   {% endfor %}
   </ul>

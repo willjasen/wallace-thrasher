@@ -16,6 +16,15 @@ window._wtSearchLoaded = true;
 const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
+const INDEXABLE_BUILD = {{ site.indexable | default: false | jsonify }};
+
+function trackUrl(albumSlug, trackSlug) {
+    const album = encodeURIComponent(albumSlug);
+    const track = encodeURIComponent(trackSlug);
+    return INDEXABLE_BUILD
+        ? `${BASE_URL}/tracks/${album}/${track}/`
+        : `${BASE_URL}/tracks/?album=${album}&track=${track}`;
+}
 
 /*
     Save any serializable value as a synthetic Cache API entry under cacheName / cacheKey.
@@ -295,7 +304,7 @@ async function main(callback) {
                     const textContainer = document.createElement('span');
                     const trackTitle = document.createElement('a');
                     trackTitle.className = 'alex-track-title';
-                    trackTitle.href = `${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}`;
+                    trackTitle.href = trackUrl(matchedDoc.Album_Slug, matchedDoc.Track_Slug);
                     trackTitle.textContent = matchedDoc.Track_Title;
 
                     const albumTitle = document.createElement('span');
@@ -376,7 +385,7 @@ async function main(callback) {
 
                         const trackLink = document.createElement('a');
                         trackLink.className = 'subtitle-search-result__track';
-                        trackLink.href = `${BASE_URL}/tracks/?album=${encodeURIComponent(matchedDoc.Album_Slug)}&track=${encodeURIComponent(matchedDoc.Track_Slug)}`;
+                        trackLink.href = trackUrl(matchedDoc.Album_Slug, matchedDoc.Track_Slug);
                         trackLink.textContent = matchedDoc.Track_Title;
                         header.appendChild(trackLink);
 
@@ -484,7 +493,7 @@ async function main(callback) {
                             const albumAndTitleItem = document.createElement('li');
                             albumAndTitleItem.innerHTML = `
                                 ${matchedDoc.Speaker} -- 
-                                <i><a href="${BASE_URL}/tracks/?album=${matchedDoc.Album_Slug}&track=${matchedDoc.Track_Slug}">${matchedDoc.Track_Title}</a></i> --
+                                <i><a href="${trackUrl(matchedDoc.Album_Slug, matchedDoc.Track_Slug)}">${matchedDoc.Track_Title}</a></i> --
                                 ${matchedDoc.Album}
                             `;
                             resultList.appendChild(albumAndTitleItem);
@@ -543,7 +552,7 @@ async function main(callback) {
                 const content = document.createElement('div');
                 const title = document.createElement('a');
                 title.className = 'taxonomy-result-title';
-                title.href = `${BASE_URL}/tracks/?album=${encodeURIComponent(doc.Album_Slug)}&track=${encodeURIComponent(doc.Track_Slug)}`;
+                title.href = trackUrl(doc.Album_Slug, doc.Track_Slug);
                 title.textContent = doc.Track_Title;
                 content.appendChild(title);
 

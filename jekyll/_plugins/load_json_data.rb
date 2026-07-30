@@ -10,8 +10,9 @@ module Jekyll
       # Load JSON files from /assets/json
       json_dir = File.join(site.source, 'assets', 'json')
 
-      # Load data.json at build time (metadata only - no subtitle text)
-      # Track pages are rendered client-side from data.combined.json via tracks/index.html
+      # Load data.json at build time for album metadata and navigation.
+      # Indexable track pages load complete records from data.combined.json in
+      # generate_track_pages.rb when INDEXABLE=true.
       data_file_path = File.join(json_dir, 'data.json')
       puts "\e[32mLoading data from #{data_file_path}\e[0m"
 
