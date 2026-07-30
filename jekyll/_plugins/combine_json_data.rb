@@ -47,6 +47,13 @@ unless ENV['SKIP_COMBINE_JSON'] == 'true'
         unless existing == new_content
           File.write(combined_data_path, new_content)
         end
+
+        # The file is generated after Jekyll discovers source static files.
+        # Register it explicitly so clean builds (including Netlify builds)
+        # copy it into _site even when it is absent from the checkout.
+        unless site.static_files.any? { |file| file.relative_path == '/assets/json/data.combined.json' }
+          site.static_files << Jekyll::StaticFile.new(site, site.source, 'assets/json', 'data.combined.json')
+        end
         # puts "\e[34mcombine-json-data.rb plugin took #{Time.now - start_time} seconds.\e[0m"
       end
     end

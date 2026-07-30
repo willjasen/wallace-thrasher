@@ -1,6 +1,6 @@
 [build]
   base    = "jekyll"
-  command = "bundle exec jekyll build --baseurl \"\""
+  command = "JEKYLL_ENV=production bundle exec jekyll build --baseurl \"\""
   publish = "_site"
 
 [build.environment]
