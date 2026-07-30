@@ -6,7 +6,11 @@ module Jekyll
     priority :low
 
     def generate(site)
-      indexable = ENV['INDEXABLE'] == 'true' || Jekyll.env == 'indexable'
+      indexable = if ENV.key?('INDEXABLE')
+                    ENV['INDEXABLE'] == 'true'
+                  else
+                    Jekyll.env == 'production' || Jekyll.env == 'indexable'
+                  end
       site.config['indexable'] = indexable
       return unless indexable
 

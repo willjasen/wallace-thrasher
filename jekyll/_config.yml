@@ -19,9 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 
-# Browser-side search uses assets/json/data.combined.json. With INDEXABLE=true,
-# track pages are rendered at build time from those same combined records, so
-# their metadata and subtitles are present in the generated HTML for indexing.
+# Browser-side search uses assets/json/data.combined.json. Production builds
+# render track pages from those same combined records by default, so metadata
+# and subtitles are present in the generated HTML. Set INDEXABLE=false to use
+# only the shared browser-rendered track viewer.
 
 ##########
 
@@ -65,7 +66,8 @@ header_pages:
   - speakers.markdown
   - subtitles.markdown
 
-incremental: true
+# A full build prevents stale mode-specific output when INDEXABLE is toggled.
+incremental: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
