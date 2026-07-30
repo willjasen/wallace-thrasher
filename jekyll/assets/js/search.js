@@ -362,10 +362,22 @@ async function main(callback) {
                     //console.log("Search query:", query);
                     //console.log("Search results:", results);
 
-                    // Display search results
+                    // Group matching lines so each track is represented by one card.
+                    const groupedResults = new Map();
                     results.forEach(function (result) {
                         const matchedDoc = dataMap.get(result.ref);
+                        const trackKey = `${matchedDoc.Album_Slug}\u0000${matchedDoc.Track_Slug}`;
+                        if (!groupedResults.has(trackKey)) {
+                            groupedResults.set(trackKey, {
+                                track: matchedDoc,
+                                subtitles: []
+                            });
+                        }
+                        groupedResults.get(trackKey).subtitles.push(matchedDoc);
+                    });
 
+                    groupedResults.forEach(function (group) {
+                        const matchedDoc = group.track;
                         const albumAndTitleItem = document.createElement('li');
                         albumAndTitleItem.className = 'subtitle-search-result';
 
@@ -389,73 +401,87 @@ async function main(callback) {
                         trackLink.textContent = matchedDoc.Track_Title;
                         header.appendChild(trackLink);
 
-                        let startTime = document.createElement('span');
-                        startTime.className = 'subtitle-search-result__time';
-                        startTime.textContent = matchedDoc.StartTime;
-
-                        if (window.fileMap && Object.keys(window.fileMap).length > 0) {
-                            const startTimeLink = document.createElement('a');
-                            startTimeLink.className = 'subtitle-search-result__time';
-                            startTimeLink.href = "#" + matchedDoc.StartTime;
-                            startTimeLink.textContent = `Play at ${matchedDoc.StartTime}`;
-                            startTimeLink.setAttribute('aria-label', `Play ${matchedDoc.Track_Title} at ${matchedDoc.StartTime}`);
-                            
-                            // Parse minutes and seconds. For format "HH:MM:SS,ms"
-                            const timeParts = matchedDoc.StartTime.split(":");
-                            const hours = parseInt(timeParts[0], 10) || 0;
-                            const minutes = parseInt(timeParts[1], 10) || 0;
-                            const seconds = parseFloat(timeParts[2].replace(',', '.')) || 0;
-                            const secondsConverted = (hours * 3600) + (minutes * 60) + seconds;
-                            startTimeLink.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                const usbFilename = matchedDoc.Track_USB_Filename || (matchedDoc.Track_Title + '.mp3');
-                                const matchingUrl = window.lpcPlayer && window.lpcPlayer.resolveTrackUrl(
-                                    matchedDoc.Album_USB_Directory,
-                                    usbFilename
-                                );
-                                if (!matchingUrl) {
-                                    console.warn('No LPC USB audio found for', matchedDoc.Album, matchedDoc.Track_Title);
-                                    return;
-                                }
-                                const audioPlayer = document.getElementById('audioPlayer');
-                                if (audioPlayer) {
-                                    audioPlayer.src = matchingUrl;
-                                    audioPlayer.currentTime = secondsConverted;
-                                    window.lpcPlayer.setNowPlaying(
-                                        matchedDoc.Album,
-                                        matchedDoc.Track_Title,
-                                        `${BASE_URL}/assets/img/albums/${matchedDoc.Album_Picture}`
-                                    );
-                                    audioPlayer.play();
-                                }
-                            });
-                            startTime = startTimeLink;
-                        }
-                        header.appendChild(startTime);
+                        const matchCount = document.createElement('span');
+                        matchCount.className = 'subtitle-search-result__match-count';
+                        matchCount.textContent = `${group.subtitles.length} ${group.subtitles.length === 1 ? 'match' : 'matches'}`;
+                        header.appendChild(matchCount);
 
                         const album = document.createElement('div');
                         album.className = 'subtitle-search-result__album';
                         album.textContent = matchedDoc.Album;
 
-                        const quote = document.createElement('p');
-                        quote.className = 'subtitle-search-result__quote';
-                        const speaker = document.createElement('span');
-                        speaker.className = 'subtitle-search-result__speaker';
-                        speaker.textContent = `${matchedDoc.Speaker || 'Unknown speaker'}: `;
-                        quote.appendChild(speaker);
-                        quote.appendChild(document.createTextNode(`“${matchedDoc.Text}”`));
+                        const subtitleList = document.createElement('ul');
+                        subtitleList.className = 'subtitle-search-result__lines';
+                        group.subtitles.forEach(function (subtitle) {
+                            const line = document.createElement('li');
+                            line.className = 'subtitle-search-result__line';
+
+                            let startTime = document.createElement('span');
+                            startTime.className = 'subtitle-search-result__time';
+                            startTime.textContent = subtitle.StartTime;
+
+                            if (window.fileMap && Object.keys(window.fileMap).length > 0) {
+                                const startTimeLink = document.createElement('a');
+                                startTimeLink.className = 'subtitle-search-result__time';
+                                startTimeLink.href = "#" + subtitle.StartTime;
+                                startTimeLink.textContent = `Play at ${subtitle.StartTime}`;
+                                startTimeLink.setAttribute('aria-label', `Play ${subtitle.Track_Title} at ${subtitle.StartTime}`);
+
+                                const timeParts = subtitle.StartTime.split(":");
+                                const hours = parseInt(timeParts[0], 10) || 0;
+                                const minutes = parseInt(timeParts[1], 10) || 0;
+                                const seconds = parseFloat(timeParts[2].replace(',', '.')) || 0;
+                                const secondsConverted = (hours * 3600) + (minutes * 60) + seconds;
+                                startTimeLink.addEventListener('click', function(e) {
+                                    e.preventDefault();
+                                    const usbFilename = subtitle.Track_USB_Filename || (subtitle.Track_Title + '.mp3');
+                                    const matchingUrl = window.lpcPlayer && window.lpcPlayer.resolveTrackUrl(
+                                        subtitle.Album_USB_Directory,
+                                        usbFilename
+                                    );
+                                    if (!matchingUrl) {
+                                        console.warn('No LPC USB audio found for', subtitle.Album, subtitle.Track_Title);
+                                        return;
+                                    }
+                                    const audioPlayer = document.getElementById('audioPlayer');
+                                    if (audioPlayer) {
+                                        audioPlayer.src = matchingUrl;
+                                        audioPlayer.currentTime = secondsConverted;
+                                        window.lpcPlayer.setNowPlaying(
+                                            subtitle.Album,
+                                            subtitle.Track_Title,
+                                            `${BASE_URL}/assets/img/albums/${subtitle.Album_Picture}`
+                                        );
+                                        audioPlayer.play();
+                                    }
+                                });
+                                startTime = startTimeLink;
+                            }
+
+                            const quote = document.createElement('p');
+                            quote.className = 'subtitle-search-result__quote';
+                            const speaker = document.createElement('span');
+                            speaker.className = 'subtitle-search-result__speaker';
+                            speaker.textContent = `${subtitle.Speaker || 'Unknown speaker'}: `;
+                            quote.appendChild(speaker);
+                            quote.appendChild(document.createTextNode(`“${subtitle.Text}”`));
+
+                            line.appendChild(quote);
+                            line.appendChild(startTime);
+                            subtitleList.appendChild(line);
+                        });
 
                         body.appendChild(header);
                         body.appendChild(album);
-                        body.appendChild(quote);
+                        body.appendChild(subtitleList);
                         albumAndTitleItem.appendChild(albumImage);
                         albumAndTitleItem.appendChild(body);
                         resultList.appendChild(albumAndTitleItem);
                     });
                     if (status) {
-                        status.textContent = results.length === 1
-                            ? '1 subtitle found'
-                            : `${results.length.toLocaleString()} subtitles found`;
+                        const subtitleLabel = results.length === 1 ? 'subtitle' : 'subtitles';
+                        const trackLabel = groupedResults.size === 1 ? 'track' : 'tracks';
+                        status.textContent = `${results.length.toLocaleString()} ${subtitleLabel} found in ${groupedResults.size.toLocaleString()} ${trackLabel}`;
                     }
                 }
             })(e.target);
