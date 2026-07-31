@@ -19,6 +19,7 @@ appearance
  - group searched subtitle results into their same tracks
  - fix highlighting of table of contents menu
  - include instructions for the LPC USB player
+ - link aliases and establishments when they show up in searched subtitles results
 
 other
 
