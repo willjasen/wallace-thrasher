@@ -29,6 +29,7 @@ JSON_ROOT = PROJECT_ROOT / "jekyll" / "assets" / "json"
 DATA_JSON = JSON_ROOT / "data.json"
 ANALYSIS_ROOT = PROJECT_ROOT / "analysis" / "whisper-webui"
 BACKUP_ROOT = ANALYSIS_ROOT / "merge-backups"
+PUBLIC_MERGE_DATA = PROJECT_ROOT / "jekyll" / "_data" / "whisper_merges.json"
 WIKI_MODULE_PATH = SCRIPT_DIR / "wiki_scrape_and_merge.py"
 FORMAT_VERSION = 1
 MERGE_ACTIONS = {"approved", "auto_add"}
@@ -371,6 +372,16 @@ def _copy_backup(path: Path, backup_run: Path) -> Path:
     return destination
 
 
+def _publish_merge_record(path: Path, record: dict[str, Any]) -> None:
+    records = _read_json(path) if path.is_file() else []
+    if not isinstance(records, list):
+        raise ValueError(f"Public Whisper merge data must be a list: {path}")
+    records = [item for item in records if item.get("merge_id") != record["merge_id"]]
+    records.append(record)
+    records.sort(key=lambda item: (item.get("merged_at") or "", item.get("merge_id") or ""), reverse=True)
+    _write_json_atomic(path, records)
+
+
 def merge(args: argparse.Namespace) -> dict[str, Any]:
     run_dir = resolve_run(args.album, args.track, args.run, args.analysis_root)
     comparison_path = run_dir / "comparison.json"
@@ -511,7 +522,27 @@ def merge(args: argparse.Namespace) -> dict[str, Any]:
             "backup": result["backup"],
         }
         _write_json_atomic(receipt_path, receipt)
+        public_record = {
+            "format_version": 1,
+            "merge_id": merge_id,
+            "merged_at": receipt["merged_at"],
+            "album": {
+                "slug": args.album,
+                "title": target.get("album") or args.album,
+            },
+            "track": {
+                "slug": args.track,
+                "title": target.get("track") or args.track,
+            },
+            "source": {
+                "analysis_run": run_dir.name,
+                "model": source.get("model"),
+            },
+            "applied": receipt["applied"],
+        }
+        _publish_merge_record(PUBLIC_MERGE_DATA, public_record)
         result["receipt"] = receipt_path.relative_to(PROJECT_ROOT).as_posix()
+        result["public_record"] = PUBLIC_MERGE_DATA.relative_to(PROJECT_ROOT).as_posix()
     print(json.dumps(result, indent=2, sort_keys=True))
     if args.dry_run:
         print("Dry run only — no project files were modified.")

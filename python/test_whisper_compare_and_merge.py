@@ -28,6 +28,7 @@ class WhisperMergeFixture:
         self.data_path = self.json_root / "data.json"
         self.analysis_root = self.root / "analysis" / "whisper-webui"
         self.backup_root = self.analysis_root / "merge-backups"
+        self.public_merge_data = self.root / "jekyll" / "_data" / "whisper_merges.json"
         self.album_slug = "album-one"
         self.track_slug = "track-one"
         self.run_name = "20260101T000000Z"
@@ -104,6 +105,7 @@ class WhisperMergeFixture:
             DATA_JSON=self.data_path,
             ANALYSIS_ROOT=self.analysis_root,
             BACKUP_ROOT=self.backup_root,
+            PUBLIC_MERGE_DATA=self.public_merge_data,
         )
 
     def args(self, dry_run=False, allow_stale=False):
@@ -188,6 +190,13 @@ class WhisperComparisonTests(unittest.TestCase):
             self.assertEqual(receipt["source"]["audio_sha256"], "audio-hash")
             self.assertEqual(receipt["source"]["model"], "test-model")
             self.assertEqual(receipt["applied"]["establishments"], ["Known Place"])
+            public_records = json.loads(fixture.public_merge_data.read_text(encoding="utf-8"))
+            self.assertEqual(public_records[0]["merge_id"], "1234567890123")
+            self.assertEqual(public_records[0]["album"]["title"], "Album One")
+            self.assertEqual(public_records[0]["track"]["title"], "Track One")
+            self.assertEqual(public_records[0]["source"]["model"], "test-model")
+            self.assertNotIn("audio_sha256", public_records[0]["source"])
+            self.assertNotIn("backup", public_records[0])
             self.assertEqual(result["text_changed"], 0)
 
     def test_approved_text_replaces_one_line_and_marks_it_reviewed(self):
