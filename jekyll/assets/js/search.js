@@ -77,16 +77,16 @@ function handleSearchParameter() {
 
         if (subtitlesSearchInput) {
             subtitlesSearchInput.value = searchParam;
-            subtitlesSearchInput.dispatchEvent(new Event('input'));
+            subtitlesSearchInput.dispatchEvent(new Event('input', { bubbles: true }));
         } else if (speakersSearchInput) {
             speakersSearchInput.value = searchParam;
-            speakersSearchInput.dispatchEvent(new Event('input'));
+            speakersSearchInput.dispatchEvent(new Event('input', { bubbles: true }));
         } else if (aliasesSearchInput) {
             aliasesSearchInput.value = searchParam;
-            aliasesSearchInput.dispatchEvent(new Event('input'));
+            aliasesSearchInput.dispatchEvent(new Event('input', { bubbles: true }));
         } else if (establishmentsSearchInput) {
             establishmentsSearchInput.value = searchParam;
-            establishmentsSearchInput.dispatchEvent(new Event('input'));
+            establishmentsSearchInput.dispatchEvent(new Event('input', { bubbles: true }));
         }
     }
 }
@@ -122,6 +122,8 @@ async function loadData(data) {
                     Track_Subtitles: track.Subtitles,
                     Track_Title: track.Track_Title,
                     Track_USB_Filename: track.USB_Filename,
+                    Track_Aliases: (Array.isArray(track.Aliases) ? track.Aliases : (track.Aliases ? [track.Aliases] : [])),
+                    Track_Establishments: (Array.isArray(track.Establishments) ? track.Establishments : (track.Establishments ? [track.Establishments] : [])),
                     Subtitle_Index: subtitle.Index,
                     Speaker: subtitle.Speaker,
                     Text: subtitle.Text,
@@ -464,7 +466,14 @@ async function main(callback) {
                             speaker.className = 'subtitle-search-result__speaker';
                             speaker.textContent = `${subtitle.Speaker || 'Unknown speaker'}: `;
                             quote.appendChild(speaker);
-                            quote.appendChild(document.createTextNode(`“${subtitle.Text}”`));
+                            quote.appendChild(document.createTextNode('“'));
+                            window.WallaceThrasherAliasLinks.appendLinkedText(
+                                quote,
+                                subtitle.Text,
+                                subtitle.Track_Aliases,
+                                subtitle.Track_Establishments
+                            );
+                            quote.appendChild(document.createTextNode('”'));
 
                             line.appendChild(quote);
                             line.appendChild(startTime);
@@ -551,12 +560,17 @@ async function main(callback) {
         function renderTaxonomySearch(input, docs, field, singularLabel) {
             const query = input.value.trim().toLowerCase();
             const resultList = document.querySelector(`#${field.toLowerCase()}-search-results`);
+            const catalog = document.querySelector('.taxonomy-catalog');
             resultList.replaceChildren();
-            if (!query) return;
+            if (!query) {
+                if (catalog) catalog.hidden = false;
+                return;
+            }
 
             const matches = docs.filter(function (doc) {
                 return doc[field].some(value => value.toLowerCase().includes(query));
             });
+            if (catalog) catalog.hidden = matches.length > 0;
 
             const countItem = document.createElement('li');
             countItem.className = 'taxonomy-result-count';
@@ -665,6 +679,11 @@ main(function(dataReady) {
 // Registered here at module level (not inside async main()) so it is always
 // active regardless of how long main() takes to finish.
 document.addEventListener('soft-nav', function () {
+    if (window.dataLoaded) {
+        document.querySelectorAll('#subtitles-search-input, #speakers-search-input, #aliases-search-input, #establishments-search-input')
+            .forEach(input => input && (input.disabled = false));
+        handleSearchParameter();
+    }
     if (typeof window._wtOnDomContentLoaded === 'function') {
         setTimeout(window._wtOnDomContentLoaded, 0);
     }

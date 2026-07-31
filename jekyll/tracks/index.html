@@ -83,6 +83,7 @@ noindex: true
   }
 </style>
 
+<script src="{{ site.baseurl }}/assets/js/alias-links.js"></script>
 <script>
 (async function () {
   const BASE_URL = '{{ site.baseurl }}';
@@ -386,7 +387,15 @@ noindex: true
     const strong = document.createElement('strong');
     strong.textContent = sub.Speaker + ':';
     viewSpan.appendChild(strong);
-    viewSpan.appendChild(document.createTextNode(' ' + sub.Text));
+    viewSpan.appendChild(document.createTextNode(' '));
+    const subtitleText = el('span', { class: 'subtitle-text' });
+    window.WallaceThrasherAliasLinks.appendLinkedText(
+      subtitleText,
+      sub.Text,
+      track.Aliases,
+      track.Establishments
+    );
+    viewSpan.appendChild(subtitleText);
     li.appendChild(viewSpan);
 
     // ---- Edit span (shown only in edit mode) ----

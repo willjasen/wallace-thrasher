@@ -185,7 +185,7 @@ layout: base
     {% for trackText in track_subtitles %}
       {% assign subtitle_index = trackText.Index | default: forloop.index %}
       <li class="subtitle-line" data-sub-index="{{ subtitle_index }}" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}</span>
+        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> <span class="subtitle-text">{{ trackText.Text }}</span></span>
         <span class="sub-edit">
           <input class="sub-speaker-input" type="text" value="{{ trackText.Speaker | escape }}" maxlength="100" aria-label="Speaker for subtitle {{ subtitle_index }}">
           <span aria-hidden="true">:</span>
@@ -198,7 +198,7 @@ layout: base
     {% for trackText in track %}
       {% assign subtitle_index = trackText.Index | default: forloop.index %}
       <li class="subtitle-line" data-sub-index="{{ subtitle_index }}" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> {{ trackText.Text }}</span>
+        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> <span class="subtitle-text">{{ trackText.Text }}</span></span>
         <span class="sub-edit">
           <input class="sub-speaker-input" type="text" value="{{ trackText.Speaker | escape }}" maxlength="100" aria-label="Speaker for subtitle {{ subtitle_index }}">
           <span aria-hidden="true">:</span>
@@ -210,6 +210,14 @@ layout: base
   {% endif %}
 </ul>
 
+<script src="{{ site.baseurl }}/assets/js/alias-links.js"></script>
+<script>
+  window.WallaceThrasherAliasLinks.linkSubtitleElements(
+    document.getElementById('subtitleList'),
+    {{ track_aliases_detail | default: empty | jsonify }},
+    {{ track_establishments_detail | default: empty | jsonify }}
+  );
+</script>
 <script src="{{ site.baseurl }}/assets/js/track-edit.js"></script>
 
 </div>

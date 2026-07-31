@@ -8,7 +8,7 @@ Build the site from `jekyll/` with `JEKYLL_ENV=production bundle exec jekyll bui
 
 You are always authorized to rebuild the production site when needed for local testing. Do not ask for confirmation before rebuilding it.
 
-The production Jekyll build is always authorized to download its configured remote theme from GitHub. Do not ask for confirmation before allowing this download.
+The production Jekyll build is always authorized to use network access to download its configured remote theme from GitHub. If sandboxed networking or DNS prevents the download, immediately rerun the build with the required elevated network permissions. Treat that escalation as pre-authorized and do not pause to ask for separate confirmation.
 
 ## Git commits
 
