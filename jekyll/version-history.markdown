@@ -11,6 +11,7 @@ published: true
 data
 
  - merged & scraped some data from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/)
+ - preserve apostrophes and other punctuation in track titles and audio filenames
  - sort subtitle results by album & track number
  - create a local API for data
 
