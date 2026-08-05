@@ -31,6 +31,7 @@ other
 
  - add an unlinked transcriptions page to monitor Whisper WebUI
  - make the default production build "indexable" (places track information as HTML into their pages)
+ - create a transcriptions page (only available locally) to monitor active transcriptions via a Whiser WebUI server
  - better SEO
 
 ---
