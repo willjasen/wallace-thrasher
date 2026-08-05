@@ -13,6 +13,7 @@
   window.legacyTrackAudioAbort = abortController;
   let karaokeStarted = false;
   let activeSubtitle = null;
+  const playButton = document.getElementById('trackPlayButton');
 
   function parseSubtitleTime(value) {
     const match = String(value || '').match(/^(?:(\d+):)?(\d+):(\d+)(?:[,.](\d+))?$/);
@@ -87,6 +88,23 @@
     window.lpcPlayer.setNowPlaying(albumName, trackTitle, artworkUrl);
   }
 
+  function showPlayButton(audio, matchingUrl) {
+    if (!playButton) return;
+    const isCurrentTrack = audio.src === matchingUrl || audio.currentSrc === matchingUrl;
+    playButton.hidden = !isCurrentTrack;
+  }
+
+  if (playButton) {
+    playButton.addEventListener('click', function () {
+      if (!window.lpcPlayer || !window.lpcPlayer.audio.src) return;
+      const audio = window.lpcPlayer.audio;
+      audio.currentTime = 0;
+      audio.play().catch(function (error) {
+        console.warn('Track play failed:', error);
+      });
+    }, { signal: abortController.signal });
+  }
+
   function loadFromFileMap() {
     if (!window.lpcPlayer || !window.lpcPlayer.isLoaded()) return false;
     const matchingUrl = window.lpcPlayer.resolveTrackUrl(albumUSBDirectory, usbFilename);
@@ -100,9 +118,11 @@
       if (audio.src !== matchingUrl) audio.src = matchingUrl;
       audio.style.display = '';
       setNowPlaying();
+      showPlayButton(audio, matchingUrl);
       startKaraoke();
     } else if (isCurrentTrack) {
       setNowPlaying();
+      showPlayButton(audio, matchingUrl);
       startKaraoke();
     }
     return true;
@@ -117,6 +137,7 @@
     const loaded = await window.lpcPlayer.loadTrack(albumUSBDirectory, usbFilename);
     if (loaded) {
       setNowPlaying();
+      showPlayButton(window.lpcPlayer.audio, window.lpcPlayer.audio.currentSrc || window.lpcPlayer.audio.src);
       startKaraoke();
     }
   }, { signal: abortController.signal });
