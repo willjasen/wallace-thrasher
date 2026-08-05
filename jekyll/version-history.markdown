@@ -30,7 +30,7 @@ appearance
 other
 
  - add an unlinked transcriptions page to monitor Whisper WebUI
- - make the default produciton build "indexable" (places track information as HTML into their pages)
+ - make the default production build "indexable" (places track information as HTML into their pages)
  - better SEO
 
 ---
