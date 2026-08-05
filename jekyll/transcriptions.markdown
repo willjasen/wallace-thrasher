@@ -7,7 +7,9 @@ noindex: true
 
 <link rel="stylesheet" href="{{ '/assets/css/transcriptions.css' | relative_url }}">
 
-<main class="transcription-monitor" aria-labelledby="monitor-title">
+<p id="local-only-message">only available locally</p>
+
+<main id="transcription-monitor" class="transcription-monitor" aria-labelledby="monitor-title" hidden>
   <section class="monitor-hero">
     <div>
       <p class="monitor-eyebrow">Local Whisper monitor</p>
@@ -44,4 +46,12 @@ noindex: true
   </section>
 </main>
 
+<script>
+  (() => {
+    const localHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
+    const isLocal = localHosts.has(window.location.hostname);
+    document.getElementById("local-only-message").hidden = isLocal;
+    document.getElementById("transcription-monitor").hidden = !isLocal;
+  })();
+</script>
 <script src="{{ '/assets/js/transcriptions.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

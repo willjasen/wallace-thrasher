@@ -1,4 +1,6 @@
 (() => {
+  if (!["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname)) return;
+
   const byId = (id) => document.getElementById(id);
   const text = (id, value) => { byId(id).textContent = value; };
   const formatDate = (value) => value ? new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "medium" }).format(new Date(value)) : "—";
