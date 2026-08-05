@@ -26,6 +26,7 @@ appearance
  - link searched subtitle phrases to their track pages and highlight them on arrival
  - preserve subtitle searches when navigating back from a track page
  - make the Netlify deployment badge on the About reactive
+ - add a play button to the track page if the LPC USB has been loaded
 
 other
 
