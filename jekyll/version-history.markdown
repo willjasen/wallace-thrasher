@@ -12,6 +12,7 @@ data
 
  - merged & scraped some data from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/)
  - preserve apostrophes and other punctuation in track titles and audio filenames
+ - align track titles and USB filenames with the LPC collection, including corrected name changes and source filenames that retain their original spelling
  - sort subtitle results by album & track number
  - create a local API for data
 
