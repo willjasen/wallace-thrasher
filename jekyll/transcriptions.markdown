@@ -6,6 +6,9 @@ noindex: true
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/transcriptions.css' | relative_url }}">
+<style>
+  #transcription-monitor { display: none; }
+</style>
 
 <p id="local-only-message">only available locally</p>
 
@@ -51,7 +54,9 @@ noindex: true
     const localHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
     const isLocal = localHosts.has(window.location.hostname);
     document.getElementById("local-only-message").hidden = isLocal;
-    document.getElementById("transcription-monitor").hidden = !isLocal;
+    const monitor = document.getElementById("transcription-monitor");
+    monitor.hidden = !isLocal;
+    monitor.style.display = isLocal ? "" : "none";
   })();
 </script>
 <script src="{{ '/assets/js/transcriptions.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
