@@ -56,7 +56,7 @@ noindex: true
     document.getElementById("local-only-message").hidden = isLocal;
     const monitor = document.getElementById("transcription-monitor");
     monitor.hidden = !isLocal;
-    monitor.style.display = isLocal ? "" : "none";
+    monitor.style.display = isLocal ? "block" : "none";
   })();
 </script>
 <script src="{{ '/assets/js/transcriptions.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
