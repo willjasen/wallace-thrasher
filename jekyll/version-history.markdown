@@ -22,6 +22,8 @@ appearance
  - fix highlighting of table of contents menu
  - include instructions for the LPC USB player
  - link [aliases]({{ '/aliases/' | relative_url }}) and [establishments]({{ '/establishments/' | relative_url }}) when they show up in searched subtitles results
+ - link searched subtitle phrases to their track pages and highlight them on arrival
+ - preserve subtitle searches when navigating back from a track page
 
 other
 
