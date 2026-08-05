@@ -20,7 +20,27 @@
     dot.className = `status-dot ${whisper.online && whisper.transcription_api ? "online" : "offline"}`;
     text("connection-label", whisper.online ? "Whisper is online" : "Whisper is offline");
     text("connection-detail", whisper.online ? "Local API connected" : "Waiting for the local app");
-    if (!batch) return;
+    if (!batch) {
+      text("album-title", "No active batch");
+      text("batch-state", "waiting");
+      text("current-track", "No transcription batch is running.");
+      return;
+    }
+    const activeBatch = ["queued", "running"].includes(batch.status);
+    if (!activeBatch) {
+      text("album-title", "No active batch");
+      text("model-name", "—");
+      text("batch-state", "waiting");
+      text("last-updated", batch.updated_at ? `Last batch updated ${formatDate(batch.updated_at)}` : "—");
+      text("current-track", "No transcription batch is running.");
+      text("progress-count", "—");
+      text("progress-percent", "—");
+      byId("progress-bar").style.width = "0%";
+      byId("progress-bar").parentElement.setAttribute("aria-valuenow", "0");
+      for (const name of ["completed", "running", "pending", "failed"]) text(`total-${name}`, "—");
+      byId("track-list").replaceChildren();
+      return;
+    }
     const totals = batch.totals || {};
     const complete = totals.completed || 0;
     const all = totals.all || 0;
