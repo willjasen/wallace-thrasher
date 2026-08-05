@@ -18,6 +18,30 @@ console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
 const INDEXABLE_BUILD = {{ site.indexable | default: false | jsonify }};
 
+function appendSearchLinkedText(container, text, phrase, href, ariaLabel) {
+    const sourceText = String(text || '');
+    const searchPhrase = String(phrase || '').trim();
+    if (!sourceText || !searchPhrase) {
+        container.appendChild(document.createTextNode(sourceText));
+        return;
+    }
+
+    const escapedPhrase = searchPhrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const matcher = new RegExp(escapedPhrase, 'gi');
+    let cursor = 0;
+    let match;
+    while ((match = matcher.exec(sourceText)) !== null) {
+        container.appendChild(document.createTextNode(sourceText.slice(cursor, match.index)));
+        const link = document.createElement('a');
+        link.href = href;
+        link.setAttribute('aria-label', ariaLabel);
+        link.textContent = match[0];
+        container.appendChild(link);
+        cursor = match.index + match[0].length;
+    }
+    container.appendChild(document.createTextNode(sourceText.slice(cursor)));
+}
+
 function trackUrl(albumSlug, trackSlug) {
     const album = encodeURIComponent(albumSlug);
     const track = encodeURIComponent(trackSlug);
@@ -378,6 +402,7 @@ async function main(callback) {
                         groupedResults.get(trackKey).subtitles.push(matchedDoc);
                     });
 
+                    const highlightPhrase = input.value.trim();
                     groupedResults.forEach(function (group) {
                         const matchedDoc = group.track;
                         const albumAndTitleItem = document.createElement('li');
@@ -467,11 +492,14 @@ async function main(callback) {
                             speaker.textContent = `${subtitle.Speaker || 'Unknown speaker'}: `;
                             quote.appendChild(speaker);
                             quote.appendChild(document.createTextNode('“'));
-                            window.WallaceThrasherAliasLinks.appendLinkedText(
+                            const separator = INDEXABLE_BUILD ? '?' : '&';
+                            const subtitleHref = `${trackUrl(subtitle.Album_Slug, subtitle.Track_Slug)}${separator}highlight=${encodeURIComponent(highlightPhrase)}`;
+                            appendSearchLinkedText(
                                 quote,
                                 subtitle.Text,
-                                subtitle.Track_Aliases,
-                                subtitle.Track_Establishments
+                                highlightPhrase,
+                                subtitleHref,
+                                `Open ${subtitle.Track_Title} and highlight this subtitle`
                             );
                             quote.appendChild(document.createTextNode('”'));
 

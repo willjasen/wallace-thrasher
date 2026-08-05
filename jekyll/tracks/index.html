@@ -55,6 +55,12 @@ noindex: true
     background-color: rgba(173, 255, 47, 0.15);
     border-left-color: greenyellow;
   }
+  .subtitle-text mark.subtitle-search-highlight {
+    background-color: #ffdd57;
+    color: #171717;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
   #suggest-edit-toggle {
     display: flex;
     align-items: center;
@@ -434,6 +440,42 @@ noindex: true
 
   // ---- Edit mode wiring ----
   (function () {
+    function highlightSearchPhrase() {
+      var phrase = new URLSearchParams(window.location.search).get('highlight');
+      if (!phrase) return;
+      phrase = phrase.trim();
+      if (!phrase) return;
+
+      var escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var matcher = new RegExp(escaped, 'gi');
+      var textNodes = [];
+      var walker = document.createTreeWalker(document.getElementById('subtitleList'), NodeFilter.SHOW_TEXT);
+      var node;
+      while ((node = walker.nextNode())) textNodes.push(node);
+      textNodes.forEach(function (textNode) {
+        if (!matcher.test(textNode.nodeValue)) { matcher.lastIndex = 0; return; }
+        matcher.lastIndex = 0;
+        var fragment = document.createDocumentFragment();
+        var source = textNode.nodeValue;
+        var cursor = 0;
+        var match;
+        while ((match = matcher.exec(source)) !== null) {
+          fragment.appendChild(document.createTextNode(source.slice(cursor, match.index)));
+          var mark = document.createElement('mark');
+          mark.className = 'subtitle-search-highlight';
+          mark.textContent = match[0];
+          fragment.appendChild(mark);
+          cursor = match.index + match[0].length;
+        }
+        fragment.appendChild(document.createTextNode(source.slice(cursor)));
+        textNode.parentNode.replaceChild(fragment, textNode);
+      });
+      var first = document.querySelector('.subtitle-search-highlight');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    highlightSearchPhrase();
+
     let editMode = false;
 
     function renderEditToggle() {
