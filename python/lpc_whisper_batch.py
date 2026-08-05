@@ -106,7 +106,18 @@ def run(args: argparse.Namespace) -> int:
             if result.returncode:
                 raise RuntimeError((result.stderr or result.stdout).strip()[-2000:])
             track_status["status"] = "completed"
-            track_status["run"] = result.stdout.strip().splitlines()[-1]
+            run_path = Path(result.stdout.strip().splitlines()[-1]).resolve()
+            track_status["run"] = str(run_path)
+            compare_command = [
+                sys.executable, str(Path(__file__).with_name("whisper_compare_and_merge.py")), "compare",
+                "--album", args.album, "--track", track["Track_Slug"], "--run", run_path.name,
+                "--analysis-root", str(args.analysis_root.resolve()),
+            ]
+            comparison = subprocess.run(compare_command, text=True, capture_output=True)
+            if comparison.returncode:
+                track_status["comparison_error"] = (comparison.stderr or comparison.stdout).strip()[-2000:]
+            else:
+                track_status["comparison"] = str(run_path / "comparison.json")
         except Exception as exc:
             track_status["status"] = "failed"
             track_status["error"] = f"{type(exc).__name__}: {exc}"
@@ -129,7 +140,7 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--album", required=True)
     result.add_argument("--usb-root", type=Path, default=DEFAULT_USB_ROOT)
     result.add_argument("--analysis-root", type=Path, default=analysis.DEFAULT_ANALYSIS_ROOT)
-    result.add_argument("--url", default="http://127.0.0.1:7861")
+    result.add_argument("--url", default="http://brandons-mac-mini.risk-mermaid.ts.net:7860")
     result.add_argument("--model", default=DEFAULT_MODEL)
     result.add_argument("--diarization-device", default="cpu")
     result.add_argument("--max-wait", type=float, default=14400.0)

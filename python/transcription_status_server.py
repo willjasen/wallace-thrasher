@@ -153,7 +153,11 @@ def main() -> None:
     parser.add_argument("--site-root", type=Path, default=DEFAULT_SITE_ROOT)
     parser.add_argument("--status", type=Path, default=DEFAULT_STATUS)
     parser.add_argument("--analysis-root", type=Path, default=DEFAULT_ANALYSIS_ROOT)
-    parser.add_argument("--whisper-url", default="http://127.0.0.1:7861")
+    parser.add_argument(
+        "--whisper-url",
+        default="http://brandons-mac-mini.risk-mermaid.ts.net:7860",
+        help="Whisper-WebUI base URL reachable from this Mac",
+    )
     parser.add_argument("--port", type=int, default=0)
     args = parser.parse_args()
     site_root = args.site_root.resolve()
