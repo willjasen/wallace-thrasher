@@ -102,23 +102,42 @@
   font-size: 0.9rem;
 }
 
-.taxonomy-search-result {
+.taxonomy-search-album {
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
+  grid-template-columns: 56px minmax(0, 1fr);
   gap: 0.8rem;
-  align-items: center;
   padding: 0.75rem;
   border: 1px solid var(--taxonomy-border);
   border-radius: 10px;
   background: var(--minima-background-color, #fff);
 }
 
-.taxonomy-search-result img {
+.taxonomy-search-album > img {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   object-fit: cover;
   border-radius: 7px;
+}
+
+.taxonomy-result-album-title {
+  font-weight: 700;
+}
+
+.taxonomy-result-tracks {
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.taxonomy-result-tracks .taxonomy-search-result {
+  display: block;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--taxonomy-border);
+}
+
+.taxonomy-search-result {
+  min-width: 0;
 }
 
 .taxonomy-result-title { font-weight: 650; }

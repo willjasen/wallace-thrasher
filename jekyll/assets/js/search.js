@@ -572,38 +572,66 @@ async function main(callback) {
             });
             if (catalog) catalog.hidden = matches.length > 0;
 
+            const groupedMatches = new Map();
+            matches.forEach(function (doc) {
+                const albumKey = doc.Album_Slug || doc.Album;
+                if (!groupedMatches.has(albumKey)) {
+                    groupedMatches.set(albumKey, {
+                        album: doc,
+                        tracks: []
+                    });
+                }
+                groupedMatches.get(albumKey).tracks.push(doc);
+            });
+
             const countItem = document.createElement('li');
             countItem.className = 'taxonomy-result-count';
-            countItem.textContent = `${matches.length} ${matches.length === 1 ? 'track' : 'tracks'} found`;
+            countItem.textContent = `${matches.length} ${matches.length === 1 ? 'track' : 'tracks'} found across ${groupedMatches.size} ${groupedMatches.size === 1 ? 'album' : 'albums'}`;
             resultList.appendChild(countItem);
 
-            matches.forEach(function (doc) {
-                const resultItem = document.createElement('li');
-                resultItem.className = 'taxonomy-search-result';
+            groupedMatches.forEach(function (group) {
+                const albumDoc = group.album;
+                const albumItem = document.createElement('li');
+                albumItem.className = 'taxonomy-search-album';
 
                 const cover = document.createElement('img');
-                cover.src = `${BASE_URL}/assets/img/albums/${doc.Album_Picture}`;
+                cover.src = `${BASE_URL}/assets/img/albums/${albumDoc.Album_Picture}`;
                 cover.alt = '';
-                cover.width = 48;
-                cover.height = 48;
+                cover.width = 56;
+                cover.height = 56;
                 cover.loading = 'lazy';
-                resultItem.appendChild(cover);
+                albumItem.appendChild(cover);
 
-                const content = document.createElement('div');
-                const title = document.createElement('a');
-                title.className = 'taxonomy-result-title';
-                title.href = trackUrl(doc.Album_Slug, doc.Track_Slug);
-                title.textContent = doc.Track_Title;
-                content.appendChild(title);
+                const albumContent = document.createElement('div');
+                const albumTitle = document.createElement('a');
+                albumTitle.className = 'taxonomy-result-album-title';
+                albumTitle.href = `${BASE_URL}/albums/${encodeURIComponent(albumDoc.Album_Slug)}/`;
+                albumTitle.textContent = `${albumDoc.Album} (${albumDoc.Album_Year})`;
+                albumContent.appendChild(albumTitle);
 
-                const meta = document.createElement('p');
-                meta.className = 'taxonomy-result-meta';
-                meta.textContent = `${doc.Album} (${doc.Album_Year}) · Track ${doc.Track_Number} · ${doc[field].length} ${doc[field].length === 1 ? singularLabel : field.toLowerCase()}`;
-                content.appendChild(meta);
+                const trackList = document.createElement('ul');
+                trackList.className = 'taxonomy-result-tracks';
+                group.tracks.forEach(function (doc) {
+                    const trackItem = document.createElement('li');
+                    trackItem.className = 'taxonomy-search-result';
 
-                appendTaxonomyValueList(content, doc[field], query);
-                resultItem.appendChild(content);
-                resultList.appendChild(resultItem);
+                    const title = document.createElement('a');
+                    title.className = 'taxonomy-result-title';
+                    title.href = trackUrl(doc.Album_Slug, doc.Track_Slug);
+                    title.textContent = `Track ${doc.Track_Number}: ${doc.Track_Title}`;
+                    trackItem.appendChild(title);
+
+                    const meta = document.createElement('p');
+                    meta.className = 'taxonomy-result-meta';
+                    meta.textContent = `${doc[field].length} ${doc[field].length === 1 ? singularLabel : field.toLowerCase()}`;
+                    trackItem.appendChild(meta);
+
+                    appendTaxonomyValueList(trackItem, doc[field], query);
+                    trackList.appendChild(trackItem);
+                });
+                albumContent.appendChild(trackList);
+                albumItem.appendChild(albumContent);
+                resultList.appendChild(albumItem);
             });
         }
 
