@@ -20,7 +20,7 @@ appearance
  - group searched alias and establishment results into their same album
  - fix highlighting of table of contents menu
  - include instructions for the LPC USB player
- - link aliases and establishments when they show up in searched subtitles results
+ - link [aliases]({{ '/aliases/' | relative_url }}) and [establishments]({{ '/establishments/' | relative_url }}) when they show up in searched subtitles results
 
 other
 
@@ -118,7 +118,7 @@ this minor release is mostly to stash any changes that haven't been merged yet n
 
 ### v1.6.2
 
- - add aliases and establishments for "Alive in '25"
+ - add [aliases]({{ '/aliases/' | relative_url }}) and [establishments]({{ '/establishments/' | relative_url }}) for "Alive in '25"
  - use stretchie.net for IPNS
 
 ---
@@ -132,7 +132,7 @@ this minor release is mostly to stash any changes that haven't been merged yet n
 
 ### v1.6.0
 
- - add pages for Aliases and Establishments and their searching thereof
+ - add pages for [Aliases]({{ '/aliases/' | relative_url }}) and [Establishments]({{ '/establishments/' | relative_url }}) and their searching thereof
  - make the search boxes bigger and disable them until the data is loaded
  - move the site's title and logo to the top center (away from the left)
  - give the navigation menu a new layout
