@@ -10,7 +10,7 @@ published: true
 
 data
 
- - merged & scraped some data from Talkin' Whipapedia
+ - merged & scraped some data from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/)
  - sort subtitle results by album & track number
  - create a local API for data
 
@@ -165,7 +165,7 @@ this minor release is mostly to stash any changes that haven't been merged yet n
 
 - fix typo within page track data for "Circus Tickets" on LPC 1
 - add logo to site title (formatting isn't the best yet)
-- add link to Talkin' Whipapedia at the bottom of each album page
+- add link to [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/) at the bottom of each album page
 - add [link to the Discord server](https://discord.gg/fFzWs8Vv83) at the bottom of the page
 - send webhook to the new Discord server after production builds
 
