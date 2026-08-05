@@ -217,6 +217,8 @@ to install the project's dependencies, ensure Ruby is installed, then install it
 
 to create the default indexable production build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
 
+when the LPC USB collection is available locally, the build can also verify that every catalog album directory and track filename matches the USB files. set `LPC_USB_ROOT` to the USB collection's root before building, for example: `LPC_USB_ROOT="/path/to/LPC USB" JEKYLL_ENV=production bundle exec jekyll build`. this check is skipped automatically on Netlify and when the path is unavailable.
+
 to build the site with the shared browser-rendered track viewer instead of fully rendered track HTML, run: `JEKYLL_ENV=production INDEXABLE=false bundle exec jekyll build`
 
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
