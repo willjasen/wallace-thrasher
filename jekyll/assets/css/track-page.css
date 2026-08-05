@@ -119,12 +119,25 @@
   line-height: 1.25;
 }
 .track-fact-values .track-fact-value-with-note { padding: 0; }
+.track-fact-link {
+  color: #aaa;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.track-fact-link:visited { color: #aaa; }
+.track-fact-link:hover,
+.track-fact-link:focus-visible { color: var(--minima-link-base-color, #2a7ae2); }
+.track-fact-value-with-note .track-fact-link {
+  display: inline-block;
+  padding: 5px 0 5px 9px;
+}
 .track-fact-note-trigger {
   display: inline-flex;
   max-width: 100%;
   align-items: center;
   gap: 6px;
-  padding: 5px 9px;
+  padding: 5px 9px 5px 5px;
   border: 0;
   color: #ffcc80;
   background: rgba(255, 167, 38, 0.1);

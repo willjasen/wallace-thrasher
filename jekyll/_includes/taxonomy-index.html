@@ -64,7 +64,7 @@
                   </div>
                   <ul class="taxonomy-values" aria-label="{{ page.taxonomy_label }} in {{ track.Track_Title }}">
                     {% for value in track_values %}
-                      <li>{{ value }}</li>
+                      <li><a href="{{ site.baseurl }}{{ page.permalink }}?search={{ value | uri_escape }}">{{ value | escape }}</a></li>
                     {% endfor %}
                   </ul>
                 </li>

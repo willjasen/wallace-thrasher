@@ -111,7 +111,7 @@ layout: base
             <h2>Aliases</h2>
           </div>
           <ul class="track-fact-values">
-            {% for alias in track_aliases_detail %}<li>{{ alias }}</li>{% endfor %}
+            {% for alias in track_aliases_detail %}<li><a class="track-fact-link" href="{{ site.baseurl }}/aliases/?search={{ alias | uri_escape }}">{{ alias | escape }}</a></li>{% endfor %}
           </ul>
         </div>
       {% endif %}
@@ -127,12 +127,12 @@ layout: base
               {% if establishment_note %}
                 {% assign establishment_popover_id = "establishment-note-" | append: forloop.index %}
                 <li class="track-fact-value-with-note">
+                  <a class="track-fact-link" href="{{ site.baseurl }}/establishments/?search={{ establishment | uri_escape }}">{{ establishment | escape }}</a>
                   <button
                     class="track-fact-note-trigger"
                     type="button"
                     popovertarget="{{ establishment_popover_id }}"
                     aria-label="More information about {{ establishment | escape }}">
-                    <span class="track-fact-note-label">{{ establishment | escape }}</span>
                     <span class="track-fact-note-icon" aria-hidden="true">i</span>
                   </button>
                   <div
@@ -145,7 +145,7 @@ layout: base
                   </div>
                 </li>
               {% else %}
-                <li>{{ establishment | escape }}</li>
+                <li><a class="track-fact-link" href="{{ site.baseurl }}/establishments/?search={{ establishment | uri_escape }}">{{ establishment | escape }}</a></li>
               {% endif %}
             {% endfor %}
           </ul>
