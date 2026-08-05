@@ -133,7 +133,7 @@ class AlignmentTests(unittest.TestCase):
 
 class ArgumentTests(unittest.TestCase):
     def test_generated_data_uses_the_unified_kebab_case_layout(self):
-        self.assertEqual(wiki.DATA_DIR.name, "wiki-data")
+        self.assertEqual(wiki.DATA_DIR, wiki.PROJECT_ROOT / "analysis" / "wiki")
         self.assertEqual(wiki.SNAPSHOTS_DIR.relative_to(wiki.DATA_DIR), Path("scrapes"))
         self.assertEqual(wiki.COMPARE_DIR.relative_to(wiki.DATA_DIR), Path("comparisons"))
         self.assertEqual(wiki.BACKUP_DIR.relative_to(wiki.DATA_DIR), Path("merge-backups"))

@@ -6,7 +6,7 @@ require "pathname"
 require "time"
 
 module WikiDataExporter
-  DATA_ROOT = File.expand_path("../../python/wiki-data", __dir__)
+  DATA_ROOT = File.expand_path("../../analysis/wiki", __dir__)
   CATALOG_PATH = File.expand_path("../assets/json/data.json", __dir__)
   PUBLIC_ROOT = "assets/wiki-data"
   EXPORTED_DIRECTORIES = %w[comparisons scrapes].freeze

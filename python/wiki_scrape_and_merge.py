@@ -12,9 +12,9 @@ errors.  This tool bridges the two sources.
 
 Scrape snapshots
 ────────────────
-Each `scrape` run creates a Unix-timestamped snapshot under wiki-data/scrapes/.
+Each `scrape` run creates a Unix-timestamped snapshot under analysis/wiki/scrapes/.
 All subsequent commands default to the most-recent snapshot (recorded in
-wiki-data/latest-scrape).  Pass --snapshot <name> to target a specific one.
+analysis/wiki/latest-scrape).  Pass --snapshot <name> to target a specific one.
 
 Usage
 ─────
@@ -81,7 +81,7 @@ PROJECT_ROOT   = SCRIPT_DIR.parent
 JEKYLL_DIR     = PROJECT_ROOT / "jekyll"
 JSON_SRC_DIR   = JEKYLL_DIR / "assets" / "json"
 DATA_JSON      = JSON_SRC_DIR / "data.json"
-DATA_DIR       = SCRIPT_DIR / "wiki-data"
+DATA_DIR       = PROJECT_ROOT / "analysis" / "wiki"
 SNAPSHOTS_DIR  = DATA_DIR / "scrapes"       # one Unix-timestamped directory per scrape
 LATEST_FILE    = DATA_DIR / "latest-scrape" # active scrape ID, stored as plain text
 COMPARE_DIR    = DATA_DIR / "comparisons"
@@ -1364,7 +1364,7 @@ def cmd_list_snapshots(args) -> None:
 # ── Subcommand: use ───────────────────────────────────────────────────────────
 
 def cmd_use(args) -> None:
-    """Set a snapshot as the active default (updates wiki-data/latest-scrape)."""
+    """Set a snapshot as the active default (updates analysis/wiki/latest-scrape)."""
     snapshot = _validate_snapshot_name(args.snapshot)
     if not _snapshot_cache_dir(snapshot).exists():
         sys.exit(f"Snapshot '{snapshot}' not found under {SNAPSHOTS_DIR}.")
@@ -1375,9 +1375,9 @@ def cmd_use(args) -> None:
 # ── Subcommand: migrate ───────────────────────────────────────────────────────
 
 def cmd_migrate(args) -> None:
-    """Migrate wiki-data/legacy-cache/<album>/ into a named snapshot."""
+    """Migrate analysis/wiki/legacy-cache/<album>/ into a named snapshot."""
     if not LEGACY_CACHE_DIR.exists():
-        print("wiki-data/legacy-cache/ does not exist. Nothing to migrate.")
+        print("analysis/wiki/legacy-cache/ does not exist. Nothing to migrate.")
         return
 
     legacy_dirs = [
@@ -1385,7 +1385,7 @@ def cmd_migrate(args) -> None:
         if d.is_dir() and d.name != "snapshots"
     ]
     if not legacy_dirs:
-        print("No album directories found under wiki-data/legacy-cache/.")
+        print("No album directories found under analysis/wiki/legacy-cache/.")
         return
 
     snapshot = _validate_snapshot_name(args.snapshot or _unix_timestamp_ms())
@@ -1411,7 +1411,7 @@ def cmd_migrate(args) -> None:
         print(f"Note: 'latest' still points to '{_resolve_snapshot(None)}'; not changed.")
         print(f"      Run 'use {snapshot}' to switch if desired.")
 
-    print(f"\nMigration complete. Original files remain in wiki-data/legacy-cache/<album>/.")
+    print(f"\nMigration complete. Original files remain in analysis/wiki/legacy-cache/<album>/.")
     print("Delete them manually once you have verified the snapshot.")
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -1481,7 +1481,7 @@ def build_parser() -> argparse.ArgumentParser:
                        help="Show individual alignment entries.")
 
     # ── migrate ──
-    p_mig = sub.add_parser("migrate", help="Migrate wiki-data/legacy-cache/ into a snapshot.")
+    p_mig = sub.add_parser("migrate", help="Migrate analysis/wiki/legacy-cache/ into a snapshot.")
     p_mig.add_argument("--snapshot", help="Snapshot ID for migrated data (default: Unix timestamp in milliseconds).")
     p_mig.add_argument("--force",    action="store_true", help="Merge into snapshot if it already exists.")
 

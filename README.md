@@ -52,7 +52,7 @@ i am using [this python tool](https://github.com/willjasen/srt-to-json) to conve
 `python/wiki_scrape_and_merge.py` downloads wiki transcripts into snapshots identified by a 13-digit Unix timestamp, aligns them with this project's timestamped JSON subtitles, and prepares speaker and text corrections for review. Generated data has one consistent layout:
 
 ```text
-python/wiki-data/
+analysis/wiki/
 ├── scrapes/<unix-timestamp>/
 ├── comparisons/<unix-timestamp>/
 ├── merge-backups/<unix-timestamp>/
@@ -72,7 +72,7 @@ python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4 -
 python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4
 ```
 
-Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `python/wiki-data/merge-backups/<unix-timestamp>/` before it is written.
+Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `analysis/wiki/merge-backups/<unix-timestamp>/` before it is written.
 
 Aliases and organizations can be reconciled separately from Talkin' Whipapedia's maintained index pages. The importer uses explicit wiki track groupings first, then searches album-scoped local transcripts for aliases and the full local catalog for otherwise-unassociated organizations:
 
