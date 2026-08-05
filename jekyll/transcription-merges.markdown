@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Transcription Merges
-permalink: /transcription-merges/
-hide_from_nav: true
+title: Transcription Data
+permalink: /transcription-data/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/transcription-merges.css' | relative_url }}">
@@ -12,7 +11,7 @@ hide_from_nav: true
     <div>
       <p class="merge-kicker">Whisper WebUI pipeline</p>
       <h1>Transcription merge archive</h1>
-      <p>Explore how local Whisper results compare with the repository, which changes still need review, and what each real merge applied.</p>
+      <p>Explore local Whisper transcription runs, compare them with the repository, and review which changes each merge applied.</p>
     </div>
     <div class="merge-mark" aria-hidden="true"><span>W</span><small>LOCAL</small></div>
   </header>
