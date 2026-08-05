@@ -351,6 +351,16 @@ async function main(callback) {
         document.addEventListener('input', function (e) {
             if (!e.target.matches('#subtitles-search-input')) return;
             (function (input) {
+                // Preserve the current search in browser history so returning from
+                // a result restores the same query and rendered result list.
+                const searchUrl = new URL(window.location.href);
+                if (input.value.trim()) {
+                    searchUrl.searchParams.set('search', input.value.trim());
+                } else {
+                    searchUrl.searchParams.delete('search');
+                }
+                window.history.replaceState(window.history.state, '', searchUrl);
+
                 const resultList = document.querySelector('#subtitles-search-results');
                 const status = document.querySelector('#subtitles-search-status');
                 if (!resultList) return;
