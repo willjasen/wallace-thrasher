@@ -7,6 +7,7 @@ noindex: true
 
 <link rel="stylesheet" href="{{ '/assets/css/transcriptions.css' | relative_url }}">
 <style>
+  #local-only-message { text-align: center; }
   #transcription-monitor { display: none; }
 </style>
 
