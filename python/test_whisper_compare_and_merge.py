@@ -147,6 +147,41 @@ class WhisperComparisonTests(unittest.TestCase):
             self.assertEqual(comparison["metadata"]["aliases"][0]["action"], "auto_add")
             self.assertEqual(comparison["metadata"]["establishments"][0]["type"], "real-world")
 
+    def test_large_timestamp_gap_requires_review_even_when_text_matches(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = WhisperMergeFixture(temporary)
+            fixture.subtitles[0]["Text"] = fixture.candidate[0]["Text"]
+            fixture.candidate[0]["Start Time"] = "00:00:30,000"
+            fixture.candidate[0]["End Time"] = "00:00:31,000"
+            write_json(fixture.subtitle_path, fixture.subtitles)
+            write_json(fixture.run_dir / "candidate-subtitles.json", fixture.candidate)
+            with fixture.patches():
+                comparison = merge_tool.build_comparison(
+                    fixture.data, fixture.album_slug, fixture.track_slug, fixture.run_dir
+                )
+
+            alignment = comparison["alignments"][0]
+            self.assertEqual(alignment["text_action"], "timestamp_review")
+            self.assertTrue(alignment["timestamp_mismatch"])
+            self.assertEqual(alignment["timestamp_delta"], 30.0)
+
+    def test_small_timestamp_difference_does_not_require_timestamp_review(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = WhisperMergeFixture(temporary)
+            fixture.subtitles[0]["Text"] = fixture.candidate[0]["Text"]
+            fixture.candidate[0]["Start Time"] = "00:00:03,000"
+            fixture.candidate[0]["End Time"] = "00:00:04,000"
+            write_json(fixture.subtitle_path, fixture.subtitles)
+            write_json(fixture.run_dir / "candidate-subtitles.json", fixture.candidate)
+            with fixture.patches():
+                comparison = merge_tool.build_comparison(
+                    fixture.data, fixture.album_slug, fixture.track_slug, fixture.run_dir
+                )
+
+            alignment = comparison["alignments"][0]
+            self.assertEqual(alignment["text_action"], "keep")
+            self.assertFalse(alignment["timestamp_mismatch"])
+
     def test_dry_run_reports_auto_adds_without_writing_project_files(self):
         with tempfile.TemporaryDirectory() as temporary:
             fixture = WhisperMergeFixture(temporary)

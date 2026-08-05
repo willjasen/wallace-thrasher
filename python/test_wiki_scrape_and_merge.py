@@ -61,6 +61,21 @@ class WikitextParsingTests(unittest.TestCase):
 
 
 class AlignmentTests(unittest.TestCase):
+    def test_grouped_fragments_use_their_combined_timestamp_span(self):
+        source = [("LPC", "Hello there.", "00:00:01,000", "00:00:05,000")]
+        entries = [
+            dict(subtitle(1, "SPEAKER_00", "Hello"), **{
+                "Start Time": "00:00:01,000", "End Time": "00:00:03,000"
+            }),
+            dict(subtitle(2, "SPEAKER_00", "there."), **{
+                "Start Time": "00:00:03,000", "End Time": "00:00:05,000"
+            }),
+        ]
+        aligned = wiki.align_wiki_to_json(source, entries)
+        self.assertEqual(len(aligned), 2)
+        self.assertEqual(aligned[0]["timestamp_delta"], 0.0)
+        self.assertFalse(aligned[0]["timestamp_mismatch"])
+
     def test_alignment_does_not_group_by_incorrect_diariser_code(self):
         wiki_lines = [
             ("Pam", "This is Pam, can I help you?"),

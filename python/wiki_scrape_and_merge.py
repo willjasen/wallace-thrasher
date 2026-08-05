@@ -432,8 +432,27 @@ def _contains_uncertainty(text: str) -> bool:
     return bool(re.search(r"\[(?:unclear|inaudible|unintelligible|\?)[^\]]*\]", text, re.I))
 
 
+def _subtitle_seconds(value: str | None) -> float | None:
+    """Parse common SRT/VTT timestamps into seconds."""
+    if not value:
+        return None
+    match = re.fullmatch(r"\s*(\d+):(\d{2}):(\d{2})[,.](\d{3})\s*", str(value))
+    if not match:
+        return None
+    hours, minutes, seconds, milliseconds = (int(part) for part in match.groups())
+    return hours * 3600 + minutes * 60 + seconds + milliseconds / 1000
+
+
+def _timestamp_delta(source_start: float | None, source_end: float | None,
+                     target_start: float | None, target_end: float | None) -> float | None:
+    """Return the largest boundary difference, or None when timestamps are absent."""
+    if None in (source_start, source_end, target_start, target_end):
+        return None
+    return max(abs(source_start - target_start), abs(source_end - target_end))
+
+
 def align_wiki_to_json(
-    wiki_lines: list[tuple[str | None, str]],
+    wiki_lines: list[tuple],
     json_entries: list[dict],
     min_similarity: float = 0.4,
 ) -> list[dict]:
@@ -460,11 +479,13 @@ def align_wiki_to_json(
       wiki_indices     – original zero-based wiki line indices in the match
     """
     # Filter wiki lines that have actual speech content (not pure [actions])
-    wiki_speech = [
-        (i, spk, txt)
-        for i, (spk, txt) in enumerate(wiki_lines)
-        if txt and not _is_action_only(txt)
-    ]
+    wiki_speech = []
+    for i, line in enumerate(wiki_lines):
+        spk, txt = line[:2]
+        if txt and not _is_action_only(txt):
+            start = _subtitle_seconds(line[2]) if len(line) > 2 else None
+            end = _subtitle_seconds(line[3]) if len(line) > 3 else None
+            wiki_speech.append((i, spk, txt, start, end))
     json_speech = []
     seen_indices: set[int] = set()
     for position, entry in enumerate(json_entries):
@@ -505,7 +526,7 @@ def align_wiki_to_json(
         combined = []
         speakers: set[str] = set()
         for count in range(1, min(max_wiki_span, n_wiki - start) + 1):
-            _, speaker, text = wiki_speech[start + count - 1]
+            _, speaker, text, _, _ = wiki_speech[start + count - 1]
             combined.append(text)
             if speaker:
                 speakers.add(speaker)
@@ -626,9 +647,14 @@ def align_wiki_to_json(
             _, wiki_count, json_count, similarity, wiki_position, json_position = operation
             wiki_slice = wiki_speech[wiki_position:wiki_position + wiki_count]
             json_slice = json_speech[json_position:json_position + json_count]
-            wiki_indices = [original_index for original_index, _, _ in wiki_slice]
-            wiki_speaker = next((speaker for _, speaker, _ in wiki_slice if speaker), None)
-            wiki_text = " ".join(text for _, _, text in wiki_slice)
+            wiki_indices = [original_index for original_index, _, _, _, _ in wiki_slice]
+            wiki_speaker = next((speaker for _, speaker, _, _, _ in wiki_slice if speaker), None)
+            wiki_text = " ".join(text for _, _, text, _, _ in wiki_slice)
+            source_start = next((start for _, _, _, start, _ in wiki_slice if start is not None), None)
+            source_end = next((end for _, _, _, _, end in reversed(wiki_slice) if end is not None), None)
+            target_start = _subtitle_seconds(json_slice[0][1].get("Start Time"))
+            target_end = _subtitle_seconds(json_slice[-1][1].get("End Time"))
+            timestamp_delta = _timestamp_delta(source_start, source_end, target_start, target_end)
             group_indices = [entry["Index"] for _, entry in json_slice]
             for _, entry in json_slice:
                 alignments.append({
@@ -641,6 +667,8 @@ def align_wiki_to_json(
                     "match_type": "exact" if similarity >= 0.9999 else "similar",
                     "json_group": group_indices if json_count > 1 else None,
                     "wiki_indices": wiki_indices,
+                    "timestamp_delta": round(timestamp_delta, 3) if timestamp_delta is not None else None,
+                    "timestamp_mismatch": timestamp_delta is not None and timestamp_delta > 5.0,
                 })
 
     alignments.sort(key=lambda item: item["json_index"])

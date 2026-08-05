@@ -206,8 +206,11 @@ def _transform_alignments(raw: Sequence[dict[str, Any]], mapping: dict[str, str]
         if not source_text:
             text_action = "keep_no_source_match"
             proposed_text = current_text
-        elif grouped and similarity < 0.99:
+        elif grouped and similarity < threshold:
             text_action = "group_review"
+            proposed_text = current_text
+        elif item.get("timestamp_mismatch"):
+            text_action = "timestamp_review"
             proposed_text = current_text
         elif similarity >= 0.99:
             text_action = "keep"
@@ -242,6 +245,8 @@ def _transform_alignments(raw: Sequence[dict[str, Any]], mapping: dict[str, str]
             "text_action": text_action,
             "similarity": round(similarity, 6),
             "match_type": item.get("match_type"),
+            "timestamp_delta": item.get("timestamp_delta"),
+            "timestamp_mismatch": bool(item.get("timestamp_mismatch")),
             "current_reviewed": current_reviewed,
             "proposed_reviewed": current_reviewed if current_reviewed is not None else reviewed_default,
             "review_action": "keep" if current_reviewed is not None else "initialize_from_track",
@@ -264,7 +269,12 @@ def build_comparison(data: dict[str, Any], album_slug: str, track_slug: str, run
         raise ValueError("Current and candidate subtitle files must both contain JSON lists")
 
     source_lines = [
-        (str(item.get("Speaker") or "None"), str(item.get("Text") or ""))
+        (
+            str(item.get("Speaker") or "None"),
+            str(item.get("Text") or ""),
+            item.get("Start Time"),
+            item.get("End Time"),
+        )
         for item in candidate
     ]
     wiki = _load_wiki_module()
@@ -318,6 +328,7 @@ def build_comparison(data: dict[str, Any], album_slug: str, track_slug: str, run
             "matched": sum(1 for item in alignments if item["match_type"] != "unmatched_json"),
             "text_review": sum(1 for item in alignments if item["text_action"] == "review"),
             "text_group_review": sum(1 for item in alignments if item["text_action"] == "group_review"),
+            "text_timestamp_review": sum(1 for item in alignments if item["text_action"] == "timestamp_review"),
             "speaker_review": sum(1 for item in alignments if item["speaker_action"] == "review"),
             "review_flags_to_initialize": sum(
                 1 for item in alignments if item["review_action"] == "initialize_from_track"
@@ -482,7 +493,7 @@ def merge(args: argparse.Namespace) -> dict[str, Any]:
         "aliases_added": aliases_added,
         "establishments_added": establishments_added,
         "pending_text_review": sum(
-            item.get("text_action") in {"review", "group_review"}
+            item.get("text_action") in {"review", "group_review", "timestamp_review"}
             for item in comparison.get("alignments") or []
         ),
         "pending_speaker_review": sum(
