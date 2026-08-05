@@ -1,0 +1,1936 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:52:19.229414+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260722T235335Z",
+    "run_path": "analysis/whisper-webui/best-before-24/cement-pirates/20260722T235335Z",
+    "audio_sha256": "8d75fb8d57c03a83f2487ef0e3d194b9fa962ecb5ecde60478cc9753eee92e06",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "1b4441f18481dcc90a2aeb2a6a1c880ec9f288e048216c30ca0b7a3ad0da06e1",
+    "manifest_sha256": "ffc3a6b14872785e823b0510663e25221a3b1700ae4664698842a18fd8099eba"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Cement Pirates",
+    "track_slug": "cement-pirates",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "91bc1a48e11292e4819e91c652c64e3fec1eb66b0a0b5bc10d1804f85e7ef5bb",
+    "subtitle_path": "jekyll/assets/json/best-before-24/cement-pirates.json",
+    "subtitle_sha256": "445a106d7ee2e0b16e869c556ec54f32daa8ac935f28cd8a0f34e3a2fec6556a",
+    "current_aliases": [
+      "Dewey"
+    ],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "confidence": 0.963,
+      "overlap_seconds": 67.077,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "confidence": 0.9053,
+      "overlap_seconds": 71.827,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [
+      {
+        "value": "Buddy",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      },
+      {
+        "value": "Guy",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      }
+    ],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Man",
+      "source_speaker": null,
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Sale Records, STL.",
+      "source_text": null,
+      "proposed_text": "Sale Records, STL.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": [
+        2,
+        3,
+        4
+      ],
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "review",
+      "current_text": "You got any Mötley Crüe up 'ere?",
+      "source_text": "you got any motley crew up there vinyl cd merch we have a ton of it we're all over it what would",
+      "proposed_text": "You got any Mötley Crüe up 'ere?",
+      "text_action": "group_review",
+      "similarity": 0.895,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": [
+        2,
+        3,
+        4
+      ],
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Vinyl, CDs, merch, we have a ton of it.",
+      "source_text": "you got any motley crew up there vinyl cd merch we have a ton of it we're all over it what would",
+      "proposed_text": "Vinyl, CDs, merch, we have a ton of it.",
+      "text_action": "group_review",
+      "similarity": 0.895,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": [
+        2,
+        3,
+        4
+      ],
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "We're all over it.",
+      "source_text": "you got any motley crew up there vinyl cd merch we have a ton of it we're all over it what would",
+      "proposed_text": "We're all over it.",
+      "text_action": "group_review",
+      "similarity": 0.895,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "What would you like, sir?",
+      "source_text": "you like sir are you talking about motley crew no you are i'm just answering your question",
+      "proposed_text": "What would you like, sir?",
+      "text_action": "group_review",
+      "similarity": 0.9053,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "review",
+      "current_text": "Are you talkin’ 'bout Mötley Crüe?",
+      "source_text": "you like sir are you talking about motley crew no you are i'm just answering your question",
+      "proposed_text": "Are you talkin’ 'bout Mötley Crüe?",
+      "text_action": "group_review",
+      "similarity": 0.9053,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "No, you are.",
+      "source_text": "you like sir are you talking about motley crew no you are i'm just answering your question",
+      "proposed_text": "No, you are.",
+      "text_action": "group_review",
+      "similarity": 0.9053,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I'm just answering your question.",
+      "source_text": "you like sir are you talking about motley crew no you are i'm just answering your question",
+      "proposed_text": "I'm just answering your question.",
+      "text_action": "group_review",
+      "similarity": 0.9053,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": [
+        9,
+        10
+      ],
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because they got Mickey Mars, they got Nick Six, they got Neil Vincent.",
+      "source_text": "because they got mickey mars they got nick six they got neil vincent okay they got a lot of guys",
+      "proposed_text": "Because they got Mickey Mars, they got Nick Six, they got Neil Vincent.",
+      "text_action": "group_review",
+      "similarity": 0.9505,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": [
+        9,
+        10
+      ],
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay, they got a lot of guys out there.",
+      "source_text": "because they got mickey mars they got nick six they got neil vincent okay they got a lot of guys",
+      "proposed_text": "Okay, they got a lot of guys out there.",
+      "text_action": "group_review",
+      "similarity": 0.9505,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "In fact, I think they even got another guy in the band, you know?",
+      "source_text": "out there yeah in fact i think they even got another",
+      "proposed_text": "out there yeah in fact i think they even got another",
+      "text_action": "review",
+      "similarity": 0.6491,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": [
+        12,
+        13
+      ],
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I tell people, look out.",
+      "source_text": "guy in the band you know because i tell people look out because these guys are something else",
+      "proposed_text": "Because I tell people, look out.",
+      "text_action": "group_review",
+      "similarity": 0.7473,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": [
+        12,
+        13
+      ],
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because these guys are something else, you know what I mean?",
+      "source_text": "guy in the band you know because i tell people look out because these guys are something else",
+      "proposed_text": "Because these guys are something else, you know what I mean?",
+      "text_action": "group_review",
+      "similarity": 0.7473,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": [
+        14,
+        15
+      ],
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "When you come in and pick it up, we certainly have it.",
+      "source_text": "you know when you come in and pick it up we certainly have it hey you guys all selling bulk",
+      "proposed_text": "When you come in and pick it up, we certainly have it.",
+      "text_action": "group_review",
+      "similarity": 0.895,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": [
+        14,
+        15
+      ],
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "review",
+      "current_text": "Hey, you guys all sell in bulk up 'ere?",
+      "source_text": "you know when you come in and pick it up we certainly have it hey you guys all selling bulk",
+      "proposed_text": "Hey, you guys all sell in bulk up 'ere?",
+      "text_action": "group_review",
+      "similarity": 0.895,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": [
+        16,
+        17
+      ],
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "upper no i mean if you just want to come and spend hundreds of dollars we'll give you a discount but",
+      "proposed_text": "No.",
+      "text_action": "group_review",
+      "similarity": 0.9326,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": [
+        16,
+        17
+      ],
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I mean, if you just want to come in and spend hundreds of dollars, we'll give you a discount.",
+      "source_text": "upper no i mean if you just want to come and spend hundreds of dollars we'll give you a discount but",
+      "proposed_text": "I mean, if you just want to come in and spend hundreds of dollars, we'll give you a discount.",
+      "text_action": "group_review",
+      "similarity": 0.9326,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": [
+        18,
+        19
+      ],
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "But we're not a wholesaler, if that's what you mean.",
+      "source_text": "we're not a wholesaler if that's what what you mean. Because I wanted to get the Cement Pirates, Naughty Igor,",
+      "proposed_text": "But we're not a wholesaler, if that's what you mean.",
+      "text_action": "group_review",
+      "similarity": 0.8831,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": [
+        18,
+        19
+      ],
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I wanted to get the Cement Pirates, Naughty Igor, all them one guys.",
+      "source_text": "we're not a wholesaler if that's what what you mean. Because I wanted to get the Cement Pirates, Naughty Igor,",
+      "proposed_text": "Because I wanted to get the Cement Pirates, Naughty Igor, all them one guys.",
+      "text_action": "group_review",
+      "similarity": 0.8831,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know them one guys?",
+      "source_text": "all them one guys. You know them one guys?",
+      "proposed_text": "all them one guys. You know them one guys?",
+      "text_action": "review",
+      "similarity": 0.7097,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": null,
+      "source_indices": [
+        9,
+        10
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "You wanna come into the store and you wanna stack it up, I’m sure we can cut you a deal, so…—",
+      "source_text": "If you want to come into the store and you want to stack it up, I'm sure we can cut you a deal.",
+      "proposed_text": "If you want to come into the store and you want to stack it up, I'm sure we can cut you a deal.",
+      "text_action": "review",
+      "similarity": 0.8901,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": null,
+      "source_indices": [
+        11,
+        12
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, hey, fifth row is where I seen the crew.",
+      "source_text": "Well, hey, Fifth Row is where I seen the crew.",
+      "proposed_text": "Well, hey, fifth row is where I seen the crew.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "All right.",
+      "source_text": "Alright.",
+      "proposed_text": "Alright.",
+      "text_action": "review",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": [
+        24,
+        25
+      ],
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I got all that stuff.",
+      "source_text": "I got all that stuff. It's the best metal store in the Midwest.",
+      "proposed_text": "I got all that stuff.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": [
+        24,
+        25
+      ],
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "It's the best metal store in the Midwest.",
+      "source_text": "I got all that stuff. It's the best metal store in the Midwest.",
+      "proposed_text": "It's the best metal store in the Midwest.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, hey man, you got Mickey Mars.",
+      "source_text": "Well, hey, man, you got Mickey",
+      "proposed_text": "Well, hey, man, you got Mickey",
+      "text_action": "review",
+      "similarity": 0.9153,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got Nick Six.",
+      "source_text": "Mars, you got Nick Six.",
+      "proposed_text": "Mars, you got Nick Six.",
+      "text_action": "review",
+      "similarity": 0.8649,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": null,
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I got customers here in front of me.",
+      "source_text": "I got customers here in front of me. Well, listen, just, you got Mickey Mars. You got Nick Six. I got customers here in front of me.",
+      "proposed_text": "I got customers here in front of me. Well, listen, just, you got Mickey Mars. You got Nick Six. I got customers here in front of me.",
+      "text_action": "review",
+      "similarity": 0.4375,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Listen, just sell me everything I need [exhales] in a bulk—",
+      "source_text": "Well, listen, just sell me everything I need in a bulk.",
+      "proposed_text": "Well, listen, just sell me everything I need in a bulk.",
+      "text_action": "review",
+      "similarity": 0.8785,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "Joe's Records, STL",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "review",
+      "current_text": "Who is this?",
+      "source_text": "Who is this?",
+      "proposed_text": "Who is this?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "This is Dewey.",
+      "source_text": "This is Dewey.",
+      "proposed_text": "This is Dewey.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I've got to get off here, but if you like Mötley Crüe, come into the store.",
+      "source_text": "I've got to get off here, but if you like Motley Crue, come into the store.",
+      "proposed_text": "I've got to get off here, but if you like Motley Crue, come into the store.",
+      "text_action": "review",
+      "similarity": 0.9722,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": null,
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I got everything you need.",
+      "source_text": "I got everything you need.",
+      "proposed_text": "I got everything you need.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": null,
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, hey, fifth row.",
+      "source_text": "Well, hey, fifth row.",
+      "proposed_text": "Well, hey, fifth row.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": null,
+      "source_indices": [
+        24,
+        25
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That's where I've seen the crew, okay?",
+      "source_text": "That's where I see the crew. Okay.",
+      "proposed_text": "That's where I see the crew. Okay.",
+      "text_action": "review",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": null,
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Gotta go.",
+      "source_text": "Got to go.",
+      "proposed_text": "Got to go.",
+      "text_action": "review",
+      "similarity": 0.8235,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": null,
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Later.",
+      "source_text": "Later.",
+      "proposed_text": "Later.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Man",
+      "source_speaker": null,
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Joe’s Records STL.",
+      "source_text": null,
+      "proposed_text": "Joe’s Records STL.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": null,
+      "source_indices": [
+        30
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, y’all got a website up 'ere?",
+      "source_text": "hey y'all got a website up there",
+      "proposed_text": "hey y'all got a website up there",
+      "text_action": "review",
+      "similarity": 0.9206,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": null,
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Man, all I have is an eBay store, man.",
+      "source_text": "man all i have is an ebay store man",
+      "proposed_text": "Man, all I have is an eBay store, man.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How do I find it?",
+      "source_text": "how do i find it",
+      "proposed_text": "How do I find it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": [
+        42,
+        43,
+        44
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Go to eBay.",
+      "source_text": "it's go to ebay i mean we don't care we don't put any of our regular stuff on ebay it's just stuff that we have overstocks on and just weird goofy stuff so i won't be able to help you much on that",
+      "proposed_text": "Go to eBay.",
+      "text_action": "group_review",
+      "similarity": 0.9491,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": [
+        42,
+        43,
+        44
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I mean, we don't put any of our regular stuff on eBay.",
+      "source_text": "it's go to ebay i mean we don't care we don't put any of our regular stuff on ebay it's just stuff that we have overstocks on and just weird goofy stuff so i won't be able to help you much on that",
+      "proposed_text": "I mean, we don't put any of our regular stuff on eBay.",
+      "text_action": "group_review",
+      "similarity": 0.9491,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": [
+        42,
+        43,
+        44
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "It's just stuff that we have overstocks on and just weird, goofy stuff, so I won't be able to help you much on that.",
+      "source_text": "it's go to ebay i mean we don't care we don't put any of our regular stuff on ebay it's just stuff that we have overstocks on and just weird goofy stuff so i won't be able to help you much on that",
+      "proposed_text": "It's just stuff that we have overstocks on and just weird, goofy stuff, so I won't be able to help you much on that.",
+      "text_action": "group_review",
+      "similarity": 0.9491,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": null,
+      "source_indices": [
+        34
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "For instance, we have every Mötley Crüe shirt and CD in the store, but it's on our website.",
+      "source_text": "like for instance we have every motley cruise shirt and c CD in the store, but it's not on our website.",
+      "proposed_text": "like for instance we have every motley cruise shirt and c CD in the store, but it's not on our website.",
+      "text_action": "review",
+      "similarity": 0.9101,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": [
+        46,
+        47
+      ],
+      "source_indices": [
+        35
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got any of that?",
+      "source_text": "You got any of that cement pirates?",
+      "proposed_text": "You got any of that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": [
+        46,
+        47
+      ],
+      "source_indices": [
+        35
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "cement pirates?",
+      "source_text": "You got any of that cement pirates?",
+      "proposed_text": "cement pirates?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Buddy, you're going to have to come in the store.",
+      "source_text": "Buddy, you're going to have to come in the store.",
+      "proposed_text": "Buddy, you're going to have to come in the store.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": null,
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I can't do this over the phone.",
+      "source_text": "I can't do this over the phone.",
+      "proposed_text": "I can't do this over the phone.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": null,
+      "source_indices": [
+        38,
+        39
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, no, because I was there and I was looking here and I was looking all over, but I couldn't see what I was looking for.",
+      "source_text": "Well, no, because I was there, and I was looking here, and I was looking there, and I was looking all over, but I couldn't see what I was looking for.",
+      "proposed_text": "Well, no, because I was there, and I was looking here, and I was looking there, and I was looking all over, but I couldn't see what I was looking for.",
+      "text_action": "review",
+      "similarity": 0.9084,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know what I'm saying?",
+      "source_text": "You know what I'm saying?",
+      "proposed_text": "You know what I'm saying?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": null,
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I couldn't see.",
+      "source_text": "Because I couldn't see.",
+      "proposed_text": "Because I couldn't see.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": [
+        53,
+        54
+      ],
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "You have to understand.",
+      "source_text": "You have to understand, I've got customers here in front of me that come into the store that I need to wait on.",
+      "proposed_text": "You have to understand.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": [
+        53,
+        54
+      ],
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I've got customers here in front of me that come into the store that I need to wait on.",
+      "source_text": "You have to understand, I've got customers here in front of me that come into the store that I need to wait on.",
+      "proposed_text": "I've got customers here in front of me that come into the store that I need to wait on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Man",
+      "source_speaker": null,
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I can't do this over the phone.",
+      "source_text": null,
+      "proposed_text": "I can't do this over the phone.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": null,
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, you don't seem to understand.",
+      "source_text": "Hey, guy, you don't seem to understand.",
+      "proposed_text": "Hey, guy, you don't seem to understand.",
+      "text_action": "review",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I saw a fifth row on the crew.",
+      "source_text": "I saw a fifth row on the crew.",
+      "proposed_text": "I saw a fifth row on the crew.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": null,
+      "source_indices": [
+        46
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Hey, are you fucking with me?",
+      "source_text": "Hey, are you fucking with me?",
+      "proposed_text": "Hey, are you fucking with me?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": null,
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Don't call back.",
+      "source_text": "Don't call back.",
+      "proposed_text": "Don't call back.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I can't do this over the phone.",
+      "source_text": "I can't do this over the phone.",
+      "proposed_text": "I can't do this over the phone.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": null,
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, take my credit card and I'll just place a special order.",
+      "source_text": "Well, take my credit card, and I'll just place a special order.",
+      "proposed_text": "Well, take my credit card and I'll just place a special order.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": null,
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How about that?",
+      "source_text": "How about that?",
+      "proposed_text": "How about that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": null,
+      "source_indices": [
+        51
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Special order, credit card, Mickey Mars.",
+      "source_text": "Special order, credit card, Mickey Mars.",
+      "proposed_text": "Special order, credit card, Mickey Mars.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        64,
+        65
+      ],
+      "source_indices": [
+        52
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I'll do that, but I can't do it right now.",
+      "source_text": "Yeah, I'll do that, but I can't do it right now, all right?",
+      "proposed_text": "Yeah, I'll do that, but I can't do it right now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": [
+        64,
+        65
+      ],
+      "source_indices": [
+        52
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "All right.",
+      "source_text": "Yeah, I'll do that, but I can't do it right now, all right?",
+      "proposed_text": "All right.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": null,
+      "source_indices": [
+        53,
+        54
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I offered you every Mötley Crüe record and every shirt and you didn't say you wanted anything specific.",
+      "source_text": "I offered you every Motley Crue record and every shirt, and you didn't say you wanted anything specific.",
+      "proposed_text": "I offered you every Motley Crue record and every shirt, and you didn't say you wanted anything specific.",
+      "text_action": "review",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": null,
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So I want to hands down.",
+      "source_text": "I want it up hands down.",
+      "proposed_text": "I want it up hands down.",
+      "text_action": "review",
+      "similarity": 0.8261,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": [
+        68,
+        69,
+        70
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I want everything.",
+      "source_text": "I want everything you got, bulk. I asked for bulk payment.",
+      "proposed_text": "I want everything.",
+      "text_action": "group_review",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": [
+        68,
+        69,
+        70
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "you got, bulk.",
+      "source_text": "I want everything you got, bulk. I asked for bulk payment.",
+      "proposed_text": "you got, bulk.",
+      "text_action": "group_review",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": [
+        68,
+        69,
+        70
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I asked for both payment.",
+      "source_text": "I want everything you got, bulk. I asked for bulk payment.",
+      "proposed_text": "I asked for both payment.",
+      "text_action": "group_review",
+      "similarity": 0.9455,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": [
+        71,
+        72
+      ],
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Do you live in St.",
+      "source_text": "Do you live in St. Louis?",
+      "proposed_text": "Do you live in St.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": [
+        71,
+        72
+      ],
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Louis?",
+      "source_text": "Do you live in St. Louis?",
+      "proposed_text": "Louis?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": null,
+      "source_indices": [
+        58
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "review",
+      "current_text": "Yes, I do, sir.",
+      "source_text": "Yes, I do, sir.",
+      "proposed_text": "Yes, I do, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": null,
+      "source_indices": [
+        59,
+        60
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Okay, those Mötley Crüe albums are all thirty-two dollars a piece.",
+      "source_text": "Okay. Those Motley Crue albums are all $32 apiece.",
+      "proposed_text": "Okay. Those Motley Crue albums are all $32 apiece.",
+      "text_action": "review",
+      "similarity": 0.7748,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "You want me to pick all five of them for you and run it through a credit card?",
+      "source_text": "Do you want me to pick all five of them for you and run it through a credit card?",
+      "proposed_text": "Do you want me to pick all five of them for you and run it through a credit card?",
+      "text_action": "review",
+      "similarity": 0.9809,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": null,
+      "source_indices": [
+        62
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You want to get nimble?",
+      "source_text": "You want to get nimble?",
+      "proposed_text": "You want to get nimble?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": null,
+      "source_indices": [
+        63
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I'm looking real seriously at coming down to pummel you.",
+      "source_text": "Because I'm looking real seriously at coming down to pummel you.",
+      "proposed_text": "Because I'm looking real seriously at coming down to pummel you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": null,
+      "source_indices": [
+        64
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Don't pummel me, dude.",
+      "source_text": "Don't pummel me, dude.",
+      "proposed_text": "Don't pummel me, dude.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": null,
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I can't wait on people over the phone like this, man.",
+      "source_text": "I can't wait on people over the phone like this, man.",
+      "proposed_text": "I can't wait on people over the phone like this, man.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": null,
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I got people in front of me to wait on.",
+      "source_text": "I got people in front of me to wait on.",
+      "proposed_text": "I got people in front of me to wait on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": null,
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, I got Mötley Crüe records to buy here, and I thought you sold records up here.",
+      "source_text": "Well, I got Motley Crue Records to buy here, and I thought you sold records up here.",
+      "proposed_text": "Well, I got Motley Crue Records to buy here, and I thought you sold records up here.",
+      "text_action": "review",
+      "similarity": 0.9753,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": null,
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "We do, but I told you once I had customers in front of me, you're not, you're not respecting me at all.",
+      "source_text": "We do, but I told you once I had customers in front of me, and you're not respecting me at all.",
+      "proposed_text": "We do, but I told you once I had customers in front of me, and you're not respecting me at all.",
+      "text_action": "review",
+      "similarity": 0.9424,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": null,
+      "source_indices": [
+        69,
+        70
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "’Cause I came down there and I was lookin’ and lookin’ and lookin’ and lookin’ and I couldn’t see anything that you’re talkin’ about.",
+      "source_text": "Because I came down there, and I was looking and looking and looking and looking, and I couldn't see anything that you're talking about.",
+      "proposed_text": "Because I came down there, and I was looking and looking and looking and looking, and I couldn't see anything that you're talking about.",
+      "text_action": "review",
+      "similarity": 0.9575,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": null,
+      "source_indices": [
+        71
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "We have every Mötley Crüe record in stock right now.",
+      "source_text": "We have every Motley Crue record in Stockbrook.",
+      "proposed_text": "We have every Motley Crue record in Stockbrook.",
+      "text_action": "review",
+      "similarity": 0.8454,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": null,
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got Naughty Igor.",
+      "source_text": "You got Naughty Igor?",
+      "proposed_text": "You got Naughty Igor.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": null,
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "I got the Mötley Crüe box set.",
+      "source_text": "I got the Motley Crue box set.",
+      "proposed_text": "I got the Motley Crue box set.",
+      "text_action": "review",
+      "similarity": 0.931,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": null,
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "Man",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Man",
+      "speaker_action": "keep",
+      "current_text": "Don't call back bro.",
+      "source_text": "Don't call back, bro.",
+      "proposed_text": "Don't call back bro.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 87,
+    "candidate_subtitles": 75,
+    "matched": 84,
+    "text_review": 24,
+    "text_group_review": 23,
+    "speaker_review": 7,
+    "review_flags_to_initialize": 87,
+    "alias_additions": 2,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

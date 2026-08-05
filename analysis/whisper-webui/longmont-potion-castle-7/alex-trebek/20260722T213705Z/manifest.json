@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "created_at": "2026-07-22T21:37:05.264713+00:00",
+  "source_type": "whisper-webui",
+  "track": {
+    "album": "Longmont Potion Castle 7",
+    "album_slug": "longmont-potion-castle-7",
+    "track": "Alex Trebek",
+    "track_slug": "alex-trebek",
+    "usb_directory": "2009 - Longmont Potion Castle 7",
+    "usb_filename": "Alex Trebek.mp3"
+  },
+  "audio": {
+    "filename": "Alex Trebek.mp3",
+    "size_bytes": 16971739,
+    "sha256": "0e3a0a17576562bdae26694dd3c8c708bf27c3e5ea3481d2549aef0bed4f737a"
+  },
+  "request": {
+    "base_url": "http://127.0.0.1:7860",
+    "model": "distil-large-v3",
+    "language": "en",
+    "diarization": true,
+    "diarization_device": "cpu"
+  },
+  "completed_at": "2026-07-22T21:53:26.122472+00:00",
+  "artifacts": [
+    "transcript.srt",
+    "segments.json",
+    "candidate-subtitles.json",
+    "review.json",
+    "manual-review.md",
+    "README.md"
+  ]
+}

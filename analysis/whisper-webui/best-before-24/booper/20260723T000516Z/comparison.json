@@ -1,0 +1,6109 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:52:33.885833+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260723T000516Z",
+    "run_path": "analysis/whisper-webui/best-before-24/booper/20260723T000516Z",
+    "audio_sha256": "7f5bf8c96f882f0f9a8b96842d6ec5769a8e3e55530932319589633fbd83a989",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "1f69c284dd39e4f3d95ab29019edd326c3ab5b335a7ee673272301363c2fbeb1",
+    "manifest_sha256": "89a6d8d0360979463af6468e768af24e3c68e68c6ce11c5785d3690b09d39a26"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Booper",
+    "track_slug": "booper",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "91bc1a48e11292e4819e91c652c64e3fec1eb66b0a0b5bc10d1804f85e7ef5bb",
+    "subtitle_path": "jekyll/assets/json/best-before-24/booper.json",
+    "subtitle_sha256": "04db318ddc590a7565702d0281315b2347e0051fe10e9f6b82e40b66a23dc88a",
+    "current_aliases": [],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "None",
+      "proposed_speaker": null,
+      "confidence": 0.0,
+      "overlap_seconds": 0.0,
+      "action": "keep"
+    },
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "confidence": 0.8913,
+      "overlap_seconds": 64.932,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "confidence": 0.7702,
+      "overlap_seconds": 12.548,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Confused Hairdresser",
+      "confidence": 0.713,
+      "overlap_seconds": 6.303,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "confidence": 0.7793,
+      "overlap_seconds": 18.491,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "confidence": 0.6412,
+      "overlap_seconds": 13.785,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "confidence": 0.936,
+      "overlap_seconds": 154.897,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "confidence": 0.8719,
+      "overlap_seconds": 33.72,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop Diner.",
+      "source_text": "Betty Boop Diner.",
+      "proposed_text": "Betty Boop Diner.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": null,
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, can I please get a take-up or a pick-up?",
+      "source_text": "Hi. Can I please get a take-up or a pick-up?",
+      "proposed_text": "Hi, can I please get a take-up or a pick-up?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": null,
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Of course, what can I get you?",
+      "source_text": "Of course. What can I get you?",
+      "proposed_text": "Of course, what can I get you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": [
+        4,
+        5
+      ],
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, awesome.",
+      "source_text": "Oh, awesome. Yeah, my aunt recently got some stuff there and I loved it.",
+      "proposed_text": "Oh, awesome.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": [
+        4,
+        5
+      ],
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, my aunt recently got some stuff there and I loved it.",
+      "source_text": "Oh, awesome. Yeah, my aunt recently got some stuff there and I loved it.",
+      "proposed_text": "Yeah, my aunt recently got some stuff there and I loved it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": null,
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I was wanting to pick some up.",
+      "source_text": "And I was wanting to pick some up.",
+      "proposed_text": "And I was wanting to pick some up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": null,
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, thank you.",
+      "source_text": "Yeah, thank you.",
+      "proposed_text": "Yeah, thank you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": null,
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Let's see, I think I wanted to get a couple of the Red Hot Betty's.",
+      "source_text": "Let's see, I think I wanted to get a couple of the Red Hot Bettys.",
+      "proposed_text": "Let's see, I think I wanted to get a couple of the Red Hot Betty's.",
+      "text_action": "keep",
+      "similarity": 0.9922,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Sure.",
+      "source_text": "Sure.",
+      "proposed_text": "Sure.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Like two of those.",
+      "source_text": "There's like two of those. Okay. And do you have any beverages at all? Yes, I do. I have Pepsi. I have cranberry ginger ale, blackberry,",
+      "proposed_text": "Like two of those.",
+      "text_action": "group_review",
+      "similarity": 0.7757,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "There's like two of those. Okay. And do you have any beverages at all? Yes, I do. I have Pepsi. I have cranberry ginger ale, blackberry,",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.7757,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "And do you have any beverages at all?",
+      "source_text": "There's like two of those. Okay. And do you have any beverages at all? Yes, I do. I have Pepsi. I have cranberry ginger ale, blackberry,",
+      "proposed_text": "And do you have any beverages at all?",
+      "text_action": "group_review",
+      "similarity": 0.7757,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes, I do.",
+      "source_text": "There's like two of those. Okay. And do you have any beverages at all? Yes, I do. I have Pepsi. I have cranberry ginger ale, blackberry,",
+      "proposed_text": "Yes, I do.",
+      "text_action": "group_review",
+      "similarity": 0.7757,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I have Pepsi.",
+      "source_text": "There's like two of those. Okay. And do you have any beverages at all? Yes, I do. I have Pepsi. I have cranberry ginger ale, blackberry,",
+      "proposed_text": "I have Pepsi.",
+      "text_action": "group_review",
+      "similarity": 0.7757,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "There's like two of those. Okay. And do you have any beverages at all? Yes, I do. I have Pepsi. I have cranberry ginger ale, blackberry,",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review",
+      "similarity": 0.7757,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Cranberry ginger ale, blackberry, diet Pepsi, Mountain Dew.",
+      "source_text": null,
+      "proposed_text": "Cranberry ginger ale, blackberry, diet Pepsi, Mountain Dew.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Excellent.",
+      "source_text": null,
+      "proposed_text": "Excellent.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Can we get a couple of the ginger ales, please?",
+      "source_text": "Can we get a couple of the ginger ales, please?",
+      "proposed_text": "Can we get a couple of the ginger ales, please?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Absolutely.",
+      "source_text": "Absolutely.",
+      "proposed_text": "Absolutely.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Excellent.",
+      "source_text": "Excellent.",
+      "proposed_text": "Excellent.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": [
+        21,
+        22
+      ],
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay, excellent.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": [
+        21,
+        22
+      ],
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Excellent.",
+      "source_text": "Okay, excellent.",
+      "proposed_text": "Excellent.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": null,
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Come pick it up, honey.",
+      "source_text": "Come pick it up, honey.",
+      "proposed_text": "Come pick it up, honey.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I'll pick it up.",
+      "source_text": "Yeah, I'll pick it up.",
+      "proposed_text": "Yeah, I'll pick it up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And also my aunt had something that I want to say had like a cinnamon prune kind of aroma to it.",
+      "source_text": "And also, my aunt had something that I want to say had like a cinnamon prune kind of aroma to it.",
+      "proposed_text": "And also my aunt had something that I want to say had like a cinnamon prune kind of aroma to it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": null,
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you know what I'm talking about?",
+      "source_text": "Do you know what I'm talking about?",
+      "proposed_text": "Do you know what I'm talking about?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": [
+        28,
+        29
+      ],
+      "source_indices": [
+        19,
+        20
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Maybe, it might be cinnamon raisin bread we had, with toast.",
+      "source_text": "Maybe. It might be cinnamon raisin bread we had with toast french toast probably",
+      "proposed_text": "Maybe, it might be cinnamon raisin bread we had, with toast.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": [
+        28,
+        29
+      ],
+      "source_indices": [
+        19,
+        20
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "French toast, probably.",
+      "source_text": "Maybe. It might be cinnamon raisin bread we had with toast french toast probably",
+      "proposed_text": "French toast, probably.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Yeah, I think so.",
+      "source_text": "yeah i think so is it too late in the day for that or yes oh no absolutely you can have that",
+      "proposed_text": "Yeah, I think so.",
+      "text_action": "group_review",
+      "similarity": 0.9109,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Is it too late in the day for that, or?",
+      "source_text": "yeah i think so is it too late in the day for that or yes oh no absolutely you can have that",
+      "proposed_text": "Is it too late in the day for that, or?",
+      "text_action": "group_review",
+      "similarity": 0.9109,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "yeah i think so is it too late in the day for that or yes oh no absolutely you can have that",
+      "proposed_text": "Yes.",
+      "text_action": "group_review",
+      "similarity": 0.9109,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh no, absolutely, you can have that whenever you want.",
+      "source_text": "yeah i think so is it too late in the day for that or yes oh no absolutely you can have that",
+      "proposed_text": "Oh no, absolutely, you can have that whenever you want.",
+      "text_action": "group_review",
+      "similarity": 0.9109,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Did you want an order of that?",
+      "source_text": "whenever you want did you want to order that yes please one one uh portion of that okay and then i",
+      "proposed_text": "Did you want an order of that?",
+      "text_action": "group_review",
+      "similarity": 0.7362,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, please.",
+      "source_text": "whenever you want did you want to order that yes please one one uh portion of that okay and then i",
+      "proposed_text": "Yes, please.",
+      "text_action": "group_review",
+      "similarity": 0.7362,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "One portion of that.",
+      "source_text": "whenever you want did you want to order that yes please one one uh portion of that okay and then i",
+      "proposed_text": "One portion of that.",
+      "text_action": "group_review",
+      "similarity": 0.7362,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "whenever you want did you want to order that yes please one one uh portion of that okay and then i",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.7362,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": [
+        38,
+        39,
+        40
+      ],
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And then I think I wanted to get as a gift, like a bag.",
+      "source_text": "think i wanted to get as a gift like a bag maybe like a commemorative handbag do you have anything",
+      "proposed_text": "And then I think I wanted to get as a gift, like a bag.",
+      "text_action": "group_review",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": [
+        38,
+        39,
+        40
+      ],
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Maybe like a commemorative handbag.",
+      "source_text": "think i wanted to get as a gift like a bag maybe like a commemorative handbag do you have anything",
+      "proposed_text": "Maybe like a commemorative handbag.",
+      "text_action": "group_review",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": [
+        38,
+        39,
+        40
+      ],
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you have anything like that?",
+      "source_text": "think i wanted to get as a gift like a bag maybe like a commemorative handbag do you have anything",
+      "proposed_text": "Do you have anything like that?",
+      "text_action": "group_review",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "We have like little pocketbooks, yeah.",
+      "source_text": "like that we have like little pocketbooks, yeah.",
+      "proposed_text": "like that we have like little pocketbooks, yeah.",
+      "text_action": "review",
+      "similarity": 0.878,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": null,
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "We do.",
+      "source_text": "We do.",
+      "proposed_text": "We do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": null,
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "We have, let me see, I got two left.",
+      "source_text": "We have, let me see, I got two left.",
+      "proposed_text": "We have, let me see, I got two left.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": null,
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Three left, actually.",
+      "source_text": "Three left, actually.",
+      "proposed_text": "Three left, actually.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": null,
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I got three.",
+      "source_text": "Yeah, I got three.",
+      "proposed_text": "Yeah, I got three.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": null,
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you have anything big enough, say, to put a turkey in?",
+      "source_text": "Do you have anything big enough, say, to put a turkey in?",
+      "proposed_text": "Do you have anything big enough, say, to put a turkey in?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Confused Hairdresser",
+      "source_speaker": null,
+      "proposed_speaker": "Confused Hairdresser",
+      "speaker_action": "keep",
+      "current_text": "Beety Boop's.",
+      "source_text": null,
+      "proposed_text": "Beety Boop's.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Anything that size?",
+      "source_text": "Anything that size?",
+      "proposed_text": "Anything that size?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "Confused Hairdresser",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": null,
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, I don't.",
+      "source_text": "Oh, I don't.",
+      "proposed_text": "Oh, I don't.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": null,
+      "source_indices": [
+        34
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Thank you.",
+      "source_text": "Thank you.",
+      "proposed_text": "Thank you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": null,
+      "source_indices": [
+        35
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "You too.",
+      "source_text": "You too.",
+      "proposed_text": "You too.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": null,
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I don't, actually.",
+      "source_text": "I don't, actually.",
+      "proposed_text": "I don't, actually.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": null,
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I just like little handbags, actually.",
+      "source_text": "I just like little handbags, actually.",
+      "proposed_text": "I just like little handbags, actually.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": null,
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Hi, this is Betsy Boots Boutique.",
+      "source_text": "Hi, this is Betsy Booth's Boutique.",
+      "proposed_text": "Hi, this is Betsy Booth's Boutique.",
+      "text_action": "review",
+      "similarity": 0.9688,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello.",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "Woman 3",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Hi.",
+      "source_text": "Hi.",
+      "proposed_text": "Hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": null,
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "You wanted to know about the handbag?",
+      "source_text": "You wanted to know about the handbag?",
+      "proposed_text": "You wanted to know about the handbag?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": null,
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "It was twenty-five on the handbag.",
+      "source_text": "It was $25 on the handbag.",
+      "proposed_text": "It was $25 on the handbag.",
+      "text_action": "review",
+      "similarity": 0.7719,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Um, I'm not sure what this is in regards to.",
+      "source_text": "I'm not sure what this is in regards to.",
+      "proposed_text": "I'm not sure what this is in regards to.",
+      "text_action": "review",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": null,
+      "source_indices": [
+        44,
+        45,
+        46
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Alright, I was just speaking with a gentleman, now who are you?",
+      "source_text": "All right. I was just speaking with a gentleman. Now, who are you?",
+      "proposed_text": "All right. I was just speaking with a gentleman. Now, who are you?",
+      "text_action": "review",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": null,
+      "source_indices": [
+        48,
+        49
+      ],
+      "current_speaker": "Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Um, I'm with Betsy Boo's Boutique, so I'm not sure who you were speaking with prior.",
+      "source_text": "Boo's Boutique, so I'm not sure who you were speaking with prior.",
+      "proposed_text": "Boo's Boutique, so I'm not sure who you were speaking with prior.",
+      "text_action": "review",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": [
+        63,
+        64
+      ],
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "review",
+      "current_text": "I don't know.",
+      "source_text": "I don't know. Talking about a",
+      "proposed_text": "I don't know.",
+      "text_action": "group_review",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        63,
+        64
+      ],
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "review",
+      "current_text": "Talking about a handbag?",
+      "source_text": "I don't know. Talking about a",
+      "proposed_text": "Talking about a handbag?",
+      "text_action": "group_review",
+      "similarity": 0.875,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": null,
+      "source_indices": [
+        51
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Making an order for takeout?",
+      "source_text": "handbag? Making an order for",
+      "proposed_text": "handbag? Making an order for",
+      "text_action": "review",
+      "similarity": 0.7037,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": null,
+      "source_indices": [
+        52
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is Betty Boop's Diner.",
+      "source_text": "takeout? This is Betty Boo's",
+      "proposed_text": "takeout? This is Betty Boo's",
+      "text_action": "review",
+      "similarity": 0.717,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": null,
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "Confused Hairdresser",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "review",
+      "current_text": "This is the beauty shop.",
+      "source_text": "Diner. This is the beauty",
+      "proposed_text": "Diner. This is the beauty",
+      "text_action": "review",
+      "similarity": 0.766,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": null,
+      "source_indices": [
+        54,
+        55,
+        56
+      ],
+      "current_speaker": "Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Oh, this is Betsy Boo's Boutique, so I guess I'm not sure what happened here?",
+      "source_text": "shop. Oh, this is Betsy Boo's Boutique, so I guess I'm not sure what happened here.",
+      "proposed_text": "shop. Oh, this is Betsy Boo's Boutique, so I guess I'm not sure what happened here.",
+      "text_action": "review",
+      "similarity": 0.9673,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Who am I speaking with?",
+      "source_text": null,
+      "proposed_text": "Who am I speaking with?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": null,
+      "source_indices": [
+        58
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is Betty Boop's Diner.",
+      "source_text": "This is Betty Boo's Diner. Someone was calling",
+      "proposed_text": "This is Betty Boo's Diner. Someone was calling",
+      "text_action": "review",
+      "similarity": 0.7042,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": null,
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Someone was calling here for an order?",
+      "source_text": "here for an order?",
+      "proposed_text": "here for an order?",
+      "text_action": "review",
+      "similarity": 0.6296,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": [
+        72,
+        73
+      ],
+      "source_indices": [
+        60
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Um, yes.",
+      "source_text": "Um, yes. What would you like?",
+      "proposed_text": "Um, yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": [
+        72,
+        73
+      ],
+      "source_indices": [
+        60
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "What would you like?",
+      "source_text": "Um, yes. What would you like?",
+      "proposed_text": "What would you like?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm not ordering anything.",
+      "source_text": "I'm not ordering",
+      "proposed_text": "I'm not ordering",
+      "text_action": "review",
+      "similarity": 0.7805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": null,
+      "source_indices": [
+        62
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is a diner.",
+      "source_text": "anything. This is a diner. Someone",
+      "proposed_text": "anything. This is a diner. Someone",
+      "text_action": "review",
+      "similarity": 0.6383,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": null,
+      "source_indices": [
+        63
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Someone was calling us for an order.",
+      "source_text": "was calling us for an order.",
+      "proposed_text": "was calling us for an order.",
+      "text_action": "review",
+      "similarity": 0.871,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": null,
+      "source_indices": [
+        64,
+        65
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Oh, well we're Betty Boop's Diner also.",
+      "source_text": "Oh, well, we're Betty Boo's Diner also.",
+      "proposed_text": "Oh, well, we're Betty Boo's Diner also.",
+      "text_action": "review",
+      "similarity": 0.9863,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": null,
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, where are you located?",
+      "source_text": "Oh, where are you located?",
+      "proposed_text": "Oh, where are you located?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": null,
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "In Crockett, Texas.",
+      "source_text": "In Crockett, Texas.",
+      "proposed_text": "In Crockett, Texas.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": [
+        80,
+        81
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Crockett, Texas?",
+      "source_text": "Crockett, Texas? How about that?",
+      "proposed_text": "Crockett, Texas?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": [
+        80,
+        81
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "How about that?",
+      "source_text": "Crockett, Texas? How about that?",
+      "proposed_text": "How about that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": null,
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "We're in Albany, New York.",
+      "source_text": "We're in Albany, New York.",
+      "proposed_text": "We're in Albany, New York.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": null,
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh my gosh, and somebody called from this number to you?",
+      "source_text": "Oh, my gosh. And somebody called from this number to you?",
+      "proposed_text": "Oh my gosh, and somebody called from this number to you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": null,
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I guess something happened.",
+      "source_text": "Something happened.",
+      "proposed_text": "Something happened.",
+      "text_action": "review",
+      "similarity": 0.8182,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": null,
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "It wasn't me.",
+      "source_text": "It wasn't me.",
+      "proposed_text": "It wasn't me.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": null,
+      "source_indices": [
+        76
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Well, have a nice day.",
+      "source_text": "Well, have a nice day.",
+      "proposed_text": "Well, have a nice day.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": null,
+      "source_indices": [
+        77
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "review",
+      "current_text": "All right.",
+      "source_text": "All right.",
+      "proposed_text": "All right.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 88,
+      "target_group": null,
+      "source_indices": [
+        78
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Woman 3",
+      "speaker_action": "review",
+      "current_text": "You too.",
+      "source_text": "You too.",
+      "proposed_text": "You too.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 89,
+      "target_group": null,
+      "source_indices": [
+        79
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I hope business is good today.",
+      "source_text": "I hope business is good today.",
+      "proposed_text": "I hope business is good today.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 90,
+      "target_group": null,
+      "source_indices": [
+        83
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Bye bye.",
+      "source_text": "Bye-bye.",
+      "proposed_text": "Bye bye.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 91,
+      "target_group": null,
+      "source_indices": [
+        84
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hello.",
+      "source_text": "Hello?",
+      "proposed_text": "Hello.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 92,
+      "target_group": null,
+      "source_indices": [
+        85
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hello.",
+      "source_text": "Hello.",
+      "proposed_text": "Hello.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 93,
+      "target_group": null,
+      "source_indices": [
+        86
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Can you hear me?",
+      "source_text": "Can you hear me?",
+      "proposed_text": "Can you hear me?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 94,
+      "target_group": null,
+      "source_indices": [
+        87
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes, I can.",
+      "source_text": "Yes, I can.",
+      "proposed_text": "Yes, I can.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 95,
+      "target_group": null,
+      "source_indices": [
+        88,
+        89
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay, thank you.",
+      "source_text": "Okay. Thank you.",
+      "proposed_text": "Okay, thank you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 96,
+      "target_group": [
+        96,
+        97
+      ],
+      "source_indices": [
+        90,
+        91,
+        92
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I am sorry.",
+      "source_text": "I am sorry. I am trying to get takeout and a handbag, and I'm just trying to get a total or a subtotal from you and get a rundown of what I'm getting here.",
+      "proposed_text": "I am sorry.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 97,
+      "target_group": [
+        96,
+        97
+      ],
+      "source_indices": [
+        90,
+        91,
+        92
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I am trying to get takeout and a handbag, and I'm just trying to get a total or a subtotal from you and get a rundown of what I'm getting here.",
+      "source_text": "I am sorry. I am trying to get takeout and a handbag, and I'm just trying to get a total or a subtotal from you and get a rundown of what I'm getting here.",
+      "proposed_text": "I am trying to get takeout and a handbag, and I'm just trying to get a total or a subtotal from you and get a rundown of what I'm getting here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 98,
+      "target_group": null,
+      "source_indices": [
+        93
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Some problems with the phone, I think.",
+      "source_text": "Some problems with the phone, I think.",
+      "proposed_text": "Some problems with the phone, I think.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 99,
+      "target_group": null,
+      "source_indices": [
+        94
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm not sure.",
+      "source_text": "I'm not sure.",
+      "proposed_text": "I'm not sure.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 100,
+      "target_group": null,
+      "source_indices": [
+        95
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 101,
+      "target_group": null,
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Now, which Betty Boops are you calling?",
+      "source_text": "Now, which Betty Boops are you calling?",
+      "proposed_text": "Now, which Betty Boops are you calling?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 102,
+      "target_group": null,
+      "source_indices": [
+        97
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "In Albany, New York?",
+      "source_text": "In Albany, New York?",
+      "proposed_text": "In Albany, New York?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 103,
+      "target_group": null,
+      "source_indices": [
+        98
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah, of course.",
+      "source_text": "Yeah, of course.",
+      "proposed_text": "Yeah, of course.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 104,
+      "target_group": null,
+      "source_indices": [
+        99
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Okay, just checking because I just spoke with a lady in Texas.",
+      "source_text": "Okay, just checking because I just spoke with a lady in Texas.",
+      "proposed_text": "Okay, just checking because I just spoke with a lady in Texas.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 105,
+      "target_group": [
+        105,
+        106
+      ],
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Uh, what do you mean?",
+      "source_text": "What do you mean Texas somehow",
+      "proposed_text": "Uh, what do you mean?",
+      "text_action": "group_review",
+      "similarity": 0.7595,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 106,
+      "target_group": [
+        105,
+        106
+      ],
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Well, Betty Boop, Texas, somehow.",
+      "source_text": "What do you mean Texas somehow",
+      "proposed_text": "Well, Betty Boop, Texas, somehow.",
+      "text_action": "group_review",
+      "similarity": 0.7595,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 107,
+      "target_group": [
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Crawford, Texas.",
+      "source_text": "Crawford Texas anyway all right so the handbag was $25 okay how big is that let",
+      "proposed_text": "Crawford, Texas.",
+      "text_action": "group_review",
+      "similarity": 0.7742,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 108,
+      "target_group": [
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Anyway...",
+      "source_text": "Crawford Texas anyway all right so the handbag was $25 okay how big is that let",
+      "proposed_text": "Anyway...",
+      "text_action": "group_review",
+      "similarity": 0.7742,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 109,
+      "target_group": [
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Son of a gun.",
+      "source_text": "Crawford Texas anyway all right so the handbag was $25 okay how big is that let",
+      "proposed_text": "Son of a gun.",
+      "text_action": "group_review",
+      "similarity": 0.7742,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 110,
+      "target_group": [
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "All right, so the handbag was twenty-five dollars.",
+      "source_text": "Crawford Texas anyway all right so the handbag was $25 okay how big is that let",
+      "proposed_text": "All right, so the handbag was twenty-five dollars.",
+      "text_action": "group_review",
+      "similarity": 0.7742,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 111,
+      "target_group": [
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Okay, and how big is that?",
+      "source_text": "Crawford Texas anyway all right so the handbag was $25 okay how big is that let",
+      "proposed_text": "Okay, and how big is that?",
+      "text_action": "group_review",
+      "similarity": 0.7742,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 112,
+      "target_group": [
+        112,
+        113,
+        114
+      ],
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Let me see if I can get an idea.",
+      "source_text": "me see if I can get an idea oh well see see, there's two of them here, right?",
+      "proposed_text": "Let me see if I can get an idea.",
+      "text_action": "group_review",
+      "similarity": 0.8727,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 113,
+      "target_group": [
+        112,
+        113,
+        114
+      ],
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is, uh... Oh, well, let's see.",
+      "source_text": "me see if I can get an idea oh well see see, there's two of them here, right?",
+      "proposed_text": "This is, uh... Oh, well, let's see.",
+      "text_action": "group_review",
+      "similarity": 0.8727,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 114,
+      "target_group": [
+        112,
+        113,
+        114
+      ],
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "There's two of them here, right?",
+      "source_text": "me see if I can get an idea oh well see see, there's two of them here, right?",
+      "proposed_text": "There's two of them here, right?",
+      "text_action": "group_review",
+      "similarity": 0.8727,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 115,
+      "target_group": null,
+      "source_indices": [
+        104
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Okay, hold on.",
+      "source_text": "Okay, hold on.",
+      "proposed_text": "Okay, hold on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 116,
+      "target_group": null,
+      "source_indices": [
+        105
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "One's a purse and one's a handbag.",
+      "source_text": "One's a person, one's a handbag.",
+      "proposed_text": "One's a person, one's a handbag.",
+      "text_action": "review",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 117,
+      "target_group": null,
+      "source_indices": [
+        106
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop!",
+      "source_text": "Betty Booth.",
+      "proposed_text": "Betty Booth.",
+      "text_action": "review",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 118,
+      "target_group": null,
+      "source_indices": [
+        107
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, this looks like it's about twelve inches by... Betty Boop!",
+      "source_text": "Yeah, this looks like it's about 12 inches by 8, maybe.",
+      "proposed_text": "Yeah, this looks like it's about 12 inches by 8, maybe.",
+      "text_action": "review",
+      "similarity": 0.8108,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 119,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "...eight, maybe?",
+      "source_text": null,
+      "proposed_text": "...eight, maybe?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 120,
+      "target_group": null,
+      "source_indices": [
+        108
+      ],
+      "current_speaker": "Confused Hairdresser",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Confused Hairdresser",
+      "speaker_action": "keep",
+      "current_text": "Where are you all calling from?",
+      "source_text": "Where are you all calling from?",
+      "proposed_text": "Where are you all calling from?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 121,
+      "target_group": [
+        121,
+        122
+      ],
+      "source_indices": [
+        109
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Pardon?",
+      "source_text": "Pardon? I'm in Albany, New York.",
+      "proposed_text": "Pardon?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 122,
+      "target_group": [
+        121,
+        122
+      ],
+      "source_indices": [
+        109
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm in Albany, New York.",
+      "source_text": "Pardon? I'm in Albany, New York.",
+      "proposed_text": "I'm in Albany, New York.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 123,
+      "target_group": [
+        123,
+        124
+      ],
+      "source_indices": [
+        110
+      ],
+      "current_speaker": "Confused Hairdresser",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Confused Hairdresser",
+      "speaker_action": "keep",
+      "current_text": "Well, I'm in Pelzer, South Carolina, and you just keep calling and calling, and I'm busy doing hair.",
+      "source_text": "Well, I'm in Pelser, South Carolina, and you just keep calling and calling, and I'm busy doing hire. Well, I don't know who's calling you. I have a gentleman on the line",
+      "proposed_text": "Well, I'm in Pelzer, South Carolina, and you just keep calling and calling, and I'm busy doing hair.",
+      "text_action": "group_review",
+      "similarity": 0.8805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 124,
+      "target_group": [
+        123,
+        124
+      ],
+      "source_indices": [
+        110
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Confused Hairdresser",
+      "speaker_action": "review",
+      "current_text": "Well, I don't know who's calling you.",
+      "source_text": "Well, I'm in Pelser, South Carolina, and you just keep calling and calling, and I'm busy doing hire. Well, I don't know who's calling you. I have a gentleman on the line",
+      "proposed_text": "Well, I don't know who's calling you.",
+      "text_action": "group_review",
+      "similarity": 0.8805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 125,
+      "target_group": [
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I have a gentleman on the lines trying to call and order food here.",
+      "source_text": "trying to call and order food here. I'm sorry. Bye-bye. Bye. I already spoke with somebody",
+      "proposed_text": "I have a gentleman on the lines trying to call and order food here.",
+      "text_action": "group_review",
+      "similarity": 0.7926,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 126,
+      "target_group": [
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Confused Hairdresser",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "I'm sorry.",
+      "source_text": "trying to call and order food here. I'm sorry. Bye-bye. Bye. I already spoke with somebody",
+      "proposed_text": "I'm sorry.",
+      "text_action": "group_review",
+      "similarity": 0.7926,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 127,
+      "target_group": [
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Bye-bye.",
+      "source_text": "trying to call and order food here. I'm sorry. Bye-bye. Bye. I already spoke with somebody",
+      "proposed_text": "Bye-bye.",
+      "text_action": "group_review",
+      "similarity": 0.7926,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 128,
+      "target_group": [
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Bye?",
+      "source_text": "trying to call and order food here. I'm sorry. Bye-bye. Bye. I already spoke with somebody",
+      "proposed_text": "Bye?",
+      "text_action": "group_review",
+      "similarity": 0.7926,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 129,
+      "target_group": [
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I already spoke with somebody in Texas, too.",
+      "source_text": "trying to call and order food here. I'm sorry. Bye-bye. Bye. I already spoke with somebody",
+      "proposed_text": "I already spoke with somebody in Texas, too.",
+      "text_action": "group_review",
+      "similarity": 0.7926,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 130,
+      "target_group": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Good morning.",
+      "source_text": "in Texas, too. Good morning. Sir? Hi, can you hear me? Yeah, I can. Can you hear me?",
+      "proposed_text": "Good morning.",
+      "text_action": "group_review",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 131,
+      "target_group": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Woman 3",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Sir?",
+      "source_text": "in Texas, too. Good morning. Sir? Hi, can you hear me? Yeah, I can. Can you hear me?",
+      "proposed_text": "Sir?",
+      "text_action": "group_review",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 132,
+      "target_group": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Hi, can you hear me?",
+      "source_text": "in Texas, too. Good morning. Sir? Hi, can you hear me? Yeah, I can. Can you hear me?",
+      "proposed_text": "Hi, can you hear me?",
+      "text_action": "group_review",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 133,
+      "target_group": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I can.",
+      "source_text": "in Texas, too. Good morning. Sir? Hi, can you hear me? Yeah, I can. Can you hear me?",
+      "proposed_text": "Yeah, I can.",
+      "text_action": "group_review",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 134,
+      "target_group": [
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Can you hear me?",
+      "source_text": "in Texas, too. Good morning. Sir? Hi, can you hear me? Yeah, I can. Can you hear me?",
+      "proposed_text": "Can you hear me?",
+      "text_action": "group_review",
+      "similarity": 0.9051,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 135,
+      "target_group": null,
+      "source_indices": [
+        113
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, yes I sure can.",
+      "source_text": "Hi. Yes, I sure can.",
+      "proposed_text": "Hi, yes I sure can.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 136,
+      "target_group": null,
+      "source_indices": [
+        114
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Well, we just had a lady from North Carolina on the line again.",
+      "source_text": "Well, we just had a lady from North Carolina on the line again.",
+      "proposed_text": "Well, we just had a lady from North Carolina on the line again.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 137,
+      "target_group": null,
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "So, whatever.",
+      "source_text": "So, whatever.",
+      "proposed_text": "So, whatever.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 138,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What the heck you...",
+      "source_text": null,
+      "proposed_text": "What the heck you...",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 139,
+      "target_group": null,
+      "source_indices": [
+        117
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I don't know what happened with your phone, but... Now, can you fit a turkey...",
+      "source_text": "I don't know what happens with your phone.",
+      "proposed_text": "I don't know what happens with your phone.",
+      "text_action": "review",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 140,
+      "target_group": null,
+      "source_indices": [
+        118
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Can you fit a turkey in this handbag, or no?",
+      "source_text": "Now, can you fit a turkey in this handbag or no?",
+      "proposed_text": "Now, can you fit a turkey in this handbag or no?",
+      "text_action": "review",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 141,
+      "target_group": null,
+      "source_indices": [
+        119
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Like, or a bowling ball?",
+      "source_text": "Like a bowling ball?",
+      "proposed_text": "Like a bowling ball?",
+      "text_action": "review",
+      "similarity": 0.9268,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 142,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hmm...",
+      "source_text": null,
+      "proposed_text": "Hmm...",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 143,
+      "target_group": null,
+      "source_indices": [
+        120
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, you could probably put a bowling ball in it, yeah.",
+      "source_text": "Yeah, you could probably put a bowling ball in it, yeah.",
+      "proposed_text": "Yeah, you could probably put a bowling ball in it, yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 144,
+      "target_group": null,
+      "source_indices": [
+        121
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 145,
+      "target_group": null,
+      "source_indices": [
+        123
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "In that you could.",
+      "source_text": "In that you could.",
+      "proposed_text": "In that you could.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 146,
+      "target_group": null,
+      "source_indices": [
+        125
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "You don't think you could fit a bowling ball in there?",
+      "source_text": "You don't think you could fit a bowling ball in there?",
+      "proposed_text": "You don't think you could fit a bowling ball in there?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 147,
+      "target_group": null,
+      "source_indices": [
+        126
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 148,
+      "target_group": null,
+      "source_indices": [
+        127
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No, I guess not.",
+      "source_text": "No, I guess not.",
+      "proposed_text": "No, I guess not.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 149,
+      "target_group": null,
+      "source_indices": [
+        128
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Nope, not deep enough.",
+      "source_text": "Nope, not deep enough.",
+      "proposed_text": "Nope, not deep enough.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 150,
+      "target_group": null,
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 151,
+      "target_group": null,
+      "source_indices": [
+        130
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 152,
+      "target_group": null,
+      "source_indices": [
+        131
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes, Betty Boop, how may I help you?",
+      "source_text": "Yes, Betty Boop, how may I help you?",
+      "proposed_text": "Yes, Betty Boop, how may I help you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 153,
+      "target_group": null,
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Alright, which Betty Boop are you?",
+      "source_text": "All right, which Betty Boop are you?",
+      "proposed_text": "All right, which Betty Boop are you?",
+      "text_action": "review",
+      "similarity": 0.9697,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 154,
+      "target_group": null,
+      "source_indices": [
+        133
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Uh, Betty Boop Party Rentals.",
+      "source_text": "Uh, Betty Boop Party Rentals.",
+      "proposed_text": "Uh, Betty Boop Party Rentals.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 155,
+      "target_group": null,
+      "source_indices": [
+        134
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is the craziest phone calls I've ever had.",
+      "source_text": "This is the craziest phone calls I've ever had.",
+      "proposed_text": "This is the craziest phone calls I've ever had.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 156,
+      "target_group": null,
+      "source_indices": [
+        135,
+        136
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is Betty Boop's client and we're trying to help a customer.",
+      "source_text": "This is Betty Boop's line. We're trying to help a customer.",
+      "proposed_text": "This is Betty Boop's line. We're trying to help a customer.",
+      "text_action": "review",
+      "similarity": 0.9333,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 157,
+      "target_group": null,
+      "source_indices": [
+        137
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, okay.",
+      "source_text": "Oh, okay.",
+      "proposed_text": "Oh, okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 158,
+      "target_group": null,
+      "source_indices": [
+        138
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Bueno, I don't know.",
+      "source_text": "Well, I don't know.",
+      "proposed_text": "Well, I don't know.",
+      "text_action": "review",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 159,
+      "target_group": null,
+      "source_indices": [
+        139
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "You dialed us.",
+      "source_text": "You dialed us.",
+      "proposed_text": "You dialed us.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 160,
+      "target_group": null,
+      "source_indices": [
+        140
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I don't know if you're looking for something specific.",
+      "source_text": "I don't know if you're looking for something in specific.",
+      "proposed_text": "I don't know if you're looking for something in specific.",
+      "text_action": "review",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 161,
+      "target_group": null,
+      "source_indices": [
+        141
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No, I don't know how it dialed.",
+      "source_text": "No, I don't know how it dialed.",
+      "proposed_text": "No, I don't know how it dialed.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 162,
+      "target_group": null,
+      "source_indices": [
+        142
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm on the line with a customer and somehow... Oh, that's weird.",
+      "source_text": "I'm on the line with a customer and somehow... Oh, that's weird. I just had a lady from North Carolina break in on the No, I don't know how it dialed. I'm on the line with a customer and somehow...",
+      "proposed_text": "I'm on the line with a customer and somehow... Oh, that's weird. I just had a lady from North Carolina break in on the No, I don't know how it dialed. I'm on the line with a customer and somehow...",
+      "text_action": "review",
+      "similarity": 0.4797,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 163,
+      "target_group": null,
+      "source_indices": [
+        144
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I just had a lady from North Carolina break in on the line, too.",
+      "source_text": "I just had a lady from North Carolina break in on the line, too.",
+      "proposed_text": "I just had a lady from North Carolina break in on the line, too.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 164,
+      "target_group": null,
+      "source_indices": [
+        145
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Oh, that's so weird.",
+      "source_text": "Oh, that's so weird.",
+      "proposed_text": "Oh, that's so weird.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 165,
+      "target_group": null,
+      "source_indices": [
+        146
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "That was another lady from Texas.",
+      "source_text": "Before that was another lady from Texas.",
+      "proposed_text": "Before that was another lady from Texas.",
+      "text_action": "review",
+      "similarity": 0.9014,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 166,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No, we're in Florida.",
+      "source_text": null,
+      "proposed_text": "No, we're in Florida.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 167,
+      "target_group": null,
+      "source_indices": [
+        148
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello.",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 168,
+      "target_group": null,
+      "source_indices": [
+        149
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Okay, yes.",
+      "source_text": "Okay, yes.",
+      "proposed_text": "Okay, yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 169,
+      "target_group": null,
+      "source_indices": [
+        150
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes, hi.",
+      "source_text": "Yes, hi.",
+      "proposed_text": "Yes, hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 170,
+      "target_group": null,
+      "source_indices": [
+        151
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is Betty Boop Diner in Albany, New York.",
+      "source_text": "This is Betty Boop Steiner in Albany, New York.",
+      "proposed_text": "This is Betty Boop Steiner in Albany, New York.",
+      "text_action": "review",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 171,
+      "target_group": null,
+      "source_indices": [
+        152
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Hello.",
+      "source_text": "Hello.",
+      "proposed_text": "Hello.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 172,
+      "target_group": null,
+      "source_indices": [
+        153
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hi.",
+      "source_text": "Hi.",
+      "proposed_text": "Hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 173,
+      "target_group": null,
+      "source_indices": [
+        154
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Sir, are you back?",
+      "source_text": "Sir, are you back?",
+      "proposed_text": "Sir, are you back?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 174,
+      "target_group": null,
+      "source_indices": [
+        155
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Who's this?",
+      "source_text": "Who's this?",
+      "proposed_text": "Who's this?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 175,
+      "target_group": null,
+      "source_indices": [
+        156
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is Betty Boop Diner in Albany, New York.",
+      "source_text": "This is Betty Boop Steiner in Albany, New York.",
+      "proposed_text": "This is Betty Boop Steiner in Albany, New York.",
+      "text_action": "review",
+      "similarity": 0.9545,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 176,
+      "target_group": null,
+      "source_indices": [
+        157
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Why are you calling me?",
+      "source_text": "Why are you calling me?",
+      "proposed_text": "Why are you calling me?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 177,
+      "target_group": null,
+      "source_indices": [
+        158
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I didn't call you, sir.",
+      "source_text": "I didn't call you, sir.",
+      "proposed_text": "I didn't call you, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 178,
+      "target_group": null,
+      "source_indices": [
+        159
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I've been on the line with a customer, and these calls keep breaking in.",
+      "source_text": "I've been on the line with a customer, and these calls keep breaking in.",
+      "proposed_text": "I've been on the line with a customer, and these calls keep breaking in.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 179,
+      "target_group": null,
+      "source_indices": [
+        160
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I have no idea what this system is doing, so...",
+      "source_text": "I have no idea what this system is doing, so I'm going to hang up.",
+      "proposed_text": "I have no idea what this system is doing, so I'm going to hang up.",
+      "text_action": "review",
+      "similarity": 0.8037,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 180,
+      "target_group": null,
+      "source_indices": [
+        161
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You know what you're talking about.",
+      "source_text": "You don't know what you're talking about.",
+      "proposed_text": "You don't know what you're talking about.",
+      "text_action": "review",
+      "similarity": 0.9189,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 181,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I do, too.",
+      "source_text": null,
+      "proposed_text": "I do, too.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 182,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Sour Joe",
+      "source_speaker": null,
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Goodbye.",
+      "source_text": null,
+      "proposed_text": "Goodbye.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 183,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Sour Joe",
+      "source_speaker": null,
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You called me.",
+      "source_text": null,
+      "proposed_text": "You called me.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 184,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Sour Joe",
+      "source_speaker": null,
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're a criminal.",
+      "source_text": null,
+      "proposed_text": "You're a criminal.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 185,
+      "target_group": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "source_indices": [
+        162
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You called me.",
+      "source_text": "I do, Sue. Goodbye. You call me. You're a criminal. You call me. I'm sorry? Yeah. You're a criminal, I think. Yeah. I don't know what you're talking about.",
+      "proposed_text": "You called me.",
+      "text_action": "group_review",
+      "similarity": 0.805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 186,
+      "target_group": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "source_indices": [
+        162
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "review",
+      "current_text": "I'm sorry?",
+      "source_text": "I do, Sue. Goodbye. You call me. You're a criminal. You call me. I'm sorry? Yeah. You're a criminal, I think. Yeah. I don't know what you're talking about.",
+      "proposed_text": "I'm sorry?",
+      "text_action": "group_review",
+      "similarity": 0.805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 187,
+      "target_group": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "source_indices": [
+        162
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "I do, Sue. Goodbye. You call me. You're a criminal. You call me. I'm sorry? Yeah. You're a criminal, I think. Yeah. I don't know what you're talking about.",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review",
+      "similarity": 0.805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 188,
+      "target_group": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "source_indices": [
+        162
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're a criminal, I think.",
+      "source_text": "I do, Sue. Goodbye. You call me. You're a criminal. You call me. I'm sorry? Yeah. You're a criminal, I think. Yeah. I don't know what you're talking about.",
+      "proposed_text": "You're a criminal, I think.",
+      "text_action": "group_review",
+      "similarity": 0.805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 189,
+      "target_group": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "source_indices": [
+        162
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "I do, Sue. Goodbye. You call me. You're a criminal. You call me. I'm sorry? Yeah. You're a criminal, I think. Yeah. I don't know what you're talking about.",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review",
+      "similarity": 0.805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 190,
+      "target_group": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "source_indices": [
+        162
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "review",
+      "current_text": "I don't know what you're talking about.",
+      "source_text": "I do, Sue. Goodbye. You call me. You're a criminal. You call me. I'm sorry? Yeah. You're a criminal, I think. Yeah. I don't know what you're talking about.",
+      "proposed_text": "I don't know what you're talking about.",
+      "text_action": "group_review",
+      "similarity": 0.805,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 191,
+      "target_group": [
+        191,
+        192
+      ],
+      "source_indices": [
+        163
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Well, I know what you're... I got these criminals calling me ten times a day.",
+      "source_text": "Well, I know what you're talking about. I got these criminals calling me ten times a day, and you're one of them too.",
+      "proposed_text": "Well, I know what you're... I got these criminals calling me ten times a day.",
+      "text_action": "group_review",
+      "similarity": 0.934,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 192,
+      "target_group": [
+        191,
+        192
+      ],
+      "source_indices": [
+        163
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "And you're one of them, too.",
+      "source_text": "Well, I know what you're talking about. I got these criminals calling me ten times a day, and you're one of them too.",
+      "proposed_text": "And you're one of them, too.",
+      "text_action": "group_review",
+      "similarity": 0.934,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 193,
+      "target_group": null,
+      "source_indices": [
+        164
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Okay?",
+      "source_text": "Okay?",
+      "proposed_text": "Okay?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 194,
+      "target_group": [
+        194,
+        195
+      ],
+      "source_indices": [
+        165
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "We're a restaurant.",
+      "source_text": "We're a restaurant. I don't know anybody.",
+      "proposed_text": "We're a restaurant.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 195,
+      "target_group": [
+        194,
+        195
+      ],
+      "source_indices": [
+        165
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "I don't know anybody.",
+      "source_text": "We're a restaurant. I don't know anybody.",
+      "proposed_text": "I don't know anybody.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 196,
+      "target_group": null,
+      "source_indices": [
+        166
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "review",
+      "current_text": "You'll be in jail tonight.",
+      "source_text": "You'll be in jail tonight.",
+      "proposed_text": "You'll be in jail tonight.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 197,
+      "target_group": null,
+      "source_indices": [
+        167
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 198,
+      "target_group": [
+        198,
+        199
+      ],
+      "source_indices": [
+        168
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "I got that call, so that means you called me.",
+      "source_text": "I got that call, so that means you called me, you piece of shit.",
+      "proposed_text": "I got that call, so that means you called me.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 199,
+      "target_group": [
+        198,
+        199
+      ],
+      "source_indices": [
+        168
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You piece of shit.",
+      "source_text": "I got that call, so that means you called me, you piece of shit.",
+      "proposed_text": "You piece of shit.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 200,
+      "target_group": null,
+      "source_indices": [
+        169
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Do not call me names.",
+      "source_text": "Do not call me names.",
+      "proposed_text": "Do not call me names.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 201,
+      "target_group": [
+        201,
+        202
+      ],
+      "source_indices": [
+        170
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Good afternoon, Betty Boops Diner.",
+      "source_text": "Good afternoon, Betty Boops Steiner. How may I help you?",
+      "proposed_text": "Good afternoon, Betty Boops Diner.",
+      "text_action": "group_review",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 202,
+      "target_group": [
+        201,
+        202
+      ],
+      "source_indices": [
+        170
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "How may I help you?",
+      "source_text": "Good afternoon, Betty Boops Steiner. How may I help you?",
+      "proposed_text": "How may I help you?",
+      "text_action": "group_review",
+      "similarity": 0.9615,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 203,
+      "target_group": [
+        203,
+        204
+      ],
+      "source_indices": [
+        171
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hi there.",
+      "source_text": "Hi there. Betty Boops in Albany?",
+      "proposed_text": "Hi there.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 204,
+      "target_group": [
+        203,
+        204
+      ],
+      "source_indices": [
+        171
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Betty Boops in Albany?",
+      "source_text": "Hi there. Betty Boops in Albany?",
+      "proposed_text": "Betty Boops in Albany?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 205,
+      "target_group": null,
+      "source_indices": [
+        172
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yes",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 206,
+      "target_group": [
+        206,
+        207
+      ],
+      "source_indices": [
+        173
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, thank God.",
+      "source_text": "Oh thank god, okay",
+      "proposed_text": "Oh, thank God.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 207,
+      "target_group": [
+        206,
+        207
+      ],
+      "source_indices": [
+        173
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Oh thank god, okay",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 208,
+      "target_group": null,
+      "source_indices": [
+        174,
+        175
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Listen, I'm just trying to pick up my food, okay, and my bag.",
+      "source_text": "Listen, I'm just trying to pick up my food Okay, and my bag",
+      "proposed_text": "Listen, I'm just trying to pick up my food, okay, and my bag.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 209,
+      "target_group": null,
+      "source_indices": [
+        176
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Okay, the bag, I don't think you want...",
+      "source_text": "Okay, the bag, I don't think you want",
+      "proposed_text": "Okay, the bag, I don't think you want...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 210,
+      "target_group": null,
+      "source_indices": [
+        177
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What did you find out on the bag?",
+      "source_text": "What did you find out on the bag?",
+      "proposed_text": "What did you find out on the bag?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 211,
+      "target_group": null,
+      "source_indices": [
+        178,
+        179
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, they wanted twenty-five dollars for it, but you asked if a bowling ball would fit in it?",
+      "source_text": "Oh they wanted $25 for it But you asked if a bowling ball would fit in it?",
+      "proposed_text": "Oh they wanted $25 for it But you asked if a bowling ball would fit in it?",
+      "text_action": "review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 212,
+      "target_group": null,
+      "source_indices": [
+        180
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, or like a turkey, uh-huh, yeah.",
+      "source_text": "Yeah, or like a turkey, uh huh, yeah",
+      "proposed_text": "Yeah, or like a turkey, uh-huh, yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 213,
+      "target_group": null,
+      "source_indices": [
+        181
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 214,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, no?",
+      "source_text": null,
+      "proposed_text": "Oh, no?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 215,
+      "target_group": null,
+      "source_indices": [
+        183
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 216,
+      "target_group": null,
+      "source_indices": [
+        184
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How big is it?",
+      "source_text": "How big is it?",
+      "proposed_text": "How big is it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 217,
+      "target_group": null,
+      "source_indices": [
+        185,
+        186
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "It's only about twelve inches by six deep, eight inches high.",
+      "source_text": "It's only about 12 inches by 6 deep, 8 inches high.",
+      "proposed_text": "It's only about 12 inches by 6 deep, 8 inches high.",
+      "text_action": "review",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 218,
+      "target_group": null,
+      "source_indices": [
+        187
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "None",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hmm.",
+      "source_text": "Hmm.",
+      "proposed_text": "Hmm.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 219,
+      "target_group": null,
+      "source_indices": [
+        188,
+        189
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Well... Hello?",
+      "source_text": "Well. Hello?",
+      "proposed_text": "Well... Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 220,
+      "target_group": null,
+      "source_indices": [
+        190
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm here.",
+      "source_text": "I'm here.",
+      "proposed_text": "I'm here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 221,
+      "target_group": null,
+      "source_indices": [
+        191
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Who are you?",
+      "source_text": "Who are you?",
+      "proposed_text": "Who are you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 222,
+      "target_group": null,
+      "source_indices": [
+        192
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, not you again.",
+      "source_text": "Oh, not you again.",
+      "proposed_text": "Oh, not you again.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 223,
+      "target_group": null,
+      "source_indices": [
+        193
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Why the hell are you calling me?",
+      "source_text": "Why the hell are you calling me?",
+      "proposed_text": "Why the hell are you calling me?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 224,
+      "target_group": null,
+      "source_indices": [
+        194
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm not calling...",
+      "source_text": "I'm not calling.",
+      "proposed_text": "I'm not calling...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 225,
+      "target_group": null,
+      "source_indices": [
+        195
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yeah, you must be... You're one of these criminals, is that it?",
+      "source_text": "Yeah, you must be, you're one of these criminals, is that it?",
+      "proposed_text": "Yeah, you must be... You're one of these criminals, is that it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 226,
+      "target_group": null,
+      "source_indices": [
+        196
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, I'm a criminal, right?",
+      "source_text": "Oh, I'm a criminal, right.",
+      "proposed_text": "Oh, I'm a criminal, right?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 227,
+      "target_group": null,
+      "source_indices": [
+        197
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yes, you're a criminal.",
+      "source_text": "Yes, you're a criminal.",
+      "proposed_text": "Yes, you're a criminal.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 228,
+      "target_group": null,
+      "source_indices": [
+        198
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yes, I got him calling ten times a day.",
+      "source_text": "Yes, I got him calling ten times a day.",
+      "proposed_text": "Yes, I got him calling ten times a day.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 229,
+      "target_group": null,
+      "source_indices": [
+        199
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're a piece of criminal.",
+      "source_text": "You piece of criminal.",
+      "proposed_text": "You piece of criminal.",
+      "text_action": "review",
+      "similarity": 0.8936,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 230,
+      "target_group": null,
+      "source_indices": [
+        200
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Good afternoon, Betty Boop.",
+      "source_text": "Good afternoon, Betty Boop Steiner.",
+      "proposed_text": "Good afternoon, Betty Boop Steiner.",
+      "text_action": "review",
+      "similarity": 0.8621,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 231,
+      "target_group": null,
+      "source_indices": [
+        201
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Steiner, how may I help you?",
+      "source_text": "How may I help you?",
+      "proposed_text": "How may I help you?",
+      "text_action": "review",
+      "similarity": 0.8182,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 232,
+      "target_group": null,
+      "source_indices": [
+        202,
+        203
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, yes, I'm sorry, I keep getting cut off.",
+      "source_text": "Hi, yes, I'm sorry. I keep getting cut off.",
+      "proposed_text": "Hi, yes, I'm sorry, I keep getting cut off.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 233,
+      "target_group": null,
+      "source_indices": [
+        204
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I wanted to tell you I want the bag.",
+      "source_text": "I wanted to tell you I want the bag.",
+      "proposed_text": "I wanted to tell you I want the bag.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 234,
+      "target_group": null,
+      "source_indices": [
+        205
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You want the bag?",
+      "source_text": "You want the bag?",
+      "proposed_text": "You want the bag?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 235,
+      "target_group": null,
+      "source_indices": [
+        206
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, please.",
+      "source_text": "Yes, please.",
+      "proposed_text": "Yes, please.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 236,
+      "target_group": null,
+      "source_indices": [
+        207
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Now what are the dimensions, just roughly, just approximately.",
+      "source_text": "Now, what are the dimensions of just roughly, just approximately?",
+      "proposed_text": "Now, what are the dimensions of just roughly, just approximately?",
+      "text_action": "review",
+      "similarity": 0.9752,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 237,
+      "target_group": null,
+      "source_indices": [
+        208
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Okay, I think it's twelve by six by eight.",
+      "source_text": "Okay, I think it's 12 by 6 by 8.",
+      "proposed_text": "Okay, I think it's 12 by 6 by 8.",
+      "text_action": "review",
+      "similarity": 0.7429,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 238,
+      "target_group": null,
+      "source_indices": [
+        209
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Six inches deep, twelve inches wide, and about eight inches tall.",
+      "source_text": "6 inches deep, 12 inches wide, and about 8 inches tall.",
+      "proposed_text": "6 inches deep, 12 inches wide, and about 8 inches tall.",
+      "text_action": "review",
+      "similarity": 0.8421,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 239,
+      "target_group": null,
+      "source_indices": [
+        210
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And what does it look like?",
+      "source_text": "And what does it look like?",
+      "proposed_text": "And what does it look like?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 240,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Well, Betty Boop, can I help you?",
+      "source_text": null,
+      "proposed_text": "Well, Betty Boop, can I help you?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 241,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, not again.",
+      "source_text": null,
+      "proposed_text": "Oh, not again.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 242,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": null,
+      "proposed_text": "Hello?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 243,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, where are you calling from?",
+      "source_text": null,
+      "proposed_text": "Yeah, where are you calling from?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 244,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "This is Betty Boop Bakery?",
+      "source_text": null,
+      "proposed_text": "This is Betty Boop Bakery?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 245,
+      "target_group": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "source_indices": [
+        211
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No, this is Betty Boop's Diner in Albany, New York.",
+      "source_text": "Well, let's see. No, Betty,op's Diner in Albany, New York. Oh my. Oh my is right. I don't know how these calls keep cutting in on our customers' call.",
+      "proposed_text": "No, this is Betty Boop's Diner in Albany, New York.",
+      "text_action": "group_review",
+      "similarity": 0.9021,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 246,
+      "target_group": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "source_indices": [
+        211
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, my.",
+      "source_text": "Well, let's see. No, Betty,op's Diner in Albany, New York. Oh my. Oh my is right. I don't know how these calls keep cutting in on our customers' call.",
+      "proposed_text": "Oh, my.",
+      "text_action": "group_review",
+      "similarity": 0.9021,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 247,
+      "target_group": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "source_indices": [
+        211
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Mm-hmm.",
+      "source_text": "Well, let's see. No, Betty,op's Diner in Albany, New York. Oh my. Oh my is right. I don't know how these calls keep cutting in on our customers' call.",
+      "proposed_text": "Mm-hmm.",
+      "text_action": "group_review",
+      "similarity": 0.9021,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 248,
+      "target_group": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "source_indices": [
+        211
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Oh, my is right.",
+      "source_text": "Well, let's see. No, Betty,op's Diner in Albany, New York. Oh my. Oh my is right. I don't know how these calls keep cutting in on our customers' call.",
+      "proposed_text": "Oh, my is right.",
+      "text_action": "group_review",
+      "similarity": 0.9021,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 249,
+      "target_group": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "source_indices": [
+        211
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I don't know how these calls keep cutting in on our customer's call.",
+      "source_text": "Well, let's see. No, Betty,op's Diner in Albany, New York. Oh my. Oh my is right. I don't know how these calls keep cutting in on our customers' call.",
+      "proposed_text": "I don't know how these calls keep cutting in on our customer's call.",
+      "text_action": "group_review",
+      "similarity": 0.9021,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 250,
+      "target_group": null,
+      "source_indices": [
+        212
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop in there.",
+      "source_text": "Betty Boop, good day.",
+      "proposed_text": "Betty Boop, good day.",
+      "text_action": "review",
+      "similarity": 0.6316,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 251,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": null,
+      "proposed_text": "Yeah.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 252,
+      "target_group": null,
+      "source_indices": [
+        214
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop what?",
+      "source_text": "Betty Boop what?",
+      "proposed_text": "Betty Boop what?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 253,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woman 1",
+      "source_speaker": null,
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": null,
+      "proposed_text": "Hello?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 254,
+      "target_group": null,
+      "source_indices": [
+        215
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 255,
+      "target_group": null,
+      "source_indices": [
+        216
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop at the Rentals.",
+      "source_text": "Betty Boop at the rentals.",
+      "proposed_text": "Betty Boop at the Rentals.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 256,
+      "target_group": null,
+      "source_indices": [
+        217
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop what?",
+      "source_text": "Betty Boop what?",
+      "proposed_text": "Betty Boop what?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 257,
+      "target_group": null,
+      "source_indices": [
+        218,
+        219
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm sorry, you keep cutting in on our calls.",
+      "source_text": "I'm sorry. You keep cutting in on our calls.",
+      "proposed_text": "I'm sorry, you keep cutting in on our calls.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 258,
+      "target_group": null,
+      "source_indices": [
+        220
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I have no idea how this is happening.",
+      "source_text": "I have no idea how this is happening.",
+      "proposed_text": "I have no idea how this is happening.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 259,
+      "target_group": null,
+      "source_indices": [
+        221
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I don't know.",
+      "source_text": "I don't know.",
+      "proposed_text": "I don't know.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 260,
+      "target_group": null,
+      "source_indices": [
+        222
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Nobody could make this up, I'll tell you.",
+      "source_text": "Nobody could make this up, I'll tell you.",
+      "proposed_text": "Nobody could make this up, I'll tell you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 261,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Woamn 4",
+      "source_speaker": null,
+      "proposed_speaker": "Woamn 4",
+      "speaker_action": "keep",
+      "current_text": "Betty Boop, this is Danielle.",
+      "source_text": null,
+      "proposed_text": "Betty Boop, this is Danielle.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 262,
+      "target_group": null,
+      "source_indices": [
+        223
+      ],
+      "current_speaker": "Woamn 4",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "How may I help you?",
+      "source_text": "Daddy Vips is saying, yeah, let me help you.",
+      "proposed_text": "Daddy Vips is saying, yeah, let me help you.",
+      "text_action": "review",
+      "similarity": 0.4407,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 263,
+      "target_group": null,
+      "source_indices": [
+        224
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hi.",
+      "source_text": "Hi.",
+      "proposed_text": "Hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 264,
+      "target_group": null,
+      "source_indices": [
+        225
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "We don't need you.",
+      "source_text": "We don't need you.",
+      "proposed_text": "We don't need you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 265,
+      "target_group": null,
+      "source_indices": [
+        226
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "I'm talking with a customer.",
+      "source_text": "I'm talking with a customer.",
+      "proposed_text": "I'm talking with a customer.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 266,
+      "target_group": null,
+      "source_indices": [
+        227
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Goodbye.",
+      "source_text": "Goodbye.",
+      "proposed_text": "Goodbye.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 267,
+      "target_group": null,
+      "source_indices": [
+        228
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello, sir.",
+      "proposed_text": "Hello, sir.",
+      "text_action": "review",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 268,
+      "target_group": null,
+      "source_indices": [
+        229
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Hello, sir.",
+      "source_text": "Hello.",
+      "proposed_text": "Hello.",
+      "text_action": "review",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 269,
+      "target_group": null,
+      "source_indices": [
+        230
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Are you there?",
+      "source_text": "Are you there?",
+      "proposed_text": "Are you there?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 270,
+      "target_group": null,
+      "source_indices": [
+        231
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "You there?",
+      "source_text": "You there?",
+      "proposed_text": "You there?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 271,
+      "target_group": null,
+      "source_indices": [
+        232
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yeah.",
+      "proposed_text": "Yeah.",
+      "text_action": "review",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 272,
+      "target_group": null,
+      "source_indices": [
+        233
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Are you there?",
+      "source_text": "Are you there?",
+      "proposed_text": "Are you there?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 273,
+      "target_group": null,
+      "source_indices": [
+        234
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're calling me again?",
+      "source_text": "You're calling me again?",
+      "proposed_text": "You're calling me again?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 274,
+      "target_group": null,
+      "source_indices": [
+        235
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "No, I'm not calling you, sir.",
+      "source_text": "No, I'm not calling you, sir.",
+      "proposed_text": "No, I'm not calling you, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 275,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Sour Joe",
+      "source_speaker": null,
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Talk to your... I get a call.",
+      "source_text": null,
+      "proposed_text": "Talk to your... I get a call.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 276,
+      "target_group": null,
+      "source_indices": [
+        238
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're stupid.",
+      "source_text": "You're stupid.",
+      "proposed_text": "You're stupid.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 277,
+      "target_group": null,
+      "source_indices": [
+        239,
+        240
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "I get a call, of course I answer the phone.",
+      "source_text": "I get a call. Of course I am for the board.",
+      "proposed_text": "I get a call. Of course I am for the board.",
+      "text_action": "review",
+      "similarity": 0.8049,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 278,
+      "target_group": null,
+      "source_indices": [
+        241
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "review",
+      "current_text": "I didn't call you.",
+      "source_text": "I didn't call you.",
+      "proposed_text": "I didn't call you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 279,
+      "target_group": null,
+      "source_indices": [
+        242
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I didn't call you either.",
+      "source_text": "Yeah, I didn't call you either.",
+      "proposed_text": "Yeah, I didn't call you either.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 280,
+      "target_group": null,
+      "source_indices": [
+        243
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Why are you so nasty, sir?",
+      "source_text": "Why are you so nasty, sir?",
+      "proposed_text": "Why are you so nasty, sir?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 281,
+      "target_group": null,
+      "source_indices": [
+        244
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "You have a bad life?",
+      "source_text": "You have a bad life.",
+      "proposed_text": "You have a bad life?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 282,
+      "target_group": null,
+      "source_indices": [
+        245
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "It's not my fault.",
+      "source_text": "It's not my fault.",
+      "proposed_text": "It's not my fault.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 283,
+      "target_group": null,
+      "source_indices": [
+        246
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_06",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Young lady, you're full of shit.",
+      "source_text": "Young lady, you're full of shit.",
+      "proposed_text": "Young lady, you're full of shit.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 283,
+    "candidate_subtitles": 247,
+    "matched": 261,
+    "text_review": 47,
+    "text_group_review": 56,
+    "speaker_review": 37,
+    "review_flags_to_initialize": 283,
+    "alias_additions": 0,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Transcription Data
+title: Transcription & Whisper Data
 permalink: /transcription-data/
 ---
 
@@ -10,8 +10,8 @@ permalink: /transcription-data/
   <header class="merge-hero">
     <div>
       <p class="merge-kicker">Whisper WebUI pipeline</p>
-      <h1>Transcription merge archive</h1>
-      <p>Explore local Whisper transcription runs, compare them with the repository, and review which changes each merge applied.</p>
+      <h1>Transcription &amp; Whisper Data</h1>
+      <p>Explore local Whisper transcription runs, compare them with the repository, and review which changes were approved and applied.</p>
     </div>
     <div class="merge-mark" aria-hidden="true"><span>W</span><small>LOCAL</small></div>
   </header>
@@ -28,12 +28,12 @@ permalink: /transcription-data/
   </section>
 
   <section class="merge-pipeline">
-    <div><p class="merge-kicker">How it works</p><h2>Analyze → compare → review → merge</h2></div>
+      <div><p class="merge-kicker">How it works</p><h2>Analyze → compare → review → publish</h2></div>
     <div class="merge-steps">
       <article><b>01</b><h3>Analyze</h3><p>Whisper creates subtitles and diarized speakers locally.</p></article>
       <article><b>02</b><h3>Compare</h3><p>Generated lines align with the more trusted repository data.</p></article>
       <article><b>03</b><h3>Review</h3><p>Text and speaker differences stay pending unless approved.</p></article>
-      <article><b>04</b><h3>Merge</h3><p>Applied changes receive a local receipt and backup record.</p></article>
+      <article><b>04</b><h3>Publish</h3><p>Approved changes enter the catalogue and receive a merge receipt.</p></article>
     </div>
   </section>
 
@@ -51,4 +51,4 @@ permalink: /transcription-data/
   </section>
 </div>
 
-<script src="{{ '/assets/js/transcription-merges.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/transcription-merges.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

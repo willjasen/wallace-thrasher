@@ -1,0 +1,3911 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-22T22:28:25.717399+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260722T213705Z",
+    "run_path": "analysis/whisper-webui/longmont-potion-castle-7/alex-trebek/20260722T213705Z",
+    "audio_sha256": "0e3a0a17576562bdae26694dd3c8c708bf27c3e5ea3481d2549aef0bed4f737a",
+    "model": "distil-large-v3",
+    "candidate_sha256": "8b185d25a7880bd23f5ef54f50a38a735d1dc64c979a18a8d70a0e12d9076aec",
+    "manifest_sha256": "9339a1b69c38222ca317ee71a252711ece95270d2e29185549e7ca8bb2dd5ca9"
+  },
+  "target": {
+    "album": "Longmont Potion Castle 7",
+    "album_slug": "longmont-potion-castle-7",
+    "track": "Alex Trebek",
+    "track_slug": "alex-trebek",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "e2946d3fb779e9b3f495d175bf9708fa60c68be17be539fb2aebe8059d7854c9",
+    "subtitle_path": "jekyll/assets/json/longmont-potion-castle-7/alex-trebek.json",
+    "subtitle_sha256": "24de6e18acddc0481053ecbb280e5837a7e8038a5ea31df01dcfbac83e70a242",
+    "current_aliases": [
+      "Wallace Thrasher",
+      "Stretchie",
+      "Artie Yamamoto"
+    ],
+    "current_establishments": [
+      "UPS",
+      "Bangkok Sod Center",
+      "United Parcel Service",
+      "UPS.com"
+    ]
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "confidence": 0.8909,
+      "overlap_seconds": 121.06,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "confidence": 0.6297,
+      "overlap_seconds": 153.8,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 2,
+      "target_group": null,
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, hello. This is Thrasher here at United Parcel Service.",
+      "source_text": "Yeah, hello. This is Thrasher here at United Parcel Service.",
+      "proposed_text": "Yeah, hello. This is Thrasher here at United Parcel Service.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 3,
+      "target_group": null,
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah.",
+      "source_text": "Yeah.",
+      "proposed_text": "Yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 4,
+      "target_group": null,
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I need a signature and a COD here today on some freight here.",
+      "source_text": "And I need a signature and a COD here today on some freight here.",
+      "proposed_text": "And I need a signature and a COD here today on some freight here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 5,
+      "target_group": null,
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "What is it?",
+      "source_text": "What is it?",
+      "proposed_text": "What is it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 6,
+      "target_group": null,
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "We got some sod here.",
+      "source_text": "We got some sod here.",
+      "proposed_text": "We got some sod here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 7,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": null,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Sod?",
+      "source_text": null,
+      "proposed_text": "Sod?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 8,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 9,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Are you sure you have the right address?",
+      "source_text": "Are you sure you have the right address?",
+      "proposed_text": "Are you sure you have the right address?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        9,
+        10
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Quite confident. Our driver's already en route to you.",
+      "source_text": "Quite confident. Our driver's already en route to you.",
+      "proposed_text": "Quite confident. Our driver's already en route to you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just as soon get the payment prepared now.",
+      "source_text": "I just assume get the payment prepared now.",
+      "proposed_text": "I just assume get the payment prepared now.",
+      "text_action": "review",
+      "similarity": 0.9176,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Well, who ordered it?",
+      "source_text": "Well, who ordered it?",
+      "proposed_text": "Well, who ordered it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 13,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "It's $1949 even.",
+      "source_text": "It's $1949 even.",
+      "proposed_text": "It's $1949 even.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 14,
+      "target_group": null,
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Well, who ordered it?",
+      "source_text": "Well, who ordered it?",
+      "proposed_text": "Well, who ordered it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 15,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You're the recipient.",
+      "source_text": "You're the recipient.",
+      "proposed_text": "You're the recipient.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Well, we're the recipient, but we didn't order it.",
+      "source_text": "Well, we're the recipient, but we didn't order it.",
+      "proposed_text": "Well, we're the recipient, but we didn't order it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Incorrect.",
+      "source_text": null,
+      "proposed_text": "Incorrect.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You placed the initial order and now we're fulfilling it.",
+      "source_text": "You place the initial order, and now we're fulfilling it.",
+      "proposed_text": "You placed the initial order and now we're fulfilling it.",
+      "text_action": "keep",
+      "similarity": 0.991,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you understand?",
+      "source_text": "Do you understand?",
+      "proposed_text": "Do you understand?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "When did we place the order?",
+      "source_text": "When did we place the order?",
+      "proposed_text": "When did we place the order?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 21,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I'm the owner of the house here and I didn't place the order.",
+      "source_text": "I'm the owner of the house here, and I didn't place the order.",
+      "proposed_text": "I'm the owner of the house here and I didn't place the order.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 22,
+      "target_group": null,
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "So you tell me who placed the order.",
+      "source_text": "So you tell me who placed the order.",
+      "proposed_text": "So you tell me who placed the order.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 23,
+      "target_group": null,
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "If it's our gardener and he didn't tell us,",
+      "source_text": "If it's our gardener, and he didn't tell us about it, I don't know,",
+      "proposed_text": "If it's our gardener, and he didn't tell us about it, I don't know,",
+      "text_action": "review",
+      "similarity": 0.7925,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 24,
+      "target_group": null,
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "He didn't tell us about it, I don't know, and I don't know where we need sod.",
+      "source_text": "and I don't know where we need saw it.",
+      "proposed_text": "and I don't know where we need saw it.",
+      "text_action": "review",
+      "similarity": 0.5766,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 25,
+      "target_group": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "So you tell me where this is coming from.",
+      "source_text": "So you tell me where this is coming from. I am looking at your digital signature. Digital signature. Here on my tablet, yes sir. Need an",
+      "proposed_text": "So you tell me where this is coming from.",
+      "text_action": "group_review",
+      "similarity": 0.9685,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 26,
+      "target_group": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I am looking at your digital signature.",
+      "source_text": "So you tell me where this is coming from. I am looking at your digital signature. Digital signature. Here on my tablet, yes sir. Need an",
+      "proposed_text": "I am looking at your digital signature.",
+      "text_action": "group_review",
+      "similarity": 0.9685,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 27,
+      "target_group": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Digital signature.",
+      "source_text": "So you tell me where this is coming from. I am looking at your digital signature. Digital signature. Here on my tablet, yes sir. Need an",
+      "proposed_text": "Digital signature.",
+      "text_action": "group_review",
+      "similarity": 0.9685,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 28,
+      "target_group": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Here on my tablet, yes, sir.",
+      "source_text": "So you tell me where this is coming from. I am looking at your digital signature. Digital signature. Here on my tablet, yes sir. Need an",
+      "proposed_text": "Here on my tablet, yes, sir.",
+      "text_action": "group_review",
+      "similarity": 0.9685,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 29,
+      "target_group": [
+        29,
+        30
+      ],
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Need an online payment or some method of payment here, 449.",
+      "source_text": "online payment or some method of payment here, 449. Well, where did you get my digital",
+      "proposed_text": "Need an online payment or some method of payment here, 449.",
+      "text_action": "group_review",
+      "similarity": 0.9022,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 30,
+      "target_group": [
+        29,
+        30
+      ],
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Well, where did you get my digital signature?",
+      "source_text": "online payment or some method of payment here, 449. Well, where did you get my digital",
+      "proposed_text": "Well, where did you get my digital signature?",
+      "text_action": "group_review",
+      "similarity": 0.9022,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 31,
+      "target_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "From you.",
+      "source_text": "signature? From you. When? At the time of purchase. And where it was the purchase made?",
+      "proposed_text": "From you.",
+      "text_action": "group_review",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 32,
+      "target_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "When?",
+      "source_text": "signature? From you. When? At the time of purchase. And where it was the purchase made?",
+      "proposed_text": "When?",
+      "text_action": "group_review",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 33,
+      "target_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "At the time of purchase.",
+      "source_text": "signature? From you. When? At the time of purchase. And where it was the purchase made?",
+      "proposed_text": "At the time of purchase.",
+      "text_action": "group_review",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 34,
+      "target_group": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "And where it was the purchase made?",
+      "source_text": "signature? From you. When? At the time of purchase. And where it was the purchase made?",
+      "proposed_text": "And where it was the purchase made?",
+      "text_action": "group_review",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 35,
+      "target_group": [
+        35,
+        36
+      ],
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Siam.",
+      "source_text": "Siam. Syam?",
+      "proposed_text": "Siam.",
+      "text_action": "group_review",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 36,
+      "target_group": [
+        35,
+        36
+      ],
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Siam.",
+      "source_text": "Siam. Syam?",
+      "proposed_text": "Siam.",
+      "text_action": "group_review",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 37,
+      "target_group": [
+        37,
+        38
+      ],
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Correct.",
+      "source_text": "Correct. The country, Siam?",
+      "proposed_text": "Correct.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 38,
+      "target_group": [
+        37,
+        38
+      ],
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "The country, Siam?",
+      "source_text": "Correct. The country, Siam?",
+      "proposed_text": "The country, Siam?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 39,
+      "target_group": null,
+      "source_indices": [
+        30
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That's all the data I have, sir.",
+      "source_text": "That's all the data I have, sir.",
+      "proposed_text": "That's all the data I have, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 40,
+      "target_group": null,
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Uh...",
+      "source_text": "Uh...",
+      "proposed_text": "Uh...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Apparently this is the third attempt here.",
+      "source_text": "Apparently this is the third attempt here.",
+      "proposed_text": "Apparently this is the third attempt here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 42,
+      "target_group": null,
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "And this is sod?",
+      "source_text": "And this is sod?",
+      "proposed_text": "And this is sod?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 43,
+      "target_group": null,
+      "source_indices": [
+        34
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, sir.",
+      "source_text": "Yes, sir.",
+      "proposed_text": "Yes, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 44,
+      "target_group": null,
+      "source_indices": [
+        35
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Grass.",
+      "source_text": "Grass.",
+      "proposed_text": "Grass.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 45,
+      "target_group": [
+        45,
+        46
+      ],
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Something to do with the lawn.",
+      "source_text": "Something to do with the lawn. Yeah. It's a big, big bundle of stuff here.",
+      "proposed_text": "Something to do with the lawn.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 46,
+      "target_group": [
+        45,
+        46
+      ],
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, it's a big, big bundle of stuff here.",
+      "source_text": "Something to do with the lawn. Yeah. It's a big, big bundle of stuff here.",
+      "proposed_text": "Yeah, it's a big, big bundle of stuff here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 47,
+      "target_group": [
+        47,
+        48
+      ],
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Well, I don't...",
+      "source_text": "Well, I don't... you don't have my digital signature because I didn't give you my digital signature.",
+      "proposed_text": "Well, I don't...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 48,
+      "target_group": [
+        47,
+        48
+      ],
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "You don't have my digital signature because I didn't give you my digital signature.",
+      "source_text": "Well, I don't... you don't have my digital signature because I didn't give you my digital signature.",
+      "proposed_text": "You don't have my digital signature because I didn't give you my digital signature.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 49,
+      "target_group": [
+        49,
+        50
+      ],
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I didn't order anything from Siam, and Siam is no longer in existence.",
+      "source_text": "I didn't order anything from Siam and Siam is no longer in existence. It's Thailand now, so I don't know what Siam is.",
+      "proposed_text": "I didn't order anything from Siam, and Siam is no longer in existence.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 50,
+      "target_group": [
+        49,
+        50
+      ],
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "It's Thailand now, so I don't know what Siam is.",
+      "source_text": "I didn't order anything from Siam and Siam is no longer in existence. It's Thailand now, so I don't know what Siam is.",
+      "proposed_text": "It's Thailand now, so I don't know what Siam is.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 51,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, the whole thing's viewable online.",
+      "source_text": "Well, the whole thing's viewable online.",
+      "proposed_text": "Well, the whole thing's viewable online.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 52,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "The whole thing is viewable online.",
+      "source_text": "The whole thing is viewable online.",
+      "proposed_text": "The whole thing is viewable online.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 53,
+      "target_group": null,
+      "source_indices": [
+        41,
+        42
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Your signature, the item itself, it's a real colorful bunch of stuff here.",
+      "source_text": "Your signature, the item itself. It's a real colorful bunch of stuff here.",
+      "proposed_text": "Your signature, the item itself, it's a real colorful bunch of stuff here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 54,
+      "target_group": null,
+      "source_indices": [
+        43,
+        44,
+        45
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And the payment details. So I can go ahead and take a credit card number here and we'll just get everything...",
+      "source_text": "And the payment details. So I can go ahead and take a credit card number here, and we'll just get everything.",
+      "proposed_text": "And the payment details. So I can go ahead and take a credit card number here and we'll just get everything...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 55,
+      "target_group": null,
+      "source_indices": [
+        46
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "No, you're not going to take a credit card number at all.",
+      "source_text": "No, you're not going to take a credit card number at all.",
+      "proposed_text": "No, you're not going to take a credit card number at all.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 56,
+      "target_group": null,
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Because tell me where I can view this online.",
+      "source_text": "Because tell me where I can view this online.",
+      "proposed_text": "Because tell me where I can view this online.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "UPS.com.",
+      "source_text": null,
+      "proposed_text": "UPS.com.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 58,
+      "target_group": [
+        58,
+        59
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "UPS",
+      "source_text": "UPS.com and then we go to what?",
+      "proposed_text": "UPS",
+      "text_action": "group_review",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 59,
+      "target_group": [
+        58,
+        59
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "dot com and then we go to what?",
+      "source_text": "UPS.com and then we go to what?",
+      "proposed_text": "dot com and then we go to what?",
+      "text_action": "group_review",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You need to just enter your credit card number as soon as possible.",
+      "source_text": "You need to just enter your credit card number as soon as possible.",
+      "proposed_text": "You need to just enter your credit card number as soon as possible.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 61,
+      "target_group": null,
+      "source_indices": [
+        52
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I ain't going to do that because we didn't order anything.",
+      "source_text": "because we didn't order anything, so...",
+      "proposed_text": "because we didn't order anything, so...",
+      "text_action": "review",
+      "similarity": 0.6957,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 62,
+      "target_group": null,
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You're not going to do it on 4,200 pounds of stuff here?",
+      "source_text": "You're not going to do it on 4,200 pounds of stuff here?",
+      "proposed_text": "You're not going to do it on 4,200 pounds of stuff here?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 63,
+      "target_group": [
+        63,
+        64
+      ],
+      "source_indices": [
+        54
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "4,200 pounds of stuff.",
+      "source_text": "4,200 pounds of stuff, are you out of your mind?",
+      "proposed_text": "4,200 pounds of stuff.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        63,
+        64
+      ],
+      "source_indices": [
+        54
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Are you out of your mind?",
+      "source_text": "4,200 pounds of stuff, are you out of your mind?",
+      "proposed_text": "Are you out of your mind?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 65,
+      "target_group": null,
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That is roughly the weight of this stuff here.",
+      "source_text": "That is roughly the weight of this stuff here.",
+      "proposed_text": "That is roughly the weight of this stuff here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 66,
+      "target_group": null,
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Well, we didn't order it.",
+      "source_text": "Well, we didn't order it.",
+      "proposed_text": "Well, we didn't order it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 67,
+      "target_group": null,
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "We got four trucks en route to you.",
+      "source_text": "We got four trucks en route to you.",
+      "proposed_text": "We got four trucks en route to you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 68,
+      "target_group": null,
+      "source_indices": [
+        58
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Well, too bad because they ain't delivering it here.",
+      "source_text": "Well, too bad, because they ain't delivering it here.",
+      "proposed_text": "Well, too bad because they ain't delivering it here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 69,
+      "target_group": null,
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "Oh, no?",
+      "source_text": "Oh, no?",
+      "proposed_text": "Oh, no?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 70,
+      "target_group": null,
+      "source_indices": [
+        60
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Nope.",
+      "source_text": "Nope.",
+      "proposed_text": "Nope.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 71,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "You're not UPS.",
+      "source_text": "You're not UPS.",
+      "proposed_text": "You're not UPS.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 72,
+      "target_group": null,
+      "source_indices": [
+        62,
+        63
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Most certainly, yeah, I'm 12 years on the job. I've been here.",
+      "source_text": "Most certainly, I'm 12 years on the job. I've been here.",
+      "proposed_text": "Most certainly, I'm 12 years on the job. I've been here.",
+      "text_action": "review",
+      "similarity": 0.955,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 73,
+      "target_group": null,
+      "source_indices": [
+        64
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh, yeah? What's your name?",
+      "source_text": "Oh, yeah? What's your name?",
+      "proposed_text": "Oh, yeah? What's your name?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 74,
+      "target_group": null,
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm on the dock right here. I'm Wallace.",
+      "source_text": "I'm on the dock right here.",
+      "proposed_text": "I'm on the dock right here.",
+      "text_action": "review",
+      "similarity": 0.8125,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 75,
+      "target_group": [
+        75,
+        76
+      ],
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Wallace, what?",
+      "source_text": "I'm Wallace. Wallace, what? Thrasher.",
+      "proposed_text": "Wallace, what?",
+      "text_action": "group_review",
+      "similarity": 0.7778,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 76,
+      "target_group": [
+        75,
+        76
+      ],
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Thrasher",
+      "source_text": "I'm Wallace. Wallace, what? Thrasher.",
+      "proposed_text": "Thrasher",
+      "text_action": "group_review",
+      "similarity": 0.7778,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 77,
+      "target_group": [
+        77,
+        78
+      ],
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Wallace Thrasher...",
+      "source_text": "Wallace Thrasher. Okay, what's the number out there? Who's the supervisor?",
+      "proposed_text": "Wallace Thrasher...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 78,
+      "target_group": [
+        77,
+        78
+      ],
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay, what's the number out there? Who's the supervisor?",
+      "source_text": "Wallace Thrasher. Okay, what's the number out there? Who's the supervisor?",
+      "proposed_text": "Okay, what's the number out there? Who's the supervisor?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 79,
+      "target_group": [
+        79,
+        80,
+        81
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm the only one on the dock, sir.",
+      "source_text": "I'm the only one on the dock, sir. You're the only one? The only one on the dock here tonight, yes, sir.",
+      "proposed_text": "I'm the only one on the dock, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 80,
+      "target_group": [
+        79,
+        80,
+        81
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "You're the only one?",
+      "source_text": "I'm the only one on the dock, sir. You're the only one? The only one on the dock here tonight, yes, sir.",
+      "proposed_text": "You're the only one?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 81,
+      "target_group": [
+        79,
+        80,
+        81
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "The only one on the dock here tonight, yes, sir?",
+      "source_text": "I'm the only one on the dock, sir. You're the only one? The only one on the dock here tonight, yes, sir.",
+      "proposed_text": "The only one on the dock here tonight, yes, sir?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 82,
+      "target_group": [
+        82,
+        83,
+        84
+      ],
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh, yeah?",
+      "source_text": "Oh, yeah? Why are we delivering this at night? Like I say, this is third or fourth try here to get this to you.",
+      "proposed_text": "Oh, yeah?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 83,
+      "target_group": [
+        82,
+        83,
+        84
+      ],
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Why are we delivering this at night?",
+      "source_text": "Oh, yeah? Why are we delivering this at night? Like I say, this is third or fourth try here to get this to you.",
+      "proposed_text": "Why are we delivering this at night?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 84,
+      "target_group": [
+        82,
+        83,
+        84
+      ],
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Like I say, this is third or fourth try here to get this to you.",
+      "source_text": "Oh, yeah? Why are we delivering this at night? Like I say, this is third or fourth try here to get this to you.",
+      "proposed_text": "Like I say, this is third or fourth try here to get this to you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 85,
+      "target_group": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Really?",
+      "source_text": "Really? Yeah. Well, this is the first time we've heard of it. So...",
+      "proposed_text": "Really?",
+      "text_action": "group_review",
+      "similarity": 0.6957,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 86,
+      "target_group": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "Yeah.",
+      "source_text": "Really? Yeah. Well, this is the first time we've heard of it. So...",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review",
+      "similarity": 0.6957,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 87,
+      "target_group": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "we've heard of it.",
+      "source_text": "Really? Yeah. Well, this is the first time we've heard of it. So...",
+      "proposed_text": "we've heard of it.",
+      "text_action": "group_review",
+      "similarity": 0.6957,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 88,
+      "target_group": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "So...",
+      "source_text": "Really? Yeah. Well, this is the first time we've heard of it. So...",
+      "proposed_text": "So...",
+      "text_action": "group_review",
+      "similarity": 0.6957,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 89,
+      "target_group": null,
+      "source_indices": [
+        71
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "Is that a fact?",
+      "source_text": "Is that a fact?",
+      "proposed_text": "Is that a fact?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 90,
+      "target_group": [
+        90,
+        91
+      ],
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "We have a normal, a usual driver who comes here, and he never mentioned anything about it.",
+      "source_text": "A usual driver who comes here and he never mentioned anything about it. We don't have...",
+      "proposed_text": "We have a normal, a usual driver who comes here, and he never mentioned anything about it.",
+      "text_action": "group_review",
+      "similarity": 0.9081,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 91,
+      "target_group": [
+        90,
+        91
+      ],
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "We don't have...",
+      "source_text": "A usual driver who comes here and he never mentioned anything about it. We don't have...",
+      "proposed_text": "We don't have...",
+      "text_action": "group_review",
+      "similarity": 0.9081,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 92,
+      "target_group": [
+        92,
+        93,
+        94
+      ],
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Where's mom? (sp?)",
+      "source_text": "Where's mom? Yeah, mom. I'm gonna get my wife here and find out if you've...",
+      "proposed_text": "Where's mom? (sp?)",
+      "text_action": "group_review",
+      "similarity": 0.8919,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 93,
+      "target_group": [
+        92,
+        93,
+        94
+      ],
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Yep, Mom. (sp?)",
+      "source_text": "Where's mom? Yeah, mom. I'm gonna get my wife here and find out if you've...",
+      "proposed_text": "Yep, Mom. (sp?)",
+      "text_action": "group_review",
+      "similarity": 0.8919,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 94,
+      "target_group": [
+        92,
+        93,
+        94
+      ],
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I'm going to get my wife here and find out if you've...",
+      "source_text": "Where's mom? Yeah, mom. I'm gonna get my wife here and find out if you've...",
+      "proposed_text": "I'm going to get my wife here and find out if you've...",
+      "text_action": "group_review",
+      "similarity": 0.8919,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 95,
+      "target_group": [
+        95,
+        96,
+        97
+      ],
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, why don't you come down to the dock?",
+      "source_text": "Well, why don't you come down to the dock? Huh? Just cut a check or however you do it.",
+      "proposed_text": "Well, why don't you come down to the dock?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 96,
+      "target_group": [
+        95,
+        96,
+        97
+      ],
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Huh?",
+      "source_text": "Well, why don't you come down to the dock? Huh? Just cut a check or however you do it.",
+      "proposed_text": "Huh?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 97,
+      "target_group": [
+        95,
+        96,
+        97
+      ],
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Just cut a check or however you do it.",
+      "source_text": "Well, why don't you come down to the dock? Huh? Just cut a check or however you do it.",
+      "proposed_text": "Just cut a check or however you do it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 98,
+      "target_group": null,
+      "source_indices": [
+        75
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Where is the dock?",
+      "source_text": "Where is the dock?",
+      "proposed_text": "Where is the dock?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 99,
+      "target_group": null,
+      "source_indices": [
+        76
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm in Calabasas right now.",
+      "source_text": "I'm in Calabasas right now.",
+      "proposed_text": "I'm in Calabasas right now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 100,
+      "target_group": null,
+      "source_indices": [
+        77
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Calabasas, but you want me to come out to Calabasas to view something that I didn't order",
+      "source_text": "Calabasas, but you want me to come out to Calabasas to view something that I didn't order",
+      "proposed_text": "Calabasas, but you want me to come out to Calabasas to view something that I didn't order",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 101,
+      "target_group": [
+        101,
+        102
+      ],
+      "source_indices": [
+        78
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "and that I probably don't",
+      "source_text": "and that I probably don't want?",
+      "proposed_text": "and that I probably don't",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 102,
+      "target_group": [
+        101,
+        102
+      ],
+      "source_indices": [
+        78
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "want?",
+      "source_text": "and that I probably don't want?",
+      "proposed_text": "want?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 103,
+      "target_group": [
+        103,
+        104
+      ],
+      "source_indices": [
+        79
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Twelve years of working here.",
+      "source_text": "Twelve years of working here, I've seen lots and lots of digital signatures come and go.",
+      "proposed_text": "Twelve years of working here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 104,
+      "target_group": [
+        103,
+        104
+      ],
+      "source_indices": [
+        79
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I've seen lots and lots of digital signatures come and go.",
+      "source_text": "Twelve years of working here, I've seen lots and lots of digital signatures come and go.",
+      "proposed_text": "I've seen lots and lots of digital signatures come and go.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 105,
+      "target_group": null,
+      "source_indices": [
+        80
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Really?",
+      "source_text": "Really?",
+      "proposed_text": "Really?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 106,
+      "target_group": null,
+      "source_indices": [
+        81
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "Lots of them.",
+      "source_text": "Lots of them.",
+      "proposed_text": "Lots of them.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 107,
+      "target_group": null,
+      "source_indices": [
+        82
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Yeah, well, I don't buy things with digital signatures.",
+      "source_text": "Yeah, well, I don't buy things with digital signatures.",
+      "proposed_text": "Yeah, well, I don't buy things with digital signatures.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 108,
+      "target_group": [
+        108,
+        109,
+        110
+      ],
+      "source_indices": [
+        83
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "So...",
+      "source_text": "So, do we have, there's 4,200 pounds of sod or something on, or that's about to be delivered",
+      "proposed_text": "So...",
+      "text_action": "group_review",
+      "similarity": 0.7808,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 109,
+      "target_group": [
+        108,
+        109,
+        110
+      ],
+      "source_indices": [
+        83
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Do we have...",
+      "source_text": "So, do we have, there's 4,200 pounds of sod or something on, or that's about to be delivered",
+      "proposed_text": "Do we have...",
+      "text_action": "group_review",
+      "similarity": 0.7808,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 110,
+      "target_group": [
+        108,
+        109,
+        110
+      ],
+      "source_indices": [
+        83
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "There's 4,200 pounds of sod or something on...",
+      "source_text": "So, do we have, there's 4,200 pounds of sod or something on, or that's about to be delivered",
+      "proposed_text": "There's 4,200 pounds of sod or something on...",
+      "text_action": "group_review",
+      "similarity": 0.7808,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 111,
+      "target_group": null,
+      "source_indices": [
+        84
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Or that's about to be delivered with four trucks from UPS.",
+      "source_text": "with four trucks from UPS.",
+      "proposed_text": "with four trucks from UPS.",
+      "text_action": "review",
+      "similarity": 0.6098,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 112,
+      "target_group": null,
+      "source_indices": [
+        85
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Did we order that?",
+      "source_text": "Did we order that?",
+      "proposed_text": "Did we order that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 113,
+      "target_group": null,
+      "source_indices": [
+        86
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 114,
+      "target_group": [
+        114,
+        115
+      ],
+      "source_indices": [
+        87
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Sir, I have been told by my colleague here we can accept cash and coins",
+      "source_text": "Sir, I have been told by my colleague here we can't accept cash and coins to get this thing resolved here for you I",
+      "proposed_text": "Sir, I have been told by my colleague here we can accept cash and coins",
+      "text_action": "group_review",
+      "similarity": 0.9821,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 115,
+      "target_group": [
+        114,
+        115
+      ],
+      "source_indices": [
+        87
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "to get this thing resolved here for you.",
+      "source_text": "Sir, I have been told by my colleague here we can't accept cash and coins to get this thing resolved here for you I",
+      "proposed_text": "to get this thing resolved here for you.",
+      "text_action": "group_review",
+      "similarity": 0.9821,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 116,
+      "target_group": [
+        116,
+        117,
+        118
+      ],
+      "source_indices": [
+        88
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I think this is just a...",
+      "source_text": "think this is just a crock of ship so you're not UPS absolutely I am here yeah",
+      "proposed_text": "I think this is just a...",
+      "text_action": "group_review",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 117,
+      "target_group": [
+        116,
+        117,
+        118
+      ],
+      "source_indices": [
+        88
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "crock of shit, so you're not UPS.",
+      "source_text": "think this is just a crock of ship so you're not UPS absolutely I am here yeah",
+      "proposed_text": "crock of shit, so you're not UPS.",
+      "text_action": "group_review",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 118,
+      "target_group": [
+        116,
+        117,
+        118
+      ],
+      "source_indices": [
+        88
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Absolutely, I am here.",
+      "source_text": "think this is just a crock of ship so you're not UPS absolutely I am here yeah",
+      "proposed_text": "Absolutely, I am here.",
+      "text_action": "group_review",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 119,
+      "target_group": [
+        119,
+        120
+      ],
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Yeah, well I'll ask my driver tomorrow to track down a Wallace Thrasher.",
+      "source_text": "well I'll ask my driver tomorrow to track down a wallace thrash her you can call me",
+      "proposed_text": "Yeah, well I'll ask my driver tomorrow to track down a Wallace Thrasher.",
+      "text_action": "group_review",
+      "similarity": 0.905,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 120,
+      "target_group": [
+        119,
+        120
+      ],
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "You can call me Stretchie.",
+      "source_text": "well I'll ask my driver tomorrow to track down a wallace thrash her you can call me",
+      "proposed_text": "You can call me Stretchie.",
+      "text_action": "group_review",
+      "similarity": 0.905,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 121,
+      "target_group": null,
+      "source_indices": [
+        90
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "You're just not going to give up, are you? Stretchie?",
+      "source_text": "stretchy you just not gonna give up are you stretchy I just deal with",
+      "proposed_text": "stretchy you just not gonna give up are you stretchy I just deal with",
+      "text_action": "review",
+      "similarity": 0.7059,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 122,
+      "target_group": null,
+      "source_indices": [
+        91
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just deal with fulfillment, product fulfillment here at United Parcel Service, so...",
+      "source_text": "the film the product fulfillment here at United Parson Service.",
+      "proposed_text": "the film the product fulfillment here at United Parson Service.",
+      "text_action": "review",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 123,
+      "target_group": null,
+      "source_indices": [
+        92
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "We've got a total of three flags on your account here, so...",
+      "source_text": "So we've got a total of three flags on your account here.",
+      "proposed_text": "So we've got a total of three flags on your account here.",
+      "text_action": "review",
+      "similarity": 0.9464,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 124,
+      "target_group": null,
+      "source_indices": [
+        93
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just would like to get a routing number and we'll satisfy the debt.",
+      "source_text": "So I just would like to get a routing number and we'll satisfy the debt.",
+      "proposed_text": "So I just would like to get a routing number and we'll satisfy the debt.",
+      "text_action": "review",
+      "similarity": 0.9784,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 125,
+      "target_group": null,
+      "source_indices": [
+        94
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "You don't have a routing now. How can I have a",
+      "source_text": "You don't have a routing, how am I going to have a routing number?",
+      "proposed_text": "You don't have a routing, how am I going to have a routing number?",
+      "text_action": "review",
+      "similarity": 0.7156,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 126,
+      "target_group": null,
+      "source_indices": [
+        95
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "routing number? What the hell is the routing number?",
+      "source_text": "What the hell is the routing number?",
+      "proposed_text": "What the hell is the routing number?",
+      "text_action": "review",
+      "similarity": 0.8235,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 127,
+      "target_group": null,
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "From your checking account or debit card",
+      "source_text": "From your checking account or debit card or...",
+      "proposed_text": "From your checking account or debit card or...",
+      "text_action": "review",
+      "similarity": 0.9639,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 128,
+      "target_group": null,
+      "source_indices": [
+        97
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Are you out of your mind?",
+      "source_text": "Are you out of your mind?",
+      "proposed_text": "Are you out of your mind?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 129,
+      "target_group": null,
+      "source_indices": [
+        98
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I'm going to pay $2,000 for something that I do not have,",
+      "source_text": "I'm going to pay $2,000 for something that I do not have,",
+      "proposed_text": "I'm going to pay $2,000 for something that I do not have,",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 130,
+      "target_group": [
+        130,
+        131,
+        132
+      ],
+      "source_indices": [
+        99
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "did not order, and know nothing about.",
+      "source_text": "did not order, and know nothing about. The sender's name is Artie Yamamoto. Send me something in the",
+      "proposed_text": "did not order, and know nothing about.",
+      "text_action": "group_review",
+      "similarity": 0.9372,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 131,
+      "target_group": [
+        130,
+        131,
+        132
+      ],
+      "source_indices": [
+        99
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "The sender's name is Artie Yamamoto.",
+      "source_text": "did not order, and know nothing about. The sender's name is Artie Yamamoto. Send me something in the",
+      "proposed_text": "The sender's name is Artie Yamamoto.",
+      "text_action": "group_review",
+      "similarity": 0.9372,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 132,
+      "target_group": [
+        130,
+        131,
+        132
+      ],
+      "source_indices": [
+        99
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Send me something in the mail, stretch.",
+      "source_text": "did not order, and know nothing about. The sender's name is Artie Yamamoto. Send me something in the",
+      "proposed_text": "Send me something in the mail, stretch.",
+      "text_action": "group_review",
+      "similarity": 0.9372,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 133,
+      "target_group": [
+        133,
+        134
+      ],
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'll send you a subpoena, is what I'll send you.",
+      "source_text": "mail, stretch. I'll send you a subpoena, is what I'll send you. Oh, that's good. I'll respond to a",
+      "proposed_text": "I'll send you a subpoena, is what I'll send you.",
+      "text_action": "group_review",
+      "similarity": 0.8778,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 134,
+      "target_group": [
+        133,
+        134
+      ],
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh, that's good. I'll respond to a subpoena.",
+      "source_text": "mail, stretch. I'll send you a subpoena, is what I'll send you. Oh, that's good. I'll respond to a",
+      "proposed_text": "Oh, that's good. I'll respond to a subpoena.",
+      "text_action": "group_review",
+      "similarity": 0.8778,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 135,
+      "target_group": [
+        135,
+        136
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You'll be commanded to testify before Artie Yamamoto.",
+      "source_text": "subpoena. It'll be commanded to testify before Artie Yamamoto. Oh good. Boy, that's scarcely.",
+      "proposed_text": "You'll be commanded to testify before Artie Yamamoto.",
+      "text_action": "group_review",
+      "similarity": 0.7838,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 136,
+      "target_group": [
+        135,
+        136
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh, good.",
+      "source_text": "subpoena. It'll be commanded to testify before Artie Yamamoto. Oh good. Boy, that's scarcely.",
+      "proposed_text": "Oh, good.",
+      "text_action": "group_review",
+      "similarity": 0.7838,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 137,
+      "target_group": [
+        137,
+        138
+      ],
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Good. Boy, that's scarcely. Artie Yamamoto. Who is he?",
+      "source_text": "Artie Yamamoto. Who is he? He's at the Bangkok Sod Center. Bangkok Sod Center.",
+      "proposed_text": "Good. Boy, that's scarcely. Artie Yamamoto. Who is he?",
+      "text_action": "group_review",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 138,
+      "target_group": [
+        137,
+        138
+      ],
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's at the Bangkok Sod Center.",
+      "source_text": "Artie Yamamoto. Who is he? He's at the Bangkok Sod Center. Bangkok Sod Center.",
+      "proposed_text": "He's at the Bangkok Sod Center.",
+      "text_action": "group_review",
+      "similarity": 0.7143,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 139,
+      "target_group": [
+        139,
+        140
+      ],
+      "source_indices": [
+        103
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Bangkok Sod Center. And that's in Bangkok, Thailand?",
+      "source_text": "And that's in Bangkok, Thailand? Yes, sir. Oh good. Yep, I'm likely to order Sod.",
+      "proposed_text": "Bangkok Sod Center. And that's in Bangkok, Thailand?",
+      "text_action": "group_review",
+      "similarity": 0.5802,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 140,
+      "target_group": [
+        139,
+        140
+      ],
+      "source_indices": [
+        103
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "review",
+      "current_text": "Yes, sir.",
+      "source_text": "And that's in Bangkok, Thailand? Yes, sir. Oh good. Yep, I'm likely to order Sod.",
+      "proposed_text": "Yes, sir.",
+      "text_action": "group_review",
+      "similarity": 0.5802,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 141,
+      "target_group": null,
+      "source_indices": [
+        104,
+        105
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Oh, good. Yep, I'm likely to order sod from Thailand. You're out of your mind, Stretchie.",
+      "source_text": "Thailand. You're out of your mind, Stretchy. Well, let's hop on a plane and, I'm likely to order SOT. Thailand. You're out of your mind, Stretchy.",
+      "proposed_text": "Thailand. You're out of your mind, Stretchy. Well, let's hop on a plane and, I'm likely to order SOT. Thailand. You're out of your mind, Stretchy.",
+      "text_action": "review",
+      "similarity": 0.6364,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 142,
+      "target_group": null,
+      "source_indices": [
+        106,
+        107
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, let's hop on a plane and we'll go meet with them in person. I have a three-way conference.",
+      "source_text": "Well, let's hop on a plane and we'll go meet with them in person. I have a three-way conference.",
+      "proposed_text": "Well, let's hop on a plane and we'll go meet with them in person. I have a three-way conference.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 143,
+      "target_group": null,
+      "source_indices": [
+        108
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Are you out of your mind?",
+      "source_text": "Are you out of your mind?",
+      "proposed_text": "Are you out of your mind?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 144,
+      "target_group": [
+        144,
+        145
+      ],
+      "source_indices": [
+        109,
+        110
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "No. I resent the implication",
+      "source_text": "No. I resent the implication, frankly.",
+      "proposed_text": "No. I resent the implication",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 145,
+      "target_group": [
+        144,
+        145
+      ],
+      "source_indices": [
+        109,
+        110
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "frankly.",
+      "source_text": "No. I resent the implication, frankly.",
+      "proposed_text": "frankly.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 146,
+      "target_group": null,
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Well, good.",
+      "source_text": "Well, good.",
+      "proposed_text": "Well, good.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 147,
+      "target_group": null,
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Uh, resent it all you want.",
+      "source_text": "Uh, present it all you want.",
+      "proposed_text": "Uh, present it all you want.",
+      "text_action": "review",
+      "similarity": 0.9804,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 148,
+      "target_group": null,
+      "source_indices": [
+        113
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Send me a letter. Send me a subpoena.",
+      "source_text": "Send me a letter. Send me a subpoena.",
+      "proposed_text": "Send me a letter. Send me a subpoena.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 149,
+      "target_group": null,
+      "source_indices": [
+        114
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Be happy to receive it.",
+      "source_text": "Be happy to receive it.",
+      "proposed_text": "Be happy to receive it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 150,
+      "target_group": null,
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "We'll do a conference call.",
+      "source_text": "We'll do a conference call.",
+      "proposed_text": "We'll do a conference call.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 151,
+      "target_group": null,
+      "source_indices": [
+        116
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No, I don't need a conference call, Stretchie.",
+      "source_text": "No, I don't need a conference call, Stretchy.",
+      "proposed_text": "No, I don't need a conference call, Stretchy.",
+      "text_action": "review",
+      "similarity": 0.9647,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 152,
+      "target_group": [
+        152,
+        153
+      ],
+      "source_indices": [
+        117
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You can call me Stretchie.",
+      "source_text": "You can call me Stretchy. I mean...",
+      "proposed_text": "You can call me Stretchie.",
+      "text_action": "group_review",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 153,
+      "target_group": [
+        152,
+        153
+      ],
+      "source_indices": [
+        117
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I mean...",
+      "source_text": "You can call me Stretchy. I mean...",
+      "proposed_text": "I mean...",
+      "text_action": "group_review",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 154,
+      "target_group": null,
+      "source_indices": [
+        118
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "I just did.",
+      "source_text": "I just did.",
+      "proposed_text": "I just did.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 155,
+      "target_group": null,
+      "source_indices": [
+        119
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I've got signed affidavits and...",
+      "source_text": "I've got signed affidavits.",
+      "proposed_text": "I've got signed affidavits.",
+      "text_action": "review",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 156,
+      "target_group": null,
+      "source_indices": [
+        120
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Affadavits?",
+      "source_text": "Appadavits?",
+      "proposed_text": "Appadavits?",
+      "text_action": "review",
+      "similarity": 0.8,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 157,
+      "target_group": null,
+      "source_indices": [
+        121
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "All kinds of other things. Yes, sir.",
+      "source_text": "All kinds of other things. Yes, sir.",
+      "proposed_text": "All kinds of other things. Yes, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 158,
+      "target_group": null,
+      "source_indices": [
+        122
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh, good. Well, you have my signature?",
+      "source_text": "Oh, good. Well, you have my signature?",
+      "proposed_text": "Oh, good. Well, you have my signature?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 159,
+      "target_group": null,
+      "source_indices": [
+        123
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm looking right at it.",
+      "source_text": "I'm looking right at it.",
+      "proposed_text": "I'm looking right at it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 160,
+      "target_group": [
+        160,
+        161
+      ],
+      "source_indices": [
+        124
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah.",
+      "source_text": "Yeah? And what does it say?",
+      "proposed_text": "Yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 161,
+      "target_group": [
+        160,
+        161
+      ],
+      "source_indices": [
+        124
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "And what does it say?",
+      "source_text": "Yeah? And what does it say?",
+      "proposed_text": "And what does it say?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 162,
+      "target_group": null,
+      "source_indices": [
+        125
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "It's not legible.",
+      "source_text": "It's not legible.",
+      "proposed_text": "It's not legible.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 163,
+      "target_group": null,
+      "source_indices": [
+        126
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "But it's not legible?",
+      "source_text": "It's not legible?",
+      "proposed_text": "It's not legible?",
+      "text_action": "review",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 164,
+      "target_group": [
+        164,
+        165
+      ],
+      "source_indices": [
+        127
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So that would be step one is to work on",
+      "source_text": "So that would be step one is to work on that, but...",
+      "proposed_text": "So that would be step one is to work on",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 165,
+      "target_group": [
+        164,
+        165
+      ],
+      "source_indices": [
+        127
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "that, but...",
+      "source_text": "So that would be step one is to work on that, but...",
+      "proposed_text": "that, but...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 166,
+      "target_group": null,
+      "source_indices": [
+        128,
+        129
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "I have no need for $2,000 worth of sod, and I didn't order it, and I know nothing about it.",
+      "source_text": "I have no need for $2,000 worth of sod, and I didn't order it, and I know nothing about it.",
+      "proposed_text": "I have no need for $2,000 worth of sod, and I didn't order it, and I know nothing about it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 167,
+      "target_group": null,
+      "source_indices": [
+        130
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So you thought you'd just stick good old UPS with the charges, huh?",
+      "source_text": "So you thought you'd just stick good old UPS with the charges, huh?",
+      "proposed_text": "So you thought you'd just stick good old UPS with the charges, huh?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 168,
+      "target_group": [
+        168,
+        169
+      ],
+      "source_indices": [
+        131
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Nope.",
+      "source_text": "Nope, are you out of your mind?",
+      "proposed_text": "Nope.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 169,
+      "target_group": [
+        168,
+        169
+      ],
+      "source_indices": [
+        131
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Are you out of your mind?",
+      "source_text": "Nope, are you out of your mind?",
+      "proposed_text": "Are you out of your mind?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 170,
+      "target_group": null,
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Nobody orders sod from Asia.",
+      "source_text": "Nobody orders sod from Asia.",
+      "proposed_text": "Nobody orders sod from Asia.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 171,
+      "target_group": null,
+      "source_indices": [
+        133
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "Send me something in the mail, and we'll get to the bottom of this, but we're not paying for something",
+      "source_text": "Send me something in the mail, and we'll get to the bottom of this, but we're not paying for something we didn't order. Oh, mail and we'll get to the bottom of this.",
+      "proposed_text": "Send me something in the mail, and we'll get to the bottom of this, but we're not paying for something we didn't order. Oh, mail and we'll get to the bottom of this.",
+      "text_action": "review",
+      "similarity": 0.7692,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 172,
+      "target_group": null,
+      "source_indices": [
+        134
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "current_text": "we didn't order.",
+      "source_text": "But we're not paying something we didn't order.",
+      "proposed_text": "But we're not paying something we didn't order.",
+      "text_action": "review",
+      "similarity": 0.4918,
+      "match_type": "similar",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 173,
+      "target_group": null,
+      "source_indices": [
+        135
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, you and I'll get to the bottom of it all right, if I need to come down and drive the truck myself.",
+      "source_text": "Oh, you and I'll get to the bottom of it all right if I need to come down and drive the truck myself.",
+      "proposed_text": "Oh, you and I'll get to the bottom of it all right, if I need to come down and drive the truck myself.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 174,
+      "target_group": null,
+      "source_indices": [
+        136
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh, well, go ahead.",
+      "source_text": "Oh, well, go ahead.",
+      "proposed_text": "Oh, well, go ahead.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 175,
+      "target_group": [
+        175,
+        176
+      ],
+      "source_indices": [
+        137
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Be prepared to...",
+      "source_text": "Be prepared to be met by police.",
+      "proposed_text": "Be prepared to...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 176,
+      "target_group": [
+        175,
+        176
+      ],
+      "source_indices": [
+        137
+      ],
+      "current_speaker": "Alex Trebek",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "be met by police.",
+      "source_text": "Be prepared to be met by police.",
+      "proposed_text": "be met by police.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    },
+    {
+      "target_index": 177,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Be prepared...",
+      "source_text": null,
+      "proposed_text": "Be prepared...",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": true,
+      "proposed_reviewed": true,
+      "review_action": "keep"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 177,
+    "candidate_subtitles": 139,
+    "matched": 173,
+    "text_review": 22,
+    "text_group_review": 48,
+    "speaker_review": 55,
+    "review_flags_to_initialize": 0,
+    "alias_additions": 0,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

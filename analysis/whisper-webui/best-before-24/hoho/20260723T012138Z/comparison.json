@@ -1,0 +1,3259 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:55:13.367432+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260723T012138Z",
+    "run_path": "analysis/whisper-webui/best-before-24/hoho/20260723T012138Z",
+    "audio_sha256": "e72efe7d75b7548683a46fa624f7fa54784501384d5a77912a18678570276679",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "ad365b34d412805d3c9760a251bd3b87a24360d3b210b4f0082d3fed74378b2e",
+    "manifest_sha256": "c22f73a220ee0f2e8e7ae568cdccfedbff4e9ef3c1a22d20cae2812958ff36d9"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Hoho",
+    "track_slug": "hoho",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "3dc42b16cadfbfb3b76a5c04722bd4585606bea8b8e8e219f2855e23f612c698",
+    "subtitle_path": "jekyll/assets/json/best-before-24/hoho.json",
+    "subtitle_sha256": "4dff9bd7d983df6511c0794bf5bfe2eb1dbe0fe667b9dcd4eb2b8b93e957514d",
+    "current_aliases": [
+      "Hoho"
+    ],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Police Dispatcher 2",
+      "confidence": 0.9483,
+      "overlap_seconds": 3.171,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "confidence": 1.0,
+      "overlap_seconds": 7.294,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "confidence": 0.937,
+      "overlap_seconds": 101.819,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "confidence": 0.9467,
+      "overlap_seconds": 149.215,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [
+      {
+        "value": "Guy",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      },
+      {
+        "value": "Monty",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      }
+    ],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Is Monty there?",
+      "source_text": null,
+      "proposed_text": "Is Monty there?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": [
+        3,
+        4
+      ],
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "Uh, no he's not.",
+      "source_text": "Uh, no he's not. Can I take a message?",
+      "proposed_text": "Uh, no he's not.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": [
+        3,
+        4
+      ],
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "Can I take a message?",
+      "source_text": "Uh, no he's not. Can I take a message?",
+      "proposed_text": "Can I take a message?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": null,
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Is this Martha?",
+      "source_text": "Is this Martha?",
+      "proposed_text": "Is this Martha?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": null,
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": [
+        7,
+        8
+      ],
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, well I'm seeing some stuff outside your house.",
+      "source_text": "Yeah, well I'm seeing some stuff outside of your house. I was just hoping you guys could pick it up.",
+      "proposed_text": "Yeah, well I'm seeing some stuff outside your house.",
+      "text_action": "group_review",
+      "similarity": 0.9843,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": [
+        7,
+        8
+      ],
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was just hoping you guys could pick it up.",
+      "source_text": "Yeah, well I'm seeing some stuff outside of your house. I was just hoping you guys could pick it up.",
+      "proposed_text": "I was just hoping you guys could pick it up.",
+      "text_action": "group_review",
+      "similarity": 0.9843,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": null,
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Or maybe I could come lend you a hand.",
+      "source_text": "Or maybe I could come lend you a hand.",
+      "proposed_text": "Or maybe I could come lend you a hand.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "What kind of stuff are you talking about?",
+      "source_text": "What kind of stuff are you talking about?",
+      "proposed_text": "What kind of stuff are you talking about?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, there's been receptacles just rollin' around and looked like a stack of sawdust blowin' wild.",
+      "source_text": "Oh, there's been receptacles just rolling around and",
+      "proposed_text": "Oh, there's been receptacles just rolling around and",
+      "text_action": "review",
+      "similarity": 0.6849,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm just trying to get it cleaned up with ye.",
+      "source_text": "look like a stack of sawdust blowing wild. I'm just trying to get it cleaned up with you.",
+      "proposed_text": "look like a stack of sawdust blowing wild. I'm just trying to get it cleaned up with you.",
+      "text_action": "review",
+      "similarity": 0.6565,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "And who is this?",
+      "source_text": "And who is this? My name's Ho-Ho. I just moved down here about seven days ago.",
+      "proposed_text": "And who is this?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "My name's Ho-Ho.",
+      "source_text": "And who is this? My name's Ho-Ho. I just moved down here about seven days ago.",
+      "proposed_text": "My name's Ho-Ho.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just moved down here about seven days ago.",
+      "source_text": "And who is this? My name's Ho-Ho. I just moved down here about seven days ago.",
+      "proposed_text": "I just moved down here about seven days ago.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "Okay, just a second.",
+      "source_text": "Okay, just a second. Let me see. My husband might be outside.",
+      "proposed_text": "Okay, just a second. Let me see. My husband might be outside.",
+      "text_action": "review",
+      "similarity": 0.48,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "Let me see.",
+      "source_text": "Let me see.",
+      "proposed_text": "Let me see.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "Martha",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Martha",
+      "speaker_action": "keep",
+      "current_text": "My husband might be outside.",
+      "source_text": "My husband might be outside.",
+      "proposed_text": "My husband might be outside.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, is this Monty?",
+      "source_text": "Yeah, is this Monty?",
+      "proposed_text": "Yeah, is this Monty?",
+      "text_action": "review",
+      "similarity": 0.9143,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": [
+        22,
+        23
+      ],
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, I was just telling the lady there.",
+      "source_text": "Yes, I was just telling the lady there, I moved down the way from you guys about a week back, and I've been seeing some stuff outside of your place there, and I was just hoping to get it picked up.",
+      "proposed_text": "Yes, I was just telling the lady there.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": [
+        22,
+        23
+      ],
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I moved down the way from you guys about a week back and I've been seeing some stuff outside of your place there and I was just hoping to get it picked up.",
+      "source_text": "Yes, I was just telling the lady there, I moved down the way from you guys about a week back, and I've been seeing some stuff outside of your place there, and I was just hoping to get it picked up.",
+      "proposed_text": "I moved down the way from you guys about a week back and I've been seeing some stuff outside of your place there and I was just hoping to get it picked up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "If you want me to lend you a hand picking it up, I can help do that too.",
+      "source_text": "If you want me to lend you a hand picking it up, I can help do that, too.",
+      "proposed_text": "If you want me to lend you a hand picking it up, I can help do that too.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Now tell me what house you're talking about.",
+      "source_text": "Now, tell me what house you're talking about.",
+      "proposed_text": "Now tell me what house you're talking about.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm talking about your place.",
+      "source_text": "I'm talking about your place.",
+      "proposed_text": "I'm talking about your place.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "My uncle's on the police force here.",
+      "source_text": "My uncle's on the police force here.",
+      "proposed_text": "My uncle's on the police force here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": null,
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's the one who gave me your number.",
+      "source_text": "He's the one who gave me your number.",
+      "proposed_text": "He's the one who gave me your number.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": null,
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's got everybody's phone number.",
+      "source_text": "He's got everybody's phone number.",
+      "proposed_text": "He's got everybody's phone number.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "But I saw receptacles outside.",
+      "source_text": "But I saw receptacles outside.",
+      "proposed_text": "But I saw receptacles outside.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [
+        25,
+        26
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I saw a pile of grass that looks like a pile of sawdust six feet high, blowin' in the wind.",
+      "source_text": "I saw a pile of grass. That looks like a pile of sawdust six feet high.",
+      "proposed_text": "I saw a pile of grass. That looks like a pile of sawdust six feet high.",
+      "text_action": "review",
+      "similarity": 0.8734,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": null,
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Let me explain to you where I live, okay?",
+      "source_text": "Let me explain to you where I live, okay?",
+      "proposed_text": "Let me explain to you where I live, okay?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": null,
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "Yeah.",
+      "proposed_text": "Yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": null,
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What street do you live on?",
+      "source_text": "What street do you live on?",
+      "proposed_text": "What street do you live on?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": null,
+      "source_indices": [
+        30
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just live right around the way from you.",
+      "source_text": "I just live right around the way from you.",
+      "proposed_text": "I just live right around the way from you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": null,
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm not trying to get the police involved.",
+      "source_text": "I'm not trying to get the police involved.",
+      "proposed_text": "I'm not trying to get the police involved.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just want to try to get it cleared up.",
+      "source_text": "I just want to try to get it cleaned up.",
+      "proposed_text": "I just want to try to get it cleaned up.",
+      "text_action": "review",
+      "similarity": 0.9744,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": null,
+      "source_indices": [
+        33,
+        34,
+        35
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "No, I think what I'm trying to tell you is I'm not... [stumbles] you have absolutely got the wrong house.",
+      "source_text": "No, I think what I'm trying to tell you is I'm not... I'm almost...",
+      "proposed_text": "No, I think what I'm trying to tell you is I'm not... I'm almost...",
+      "text_action": "review",
+      "similarity": 0.7089,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": null,
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, no.",
+      "source_text": "Oh, no.",
+      "proposed_text": "Oh, no.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": null,
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Let me tell you where I live, okay?",
+      "source_text": "Let me tell you where I live, okay?",
+      "proposed_text": "Let me tell you where I live, okay?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm not trying to get the police up here.",
+      "source_text": "I'm not trying to get the police up here.",
+      "proposed_text": "I'm not trying to get the police up here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just want to get it picked up.",
+      "source_text": "I just want to get it picked up.",
+      "proposed_text": "I just want to get it picked up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": [
+        43,
+        44
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Well, you're not talking about the right house.",
+      "source_text": "Well, you're not talking about the right house is what I'm trying to tell you.",
+      "proposed_text": "Well, you're not talking about the right house.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": [
+        43,
+        44
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "is what I'm trying to tell you.",
+      "source_text": "Well, you're not talking about the right house is what I'm trying to tell you.",
+      "proposed_text": "is what I'm trying to tell you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": null,
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I certainly am.",
+      "source_text": "I certainly am.",
+      "proposed_text": "I certainly am.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": null,
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I gave the info to my uncle.",
+      "source_text": "I gave the info to my uncle.",
+      "proposed_text": "I gave the info to my uncle.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": null,
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's on the force.",
+      "source_text": "He's on the floor.",
+      "proposed_text": "He's on the floor.",
+      "text_action": "review",
+      "similarity": 0.8824,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Monty",
+      "source_speaker": null,
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I don't care who you listen.",
+      "source_text": null,
+      "proposed_text": "I don't care who you listen.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": null,
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I don't care who you gave it.",
+      "source_text": "I don't care who you gave it.",
+      "proposed_text": "I don't care who you gave it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Monty",
+      "source_speaker": null,
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Let me tell you, ride by, I'll tell you what, ride by, by my house.",
+      "source_text": null,
+      "proposed_text": "Let me tell you, ride by, I'll tell you what, ride by, by my house.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Monty",
+      "source_speaker": null,
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I'm not.",
+      "source_text": null,
+      "proposed_text": "I'm not.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": null,
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What kind of car do I have?",
+      "source_text": "What kind of car do I have?",
+      "proposed_text": "What kind of car do I have?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": null,
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Let me tell you something.",
+      "source_text": "Let me tell you something.",
+      "proposed_text": "Let me tell you something.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": null,
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I saw a pile of sawdust six feet tall, blowin' wild.",
+      "source_text": "I saw a pile of sawdust six feet tall, blowing wild.",
+      "proposed_text": "I saw a pile of sawdust six feet tall, blowing wild.",
+      "text_action": "review",
+      "similarity": 0.98,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": null,
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I've never had sawdust at my house.",
+      "source_text": "I've never had sawdust at my house.",
+      "proposed_text": "I've never had sawdust at my house.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": null,
+      "source_indices": [
+        51
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Don't you understand that?",
+      "source_text": "Don't you understand that?",
+      "proposed_text": "Don't you understand that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [
+        52
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, well, maybe it's gone now blowin' away.",
+      "source_text": "Well, maybe it's gone now, blowing away.",
+      "proposed_text": "Well, maybe it's gone now, blowing away.",
+      "text_action": "review",
+      "similarity": 0.9351,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": null,
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I have never had any sawdust.",
+      "source_text": "I have never had any sawdust.",
+      "proposed_text": "I have never had any sawdust.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": null,
+      "source_indices": [
+        54
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Sir, I saw receptacles rollin' around.",
+      "source_text": "Sir, I saw receptacles rolling around.",
+      "proposed_text": "Sir, I saw receptacles rolling around.",
+      "text_action": "review",
+      "similarity": 0.9722,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I saw bags of grass or something or other stacked yay high.",
+      "source_text": "I saw bags of grass or something or other stacked yay high.",
+      "proposed_text": "I saw bags of grass or something or other stacked yay high.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": null,
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Why is it so hard for you to understand?",
+      "source_text": "Why is this so hard for you to understand?",
+      "proposed_text": "Why is this so hard for you to understand?",
+      "text_action": "review",
+      "similarity": 0.95,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": null,
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Why is it hard for you to understand?",
+      "source_text": "Why is it hard for you to understand?",
+      "proposed_text": "Why is it hard for you to understand?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": null,
+      "source_indices": [
+        58
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What address is it?",
+      "source_text": "What address is it?",
+      "proposed_text": "What address is it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": null,
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Listen, this isn't a bunch of hocus pocus.",
+      "source_text": "Listen, this isn't a bunch of hocus pocus.",
+      "proposed_text": "Listen, this isn't a bunch of hocus pocus.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": null,
+      "source_indices": [
+        60
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I live at 213 West 4th Avenue.",
+      "source_text": "I live at 213 West 4th Avenue.",
+      "proposed_text": "I live at 213 West 4th Avenue.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "You go by and see anything wrong with that house.",
+      "source_text": "You go by and see anything wrong with that house.",
+      "proposed_text": "You go by and see anything wrong with that house.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": null,
+      "source_indices": [
+        62
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I saw plenty.",
+      "source_text": "I saw plenty.",
+      "proposed_text": "I saw plenty.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": null,
+      "source_indices": [
+        63
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I just walked by forty five minutes ago.",
+      "source_text": "I just walked by 45 minutes ago.",
+      "proposed_text": "I just walked by 45 minutes ago.",
+      "text_action": "review",
+      "similarity": 0.8286,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": [
+        69,
+        70
+      ],
+      "source_indices": [
+        64
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "review",
+      "current_text": "I'm not trying to get the law involved.",
+      "source_text": "I'm not trying to get the law involved. It's the best house on the street if you'll look for neatness.",
+      "proposed_text": "I'm not trying to get the law involved.",
+      "text_action": "group_review",
+      "similarity": 0.8372,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": [
+        69,
+        70
+      ],
+      "source_indices": [
+        64
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "It's the best house on the street.",
+      "source_text": "I'm not trying to get the law involved. It's the best house on the street if you'll look for neatness.",
+      "proposed_text": "It's the best house on the street.",
+      "text_action": "group_review",
+      "similarity": 0.8372,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": [
+        71,
+        72
+      ],
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "If you look for neatness, why don't we just get it picked up?",
+      "source_text": "Why don't we just get it picked up? Because there's absolutely nothing to pick up. Now,",
+      "proposed_text": "If you look for neatness, why don't we just get it picked up?",
+      "text_action": "group_review",
+      "similarity": 0.8466,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": [
+        71,
+        72
+      ],
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Because there's absolutely nothing to pick up.",
+      "source_text": "Why don't we just get it picked up? Because there's absolutely nothing to pick up. Now,",
+      "proposed_text": "Because there's absolutely nothing to pick up.",
+      "text_action": "group_review",
+      "similarity": 0.8466,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": null,
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Now I'll tell you what I think you're looking at.",
+      "source_text": "I'll tell you what I think you're looking at if you want to know.",
+      "proposed_text": "I'll tell you what I think you're looking at if you want to know.",
+      "text_action": "review",
+      "similarity": 0.7857,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": null,
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "If you want to know what on earth is that is the house brick is what now is the house brick.",
+      "source_text": "What on earth is that? Is the house brick? Is what now? Is the house brick?",
+      "proposed_text": "What on earth is that? Is the house brick? Is what now? Is the house brick?",
+      "text_action": "review",
+      "similarity": 0.8765,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": null,
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Charlie, I don't follow what you're saying.",
+      "source_text": "Charlie, I don't follow what you're saying.",
+      "proposed_text": "Charlie, I don't follow what you're saying.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": null,
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "The house that you're talking about, what's it made out of?",
+      "source_text": "The house that you're talking about, what's it made out of?",
+      "proposed_text": "The house that you're talking about, what's it made out of?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": null,
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, it's made of stucco or something or other.",
+      "source_text": "Oh, it's made of stucco or something or other.",
+      "proposed_text": "Oh, it's made of stucco or something or other.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": null,
+      "source_indices": [
+        71
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm not a construction worker.",
+      "source_text": "I'm not a construction worker.",
+      "proposed_text": "I'm not a construction worker.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": null,
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "[laughs] That's not my house.",
+      "source_text": "That's not my house.",
+      "proposed_text": "That's not my house.",
+      "text_action": "review",
+      "similarity": 0.8444,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": null,
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Charlie, I saw sawdust blowing wild.",
+      "source_text": "Charlie, I saw sawdust blowing wild.",
+      "proposed_text": "Charlie, I saw sawdust blowing wild.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": null,
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Now, what do you want?",
+      "source_text": "Now, what do you want from...",
+      "proposed_text": "Now, what do you want from...",
+      "text_action": "review",
+      "similarity": 0.8889,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": null,
+      "source_indices": [
+        75
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "My name's not Charlie.",
+      "source_text": "My name's not Charlie.",
+      "proposed_text": "My name's not Charlie.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": null,
+      "source_indices": [
+        76
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I know that.",
+      "source_text": "I know that.",
+      "proposed_text": "I know that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": [
+        84,
+        85
+      ],
+      "source_indices": [
+        77,
+        78
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "My uncle gave me all your information.",
+      "source_text": "My uncle gave me all your information. Plain as",
+      "proposed_text": "My uncle gave me all your information.",
+      "text_action": "group_review",
+      "similarity": 0.9583,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": [
+        84,
+        85
+      ],
+      "source_indices": [
+        77,
+        78
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Plain as day.",
+      "source_text": "My uncle gave me all your information. Plain as",
+      "proposed_text": "Plain as day.",
+      "text_action": "group_review",
+      "similarity": 0.9583,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": null,
+      "source_indices": [
+        79
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Well, why don't you tell me who your uncle is?",
+      "source_text": "day. Well, why don't you tell me who your uncle",
+      "proposed_text": "day. Well, why don't you tell me who your uncle",
+      "text_action": "review",
+      "similarity": 0.9213,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": null,
+      "source_indices": [
+        80
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, well, my name's Hoho.",
+      "source_text": "is? Well, my name's",
+      "proposed_text": "is? Well, my name's",
+      "text_action": "review",
+      "similarity": 0.7317,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 88,
+      "target_group": null,
+      "source_indices": [
+        81
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm new in town.",
+      "source_text": "Ho-Ho. I'm new in town.",
+      "proposed_text": "Ho-Ho. I'm new in town.",
+      "text_action": "review",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 89,
+      "target_group": null,
+      "source_indices": [
+        82,
+        83,
+        84
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Well, Hoho, I was on the sheriff's department for thirty years, and I'm telling you, you have the wrong house.",
+      "source_text": "Well, Ho-Ho, I was on the Sheriff's Department for 30 years, and I'm telling you, you have the wrong house.",
+      "proposed_text": "Well, Ho-Ho, I was on the Sheriff's Department for 30 years, and I'm telling you, you have the wrong house.",
+      "text_action": "review",
+      "similarity": 0.9565,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 90,
+      "target_group": null,
+      "source_indices": [
+        85
+      ],
+      "current_speaker": "Police Dispatcher 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "review",
+      "current_text": "Hello, Rensselaer Police.",
+      "source_text": "Hello, Rensselaer Police.",
+      "proposed_text": "Hello, Rensselaer Police.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 91,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Monty",
+      "source_speaker": null,
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Can I help you?",
+      "source_text": null,
+      "proposed_text": "Can I help you?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 92,
+      "target_group": null,
+      "source_indices": [
+        87
+      ],
+      "current_speaker": "Police Dispatcher 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "review",
+      "current_text": "Uh, this is the city of Rensselaer Police Department.",
+      "source_text": "This is the city of Rensselaer Police Department.",
+      "proposed_text": "This is the city of Rensselaer Police Department.",
+      "text_action": "review",
+      "similarity": 0.9697,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 93,
+      "target_group": null,
+      "source_indices": [
+        88,
+        89,
+        90
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I have no... Listen, I've got a... I don't know what's going on, but let me tell you something real quick.",
+      "source_text": "I have no... Listen, I've got a... I don't know what's going on, but let me tell you something real quick.",
+      "proposed_text": "I have no... Listen, I've got a... I don't know what's going on, but let me tell you something real quick.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 94,
+      "target_group": null,
+      "source_indices": [
+        91
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I don't even know if you're the police department or not, okay?",
+      "source_text": "I don't even know if you're the police department or not, okay?",
+      "proposed_text": "I don't even know if you're the police department or not, okay?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 95,
+      "target_group": null,
+      "source_indices": [
+        92
+      ],
+      "current_speaker": "Police Dispatcher 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 96,
+      "target_group": null,
+      "source_indices": [
+        93,
+        94
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "But I've got a... I've got a guy... Are you still there?",
+      "source_text": "But I've got a guy... Are you still there?",
+      "proposed_text": "But I've got a guy... Are you still there?",
+      "text_action": "review",
+      "similarity": 0.8736,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 97,
+      "target_group": null,
+      "source_indices": [
+        95
+      ],
+      "current_speaker": "Police Dispatcher 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "review",
+      "current_text": "Yeah, I'm here.",
+      "source_text": "Yeah, I'm here.",
+      "proposed_text": "Yeah, I'm here.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 98,
+      "target_group": null,
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I've got a guy on the phone calling me and saying that I've got sawdust all in my yard and he wants me to clean it up.",
+      "source_text": "I've got a guy on the phone calling me and saying that I've got sawdust on my yard and he wants me to clean it up.",
+      "proposed_text": "I've got a guy on the phone calling me and saying that I've got sawdust on my yard and he wants me to clean it up.",
+      "text_action": "review",
+      "similarity": 0.9739,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 99,
+      "target_group": null,
+      "source_indices": [
+        97
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "And he said his uncle told him where I lived.",
+      "source_text": "And he said his uncle told him where I lived.",
+      "proposed_text": "And he said his uncle told him where I lived.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 100,
+      "target_group": null,
+      "source_indices": [
+        98,
+        99
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "And then, you come on the phone, so I don't have a clue what's going on, but whatever it is, I sure would like- Is it?",
+      "source_text": "And then you come on the phone, so I don't have a clue what's going on. But whatever it is, I sure would like...",
+      "proposed_text": "And then you come on the phone, so I don't have a clue what's going on. But whatever it is, I sure would like...",
+      "text_action": "review",
+      "similarity": 0.9725,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 101,
+      "target_group": null,
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "Police Dispatcher 1",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "review",
+      "current_text": "Yeah, I don't know what causes it.",
+      "source_text": "Yeah, I don't know what causes it.",
+      "proposed_text": "Yeah, I don't know what causes it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 102,
+      "target_group": null,
+      "source_indices": [
+        101,
+        102,
+        103
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What I'm trying to say is I can't- Do you have any idea what's going on, who's calling me and telling me that my house needs to be cleaned up on the outside?",
+      "source_text": "What I'm trying to say is I can't... Do you have any idea what's going on? Who's calling me and telling me that my house needs to be cleaned up on the outside?",
+      "proposed_text": "What I'm trying to say is I can't- Do you have any idea what's going on, who's calling me and telling me that my house needs to be cleaned up on the outside?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 103,
+      "target_group": null,
+      "source_indices": [
+        104
+      ],
+      "current_speaker": "Police Dispatcher 2",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Police Dispatcher 2",
+      "speaker_action": "keep",
+      "current_text": "Police, can I help you?",
+      "source_text": "Police, can I help you?",
+      "proposed_text": "Police, can I help you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 104,
+      "target_group": null,
+      "source_indices": [
+        105
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Did you hear that?",
+      "source_text": "Did you hear that?",
+      "proposed_text": "Did you hear that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 105,
+      "target_group": null,
+      "source_indices": [
+        106
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 106,
+      "target_group": null,
+      "source_indices": [
+        107
+      ],
+      "current_speaker": "Police Dispatcher 2",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Police Dispatcher 2",
+      "speaker_action": "keep",
+      "current_text": "Police, can I help you?",
+      "source_text": "Police, can I help you?",
+      "proposed_text": "Police, can I help you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 107,
+      "target_group": null,
+      "source_indices": [
+        108
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Yes, are you in Ramsour?",
+      "source_text": "Yes, are you in Ramsour?",
+      "proposed_text": "Yes, are you in Ramsour?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 108,
+      "target_group": null,
+      "source_indices": [
+        109
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What police department is this?",
+      "source_text": "What police department is this?",
+      "proposed_text": "What police department is this?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 109,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Police Dispatcher 2",
+      "source_speaker": null,
+      "proposed_speaker": "Police Dispatcher 2",
+      "speaker_action": "keep",
+      "current_text": "I'm sorry?",
+      "source_text": null,
+      "proposed_text": "I'm sorry?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 110,
+      "target_group": null,
+      "source_indices": [
+        110
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What police department is this?",
+      "source_text": "What police department is this?",
+      "proposed_text": "What police department is this?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 111,
+      "target_group": null,
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Police Dispatcher 2",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Police Dispatcher 2",
+      "speaker_action": "keep",
+      "current_text": "This is Baton Rouge Police Department.",
+      "source_text": "This is Van Roos Police Department.",
+      "proposed_text": "This is Van Roos Police Department.",
+      "text_action": "review",
+      "similarity": 0.8732,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 112,
+      "target_group": null,
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Where's that at?",
+      "source_text": "Where's that at?",
+      "proposed_text": "Where's that at?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 113,
+      "target_group": null,
+      "source_indices": [
+        113
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "What state?",
+      "source_text": "What state?",
+      "proposed_text": "What state?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 114,
+      "target_group": null,
+      "source_indices": [
+        114
+      ],
+      "current_speaker": "Police Dispatcher 2",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Police Dispatcher 2",
+      "speaker_action": "keep",
+      "current_text": "Louisiana.",
+      "source_text": "Louisiana.",
+      "proposed_text": "Louisiana.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 115,
+      "target_group": null,
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I'm going to try to explain to you real quick what's happened, okay?",
+      "source_text": "I'm going to try to explain to you real quick what's happened, okay?",
+      "proposed_text": "I'm going to try to explain to you real quick what's happened, okay?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 116,
+      "target_group": null,
+      "source_indices": [
+        116,
+        117
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I got a call, and the guy's called my name, and he said he got my address from his uncle who's on the police department.",
+      "source_text": "I got a call, and the guy called my name, and he said he got my address from his uncle who's on the police department.",
+      "proposed_text": "I got a call, and the guy's called my name, and he said he got my address from his uncle who's on the police department.",
+      "text_action": "keep",
+      "similarity": 0.9914,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 117,
+      "target_group": null,
+      "source_indices": [
+        118
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "This is the craziest call I've ever heard.",
+      "source_text": "This is the craziest call I ever heard.",
+      "proposed_text": "This is the craziest call I ever heard.",
+      "text_action": "review",
+      "similarity": 0.962,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 118,
+      "target_group": null,
+      "source_indices": [
+        119
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "So he's saying, your house needs to be cleaned up.",
+      "source_text": "So he's saying, your house needs to be cleaned up.",
+      "proposed_text": "So he's saying, your house needs to be cleaned up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 119,
+      "target_group": null,
+      "source_indices": [
+        120
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I just moved down, down the street and I just wish you'd get it cleaned up.",
+      "source_text": "I just moved down the street, and I just wish you'd get it cleaned up.",
+      "proposed_text": "I just moved down the street, and I just wish you'd get it cleaned up.",
+      "text_action": "review",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 120,
+      "target_group": null,
+      "source_indices": [
+        121
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I have no clue what he's talking about.",
+      "source_text": "I have no clue what he's talking about.",
+      "proposed_text": "I have no clue what he's talking about.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 121,
+      "target_group": null,
+      "source_indices": [
+        122
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I got the cleanest house on the street, but here's where it's funny.",
+      "source_text": "I've got the cleanest house on the street, but here's where it's funny.",
+      "proposed_text": "I've got the cleanest house on the street, but here's where it's funny.",
+      "text_action": "review",
+      "similarity": 0.9778,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 122,
+      "target_group": null,
+      "source_indices": [
+        123,
+        124
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "So he keeps talking and all of a sudden another police department gets on the phone and says, police department, may I help you?",
+      "source_text": "So he keeps talking, and all of a sudden, another police department gets on the phone and says, Police department, may I help you?",
+      "proposed_text": "So he keeps talking and all of a sudden another police department gets on the phone and says, police department, may I help you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 123,
+      "target_group": null,
+      "source_indices": [
+        125
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Well, it's a police department in North Carolina.",
+      "source_text": "Well, it's a police department in North Carolina.",
+      "proposed_text": "Well, it's a police department in North Carolina.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 124,
+      "target_group": null,
+      "source_indices": [
+        126,
+        127
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Then as he's talking and no one comes on and says, this is you, police department, it switches from police department to police department.",
+      "source_text": "Then as he's talking, another one comes on and says, this is you, police department. And it switches from police department to police department.",
+      "proposed_text": "Then as he's talking, another one comes on and says, this is you, police department. And it switches from police department to police department.",
+      "text_action": "review",
+      "similarity": 0.96,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 125,
+      "target_group": null,
+      "source_indices": [
+        128
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "So I can't figure out what's going on.",
+      "source_text": "So I can't figure out what's going on.",
+      "proposed_text": "So I can't figure out what's going on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 126,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": null,
+      "proposed_text": "Yeah.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 127,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Monty, can you hear me?",
+      "source_text": null,
+      "proposed_text": "Monty, can you hear me?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 128,
+      "target_group": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah, I can hear you.",
+      "source_text": "Yeah, Monty, can you hear me yeah i can hear you this is ho-ho all right let's put our heads together and clean it up you got it um no i don't have it i'm not",
+      "proposed_text": "Yeah, I can hear you.",
+      "text_action": "group_review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 129,
+      "target_group": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "This is Hoho.",
+      "source_text": "Yeah, Monty, can you hear me yeah i can hear you this is ho-ho all right let's put our heads together and clean it up you got it um no i don't have it i'm not",
+      "proposed_text": "This is Hoho.",
+      "text_action": "group_review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 130,
+      "target_group": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "All right>",
+      "source_text": "Yeah, Monty, can you hear me yeah i can hear you this is ho-ho all right let's put our heads together and clean it up you got it um no i don't have it i'm not",
+      "proposed_text": "All right>",
+      "text_action": "group_review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 131,
+      "target_group": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Let's put our heads together and clean it up.",
+      "source_text": "Yeah, Monty, can you hear me yeah i can hear you this is ho-ho all right let's put our heads together and clean it up you got it um no i don't have it i'm not",
+      "proposed_text": "Let's put our heads together and clean it up.",
+      "text_action": "group_review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 132,
+      "target_group": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got it.",
+      "source_text": "Yeah, Monty, can you hear me yeah i can hear you this is ho-ho all right let's put our heads together and clean it up you got it um no i don't have it i'm not",
+      "proposed_text": "You got it.",
+      "text_action": "group_review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 133,
+      "target_group": [
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Um, no, I don't have it.",
+      "source_text": "Yeah, Monty, can you hear me yeah i can hear you this is ho-ho all right let's put our heads together and clean it up you got it um no i don't have it i'm not",
+      "proposed_text": "Um, no, I don't have it.",
+      "text_action": "group_review",
+      "similarity": 0.8696,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 134,
+      "target_group": [
+        134,
+        135,
+        136
+      ],
+      "source_indices": [
+        130
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "I'm not paying attention.",
+      "source_text": "paying attention come on if you want me to get a cleaner i can send you the bill you don't have",
+      "proposed_text": "I'm not paying attention.",
+      "text_action": "group_review",
+      "similarity": 0.8743,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 135,
+      "target_group": [
+        134,
+        135,
+        136
+      ],
+      "source_indices": [
+        130
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Come on.",
+      "source_text": "paying attention come on if you want me to get a cleaner i can send you the bill you don't have",
+      "proposed_text": "Come on.",
+      "text_action": "group_review",
+      "similarity": 0.8743,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 136,
+      "target_group": [
+        134,
+        135,
+        136
+      ],
+      "source_indices": [
+        130
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "If you want me to get a cleaner, I can send you the bill.",
+      "source_text": "paying attention come on if you want me to get a cleaner i can send you the bill you don't have",
+      "proposed_text": "If you want me to get a cleaner, I can send you the bill.",
+      "text_action": "group_review",
+      "similarity": 0.8743,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 137,
+      "target_group": null,
+      "source_indices": [
+        131
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You don't have to lift a finger if that's what you're worried about.",
+      "source_text": "to lift a finger if that's what you're worried about.",
+      "proposed_text": "to lift a finger if that's what you're worried about.",
+      "text_action": "review",
+      "similarity": 0.8739,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 138,
+      "target_group": [
+        138,
+        139,
+        140
+      ],
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Whatever you want to do.",
+      "source_text": "Whatever you want to do, I'm not having anything to do with you, okay?",
+      "proposed_text": "Whatever you want to do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 139,
+      "target_group": [
+        138,
+        139,
+        140
+      ],
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "I'm not having anything to do with you.",
+      "source_text": "Whatever you want to do, I'm not having anything to do with you, okay?",
+      "proposed_text": "I'm not having anything to do with you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 140,
+      "target_group": [
+        138,
+        139,
+        140
+      ],
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Whatever you want to do, I'm not having anything to do with you, okay?",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 141,
+      "target_group": null,
+      "source_indices": [
+        133
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Charlie, you're living in La La Land, is what you're doing.",
+      "source_text": "Charlie, you're living in La La Land is what you're doing.",
+      "proposed_text": "Charlie, you're living in La La Land, is what you're doing.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 142,
+      "target_group": null,
+      "source_indices": [
+        134
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "See, you need to understand who you're talking to.",
+      "source_text": "See, you need to understand who you're talking to.",
+      "proposed_text": "See, you need to understand who you're talking to.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 143,
+      "target_group": null,
+      "source_indices": [
+        135
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "You go from a guy named Monty to a guy named Charlie.",
+      "source_text": "You go from a guy named Monty to a guy named Charlie.",
+      "proposed_text": "You go from a guy named Monty to a guy named Charlie.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 144,
+      "target_group": null,
+      "source_indices": [
+        136
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "So who the hell do you want to talk to?",
+      "source_text": "So who the hell do you want to talk to?",
+      "proposed_text": "So who the hell do you want to talk to?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 145,
+      "target_group": null,
+      "source_indices": [
+        137
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I want to talk to you, Monty Myers.",
+      "source_text": "I want to talk to you, Monty Myers.",
+      "proposed_text": "I want to talk to you, Monty Myers.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 146,
+      "target_group": null,
+      "source_indices": [
+        138
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "You can't even tell me what my house looks like.",
+      "source_text": "You can't even tell me what my house looks like.",
+      "proposed_text": "You can't even tell me what my house looks like.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 147,
+      "target_group": null,
+      "source_indices": [
+        139
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You don't even know what you're talking about, all right?",
+      "source_text": "You don't even know what you're talking about, all right?",
+      "proposed_text": "You don't even know what you're talking about, all right?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 148,
+      "target_group": null,
+      "source_indices": [
+        140
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Don't you understand how stupid you are that you won't tell me what my house looks like?",
+      "source_text": "Don't you understand how stupid you are that you won't tell me what my house looks like?",
+      "proposed_text": "Don't you understand how stupid you are that you won't tell me what my house looks like?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 149,
+      "target_group": null,
+      "source_indices": [
+        141
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you want me to come down and get nimble with you?",
+      "source_text": "You want me to come down and get nimble with you?",
+      "proposed_text": "You want me to come down and get nimble with you?",
+      "text_action": "review",
+      "similarity": 0.9697,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 150,
+      "target_group": [
+        150,
+        151
+      ],
+      "source_indices": [
+        142
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Well, come on.",
+      "source_text": "Well, come on. Come on.",
+      "proposed_text": "Well, come on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 151,
+      "target_group": [
+        150,
+        151
+      ],
+      "source_indices": [
+        142
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_03",
+      "proposed_speaker": "Monty",
+      "speaker_action": "keep",
+      "current_text": "Come on.",
+      "source_text": "Well, come on. Come on.",
+      "proposed_text": "Come on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 152,
+      "target_group": null,
+      "source_indices": [
+        144
+      ],
+      "current_speaker": "Monty",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Boom, boom, boom, bye!",
+      "source_text": "Boom, boom, boom, bye.",
+      "proposed_text": "Boom, boom, boom, bye!",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 152,
+    "candidate_subtitles": 145,
+    "matched": 144,
+    "text_review": 32,
+    "text_group_review": 17,
+    "speaker_review": 14,
+    "review_flags_to_initialize": 152,
+    "alias_additions": 2,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

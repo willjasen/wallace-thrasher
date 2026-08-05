@@ -1,0 +1,2599 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:55:03.407590+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260723T005218Z",
+    "run_path": "analysis/whisper-webui/best-before-24/perma-tease/20260723T005218Z",
+    "audio_sha256": "362d4223a610baf3a87271a969d025a7627d07c7083784dfe8f1dd953ff0e47c",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "c2a4f47027d50104079da979cab741a94664fb2ab215f11713da51721129a1f1",
+    "manifest_sha256": "c663564020b8e23657691ad2f0ebda7734f5f9905cef3fbc1a43cbfef311c5bb"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Perma-Tease",
+    "track_slug": "perma-tease",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "3dc42b16cadfbfb3b76a5c04722bd4585606bea8b8e8e219f2855e23f612c698",
+    "subtitle_path": "jekyll/assets/json/best-before-24/perma-tease.json",
+    "subtitle_sha256": "8043bf46a148c4dbfd6b8a72ae215141e068933a14ccb401abcee7888ae47f2d",
+    "current_aliases": [],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "confidence": 0.9344,
+      "overlap_seconds": 97.099,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "confidence": 0.9052,
+      "overlap_seconds": 60.916,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "confidence": 0.4738,
+      "overlap_seconds": 8.894,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 2,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, yes.",
+      "source_text": "Hi, see here.",
+      "proposed_text": "Hi, see here.",
+      "text_action": "review",
+      "similarity": 0.4706,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": null,
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was interested in getting a hairpiece.",
+      "source_text": "Hi, yes. I was interested in getting a hairpiece.",
+      "proposed_text": "Hi, yes. I was interested in getting a hairpiece.",
+      "text_action": "review",
+      "similarity": 0.9176,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": null,
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yes, ma'am.",
+      "source_text": "Yes, ma'am.",
+      "proposed_text": "Yes, ma'am.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": null,
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do I need to wear a wig liner, like a cap underneath that you can hook the wig to, or can it go right onto my head?",
+      "source_text": "Do I need to wear a wig liner, like a cap underneath that you can hook the wig to, or can it go right onto my head?",
+      "proposed_text": "Do I need to wear a wig liner, like a cap underneath that you can hook the wig to, or can it go right onto my head?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Oh, I do.",
+      "source_text": "Oh, I do. Oh, I do. Oh, I do. Oh, I do.",
+      "proposed_text": "Oh, I do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Oh, I do.",
+      "source_text": "Oh, I do. Oh, I do. Oh, I do. Oh, I do.",
+      "proposed_text": "Oh, I do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Oh, I do.",
+      "source_text": "Oh, I do. Oh, I do. Oh, I do. Oh, I do.",
+      "proposed_text": "Oh, I do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Oh, I do.",
+      "source_text": "Oh, I do. Oh, I do. Oh, I do. Oh, I do.",
+      "proposed_text": "Oh, I do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you have the wig liner?",
+      "source_text": "Do you have the wig liner?",
+      "proposed_text": "Do you have the wig liner?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Are you talking, or this is a machine?",
+      "source_text": "Are you talking, or this is a machine?",
+      "proposed_text": "Are you talking, or this is a machine?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm talking to you.",
+      "source_text": "I'm talking to you.",
+      "proposed_text": "I'm talking to you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": null,
+      "source_indices": [
+        8,
+        9
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Because other people are talking too, so I'm not so sure how many people I'm talking to.",
+      "source_text": "Because other people are talking too, so I'm not so sure. How many people I'm talking to?",
+      "proposed_text": "Because other people are talking too, so I'm not so sure how many people I'm talking to.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": null,
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm a person trying to buy a wig from you.",
+      "source_text": "I'm a person trying to buy a wig from you.",
+      "proposed_text": "I'm a person trying to buy a wig from you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": null,
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "Woman 1",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "keep",
+      "current_text": "Yeah, you can come to store to look.",
+      "source_text": "Yeah, you can come to the store to look.",
+      "proposed_text": "Yeah, you can come to the store to look.",
+      "text_action": "review",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi.",
+      "source_text": "Hi.",
+      "proposed_text": "Hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [
+        15,
+        16,
+        17
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was looking for a wig with a skin part where it gives the illusion of skin where the hair is parted down the middle or off to the side.",
+      "source_text": "I was looking for a wig with a skin part where it gives the illusion of skin where the hair is parted down the middle or",
+      "proposed_text": "I was looking for a wig with a skin part where it gives the illusion of skin where the hair is parted down the middle or",
+      "text_action": "review",
+      "similarity": 0.9375,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "Woman 2",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi.",
+      "source_text": "Hi.",
+      "proposed_text": "Hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        21,
+        22
+      ],
+      "current_speaker": "Woman 2",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "You said giving an illusion of the skin part?",
+      "source_text": "Is it giving an illusion of the skin part?",
+      "proposed_text": "Is it giving an illusion of the skin part?",
+      "text_action": "review",
+      "similarity": 0.8706,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": null,
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": null,
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "Woman 2",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "No, we don't have that one.",
+      "source_text": "No, we don't have that one.",
+      "proposed_text": "No, we don't have that one.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": [
+        23,
+        24
+      ],
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay, do you have something with braids, like long hand braided layers that frame my face from the wig?",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": [
+        23,
+        24
+      ],
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you have something with braids, like long hand braided layers that frame my face from the wig?",
+      "source_text": "Okay, do you have something with braids, like long hand braided layers that frame my face from the wig?",
+      "proposed_text": "Do you have something with braids, like long hand braided layers that frame my face from the wig?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": [
+        25,
+        26
+      ],
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "Woman 2",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "That frames your face?",
+      "source_text": "That frames your face? I wouldn't know how your face actually looks.",
+      "proposed_text": "That frames your face?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": [
+        25,
+        26
+      ],
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "Woman 2",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Woman 1",
+      "speaker_action": "review",
+      "current_text": "I wouldn't know how your face actually looks.",
+      "source_text": "That frames your face? I wouldn't know how your face actually looks.",
+      "proposed_text": "I wouldn't know how your face actually looks.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        28,
+        29
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, it's round like an apple.",
+      "source_text": "It's round. Like an apple.",
+      "proposed_text": "It's round. Like an apple.",
+      "text_action": "review",
+      "similarity": 0.9412,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": null,
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": null,
+      "proposed_text": "Hello?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": null,
+      "source_indices": [
+        30
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "Hello?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hello wig store?",
+      "source_text": "Hello, wig store?",
+      "proposed_text": "Hello wig store?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": [
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        33,
+        34
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi.",
+      "source_text": "Hi. Yes. I was looking for a three-quarter wig.",
+      "proposed_text": "Hi.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": [
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        33,
+        34
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Hi. Yes. I was looking for a three-quarter wig.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": [
+        32,
+        33,
+        34
+      ],
+      "source_indices": [
+        33,
+        34
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was looking for a three quarter wig.",
+      "source_text": "Hi. Yes. I was looking for a three-quarter wig.",
+      "proposed_text": "I was looking for a three quarter wig.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": null,
+      "source_indices": [
+        35,
+        36
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I carried them, but I don't have any in the store.",
+      "source_text": "I carried them, but I don't have any",
+      "proposed_text": "I carried them, but I don't have any",
+      "text_action": "review",
+      "similarity": 0.8434,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": null,
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I'd have to order it for you.",
+      "source_text": "in the store. I'd have to order it for you.",
+      "proposed_text": "in the store. I'd have to order it for you.",
+      "text_action": "review",
+      "similarity": 0.8116,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": null,
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "It has to be matched to your hair.",
+      "source_text": "It has to be matched to your hair.",
+      "proposed_text": "It has to be matched to your hair.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "So that's something that you would have to order.",
+      "source_text": "So that's something that you would have to order.",
+      "proposed_text": "So that's something that you would have to order.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do you have anything gray-headed?",
+      "source_text": "Do you have anything gray-headed?",
+      "proposed_text": "Do you have anything gray-headed?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": null,
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Now what about a bounty of long hand-tied braids tied into my own hair?",
+      "source_text": "Now, what about a bounty of long hand-tied braids tied into my own hair?",
+      "proposed_text": "Now what about a bounty of long hand-tied braids tied into my own hair?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": null,
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I don't have that.",
+      "source_text": null,
+      "proposed_text": "I don't have that.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": null,
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No, I don't have that.",
+      "source_text": "No, I don't have that.",
+      "proposed_text": "No, I don't have that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": null,
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What do you got?",
+      "source_text": "What do you got?",
+      "proposed_text": "What do you got?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": null,
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I don't have anything with braids.",
+      "source_text": "I don't have anything with braids.",
+      "proposed_text": "I don't have anything with braids.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": null,
+      "source_indices": [
+        46
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay, now do you have something that will add a lot of volume without adding weight?",
+      "source_text": "Okay, now do you have something that will add a lot of volume without adding weight?",
+      "proposed_text": "Okay, now do you have something that will add a lot of volume without adding weight?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": null,
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Maybe to add overall fullness to the wig like a permatease?",
+      "source_text": "Maybe to add overall fullness to the wig, like a permatease?",
+      "proposed_text": "Maybe to add overall fullness to the wig like a permatease?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Some of the wigs come with the permatease already in them.",
+      "source_text": "Some of the wigs come with the permatease already in them.",
+      "proposed_text": "Some of the wigs come with the permatease already in them.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": null,
+      "source_indices": [
+        49,
+        50
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "You just have to pick out the kind of, you know, you got to look and, you know, and find what you're looking for.",
+      "source_text": "You just have to pick out the kind of, you know, you've got to look and, you know, and find what you're looking for.",
+      "proposed_text": "You just have to pick out the kind of, you know, you've got to look and, you know, and find what you're looking for.",
+      "text_action": "review",
+      "similarity": 0.9863,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": null,
+      "source_indices": [
+        51
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And you got a soft touch, right?",
+      "source_text": "And you've got a soft touch, right?",
+      "proposed_text": "And you've got a soft touch, right?",
+      "text_action": "review",
+      "similarity": 0.9524,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": null,
+      "source_indices": [
+        52
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "A soft touch wig?",
+      "source_text": "A soft touch wig?",
+      "proposed_text": "A soft touch wig?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": null,
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Is that a brand?",
+      "source_text": "Is that a brand?",
+      "proposed_text": "Is that a brand?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": null,
+      "source_indices": [
+        54
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I don't know what you're talking about.",
+      "source_text": "I don't know what you're talking about.",
+      "proposed_text": "I don't know what you're talking about.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": null,
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "When you put the wig onto my head.",
+      "source_text": "When you put the wig onto my head.",
+      "proposed_text": "When you put the wig onto my head.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": [
+        55,
+        56
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Oh, okay.",
+      "source_text": "Okay, what about it?",
+      "proposed_text": "Oh, okay.",
+      "text_action": "group_review",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": [
+        55,
+        56
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "What about it?",
+      "source_text": "Okay, what about it?",
+      "proposed_text": "What about it?",
+      "text_action": "group_review",
+      "similarity": 0.9231,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Can you glue it onto my head?",
+      "source_text": "Can you glue it onto my head?",
+      "proposed_text": "Can you glue it onto my head?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": null,
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No, I don't do any installs.",
+      "source_text": "No, I don't do any installs.",
+      "proposed_text": "No, I don't do any installs.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You have to go, You got a soft touch, or touch, or touch?",
+      "source_text": "You've got a soft touch or touch or No, I don't do any installs. You have to go. You got a soft touch or touch or touch or.",
+      "proposed_text": "You've got a soft touch or touch or No, I don't do any installs. You have to go. You got a soft touch or touch or touch or.",
+      "text_action": "review",
+      "similarity": 0.6163,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        62
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "I don't.",
+      "source_text": "I don't.",
+      "proposed_text": "I don't.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": [
+        61,
+        62
+      ],
+      "source_indices": [
+        63
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No, no.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": [
+        61,
+        62
+      ],
+      "source_indices": [
+        63
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No, no.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": null,
+      "source_indices": [
+        64
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "You better not!",
+      "source_text": "You better not.",
+      "proposed_text": "You better not!",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        64,
+        65
+      ],
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Can you glue it onto my head?",
+      "source_text": "Can you glue it onto my head or onto the.",
+      "proposed_text": "Can you glue it onto my head?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": [
+        64,
+        65
+      ],
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Or onto the...",
+      "source_text": "Can you glue it onto my head or onto the.",
+      "proposed_text": "Or onto the...",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": [
+        66,
+        67
+      ],
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No!",
+      "source_text": "No, no.",
+      "proposed_text": "No!",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": [
+        66,
+        67
+      ],
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No!",
+      "source_text": "No, no.",
+      "proposed_text": "No!",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Wig liner?",
+      "source_text": null,
+      "proposed_text": "Wig liner?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": null,
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No, I don't do that.",
+      "source_text": "No, I don't do that.",
+      "proposed_text": "No, I don't do that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": null,
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I've got my own wig liner.",
+      "source_text": "I've got my own wig liner.",
+      "proposed_text": "I've got my own wig liner.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": null,
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "It doesn't matter.",
+      "source_text": "It doesn't matter.",
+      "proposed_text": "It doesn't matter.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": null,
+      "source_indices": [
+        71
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "All I do is sell wigs, but I do not install them for you.",
+      "source_text": "All I do is sell wigs, but I do not install them for",
+      "proposed_text": "All I do is sell wigs, but I do not install them for",
+      "text_action": "review",
+      "similarity": 0.9623,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": [
+        73,
+        74
+      ],
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Would you deliver the wigs, please?",
+      "source_text": "you. Would you deliver the wigs, please? Where do you live? I live in Clackamas, and then",
+      "proposed_text": "Would you deliver the wigs, please?",
+      "text_action": "group_review",
+      "similarity": 0.7556,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": [
+        73,
+        74
+      ],
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Where do you live?",
+      "source_text": "you. Would you deliver the wigs, please? Where do you live? I live in Clackamas, and then",
+      "proposed_text": "Where do you live?",
+      "text_action": "group_review",
+      "similarity": 0.7556,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": [
+        75,
+        76
+      ],
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "review",
+      "current_text": "I live in Clackamas and then I can just pick whichever ones I choose.",
+      "source_text": "I can just pick whichever ones I choose. No, I don't do that. Only thing, you pick out",
+      "proposed_text": "I live in Clackamas and then I can just pick whichever ones I choose.",
+      "text_action": "group_review",
+      "similarity": 0.6864,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": [
+        75,
+        76
+      ],
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No, I don't do that.",
+      "source_text": "I can just pick whichever ones I choose. No, I don't do that. Only thing, you pick out",
+      "proposed_text": "No, I don't do that.",
+      "text_action": "group_review",
+      "similarity": 0.6864,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": [
+        77,
+        78
+      ],
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Only thing, you pick out the wig and I can ship it to you, but I wouldn't drive to Clackamas.",
+      "source_text": "the wig, and I can ship it to you, but I wouldn't drive to Clackamas. But you'll glue it onto my head, right?",
+      "proposed_text": "Only thing, you pick out the wig and I can ship it to you, but I wouldn't drive to Clackamas.",
+      "text_action": "group_review",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": [
+        77,
+        78
+      ],
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "review",
+      "current_text": "But you'll glue it onto my head, right?",
+      "source_text": "the wig, and I can ship it to you, but I wouldn't drive to Clackamas. But you'll glue it onto my head, right?",
+      "proposed_text": "But you'll glue it onto my head, right?",
+      "text_action": "group_review",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": null,
+      "source_indices": [
+        75
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": null,
+      "source_indices": [
+        76
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Head, right?",
+      "source_text": "Head, right?",
+      "proposed_text": "Head, right?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": null,
+      "source_indices": [
+        77
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Head, right?",
+      "source_text": "Head, right?",
+      "proposed_text": "Head, right?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": null,
+      "source_indices": [
+        78
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": null,
+      "source_indices": [
+        79
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Oh no.",
+      "source_text": "Oh, no.",
+      "proposed_text": "Oh no.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": null,
+      "source_indices": [
+        80
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": null,
+      "source_indices": [
+        81
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh no.",
+      "source_text": "Oh, no.",
+      "proposed_text": "Oh no.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": null,
+      "source_indices": [
+        82
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": null,
+      "source_indices": [
+        83
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh no.",
+      "source_text": "Oh, no.",
+      "proposed_text": "Oh no.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 88,
+      "target_group": null,
+      "source_indices": [
+        84
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh no.",
+      "source_text": "Oh, no.",
+      "proposed_text": "Oh no.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 89,
+      "target_group": null,
+      "source_indices": [
+        85
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I don't do installs.",
+      "source_text": "I don't do installs.",
+      "proposed_text": "I don't do installs.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 90,
+      "target_group": null,
+      "source_indices": [
+        87
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "You have to have someone else to do that.",
+      "source_text": "You have to have someone else to do that.",
+      "proposed_text": "You have to have someone else to do that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 91,
+      "target_group": null,
+      "source_indices": [
+        88
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I don't do that.",
+      "source_text": "I don't do that.",
+      "proposed_text": "I don't do that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 92,
+      "target_group": null,
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay, now, will you tease the wig?",
+      "source_text": "Okay, now, will you tease the wig?",
+      "proposed_text": "Okay, now, will you tease the wig?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 93,
+      "target_group": null,
+      "source_indices": [
+        90
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "No, I don't do that.",
+      "source_text": "No, I don't do that.",
+      "proposed_text": "No, I don't do that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 94,
+      "target_group": null,
+      "source_indices": [
+        91
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I don't do any of that.",
+      "source_text": "I don't do any of that.",
+      "proposed_text": "I don't do any of that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 95,
+      "target_group": null,
+      "source_indices": [
+        92
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What I need is one ear to stick out on one side, but the other side is completely covered by the wig.",
+      "source_text": "What I need is one ear to stick out on one side, but the other side is completely covered by the wig.",
+      "proposed_text": "What I need is one ear to stick out on one side, but the other side is completely covered by the wig.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 96,
+      "target_group": null,
+      "source_indices": [
+        93
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Okay, pick out that style of wig.",
+      "source_text": "Okay, pick out that style of wig.",
+      "proposed_text": "Okay, pick out that style of wig.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 97,
+      "target_group": null,
+      "source_indices": [
+        94
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay, you got that?",
+      "source_text": "Okay, you got that?",
+      "proposed_text": "Okay, you got that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 98,
+      "target_group": null,
+      "source_indices": [
+        95
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got that?",
+      "source_text": "You got that?",
+      "proposed_text": "You got that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 99,
+      "target_group": null,
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got that?",
+      "source_text": "You got that?",
+      "proposed_text": "You got that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 100,
+      "target_group": null,
+      "source_indices": [
+        97
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got that?",
+      "source_text": "You got that?",
+      "proposed_text": "You got that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 101,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh.",
+      "source_text": null,
+      "proposed_text": "Oh.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 102,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh.",
+      "source_text": null,
+      "proposed_text": "Oh.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 103,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh.",
+      "source_text": null,
+      "proposed_text": "Oh.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 104,
+      "target_group": null,
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How much is it?",
+      "source_text": "How much is it?",
+      "proposed_text": "How much is it?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 105,
+      "target_group": [
+        105,
+        106
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "You have to pick out a wig.",
+      "source_text": "You have to pick out a wig. The wig starts at anywhere from $100 and go up to $2,000.",
+      "proposed_text": "You have to pick out a wig.",
+      "text_action": "group_review",
+      "similarity": 0.7644,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 106,
+      "target_group": [
+        105,
+        106
+      ],
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "The wigs start at anywhere from a hundred dollars and go up to two thousand dollars.",
+      "source_text": "You have to pick out a wig. The wig starts at anywhere from $100 and go up to $2,000.",
+      "proposed_text": "The wigs start at anywhere from a hundred dollars and go up to two thousand dollars.",
+      "text_action": "group_review",
+      "similarity": 0.7644,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 107,
+      "target_group": null,
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Are you all gray-headed up there?",
+      "source_text": "Are you all gray-headed up there?",
+      "proposed_text": "Are you all gray-headed up there?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 108,
+      "target_group": null,
+      "source_indices": [
+        103
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Okay, I'm gonna have to hang up.",
+      "source_text": "I'm going to have to hang up.",
+      "proposed_text": "I'm going to have to hang up.",
+      "text_action": "review",
+      "similarity": 0.7931,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 109,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What's the matter?",
+      "source_text": null,
+      "proposed_text": "What's the matter?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 110,
+      "target_group": null,
+      "source_indices": [
+        104
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What's the matter?",
+      "source_text": "What's the matter?",
+      "proposed_text": "What's the matter?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 111,
+      "target_group": null,
+      "source_indices": [
+        105
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What's the matter?",
+      "source_text": "What's the matter?",
+      "proposed_text": "What's the matter?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 112,
+      "target_group": null,
+      "source_indices": [
+        106
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Let me just give you my address, okay?",
+      "source_text": "Let me just give you my address, okay?",
+      "proposed_text": "Let me just give you my address, okay?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 113,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": null,
+      "proposed_text": "Okay.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 114,
+      "target_group": null,
+      "source_indices": [
+        107
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "For delivery?",
+      "source_text": "For delivery?",
+      "proposed_text": "For delivery?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 115,
+      "target_group": null,
+      "source_indices": [
+        108
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "How can I deliver you something you haven't even picked out anything?",
+      "source_text": "How can I deliver you something you haven't even picked out anything?",
+      "proposed_text": "How can I deliver you something you haven't even picked out anything?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 116,
+      "target_group": null,
+      "source_indices": [
+        109
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, it's the gray-headed one with braids and the skin part in the middle.",
+      "source_text": "Well, it's the gray-headed one with braids and the skin part in the middle.",
+      "proposed_text": "Well, it's the gray-headed one with braids and the skin part in the middle.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 117,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know?",
+      "source_text": null,
+      "proposed_text": "You know?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 118,
+      "target_group": null,
+      "source_indices": [
+        110
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "What's your name, sir?",
+      "source_text": "What's your name, sir?",
+      "proposed_text": "What's your name, sir?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 119,
+      "target_group": null,
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "review",
+      "current_text": "What's your name?",
+      "source_text": "What's your name?",
+      "proposed_text": "What's your name?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 120,
+      "target_group": null,
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "My name's Merlin Fawcett.",
+      "source_text": "My name's Merlin Fawcett.",
+      "proposed_text": "My name's Merlin Fawcett.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 121,
+      "target_group": null,
+      "source_indices": [
+        113,
+        114
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Okay, Merlin, again, let me say this.",
+      "source_text": "Okay, Merlin. Again, let me say this.",
+      "proposed_text": "Okay, Merlin, again, let me say this.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 122,
+      "target_group": null,
+      "source_indices": [
+        115,
+        116
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "I do not have, there's not a, put that down.",
+      "source_text": "I do not have... Put that down.",
+      "proposed_text": "I do not have... Put that down.",
+      "text_action": "review",
+      "similarity": 0.7941,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 123,
+      "target_group": null,
+      "source_indices": [
+        117
+      ],
+      "current_speaker": "Wig Store Woman 3",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wig Store Woman 3",
+      "speaker_action": "keep",
+      "current_text": "Hey, come over here!",
+      "source_text": "Hey, come over here.",
+      "proposed_text": "Hey, come over here!",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 123,
+    "candidate_subtitles": 118,
+    "matched": 113,
+    "text_review": 14,
+    "text_group_review": 10,
+    "speaker_review": 25,
+    "review_flags_to_initialize": 122,
+    "alias_additions": 0,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

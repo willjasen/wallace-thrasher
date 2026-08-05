@@ -1,91 +1,18 @@
 ---
-layout: base
-title: Whisper Data
-description: Browse the approved Whisper-assisted changes that have entered the stretchie catalogue.
+layout: none
+title: Transcription & Whisper Data
 permalink: /whisper-data/
+sitemap: false
 ---
-
-{% assign whisper_merges = site.data.whisper_merges | default: empty %}
-{% assign reviewed_total = 0 %}
-{% assign text_total = 0 %}
-{% assign speaker_total = 0 %}
-{% assign metadata_total = 0 %}
-{% for record in whisper_merges %}
-  {% assign reviewed_total = reviewed_total | plus: record.applied.review_flags_added %}
-  {% assign text_total = text_total | plus: record.applied.text_changed %}
-  {% assign speaker_total = speaker_total | plus: record.applied.speakers_changed %}
-  {% assign alias_count = record.applied.aliases | size %}
-  {% assign establishment_count = record.applied.establishments | size %}
-  {% assign metadata_total = metadata_total | plus: alias_count | plus: establishment_count %}
-{% endfor %}
-
-<link rel="stylesheet" href="{{ '/assets/css/whisper-data.css' | relative_url }}">
-
-<div class="whisper-data">
-  <header class="whisper-hero">
-    <div>
-      <p class="whisper-eyebrow">Whisper-assisted catalogue history</p>
-      <h1>Whisper Data</h1>
-      <p class="whisper-intro">A public record of the reviewed changes that entered stretchie after local speech-to-text analysis.</p>
-    </div>
-    <div class="whisper-seal" aria-hidden="true"><span>W</span><small>DATA</small></div>
-  </header>
-
-  <section class="whisper-stats" aria-label="Whisper merge summary">
-    <article><strong>{{ whisper_merges | size }}</strong><span>merge records</span></article>
-    <article><strong>{{ reviewed_total }}</strong><span>review flags added</span></article>
-    <article><strong>{{ text_total }}</strong><span>text changes</span></article>
-    <article><strong>{{ speaker_total }}</strong><span>speaker changes</span></article>
-    <article><strong>{{ metadata_total }}</strong><span>metadata additions</span></article>
-  </section>
-
-  <section class="whisper-explainer" aria-labelledby="whisper-process-title">
-    <div>
-      <p class="whisper-kicker">What this data means</p>
-      <h2 id="whisper-process-title">Analyze → compare → review → publish</h2>
-      <p>Whisper creates a local draft transcript and diarized speaker labels. Those results are compared with the repository, but the repository stays authoritative until a proposed change is approved. This page records only the outcome of a real merge.</p>
-    </div>
-    <div class="whisper-boundary">
-      <strong>Not published here</strong>
-      <p>Audio, raw model responses, draft transcripts, line-by-line comparisons, hashes, backups, and local receipts remain outside the public site.</p>
-    </div>
-  </section>
-
-  <section class="whisper-records" aria-labelledby="whisper-records-title">
-    <div class="whisper-section-heading">
-      <div><p class="whisper-kicker">Merge history</p><h2 id="whisper-records-title">Approved catalogue updates</h2></div>
-      <p>Newest first</p>
-    </div>
-    {% if whisper_merges.size > 0 %}
-      <div class="whisper-record-list">
-        {% for record in whisper_merges %}
-          {% assign aliases = record.applied.aliases | default: empty %}
-          {% assign establishments = record.applied.establishments | default: empty %}
-          <article class="whisper-record">
-            <div class="whisper-record-main">
-              <p class="whisper-kicker">{{ record.album.title }}</p>
-              <h3><a href="{{ site.baseurl }}/tracks/{{ record.album.slug }}/{{ record.track.slug }}/">{{ record.track.title }}</a></h3>
-              <p class="whisper-record-meta">
-                <time datetime="{{ record.merged_at }}">{{ record.merged_at | date: "%B %-d, %Y at %-I:%M %p UTC" }}</time>
-                <span>{{ record.source.model | default: "Whisper model not recorded" }}</span>
-              </p>
-            </div>
-            <dl class="whisper-changes">
-              <div><dt>Reviewed</dt><dd>{{ record.applied.review_flags_added }}</dd></div>
-              <div><dt>Text</dt><dd>{{ record.applied.text_changed }}</dd></div>
-              <div><dt>Speakers</dt><dd>{{ record.applied.speakers_changed }}</dd></div>
-            </dl>
-            {% if aliases.size > 0 or establishments.size > 0 %}
-              <div class="whisper-additions">
-                {% for alias in aliases %}<span>Alias · {{ alias }}</span>{% endfor %}
-                {% for establishment in establishments %}<span>Establishment · {{ establishment }}</span>{% endfor %}
-              </div>
-            {% endif %}
-          </article>
-        {% endfor %}
-      </div>
-    {% else %}
-      <div class="whisper-empty"><strong>No public merge records yet.</strong><span>Approved Whisper-assisted merges will appear here.</span></div>
-    {% endif %}
-  </section>
-</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ '/transcription-data/' | relative_url }}">
+    <link rel="canonical" href="{{ '/transcription-data/' | absolute_url }}">
+    <title>Transcription &amp; Whisper Data</title>
+  </head>
+  <body>
+    <p>This archive has moved to <a href="{{ '/transcription-data/' | relative_url }}">Transcription &amp; Whisper Data</a>.</p>
+  </body>
+</html>

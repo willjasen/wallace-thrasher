@@ -1,0 +1,3622 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:55:21.029703+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260723T020045Z",
+    "run_path": "analysis/whisper-webui/best-before-24/body-art-flipout/20260723T020045Z",
+    "audio_sha256": "0b8f1c14a958a8df8acdd62b33d81a5644ae923fd335a5d627c78b50003644c5",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "bf637bd5027d9cd6751a900f9ff747aff53d80a6ec37d353c23c669168f030c3",
+    "manifest_sha256": "4a34da6517489bcb15c0312c1b6782f9e12f3a968d462285647ae68dba1c2c68"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Body Art Flipout",
+    "track_slug": "body-art-flipout",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "3dc42b16cadfbfb3b76a5c04722bd4585606bea8b8e8e219f2855e23f612c698",
+    "subtitle_path": "jekyll/assets/json/best-before-24/body-art-flipout.json",
+    "subtitle_sha256": "42c507f2b54b0f280d3e3e4622f5e0cb56ff1e297c151a1a90ddda09dcc65d2c",
+    "current_aliases": [
+      "Jim"
+    ],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "None",
+      "proposed_speaker": null,
+      "confidence": 0.0,
+      "overlap_seconds": 0.0,
+      "action": "keep"
+    },
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "confidence": 0.9763,
+      "overlap_seconds": 140.902,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "confidence": 0.8391,
+      "overlap_seconds": 14.91,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "confidence": 0.9504,
+      "overlap_seconds": 108.799,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "confidence": 0.9829,
+      "overlap_seconds": 1.44,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "confidence": 0.889,
+      "overlap_seconds": 61.929,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [
+      {
+        "value": "Guy",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      }
+    ],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Tattoo.",
+      "source_text": "Tattoo.",
+      "proposed_text": "Tattoo.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": [
+        2,
+        3
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, I'm Barry Feeley.",
+      "source_text": "Hi, I'm Barry Feely. How's yourself?",
+      "proposed_text": "Hi, I'm Barry Feeley.",
+      "text_action": "group_review",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": [
+        2,
+        3
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How's yourself?",
+      "source_text": "Hi, I'm Barry Feely. How's yourself?",
+      "proposed_text": "How's yourself?",
+      "text_action": "group_review",
+      "similarity": 0.9851,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": null,
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "I'm good.",
+      "source_text": "I'm good.",
+      "proposed_text": "I'm good.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": [
+        5,
+        6
+      ],
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "All right.",
+      "source_text": "Alright. I was interested in doing a new tattoo project.",
+      "proposed_text": "All right.",
+      "text_action": "group_review",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": [
+        5,
+        6
+      ],
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was interested in doing a new tattoo project.",
+      "source_text": "Alright. I was interested in doing a new tattoo project.",
+      "proposed_text": "I was interested in doing a new tattoo project.",
+      "text_action": "group_review",
+      "similarity": 0.9818,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": null,
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That was the reason for my call.",
+      "source_text": "That was the reason for my call.",
+      "proposed_text": "That was the reason for my call.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": [
+        8,
+        9
+      ],
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay. So what do you have in mind?",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": [
+        8,
+        9
+      ],
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "So what do you have in mind?",
+      "source_text": "Okay. So what do you have in mind?",
+      "proposed_text": "So what do you have in mind?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I am going to be morphing pretty soon, and that's what I'm looking to capture with your tattooing.",
+      "source_text": "I am going to be morphing pretty soon, and that's what I'm looking to capture with your tattooing.",
+      "proposed_text": "I am going to be morphing pretty soon, and that's what I'm looking to capture with your tattooing.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "So you have to give me a little bit more information, man, because I'm trying to figure out what it is that you may or may not, you know, be seeing in your mind.",
+      "source_text": "i'm looking to capture with your tattooing okay so um you have to give me a little bit more information man because i'm trying to figure out what it is that you may or may not you know be",
+      "proposed_text": "i'm looking to capture with your tattooing okay so um you have to give me a little bit more information man because i'm trying to figure out what it is that you may or may not you know be",
+      "text_action": "review",
+      "similarity": 0.793,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "that would be a good representation of that.",
+      "source_text": "seeing in your mind that would be a good representation of that oh okay sure you know",
+      "proposed_text": "that would be a good representation of that.",
+      "text_action": "group_review",
+      "similarity": 0.7943,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "review",
+      "current_text": "Oh, okay.",
+      "source_text": "seeing in your mind that would be a good representation of that oh okay sure you know",
+      "proposed_text": "Oh, okay.",
+      "text_action": "group_review",
+      "similarity": 0.7943,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "review",
+      "current_text": "Sure.",
+      "source_text": "seeing in your mind that would be a good representation of that oh okay sure you know",
+      "proposed_text": "Sure.",
+      "text_action": "group_review",
+      "similarity": 0.7943,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": [
+        16,
+        17,
+        18
+      ],
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "review",
+      "current_text": "You know, morphing, progression, development, my growth.",
+      "source_text": "morphing progression okay development my growth. Right. I understood that, but I mean, usually when people",
+      "proposed_text": "You know, morphing, progression, development, my growth.",
+      "text_action": "group_review",
+      "similarity": 0.7458,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": [
+        16,
+        17,
+        18
+      ],
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Right.",
+      "source_text": "morphing progression okay development my growth. Right. I understood that, but I mean, usually when people",
+      "proposed_text": "Right.",
+      "text_action": "group_review",
+      "similarity": 0.7458,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": [
+        16,
+        17,
+        18
+      ],
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "I understood that.",
+      "source_text": "morphing progression okay development my growth. Right. I understood that, but I mean, usually when people",
+      "proposed_text": "I understood that.",
+      "text_action": "group_review",
+      "similarity": 0.7458,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": [
+        19,
+        20
+      ],
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "But I mean, usually when people give me a call, they kind of have an idea of what represents that to them.",
+      "source_text": "give me a call, they kind of have an idea of what represents that to them. You know, my ebb,",
+      "proposed_text": "But I mean, usually when people give me a call, they kind of have an idea of what represents that to them.",
+      "text_action": "group_review",
+      "similarity": 0.8073,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": [
+        19,
+        20
+      ],
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "review",
+      "current_text": "You know, my ebb, the ripple.",
+      "source_text": "give me a call, they kind of have an idea of what represents that to them. You know, my ebb,",
+      "proposed_text": "You know, my ebb, the ripple.",
+      "text_action": "group_review",
+      "similarity": 0.8073,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "the ripple. Okay. You know, the whole presentation. Okay. Whether that takes the form of a grid or a line or a cellular matrix on my membrane.",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.9579,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know, the whole presentation.",
+      "source_text": "the ripple. Okay. You know, the whole presentation. Okay. Whether that takes the form of a grid or a line or a cellular matrix on my membrane.",
+      "proposed_text": "You know, the whole presentation.",
+      "text_action": "group_review",
+      "similarity": 0.9579,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "the ripple. Okay. You know, the whole presentation. Okay. Whether that takes the form of a grid or a line or a cellular matrix on my membrane.",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.9579,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Whether that takes the form of a grid or a line or a cellular matrix on my membrane.",
+      "source_text": "the ripple. Okay. You know, the whole presentation. Okay. Whether that takes the form of a grid or a line or a cellular matrix on my membrane.",
+      "proposed_text": "Whether that takes the form of a grid or a line or a cellular matrix on my membrane.",
+      "text_action": "group_review",
+      "similarity": 0.9579,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": null,
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "What I would need is some kind of visual representation of what you're thinking.",
+      "source_text": "What I would need is some kind of visual representation of what you're thinking.",
+      "proposed_text": "What I would need is some kind of visual representation of what you're thinking.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Sure.",
+      "source_text": "Sure.",
+      "proposed_text": "Sure.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": null,
+      "source_indices": [
+        16,
+        17,
+        18
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I mean, it'll take a steady hand with trapeze precision.",
+      "source_text": "I mean, it'll take a steady hand. Of course. With trapeze precision.",
+      "proposed_text": "I mean, it'll take a steady hand. Of course. With trapeze precision.",
+      "text_action": "review",
+      "similarity": 0.9153,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know what I'm saying?",
+      "source_text": "You know what I'm saying.",
+      "proposed_text": "You know what I'm saying?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, do y'all use squid ink up there?",
+      "source_text": "Hey, do you all use squid ink up there?",
+      "proposed_text": "Hey, do you all use squid ink up there?",
+      "text_action": "review",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": null,
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I mean it is luminous, so I wanted to try it out.",
+      "source_text": "I mean, it is luminous, so I wanted to try it out.",
+      "proposed_text": "I mean it is luminous, so I wanted to try it out.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": null,
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "The only thing I have that even vaguely fits that description is black light reactive ink.",
+      "source_text": "The only thing I have that even vaguely fits that description is blacklight reactive ink.",
+      "proposed_text": "The only thing I have that even vaguely fits that description is black light reactive ink.",
+      "text_action": "keep",
+      "similarity": 0.9944,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": null,
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "But that's only under a black light source.",
+      "source_text": "But that's only under a blacklight source.",
+      "proposed_text": "But that's only under a blacklight source.",
+      "text_action": "review",
+      "similarity": 0.988,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": null,
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You can't do that kind of ink when you're taking a sulfonylurea.",
+      "source_text": "You can't do that kind of ink when you're taking a sulfonylurea.",
+      "proposed_text": "You can't do that kind of ink when you're taking a sulfonylurea.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": null,
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Never.",
+      "source_text": "Never.",
+      "proposed_text": "Never.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": null,
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "I have no idea what a sulfonylurea is.",
+      "source_text": "I have no idea what a sulfonylurea is.",
+      "proposed_text": "I have no idea what a sulfonylurea is.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": null,
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, do you guys ever use invisible ink up 'ere?",
+      "source_text": "Hey, do you guys ever use invisible ink, Upper?",
+      "proposed_text": "Hey, do you guys ever use invisible ink, Upper?",
+      "text_action": "review",
+      "similarity": 0.9556,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": null,
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "No such thing.",
+      "source_text": "No such thing.",
+      "proposed_text": "No such thing.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": null,
+      "source_indices": [
+        30
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Um, hey, could you dye my skin at all?",
+      "source_text": "Hey, could you dye my skin",
+      "proposed_text": "Hey, could you dye my skin",
+      "text_action": "review",
+      "similarity": 0.8333,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [
+        31,
+        32
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Maybe with a resin or shellac?",
+      "source_text": "at all? Maybe with a resin or shellac?",
+      "proposed_text": "at all? Maybe with a resin or shellac?",
+      "text_action": "review",
+      "similarity": 0.8923,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": [
+        42,
+        43
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "No.",
+      "source_text": "No. You know what, man?",
+      "proposed_text": "No.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": [
+        42,
+        43
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "You know what, man?",
+      "source_text": "No. You know what, man?",
+      "proposed_text": "You know what, man?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": null,
+      "source_indices": [
+        34
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "I'm gonna end this here.",
+      "source_text": "I'm going to end this here.",
+      "proposed_text": "I'm going to end this here.",
+      "text_action": "review",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": null,
+      "source_indices": [
+        35
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Maybe in maroon?",
+      "source_text": "Maybe in Marin.",
+      "proposed_text": "Maybe in Marin.",
+      "text_action": "review",
+      "similarity": 0.8966,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": null,
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Tattoo?",
+      "source_text": "That too.",
+      "proposed_text": "That too.",
+      "text_action": "review",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": null,
+      "source_indices": [
+        37,
+        38
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I was interested in that invisible ink you all got up 'ere.",
+      "source_text": "Yeah, I was interested in that invisible ink you all got up there.",
+      "proposed_text": "Yeah, I was interested in that invisible ink you all got up there.",
+      "text_action": "review",
+      "similarity": 0.9764,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Dude, I've got your phone number, your address, and everything else.",
+      "source_text": "Dude, I've got your phone number, your address,",
+      "proposed_text": "Dude, I've got your phone number, your address,",
+      "text_action": "review",
+      "similarity": 0.8148,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Stop calling my business or bad things are gonna happen.",
+      "source_text": "and everything else. Stop calling my business or bad things are going to happen.",
+      "proposed_text": "and everything else. Stop calling my business or bad things are going to happen.",
+      "text_action": "review",
+      "similarity": 0.797,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "tattoo.",
+      "source_text": "Tattoo? Hi, my name's Jim. Hi. Yeah, my dad got some tattooing done there, and I was interested",
+      "proposed_text": "tattoo.",
+      "text_action": "group_review",
+      "similarity": 0.9312,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, my name is Jim.",
+      "source_text": "Tattoo? Hi, my name's Jim. Hi. Yeah, my dad got some tattooing done there, and I was interested",
+      "proposed_text": "Hi, my name is Jim.",
+      "text_action": "group_review",
+      "similarity": 0.9312,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi.",
+      "source_text": "Tattoo? Hi, my name's Jim. Hi. Yeah, my dad got some tattooing done there, and I was interested",
+      "proposed_text": "Hi.",
+      "text_action": "group_review",
+      "similarity": 0.9312,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, my dad got some tattooing done there.",
+      "source_text": "Tattoo? Hi, my name's Jim. Hi. Yeah, my dad got some tattooing done there, and I was interested",
+      "proposed_text": "Yeah, my dad got some tattooing done there.",
+      "text_action": "group_review",
+      "similarity": 0.9312,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I was interested in coming.",
+      "source_text": "Tattoo? Hi, my name's Jim. Hi. Yeah, my dad got some tattooing done there, and I was interested",
+      "proposed_text": "And I was interested in coming.",
+      "text_action": "group_review",
+      "similarity": 0.9312,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": [
+        55,
+        56
+      ],
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "review",
+      "current_text": "and now myself.",
+      "source_text": "in coming in now myself. Okay, so what is it that you're thinking about getting?",
+      "proposed_text": "and now myself.",
+      "text_action": "group_review",
+      "similarity": 0.9103,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": [
+        55,
+        56
+      ],
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Okay, so what is it that you're thinking about getting?",
+      "source_text": "in coming in now myself. Okay, so what is it that you're thinking about getting?",
+      "proposed_text": "Okay, so what is it that you're thinking about getting?",
+      "text_action": "group_review",
+      "similarity": 0.9103,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm looking at getting a tattoo of my ribs, sort of on my ribs area.",
+      "source_text": "I'm looking at getting a tattoo of my ribs, sort of on my ribs area.",
+      "proposed_text": "I'm looking at getting a tattoo of my ribs, sort of on my ribs area.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": null,
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I have an x-ray, but they're not my ribs, but they look good.",
+      "source_text": "I have an x-ray, but they're not my ribs.",
+      "proposed_text": "I have an x-ray, but they're not my ribs.",
+      "text_action": "review",
+      "similarity": 0.8041,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": null,
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I was hoping to put that on my ribs.",
+      "source_text": "But they look good, and I was hoping to put that on my ribs.",
+      "proposed_text": "But they look good, and I was hoping to put that on my ribs.",
+      "text_action": "review",
+      "similarity": 0.8041,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        46
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I don't know whose ribs they are, but it's an x-ray that I have that looks real, real good.",
+      "source_text": "I don't know whose ribs they are, but it's an x-ray that I have that looks real, real good.",
+      "proposed_text": "I don't know whose ribs they are, but it's an x-ray that I have that looks real, real good.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": [
+        61,
+        62
+      ],
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So that's one that I wanted to do.",
+      "source_text": "So that's one that I wanted to do. Okay.",
+      "proposed_text": "So that's one that I wanted to do.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": [
+        61,
+        62
+      ],
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "So that's one that I wanted to do. Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": null,
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So do you think that would pose a problem?",
+      "source_text": "So do you think that would pose a problem?",
+      "proposed_text": "So do you think that would pose a problem?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        64,
+        65,
+        66
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I am honestly not really sure how that would work out.",
+      "source_text": "I am honestly not really sure how that would work out. I'm not an artist myself. I'm the piercer.",
+      "proposed_text": "I am honestly not really sure how that would work out.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": [
+        64,
+        65,
+        66
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I'm not an artist myself.",
+      "source_text": "I am honestly not really sure how that would work out. I'm not an artist myself. I'm the piercer.",
+      "proposed_text": "I'm not an artist myself.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": [
+        64,
+        65,
+        66
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I'm the piercer.",
+      "source_text": "I am honestly not really sure how that would work out. I'm not an artist myself. I'm the piercer.",
+      "proposed_text": "I'm the piercer.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": null,
+      "source_indices": [
+        50,
+        51,
+        52
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "So what I would recommend is setting you up with a consultation with the artist and you can come in and talk about your idea and he can let you know if that's going to work, how that's going to work, what can be done to make it work, things along those lines.",
+      "source_text": "So what I would recommend is setting you up with a consultation with the artist and you can come in and talk about your idea and he can let you know if that's going to work, how that's going to work, what can be",
+      "proposed_text": "So what I would recommend is setting you up with a consultation with the artist and you can come in and talk about your idea and he can let you know if that's going to work, how that's going to work, what can be",
+      "text_action": "review",
+      "similarity": 0.9009,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": null,
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I don't really feel comfortable giving you any kind of answers myself.",
+      "source_text": "done to make it work, things along those lines. I don't really feel comfortable giving you any kind",
+      "proposed_text": "done to make it work, things along those lines. I don't really feel comfortable giving you any kind",
+      "text_action": "review",
+      "similarity": 0.6145,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": null,
+      "source_indices": [
+        54,
+        55
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "But I would be absolutely happy to get you on the schedule for a consultation if that's the way you would want to go about it.",
+      "source_text": "of answers myself, but I would be absolutely happy to get you on the schedule for a consultation if that's the way you would want to go about it.",
+      "proposed_text": "of answers myself, but I would be absolutely happy to get you on the schedule for a consultation if that's the way you would want to go about it.",
+      "text_action": "review",
+      "similarity": 0.9328,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": [
+        70,
+        71
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, I'm looking at getting two total tattoos.",
+      "source_text": "Yeah, I'm looking at getting two total tattoos. That one and then the other one. I was wondering",
+      "proposed_text": "Yeah, I'm looking at getting two total tattoos.",
+      "text_action": "group_review",
+      "similarity": 0.9059,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": [
+        70,
+        71
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That one and then the other one.",
+      "source_text": "Yeah, I'm looking at getting two total tattoos. That one and then the other one. I was wondering",
+      "proposed_text": "That one and then the other one.",
+      "text_action": "group_review",
+      "similarity": 0.9059,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": null,
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was wondering if maybe to get hit or kicked like in the torso area and then tattoo the bruise area.",
+      "source_text": "if maybe to get hit or kicked like in the torso area and then tattoo the bruise area. Do you guys",
+      "proposed_text": "if maybe to get hit or kicked like in the torso area and then tattoo the bruise area. Do you guys",
+      "text_action": "review",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": null,
+      "source_indices": [
+        58
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "review",
+      "current_text": "Do you guys ever do anything like that?",
+      "source_text": "ever do anything like that? So yeah, what we actually",
+      "proposed_text": "ever do anything like that? So yeah, what we actually",
+      "text_action": "review",
+      "similarity": 0.5843,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": [
+        74,
+        75
+      ],
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "So yeah, what we actually had, we've had a couple of things similar.",
+      "source_text": "had, we've had a couple of things similar, definitely not along those lines, but two",
+      "proposed_text": "So yeah, what we actually had, we've had a couple of things similar.",
+      "text_action": "group_review",
+      "similarity": 0.8156,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": [
+        74,
+        75
+      ],
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Definitely not along those lines.",
+      "source_text": "had, we've had a couple of things similar, definitely not along those lines, but two",
+      "proposed_text": "Definitely not along those lines.",
+      "text_action": "group_review",
+      "similarity": 0.8156,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": null,
+      "source_indices": [
+        60
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "But two examples of things that Sean has done in the past is one guy wanted what looked like realistic bullet wounds on his chest.",
+      "source_text": "examples of things that Sean has done in the past is one guy wanted what looked like realistic",
+      "proposed_text": "examples of things that Sean has done in the past is one guy wanted what looked like realistic",
+      "text_action": "review",
+      "similarity": 0.843,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I mean, it looks about as realistic as you can get without the real thing.",
+      "source_text": "bullet wounds on his chest. I mean, it looks as about as realistic as you can get without the",
+      "proposed_text": "bullet wounds on his chest. I mean, it looks as about as realistic as you can get without the",
+      "text_action": "review",
+      "similarity": 0.7485,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": null,
+      "source_indices": [
+        62,
+        63
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "The hole and then the spatter around it and the skin tears and the bleeding and things like that.",
+      "source_text": "real thing, the hole and then the spatter around it and the skin tears and the bleeding and things like that.",
+      "proposed_text": "real thing, the hole and then the spatter around it and the skin tears and the bleeding and things like that.",
+      "text_action": "review",
+      "similarity": 0.9458,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": null,
+      "source_indices": [
+        64,
+        65
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "And then another one that he did was a guy wanted it to look like his girlfriend's name was carved into his arm, like with a razor blade kind of thing.",
+      "source_text": "And then another one that he did was a guy wanted it to look like his girlfriend's name was carved into his arm, like with a razor blade kind of thing.",
+      "proposed_text": "And then another one that he did was a guy wanted it to look like his girlfriend's name was carved into his arm, like with a razor blade kind of thing.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": null,
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "So he did the sharp lines and then did like the redness around and the swelling and things like that.",
+      "source_text": "So he did the sharp lines and then did like the redness around and the swelling and things like that.",
+      "proposed_text": "So he did the sharp lines and then did like the redness around and the swelling and things like that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": null,
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "So he could show you what he's done with that.",
+      "source_text": "So he could show you what he's done with that.",
+      "proposed_text": "So he could show you what he's done with that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": null,
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "And I don't think you need to necessarily go through the process of getting bruised unless you really want it to be an exact one yourself.",
+      "source_text": "And I don't think you need to necessarily go through the process of getting bruised unless you really want it to be an exact one yourself.",
+      "proposed_text": "And I don't think you need to necessarily go through the process of getting bruised unless you really want it to be an exact one yourself.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": null,
+      "source_indices": [
+        69,
+        70
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "But to get one that looks how you want it to look, I think that's going to be some pretty serious trauma, and I'm not sure you want to go through that.",
+      "source_text": "But to get one that looks how you want it to look, I think that's going to be some pretty serious trauma. And I'm not sure you want to go through that.",
+      "proposed_text": "But to get one that looks how you want it to look, I think that's going to be some pretty serious trauma, and I'm not sure you want to go through that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": null,
+      "source_indices": [
+        71
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I practiced with a galvanized beef mallet, is what it is, and it does make a good bruise.",
+      "source_text": "you want it to look, I think that's going to be some pretty serious trauma, and I'm not sure you want to go through that. Well, I practiced with a galvanized beef mallet, is what it is, and it does",
+      "proposed_text": "you want it to look, I think that's going to be some pretty serious trauma, and I'm not sure you want to go through that. Well, I practiced with a galvanized beef mallet, is what it is, and it does",
+      "text_action": "review",
+      "similarity": 0.4838,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": null,
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "that is sort of a grid at the same time, so that looks pretty cool.",
+      "source_text": "make a good bruise that is sort of a grid at the same time, so that looks pretty cool. Maybe I could",
+      "proposed_text": "make a good bruise that is sort of a grid at the same time, so that looks pretty cool. Maybe I could",
+      "text_action": "review",
+      "similarity": 0.7975,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": null,
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Maybe I could just use that on myself and not have to involve you in the kicking or hitting process.",
+      "source_text": "just use that on myself and not have to involve you in the kicking or hitting process, or another",
+      "proposed_text": "just use that on myself and not have to involve you in the kicking or hitting process, or another",
+      "text_action": "review",
+      "similarity": 0.8718,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": null,
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "review",
+      "current_text": "Or another option, what's that now, huh?",
+      "source_text": "option, what's that now, huh? What we would absolutely have to do with that though,",
+      "proposed_text": "option, what's that now, huh? What we would absolutely have to do with that though,",
+      "text_action": "review",
+      "similarity": 0.4483,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 88,
+      "target_group": null,
+      "source_indices": [
+        75,
+        76
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "What we would absolutely have to do with that though, is you would have to take a picture and everything would have to be all healed up because they will not tattoo you with that kind of trauma.",
+      "source_text": "is you would have to take a picture and everything would have to be all healed up because they will not tattoo you with that kind of trauma.",
+      "proposed_text": "is you would have to take a picture and everything would have to be all healed up because they will not tattoo you with that kind of trauma.",
+      "text_action": "review",
+      "similarity": 0.8399,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 89,
+      "target_group": null,
+      "source_indices": [
+        77
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "That is asking for a disaster with the healing process.",
+      "source_text": "That is asking for a disaster with the healing process.",
+      "proposed_text": "That is asking for a disaster with the healing process.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 90,
+      "target_group": null,
+      "source_indices": [
+        78,
+        79
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay, that sounds fair.",
+      "source_text": "Okay. That sounds fair.",
+      "proposed_text": "Okay, that sounds fair.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 91,
+      "target_group": null,
+      "source_indices": [
+        80,
+        81
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I had one other option for I could just float by you is do you have like a patio or a smoking lounge or anything?",
+      "source_text": "I had one other option for, I could just float by you is do you have like a patio or a smoking lounge or anything?",
+      "proposed_text": "I had one other option for I could just float by you is do you have like a patio or a smoking lounge or anything?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 92,
+      "target_group": null,
+      "source_indices": [
+        82
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Not really.",
+      "source_text": "Not really.",
+      "proposed_text": "Not really.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 93,
+      "target_group": null,
+      "source_indices": [
+        83
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I mean, we do have a bench outside.",
+      "source_text": "I mean, we do have a bench outside.",
+      "proposed_text": "I mean, we do have a bench outside.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 94,
+      "target_group": null,
+      "source_indices": [
+        84,
+        85,
+        86
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I was thinking we could just go out there and maybe squirt a little like lighter fluid onto my torso and ignite that just to like cauterize a burn mark that we could then tattoo one or the other.",
+      "source_text": "Because I was thinking we could just go out there and maybe squirt a little lighter fluid onto my torso and ignite that just to like cauterize a burn mark that we could then tattoo one or the other.",
+      "proposed_text": "Because I was thinking we could just go out there and maybe squirt a little lighter fluid onto my torso and ignite that just to like cauterize a burn mark that we could then tattoo one or the other.",
+      "text_action": "review",
+      "similarity": 0.9875,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 95,
+      "target_group": null,
+      "source_indices": [
+        87,
+        88
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Be more realistic, I thought, you know?",
+      "source_text": "Be more realistic, I thought. You know?",
+      "proposed_text": "Be more realistic, I thought, you know?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 96,
+      "target_group": [
+        96,
+        97
+      ],
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "Yeah, okay.",
+      "proposed_text": "Yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 97,
+      "target_group": [
+        96,
+        97
+      ],
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Yeah, okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 98,
+      "target_group": null,
+      "source_indices": [
+        90
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "This is a bullshit call.",
+      "source_text": "This is a bullshit call.",
+      "proposed_text": "This is a bullshit call.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 99,
+      "target_group": null,
+      "source_indices": [
+        91
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "So don't call back.",
+      "source_text": "So don't call back.",
+      "proposed_text": "So don't call back.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 100,
+      "target_group": null,
+      "source_indices": [
+        92
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "What are you talking about?",
+      "source_text": "What are you talking about?",
+      "proposed_text": "What are you talking about?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 101,
+      "target_group": null,
+      "source_indices": [
+        93
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You guys don't want to work together or what?",
+      "source_text": "You guys don't want to work together or what?",
+      "proposed_text": "You guys don't want to work together or what?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 102,
+      "target_group": null,
+      "source_indices": [
+        94
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "No, I don't.",
+      "source_text": "No, I don't.",
+      "proposed_text": "No, I don't.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 103,
+      "target_group": null,
+      "source_indices": [
+        95
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Don't call back.",
+      "source_text": "Don't call back.",
+      "proposed_text": "Don't call back.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 104,
+      "target_group": null,
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, can I talk to a tattoo artist, please?",
+      "source_text": "Well, can I talk to a tattoo artist, please?",
+      "proposed_text": "Well, can I talk to a tattoo artist, please?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 105,
+      "target_group": null,
+      "source_indices": [
+        97
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That's what I need.",
+      "source_text": "That's what I need.",
+      "proposed_text": "That's what I need.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 106,
+      "target_group": null,
+      "source_indices": [
+        98
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Not you.",
+      "source_text": "Not you.",
+      "proposed_text": "Not you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 107,
+      "target_group": null,
+      "source_indices": [
+        99
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "review",
+      "current_text": "Nope.",
+      "source_text": "Nope.",
+      "proposed_text": "Nope.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 108,
+      "target_group": null,
+      "source_indices": [
+        100
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "No, I own the place.",
+      "source_text": "No, I own the place.",
+      "proposed_text": "No, I own the place.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 109,
+      "target_group": null,
+      "source_indices": [
+        101
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Don't call back.",
+      "source_text": "Don't call back.",
+      "proposed_text": "Don't call back.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 110,
+      "target_group": null,
+      "source_indices": [
+        102
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "No, you don't.",
+      "source_text": "No, you don't.",
+      "proposed_text": "No, you don't.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 111,
+      "target_group": null,
+      "source_indices": [
+        103
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Tattoo?",
+      "source_text": "Tattoo.",
+      "proposed_text": "Tattoo?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 112,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Wyatt",
+      "source_speaker": null,
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Hey, Ms.",
+      "source_text": null,
+      "proposed_text": "Hey, Ms.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 113,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Wyatt",
+      "source_speaker": null,
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Carey?",
+      "source_text": null,
+      "proposed_text": "Carey?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 114,
+      "target_group": null,
+      "source_indices": [
+        105
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "review",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 115,
+      "target_group": null,
+      "source_indices": [
+        106
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Hey, this is Wyatt with the city police.",
+      "source_text": "Hey, this is Y with the city police?",
+      "proposed_text": "Hey, this is Y with the city police?",
+      "text_action": "review",
+      "similarity": 0.9444,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 116,
+      "target_group": null,
+      "source_indices": [
+        107
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "Uh-huh.",
+      "source_text": "Uh-huh.",
+      "proposed_text": "Uh-huh.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 117,
+      "target_group": null,
+      "source_indices": [
+        108
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Hey, what's going on?",
+      "source_text": "Hey, what's going on?",
+      "proposed_text": "Hey, what's going on?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 118,
+      "target_group": null,
+      "source_indices": [
+        109
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I'm just at work.",
+      "source_text": "I'm just at work.",
+      "proposed_text": "I'm just at work.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 119,
+      "target_group": null,
+      "source_indices": [
+        110
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "I just spoke with a male subject.",
+      "source_text": "I just spoke with a male subject.",
+      "proposed_text": "I just spoke with a male subject.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 120,
+      "target_group": null,
+      "source_indices": [
+        111
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "He said that you possibly needed us.",
+      "source_text": "He said that you possibly needed us.",
+      "proposed_text": "He said that you possibly needed us.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 121,
+      "target_group": null,
+      "source_indices": [
+        112
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "I don't know.",
+      "source_text": "I don't know.",
+      "proposed_text": "I don't know.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 122,
+      "target_group": null,
+      "source_indices": [
+        113
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Tattoo Woman",
+      "speaker_action": "keep",
+      "current_text": "I have no idea what that might be about.",
+      "source_text": "I have no idea what that might be about okay well all",
+      "proposed_text": "I have no idea what that might be about okay well all",
+      "text_action": "review",
+      "similarity": 0.8478,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 123,
+      "target_group": [
+        123,
+        124,
+        125
+      ],
+      "source_indices": [
+        114
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "OK, well, all right, then we can just cancel whatever call this may have been.",
+      "source_text": "right then I like we can just cancel whatever call this may been yeah okay",
+      "proposed_text": "OK, well, all right, then we can just cancel whatever call this may have been.",
+      "text_action": "group_review",
+      "similarity": 0.7898,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 124,
+      "target_group": [
+        123,
+        124,
+        125
+      ],
+      "source_indices": [
+        114
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "right then I like we can just cancel whatever call this may been yeah okay",
+      "proposed_text": "Hello?",
+      "text_action": "group_review",
+      "similarity": 0.7898,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 125,
+      "target_group": [
+        123,
+        124,
+        125
+      ],
+      "source_indices": [
+        114
+      ],
+      "current_speaker": "Tattoo Woman",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "review",
+      "current_text": "OK.",
+      "source_text": "right then I like we can just cancel whatever call this may been yeah okay",
+      "proposed_text": "OK.",
+      "text_action": "group_review",
+      "similarity": 0.7898,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 126,
+      "target_group": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "hello all right yes sir who is this yes sir this is the city police sir why",
+      "proposed_text": "Hello?",
+      "text_action": "group_review",
+      "similarity": 0.9726,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 127,
+      "target_group": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "All right.",
+      "source_text": "hello all right yes sir who is this yes sir this is the city police sir why",
+      "proposed_text": "All right.",
+      "text_action": "group_review",
+      "similarity": 0.9726,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 128,
+      "target_group": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Yes, sir.",
+      "source_text": "hello all right yes sir who is this yes sir this is the city police sir why",
+      "proposed_text": "Yes, sir.",
+      "text_action": "group_review",
+      "similarity": 0.9726,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 129,
+      "target_group": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "review",
+      "current_text": "Who is this?",
+      "source_text": "hello all right yes sir who is this yes sir this is the city police sir why",
+      "proposed_text": "Who is this?",
+      "text_action": "group_review",
+      "similarity": 0.9726,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 130,
+      "target_group": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Yes, sir.",
+      "source_text": "hello all right yes sir who is this yes sir this is the city police sir why",
+      "proposed_text": "Yes, sir.",
+      "text_action": "group_review",
+      "similarity": 0.9726,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 131,
+      "target_group": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "source_indices": [
+        115
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "This is the city police, sir.",
+      "source_text": "hello all right yes sir who is this yes sir this is the city police sir why",
+      "proposed_text": "This is the city police, sir.",
+      "text_action": "group_review",
+      "similarity": 0.9726,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 132,
+      "target_group": null,
+      "source_indices": [
+        116
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Why are you calling me?",
+      "source_text": "you're calling me?",
+      "proposed_text": "you're calling me?",
+      "text_action": "review",
+      "similarity": 0.7179,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 133,
+      "target_group": null,
+      "source_indices": [
+        117
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "I didn't call you, sir.",
+      "source_text": "I didn't call you, sir.",
+      "proposed_text": "I didn't call you, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 134,
+      "target_group": null,
+      "source_indices": [
+        118
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "All right.",
+      "source_text": "All right.",
+      "proposed_text": "All right.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 135,
+      "target_group": null,
+      "source_indices": [
+        119
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Just have a nice day.",
+      "source_text": "Just have a nice day.",
+      "proposed_text": "Just have a nice day.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 136,
+      "target_group": null,
+      "source_indices": [
+        120
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "I don't know what's going on.",
+      "source_text": "I don't know what's going on.",
+      "proposed_text": "I don't know what's going on.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 137,
+      "target_group": null,
+      "source_indices": [
+        121
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "I think you're a criminal.",
+      "source_text": "I think you're a criminal.",
+      "proposed_text": "I think you're a criminal.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 138,
+      "target_group": null,
+      "source_indices": [
+        122
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Is that what you're calling me?",
+      "source_text": "Is that why you're calling me?",
+      "proposed_text": "Is that why you're calling me?",
+      "text_action": "review",
+      "similarity": 0.9492,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 139,
+      "target_group": null,
+      "source_indices": [
+        123
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're a motherfucking criminal, right?",
+      "source_text": "You're a motherfucking criminal, right?",
+      "proposed_text": "You're a motherfucking criminal, right?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 140,
+      "target_group": null,
+      "source_indices": [
+        124
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "No, I am the officer, sir.",
+      "source_text": "No, I am not an officer, sir.",
+      "proposed_text": "No, I am not an officer, sir.",
+      "text_action": "review",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 141,
+      "target_group": null,
+      "source_indices": [
+        125
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "This is the city police.",
+      "source_text": "This is the city police.",
+      "proposed_text": "This is the city police.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 142,
+      "target_group": null,
+      "source_indices": [
+        126
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "You're an officer?",
+      "source_text": "You're an officer?",
+      "proposed_text": "You're an officer?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 143,
+      "target_group": null,
+      "source_indices": [
+        127
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "I don't believe it.",
+      "source_text": "I don't believe it.",
+      "proposed_text": "I don't believe it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 144,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Sour Joe",
+      "source_speaker": null,
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "What do I have to do with the police?",
+      "source_text": null,
+      "proposed_text": "What do I have to do with the police?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 145,
+      "target_group": null,
+      "source_indices": [
+        129
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "What's going on, sir?",
+      "source_text": "What's going on, sir?",
+      "proposed_text": "What's going on, sir?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 146,
+      "target_group": null,
+      "source_indices": [
+        130
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "You don't need police at all?",
+      "source_text": "You don't need police at all?",
+      "proposed_text": "You don't need police at all?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 147,
+      "target_group": null,
+      "source_indices": [
+        131
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "None",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "No, I don't.",
+      "source_text": "No, I don't.",
+      "proposed_text": "No, I don't.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 148,
+      "target_group": [
+        148,
+        149,
+        150
+      ],
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "All right.",
+      "source_text": "All right, well, have a nice day, sir. I'm about to hang up.",
+      "proposed_text": "All right.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 149,
+      "target_group": [
+        148,
+        149,
+        150
+      ],
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "Well, have a nice day, sir.",
+      "source_text": "All right, well, have a nice day, sir. I'm about to hang up.",
+      "proposed_text": "Well, have a nice day, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 150,
+      "target_group": [
+        148,
+        149,
+        150
+      ],
+      "source_indices": [
+        132
+      ],
+      "current_speaker": "Wyatt",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "keep",
+      "current_text": "I'm about to hang up.",
+      "source_text": "All right, well, have a nice day, sir. I'm about to hang up.",
+      "proposed_text": "I'm about to hang up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 151,
+      "target_group": null,
+      "source_indices": [
+        133
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_04",
+      "proposed_speaker": "Sour Joe",
+      "speaker_action": "keep",
+      "current_text": "Yeah.",
+      "source_text": "Yeah.",
+      "proposed_text": "Yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 152,
+      "target_group": null,
+      "source_indices": [
+        134
+      ],
+      "current_speaker": "Sour Joe",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Wyatt",
+      "speaker_action": "review",
+      "current_text": "You're a piece of shit, I think.",
+      "source_text": "You're a police or shit, I think.",
+      "proposed_text": "You're a police or shit, I think.",
+      "text_action": "review",
+      "similarity": 0.918,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 153,
+      "target_group": null,
+      "source_indices": [
+        135
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Listen here, motherfucker.",
+      "source_text": "Listen here, motherfucker.",
+      "proposed_text": "Listen here, motherfucker.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 154,
+      "target_group": null,
+      "source_indices": [
+        136
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "Why don't you come talk to me?",
+      "source_text": "Why don't you come talk to me?",
+      "proposed_text": "Why don't you come talk to me?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 155,
+      "target_group": null,
+      "source_indices": [
+        137
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, I'll come down there tonight.",
+      "source_text": "Oh, I'll come down there tonight.",
+      "proposed_text": "Oh, I'll come down there tonight.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 156,
+      "target_group": null,
+      "source_indices": [
+        138
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "You come down here right the fuck now, and I will lay you out on that street.",
+      "source_text": "You come down here right the fuck now, and I will lay you out on that street.",
+      "proposed_text": "You come down here right the fuck now, and I will lay you out on that street.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 157,
+      "target_group": null,
+      "source_indices": [
+        139
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "You do not call my business.",
+      "source_text": "You do not call my business.",
+      "proposed_text": "You do not call my business.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 158,
+      "target_group": null,
+      "source_indices": [
+        140
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "You do not call my wife.",
+      "source_text": "You do not call my wife.",
+      "proposed_text": "You do not call my wife.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 159,
+      "target_group": null,
+      "source_indices": [
+        141
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "You do not fucking start this kind of shit.",
+      "source_text": "You do not fucking start this kind of shit.",
+      "proposed_text": "You do not fucking start this kind of shit.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 160,
+      "target_group": null,
+      "source_indices": [
+        142
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "We don't even know who the fuck you are, but I'll tell you what.",
+      "source_text": "We don't even know who the fuck you are, but I'll tell you what.",
+      "proposed_text": "We don't even know who the fuck you are, but I'll tell you what.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 161,
+      "target_group": null,
+      "source_indices": [
+        143
+      ],
+      "current_speaker": "Tattoo Guy",
+      "source_speaker": "SPEAKER_05",
+      "proposed_speaker": "Tattoo Guy",
+      "speaker_action": "keep",
+      "current_text": "I am a heavily armed individual, and I will fuck you up.",
+      "source_text": "I am a heavily armed individual, and I will fuck you up.",
+      "proposed_text": "I am a heavily armed individual, and I will fuck you up.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 162,
+      "target_group": null,
+      "source_indices": [
+        144
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I want to get my buttock pierced.",
+      "source_text": "I want to get my butt off here.",
+      "proposed_text": "I want to get my butt off here.",
+      "text_action": "review",
+      "similarity": 0.8065,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 163,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Do not call my business again.",
+      "source_text": null,
+      "proposed_text": "Do not call my business again.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 164,
+      "target_group": null,
+      "source_indices": [
+        145
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You got me?",
+      "source_text": "You got me?",
+      "proposed_text": "You got me?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 165,
+      "target_group": null,
+      "source_indices": [
+        146
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That'd be great.",
+      "source_text": "That'd be great.",
+      "proposed_text": "That'd be great.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 165,
+    "candidate_subtitles": 147,
+    "matched": 161,
+    "text_review": 37,
+    "text_group_review": 36,
+    "speaker_review": 17,
+    "review_flags_to_initialize": 165,
+    "alias_additions": 1,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

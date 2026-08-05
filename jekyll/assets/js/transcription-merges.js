@@ -48,22 +48,26 @@
     renderLines();
   }
 
-  async function selectRun(id) {
+  async function selectRun(run) {
     $('merge-status').textContent='Loading comparison…';
-    const response=await fetch(`/api/transcription-merges?run=${encodeURIComponent(id)}`,{cache:'no-store'});
-    if (!response.ok) throw new Error(`HTTP ${response.status}`); state.detail=await response.json(); renderDetail();
+    const response=await fetch(run.comparison_path,{cache:'no-store'});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const comparison=await response.json();
+    const receipts=await Promise.all((run.receipt_paths||[]).map(async (path)=>{const receipt=await fetch(path,{cache:'no-store'}); return receipt.ok?receipt.json():null;}));
+    state.detail={run,speaker_mappings:comparison.speaker_mappings||[],metadata:comparison.metadata||{},alignments:comparison.alignments||[],receipts:receipts.filter(Boolean)};
+    renderDetail();
     $('merge-status').textContent='Archive ready · repository data remains authoritative until changes are approved.';
-    const url=new URL(location.href); url.searchParams.set('run',id); history.replaceState(null,'',url);
+    const url=new URL(location.href); url.searchParams.set('run',run.id); history.replaceState(null,'',url);
   }
 
   async function start() {
     try {
-      const response=await fetch('/api/transcription-merges',{cache:'no-store'}); if(!response.ok) throw new Error(`HTTP ${response.status}`); state.index=await response.json();
+      const response=await fetch('/assets/transcription-data/manifest.json',{cache:'no-store'}); if(!response.ok) throw new Error(`HTTP ${response.status}`); state.index=await response.json();
       const stats=state.index.stats; for (const [id,key] of [['runs','comparison_runs'],['tracks','tracks'],['review','review_lines'],['approved','approved_lines'],['merged','merged_runs'],['receipts','merge_receipts']]) $(`merge-stat-${id}`).textContent=number(stats[key]);
       const select=$('merge-run'); select.replaceChildren(); for(const run of state.index.runs){const option=make('option','',`${run.track} · ${run.album} · ${run.merged?'merged':'review pending'}`); option.value=run.id; select.append(option);}
       if(!state.index.runs.length){$('merge-detail').hidden=true;$('merge-empty').hidden=false;$('merge-status').textContent='No comparisons have been saved yet.';return;}
-      const requested=new URLSearchParams(location.search).get('run'); const chosen=state.index.runs.find(run=>run.id===requested)||state.index.runs[0]; select.value=chosen.id; await selectRun(chosen.id);
-      select.addEventListener('change',()=>selectRun(select.value).catch(showError)); $('merge-search').addEventListener('input',renderLines); $('merge-filter').addEventListener('change',renderLines);
+      const requested=new URLSearchParams(location.search).get('run'); const chosen=state.index.runs.find(run=>run.id===requested)||state.index.runs[0]; select.value=chosen.id; await selectRun(chosen);
+      select.addEventListener('change',()=>selectRun(state.index.runs.find(run=>run.id===select.value)).catch(showError)); $('merge-search').addEventListener('input',renderLines); $('merge-filter').addEventListener('change',renderLines);
     } catch(error){showError(error);}
   }
   function showError(error){console.error(error);$('merge-status').textContent='The local merge archive could not be opened.';$('merge-status').classList.add('is-error');}

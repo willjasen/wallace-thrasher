@@ -15,5 +15,26 @@ package-lock.json
 # Local secrets — never commit
 .env
 
-# Local Whisper-WebUI track analyses (review artifacts, not source data yet)
-/analysis/whisper-webui/
+# Whisper-WebUI analyses: retain the useful transcription and provenance files
+# while excluding generated, duplicated, and local operational artifacts.
+/analysis/whisper-webui/**
+!/analysis/whisper-webui/best-before-24/
+!/analysis/whisper-webui/longmont-potion-castle-7/
+!/analysis/whisper-webui/best-before-24/*/
+!/analysis/whisper-webui/longmont-potion-castle-7/*/
+!/analysis/whisper-webui/best-before-24/*/*/
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/
+!/analysis/whisper-webui/best-before-24/*/*/README.md
+!/analysis/whisper-webui/best-before-24/*/*/manifest.json
+!/analysis/whisper-webui/best-before-24/*/*/review.json
+!/analysis/whisper-webui/best-before-24/*/*/candidate-subtitles.json
+!/analysis/whisper-webui/best-before-24/*/*/comparison.json
+!/analysis/whisper-webui/best-before-24/*/*/merge-receipts/
+!/analysis/whisper-webui/best-before-24/*/*/merge-receipts/*.json
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/README.md
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/manifest.json
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/review.json
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/candidate-subtitles.json
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/comparison.json
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/merge-receipts/
+!/analysis/whisper-webui/longmont-potion-castle-7/*/*/merge-receipts/*.json

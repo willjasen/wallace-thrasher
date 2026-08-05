@@ -1,0 +1,849 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:52:34.585010+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260723T002922Z",
+    "run_path": "analysis/whisper-webui/best-before-24/best-before-24-theme-2/20260723T002922Z",
+    "audio_sha256": "5080005519261a3aa34acb08c4e4af8d99ceb2841a5688ae5ba6df8116e937dd",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "a9edee7b2a52e0a33798819cc31c9fb43cb8ba6020778c5586ed776424a1e7f7",
+    "manifest_sha256": "6153e7db2a7c659d53cff8ece4872e93a15ba085bd9dcdfa7c1257b46f1e8115"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Best Before '24 Theme 2",
+    "track_slug": "best-before-24-theme-2",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "91bc1a48e11292e4819e91c652c64e3fec1eb66b0a0b5bc10d1804f85e7ef5bb",
+    "subtitle_path": "jekyll/assets/json/best-before-24/best-before-24-theme-2.json",
+    "subtitle_sha256": "c98e326c5fa3ac3098fd32200b51fe0f4a2b4e520ca3826d64d4b2f62908d28f",
+    "current_aliases": [],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "None",
+      "proposed_speaker": null,
+      "confidence": 0.0,
+      "overlap_seconds": 0.0,
+      "action": "keep"
+    },
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "confidence": 0.7384,
+      "overlap_seconds": 16.471,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "confidence": 0.9549,
+      "overlap_seconds": 32.395,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": [
+        1,
+        2,
+        3
+      ],
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Are you doing the fucking crap on the fucking line?",
+      "source_text": "Are you doing the fucking crap on the fucking line? What the fuck's with the line? Turn it on.",
+      "proposed_text": "Are you doing the fucking crap on the fucking line?",
+      "text_action": "group_review",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": [
+        1,
+        2,
+        3
+      ],
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "What the fuck's with the line?",
+      "source_text": "Are you doing the fucking crap on the fucking line? What the fuck's with the line? Turn it on.",
+      "proposed_text": "What the fuck's with the line?",
+      "text_action": "group_review",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": [
+        1,
+        2,
+        3
+      ],
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Turn it off.",
+      "source_text": "Are you doing the fucking crap on the fucking line? What the fuck's with the line? Turn it on.",
+      "proposed_text": "Turn it off.",
+      "text_action": "group_review",
+      "similarity": 0.9836,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": [
+        4,
+        5,
+        6
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "review",
+      "current_text": "What is it?",
+      "source_text": "What is it? Are you in jail? No, no, my man, use you.",
+      "proposed_text": "What is it?",
+      "text_action": "group_review",
+      "similarity": 0.9574,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": [
+        4,
+        5,
+        6
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "review",
+      "current_text": "Are you in jail?",
+      "source_text": "What is it? Are you in jail? No, no, my man, use you.",
+      "proposed_text": "Are you in jail?",
+      "text_action": "group_review",
+      "similarity": 0.9574,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": [
+        4,
+        5,
+        6
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "What is it? Are you in jail? No, no, my man, use you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "group_review",
+      "similarity": 0.9574,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": null,
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 0",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Yeah, are you in prison?",
+      "source_text": null,
+      "proposed_text": "Yeah, are you in prison?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 0",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Is it okay if I use cocaine?",
+      "source_text": null,
+      "proposed_text": "Is it okay if I use cocaine?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 0",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Hello?",
+      "source_text": null,
+      "proposed_text": "Hello?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 0",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "I need some advice.",
+      "source_text": null,
+      "proposed_text": "I need some advice.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 0",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Don't screw with me.",
+      "source_text": null,
+      "proposed_text": "Don't screw with me.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Auto-Attendant",
+      "source_speaker": null,
+      "proposed_speaker": "Auto-Attendant",
+      "speaker_action": "keep",
+      "current_text": "Three, four, zero.",
+      "source_text": null,
+      "proposed_text": "Three, four, zero.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Auto-Attendant",
+      "source_speaker": null,
+      "proposed_speaker": "Auto-Attendant",
+      "speaker_action": "keep",
+      "current_text": "It's not available.",
+      "source_text": null,
+      "proposed_text": "It's not available.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": [
+        21,
+        22,
+        23
+      ],
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, use you. No, no, my man, use you. No, no, my man, use you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "group_review",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": [
+        21,
+        22,
+        23
+      ],
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "review",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, use you. No, no, my man, use you. No, no, my man, use you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "group_review",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": [
+        21,
+        22,
+        23
+      ],
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "No, no, my man, use you. No, no, my man, use you. No, no, my man, use you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "group_review",
+      "similarity": 0.9032,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "I will let you call one more time, otherwise I'm not gonna fucking",
+      "source_text": "I'm gonna let you call one more time, otherwise I'm not gonna fucking pick it up,",
+      "proposed_text": "I'm gonna let you call one more time, otherwise I'm not gonna fucking pick it up,",
+      "text_action": "review",
+      "similarity": 0.8472,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "pick it up and when you feel like actually talking to me, I'm good.",
+      "source_text": "and when you feel like actually talking to me, I'm good.",
+      "proposed_text": "and when you feel like actually talking to me, I'm good.",
+      "text_action": "review",
+      "similarity": 0.9076,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": null,
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "We got shit going on and if you don't wanna fucking, you know, stop screwing around with me for a second... And you know I'm good to screw around with.",
+      "source_text": "We got shit going on, and if you don't wanna fucking, you know, stop screwing around with me for a second...",
+      "proposed_text": "We got shit going on, and if you don't wanna fucking, you know, stop screwing around with me for a second...",
+      "text_action": "review",
+      "similarity": 0.8259,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Fuck, what the hell's wrong with you?",
+      "source_text": "And you know I'm good to screw around with. Fuck, what the hell's wrong with you?",
+      "proposed_text": "And you know I'm good to screw around with. Fuck, what the hell's wrong with you?",
+      "text_action": "review",
+      "similarity": 0.6195,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "So call me back and don't fuck around, bye.",
+      "source_text": "So call me back and don't fuck around, bye.",
+      "proposed_text": "So call me back and don't fuck around, bye.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Alright, are these settled?",
+      "source_text": "Alright, are these settled?",
+      "proposed_text": "Alright, are these settled?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "Speaker 0",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Speaker 0",
+      "speaker_action": "keep",
+      "current_text": "Okay, fuck it.",
+      "source_text": "Okay, fuck it.",
+      "proposed_text": "Okay, fuck it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 10",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": null,
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 10",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": null,
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 10",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": null,
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 10",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": null,
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 10",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": null,
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Speaker 10",
+      "source_speaker": null,
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": null,
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": [
+        37,
+        38
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "None",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "I can't pocket you. No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "group_review",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": [
+        37,
+        38
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Speaker 10",
+      "source_speaker": "None",
+      "proposed_speaker": "Speaker 10",
+      "speaker_action": "keep",
+      "current_text": "No, no, my man, you, you.",
+      "source_text": "I can't pocket you. No, no, my man, you, you.",
+      "proposed_text": "No, no, my man, you, you.",
+      "text_action": "group_review",
+      "similarity": 0.75,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 38,
+    "candidate_subtitles": 23,
+    "matched": 25,
+    "text_review": 4,
+    "text_group_review": 11,
+    "speaker_review": 3,
+    "review_flags_to_initialize": 38,
+    "alias_additions": 0,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

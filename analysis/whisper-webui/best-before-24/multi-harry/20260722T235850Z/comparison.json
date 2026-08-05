@@ -1,0 +1,2197 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:52:27.424065+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260722T235850Z",
+    "run_path": "analysis/whisper-webui/best-before-24/multi-harry/20260722T235850Z",
+    "audio_sha256": "3fbe54706760225d6a37de5a6a82f49e46d945be2c0702509ce714d6770cb33a",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "b133b82afa2f89701eb34d1cd2c18a6f005fdc74d96f96ffade92198fb17dda1",
+    "manifest_sha256": "5cdc1ef66f964e95f0f154dcd548f81293f09b89660704044e3ff27f5f98665e"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Multi-Harry",
+    "track_slug": "multi-harry",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "91bc1a48e11292e4819e91c652c64e3fec1eb66b0a0b5bc10d1804f85e7ef5bb",
+    "subtitle_path": "jekyll/assets/json/best-before-24/multi-harry.json",
+    "subtitle_sha256": "80d74ba90e8ef815a9be5ee30b1399fa54a5d6c04e38eab0fd66f91477bd56e5",
+    "current_aliases": [
+      "Harry Boyardee"
+    ],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "None",
+      "proposed_speaker": null,
+      "confidence": 0.0,
+      "overlap_seconds": 0.0,
+      "action": "keep"
+    },
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "confidence": 0.935,
+      "overlap_seconds": 111.958,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Charles",
+      "confidence": 0.9547,
+      "overlap_seconds": 5.899,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "confidence": 0.9772,
+      "overlap_seconds": 34.045,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [
+      {
+        "value": "Harry",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      }
+    ],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Hi, this is Charles.",
+      "source_text": "Hi, this is Charles.",
+      "proposed_text": "Hi, this is Charles.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": null,
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Charles, this is Harry Boyardee calling.",
+      "source_text": "Charles, this is Harry Boyardee calling.",
+      "proposed_text": "Charles, this is Harry Boyardee calling.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": null,
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How are you today?",
+      "source_text": "How are you today?",
+      "proposed_text": "How are you today?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": [
+        4,
+        5
+      ],
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Good.",
+      "source_text": "Good, how can I help you?",
+      "proposed_text": "Good.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": [
+        4,
+        5
+      ],
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "How can I help you?",
+      "source_text": "Good, how can I help you?",
+      "proposed_text": "How can I help you?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": null,
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, I was giving your number because I was talking to people about renting an apartment.",
+      "source_text": "Yes, I was given your number because I was talking to people about renting an apartment.",
+      "proposed_text": "Yes, I was given your number because I was talking to people about renting an apartment.",
+      "text_action": "review",
+      "similarity": 0.9827,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": null,
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know where I got your number actually?",
+      "source_text": "You know where I got your number actually?",
+      "proposed_text": "You know where I got your number actually?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": null,
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Was a Rotary Club meeting.",
+      "source_text": "It was a Rotary Club meeting.",
+      "proposed_text": "It was a Rotary Club meeting.",
+      "text_action": "review",
+      "similarity": 0.9434,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know where people hand out contact information and listings from people throughout the community?",
+      "source_text": "You know where people hand out contact information and listings from people throughout the community.",
+      "proposed_text": "You know where people hand out contact information and listings from people throughout the community?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I was given your number on a list of apartments there.",
+      "source_text": "And I was given your number on a list of apartments there.",
+      "proposed_text": "And I was given your number on a list of apartments there.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How are you doing today?",
+      "source_text": "How are you doing today?",
+      "proposed_text": "How are you doing today?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hi, this is Charles.",
+      "source_text": "Hi, this is Charles.",
+      "proposed_text": "Hi, this is Charles.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": null,
+      "source_indices": [
+        11
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Charles, it's Harry Boyardee.",
+      "source_text": "Charles, it's Harry Boyardee.",
+      "proposed_text": "Charles, it's Harry Boyardee.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": null,
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I think we got cut off.",
+      "source_text": "I think we got cut off.",
+      "proposed_text": "I think we got cut off.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I apologize about that.",
+      "source_text": "I apologize about that.",
+      "proposed_text": "I apologize about that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [
+        14
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "That's okay.",
+      "source_text": "That's okay.",
+      "proposed_text": "That's okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "But I'm new to Connecticut.",
+      "source_text": "But I'm new to Connecticut.",
+      "proposed_text": "But I'm new to Connecticut.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I was just calling about an apartment.",
+      "source_text": "And I was just calling about an apartment.",
+      "proposed_text": "And I was just calling about an apartment.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Somebody said that you would be a good person to contact.",
+      "source_text": "Somebody said that you would be a good person to contact.",
+      "proposed_text": "Somebody said that you would be a good person to contact.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Who would that be?",
+      "source_text": "Who would that be?",
+      "proposed_text": "Who would that be?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, from the Rotary Club?",
+      "source_text": "Oh, from the Rotary Club?",
+      "proposed_text": "Oh, from the Rotary Club?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I think they were from a hardware store, actually.",
+      "source_text": "I think they were from a hardware store, actually.",
+      "proposed_text": "I think they were from a hardware store, actually.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": null,
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "But there's some great work they're doing over there.",
+      "source_text": "But there's some great work they're doing over there.",
+      "proposed_text": "But there's some great work they're doing over there.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": null,
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, can you hear that?",
+      "source_text": "Oh, can you hear that?",
+      "proposed_text": "Oh, can you hear that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": null,
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": null,
+      "source_indices": [
+        26
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, I'm sorry.",
+      "source_text": "Oh, I'm sorry.",
+      "proposed_text": "Oh, I'm sorry.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": null,
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was playing piano while I was dialing the telephone.",
+      "source_text": "I was playing piano while I was down on the telephone.",
+      "proposed_text": "I was playing piano while I was down on the telephone.",
+      "text_action": "review",
+      "similarity": 0.9057,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": null,
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I didn't know you could hear it.",
+      "source_text": "I didn't know you could hear it.",
+      "proposed_text": "I didn't know you could hear it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm sorry.",
+      "source_text": "I'm sorry.",
+      "proposed_text": "I'm sorry.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [
+        30,
+        31
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I mean, no offense, but with some of these guys I talk to, it's like, which of your tedious questions shall I answer next?",
+      "source_text": "I mean, no offense, but with some of these guys I talked to, it's like, which of your tedious questions shall answer next?",
+      "proposed_text": "I mean, no offense, but with some of these guys I talked to, it's like, which of your tedious questions shall answer next?",
+      "text_action": "review",
+      "similarity": 0.9829,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So I would like to rent an apartment.",
+      "source_text": "So I would like to rent an apartment.",
+      "proposed_text": "So I would like to rent an apartment.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": null,
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm brand new to Connecticut.",
+      "source_text": "I'm brand new to Connecticut.",
+      "proposed_text": "I'm brand new to Connecticut.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": null,
+      "source_indices": [
+        34
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I moved here from Rancho Cucamonga, California, about ten days ago.",
+      "source_text": "I moved here from Rancho Cucamonga, California, about 10 days ago.",
+      "proposed_text": "I moved here from Rancho Cucamonga, California, about 10 days ago.",
+      "text_action": "review",
+      "similarity": 0.9606,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": null,
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And I wanted to just say hi to you because I'm living out of a moving truck right now.",
+      "source_text": "And I wanted to just say hi to you because I'm living out of a moving truck right now.",
+      "proposed_text": "And I wanted to just say hi to you because I'm living out of a moving truck right now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": null,
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "None",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": null,
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Um, so do you by chance have any vacancies that we could talk about?",
+      "source_text": "So do you, by chance, have any vacancies that we could talk about?",
+      "proposed_text": "So do you, by chance, have any vacancies that we could talk about?",
+      "text_action": "review",
+      "similarity": 0.9767,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I'm with an architect right now.",
+      "source_text": "I'm with an architect right now.",
+      "proposed_text": "I'm with an architect right now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "I can't really talk right now.",
+      "source_text": "I can't really talk right now.",
+      "proposed_text": "I can't really talk right now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": null,
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Charles",
+      "source_speaker": null,
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "What music sounds like?",
+      "source_text": null,
+      "proposed_text": "What music sounds like?",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Charles",
+      "source_speaker": null,
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "there's a guitar or something in the background.",
+      "source_text": null,
+      "proposed_text": "there's a guitar or something in the background.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": null,
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, you can hear that?",
+      "source_text": "Oh, you can hear that?",
+      "proposed_text": "Oh, you can hear that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": null,
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": null,
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, I'm sorry.",
+      "source_text": "Oh, I'm sorry.",
+      "proposed_text": "Oh, I'm sorry.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": null,
+      "source_indices": [
+        46
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I was playing guitar while I was talking to you.",
+      "source_text": "I was playing guitar while I was talking to you.",
+      "proposed_text": "I was playing guitar while I was talking to you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": null,
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm sorry.",
+      "source_text": "I'm sorry.",
+      "proposed_text": "I'm sorry.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I thought you were playing piano.",
+      "source_text": "I thought you were playing piano.",
+      "proposed_text": "I thought you were playing piano.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": null,
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, I was, but you said you didn't like it, so I stopped.",
+      "source_text": "Well, I was, but you said you didn't like it, so I stopped.",
+      "proposed_text": "Well, I was, but you said you didn't like it, so I stopped.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": null,
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I didn't say I didn't like it.",
+      "source_text": "I didn't say I didn't like it.",
+      "proposed_text": "I didn't say I didn't like it.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": null,
+      "source_indices": [
+        51
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I said I'm trying to hear you, but the music's louder than your voice.",
+      "source_text": "I said I'm trying to hear you, but the music's louder than your voice.",
+      "proposed_text": "I said I'm trying to hear you, but the music's louder than your voice.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": null,
+      "source_indices": [
+        52,
+        53
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh my gosh, I sure am sorry about that.",
+      "source_text": "Oh, my gosh. I sure am sorry about that.",
+      "proposed_text": "Oh my gosh, I sure am sorry about that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": null,
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I started playing guitar there, too.",
+      "source_text": "I started playing guitar there, too.",
+      "proposed_text": "I started playing guitar there, too.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": null,
+      "source_indices": [
+        57
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I would love to talk to you.",
+      "source_text": "I would love to talk to you.",
+      "proposed_text": "I would love to talk to you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": null,
+      "source_indices": [
+        58
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I understand you're busy.",
+      "source_text": "I understand you're busy.",
+      "proposed_text": "I understand you're busy.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": null,
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Can I send you a deposit?",
+      "source_text": "Can I send you a deposit?",
+      "proposed_text": "Can I send you a deposit?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": null,
+      "source_indices": [
+        60
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Just to get the ball rolling.",
+      "source_text": "Just to get the ball rolling.",
+      "proposed_text": "Just to get the ball rolling.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": null,
+      "source_indices": [
+        61
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, sir.",
+      "source_text": "Yes, sir.",
+      "proposed_text": "Yes, sir.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": null,
+      "source_indices": [
+        62
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "No, it doesn't work like that.",
+      "source_text": "No, it doesn't work like that.",
+      "proposed_text": "No, it doesn't work like that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": null,
+      "source_indices": [
+        63
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "But right now I'm sitting with an architect.",
+      "source_text": "But right now, I'm sitting with an architect.",
+      "proposed_text": "But right now I'm sitting with an architect.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": null,
+      "source_indices": [
+        64
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Can I call you back?",
+      "source_text": "Can I call you back?",
+      "proposed_text": "Can I call you back?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": null,
+      "source_indices": [
+        65
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Or you call me later today?",
+      "source_text": "Or can you call me later today?",
+      "proposed_text": "Or can you call me later today?",
+      "text_action": "review",
+      "similarity": 0.9286,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": null,
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I've got a lot of architectural ideas I'd like to..",
+      "source_text": "I've got a lot of architectural ideas I'd like to...",
+      "proposed_text": "I've got a lot of architectural ideas I'd like to..",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hi, this is Charles.",
+      "source_text": "Hi, this is charles charles hi it's harry boyardy from rancho cucamonga and everything okay hey so",
+      "proposed_text": "Hi, this is Charles.",
+      "text_action": "group_review",
+      "similarity": 0.9468,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Charles.",
+      "source_text": "Hi, this is charles charles hi it's harry boyardy from rancho cucamonga and everything okay hey so",
+      "proposed_text": "Charles.",
+      "text_action": "group_review",
+      "similarity": 0.9468,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, it's Harry Boyardee, from Rancho Cucamonga, and everything.",
+      "source_text": "Hi, this is charles charles hi it's harry boyardy from rancho cucamonga and everything okay hey so",
+      "proposed_text": "Hi, it's Harry Boyardee, from Rancho Cucamonga, and everything.",
+      "text_action": "group_review",
+      "similarity": 0.9468,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": [
+        64,
+        65,
+        66,
+        67
+      ],
+      "source_indices": [
+        67
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "Hi, this is charles charles hi it's harry boyardy from rancho cucamonga and everything okay hey so",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.9468,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": [
+        68,
+        69,
+        70
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, so you know, I remembered who it was who gave me your phone number.",
+      "source_text": "you know i remembered who it was who gave me your phone number yeah you know desiree bucket",
+      "proposed_text": "Hey, so you know, I remembered who it was who gave me your phone number.",
+      "text_action": "group_review",
+      "similarity": 0.8626,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": [
+        68,
+        69,
+        70
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah.",
+      "source_text": "you know i remembered who it was who gave me your phone number yeah you know desiree bucket",
+      "proposed_text": "Yeah.",
+      "text_action": "group_review",
+      "similarity": 0.8626,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": [
+        68,
+        69,
+        70
+      ],
+      "source_indices": [
+        68
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "You know, Desiree Bucket at the hardware store.",
+      "source_text": "you know i remembered who it was who gave me your phone number yeah you know desiree bucket",
+      "proposed_text": "You know, Desiree Bucket at the hardware store.",
+      "text_action": "group_review",
+      "similarity": 0.8626,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": null,
+      "source_indices": [
+        69
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "It was her who originally gave me your phone number.",
+      "source_text": "at the hardware store it was her who originally gave me your phone number.",
+      "proposed_text": "at the hardware store it was her who originally gave me your phone number.",
+      "text_action": "review",
+      "similarity": 0.8226,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": null,
+      "source_indices": [
+        70
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I think this whole thing is a scam.",
+      "source_text": "I think this whole thing is a scam.",
+      "proposed_text": "I think this whole thing is a scam.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": null,
+      "source_indices": [
+        71
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I think you're just goofing around.",
+      "source_text": "I think you're just goofing around.",
+      "proposed_text": "I think you're just goofing around.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": null,
+      "source_indices": [
+        72
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Listen, friend.",
+      "source_text": "Listen, friend.",
+      "proposed_text": "Listen, friend.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": null,
+      "source_indices": [
+        73
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I'm not dealing with you no more.",
+      "source_text": "Gary, I'm not dealing with you no more.",
+      "proposed_text": "Gary, I'm not dealing with you no more.",
+      "text_action": "review",
+      "similarity": 0.9275,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": null,
+      "source_indices": [
+        74
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm just looking for an apartment, please.",
+      "source_text": "I'm just looking for an apartment, please.",
+      "proposed_text": "I'm just looking for an apartment, please.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": null,
+      "source_indices": [
+        75
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "You're calling from a thousand different phone numbers.",
+      "source_text": "You're calling from a thousand different phone numbers.",
+      "proposed_text": "You're calling from a thousand different phone numbers.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": null,
+      "source_indices": [
+        76
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "You're doing all kinds of things.",
+      "source_text": "You're doing all kinds of things.",
+      "proposed_text": "You're doing all kinds of things.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": null,
+      "source_indices": [
+        77
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "You're playing the piano, then the guitar, then the piano.",
+      "source_text": "You're playing the piano, then the guitar, then the piano.",
+      "proposed_text": "You're playing the piano, then the guitar, then the piano.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": null,
+      "source_indices": [
+        78
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "You're doing all kinds of stuff.",
+      "source_text": "You're doing all kinds of stuff.",
+      "proposed_text": "You're doing all kinds of stuff.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": null,
+      "source_indices": [
+        79
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Lose my number.",
+      "source_text": "Lose my number.",
+      "proposed_text": "Lose my number.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": null,
+      "source_indices": [
+        81
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I'm calling the police now.",
+      "source_text": "I'm calling the police now.",
+      "proposed_text": "I'm calling the police now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": [
+        83,
+        84
+      ],
+      "source_indices": [
+        82,
+        83
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I understand you don't want any music in your apartment.",
+      "source_text": "I understand you don't want any music in your apartment. I understand",
+      "proposed_text": "I understand you don't want any music in your apartment.",
+      "text_action": "group_review",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": [
+        83,
+        84
+      ],
+      "source_indices": [
+        82,
+        83
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I understand that.",
+      "source_text": "I understand you don't want any music in your apartment. I understand",
+      "proposed_text": "I understand that.",
+      "text_action": "group_review",
+      "similarity": 0.9645,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "LPC",
+      "source_speaker": null,
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": null,
+      "proposed_text": "Okay.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": [
+        86,
+        87
+      ],
+      "source_indices": [
+        85,
+        86
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I'm giving the police your name and your phone numbers that you've called me.",
+      "source_text": "your name and your phone numbers that you've called me. Goodbye.",
+      "proposed_text": "I'm giving the police your name and your phone numbers that you've called me.",
+      "text_action": "group_review",
+      "similarity": 0.8493,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": [
+        86,
+        87
+      ],
+      "source_indices": [
+        85,
+        86
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_02",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Goodbye.",
+      "source_text": "your name and your phone numbers that you've called me. Goodbye.",
+      "proposed_text": "Goodbye.",
+      "text_action": "group_review",
+      "similarity": 0.8493,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 88,
+      "target_group": [
+        88,
+        89
+      ],
+      "source_indices": [
+        87,
+        88
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hi, this is Charles.",
+      "source_text": "Hi, this is Charles. Hey, Charles.",
+      "proposed_text": "Hi, this is Charles.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 89,
+      "target_group": [
+        88,
+        89
+      ],
+      "source_indices": [
+        87,
+        88
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, Charles.",
+      "source_text": "Hi, this is Charles. Hey, Charles.",
+      "proposed_text": "Hey, Charles.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 90,
+      "target_group": [
+        90,
+        91
+      ],
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yes.",
+      "source_text": "Yes. Hey, work with me,",
+      "proposed_text": "Yes.",
+      "text_action": "group_review",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 91,
+      "target_group": [
+        90,
+        91
+      ],
+      "source_indices": [
+        89
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hey, work with me, man.",
+      "source_text": "Yes. Hey, work with me,",
+      "proposed_text": "Hey, work with me, man.",
+      "text_action": "group_review",
+      "similarity": 0.9091,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 92,
+      "target_group": null,
+      "source_indices": [
+        90,
+        91
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I can pay your rent every day, seven days a week on an apartment.",
+      "source_text": "man. I can pay your rent every day, seven days a week on an apartment.",
+      "proposed_text": "man. I can pay your rent every day, seven days a week on an apartment.",
+      "text_action": "review",
+      "similarity": 0.9692,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 93,
+      "target_group": [
+        93,
+        94
+      ],
+      "source_indices": [
+        92
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Charles",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "Okay. Listen to me okay listen to me listen",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 94,
+      "target_group": [
+        93,
+        94
+      ],
+      "source_indices": [
+        92
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "Listen to me, listen to me.",
+      "source_text": "Okay. Listen to me okay listen to me listen",
+      "proposed_text": "Listen to me, listen to me.",
+      "text_action": "group_review",
+      "similarity": 0.6667,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 95,
+      "target_group": [
+        95,
+        96
+      ],
+      "source_indices": [
+        93
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I've already taken your name and your phone number to the police station.",
+      "source_text": "me i've already taken your name and your phone number to the police station i have to go right",
+      "proposed_text": "I've already taken your name and your phone number to the police station.",
+      "text_action": "group_review",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 96,
+      "target_group": [
+        95,
+        96
+      ],
+      "source_indices": [
+        93
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "Charles",
+      "speaker_action": "keep",
+      "current_text": "I have to go right now.",
+      "source_text": "me i've already taken your name and your phone number to the police station i have to go right",
+      "proposed_text": "I have to go right now.",
+      "text_action": "group_review",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 97,
+      "target_group": [
+        97,
+        98
+      ],
+      "source_indices": [
+        94
+      ],
+      "current_speaker": "Charles",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "I'm with my air conditioning people.",
+      "source_text": "now i'm with my air conditioning people oh it's gonna get hotter than hell up there if you don't",
+      "proposed_text": "I'm with my air conditioning people.",
+      "text_action": "group_review",
+      "similarity": 0.8531,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 98,
+      "target_group": [
+        97,
+        98
+      ],
+      "source_indices": [
+        94
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh, it's going to get hotter than hell up there if you don't give me what I need.",
+      "source_text": "now i'm with my air conditioning people oh it's gonna get hotter than hell up there if you don't",
+      "proposed_text": "Oh, it's going to get hotter than hell up there if you don't give me what I need.",
+      "text_action": "group_review",
+      "similarity": 0.8531,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 99,
+      "target_group": null,
+      "source_indices": [
+        95
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I'm tired of fooling around.",
+      "source_text": "give me what i need because i'm tired of filming around i'm tired of messing around i'm tired of",
+      "proposed_text": "give me what i need because i'm tired of filming around i'm tired of messing around i'm tired of",
+      "text_action": "review",
+      "similarity": 0.5038,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 100,
+      "target_group": [
+        100,
+        101
+      ],
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm tired of messing around.",
+      "source_text": "messing around i'm tired of messing around i'm tired of messing around",
+      "proposed_text": "I'm tired of messing around.",
+      "text_action": "group_review",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 101,
+      "target_group": [
+        100,
+        101
+      ],
+      "source_indices": [
+        96
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm tired of messing around.",
+      "source_text": "messing around i'm tired of messing around i'm tired of messing around",
+      "proposed_text": "I'm tired of messing around.",
+      "text_action": "group_review",
+      "similarity": 0.88,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": true,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 101,
+    "candidate_subtitles": 97,
+    "matched": 98,
+    "text_review": 11,
+    "text_group_review": 21,
+    "speaker_review": 11,
+    "review_flags_to_initialize": 101,
+    "alias_additions": 1,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}

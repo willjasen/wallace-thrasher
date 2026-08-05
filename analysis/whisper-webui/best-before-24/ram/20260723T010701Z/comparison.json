@@ -1,0 +1,2236 @@
+{
+  "format_version": 1,
+  "generated_at": "2026-07-30T21:55:05.231927+00:00",
+  "source": {
+    "kind": "whisper-webui-analysis",
+    "run": "20260723T010701Z",
+    "run_path": "analysis/whisper-webui/best-before-24/ram/20260723T010701Z",
+    "audio_sha256": "f9c75266ad35757d036d891572fff6f52693e3c8bec9824ceedc5a6204e4d58e",
+    "model": "large-v3-turbo",
+    "candidate_sha256": "4e7e885d1ea3a5970e315bcd10a512db15d009dc89a7c7d89d61d994a5c0a072",
+    "manifest_sha256": "1fd04c3c280a0796333b223a74bd99884bdd213f2de924a7b296580f1bf994ad"
+  },
+  "target": {
+    "album": "Best Before '24",
+    "album_slug": "best-before-24",
+    "track": "Ram",
+    "track_slug": "ram",
+    "data_path": "jekyll/assets/json/data.json",
+    "data_sha256": "3dc42b16cadfbfb3b76a5c04722bd4585606bea8b8e8e219f2855e23f612c698",
+    "subtitle_path": "jekyll/assets/json/best-before-24/ram.json",
+    "subtitle_sha256": "8516ab307db03fd9cad21ad485eee7cf7b4c7209f32bc0b359fcc04737e6a1b6",
+    "current_aliases": [
+      "Dewey"
+    ],
+    "current_establishments": []
+  },
+  "speaker_mappings": [
+    {
+      "source_speaker": "None",
+      "proposed_speaker": null,
+      "confidence": 0.0,
+      "overlap_seconds": 0.0,
+      "action": "keep"
+    },
+    {
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "confidence": 0.8725,
+      "overlap_seconds": 103.61,
+      "action": "review"
+    },
+    {
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "confidence": 0.6683,
+      "overlap_seconds": 50.595,
+      "action": "review"
+    }
+  ],
+  "metadata": {
+    "aliases": [
+      {
+        "value": "Guy",
+        "action": "keep",
+        "reason": "Known catalog alias appears in the local Whisper transcript."
+      }
+    ],
+    "establishments": []
+  },
+  "alignments": [
+    {
+      "target_index": 1,
+      "target_group": null,
+      "source_indices": [
+        0
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Hello, Martin speaking.",
+      "source_text": "Hello, Martin speaking.",
+      "proposed_text": "Hello, Martin speaking.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 2,
+      "target_group": [
+        2,
+        3
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, Martin.",
+      "source_text": "Hi, Martin. I'm Dewey.",
+      "proposed_text": "Hi, Martin.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 3,
+      "target_group": [
+        2,
+        3
+      ],
+      "source_indices": [
+        1
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm Dewey.",
+      "source_text": "Hi, Martin. I'm Dewey.",
+      "proposed_text": "I'm Dewey.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 4,
+      "target_group": null,
+      "source_indices": [
+        2
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Okay.",
+      "source_text": "Okay.",
+      "proposed_text": "Okay.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 5,
+      "target_group": null,
+      "source_indices": [
+        3
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "And today's Thursday, the seventeenth.",
+      "source_text": "And today's Thursday the 17th.",
+      "proposed_text": "And today's Thursday the 17th.",
+      "text_action": "review",
+      "similarity": 0.8308,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 6,
+      "target_group": null,
+      "source_indices": [
+        4
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah.",
+      "source_text": "Yeah.",
+      "proposed_text": "Yeah.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 7,
+      "target_group": null,
+      "source_indices": [
+        5
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yeah, about 4:14 p.m.",
+      "source_text": "Yeah, about 4.14 p.m.",
+      "proposed_text": "Yeah, about 4:14 p.m.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 8,
+      "target_group": null,
+      "source_indices": [
+        6
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I needed to bring you your ram.",
+      "source_text": "I needed to bring you your RAM.",
+      "proposed_text": "I needed to bring you your ram.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 9,
+      "target_group": null,
+      "source_indices": [
+        7
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "My ram?",
+      "source_text": "My RAM?",
+      "proposed_text": "My ram?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 10,
+      "target_group": null,
+      "source_indices": [
+        8
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Yes, I'm calling from Montpelier, Vermont.",
+      "source_text": "Yes, I'm calling from Montpelier, Vermont.",
+      "proposed_text": "Yes, I'm calling from Montpelier, Vermont.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 11,
+      "target_group": null,
+      "source_indices": [
+        9
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "What's a ram?",
+      "source_text": "What's a RAM?",
+      "proposed_text": "What's a ram?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 12,
+      "target_group": null,
+      "source_indices": [
+        10
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Oh, I think you got the wrong person.",
+      "source_text": "It's a RAM, about two years old old oh i i think you got the wrong person",
+      "proposed_text": "It's a RAM, about two years old old oh i i think you got the wrong person",
+      "text_action": "review",
+      "similarity": 0.6542,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 13,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "No, no.",
+      "source_text": "and everything no no oh no is the guy's name rick yes okay um if i him, I'll ask him what it's about.",
+      "proposed_text": "No, no.",
+      "text_action": "group_review",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 14,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Is the guy's name Rick?",
+      "source_text": "and everything no no oh no is the guy's name rick yes okay um if i him, I'll ask him what it's about.",
+      "proposed_text": "Is the guy's name Rick?",
+      "text_action": "group_review",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 15,
+      "target_group": [
+        13,
+        14,
+        15
+      ],
+      "source_indices": [
+        12
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Okay.",
+      "source_text": "and everything no no oh no is the guy's name rick yes okay um if i him, I'll ask him what it's about.",
+      "proposed_text": "Okay.",
+      "text_action": "group_review",
+      "similarity": 0.5,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 16,
+      "target_group": null,
+      "source_indices": [
+        13
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Um, if I see him, I'll ask him what it's about, but, uh, well, no, I'm slated to drop off your Ram here within the next forty eight hours.",
+      "source_text": "Well, no, I'm slated to drop off your RAM here within the next 48 hours.",
+      "proposed_text": "Well, no, I'm slated to drop off your RAM here within the next 48 hours.",
+      "text_action": "review",
+      "similarity": 0.6734,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 17,
+      "target_group": null,
+      "source_indices": [
+        15
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No, no, no.",
+      "source_text": "No.",
+      "proposed_text": "No.",
+      "text_action": "review",
+      "similarity": 0.4,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 18,
+      "target_group": null,
+      "source_indices": [
+        16
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Nope.",
+      "source_text": "Nope.",
+      "proposed_text": "Nope.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 19,
+      "target_group": null,
+      "source_indices": [
+        17
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, I, I've already made plans, sir.",
+      "source_text": "Well, I've already made plans, sir.",
+      "proposed_text": "Well, I've already made plans, sir.",
+      "text_action": "review",
+      "similarity": 0.9697,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 20,
+      "target_group": null,
+      "source_indices": [
+        18
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Not happening.",
+      "source_text": "Yeah, not happening.",
+      "proposed_text": "Yeah, not happening.",
+      "text_action": "review",
+      "similarity": 0.8387,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 21,
+      "target_group": null,
+      "source_indices": [
+        19
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "Why is that?",
+      "source_text": "Why is that?",
+      "proposed_text": "Why is that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 22,
+      "target_group": null,
+      "source_indices": [
+        20
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Why is that?",
+      "source_text": "Why is that?",
+      "proposed_text": "Why is that?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 23,
+      "target_group": null,
+      "source_indices": [
+        21
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "Yes.",
+      "source_text": "Yes.",
+      "proposed_text": "Yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 24,
+      "target_group": [
+        24,
+        25
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "I don't have to explain anything.",
+      "source_text": "I don't have to explain anything. I never asked for one.",
+      "proposed_text": "I don't have to explain anything.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 25,
+      "target_group": [
+        24,
+        25
+      ],
+      "source_indices": [
+        22
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "I never asked for one.",
+      "source_text": "I don't have to explain anything. I never asked for one.",
+      "proposed_text": "I never asked for one.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 26,
+      "target_group": [
+        26,
+        27
+      ],
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "It's like you're dropping off an old jalopy Ford.",
+      "source_text": "It's like you're dropping off an old jalopy fort. You can do that, but I'm just going to have it",
+      "proposed_text": "It's like you're dropping off an old jalopy Ford.",
+      "text_action": "group_review",
+      "similarity": 0.9347,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 27,
+      "target_group": [
+        26,
+        27
+      ],
+      "source_indices": [
+        23
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "You can do that, but I'm just going to have it towed away.",
+      "source_text": "It's like you're dropping off an old jalopy fort. You can do that, but I'm just going to have it",
+      "proposed_text": "You can do that, but I'm just going to have it towed away.",
+      "text_action": "group_review",
+      "similarity": 0.9347,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 28,
+      "target_group": [
+        28,
+        29
+      ],
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Oh no, no, no, not a live ram.",
+      "source_text": "towed away. Oh, no, no, no. Not a live ram, certainly. Well, if you feel for the animal,",
+      "proposed_text": "Oh no, no, no, not a live ram.",
+      "text_action": "group_review",
+      "similarity": 0.6261,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 29,
+      "target_group": [
+        28,
+        29
+      ],
+      "source_indices": [
+        24
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Certainly.",
+      "source_text": "towed away. Oh, no, no, no. Not a live ram, certainly. Well, if you feel for the animal,",
+      "proposed_text": "Certainly.",
+      "text_action": "group_review",
+      "similarity": 0.6261,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 30,
+      "target_group": null,
+      "source_indices": [
+        25
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Well, if you feel for the animal, you will not subject it to a large road trip for no reason, but we're talking grade a rare mountain grade.",
+      "source_text": "you will not subject it to a large road trip for no reason.",
+      "proposed_text": "you will not subject it to a large road trip for no reason.",
+      "text_action": "review",
+      "similarity": 0.5979,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 31,
+      "target_group": null,
+      "source_indices": [
+        27
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "You can try and sell this Ram all you want to some place that can handle it.",
+      "source_text": "You can try and sell this ram all you want to someplace that can handle it.",
+      "proposed_text": "You can try and sell this Ram all you want to some place that can handle it.",
+      "text_action": "keep",
+      "similarity": 0.9933,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 32,
+      "target_group": null,
+      "source_indices": [
+        28
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "I cannot handle any more situations than I have right now.",
+      "source_text": "I cannot handle any more situations than I have right now.",
+      "proposed_text": "I cannot handle any more situations than I have right now.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 33,
+      "target_group": null,
+      "source_indices": [
+        29
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "But I talked to your neighbor.",
+      "source_text": "But I talked to your neighbor.",
+      "proposed_text": "But I talked to your neighbor.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 34,
+      "target_group": null,
+      "source_indices": [
+        30
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Yeah, but that doesn't mean you talk to me.",
+      "source_text": "Yeah, but that doesn't mean you talked to me.",
+      "proposed_text": "Yeah, but that doesn't mean you talked to me.",
+      "text_action": "review",
+      "similarity": 0.9762,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 35,
+      "target_group": [
+        35,
+        36
+      ],
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He assured me he did.",
+      "source_text": "He assured me he did. Yeah, but that doesn't mean you talk to me. He",
+      "proposed_text": "He assured me he did.",
+      "text_action": "group_review",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 36,
+      "target_group": [
+        35,
+        36
+      ],
+      "source_indices": [
+        31
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Yeah, but he doesn't represent me.",
+      "source_text": "He assured me he did. Yeah, but that doesn't mean you talk to me. He",
+      "proposed_text": "Yeah, but he doesn't represent me.",
+      "text_action": "group_review",
+      "similarity": 0.7797,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 37,
+      "target_group": null,
+      "source_indices": [
+        32
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Until you speak to me, you have no right to do anything.",
+      "source_text": "assured me he did. Yeah, but he doesn't represent me. Until you speak to me, you have no right to",
+      "proposed_text": "assured me he did. Yeah, but he doesn't represent me. Until you speak to me, you have no right to",
+      "text_action": "review",
+      "similarity": 0.5714,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 38,
+      "target_group": null,
+      "source_indices": [],
+      "current_speaker": "Martin",
+      "source_speaker": null,
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "And that's obvious.",
+      "source_text": null,
+      "proposed_text": "And that's obvious.",
+      "text_action": "keep_no_source_match",
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 39,
+      "target_group": [
+        39,
+        40,
+        41
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "You're going to love the animal.",
+      "source_text": "do anything. Okay, you're going to love the animal. Full stop. I may love the animal, but if I tell you",
+      "proposed_text": "You're going to love the animal.",
+      "text_action": "group_review",
+      "similarity": 0.7642,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 40,
+      "target_group": [
+        39,
+        40,
+        41
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "Full stop.",
+      "source_text": "do anything. Okay, you're going to love the animal. Full stop. I may love the animal, but if I tell you",
+      "proposed_text": "Full stop.",
+      "text_action": "group_review",
+      "similarity": 0.7642,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 41,
+      "target_group": [
+        39,
+        40,
+        41
+      ],
+      "source_indices": [
+        33
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "I may love the animal, but if I tell you full stop, I don't have resources.",
+      "source_text": "do anything. Okay, you're going to love the animal. Full stop. I may love the animal, but if I tell you",
+      "proposed_text": "I may love the animal, but if I tell you full stop, I don't have resources.",
+      "text_action": "group_review",
+      "similarity": 0.7642,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 42,
+      "target_group": null,
+      "source_indices": [
+        35
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "None",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "to care for it properly, why would you want to bring it there?",
+      "source_text": "to care for it properly, why would you want to bring it there?",
+      "proposed_text": "to care for it properly, why would you want to bring it there?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 43,
+      "target_group": null,
+      "source_indices": [
+        36
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because I talked to him, and talked to him, and talked to him, and talked to him, and talked to him about what I'm saying.",
+      "source_text": "Because I talked to him and talked to him and talked to him and talked to him about what I'm saying.",
+      "proposed_text": "Because I talked to him and talked to him and talked to him and talked to him about what I'm saying.",
+      "text_action": "review",
+      "similarity": 0.9167,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 44,
+      "target_group": [
+        44,
+        45
+      ],
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "And that's what I was told.",
+      "source_text": "And that's what I was told. And I talked to Chiang Kai-shek in China, and he said he wants you to give me all of your property.",
+      "proposed_text": "And that's what I was told.",
+      "text_action": "group_review",
+      "similarity": 0.9841,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 45,
+      "target_group": [
+        44,
+        45
+      ],
+      "source_indices": [
+        37
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Yes, and I talked to Chiang Kai-shek in China, and he said he wants you to give me all of your property.",
+      "source_text": "And that's what I was told. And I talked to Chiang Kai-shek in China, and he said he wants you to give me all of your property.",
+      "proposed_text": "Yes, and I talked to Chiang Kai-shek in China, and he said he wants you to give me all of your property.",
+      "text_action": "group_review",
+      "similarity": 0.9841,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 46,
+      "target_group": null,
+      "source_indices": [
+        38
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "That makes no sense at all.",
+      "source_text": "That makes no sense at all.",
+      "proposed_text": "That makes no sense at all.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 47,
+      "target_group": null,
+      "source_indices": [
+        39
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "You have to talk to the principal when you do things.",
+      "source_text": "You have to talk to the principal when you do things.",
+      "proposed_text": "You have to talk to the principal when you do things.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 48,
+      "target_group": null,
+      "source_indices": [
+        40
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Just take the ram, please.",
+      "source_text": "Just take the ram, please.",
+      "proposed_text": "Just take the ram, please.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 49,
+      "target_group": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "It's for one week of your time.",
+      "source_text": "It's for one week of your time. No, it's impossible. No. And I will not be doing that.",
+      "proposed_text": "It's for one week of your time.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 50,
+      "target_group": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "No, it's impossible.",
+      "source_text": "It's for one week of your time. No, it's impossible. No. And I will not be doing that.",
+      "proposed_text": "No, it's impossible.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 51,
+      "target_group": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "No?",
+      "source_text": "It's for one week of your time. No, it's impossible. No. And I will not be doing that.",
+      "proposed_text": "No?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 52,
+      "target_group": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "source_indices": [
+        41
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "And I will not be doing that.",
+      "source_text": "It's for one week of your time. No, it's impossible. No. And I will not be doing that.",
+      "proposed_text": "And I will not be doing that.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 53,
+      "target_group": null,
+      "source_indices": [
+        42
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "And if I see a vehicle come and drop anything on my property, uh, I will be reporting them.",
+      "source_text": "And if I see a vehicle come and drop anything on my property, I will be reporting it. Don't",
+      "proposed_text": "And if I see a vehicle come and drop anything on my property, I will be reporting it. Don't",
+      "text_action": "review",
+      "similarity": 0.9266,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 54,
+      "target_group": [
+        54,
+        55,
+        56
+      ],
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Don't report it.",
+      "source_text": "report it. This is Mountain Gray and Ram coming your way. Take your Ram elsewhere.",
+      "proposed_text": "Don't report it.",
+      "text_action": "group_review",
+      "similarity": 0.8138,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 55,
+      "target_group": [
+        54,
+        55,
+        56
+      ],
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "This is mountain grade ram.",
+      "source_text": "report it. This is Mountain Gray and Ram coming your way. Take your Ram elsewhere.",
+      "proposed_text": "This is mountain grade ram.",
+      "text_action": "group_review",
+      "similarity": 0.8138,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 56,
+      "target_group": [
+        54,
+        55,
+        56
+      ],
+      "source_indices": [
+        43
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Take your ram elsewhere.",
+      "source_text": "report it. This is Mountain Gray and Ram coming your way. Take your Ram elsewhere.",
+      "proposed_text": "Take your ram elsewhere.",
+      "text_action": "group_review",
+      "similarity": 0.8138,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 57,
+      "target_group": [
+        57,
+        58,
+        59
+      ],
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "Hello?",
+      "source_text": "Hello? Hi, yes. Is there a good time where I could just come by and show you this Ram?",
+      "proposed_text": "Hello?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 58,
+      "target_group": [
+        57,
+        58,
+        59
+      ],
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Hi, yes.",
+      "source_text": "Hello? Hi, yes. Is there a good time where I could just come by and show you this Ram?",
+      "proposed_text": "Hi, yes.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 59,
+      "target_group": [
+        57,
+        58,
+        59
+      ],
+      "source_indices": [
+        44
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Is there a good time where I could just come by and show you this ram?",
+      "source_text": "Hello? Hi, yes. Is there a good time where I could just come by and show you this Ram?",
+      "proposed_text": "Is there a good time where I could just come by and show you this ram?",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 60,
+      "target_group": [
+        60,
+        61,
+        62
+      ],
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Not at all.",
+      "source_text": "Not at all. Two years of age? If you trespass on my property, I will have you dealt with in",
+      "proposed_text": "Not at all.",
+      "text_action": "group_review",
+      "similarity": 0.867,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 61,
+      "target_group": [
+        60,
+        61,
+        62
+      ],
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "Two years of age.",
+      "source_text": "Not at all. Two years of age? If you trespass on my property, I will have you dealt with in",
+      "proposed_text": "Two years of age.",
+      "text_action": "group_review",
+      "similarity": 0.867,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 62,
+      "target_group": [
+        60,
+        61,
+        62
+      ],
+      "source_indices": [
+        45
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "If you trespass on my property, I will have you dealt with in the full extent of the law.",
+      "source_text": "Not at all. Two years of age? If you trespass on my property, I will have you dealt with in",
+      "proposed_text": "If you trespass on my property, I will have you dealt with in the full extent of the law.",
+      "text_action": "group_review",
+      "similarity": 0.867,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 63,
+      "target_group": null,
+      "source_indices": [
+        46
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Would you consider making a donation to house the animal for one week?",
+      "source_text": "the full extent of the law. Would you consider making a donation to house the animal for one week? No,",
+      "proposed_text": "the full extent of the law. Would you consider making a donation to house the animal for one week? No,",
+      "text_action": "review",
+      "similarity": 0.8214,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 64,
+      "target_group": [
+        64,
+        65,
+        66
+      ],
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "No, I cannot do that.",
+      "source_text": "I cannot do that. None of the above. Well, we're just going to come by and show the guy to you.",
+      "proposed_text": "No, I cannot do that.",
+      "text_action": "group_review",
+      "similarity": 0.9838,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 65,
+      "target_group": [
+        64,
+        65,
+        66
+      ],
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "None of the above.",
+      "source_text": "I cannot do that. None of the above. Well, we're just going to come by and show the guy to you.",
+      "proposed_text": "None of the above.",
+      "text_action": "group_review",
+      "similarity": 0.9838,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 66,
+      "target_group": [
+        64,
+        65,
+        66
+      ],
+      "source_indices": [
+        47
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Well, we're just going to come by and show the guy to you.",
+      "source_text": "I cannot do that. None of the above. Well, we're just going to come by and show the guy to you.",
+      "proposed_text": "Well, we're just going to come by and show the guy to you.",
+      "text_action": "group_review",
+      "similarity": 0.9838,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 67,
+      "target_group": [
+        67,
+        68
+      ],
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "You don't have to decide.",
+      "source_text": "You don't have to decide. If you do that, you will be prosecuted to the full extent of the law.",
+      "proposed_text": "You don't have to decide.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 68,
+      "target_group": [
+        67,
+        68
+      ],
+      "source_indices": [
+        48
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "If you do that, you will be prosecuted to the full extent of the law.",
+      "source_text": "You don't have to decide. If you do that, you will be prosecuted to the full extent of the law.",
+      "proposed_text": "If you do that, you will be prosecuted to the full extent of the law.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 69,
+      "target_group": [
+        69,
+        70
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "I have cameras on the property.",
+      "source_text": "I have cameras on the property. We'll get your license number and we'll figure out who you are.",
+      "proposed_text": "I have cameras on the property.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 70,
+      "target_group": [
+        69,
+        70
+      ],
+      "source_indices": [
+        49
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "We'll get your license number and we'll figure out who you are.",
+      "source_text": "I have cameras on the property. We'll get your license number and we'll figure out who you are.",
+      "proposed_text": "We'll get your license number and we'll figure out who you are.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 71,
+      "target_group": [
+        71,
+        72,
+        73
+      ],
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "I'm going to let this ram loose all over you.",
+      "source_text": "I'm going to let this ram loose all over you. How does that sound here today for a whole bunch of good news? You think imposing on other people and making a",
+      "proposed_text": "I'm going to let this ram loose all over you.",
+      "text_action": "group_review",
+      "similarity": 0.9112,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 72,
+      "target_group": [
+        71,
+        72,
+        73
+      ],
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "How does that sound here today for a whole bunch of good news?",
+      "source_text": "I'm going to let this ram loose all over you. How does that sound here today for a whole bunch of good news? You think imposing on other people and making a",
+      "proposed_text": "How does that sound here today for a whole bunch of good news?",
+      "text_action": "group_review",
+      "similarity": 0.9112,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 73,
+      "target_group": [
+        71,
+        72,
+        73
+      ],
+      "source_indices": [
+        50
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "You think imposing on other people and making a nuisance is a fun thing to do?",
+      "source_text": "I'm going to let this ram loose all over you. How does that sound here today for a whole bunch of good news? You think imposing on other people and making a",
+      "proposed_text": "You think imposing on other people and making a nuisance is a fun thing to do?",
+      "text_action": "group_review",
+      "similarity": 0.9112,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 74,
+      "target_group": [
+        74,
+        75
+      ],
+      "source_indices": [
+        51,
+        52
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "You don't respect the fact that there are people here and you're not respecting their right to lead a relatively normal life.",
+      "source_text": "nuisance is a fun thing to do? You don't respect the fact that there are people here and you're not respecting their right to lead a relatively normal life. I've made plans here. This was all",
+      "proposed_text": "You don't respect the fact that there are people here and you're not respecting their right to lead a relatively normal life.",
+      "text_action": "group_review",
+      "similarity": 0.8709,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 75,
+      "target_group": [
+        74,
+        75
+      ],
+      "source_indices": [
+        51,
+        52
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "I've made plans here.",
+      "source_text": "nuisance is a fun thing to do? You don't respect the fact that there are people here and you're not respecting their right to lead a relatively normal life. I've made plans here. This was all",
+      "proposed_text": "I've made plans here.",
+      "text_action": "group_review",
+      "similarity": 0.8709,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 76,
+      "target_group": [
+        76,
+        77,
+        78
+      ],
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "This was all supposed to be handled.",
+      "source_text": "supposed to be handled. You were supposed to look after him. Your plans, unfortunately, in the grand scheme of things,",
+      "proposed_text": "This was all supposed to be handled.",
+      "text_action": "group_review",
+      "similarity": 0.8346,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 77,
+      "target_group": [
+        76,
+        77,
+        78
+      ],
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "You were supposed to look after it.",
+      "source_text": "supposed to be handled. You were supposed to look after him. Your plans, unfortunately, in the grand scheme of things,",
+      "proposed_text": "You were supposed to look after it.",
+      "text_action": "group_review",
+      "similarity": 0.8346,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 78,
+      "target_group": [
+        76,
+        77,
+        78
+      ],
+      "source_indices": [
+        53
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Your plans, unfortunately, in the grand scheme of things, are very, very insignificant.",
+      "source_text": "supposed to be handled. You were supposed to look after him. Your plans, unfortunately, in the grand scheme of things,",
+      "proposed_text": "Your plans, unfortunately, in the grand scheme of things, are very, very insignificant.",
+      "text_action": "group_review",
+      "similarity": 0.8346,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 79,
+      "target_group": [
+        79,
+        80
+      ],
+      "source_indices": [
+        54
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Take it up with your neighbor.",
+      "source_text": "are very, very insignificant. Take it up with your neighbor. He told me you were good with this",
+      "proposed_text": "Take it up with your neighbor.",
+      "text_action": "group_review",
+      "similarity": 0.8205,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 80,
+      "target_group": [
+        79,
+        80
+      ],
+      "source_indices": [
+        54
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He told me you were good with this.",
+      "source_text": "are very, very insignificant. Take it up with your neighbor. He told me you were good with this",
+      "proposed_text": "He told me you were good with this.",
+      "text_action": "group_review",
+      "similarity": 0.8205,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 81,
+      "target_group": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Because he told me, oh yeah, Martin's fine.",
+      "source_text": "because he told me, oh yeah, Martin's fine. He's fine. He's fine. He's fine. He's fine. He's fine.",
+      "proposed_text": "Because he told me, oh yeah, Martin's fine.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 82,
+      "target_group": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's fine.",
+      "source_text": "because he told me, oh yeah, Martin's fine. He's fine. He's fine. He's fine. He's fine. He's fine.",
+      "proposed_text": "He's fine.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 83,
+      "target_group": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's fine.",
+      "source_text": "because he told me, oh yeah, Martin's fine. He's fine. He's fine. He's fine. He's fine. He's fine.",
+      "proposed_text": "He's fine.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 84,
+      "target_group": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's fine.",
+      "source_text": "because he told me, oh yeah, Martin's fine. He's fine. He's fine. He's fine. He's fine. He's fine.",
+      "proposed_text": "He's fine.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 85,
+      "target_group": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's fine.",
+      "source_text": "because he told me, oh yeah, Martin's fine. He's fine. He's fine. He's fine. He's fine. He's fine.",
+      "proposed_text": "He's fine.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 86,
+      "target_group": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "source_indices": [
+        55
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "He's fine.",
+      "source_text": "because he told me, oh yeah, Martin's fine. He's fine. He's fine. He's fine. He's fine. He's fine.",
+      "proposed_text": "He's fine.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 87,
+      "target_group": [
+        87,
+        88,
+        89
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "To show up over there.",
+      "source_text": "To show up over there. So that's what I'm going to do. I'm telling you, you can leave it on his",
+      "proposed_text": "To show up over there.",
+      "text_action": "group_review",
+      "similarity": 0.9534,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 88,
+      "target_group": [
+        87,
+        88,
+        89
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "So that's what I'm going to do.",
+      "source_text": "To show up over there. So that's what I'm going to do. I'm telling you, you can leave it on his",
+      "proposed_text": "So that's what I'm going to do.",
+      "text_action": "group_review",
+      "similarity": 0.9534,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 89,
+      "target_group": [
+        87,
+        88,
+        89
+      ],
+      "source_indices": [
+        56
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "review",
+      "current_text": "I'm telling you, you can leave it on his property.",
+      "source_text": "To show up over there. So that's what I'm going to do. I'm telling you, you can leave it on his",
+      "proposed_text": "I'm telling you, you can leave it on his property.",
+      "text_action": "group_review",
+      "similarity": 0.9534,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 90,
+      "target_group": null,
+      "source_indices": [
+        57,
+        58
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "Why don't you meet me up at the Cracker Barrel, and then you can take a look at him.",
+      "source_text": "property. Why don't you meet me up at the Cracker Barrel, and then you can take a look",
+      "proposed_text": "property. Why don't you meet me up at the Cracker Barrel, and then you can take a look",
+      "text_action": "review",
+      "similarity": 0.9036,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 91,
+      "target_group": null,
+      "source_indices": [
+        59
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_01",
+      "proposed_speaker": "LPC",
+      "speaker_action": "keep",
+      "current_text": "That's all I'm asking.",
+      "source_text": "at him. That's all I'm asking.",
+      "proposed_text": "at him. That's all I'm asking.",
+      "text_action": "review",
+      "similarity": 0.8571,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 92,
+      "target_group": null,
+      "source_indices": [
+        60,
+        61
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "If I have to meet you with the Cracker Barrel, it will be with the law enforcement officials.",
+      "source_text": "If I have to meet you with the Cracker Barrel, it will be with the law enforcement",
+      "proposed_text": "If I have to meet you with the Cracker Barrel, it will be with the law enforcement",
+      "text_action": "review",
+      "similarity": 0.9419,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 93,
+      "target_group": null,
+      "source_indices": [
+        62,
+        63
+      ],
+      "current_speaker": "LPC",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "review",
+      "current_text": "I'm going to show up at seven o'clock.",
+      "source_text": "officials. I'm going to show up at 7 o'clock. You show up",
+      "proposed_text": "officials. I'm going to show up at 7 o'clock. You show up",
+      "text_action": "review",
+      "similarity": 0.6957,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 94,
+      "target_group": null,
+      "source_indices": [
+        64,
+        65
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "You show up anywhere, and you're going to have a sore posterior.",
+      "source_text": "anywhere, and you're going to have a sore posterior.",
+      "proposed_text": "anywhere, and you're going to have a sore posterior.",
+      "text_action": "review",
+      "similarity": 0.8929,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 95,
+      "target_group": null,
+      "source_indices": [
+        66
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "I hate to tell you.",
+      "source_text": "I hate to tell you.",
+      "proposed_text": "I hate to tell you.",
+      "text_action": "keep",
+      "similarity": 1.0,
+      "match_type": "exact",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    },
+    {
+      "target_index": 96,
+      "target_group": null,
+      "source_indices": [
+        67,
+        68
+      ],
+      "current_speaker": "Martin",
+      "source_speaker": "SPEAKER_00",
+      "proposed_speaker": "Martin",
+      "speaker_action": "keep",
+      "current_text": "Your remains will be sent back to whoever you specify.",
+      "source_text": "Your remains will be sent back to whoever you specified.",
+      "proposed_text": "Your remains will be sent back to whoever you specified.",
+      "text_action": "review",
+      "similarity": 0.963,
+      "match_type": "similar",
+      "current_reviewed": null,
+      "proposed_reviewed": false,
+      "review_action": "initialize_from_track"
+    }
+  ],
+  "summary": {
+    "current_subtitles": 96,
+    "candidate_subtitles": 69,
+    "matched": 95,
+    "text_review": 18,
+    "text_group_review": 36,
+    "speaker_review": 26,
+    "review_flags_to_initialize": 96,
+    "alias_additions": 1,
+    "establishment_additions": 0
+  },
+  "instructions": [
+    "Current repository text and named speakers remain canonical unless a review action is explicitly changed to approved.",
+    "Change a review action to approved only after checking the audio and current project data.",
+    "Missing per-line Reviewed flags are initialized from the track-level Subtitles_Adjusted value without changing text or speakers.",
+    "auto_add metadata is eligible for merge because it is an exact term already present elsewhere in the catalog.",
+    "Grouped subtitle differences cannot be merged automatically; edit the target subtitle manually or approve individual ungrouped lines.",
+    "Run merge --dry-run before merge. Target or source hash changes require a fresh comparison."
+  ]
+}
