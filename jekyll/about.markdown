@@ -162,7 +162,43 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 
 here are various badges related to this project's code and its deployments
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- production deployment status to Netlify
+<a id="about-netlify-status-badge" class="about-netlify-status-badge" href="https://app.netlify.com/sites/wallace-thrasher/deploys" rel="noopener noreferrer" target="_blank" aria-label="View the latest Netlify deployment"><img src="https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status" data-src="https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status" alt="Netlify deployment status" width="118" height="20"></a> -- production deployment status to Netlify
+
+<script>
+(function () {
+  var badge = document.getElementById('about-netlify-status-badge');
+  var badgeImage = badge && badge.querySelector('img');
+  if (!badge || !badgeImage) return;
+
+  var latestDeployUrl = 'https://api.netlify.com/api/v1/sites/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploys?production=true&per_page=1';
+  var updateInProgress = false;
+
+  function refreshBadge() {
+    if (updateInProgress) return;
+    updateInProgress = true;
+
+    fetch(latestDeployUrl, { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Netlify returned ' + response.status);
+        return response.json();
+      })
+      .then(function () {
+        // The badge remains visible for every deployment state; reload its image
+        // so Netlify's current status is reflected without browser caching.
+        badgeImage.src = badgeImage.dataset.src + '?' + Date.now();
+      })
+      .catch(function () {
+        // Keep the last visible status when the status API is temporarily unavailable.
+      })
+      .finally(function () {
+        updateInProgress = false;
+      });
+  }
+
+  refreshBadge();
+  window.setInterval(refreshBadge, 15000);
+})();
+</script>
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- when last committed to GitHub
 
@@ -177,6 +213,7 @@ notes on version history can be found on the [version history]({{ site.baseurl }
 this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' }}
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/about-toc.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/about-netlify.css">
 <script>
 (function () {
   function buildTOC() {
