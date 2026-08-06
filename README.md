@@ -41,7 +41,13 @@ because the website is static, there is no server-end processing that occurs whe
 
 ### 🤖 Disclosure 🤖
 
-this project uses both local and cloud-based AI tools. [Whisper-WebUI](https://github.com/jhj0517/Whisper-WebUI) runs locally to transcribe LPC audio and provide speaker diarization. Cloud AI tools have also been used to code, review, and improve stretchie. All generated transcripts and suggested code changes are reviewed and corrected by a human before they become part of the project.
+this project uses both local and cloud-based ai tools.
+
+[whisper-webUI](https://github.com/jhj0517/Whisper-WebUI) runs locally to transcribe LPC audio tracks and provide speaker diarization. additionally, running the ai model locally avoids sharing the LPC audio tracks with third-parties.
+
+cloud ai tools have been used to code, review, and improve the code of stretchie.
+
+furthermore, it has been my stance that ai is both good and bad - i believe that these tools can be used in good, productive ways while acknowleding problems like ai slop and misinformation.
 
 ### ↪️ Converting Tracks to Subtitles ↪️
 
