@@ -8,6 +8,9 @@ ignored by Git and must never be committed.
 ## Contents
 
 - `welcome-function.js` mirrors the deployed Twilio `/welcome` Function.
+- `token-function.js` mirrors the public `/token` Function used by the website's
+  browser caller. It issues short-lived Voice SDK tokens and never exposes the
+  API secret to the browser.
 - `audio/` contains the ambient sound assets deployed with the Function.
 - [`audio/SOURCES.md`](audio/SOURCES.md) records the origin, creator, license,
   and relevant attribution for every ambient sound file.
@@ -71,6 +74,11 @@ Changes to `welcome-function.js` or the audio assets are incomplete until they
 are saved and deployed to the Twilio service. After deployment, verify that the
 Twilio editor matches `welcome-function.js`, the latest version is deployed,
 and every file referenced by the `ambientSounds` array exists as a Twilio Asset.
+
+The browser caller also requires a TwiML App whose Voice URL is the deployed
+`/welcome` Function. Its SID is stored as `TWIML_APP_SID` in the Twilio
+environment, alongside `TWILIO_API_KEY` and `TWILIO_API_SECRET`. Deploy
+`token-function.js` as the public `/token` route whenever it changes.
 
 Twilio's supported playback formats and transcoding guidance are documented in
 the [TwiML `Play` reference](https://www.twilio.com/docs/voice/twiml/play).
