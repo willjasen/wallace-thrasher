@@ -18,6 +18,7 @@ data
 
 appearance
 
+ - create a [Leaderboard]({{ '/leaderboard/' | relative_url }} page that shows who has submitted suggestions
  - group searched subtitle results into their same tracks
  - group searched alias and establishment results into their same album
  - fix highlighting of table of contents menu
