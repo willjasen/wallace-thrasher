@@ -79,29 +79,6 @@ python3 python/wiki_metadata_merge.py --write
 
 The project continues to call organizations `Establishments`. Each imported organization retains the wiki's `real-world` or `created` classification in `Establishment_Types`; entries found only in the wiki's unclassified “Just a big list” use `unspecified`. `Talkin_Whipapedia` records the values added by the importer so later runs can update or remove stale imports without disturbing hand-maintained metadata. The source material is available under CC BY-SA from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/wiki/Home#Navigation).
 
-### 🚘 Under The Hood 🚘
-
-when the search pages are accessed, the single combined JSON data (`/assets/json/data.combined.json`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for multiple fields: speakers, subtitles, aliases, and establishments.
-
-the same file is exposed through a read-only browser API. the API downloads and caches `data.combined.json` once; all of its methods query that in-memory dataset and do not request `data.json`, individual track files, or a backend. it is available on every page as `window.WallaceThrasherAPI`:
-
-```javascript
-const api = window.WallaceThrasherAPI;
-
-const albums = await api.getAlbums({ year: 2001, query: 'volume' });
-const tracks = await api.getTracks({ album: 'longmont-potion-castle-4' });
-const result = await api.getTrack('longmont-potion-castle-4', 'alex-trebek');
-const lines = await api.getSubtitles({ speaker: 'Alex Trebek', query: 'parcel', limit: 20 });
-const speakers = await api.getSpeakers({ album: 'longmont-potion-castle-4' });
-const aliases = await api.getAliases({ query: 'stretch' });
-const establishments = await api.getEstablishments({ query: 'ups' });
-const stats = await api.getStats();
-```
-
-list methods accept `offset` and `limit`. `getTracks()` returns `{ album, track }` records, `getTrack()` returns one such record or `null`, and `getSubtitles()` returns `{ album, track, subtitle }` records. `api.ready()` or `api.getData()` provides the original combined document when a specialized query is not enough.
-
-the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
-
 ### 🎙️ Local transcript analysis 🎙️
 
 tracks on the LPC USB can be analyzed through a locally hosted Whisper-WebUI over HTTP or HTTPS. the workflow resolves a track from its album and track slugs, reviews its `Track_Type`, enables speaker diarization, and saves a review bundle under `analysis/whisper-webui/`. tracks classified as `music` automatically enable Whisper-WebUI's background music remover before transcription; `call` and unclassified tracks use the original audio. the selected type and preprocessing choice are recorded in the run manifest. the analysis directory is intentionally ignored by git, and no transcript changes are applied to the site automatically.
@@ -147,22 +124,6 @@ python3 python/whisper_compare_and_merge.py merge --dry-run \
 the comparison is written as `comparison.json` inside the git-ignored analysis run. repository subtitle text and named speakers remain authoritative: Whisper differences use the `review` action and are merged only after that individual action, or an intended speaker mapping, is changed to `approved`. exact mentions of aliases or establishments already known elsewhere in the catalog use `auto_add`. a real merge validates hashes for the analysis artifacts, `data.json`, and the track JSON, then creates ignored backups under `analysis/whisper-webui/merge-backups/` before writing atomically. Detailed Whisper source provenance stays in an ignored `merge-receipts/` file inside the analysis run and is never added to `data.json`; a sanitized public record of the approved outcome is appended to `jekyll/_data/whisper_merges.json` for the `/whisper-data/` page.
 
 subtitle entries may contain a boolean `Reviewed` field. when this field is missing, the merge initializes it from the track's existing `Subtitles_Adjusted` value; an explicitly approved Whisper text or speaker change is always written with `Reviewed: true`. this preserves the repository version by default while recording human review at line level.
-
-### 🛠️ Building 🛠️
-
-to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
-
-to create the default indexable production build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
-
-when the LPC USB collection is available locally, the build can also verify that every catalog album directory and track filename matches the USB files. set `LPC_USB_ROOT` to the USB collection's root before building, for example: `LPC_USB_ROOT="/path/to/LPC USB" JEKYLL_ENV=production bundle exec jekyll build`. this check is skipped automatically on Netlify and when the path is unavailable.
-
-to build the site with the shared browser-rendered track viewer instead of fully rendered track HTML, run: `JEKYLL_ENV=production INDEXABLE=false bundle exec jekyll build`
-
-to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
-
-### 📤 Deployment 📤
-
-commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
 
 ### ✍️ How to Contribute ✍️
 

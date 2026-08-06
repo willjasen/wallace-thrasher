@@ -48,26 +48,6 @@ cloud ai tools like ChatGPT Work have been used to code, review, and improve the
 
 furthermore, it has been my stance that ai is both good and bad - i believe that these tools can be used in good, productive ways while acknowleding problems like ai slop and misinformation.
 
-### 🚘 Under The Hood 🚘
-
-when the search pages are accessed, the single combined JSON data (`/assets/json/data.combined.json`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for multiple fields: speakers, subtitles, aliases, and establishments.
-
-the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
-
-### 🛠️ Building 🛠️
-
-to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
-
-to create the default indexable production build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
-
-to build the site with the shared browser-rendered track viewer instead of fully rendered track HTML, run: `JEKYLL_ENV=production INDEXABLE=false bundle exec jekyll build`
-
-to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
-
-### 📤 Deployment 📤
-
-commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
-
 ### ✍️ How to Contribute ✍️
 
 GitHub users can [contribute]({{ site.baseurl }}/instructions/#edit-subtitles-and-speakers) corrections directly from the website. sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.

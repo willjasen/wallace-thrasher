@@ -64,6 +64,30 @@ the JSON data for each track resides within a folder named as the respective alb
 ]
 ```
 
+### 🚘 Under The Hood 🚘
+
+when the search pages are accessed, the single combined JSON data (`/assets/json/data.combined.json`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for multiple fields: speakers, subtitles, aliases, and establishments.
+
+the same file is exposed through a read-only browser API. the API downloads and caches `data.combined.json` once; all of its methods query that in-memory dataset and do not request `data.json`, individual track files, or a backend. it is available on every page as `window.WallaceThrasherAPI`.
+
+the keys of `USB_Directory` and `USB_Filename` refer to the respective directory and filename of the mp3 that resides on a "LPC Ultimate Session Bundle" usb drive that are occasionally available for sale via [lpc's website](http://longmontpotioncastle.com/). these two pieces of data are used to play audio, if the files from the usb collection are uploaded.
+
+### 🛠️ Building 🛠️
+
+to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
+
+to create the default indexable production build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
+
+when the LPC USB collection is available locally, the build can also verify that every catalog album directory and track filename matches the USB files. set `LPC_USB_ROOT` to the USB collection's root before building, for example: `LPC_USB_ROOT="/path/to/LPC USB" JEKYLL_ENV=production bundle exec jekyll build`.
+
+to build the site with the shared browser-rendered track viewer instead of fully rendered track HTML, run: `JEKYLL_ENV=production INDEXABLE=false bundle exec jekyll build`
+
+to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
+
+### 📤 Deployment 📤
+
+commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
+
 ### 🏷️ Badges 🏷️
 
 here are various badges related to this project's code and its deployments
