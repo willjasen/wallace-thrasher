@@ -14,12 +14,51 @@
 }
 
 .nav-list .page-link {
+    position: relative;
     margin: 0;
     padding: 3px 5px;
     text-decoration: none;
     color: inherit;
     border-radius: 4px;
     transition: background 0.2s;
+}
+
+/* Give each menu item a themed pair of emojis without changing its resting label. */
+.nav-list .page-link::before,
+.nav-list .page-link::after,
+.nav-list .dropdown-toggle::before,
+.nav-list .dropdown-toggle::after {
+  content: attr(data-emoji);
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.7);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nav-list .page-link::before,
+.nav-list .dropdown-toggle::before {
+  right: 100%;
+  margin-right: 0.35em;
+}
+
+.nav-list .page-link::after,
+.nav-list .dropdown-toggle::after {
+  left: 100%;
+  margin-left: 0.35em;
+}
+
+.nav-list .page-link:hover::before,
+.nav-list .page-link:hover::after,
+.nav-list .page-link:focus-visible::before,
+.nav-list .page-link:focus-visible::after,
+.nav-list .dropdown-toggle:hover::before,
+.nav-list .dropdown-toggle:hover::after,
+.nav-list .dropdown-toggle:focus-visible::before,
+.nav-list .dropdown-toggle:focus-visible::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
 
 .nav-list .page-link:hover {
@@ -32,6 +71,7 @@
 }
 
 .dropdown-toggle {
+  position: relative;
   margin: 0;
   padding: 3px 5px;
   border: none;

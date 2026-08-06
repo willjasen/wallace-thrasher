@@ -39,12 +39,17 @@
                   {%- if my_page.search_menu == true -%}
                     {%- if search_menu_added != true -%}
                       <li class="nav-dropdown">
-                        <button class="dropdown-toggle">Search</button>
+                        <button class="dropdown-toggle" data-emoji="🔍" aria-label="Search menu">Search</button>
                         <ul class="dropdown-menu">
                           {%- for path in page_paths -%}
                             {%- assign search_page = site.pages | where: "path", path | first -%}
                             {%- if search_page.search_menu == true and search_page.title and search_page.hide_from_nav != true -%}
-                              <li><a class="page-link" href="{{ search_page.url | relative_url }}">{{ search_page.title | escape }}</a></li>
+                              {%- assign search_emoji = "🔎" -%}
+                              {%- if search_page.title == "Aliases" -%}{%- assign search_emoji = "🏷️" -%}
+                              {%- elsif search_page.title == "Establishments" -%}{%- assign search_emoji = "🏪" -%}
+                              {%- elsif search_page.title == "Speakers" -%}{%- assign search_emoji = "🎙️" -%}
+                              {%- elsif search_page.title == "Subtitles" -%}{%- assign search_emoji = "💬" -%}{%- endif -%}
+                              <li><a class="page-link" data-emoji="{{ search_emoji }}" href="{{ search_page.url | relative_url }}">{{ search_page.title | escape }}</a></li>
                             {%- endif -%}
                           {%- endfor -%}
                         </ul>
@@ -52,7 +57,14 @@
                       {%- assign search_menu_added = true -%}
                     {%- endif -%}
                   {%- else -%}
-                    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.nav_title | default: my_page.title | escape }}</a></li>
+                    {%- assign nav_label = my_page.nav_title | default: my_page.title -%}
+                    {%- assign nav_emoji = "✨" -%}
+                    {%- if nav_label == "About" -%}{%- assign nav_emoji = "🧭" -%}
+                    {%- elsif nav_label == "Albums" -%}{%- assign nav_emoji = "💿" -%}
+                    {%- elsif nav_label == "Alex Trebek" -%}{%- assign nav_emoji = "🧠" -%}
+                    {%- elsif nav_label == "Instructions" -%}{%- assign nav_emoji = "📖" -%}
+                    {%- elsif nav_label == "Leaderboard" -%}{%- assign nav_emoji = "🏆" -%}{%- endif -%}
+                    <li><a class="page-link" data-emoji="{{ nav_emoji }}" href="{{ my_page.url | relative_url }}">{{ nav_label | escape }}</a></li>
                   {%- endif -%}
                 {%- endif -%}
               {%- endfor -%}
