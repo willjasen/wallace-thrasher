@@ -28,6 +28,7 @@ appearance
  - preserve subtitle searches when navigating back from a track page
  - make the Netlify deployment badge on the About reactive
  - add a play button to the track page if the LPC USB has been loaded
+ - show emojis for a header menu option when hovered on
 
 other
 
