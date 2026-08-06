@@ -37,7 +37,7 @@ when i began the venture of creating this magnificent package, i pledged that i 
 
 this project uses both local and cloud-based ai tools.
 
-[whisper-webUI](https://github.com/jhj0517/Whisper-WebUI) runs locally to transcribe LPC audio tracks and provide speaker diarization. additionally, running the ai model locally avoids sharing the LPC audio tracks with third-parties.
+[whisper-webui](https://github.com/jhj0517/Whisper-WebUI) runs locally to transcribe LPC audio tracks and provide speaker diarization. additionally, running the ai model locally avoids sharing the LPC audio tracks with third-parties.
 
 cloud ai tools like ChatGPT Work have been used to code, review, and improve the code of stretchie.
 
