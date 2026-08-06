@@ -84,4 +84,4 @@ notes on version history can be found on the [version history](https://stretchie
 
 ### ☎️ Call Us! ☎️
 
-if you'd like to speak further with the bangkok sod center, please give a ring to [+1 (445)-ASIASOD](tel:+1-445-ASIASOD)
+if you'd like to speak further with the bangkok sod center, please give a ring to [+1 (445)-ASIASOD](tel:+1445ASIASOD)
