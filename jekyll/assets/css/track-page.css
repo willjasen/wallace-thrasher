@@ -52,23 +52,44 @@
 .track-review-status a { white-space: nowrap; }
 
 .track-play-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 14px;
-  padding: 9px 14px;
-  border: 1px solid greenyellow;
+  padding: 10px 17px 10px 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(205, 255, 130, 0.85) !important;
   border-radius: 999px;
-  background: rgba(173, 255, 47, 0.12);
-  color: greenyellow;
+  background: linear-gradient(135deg, #baff68 0%, #71d993 100%) !important;
+  color: #10251b !important;
   cursor: pointer;
   font: inherit;
   font-size: 0.9rem;
   font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 5px 16px rgba(111, 218, 139, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.track-play-button span {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(16, 37, 27, 0.14);
+  font-size: 0.72rem;
 }
 .track-play-button:hover,
 .track-play-button:focus-visible {
-  background: rgba(173, 255, 47, 0.24);
+  background: linear-gradient(135deg, #d4ff91 0%, #8ae7a8 100%) !important;
+  box-shadow: 0 8px 22px rgba(111, 218, 139, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+.track-play-button:focus-visible {
+  outline: 3px solid rgba(186, 255, 104, 0.35);
+  outline-offset: 3px;
 }
 .track-play-button[hidden] { display: none; }
 
