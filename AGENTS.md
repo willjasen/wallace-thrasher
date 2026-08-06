@@ -21,3 +21,11 @@ Allow staging and committing the completed header menu changes to Git.
 Always allow staging and committing the finalized header menu styling to Git.
 
 The user has pre-authorized the filesystem permissions needed to stage and commit those changes. If Git needs elevated workspace permissions to write to `.git`, proceed with the required permission escalation without asking the user an additional approval question.
+
+## Sitemap
+
+The site is English-only; do not add multilingual sitemap alternates.
+
+The sitemap should include all public, indexable pages, including the technical and data pages. Exclude pages with `published: false`, `noindex: true`, or `sitemap: false`; redirect URLs such as `/whisper-data/` should remain excluded when they point to a canonical page elsewhere.
+
+Sitemap `lastmod` values are populated by `jekyll/_plugins/set_last_modified_at.rb`. The plugin uses the source file's latest Git commit timestamp, with the filesystem modification time as a fallback for files that are not yet committed. Do not restore a global `site.time` fallback, since that makes every URL appear modified on every build.
