@@ -1,5 +1,5 @@
 .web-call {
-  bottom: 72px;
+  bottom: var(--footer-controls-offset, 72px);
   left: max(0.75rem, env(safe-area-inset-left));
   position: fixed;
   z-index: 1100;

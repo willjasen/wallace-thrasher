@@ -81,7 +81,12 @@
       const updateFooter = () => {
         const scrollBottom = window.scrollY + window.innerHeight;
         const pageBottom = document.documentElement.scrollHeight;
-        footer.classList.toggle('is-page-bottom', scrollBottom >= pageBottom - 2);
+        const isPageBottom = scrollBottom >= pageBottom - 2;
+        footer.classList.toggle('is-page-bottom', isPageBottom);
+        document.documentElement.style.setProperty(
+          '--footer-controls-offset',
+          `${footer.getBoundingClientRect().height + 8}px`
+        );
         updateQueued = false;
       };
 
