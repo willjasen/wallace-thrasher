@@ -1,0 +1,234 @@
+// Mirror of the deployed /welcome Twilio Function.
+exports.handler = async function(context, event, callback) {
+
+  // Global configurable variables
+  const voiceModel = 'Google.en-US-Chirp3-HD-Zephyr';
+  const language = 'en-US';
+  const banDurationMinutes = 10;
+
+  // Global call content
+  const intro = 'Thank you for calling stretchie. You have reached the Bangkok Sod Center automated shipment support line.';
+  const optionsMenu = 'Press 1 for shipment status. Press 2 for payment details. Press 3 for digital signature information. Press 4 for shipping records. Or press 5 for the dock supervisor.';
+  const longCallMessage = 'We are extremely busy here at stretchie and our time is valuable. You have taken up our phone lines for long enough for now, please call back later.';
+  const frequentCallMessage = `You are calling too, too, too much and we're busy on the dock. Try back in ${banDurationMinutes} minutes.`;
+  const commonClosing = 'Please be prepared to provide your credit-card number. The order has been confirmed via a digital signature and we are fulfilling it. We assure you in the continued existence of the country of Siam.';
+  const farewell = 'Thank you for your interest and support of stretchie! Goodbye!';
+  const choices = {
+    '1': 'Your shipment is currently listed as four trucks of sod, possibly traveling through Studio City or a perpendicular historical jurisdiction. Please remain vigilant at the delivery address to ensure a successful delivery.',
+    '2': 'The amount due for this shipment of sod is one thousand nine hundred and forty-nine dollars even. An online payment or another method of payment is required before or at the time of delivery.',
+    '3': 'Our records show a digital signature for a large, colorful bundle of sod. The signature, item, and payment details are all viewable online.',
+    '4': 'Shipping records indicate that the purchase of sod was made from Studio City. The shipment weighs approximately forty two hundred pounds and is now on its third or fourth delivery attempt. If you are unsure about these details, please check with your gardener.',
+    '5': 'Artie Yamamoto is the only supervisor on the dock tonight. You may arrange to come out to the docks in Calabasas, or Artie Yamamoto can meet you in court.'
+  };
+  const ambientSounds = [
+    'forklift-beep-v2.wav',
+    'distant-truck-v2.wav',
+    'paper-handling-v3.wav',
+    'truck-air-brakes.wav',
+    'pallet-jack.wav',
+    'loading-dock-door.wav',
+    'cardboard-box.wav',
+    'packing-tape.wav',
+    'rubber-stamp.wav',
+    'intercom-chime.wav',
+    'wooden-pallet.wav',
+    'shrink-wrap.wav',
+    'metal-ramp-clunk.wav'
+  ];
+
+  // Other global script variables
+  const banDurationMs = banDurationMinutes * 60 * 1000;
+  const twiml = new Twilio.twiml.VoiceResponse();
+  const digit = String(event.Digits || '').trim();
+  const isMenuResponse = event.menu === '1';
+  const isReplayRequest = event.replay === '1';
+  const menuRound = Math.max(1, Math.min(Number.parseInt(event.round || '1', 10) || 1, 5));
+  const service = context.getTwilioClient().sync.v1.services('IS8886170a3d2100c0686c7509a42403d9');
+  const mapName = 'call-cooldown';
+  const map = service.syncMaps(mapName);
+  const key = (event.From || 'unknown').replace(/[^0-9A-Za-z_]/g, '_');
+  const now = Date.now();
+  let rejectCall = false;
+  let playBanMessage = false;
+  let endLongCall = false;
+
+  // Begin script logic
+  if (!isMenuResponse && !isReplayRequest) try {
+    try {
+      await map.fetch();
+    } catch (error) {
+      if (error.status !== 404) throw error;
+      try {
+        await service.syncMaps.create({ uniqueName: mapName });
+      } catch (createError) {
+        if (createError.status !== 409) throw createError;
+      }
+    }
+
+    let previous;
+    try {
+      previous = await map.syncMapItems(key).fetch();
+    } catch (error) {
+      if (error.status !== 404) throw error;
+    }
+
+    const previousData = previous && previous.data ? previous.data : {};
+    const lastCallAt = Number(previousData.lastCallAt) || 0;
+    const blockedUntil = Number(previousData.blockedUntil) || 0;
+
+    if (blockedUntil > now) {
+      if (previousData.banNoticePlayed) {
+        rejectCall = true;
+      } else {
+        await map.syncMapItems(key).update({
+          data: Object.assign({}, previousData, { banNoticePlayed: true })
+        });
+        playBanMessage = true;
+      }
+    } else {
+      const recentCalls = Array.isArray(previousData.recentCalls)
+        ? previousData.recentCalls.filter(timestamp => now - Number(timestamp) < 60000)
+        : [];
+      recentCalls.push(now);
+
+      const exceededMinuteLimit = recentCalls.length >= 3;
+      const isCooldownCall = !exceededMinuteLimit && lastCallAt && now - lastCallAt < 10000;
+      const data = {
+        lastCallAt: now,
+        recentCalls,
+        blockedUntil: exceededMinuteLimit ? now + banDurationMs : null,
+        banNoticePlayed: exceededMinuteLimit,
+        activeCallSid: isCooldownCall || exceededMinuteLimit
+          ? previousData.activeCallSid || null
+          : event.CallSid || null,
+        activeCallStartedAt: isCooldownCall || exceededMinuteLimit
+          ? Number(previousData.activeCallStartedAt) || null
+          : now
+      };
+
+      if (previous) {
+        await map.syncMapItems(key).update({ data });
+      } else {
+        try {
+          await map.syncMapItems.create({ key, data });
+        } catch (error) {
+          if (error.status !== 409) throw error;
+          await map.syncMapItems(key).update({ data });
+        }
+      }
+
+      playBanMessage = exceededMinuteLimit;
+      rejectCall = isCooldownCall;
+    }
+  } catch (error) {
+    rejectCall = false;
+    playBanMessage = false;
+    console.error('Call-limit storage error; allowing call', error);
+  }
+
+  if (isMenuResponse || isReplayRequest) try {
+    const activeCall = await map.syncMapItems(key).fetch();
+    const activeCallData = activeCall && activeCall.data ? activeCall.data : {};
+    const activeCallStartedAt = Number(activeCallData.activeCallStartedAt) || 0;
+    const isSameCall = event.CallSid && activeCallData.activeCallSid === event.CallSid;
+
+    if (isSameCall && activeCallStartedAt && now - activeCallStartedAt >= 300000) {
+      await map.syncMapItems(key).update({
+        data: Object.assign({}, activeCallData, {
+          blockedUntil: now + banDurationMs,
+          banNoticePlayed: true
+        })
+      });
+      endLongCall = true;
+    }
+  } catch (error) {
+    console.error('Call-duration storage error; allowing call to continue', error);
+  }
+
+  if (endLongCall) {
+    twiml.say(
+      { voice: voiceModel, language },
+      longCallMessage
+    );
+    twiml.hangup();
+    return callback(null, twiml);
+  }
+
+  if (playBanMessage) {
+    twiml.say(
+      { voice: voiceModel, language },
+      frequentCallMessage
+    );
+    twiml.hangup();
+    return callback(null, twiml);
+  }
+
+  if (rejectCall) {
+    twiml.reject({ reason: 'busy' });
+    return callback(null, twiml);
+  }
+
+  const voice = { voice: voiceModel, language };
+  const playAmbient = () => {
+    const sound = ambientSounds[Math.floor(Math.random() * ambientSounds.length)];
+    twiml.play({ loop: 1 }, 'https://stretchie-hotline-9504.twil.io/' + sound);
+  };
+
+  const addMenu = round => {
+    const menuGather = twiml.gather({
+      action: '/welcome?menu=1&round=' + round,
+      method: 'POST',
+      numDigits: 1,
+      timeout: 10
+    });
+    menuGather.say(voice, optionsMenu);
+  };
+
+  if (isReplayRequest) {
+    if (digit === '9') {
+      addMenu(menuRound);
+    } else {
+      twiml.say(voice, 'That protocol is not available.');
+    }
+    twiml.say(voice, farewell);
+    twiml.hangup();
+    return callback(null, twiml);
+  }
+
+  if (isMenuResponse) {
+    if (choices[digit]) {
+      playAmbient();
+      twiml.say(voice, choices[digit]);
+      twiml.pause({ length: 1 });
+      twiml.say(voice, commonClosing);
+    } else {
+      twiml.say(voice, 'That selection is not available.');
+    }
+
+    if (menuRound >= 5) {
+      twiml.say(voice, farewell);
+      twiml.hangup();
+      return callback(null, twiml);
+    }
+
+    twiml.pause({ length: 4 });
+    const replayGather = twiml.gather({
+      action: '/welcome?replay=1&round=' + (menuRound + 1),
+      method: 'POST',
+      numDigits: 1,
+      timeout: 10
+    });
+    replayGather.say(voice, 'To hear the menu options again, dial protocol nine.');
+    twiml.say(voice, farewell);
+    twiml.hangup();
+    return callback(null, twiml);
+  }
+
+  playAmbient();
+
+  twiml.say(voice, intro);
+  addMenu(1);
+  twiml.say(voice, farewell);
+  twiml.hangup();
+  return callback(null, twiml);
+};

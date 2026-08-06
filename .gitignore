@@ -15,8 +15,8 @@ package-lock.json
 # Local secrets — never commit
 .env
 
-# Local Twilio experiments and credentials
-/twilio/
+# Twilio source is tracked; credentials remain local.
+/twilio/.env
 
 # Whisper-WebUI analyses: retain the useful transcription and provenance files
 # while excluding generated, duplicated, and local operational artifacts.
