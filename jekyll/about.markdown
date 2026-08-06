@@ -127,7 +127,7 @@ commits to the main branch are deployed directly by [netlify](https://app.netlif
 
 ### ✍️ How to Contribute ✍️
 
-GitHub users can contribute corrections directly from the website. sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
+GitHub users can [contribute]({{ site.baseurl }}/instructions/#edit-subtitles-and-speakers) corrections directly from the website. sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
 
 ### 📋 Attribution 📋
 
