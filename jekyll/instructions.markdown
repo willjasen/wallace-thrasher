@@ -47,6 +47,16 @@ also note that the ordering of the words does not matter, so a search for "chees
 
 ---
 
+### 🏆 Suggestions Leaderboard 🏆
+
+the [Leaderboard]({{ site.baseurl }}/user-suggestions/) shows the GitHub users who have submitted suggestions to improve stretchie, along with the number of suggestions they have submitted.
+
+the leaderboard also shows the latest suggestion pull requests and whether each one is still awaiting review or has been merged. the information is read from the repository's GitHub pull requests and updates as new suggestions are submitted.
+
+submitting a suggestion does not guarantee that it will be accepted. suggestions are reviewed before they are merged and reflected on the website.
+
+---
+
 <a id="edit-subtitles-and-speakers"></a>
 
 ### ✍️ Edit Subtitles and Speakers ✍️
