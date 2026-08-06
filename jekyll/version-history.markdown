@@ -6,7 +6,7 @@ permalink: /version-history/
 published: true
 ---
 
-### v2.1.0 (beta)
+### v2.1.0
 
 data
 
