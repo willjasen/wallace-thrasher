@@ -7,7 +7,7 @@ exports.handler = async function(context, event, callback) {
   const banDurationMinutes = 10;
 
   // Keep all caller-facing messages and menu choices in one editable section.
-  const intro = 'Thank you for calling stretchie. You have reached the Bangkok Sod Center automated shipment support line.';
+  const intro = 'Thank you for calling stretchie. You can visit our website at stretchie dot net. You have reached our Bangkok Sod Center automated shipment support line.';
   const optionsMenu = 'Press 1 for shipment status. Press 2 for payment details. Press 3 for digital signature information. Press 4 for shipping records. Or press 5 for the dock supervisor.';
   const longCallMessage = 'We are extremely busy here at stretchie and our time is valuable. You have taken up our phone lines for long enough for now, please call back later.';
   const frequentCallMessage = `You are calling too, too much and we're busy on the dock. Try back in ${banDurationMinutes} minutes.`;
