@@ -52,7 +52,7 @@
                       {%- assign search_menu_added = true -%}
                     {%- endif -%}
                   {%- else -%}
-                    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+                    <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.nav_title | default: my_page.title | escape }}</a></li>
                   {%- endif -%}
                 {%- endif -%}
               {%- endfor -%}
