@@ -2,7 +2,7 @@
 
 .track-hero {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
+  grid-template-columns: 160px minmax(0, 1fr) auto;
   gap: 28px;
   align-items: center;
   margin: 0 0 28px;
@@ -55,7 +55,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 10px;
+  align-self: center;
+  justify-self: end;
+  margin-top: 0;
   padding: 7px 12px 7px 10px;
   appearance: none;
   -webkit-appearance: none;
@@ -360,6 +362,11 @@
   .track-hero { grid-template-columns: 92px minmax(0, 1fr); gap: 16px; padding: 16px; }
   .track-hero-cover img { width: 92px; height: 92px; }
   .track-hero h1 { font-size: clamp(1.55rem, 8vw, 2.2rem); }
+  .track-play-button {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 10px;
+  }
   .track-facts { padding: 14px; }
   .track-facts-grid { grid-template-columns: 1fr; }
   .sub-edit { align-items: stretch; flex-wrap: wrap; }
