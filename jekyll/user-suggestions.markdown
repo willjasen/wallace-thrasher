@@ -7,6 +7,7 @@ permalink: /user-suggestions/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/user-suggestions.css' | relative_url }}">
+<style>.suggestion-avatar{width:1.2rem;height:1.2rem}</style>
 
 <main class="suggestions-page" data-repository="willjasen/wallace-thrasher">
   <header class="suggestions-hero">
