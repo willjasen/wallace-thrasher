@@ -137,7 +137,7 @@ here are various badges related to this project's code and its deployments
       var link = document.createElement("a");
       link.href = "#" + heading.id;
       link.dataset.targetId = heading.id;
-      link.textContent = heading.textContent.replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE00-\uFE0F]/gu, "")
+      link.textContent = heading.textContent.replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE00-\uFE0F\u2194-\u21FF\u2300-\u23FF\u2B00-\u2BFF]/gu, "")
         .replace(/\s{2,}/g, " ").trim();
       link.addEventListener("click", function (event) {
         event.preventDefault();
