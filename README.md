@@ -41,93 +41,11 @@ this project uses both local and cloud-based ai tools.
 
 cloud ai tools like ChatGPT Work have been used to code, review, and improve the code of stretchie.
 
-furthermore, it has been my stance that ai is both good and bad - i believe that these tools can be used in good, productive ways while acknowleding problems like ai slop and misinformation.
-
-### 🔎 Comparing Subtitles with Talkin' Whipapedia 🔎
-
-`python/wiki_scrape_and_merge.py` downloads wiki transcripts into snapshots identified by a 13-digit Unix timestamp, aligns them with this project's timestamped JSON subtitles, and prepares speaker and text corrections for review. Generated data has one consistent layout:
-
-```text
-analysis/wiki/
-├── scrapes/<unix-timestamp>/
-├── comparisons/<unix-timestamp>/
-├── merge-backups/<unix-timestamp>/
-├── legacy-cache/                 # optional pre-snapshot data
-└── latest-scrape
-```
-
-The comparison directory uses the same timestamp as its source scrape. The script uses only the Python 3.10+ standard library.
-
-Run the workflow from the project root:
-
-```bash
-python3 python/wiki_scrape_and_merge.py scrape --album longmont-potion-castle-4
-python3 python/wiki_scrape_and_merge.py compare --album longmont-potion-castle-4
-python3 python/wiki_scrape_and_merge.py report --album longmont-potion-castle-4 --detail
-python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4 --dry-run
-python3 python/wiki_scrape_and_merge.py merge --album longmont-potion-castle-4
-```
-
-Use `--track <track-slug>` with `scrape`, `compare`, `report`, or `merge` to work on one track. Text marked `review` is never merged automatically; change its `text_action` to `approved` in the comparison JSON after checking it. A real merge refuses comparison results made from an older version of a subtitle file, so rerun `compare` rather than bypassing that check. Every changed file is copied to `analysis/wiki/merge-backups/<unix-timestamp>/` before it is written.
-
-Aliases and organizations can be reconciled separately from Talkin' Whipapedia's maintained index pages. The importer uses explicit wiki track groupings first, then searches album-scoped local transcripts for aliases and the full local catalog for otherwise-unassociated organizations:
-
-```bash
-python3 python/wiki_metadata_merge.py --dry-run
-python3 python/wiki_metadata_merge.py --write
-```
-
-The project continues to call organizations `Establishments`. Each imported organization retains the wiki's `real-world` or `created` classification in `Establishment_Types`; entries found only in the wiki's unclassified “Just a big list” use `unspecified`. `Talkin_Whipapedia` records the values added by the importer so later runs can update or remove stale imports without disturbing hand-maintained metadata. The source material is available under CC BY-SA from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/wiki/Home#Navigation).
-
-### 🎙️ Local transcript analysis 🎙️
-
-tracks on the LPC USB can be analyzed through a locally hosted Whisper-WebUI over HTTP or HTTPS. the workflow resolves a track from its album and track slugs, reviews its `Track_Type`, enables speaker diarization, and saves a review bundle under `analysis/whisper-webui/`. tracks classified as `music` automatically enable Whisper-WebUI's background music remover before transcription; `call` and unclassified tracks use the original audio. the selected type and preprocessing choice are recorded in the run manifest. the analysis directory is intentionally ignored by git, and no transcript changes are applied to the site automatically.
-
-set `WHISPER_WEBUI_URL` to the reachable Whisper-WebUI base URL, then run:
-
-```shell
-python3 python/lpc_whisper_analysis.py analyze \
-  --album longmont-potion-castle-12 \
-  --track game-stop \
-  --usb-root "/Volumes/LPC USB"
-```
-
-the client supports Whisper-WebUI's polling REST API and its Gradio browser API. optional Basic Auth can be supplied with `WHISPER_WEBUI_USERNAME` and `WHISPER_WEBUI_PASSWORD`. if the diarization model still needs authorization, supply `HF_TOKEN`. these values can be placed in the repository's git-ignored `.env` file instead of being entered on the command line; credentials are never written to analysis artifacts. use `--insecure` only for a trusted local deployment with a self-signed certificate.
-
-an existing diarized SRT generated manually in Whisper-WebUI can be imported without running the model again:
-
-```shell
-python3 python/lpc_whisper_analysis.py import-srt \
-  --album longmont-potion-castle-12 \
-  --track game-stop \
-  /path/to/game-stop.srt
-```
-
-each completed bundle includes the original SRT, normalized segments, repository-shaped candidate subtitles, suggested mappings from diarized speakers to current speaker names, and review leads for aliases and establishments. these are evidence for manual curation rather than automatic edits. the selected Whisper model is recorded in the ignored run manifest and merge receipts rather than in each public `data.json` track.
-
-compare a completed analysis with both `data.json` and the current track subtitle JSON:
-
-```shell
-python3 python/whisper_compare_and_merge.py compare \
-  --album longmont-potion-castle-7 \
-  --track alex-trebek
-
-python3 python/whisper_compare_and_merge.py report \
-  --album longmont-potion-castle-7 \
-  --track alex-trebek
-
-python3 python/whisper_compare_and_merge.py merge --dry-run \
-  --album longmont-potion-castle-7 \
-  --track alex-trebek
-```
-
-the comparison is written as `comparison.json` inside the git-ignored analysis run. repository subtitle text and named speakers remain authoritative: Whisper differences use the `review` action and are merged only after that individual action, or an intended speaker mapping, is changed to `approved`. exact mentions of aliases or establishments already known elsewhere in the catalog use `auto_add`. a real merge validates hashes for the analysis artifacts, `data.json`, and the track JSON, then creates ignored backups under `analysis/whisper-webui/merge-backups/` before writing atomically. Detailed Whisper source provenance stays in an ignored `merge-receipts/` file inside the analysis run and is never added to `data.json`; a sanitized public record of the approved outcome is appended to `jekyll/_data/whisper_merges.json` for the `/whisper-data/` page.
-
-subtitle entries may contain a boolean `Reviewed` field. when this field is missing, the merge initializes it from the track's existing `Subtitles_Adjusted` value; an explicitly approved Whisper text or speaker change is always written with `Reviewed: true`. this preserves the repository version by default while recording human review at line level.
+furthermore, it has been my stance that ai is both good and bad - i believe that these tools can be used in good, productive ways while acknowledging problems like ai slop and misinformation.
 
 ### ✍️ How to Contribute ✍️
 
-GitHub users can contribute corrections directly from the website. sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
+GitHub users can contribute corrections directly from the website. Sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
 
 ### 📋 Attribution 📋
 
@@ -161,3 +79,5 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 ### 🤓 Technical Details 🤓
 
 the [technical details](https://stretchie.net/technical-details) page contains the project's implementation details and status badges.
+
+notes on version history can be found on the [version history](https://stretchie.net/version-history) page. browse the Talkin’ Whipapedia scrape, comparison, and merge archive on the [wiki data](https://stretchie.net/wiki-data/) page. browse the detailed transcription comparisons, review history, and approved Whisper changes on the combined [transcription and Whisper data](https://stretchie.net/transcription-data/) page.
