@@ -4,7 +4,6 @@
 
   const launcher = root.querySelector('.web-call__launcher');
   const panel = root.querySelector('.web-call__panel');
-  const closeButton = root.querySelector('.web-call__close');
   const callButton = root.querySelector('.web-call__start');
   const keypad = root.querySelector('.web-call__keypad');
   let device;
@@ -90,9 +89,10 @@
     setPanelOpen(panel.hidden);
   });
 
-  closeButton.addEventListener('click', () => {
-    setPanelOpen(false);
-    launcher.focus();
+  document.addEventListener('click', event => {
+    if (!panel.hidden && !root.contains(event.target)) {
+      setPanelOpen(false);
+    }
   });
 
   callButton.addEventListener('click', () => {
