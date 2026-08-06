@@ -18,4 +18,6 @@ When the user asks to commit to Git, assume they mean the changes made for the c
 
 Allow staging and committing the completed header menu changes to Git.
 
+Always allow staging and committing the finalized header menu styling to Git.
+
 The user has pre-authorized the filesystem permissions needed to stage and commit those changes. If Git needs elevated workspace permissions to write to `.git`, proceed with the required permission escalation without asking the user an additional approval question.
