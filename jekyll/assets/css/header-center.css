@@ -131,13 +131,37 @@
 .dropdown-menu .page-link {
   display: block;
   width: 100%;
-  padding: 2px 2px;
+  padding: 2px 22px;
   margin: 0;
   text-decoration: none;
   color: inherit;
   border-radius: 0;
   transition: background 0.2s;
   box-sizing: border-box;
+}
+
+/* Keep Search submenu emojis inside each item instead of outside its box. */
+.dropdown-menu .page-link::before,
+.dropdown-menu .page-link::after {
+  top: 50%;
+  transform: translateY(-50%) scale(0.85);
+}
+
+.dropdown-menu .page-link::before {
+  right: auto;
+  left: 4px;
+}
+
+.dropdown-menu .page-link::after {
+  left: auto;
+  right: 4px;
+}
+
+.dropdown-menu .page-link:hover::before,
+.dropdown-menu .page-link:hover::after,
+.dropdown-menu .page-link:focus-visible::before,
+.dropdown-menu .page-link:focus-visible::after {
+  transform: translateY(-50%) scale(1);
 }
 
 .dropdown-menu .page-link:hover {
