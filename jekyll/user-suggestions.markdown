@@ -3,7 +3,7 @@ layout: page
 title: Suggestions Leaderboard
 nav_title: Leaderboard
 description: GitHub pull requests submitted by stretchie contributors.
-permalink: /user-suggestions/
+permalink: /suggestions/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/user-suggestions.css' | relative_url }}">
