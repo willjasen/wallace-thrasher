@@ -81,3 +81,7 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 the [technical details](https://stretchie.net/technical-details) page contains the project's implementation details and status badges.
 
 notes on version history can be found on the [version history](https://stretchie.net/version-history) page. browse the Talkin’ Whipapedia scrape, comparison, and merge archive on the [wiki data](https://stretchie.net/wiki-data/) page. browse the detailed transcription comparisons, review history, and approved Whisper changes on the combined [transcription and Whisper data](https://stretchie.net/transcription-data/) page.
+
+### ☎️ Call Us! ☎️
+
+if you'd like to speak further with the bangkok sod center, please give a ring to [+1 (445)-ASIASOD](tel:+1-445-ASIASOD)
