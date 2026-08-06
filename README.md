@@ -33,12 +33,6 @@ there are great resources like [talkin' whipapedia](https://talkinwhipapedia.fan
 
 when i began the venture of creating this magnificent package, i pledged that i would not monetize the website, and i still have no intentions of doing so. i created this as an effort of love for the works involved here and as a challenge to myself. it is the best homage that i can contribute to this little weird corner of the universe.
 
-### ⚙️ Components ⚙️
-
-this website is built with the static site generator [jekyll](https://jekyllrb.com). whisper-webui is utilized to analyze the audio tracks and have it output subtitles (what is spoken) that include speaker diarization (determining who says what), which are then transformed into json files. each json file containing a track's speakers and subtitles data must be manually reviewed and corrected as needed. as changes are made, `jekyll build` recreates the site's pages and combines all JSON data into one single JSON data file (`data.combined.json`).
-
-because the website is static, there is no server-end processing that occurs when searching - it runs locally within the browser.
-
 ### 🤖 Disclosure 🤖
 
 this project uses both local and cloud-based ai tools.
@@ -48,14 +42,6 @@ this project uses both local and cloud-based ai tools.
 cloud ai tools like ChatGPT Work have been used to code, review, and improve the code of stretchie.
 
 furthermore, it has been my stance that ai is both good and bad - i believe that these tools can be used in good, productive ways while acknowleding problems like ai slop and misinformation.
-
-### ↪️ Converting Tracks to Subtitles ↪️
-
-i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization (who says what) to output subtitle files (.srt)
-
-### ↘️ Converting Subtitles to JSON ↘️
-
-i am using [this python tool](https://github.com/willjasen/srt-to-json) to convert the subtitle files to json, but it also outputs a metadata.json file and a metadata.yml file in accordance to what this project needs
 
 ### 🔎 Comparing Subtitles with Talkin' Whipapedia 🔎
 
@@ -92,65 +78,6 @@ python3 python/wiki_metadata_merge.py --write
 ```
 
 The project continues to call organizations `Establishments`. Each imported organization retains the wiki's `real-world` or `created` classification in `Establishment_Types`; entries found only in the wiki's unclassified “Just a big list” use `unspecified`. `Talkin_Whipapedia` records the values added by the importer so later runs can update or remove stale imports without disturbing hand-maintained metadata. The source material is available under CC BY-SA from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/wiki/Home#Navigation).
-
-### 💽 JSON for Albums and Tracks 💽
-
-the main JSON data file resides at `/assets/data.json`
-
-```
-{
-  "Albums": [
-    { "Album": "Longmont Potion Castle",
-      "Album_Slug": "longmont-potion-castle",
-      "Album_Picture": "LPC_1.jpg",
-      "Year": 1988,
-      "Tracks": [
-        {
-          "Track_Title": "Longmont Theme 1",
-          "Track_Number": 1,
-          "Track_JSONPath": "longmont-theme-1.json",
-          "Track_Slug": "longmont-theme-1",
-          "Aliases": ["Wallace Thrasher"],
-          "Establishments": ["UPS"],
-          "Establishment_Notes": {"UPS": "Optional context shown in a pop-up on the track page."},
-          "Establishment_Types": {"UPS": "real-world"},
-          "Talkin_Whipapedia": {
-            "Source": "https://talkinwhipapedia.fandom.com/wiki/Home#Navigation",
-            "Aliases": ["Wallace Thrasher"],
-            "Establishments": ["UPS"]
-          },
-          "Speakers_Adjusted": "false",
-          "Subtitles_Adjusted": "false",
-          "USB_Filename": "longmont-theme-1.mp3"
-        }
-      ]
-    }
-  ]
-}
-```
-it is possible that some keys are not present in all tracks, but the necessary ones of `Track_Title`, `Track_Number`, `Track_JSONPath`, and `Track_Slug` are listed for each track.
-
-### 💽 JSON for Track Subtitles 💽
-
-the JSON data for each track resides within a folder named as the respective album title's slug within the `/assets/json` folder
-```
-[
-    {
-        "Index": 1,
-        "Start Time": "00:00:02,140",
-        "End Time": "00:00:02,920",
-        "Speaker": "Woman 1",
-        "Text": "Betty Boop Diner."
-    },
-    {
-        "Index": 2,
-        "Start Time": "00:00:04,008",
-        "End Time": "00:00:08,449",
-        "Speaker": "LPC",
-        "Text": "Hi, can I please get a take-up or a pick-up?"
-    }
-]
-```
 
 ### 🚘 Under The Hood 🚘
 
@@ -272,14 +199,4 @@ if you enjoy the catalogue, please support the artist by purchasing merch from [
 
 ### 🤓 Technical Details 🤓
 
-here are various badges related to this project's code and its deployments
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploy-status)](https://app.netlify.com/sites/wallace-thrasher/deploys) -- production deployment status to Netlify
-
-[![GitHub last commit](https://img.shields.io/github/last-commit/willjasen/wallace-thrasher)](https://github.com/willjasen/wallace-thrasher) -- when last committed to GitHub
-
-![GitHub code size](https://img.shields.io/github/languages/code-size/willjasen/wallace-thrasher) -- deployed source code size
-
-![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
-
-![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
+the [technical details](https://stretchie.net/technical-details) page contains the project's implementation details and status badges.
