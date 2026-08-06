@@ -44,6 +44,10 @@ this website is built with the static site generator [jekyll](https://jekyllrb.c
 
 because the website is static, there is no server-end processing that occurs when searching - it runs locally within the browser.
 
+### 🤖 Disclosure 🤖
+
+this project uses both local and cloud-based AI tools. [Whisper-WebUI](https://github.com/jhj0517/Whisper-WebUI) runs locally to transcribe LPC audio and provide speaker diarization. Cloud AI tools have also been used to code, review, and improve stretchie. All generated transcripts and suggested code changes are reviewed and corrected by a human before they become part of the project.
+
 ### ↪️ Converting Tracks to Subtitles ↪️
 
 i am using [whisper-webui](https://github.com/jhj0517/Whisper-WebUI) (deployed via pinokio) to analyze the .mp3 files using speech-to-text with speaker diarization (who says what) to output subtitle files (.srt)
