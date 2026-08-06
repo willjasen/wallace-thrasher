@@ -8,21 +8,24 @@ layout: null
   {% unless page.url contains "." %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | xml_escape }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% assign modified = page.last_modified_at %}
+    {% if modified %}<lastmod>{{ modified | date_to_xmlschema }}</lastmod>{% endif %}
   </url>
   {% endunless %}
   {% endfor %}
   {% for album in site.albums %}
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ album.url | xml_escape }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {% assign modified = album.last_modified_at %}
+    {% if modified %}<lastmod>{{ modified | date_to_xmlschema }}</lastmod>{% endif %}
   </url>
   {% endfor %}
   {% if site.indexable %}
     {% for track in site.tracks %}
     <url>
       <loc>{{ site.url }}{{ site.baseurl }}{{ track.url | xml_escape }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% assign modified = track.last_modified_at %}
+      {% if modified %}<lastmod>{{ modified | date_to_xmlschema }}</lastmod>{% endif %}
     </url>
     {% endfor %}
   {% endif %}
