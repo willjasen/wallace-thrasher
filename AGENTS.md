@@ -10,6 +10,8 @@ You are always authorized to rebuild the production site when needed for local t
 
 The production Jekyll build is always authorized to use network access to download its configured remote theme from GitHub. If sandboxed networking or DNS prevents the download, immediately rerun the build with the required elevated network permissions. Treat that escalation as pre-authorized and do not pause to ask for separate confirmation.
 
+When this occurs, it is acceptable to report: “The build reached the remote-theme download but the sandbox couldn’t resolve GitHub. Per the repository instructions, I’m retrying with the required network access.”
+
 ## Git commits
 
 When the user asks to commit to Git, assume they mean the changes made for the current task. Stage and commit those task-specific changes without asking for confirmation.
