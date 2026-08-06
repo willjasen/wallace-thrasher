@@ -89,11 +89,11 @@ notes on version history can be found on the [version history]({{ site.baseurl }
 
 this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' }}
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/about-toc.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/toc.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/about-netlify.css">
-<script>
-(function () {
-  function buildTOC() {
+<script src="{{ site.baseurl }}/assets/js/toc.js"
+  data-toc-id="about-toc" data-toc-title="About" data-toc-class="about-page"></script>
+<!--
     // Remove any stale TOC left by a previous visit (soft-nav re-execution)
     var existing = document.getElementById("about-toc");
     if (existing) {
@@ -212,4 +212,4 @@ this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' 
     }
   });
 })();
-</script>
+-->

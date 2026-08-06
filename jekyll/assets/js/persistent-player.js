@@ -401,8 +401,11 @@
       oldMain.querySelectorAll('script').forEach(function (orig) {
         if (orig.src) {
           const abs = new URL(orig.src, location.href).href;
-          if (_executedScriptSrcs.has(abs)) return; // already ran — skip
-          _executedScriptSrcs.add(abs);             // mark as executed
+          // TOC scripts are page-configured via data attributes, so the same
+          // shared file must run again whenever a new page is inserted.
+          var isTOCScript = abs.replace(/[?#].*$/, '').endsWith('/assets/js/toc.js');
+          if (!isTOCScript && _executedScriptSrcs.has(abs)) return; // already ran — skip
+          if (!isTOCScript) _executedScriptSrcs.add(abs);
         }
         const s = document.createElement('script');
         Array.from(orig.attributes).forEach(function (a) { s.setAttribute(a.name, a.value); });

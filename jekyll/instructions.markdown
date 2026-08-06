@@ -73,8 +73,10 @@ select **Cancel** or **Exit edit mode** to leave without submitting.
 
 submitted suggestions do not appear on the website immediately; they must be reviewed and merged.
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/instructions-toc.css">
-<script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/toc.css">
+<script src="{{ site.baseurl }}/assets/js/toc.js"
+  data-toc-id="instructions-toc" data-toc-title="Instructions" data-toc-class="instructions-page"></script>
+<!--
 (function () {
   function buildTOC() {
     // Remove any stale TOC left by a previous visit (soft-nav re-execution)
@@ -195,4 +197,4 @@ submitted suggestions do not appear on the website immediately; they must be rev
     }
   });
 })();
-</script>
+-->

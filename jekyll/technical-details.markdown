@@ -102,8 +102,10 @@ here are various badges related to this project's code and its deployments
 
 ![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/technical-details-toc.css">
-<script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/toc.css">
+<script src="{{ site.baseurl }}/assets/js/toc.js"
+  data-toc-id="technical-details-toc" data-toc-title="Technical details" data-toc-class="technical-details-page"></script>
+<!--
 (function () {
   function buildTOC() {
     var existing = document.getElementById("technical-details-toc");
@@ -184,4 +186,4 @@ here are various badges related to this project's code and its deployments
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", buildTOC);
   else buildTOC();
 })();
-</script>
+-->

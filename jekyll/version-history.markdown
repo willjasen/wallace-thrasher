@@ -207,8 +207,10 @@ this minor release is mostly to stash any changes that haven't been merged yet n
 	- 'deploy-production-build.yml' builds the website as a production build and publishes the built site's contents to the 'production-build' branch
 	- 'deploy-production-build.yml' deploys the site to IPFS via [Filebase](https://filebase.com/) and [Storacha](https://storacha.network/) using the 'production-build' branch, then updates the `_dnslink` TXT DNS record for the "[stretchie.net](https://stretchie.net)" domain to reflect the new IPFS hash
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/version-history-toc.css">
-<script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/toc.css">
+<script src="{{ site.baseurl }}/assets/js/toc.js"
+  data-toc-id="version-history-toc" data-toc-title="Version History" data-toc-class="version-history-page"></script>
+<!--
 (function () {
   function buildTOC() {
     // Remove any stale TOC left by a previous visit (soft-nav re-execution)
@@ -292,4 +294,4 @@ this minor release is mostly to stash any changes that haven't been merged yet n
     }
   });
 })();
-</script>
+-->
