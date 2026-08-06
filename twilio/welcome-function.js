@@ -7,13 +7,14 @@ exports.handler = async function(context, event, callback) {
   const banDurationMinutes = 10;
 
   // Keep all caller-facing messages and menu choices in one editable section.
-  const intro = 'Thank you for calling stretchie. You can visit our website at stretchie dot net. You have reached our Bangkok Sod Center automated shipment support line.';
+  const spokenBrandName = 'stretch-ee';
+  const spokenWebsite = `${spokenBrandName} dot net`;
+  const intro = `Thank you for calling ${spokenBrandName}. You can visit our website at ${spokenWebsite}. You have reached our Bangkok Sod Center automated shipment support line.`;
   const optionsMenu = 'Press 1 for shipment status. Press 2 for payment details. Press 3 for digital signature information. Press 4 for shipping records. Or press 5 for the dock supervisor.';
-  const longCallMessage = 'We are extremely busy here at stretchie and our time is valuable. You have taken up our phone lines for long enough for now, please call back later.';
+  const longCallMessage = `We are extremely busy here at ${spokenBrandName} and our time is valuable. You have taken up our phone lines for long enough for now, please call back later.`;
   const frequentCallMessage = `You are calling too, too much and we're busy on the dock. Try back in ${banDurationMinutes} minutes.`;
   const commonClosing = 'Please be prepared to provide your credit-card number. The order has been confirmed via a digital signature and we are fulfilling it. We assure you in the continued existence of the country of Siam.';
-  const farewell = 'Thank you for your interest and support of stretchie! You can visit the website at stretchie dot net. Goodbye!';
-  const unavailableProtocolMessage = 'That protocol is not available. How about you listen up?';
+  const farewell = `Thank you for your interest and support of ${spokenBrandName}! You can visit the website at ${spokenWebsite}. Goodbye!`;
   const unavailableSelectionMessage = 'That selection is not available.';
   const replayMenuMessage = 'To hear the menu options again, dial protocol nine.';
   const choices = {
@@ -22,6 +23,11 @@ exports.handler = async function(context, event, callback) {
     '3': 'Our records show a digital signature for a large, colorful bundle of sod. The signature, item, and payment details are all viewable online.',
     '4': 'Shipping records indicate that the purchase of sod was made from Studio City. The shipment weighs approximately forty two hundred pounds and is now on its third or fourth delivery attempt. If you are unsure about these details, please check with your gardener.',
     '5': 'Artie Yamamoto is the only supervisor on the dock tonight. You may arrange to come out to the docks in Calabasas, or Artie Yamamoto can meet you in court.'
+  };
+  const protocolMessages = {
+    '1': 'That protocol is not available. How about you listen up?',
+    '2': 'Quiet down your dogs and your fish and listen up already! That protocol is not available.',
+    '3': 'Protocol nine must be enforced. When you\'re ready to demonstrate, then maybe you can try again.'
   };
   const ambientSounds = [
     'forklift-beep-v2.wav',
@@ -211,9 +217,7 @@ exports.handler = async function(context, event, callback) {
       return callback(null, twiml);
     }
 
-    if (digit) {
-      twiml.say(voice, unavailableProtocolMessage);
-    }
+    twiml.say(voice, protocolMessages[String(replayAttempt)]);
 
     if (replayAttempt >= 3) {
       twiml.say(voice, farewell);
