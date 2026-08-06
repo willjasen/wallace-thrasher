@@ -6,5 +6,3 @@ permalink: /about/
 ---
 
 {% readme %}
-
-this website was last built on {{ site.time | date: '%B %e, %Y at %-I:%M %p %Z' }}
