@@ -7,7 +7,7 @@ exports.handler = async function(context, event, callback) {
   const banDurationMinutes = 10;
 
   // Keep all caller-facing messages and menu choices in one editable section.
-  const spokenBrandName = 'stretch-ee';
+  const spokenBrandName = 'stretchy';
   const spokenWebsite = `${spokenBrandName} dot net`;
   const intro = `Thank you for calling ${spokenBrandName}. You can visit our website at ${spokenWebsite}. You have reached our Bangkok Sod Center automated shipment support line.`;
   const optionsMenu = 'Press 1 for shipment status. Press 2 for payment details. Press 3 for digital signature information. Press 4 for shipping records. Or press 5 for the dock supervisor.';
