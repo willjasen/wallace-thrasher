@@ -1,12 +1,12 @@
 // Mirror of the deployed /welcome Twilio Function.
 exports.handler = async function(context, event, callback) {
 
-  // Global configurable variables
+  // Configure the synthesized voice, language, and caller-ban duration.
   const voiceModel = 'Google.en-US-Chirp3-HD-Zephyr';
   const language = 'en-US';
   const banDurationMinutes = 10;
 
-  // Global call content
+  // Keep all caller-facing messages and menu choices in one editable section.
   const intro = 'Thank you for calling stretchie. You have reached the Bangkok Sod Center automated shipment support line.';
   const optionsMenu = 'Press 1 for shipment status. Press 2 for payment details. Press 3 for digital signature information. Press 4 for shipping records. Or press 5 for the dock supervisor.';
   const longCallMessage = 'We are extremely busy here at stretchie and our time is valuable. You have taken up our phone lines for long enough for now, please call back later.';
@@ -39,7 +39,7 @@ exports.handler = async function(context, event, callback) {
     'metal-ramp-clunk.wav'
   ];
 
-  // Other global script variables
+  // Normalize request state and connect to the shared caller-history map.
   const banDurationMs = banDurationMinutes * 60 * 1000;
   const twiml = new Twilio.twiml.VoiceResponse();
   const digit = String(event.Digits || '').trim();
@@ -56,7 +56,7 @@ exports.handler = async function(context, event, callback) {
   let playBanMessage = false;
   let endLongCall = false;
 
-  // Begin script logic
+  // Apply cooldown and frequent-caller rules only when a new call begins.
   if (!isMenuResponse && !isReplayRequest) try {
     try {
       await map.fetch();
@@ -130,6 +130,7 @@ exports.handler = async function(context, event, callback) {
     console.error('Call-limit storage error; allowing call', error);
   }
 
+  // End menu calls that exceed five minutes and ban the caller temporarily.
   if (isMenuResponse || isReplayRequest) try {
     const activeCall = await map.syncMapItems(key).fetch();
     const activeCallData = activeCall && activeCall.data ? activeCall.data : {};
@@ -149,6 +150,7 @@ exports.handler = async function(context, event, callback) {
     console.error('Call-duration storage error; allowing call to continue', error);
   }
 
+  // Deliver the appropriate terminal response before processing menu input.
   if (endLongCall) {
     twiml.say(
       { voice: voiceModel, language },
@@ -172,6 +174,7 @@ exports.handler = async function(context, event, callback) {
     return callback(null, twiml);
   }
 
+  // Build reusable TwiML for ambient audio, the main menu, and replay prompts.
   const voice = { voice: voiceModel, language };
   const playAmbient = () => {
     const sound = ambientSounds[Math.floor(Math.random() * ambientSounds.length)];
@@ -199,6 +202,7 @@ exports.handler = async function(context, event, callback) {
     replayGather.say(voice, replayMenuMessage);
   };
 
+  // Return protocol-nine callers to the menu or allow up to three retries.
   if (isReplayRequest) {
     if (digit === '9') {
       addMenu(menuRound);
@@ -222,6 +226,7 @@ exports.handler = async function(context, event, callback) {
     return callback(null, twiml);
   }
 
+  // Play the selected answer, closing message, and optional menu replay prompt.
   if (isMenuResponse) {
     if (choices[digit]) {
       playAmbient();
@@ -244,6 +249,7 @@ exports.handler = async function(context, event, callback) {
     return callback(null, twiml);
   }
 
+  // Start a new accepted call with ambient audio, the introduction, and the menu.
   playAmbient();
 
   twiml.say(voice, intro);
