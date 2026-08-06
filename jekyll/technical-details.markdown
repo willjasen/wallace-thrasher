@@ -101,3 +101,87 @@ here are various badges related to this project's code and its deployments
 ![GitHub repo size](https://img.shields.io/github/repo-size/willjasen/wallace-thrasher) -- source code repository size
 
 ![GitHub Release](https://img.shields.io/github/v/release/willjasen/wallace-thrasher) -- the latest version
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/technical-details-toc.css">
+<script>
+(function () {
+  function buildTOC() {
+    var existing = document.getElementById("technical-details-toc");
+    if (existing) {
+      if (existing.cleanup) existing.cleanup();
+      existing.remove();
+    }
+
+    var content = document.querySelector(".post-content") || document.querySelector(".page-content .wrapper");
+    if (!content) return;
+
+    var headings = content.querySelectorAll("h3");
+    if (!headings.length) return;
+
+    var nav = document.createElement("nav");
+    nav.id = "technical-details-toc";
+    nav.setAttribute("aria-label", "Page sections");
+
+    var label = document.createElement("div");
+    label.id = "technical-details-toc-label";
+    label.textContent = "Technical details";
+    nav.appendChild(label);
+
+    var list = document.createElement("ul");
+    headings.forEach(function (heading) {
+      if (!heading.id) {
+        heading.id = heading.textContent.trim().toLowerCase()
+          .replace(/[^\w\s-]/g, "").replace(/\s+/g, "-");
+      }
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      link.href = "#" + heading.id;
+      link.dataset.targetId = heading.id;
+      link.textContent = heading.textContent.replace(/[\u{1F000}-\u{1FFFF}\u2600-\u27BF\uFE00-\uFE0F]/gu, "")
+        .replace(/\s{2,}/g, " ").trim();
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        heading.scrollIntoView({ behavior: "smooth" });
+      });
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    nav.appendChild(list);
+    document.body.appendChild(nav);
+
+    function updateActiveLink() {
+      var active = headings[0];
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        active = headings[headings.length - 1];
+      } else {
+        headings.forEach(function (heading) {
+          if (heading.getBoundingClientRect().top <= window.innerHeight * 0.2) active = heading;
+        });
+      }
+      list.querySelectorAll("a").forEach(function (link) {
+        link.classList.toggle("active", link.dataset.targetId === active.id);
+      });
+    }
+
+    var queued = false;
+    function queueActiveLinkUpdate() {
+      if (queued) return;
+      queued = true;
+      window.requestAnimationFrame(function () {
+        queued = false;
+        updateActiveLink();
+      });
+    }
+    window.addEventListener("scroll", queueActiveLinkUpdate, { passive: true });
+    window.addEventListener("resize", queueActiveLinkUpdate);
+    updateActiveLink();
+    nav.cleanup = function () {
+      window.removeEventListener("scroll", queueActiveLinkUpdate);
+      window.removeEventListener("resize", queueActiveLinkUpdate);
+    };
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", buildTOC);
+  else buildTOC();
+})();
+</script>
