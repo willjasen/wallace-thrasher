@@ -13,6 +13,9 @@ exports.handler = async function(context, event, callback) {
   const frequentCallMessage = `You are calling too, too, too much and we're busy on the dock. Try back in ${banDurationMinutes} minutes.`;
   const commonClosing = 'Please be prepared to provide your credit-card number. The order has been confirmed via a digital signature and we are fulfilling it. We assure you in the continued existence of the country of Siam.';
   const farewell = 'Thank you for your interest and support of stretchie! Goodbye!';
+  const unavailableProtocolMessage = 'That protocol is not available. How about you listen up?';
+  const unavailableSelectionMessage = 'That selection is not available.';
+  const replayMenuMessage = 'To hear the menu options again, dial protocol nine.';
   const choices = {
     '1': 'Your shipment is currently listed as four trucks of sod, possibly traveling through Studio City or a perpendicular historical jurisdiction. Please remain vigilant at the delivery address to ensure a successful delivery.',
     '2': 'The amount due for this shipment of sod is one thousand nine hundred and forty-nine dollars even. An online payment or another method of payment is required before or at the time of delivery.',
@@ -43,6 +46,7 @@ exports.handler = async function(context, event, callback) {
   const isMenuResponse = event.menu === '1';
   const isReplayRequest = event.replay === '1';
   const menuRound = Math.max(1, Math.min(Number.parseInt(event.round || '1', 10) || 1, 5));
+  const replayAttempt = Math.max(1, Math.min(Number.parseInt(event.attempt || '1', 10) || 1, 3));
   const service = context.getTwilioClient().sync.v1.services('IS8886170a3d2100c0686c7509a42403d9');
   const mapName = 'call-cooldown';
   const map = service.syncMaps(mapName);
@@ -184,13 +188,36 @@ exports.handler = async function(context, event, callback) {
     menuGather.say(voice, optionsMenu);
   };
 
+  const addReplayPrompt = (round, attempt) => {
+    const replayGather = twiml.gather({
+      action: '/welcome?replay=1&round=' + round + '&attempt=' + attempt,
+      method: 'POST',
+      numDigits: 1,
+      timeout: 10,
+      actionOnEmptyResult: true
+    });
+    replayGather.say(voice, replayMenuMessage);
+  };
+
   if (isReplayRequest) {
     if (digit === '9') {
       addMenu(menuRound);
-    } else {
-      twiml.say(voice, 'That protocol is not available.');
+      twiml.say(voice, farewell);
+      twiml.hangup();
+      return callback(null, twiml);
     }
-    twiml.say(voice, farewell);
+
+    if (digit) {
+      twiml.say(voice, unavailableProtocolMessage);
+    }
+
+    if (replayAttempt >= 3) {
+      twiml.say(voice, farewell);
+      twiml.hangup();
+      return callback(null, twiml);
+    }
+
+    addReplayPrompt(menuRound, replayAttempt + 1);
     twiml.hangup();
     return callback(null, twiml);
   }
@@ -202,7 +229,7 @@ exports.handler = async function(context, event, callback) {
       twiml.pause({ length: 1 });
       twiml.say(voice, commonClosing);
     } else {
-      twiml.say(voice, 'That selection is not available.');
+      twiml.say(voice, unavailableSelectionMessage);
     }
 
     if (menuRound >= 5) {
@@ -212,14 +239,7 @@ exports.handler = async function(context, event, callback) {
     }
 
     twiml.pause({ length: 4 });
-    const replayGather = twiml.gather({
-      action: '/welcome?replay=1&round=' + (menuRound + 1),
-      method: 'POST',
-      numDigits: 1,
-      timeout: 10
-    });
-    replayGather.say(voice, 'To hear the menu options again, dial protocol nine.');
-    twiml.say(voice, farewell);
+    addReplayPrompt(menuRound + 1, 1);
     twiml.hangup();
     return callback(null, twiml);
   }
