@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 
 // Public /token endpoint for the browser-based Stretchie caller.
-exports.handler = function(context, event, callback) {
+exports.handler = async function(context, event, callback) {
   const response = new Twilio.Response();
   const requestOrigin = event.request && event.request.headers
     ? event.request.headers.origin
@@ -64,6 +64,41 @@ exports.handler = function(context, event, callback) {
     .update(browserIdentity)
     .digest('hex');
   const identity = `web_${identityDigest}`;
+
+  // Match the caller key used by /welcome so active bans are visible before a
+  // browser attempts a new call. Sync lookup failures intentionally fail open.
+  try {
+    const map = context.getTwilioClient()
+      .sync.v1.services('IS8886170a3d2100c0686c7509a42403d9')
+      .syncMaps('call-cooldown');
+    const callerKey = `client_${identity}`;
+    const caller = await map.syncMapItems(callerKey).fetch();
+    const callerData = caller && caller.data ? caller.data : {};
+    const now = Date.now();
+    const blockedUntil = Number(callerData.blockedUntil) || 0;
+    const lastCallAt = Number(callerData.lastCallAt) || 0;
+    const retryAt = blockedUntil > now
+      ? blockedUntil
+      : lastCallAt && now - lastCallAt < 10000
+        ? lastCallAt + 10000
+        : 0;
+
+    if (retryAt) {
+      response.setStatusCode(429);
+      response.appendHeader('Content-Type', 'application/json');
+      response.setBody({
+        error: 'call_timeout',
+        retryAt,
+        message: 'Calling is temporarily unavailable. Please try again shortly.'
+      });
+      return callback(null, response);
+    }
+  } catch (error) {
+    if (error.status !== 404) {
+      console.error('Call-limit lookup error; allowing call', error);
+    }
+  }
+
   const AccessToken = Twilio.jwt.AccessToken;
   const VoiceGrant = AccessToken.VoiceGrant;
   const token = new AccessToken(

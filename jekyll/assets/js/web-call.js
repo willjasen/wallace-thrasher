@@ -6,6 +6,7 @@
   const panel = root.querySelector('.web-call__panel');
   const callButton = root.querySelector('.web-call__start');
   const keypad = root.querySelector('.web-call__keypad');
+  const status = root.querySelector('.web-call__status');
   let device;
   let activeCall;
 
@@ -18,6 +19,20 @@
   const resetCall = () => {
     activeCall = undefined;
     setCallState(false);
+  };
+
+  const setStatus = message => {
+    status.textContent = message || '';
+    status.hidden = !message;
+  };
+
+  const timeoutMessage = retryAt => {
+    const remainingMs = Math.max(0, Number(retryAt) - Date.now());
+    if (remainingMs >= 60000) {
+      const minutes = Math.ceil(remainingMs / 60000);
+      return `Calling is temporarily unavailable. Please try again in about ${minutes} minute${minutes === 1 ? '' : 's'}.`;
+    }
+    return 'Calling is temporarily unavailable. Please try again shortly.';
   };
 
   const browserIdentity = () => {
@@ -44,8 +59,13 @@
     if (isLocalHost) tokenUrl = new URL('https://stretchie.net/api/web-call-token');
     tokenUrl.searchParams.set('identity', browserIdentity());
     const response = await fetch(tokenUrl, { cache: 'no-store' });
-    if (!response.ok) throw new Error('The calling service is unavailable.');
     const data = await response.json();
+    if (!response.ok) {
+      const error = new Error(data.message || 'The calling service is unavailable.');
+      error.code = data.error;
+      error.retryAt = data.retryAt;
+      throw error;
+    }
     if (!data.token) throw new Error('The calling service returned an invalid response.');
 
     device = new window.Twilio.Device(data.token, {
@@ -70,6 +90,7 @@
 
   const startCall = async () => {
     callButton.disabled = true;
+    setStatus('');
     try {
       const voiceDevice = await getDevice();
       activeCall = await voiceDevice.connect();
@@ -81,6 +102,9 @@
       activeCall.on('error', resetCall);
     } catch (error) {
       console.error('Unable to start browser call', error);
+      setStatus(error.code === 'call_timeout'
+        ? timeoutMessage(error.retryAt)
+        : error.message || 'The calling service is unavailable.');
       resetCall();
     } finally {
       callButton.disabled = false;
