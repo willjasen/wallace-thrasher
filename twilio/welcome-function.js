@@ -9,7 +9,8 @@ exports.handler = async function(context, event, callback) {
   // Keep all caller-facing messages and menu choices in one editable section.
   const spokenBrandName = 'stretchy';
   const spokenWebsite = `${spokenBrandName} dot net`;
-  const intro = `Thank you for calling ${spokenBrandName}. You can visit our website at ${spokenWebsite}. You have reached our Bangkok Sod Center automated shipment support line.`;
+  const intro = `Thank you for calling ${spokenBrandName}. You can visit our website at ${spokenWebsite}.`;
+  const introContinuation = 'You have reached our Bangkok Sod Center automated shipment support line.';
   const optionsMenu = 'Press 1 for shipment status. Press 2 for payment details. Press 3 for digital signature information. Press 4 for shipping records. Or press 5 for the dock supervisor.';
   const longCallMessage = `We are extremely busy here at ${spokenBrandName} and our time is valuable. You have taken up our phone lines for long enough for now, please call back later.`;
   const frequentCallMessage = `You are calling too, too much and we're busy on the dock. Try back in ${banDurationMinutes} minutes.`;
@@ -257,6 +258,8 @@ exports.handler = async function(context, event, callback) {
   playAmbient();
 
   twiml.say(voice, intro);
+  twiml.pause({ length: 0.5 });
+  twiml.say(voice, introContinuation);
   addMenu(1);
   twiml.say(voice, farewell);
   twiml.hangup();
