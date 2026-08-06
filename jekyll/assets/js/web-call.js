@@ -63,6 +63,10 @@
     launcher.setAttribute('aria-expanded', String(isOpen));
   };
 
+  if (new URLSearchParams(window.location.search).get('call') === 'open') {
+    setPanelOpen(true);
+  }
+
   const startCall = async () => {
     callButton.disabled = true;
     try {
