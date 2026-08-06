@@ -79,6 +79,18 @@ The browser caller also requires a TwiML App whose Voice URL is the deployed
 `/welcome` Function. Its SID is stored as `TWIML_APP_SID` in the Twilio
 environment, alongside `TWILIO_API_KEY` and `TWILIO_API_SECRET`. Deploy
 `token-function.js` as the public `/token` route whenever it changes.
+Set `WEB_CALL_IDENTITY_SECRET` to a stable, randomly generated secret of at
+least 32 bytes. The token Function uses it to create an HMAC-SHA256 identity
+from the browser's anonymous caller ID. The original ID is not placed in the
+Voice token or saved in Sync. Rotating this secret resets all web caller
+identities and their associated cooldown history.
+
+The same randomly generated `WEB_CALL_PROXY_SECRET` must be configured for the
+Netlify Functions runtime and the Twilio environment. The website requests its
+token from the same-origin `web-call-token` Netlify Edge Function, which applies
+Netlify's IP-based request limit and authenticates its request to Twilio with
+this secret. The public Twilio `/token` route rejects direct, unauthenticated
+calls.
 
 Twilio's supported playback formats and transcoding guidance are documented in
 the [TwiML `Play` reference](https://www.twilio.com/docs/voice/twiml/play).

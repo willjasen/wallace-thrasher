@@ -1,5 +1,5 @@
 .web-call {
-  bottom: 24px;
+  bottom: 72px;
   left: max(0.75rem, env(safe-area-inset-left));
   position: fixed;
   z-index: 1100;
@@ -100,6 +100,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .web-call {
+    display: none;
+  }
+
   .web-call__launcher {
     padding: 0.55rem 0.75rem;
   }
