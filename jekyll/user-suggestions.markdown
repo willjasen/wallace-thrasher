@@ -13,8 +13,8 @@ permalink: /user-suggestions/
   <header class="suggestions-hero">
     <div>
       <p class="suggestions-kicker">COMMUNITY ACTIVITY</p>
-      <h1>User suggestions</h1>
-      <p class="suggestions-intro">A live view of the GitHub pull requests submitted to improve the catalogue. Every suggestion is reviewed before it becomes part of the site.</p>
+      <h1>GitHub user suggestions</h1>
+      <p class="suggestions-intro">The Leaderboard shows the GitHub users who have submitted suggestions to improve stretchie, along with the number of suggestions they have submitted. Every suggestion is reviewed before it becomes part of the site.</p>
     </div>
     <a class="suggestions-github-link" href="https://github.com/willjasen/wallace-thrasher/pulls?q=is%3Apr+%5BSuggestion%5D" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
   </header>
