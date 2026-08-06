@@ -201,9 +201,22 @@
   .nav-list .page-link {
     display: block;
     width: 100%;
-    padding: 3px 4px;
+    padding: 3px 24px;
     border-bottom: 1px solid var(--minima-border-color-01, #eee);
     box-sizing: border-box;
+  }
+
+  /* Touch focus reveals the emoji pair; keep both icons within the item. */
+  .nav-list .page-link::before,
+  .nav-list .dropdown-toggle::before {
+    right: auto;
+    left: 6px;
+  }
+
+  .nav-list .page-link::after,
+  .nav-list .dropdown-toggle::after {
+    left: auto;
+    right: 6px;
   }
 
   .nav-list .page-link:hover,
@@ -225,7 +238,7 @@
     display: block;
     width: 100%;
     text-align: right;
-    padding: 3px 4px;
+    padding: 3px 24px;
     border-bottom: 1px solid var(--minima-border-color-01, #eee);
     border-radius: 0;
     background: none;
@@ -262,8 +275,7 @@
   }
   
   .dropdown-menu .page-link {
-    padding: 6px 12px;
-    padding-left: 20px;
+    padding: 6px 24px;
     border-bottom: 1px solid var(--search-submenu-border);
     border-radius: 0;
   }
