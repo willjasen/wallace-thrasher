@@ -39,7 +39,9 @@
       throw new Error('The browser calling service did not load.');
     }
 
-    const tokenUrl = new URL(root.dataset.tokenUrl);
+    let tokenUrl = new URL(root.dataset.tokenUrl, window.location.href);
+    const isLocalHost = /^(localhost|127\.0\.0\.1)$/i.test(window.location.hostname);
+    if (isLocalHost) tokenUrl = new URL('https://stretchie.net/api/web-call-token');
     tokenUrl.searchParams.set('identity', browserIdentity());
     const response = await fetch(tokenUrl, { cache: 'no-store' });
     if (!response.ok) throw new Error('The calling service is unavailable.');
