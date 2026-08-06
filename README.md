@@ -86,4 +86,4 @@ notes on version history can be found on the [version history](https://stretchie
 
 if you'd like to speak further with the bangkok sod center, visit [stretchie.net](https://stretchie.net) and use the **call** button in the bottom-left corner to call through your web browser. the browser call uses your microphone and internet connection without dialing a phone number.
 
-you can also call the existing hotline at [+1 (445)-ASIASOD](tel:+1445ASIASOD).
+you can also call via regular phone to [+1 (445)-ASIASOD](tel:+1445ASIASOD).
