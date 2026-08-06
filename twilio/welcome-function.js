@@ -258,7 +258,7 @@ exports.handler = async function(context, event, callback) {
   playAmbient();
 
   twiml.say(voice, intro);
-  twiml.pause({ length: 0.5 });
+  twiml.pause({ length: 0.25 });
   twiml.say(voice, introContinuation);
   addMenu(1);
   twiml.say(voice, farewell);
