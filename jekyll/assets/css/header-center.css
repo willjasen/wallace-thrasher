@@ -29,14 +29,22 @@
 .nav-list .dropdown-toggle::before,
 .nav-list .dropdown-toggle::after {
   content: attr(data-emoji);
-  display: inline-block;
-  width: 1.2em;
-  white-space: nowrap;
-  text-align: center;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.15s ease;
+  transform: translateY(-50%) scale(0.85);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nav-list .page-link::before,
+.nav-list .dropdown-toggle::before {
+  right: 100%;
+}
+
+.nav-list .page-link::after,
+.nav-list .dropdown-toggle::after {
+  left: 100%;
 }
 
 .nav-list .page-link:hover::before,
@@ -48,6 +56,7 @@
 .nav-list .dropdown-toggle:focus-visible::before,
 .nav-list .dropdown-toggle:focus-visible::after {
   opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
 
 .nav-list .page-link:hover {
