@@ -4,6 +4,10 @@
   deployed Twilio service.
 - Always deploy Twilio Function or Asset changes and verify the latest Twilio
   build is deployed before reporting completion.
+- Deployment authorization is standing: after creating a build, check its
+  progress until it completes, activate it when necessary, and verify that the
+  live Twilio environment points to the activated build without asking for
+  separate confirmation each time.
 - Keep `audio/`, `audio/SOURCES.md`, the `ambientSounds` array in
   `welcome-function.js`, and deployed Twilio Assets synchronized.
 - For every audio addition, replacement, rename, or removal, update
