@@ -7,24 +7,18 @@
   const closeButton = root.querySelector('.web-call__close');
   const callButton = root.querySelector('.web-call__start');
   const keypad = root.querySelector('.web-call__keypad');
-  const status = root.querySelector('.web-call__status');
   let device;
   let activeCall;
 
-  const setStatus = message => {
-    status.textContent = message;
-  };
-
   const setCallState = isActive => {
-    callButton.textContent = isActive ? 'hang up' : 'call';
+    callButton.textContent = isActive ? 'hang up' : '📞 call stretchie 📞';
     callButton.classList.toggle('is-active', isActive);
     keypad.hidden = !isActive;
   };
 
-  const resetCall = message => {
+  const resetCall = () => {
     activeCall = undefined;
     setCallState(false);
-    setStatus(message);
   };
 
   const browserIdentity = () => {
@@ -59,44 +53,41 @@
     });
     device.on('error', error => {
       console.error('Twilio Voice error', error);
-      resetCall(error.message || 'The browser call encountered an error.');
+      resetCall();
     });
     return device;
   };
 
+  const setPanelOpen = isOpen => {
+    panel.hidden = !isOpen;
+    launcher.setAttribute('aria-expanded', String(isOpen));
+  };
+
   const startCall = async () => {
-    setStatus('Requesting microphone access…');
     callButton.disabled = true;
     try {
       const voiceDevice = await getDevice();
       activeCall = await voiceDevice.connect();
       activeCall.mute(true);
       setCallState(true);
-      setStatus('Connecting…');
-      activeCall.on('accept', () => setStatus('Connected. Use the keypad for menu choices.'));
-      activeCall.on('disconnect', () => resetCall('Call ended.'));
-      activeCall.on('cancel', () => resetCall('Call canceled.'));
-      activeCall.on('reject', () => resetCall('The line is busy. Please try again later.'));
-      activeCall.on('error', error => resetCall(error.message || 'The call encountered an error.'));
+      activeCall.on('disconnect', resetCall);
+      activeCall.on('cancel', resetCall);
+      activeCall.on('reject', resetCall);
+      activeCall.on('error', resetCall);
     } catch (error) {
       console.error('Unable to start browser call', error);
-      resetCall(error.message || 'Unable to start the browser call.');
+      resetCall();
     } finally {
       callButton.disabled = false;
     }
   };
 
   launcher.addEventListener('click', () => {
-    panel.hidden = false;
-    launcher.hidden = true;
-    launcher.setAttribute('aria-expanded', 'true');
-    callButton.focus();
+    setPanelOpen(panel.hidden);
   });
 
   closeButton.addEventListener('click', () => {
-    panel.hidden = true;
-    launcher.hidden = false;
-    launcher.setAttribute('aria-expanded', 'false');
+    setPanelOpen(false);
     launcher.focus();
   });
 
