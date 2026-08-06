@@ -10,8 +10,7 @@
 }
 
 .web-call__launcher,
-.web-call__start,
-.web-call__mute {
+.web-call__start {
   background: #d4144b;
   border: 1px solid #a90d3b;
   border-radius: 999px;
@@ -31,9 +30,7 @@
 .web-call__launcher:hover,
 .web-call__launcher:focus-visible,
 .web-call__start:hover,
-.web-call__start:focus-visible,
-.web-call__mute:hover,
-.web-call__mute:focus-visible {
+.web-call__start:focus-visible {
   background: #b80f42;
 }
 
@@ -84,11 +81,6 @@
 .web-call__start.is-active {
   background: #a52828;
   border-color: #7e1f1f;
-}
-
-.web-call__mute:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .web-call__keypad {

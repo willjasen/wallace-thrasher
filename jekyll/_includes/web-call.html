@@ -14,10 +14,9 @@
       <strong>call</strong>
       <button class="web-call__close" type="button" aria-label="Close call controls">×</button>
     </div>
-    <p class="web-call__status" role="status" aria-live="polite">Ready to call through your browser.</p>
+    <p class="web-call__status" role="status" aria-live="polite">Ready to call and listen.</p>
     <div class="web-call__actions">
       <button class="web-call__start" type="button">call</button>
-      <button class="web-call__mute" type="button" aria-pressed="false">mute</button>
     </div>
     <div class="web-call__keypad" aria-label="Call keypad" hidden>
       {% for digit in (1..9) %}<button type="button" data-digit="{{ digit }}">{{ digit }}</button>{% endfor %}
@@ -25,9 +24,9 @@
       <button type="button" data-digit="0">0</button>
       <button type="button" data-digit="#">#</button>
     </div>
-    <small>Uses your microphone and internet connection. No phone number is dialed.</small>
+    <small>Uses your internet connection. Your microphone stays muted and no phone number is dialed.</small>
   </section>
 </div>
 <link rel="stylesheet" href="{{ '/assets/css/web-call.css' | relative_url }}">
 <script src="{{ '/assets/vendor/twilio-voice.min.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/js/web-call.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/web-call.js' | relative_url }}?v=2" defer></script>

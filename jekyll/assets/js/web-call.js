@@ -6,12 +6,10 @@
   const panel = root.querySelector('.web-call__panel');
   const closeButton = root.querySelector('.web-call__close');
   const callButton = root.querySelector('.web-call__start');
-  const muteButton = root.querySelector('.web-call__mute');
   const keypad = root.querySelector('.web-call__keypad');
   const status = root.querySelector('.web-call__status');
   let device;
   let activeCall;
-  let isMuted = false;
 
   const setStatus = message => {
     status.textContent = message;
@@ -20,8 +18,6 @@
   const setCallState = isActive => {
     callButton.textContent = isActive ? 'hang up' : 'call';
     callButton.classList.toggle('is-active', isActive);
-    muteButton.textContent = isMuted ? 'unmute' : 'mute';
-    muteButton.setAttribute('aria-pressed', String(isMuted));
     keypad.hidden = !isActive;
   };
 
@@ -74,7 +70,7 @@
     try {
       const voiceDevice = await getDevice();
       activeCall = await voiceDevice.connect();
-      activeCall.mute(isMuted);
+      activeCall.mute(true);
       setCallState(true);
       setStatus('Connecting…');
       activeCall.on('accept', () => setStatus('Connected. Use the keypad for menu choices.'));
@@ -110,18 +106,6 @@
       return;
     }
     startCall();
-  });
-
-  muteButton.addEventListener('click', () => {
-    isMuted = !isMuted;
-    if (activeCall) activeCall.mute(isMuted);
-    muteButton.textContent = isMuted ? 'unmute' : 'mute';
-    muteButton.setAttribute('aria-pressed', String(isMuted));
-    if (!activeCall) {
-      setStatus(isMuted
-        ? 'Ready to call. Your microphone will start muted.'
-        : 'Ready to call through your browser.');
-    }
   });
 
   keypad.addEventListener('click', event => {
