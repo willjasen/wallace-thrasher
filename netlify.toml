@@ -3,7 +3,6 @@
   command = "JEKYLL_ENV=production bundle exec jekyll build --baseurl \"\""
   publish = "_site"
   edge_functions = "_netlify/edge-functions"
-  ignore  = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF . ../README.md"
 
 [build.environment]
   BUNDLE_PATH = "vendor/bundle"
