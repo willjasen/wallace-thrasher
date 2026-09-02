@@ -1,0 +1,36 @@
+.call-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: baseline;
+  margin: 1rem 0 0.2rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 0.5rem;
+}
+
+.call-stats strong {
+  font-size: 1.1rem;
+}
+
+.call-stats span:not(:last-child)::after {
+  content: "·";
+  margin-left: 1rem;
+  opacity: 0.5;
+}
+
+.call-stats__note {
+  display: block;
+  opacity: 0.72;
+}
+
+@media (max-width: 480px) {
+  .call-stats {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .call-stats span::after {
+    display: none;
+  }
+}

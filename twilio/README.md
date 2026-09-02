@@ -92,5 +92,21 @@ Netlify's IP-based request limit and authenticates its request to Twilio with
 this secret. The public Twilio `/token` route rejects direct, unauthenticated
 calls.
 
+## Build-time call totals
+
+Netlify production builds query Twilio's Calls API and bake aggregate completed
+call totals into the Call Us section of the About page. The query only runs when
+Netlify supplies `NETLIFY=true`; ordinary local Jekyll builds never contact
+Twilio. Configure these variables in Netlify with the **Builds** scope:
+
+- `TWILIO_ACCOUNT_SID`
+- `TWILIO_API_KEY` and `TWILIO_API_SECRET` (preferred), or
+  `TWILIO_AUTH_TOKEN`
+- `TWILIO_PHONE_NUMBER` only if the hotline changes from `+14452742763`
+
+Only the three aggregate totals are included in the generated site. Phone
+numbers, anonymous web-client identities, and individual call records remain in
+Twilio and are never written to the site or repository.
+
 Twilio's supported playback formats and transcoding guidance are documented in
 the [TwiML `Play` reference](https://www.twilio.com/docs/voice/twiml/play).

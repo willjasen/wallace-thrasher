@@ -87,3 +87,5 @@ notes on version history can be found on the [version history](https://stretchie
 if you'd like to speak further with the bangkok sod center, visit [stretchie.net](https://stretchie.net/about/?call=open) and use the **call** button in the bottom-left corner to call through your web browser. the microphone for this feature stays muted.
 
 you can also call via regular phone to [+1 (445)-ASIASOD](tel:+1445ASIASOD).
+
+<!-- TWILIO_CALL_STATS -->
