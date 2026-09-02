@@ -6,7 +6,6 @@ require "uri"
 module Stretchie
   class TwilioCallStats
     API_ORIGIN = "https://api.twilio.com".freeze
-    DEFAULT_PHONE_NUMBER = "+14452742763".freeze
     PAGE_SIZE = 1_000
 
     def initialize(env = ENV)
@@ -18,7 +17,7 @@ module Stretchie
         @username = @account_sid
         @password = env.fetch("TWILIO_AUTH_TOKEN")
       end
-      @phone_number = env.fetch("TWILIO_PHONE_NUMBER", DEFAULT_PHONE_NUMBER)
+      @phone_number = env.fetch("TWILIO_PHONE_NUMBER")
     end
 
     def fetch

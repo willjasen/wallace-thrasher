@@ -102,7 +102,7 @@ Twilio. Configure these variables in Netlify with the **Builds** scope:
 - `TWILIO_ACCOUNT_SID`
 - `TWILIO_API_KEY` and `TWILIO_API_SECRET` (preferred), or
   `TWILIO_AUTH_TOKEN`
-- `TWILIO_PHONE_NUMBER` only if the hotline changes from `+14452742763`
+- `TWILIO_PHONE_NUMBER`
 
 Only the three aggregate totals are included in the generated site. Phone
 numbers, anonymous web-client identities, and individual call records remain in
