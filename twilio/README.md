@@ -94,8 +94,9 @@ calls.
 
 ## Build-time call totals
 
-Netlify production builds query Twilio's Calls API and bake aggregate completed
-call totals into the Call Us section of the About page. The query only runs when
+Netlify production builds query Twilio's Calls API and bake aggregate unique
+caller totals into the Call Us section of the About page. Phone numbers and
+anonymous web-client identities are deduplicated separately. The query only runs when
 Netlify supplies `NETLIFY=true`; ordinary local Jekyll builds never contact
 Twilio. Configure these variables in Netlify with the **Builds** scope:
 

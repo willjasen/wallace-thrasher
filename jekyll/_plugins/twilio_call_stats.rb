@@ -1,5 +1,6 @@
 require "json"
 require "net/http"
+require "set"
 require "time"
 require "uri"
 
@@ -21,30 +22,46 @@ module Stretchie
     end
 
     def fetch
-      phone_calls = 0
-      web_calls = 0
+      phone_callers = Set.new
+      web_callers = Set.new
+      last_call_at = nil
 
       each_call do |call|
         next unless call["status"] == "completed"
 
         from = call["from"].to_s
-        if call["direction"] == "inbound" && call["to"] == @phone_number
-          phone_calls += 1
-        elsif from.start_with?("client:web_")
-          web_calls += 1
+        is_phone_call = call["direction"] == "inbound" && call["to"] == @phone_number
+        is_web_call = from.start_with?("client:web_")
+
+        if is_phone_call
+          phone_callers.add(from) unless from.empty?
+        elsif is_web_call
+          web_callers.add(from)
         end
+
+        next unless is_phone_call || is_web_call
+
+        call_time = parse_call_time(call["start_time"] || call["date_created"])
+        last_call_at = call_time if call_time && (!last_call_at || call_time > last_call_at)
       end
 
       {
         "available" => true,
-        "total" => phone_calls + web_calls,
-        "phone" => phone_calls,
-        "web" => web_calls,
+        "total" => phone_callers.size + web_callers.size,
+        "phone" => phone_callers.size,
+        "web" => web_callers.size,
+        "last_call_at" => last_call_at&.utc&.iso8601,
         "generated_at" => Time.now.utc.iso8601
       }
     end
 
     private
+
+    def parse_call_time(value)
+      Time.parse(value.to_s)
+    rescue ArgumentError
+      nil
+    end
 
     def each_call
       path = "/2010-04-01/Accounts/#{@account_sid}/Calls.json?PageSize=#{PAGE_SIZE}"
