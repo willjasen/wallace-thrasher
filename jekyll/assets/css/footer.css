@@ -15,6 +15,10 @@ body {
   z-index: 1000;
 }
 
+.site-footer > .wrapper {
+  position: relative;
+}
+
 /* Footer layout for side-by-side columns */
 .footer-col-wrapper {
   display: grid;
@@ -36,9 +40,11 @@ body {
 }
 
 .netlify-status-badge {
-  align-self: center;
-  grid-column: 2;
+  left: 50%;
   line-height: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .netlify-status-badge[hidden] {
