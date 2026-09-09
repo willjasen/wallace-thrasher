@@ -78,6 +78,19 @@
     var barTop = el('div', { class: 'suggest-edit-bar-top' });
     var identityElement = el('div', { class: 'suggest-edit-identity' });
     var changeCount = el('span', { class: 'suggest-edit-count' }, '0 changes');
+    var bulkEdit = el('div', { class: 'speaker-bulk-edit' });
+    var bulkFrom = el('select', {
+      class: 'speaker-bulk-from',
+      'aria-label': 'Speaker to rename'
+    });
+    var bulkTo = el('input', {
+      class: 'speaker-bulk-to',
+      type: 'text',
+      placeholder: 'New speaker name',
+      maxlength: '100',
+      'aria-label': 'New speaker name'
+    });
+    var bulkApply = el('button', { class: 'speaker-bulk-apply', type: 'button' }, 'Rename');
     var note = el('input', {
       class: 'suggest-edit-note',
       type: 'text',
@@ -92,6 +105,12 @@
 
     barTop.appendChild(identityElement);
     barTop.appendChild(changeCount);
+    bulkEdit.appendChild(el('span', { class: 'speaker-bulk-label' }, 'Rename speaker'));
+    bulkEdit.appendChild(bulkFrom);
+    bulkEdit.appendChild(el('span', { class: 'speaker-bulk-arrow', 'aria-hidden': 'true' }, '→'));
+    bulkEdit.appendChild(bulkTo);
+    bulkEdit.appendChild(bulkApply);
+    barTop.appendChild(bulkEdit);
     barTop.appendChild(note);
     barTop.appendChild(submit);
     barTop.appendChild(cancel);
@@ -186,6 +205,43 @@
       submit.disabled = editCount === 0;
     }
 
+    function populateSpeakerOptions() {
+      var speakers = [];
+      subtitleList.querySelectorAll('.sub-speaker-input').forEach(function (input) {
+        if (speakers.indexOf(input.value) === -1) speakers.push(input.value);
+      });
+      bulkFrom.innerHTML = '';
+      speakers.sort(function (a, b) { return a.localeCompare(b); }).forEach(function (speaker) {
+        bulkFrom.appendChild(el('option', { value: speaker }, speaker));
+      });
+      updateBulkApply();
+    }
+
+    function updateBulkApply() {
+      var replacement = bulkTo.value.trim();
+      var matchCount = 0;
+      subtitleList.querySelectorAll('.sub-speaker-input').forEach(function (input) {
+        if (input.value === bulkFrom.value) matchCount += 1;
+      });
+      bulkApply.textContent = 'Rename ' + matchCount + ' line' + (matchCount === 1 ? '' : 's');
+      bulkApply.disabled = !replacement || replacement === bulkFrom.value || matchCount === 0;
+    }
+
+    bulkFrom.addEventListener('change', updateBulkApply);
+    bulkTo.addEventListener('input', updateBulkApply);
+    bulkApply.addEventListener('click', function () {
+      var current = bulkFrom.value;
+      var replacement = bulkTo.value.trim();
+      if (!current || !replacement || current === replacement) return;
+      subtitleList.querySelectorAll('.sub-speaker-input').forEach(function (input) {
+        if (input.value === current) input.value = replacement;
+      });
+      bulkTo.value = '';
+      populateSpeakerOptions();
+      bulkFrom.value = replacement;
+      updateCount();
+    });
+
     function enterEditMode() {
       var identity = getStoredIdentity();
       if (!identity) {
@@ -201,6 +257,7 @@
       subtitleList.querySelectorAll('.sub-edit').forEach(function (edit) { edit.style.display = 'flex'; });
       bar.style.display = 'flex';
       result.textContent = '';
+      populateSpeakerOptions();
       updateCount();
     }
 

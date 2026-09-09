@@ -521,6 +521,28 @@ noindex: true
     const changeCountEl = el('span', { style: 'color:lavender;font-size:0.85em;white-space:nowrap;' });
     changeCountEl.textContent = '0 changes';
 
+    const bulkEdit = el('div', { style: 'display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;padding:4px 6px;border:1px solid #555;border-radius:6px;' });
+    const bulkFrom = el('select', {
+      'aria-label': 'Speaker to rename',
+      style: 'min-width:110px;max-width:170px;padding:3px 7px;border:1px solid #666;border-radius:4px;color:#e0e0e0;background:#0d0d1a;font:inherit;font-size:0.85em;',
+    });
+    const bulkTo = el('input', {
+      type: 'text',
+      placeholder: 'New speaker name',
+      maxlength: '100',
+      'aria-label': 'New speaker name',
+      style: 'min-width:110px;max-width:170px;padding:3px 7px;border:1px solid #666;border-radius:4px;color:#e0e0e0;background:#0d0d1a;font:inherit;font-size:0.85em;',
+    });
+    const bulkApply = el('button', {
+      type: 'button',
+      style: 'padding:4px 9px;border:1px solid #90caf9;border-radius:5px;color:#90caf9;background:none;cursor:pointer;font-size:0.8em;',
+    });
+    bulkEdit.appendChild(el('span', { style: 'color:lavender;font-size:0.85em;white-space:nowrap;' }, 'Rename speaker'));
+    bulkEdit.appendChild(bulkFrom);
+    bulkEdit.appendChild(document.createTextNode('\u2192'));
+    bulkEdit.appendChild(bulkTo);
+    bulkEdit.appendChild(bulkApply);
+
     const noteInput = el('input', {
       type: 'text',
       placeholder: 'Optional note for reviewer\u2026',
@@ -543,6 +565,7 @@ noindex: true
 
     barTop.appendChild(identityEl);
     barTop.appendChild(changeCountEl);
+    barTop.appendChild(bulkEdit);
     barTop.appendChild(noteInput);
     barTop.appendChild(submitBtn);
     barTop.appendChild(cancelBtn);
@@ -602,6 +625,44 @@ noindex: true
       submitBtn.disabled = edits.length === 0;
     }
 
+    function populateSpeakerOptions() {
+      const speakers = [];
+      document.querySelectorAll('#subtitleList .sub-speaker-input').forEach(function (input) {
+        if (!speakers.includes(input.value)) speakers.push(input.value);
+      });
+      bulkFrom.innerHTML = '';
+      speakers.sort(function (a, b) { return a.localeCompare(b); }).forEach(function (speaker) {
+        bulkFrom.appendChild(el('option', { value: speaker }, speaker));
+      });
+      updateBulkApply();
+    }
+
+    function updateBulkApply() {
+      const replacement = bulkTo.value.trim();
+      let matchCount = 0;
+      document.querySelectorAll('#subtitleList .sub-speaker-input').forEach(function (input) {
+        if (input.value === bulkFrom.value) matchCount += 1;
+      });
+      bulkApply.textContent = 'Rename ' + matchCount + ' line' + (matchCount === 1 ? '' : 's');
+      bulkApply.disabled = !replacement || replacement === bulkFrom.value || matchCount === 0;
+      bulkApply.style.opacity = bulkApply.disabled ? '0.45' : '1';
+    }
+
+    bulkFrom.addEventListener('change', updateBulkApply);
+    bulkTo.addEventListener('input', updateBulkApply);
+    bulkApply.addEventListener('click', function () {
+      const current = bulkFrom.value;
+      const replacement = bulkTo.value.trim();
+      if (!current || !replacement || current === replacement) return;
+      document.querySelectorAll('#subtitleList .sub-speaker-input').forEach(function (input) {
+        if (input.value === current) input.value = replacement;
+      });
+      bulkTo.value = '';
+      populateSpeakerOptions();
+      bulkFrom.value = replacement;
+      updateCount();
+    });
+
     function enterEditMode() {
       const identity = getStoredIdentity();
       if (!identity) {
@@ -619,6 +680,7 @@ noindex: true
       document.querySelectorAll('#subtitleList .sub-edit').forEach(function (e) { e.style.display = 'inline-flex'; });
       bar.style.display = 'flex';
       resultEl.textContent = '';
+      populateSpeakerOptions();
       updateCount();
       document.querySelectorAll('#subtitleList .sub-speaker-input, #subtitleList .sub-text-input').forEach(function (inp) {
         inp.addEventListener('input', updateCount);

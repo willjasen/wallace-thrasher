@@ -290,6 +290,40 @@
   font: inherit;
   font-size: 0.85em;
 }
+.speaker-bulk-edit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+.speaker-bulk-label { color: lavender; font-size: 0.85em; white-space: nowrap; }
+.speaker-bulk-from,
+.speaker-bulk-to {
+  box-sizing: border-box;
+  min-width: 110px;
+  max-width: 170px;
+  padding: 3px 7px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: #e0e0e0;
+  background: #0d0d1a;
+  font: inherit;
+  font-size: 0.85em;
+}
+.speaker-bulk-arrow { color: #aaa; }
+.speaker-bulk-apply {
+  padding: 4px 9px;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+  color: #90caf9;
+  background: none;
+  font: inherit;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.speaker-bulk-apply:disabled { cursor: not-allowed; opacity: 0.45; }
 .sub-speaker-input { width: 120px; flex: 0 0 120px; }
 .sub-text-input { min-width: 180px; flex: 1; }
 .suggest-edit-bar {
@@ -372,6 +406,10 @@
   .sub-edit { align-items: stretch; flex-wrap: wrap; }
   .sub-speaker-input { width: calc(100% - 20px); flex: 1; }
   .sub-text-input { width: 100%; flex-basis: 100%; }
+  .speaker-bulk-edit { width: 100%; flex-wrap: wrap; justify-content: center; }
+  .speaker-bulk-label { width: 100%; text-align: center; }
+  .speaker-bulk-from,
+  .speaker-bulk-to { min-width: 120px; flex: 1; }
 }
 .subtitle-taxonomy-link {
   text-decoration: underline;
