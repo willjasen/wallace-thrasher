@@ -22,7 +22,7 @@ the "[Subtitles]({{ site.baseurl }}/subtitles)" page enables searching through t
 
 ### 🔎 Search Logic 🔎
 
-the search feature uses a logical 'and' when operating, instead of a logical 'or'. this change in behavior affects when multiple words are searched. before, the search would return any subtitles containing any word that was entered. now, the search will only return subtitles that contain all words being searched.
+the search feature uses a logical 'and' when operating, instead of a logical 'or'. this behavior affects when multiple words are searched. before, the search would return any subtitles containing any word that was entered. now, the search will only return subtitles that contain all words being searched.
 
 for example, a search term of "cheese pizza" previously return 134 results - all subtitles containing either the word "cheese" or "pizza". now, the same search of "cheese pizza" returns 7 results - all subtitles containing both the words "cheese" and "pizza".
 
