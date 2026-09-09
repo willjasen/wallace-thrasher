@@ -626,9 +626,21 @@ async function main(callback) {
                             trackLink.textContent = doc.Track_Title;
                             trackItem.appendChild(trackLink);
 
+                            const albumMeta = document.createElement('span');
+                            albumMeta.className = 'speaker-search-group__album';
                             const album = document.createElement('span');
                             album.textContent = doc.Album;
-                            trackItem.appendChild(album);
+                            albumMeta.appendChild(album);
+
+                            const albumImage = document.createElement('img');
+                            albumImage.src = `${BASE_URL}/assets/img/albums/${doc.Album_Picture}`;
+                            albumImage.alt = '';
+                            albumImage.width = 32;
+                            albumImage.height = 32;
+                            albumImage.loading = 'lazy';
+                            albumMeta.appendChild(albumImage);
+
+                            trackItem.appendChild(albumMeta);
                             trackList.appendChild(trackItem);
                         });
                         groupItem.appendChild(trackList);
