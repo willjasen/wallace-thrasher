@@ -47,16 +47,13 @@ module Jekyll
       doc.data['track_length'] = track_data['Track_Length']
       doc.data['track_subtitles'] = subtitles
       # Generated track documents do not have a checked-in source file of
-      # their own. Use the track record's update timestamp for sitemap
-      # lastmod instead of leaving the generated document undated.
-      if track_data['Last_Modified']
-        doc.data['last_modified_at'] = Time.at(track_data['Last_Modified'].to_i)
-      else
-        # A few legacy records predate per-track timestamps; keep those URLs
-        # dated with the combined catalog's revision rather than omitting
-        # lastmod entirely.
-        doc.data['last_modified_at'] = data_timestamp
-      end
+      # their own. Use the source JSON's Git timestamp for sitemap lastmod
+      # instead of storing generated timestamps in the catalog.
+      doc.data['last_modified_at'] = Jekyll.track_timestamp(
+        site.source,
+        album_slug,
+        track_data['Track_JSONPath']
+      ) || data_timestamp
       # Keep the complete combined record available to Liquid so the layout can
       # render the same data that powers the client-side search index.
       doc.data['track_data'] = track_data

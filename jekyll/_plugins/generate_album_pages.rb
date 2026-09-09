@@ -27,11 +27,13 @@ module Jekyll
         doc.data['title'] = "#{album_data['Album']} (#{album_data['Year']})"
         doc.data['description'] = "Track list and subtitle links for #{album_data['Album']} by Longmont Potion Castle."
         doc.data['image'] = "/assets/img/albums/#{album_data['Album_Picture']}"
-        track_timestamps = album_data.fetch('Tracks', []).filter_map { |track| track['Last_Modified'].to_i if track['Last_Modified'] }
+        track_timestamps = album_data.fetch('Tracks', []).filter_map do |track|
+          Jekyll.track_timestamp(site.source, slug, track['Track_JSONPath'])
+        end
         doc.data['last_modified_at'] = if track_timestamps.empty?
                                          data_timestamp
                                        else
-                                         Time.at(track_timestamps.max)
+                                         track_timestamps.max
                                        end
         doc
       end      
