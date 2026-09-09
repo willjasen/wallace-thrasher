@@ -109,6 +109,13 @@
       if (!badge || !badgeImage) return;
 
       const latestDeployUrl = 'https://api.netlify.com/api/v1/sites/93a34aa5-06c6-4fae-ab22-3b463c464ee6/deploys?production=true&per_page=1';
+      const activeBuildStates = new Set([
+        'enqueued',
+        'building',
+        'processing',
+        'preparing',
+        'uploading'
+      ]);
       let activeBuildId;
       let hideTimer;
       let updateInProgress = false;
@@ -146,7 +153,7 @@
           const deployments = await response.json();
           const latestDeploy = Array.isArray(deployments) ? deployments[0] : undefined;
 
-          if (latestDeploy?.state === 'building') {
+          if (activeBuildStates.has(latestDeploy?.state)) {
             activeBuildId = latestDeploy.id;
             showBadge();
           } else if (
