@@ -187,8 +187,9 @@ layout: base
   {% if track_subtitles %}
     {% for trackText in track_subtitles %}
       {% assign subtitle_index = trackText.Index | default: forloop.index %}
+      {% assign speaker_wikipedia_url = site.data.speaker_wikipedia[trackText.Speaker] %}
       <li class="subtitle-line" data-sub-index="{{ subtitle_index }}" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> <span class="subtitle-text">{{ trackText.Text }}</span></span>
+        <span class="sub-view"><strong>{% if speaker_wikipedia_url %}<a class="speaker-wikipedia-link" href="{{ speaker_wikipedia_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ trackText.Speaker | escape }} on Wikipedia">{{ trackText.Speaker }}</a>{% else %}{{ trackText.Speaker }}{% endif %}:</strong> <span class="subtitle-text">{{ trackText.Text }}</span></span>
         <span class="sub-edit">
           <input class="sub-speaker-input" type="text" value="{{ trackText.Speaker | escape }}" maxlength="100" aria-label="Speaker for subtitle {{ subtitle_index }}">
           <span aria-hidden="true">:</span>
@@ -200,8 +201,9 @@ layout: base
   {% else %}
     {% for trackText in track %}
       {% assign subtitle_index = trackText.Index | default: forloop.index %}
+      {% assign speaker_wikipedia_url = site.data.speaker_wikipedia[trackText.Speaker] %}
       <li class="subtitle-line" data-sub-index="{{ subtitle_index }}" data-start-time="{{ trackText['Start Time'] }}" data-end-time="{{ trackText['End Time'] }}">
-        <span class="sub-view"><strong>{{ trackText.Speaker }}:</strong> <span class="subtitle-text">{{ trackText.Text }}</span></span>
+        <span class="sub-view"><strong>{% if speaker_wikipedia_url %}<a class="speaker-wikipedia-link" href="{{ speaker_wikipedia_url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ trackText.Speaker | escape }} on Wikipedia">{{ trackText.Speaker }}</a>{% else %}{{ trackText.Speaker }}{% endif %}:</strong> <span class="subtitle-text">{{ trackText.Text }}</span></span>
         <span class="sub-edit">
           <input class="sub-speaker-input" type="text" value="{{ trackText.Speaker | escape }}" maxlength="100" aria-label="Speaker for subtitle {{ subtitle_index }}">
           <span aria-hidden="true">:</span>

@@ -17,6 +17,27 @@ const BASE_URL = '{{ site.baseurl }}';
 console.log("BASE_URL: " + (BASE_URL ? BASE_URL : "<null>"));
 const BUILD_TIMESTAMP = '{{ site.time | date: "%s" }}';
 const INDEXABLE_BUILD = {{ site.indexable | default: false | jsonify }};
+const SPEAKER_WIKIPEDIA_URLS = {{ site.data.speaker_wikipedia | jsonify }};
+
+function appendSpeakerName(container, speakerName, options) {
+    const name = String(speakerName || 'Unknown speaker');
+    const wikipediaUrl = SPEAKER_WIKIPEDIA_URLS[name];
+    const suffix = options && options.suffix ? options.suffix : '';
+
+    if (wikipediaUrl) {
+        const link = document.createElement('a');
+        link.className = 'speaker-wikipedia-link';
+        link.href = wikipediaUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = name;
+        link.setAttribute('aria-label', `${name} on Wikipedia`);
+        container.appendChild(link);
+    } else {
+        container.appendChild(document.createTextNode(name));
+    }
+    if (suffix) container.appendChild(document.createTextNode(suffix));
+}
 
 function appendSearchLinkedText(container, text, phrase, href, ariaLabel) {
     const sourceText = String(text || '');
@@ -499,7 +520,7 @@ async function main(callback) {
                             quote.className = 'subtitle-search-result__quote';
                             const speaker = document.createElement('span');
                             speaker.className = 'subtitle-search-result__speaker';
-                            speaker.textContent = `${subtitle.Speaker || 'Unknown speaker'}: `;
+                            appendSpeakerName(speaker, subtitle.Speaker, { suffix: ': ' });
                             quote.appendChild(speaker);
                             quote.appendChild(document.createTextNode('“'));
                             const separator = INDEXABLE_BUILD ? '?' : '&';
@@ -538,48 +559,87 @@ async function main(callback) {
         document.addEventListener('input', function (e) {
             if (!e.target.matches('#speakers-search-input')) return;
             (function (input) {
-                if (input.value.trim() !== "") {
-                    const query = input.value.trim().split(' ').map(word => `+${word}`).join(' '); // Add + to each word for logical AND searching
-                    const results = idxSpeaker.search(query);
-                    //console.log("Search query:", query);
-                    //console.log("Search results:", results);
+                const resultList = document.querySelector('#speakers-search-results');
+                resultList.replaceChildren();
+                if (input.value.trim() === '') return;
 
-                    // Clear previous results
-                    const resultList = document.querySelector('#speakers-search-results');
-                    resultList.innerHTML = '';
+                const query = input.value.trim().split(' ').map(word => `+${word}`).join(' ');
+                const results = idxSpeaker.search(query);
+                const normalizedSearch = input.value.trim().toLocaleLowerCase();
+                const searchWords = normalizedSearch.split(/\s+/);
+                const speakerGroups = new Map();
+                const tracksWithSpeaker = new Set();
+                const matchingTracks = new Set();
 
-                    // Set to store the unique track and speaker combinations
-                    let tracksWithSpeaker = new Set();
-
-                    // Display search results
-                    results.forEach(function (result) {
-                        const matchedDoc = dataMap.get(result.ref);
-
-                        //if (matchedDoc && matchedDoc.Speaker.includes(query)) {
-                        const key = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
-
-                        // Add to Set only if the combination isn't already added
-                        if (!tracksWithSpeaker.has(key)) {
-                            tracksWithSpeaker.add(key);
-
-                            // Display the result
-                            const albumAndTitleItem = document.createElement('li');
-                            albumAndTitleItem.innerHTML = `
-                                ${matchedDoc.Speaker} -- 
-                                <i><a href="${trackUrl(matchedDoc.Album_Slug, matchedDoc.Track_Slug)}">${matchedDoc.Track_Title}</a></i> --
-                                ${matchedDoc.Album}
-                            `;
-                            resultList.appendChild(albumAndTitleItem);
-                        }
-                    });
-
-                    // Display the count of unique track-speaker combinations
-                    const trackCount = tracksWithSpeaker.size;
-                    const totalCountContainer = document.createElement('div');
-                    totalCountContainer.style.marginBottom = '25px';
-                    totalCountContainer.innerHTML = `<br/><p>Unique track-speaker combinations: ${trackCount}</p>`;
-                    resultList.insertBefore(totalCountContainer, resultList.firstChild);
+                function groupKey(speakerName) {
+                    return SPEAKER_WIKIPEDIA_URLS[speakerName] || speakerName.toLocaleLowerCase();
                 }
+
+                results.forEach(function (result) {
+                    const matchedDoc = dataMap.get(result.ref);
+                    const trackKey = createKey(matchedDoc.Album, matchedDoc.Track_Title, matchedDoc.Speaker);
+                    if (tracksWithSpeaker.has(trackKey)) return;
+                    tracksWithSpeaker.add(trackKey);
+                    matchingTracks.add(createKey(matchedDoc.Album, matchedDoc.Track_Title, ''));
+
+                    const key = groupKey(matchedDoc.Speaker);
+                    if (!speakerGroups.has(key)) {
+                        speakerGroups.set(key, { name: matchedDoc.Speaker, tracks: [] });
+                    }
+                    speakerGroups.get(key).tracks.push(matchedDoc);
+                });
+
+                // Curated public figures remain discoverable even before any
+                // transcript lines have been assigned to them.
+                Object.keys(SPEAKER_WIKIPEDIA_URLS).forEach(function (speakerName) {
+                    const normalizedName = speakerName.toLocaleLowerCase();
+                    if (!searchWords.every(word => normalizedName.includes(word))) return;
+                    const key = groupKey(speakerName);
+                    if (!speakerGroups.has(key)) {
+                        speakerGroups.set(key, { name: speakerName, tracks: [] });
+                    }
+                });
+
+                const countItem = document.createElement('li');
+                countItem.className = 'speaker-result-count';
+                const speakerCount = speakerGroups.size;
+                const trackCount = matchingTracks.size;
+                countItem.textContent = `${speakerCount} ${speakerCount === 1 ? 'speaker' : 'speakers'} found across ${trackCount} ${trackCount === 1 ? 'track' : 'tracks'}`;
+                resultList.appendChild(countItem);
+
+                speakerGroups.forEach(function (group) {
+                    const groupItem = document.createElement('li');
+                    groupItem.className = 'speaker-search-group';
+
+                    const heading = document.createElement('h2');
+                    heading.className = 'speaker-search-group__name';
+                    appendSpeakerName(heading, group.name);
+                    groupItem.appendChild(heading);
+
+                    if (group.tracks.length) {
+                        const trackList = document.createElement('ul');
+                        trackList.className = 'speaker-search-group__tracks';
+                        group.tracks.forEach(function (doc) {
+                            const trackItem = document.createElement('li');
+                            const trackLink = document.createElement('a');
+                            trackLink.href = trackUrl(doc.Album_Slug, doc.Track_Slug);
+                            trackLink.textContent = doc.Track_Title;
+                            trackItem.appendChild(trackLink);
+
+                            const album = document.createElement('span');
+                            album.textContent = doc.Album;
+                            trackItem.appendChild(album);
+                            trackList.appendChild(trackItem);
+                        });
+                        groupItem.appendChild(trackList);
+                    } else {
+                        const emptyMessage = document.createElement('p');
+                        emptyMessage.className = 'speaker-search-group__empty';
+                        emptyMessage.textContent = 'No cataloged tracks yet.';
+                        groupItem.appendChild(emptyMessage);
+                    }
+                    resultList.appendChild(groupItem);
+                });
             })(e.target);
         });
 
