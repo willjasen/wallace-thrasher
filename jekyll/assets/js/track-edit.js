@@ -91,6 +91,14 @@
       'aria-label': 'New speaker name'
     });
     var bulkApply = el('button', { class: 'speaker-bulk-apply', type: 'button' }, 'Rename');
+    var aiInstruction = el('input', {
+      class: 'ai-review-instruction',
+      type: 'text',
+      placeholder: 'Ask AI to check this track…',
+      maxlength: '500',
+      'aria-label': 'Instructions for AI review'
+    });
+    var aiReview = el('button', { class: 'ai-review-button', type: 'button' }, '✨ AI review');
     var note = el('input', {
       class: 'suggest-edit-note',
       type: 'text',
@@ -111,6 +119,8 @@
     bulkEdit.appendChild(bulkTo);
     bulkEdit.appendChild(bulkApply);
     barTop.appendChild(bulkEdit);
+    barTop.appendChild(aiInstruction);
+    barTop.appendChild(aiReview);
     barTop.appendChild(note);
     barTop.appendChild(submit);
     barTop.appendChild(cancel);
@@ -240,6 +250,58 @@
       populateSpeakerOptions();
       bulkFrom.value = replacement;
       updateCount();
+    });
+
+    aiReview.addEventListener('click', async function () {
+      var lines = [];
+      subtitleList.querySelectorAll('.subtitle-line[data-sub-index]').forEach(function (line) {
+        lines.push({
+          index: parseInt(line.dataset.subIndex, 10),
+          speaker: line.querySelector('.sub-speaker-input').value,
+          text: line.querySelector('.sub-text-input').value
+        });
+      });
+      aiReview.disabled = true;
+      aiReview.textContent = 'Reviewing…';
+      result.style.color = 'lavender';
+      result.textContent = 'AI is reviewing this track. No changes will be submitted automatically.';
+      try {
+        var response = await fetch('/.netlify/functions/ai-track-review', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            lines: lines,
+            instruction: aiInstruction.value.trim(),
+            auth: getStoredIdentity() || undefined
+          })
+        });
+        var data = await response.json();
+        if (!data.ok) throw new Error(data.error || 'AI review failed');
+        if (!data.edits.length) {
+          result.style.color = 'greenyellow';
+          result.textContent = data.summary || 'AI found no high-confidence changes.';
+          return;
+        }
+        data.edits.forEach(function (edit) {
+          var line = subtitleList.querySelector('.subtitle-line[data-sub-index="' + edit.index + '"]');
+          if (!line) return;
+          if (edit.speaker !== null) line.querySelector('.sub-speaker-input').value = edit.speaker;
+          if (edit.text !== null) line.querySelector('.sub-text-input').value = edit.text;
+          line.classList.add('ai-review-changed');
+          line.title = 'AI suggestion: ' + edit.reason;
+        });
+        populateSpeakerOptions();
+        updateCount();
+        result.style.color = 'greenyellow';
+        result.textContent = (data.summary || 'AI suggestions applied for review.') +
+          ' Review the highlighted lines before submitting.';
+      } catch (error) {
+        result.style.color = '#ff6b6b';
+        result.textContent = error.message === 'Failed to fetch' ? 'Network error. Please try again.' : 'Error: ' + error.message;
+      } finally {
+        aiReview.disabled = false;
+        aiReview.textContent = '✨ AI review';
+      }
     });
 
     function enterEditMode() {

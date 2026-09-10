@@ -290,6 +290,32 @@
   font: inherit;
   font-size: 0.85em;
 }
+
+.ai-review-instruction {
+  min-width: 220px;
+  flex: 1 1 260px;
+  padding: 7px 9px;
+  border: 1px solid #665a80;
+  border-radius: 4px;
+  background: #171321;
+  color: lavender;
+}
+
+.ai-review-button {
+  padding: 7px 11px;
+  border: 1px solid #aa8cff;
+  border-radius: 4px;
+  background: #35255a;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ai-review-button:disabled { cursor: wait; opacity: 0.65; }
+.subtitle-line.ai-review-changed {
+  background: rgba(170, 140, 255, 0.14);
+  border-left-color: #aa8cff;
+}
 .speaker-bulk-edit {
   display: flex;
   align-items: center;
