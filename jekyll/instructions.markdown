@@ -59,7 +59,7 @@ submitting a suggestion does not guarantee that it will be accepted. suggestions
 
 <a id="edit-subtitles-and-speakers"></a>
 
-### ✍️ Edit Subtitles and Speakers ✍️
+### ✍️ Editing Subtitles and Speakers ✍️
 
 to suggest a correction, open the relevant album, select the track you want to correct, and then select **Suggest edits** above its subtitles.
 
