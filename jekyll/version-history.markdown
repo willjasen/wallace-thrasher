@@ -6,6 +6,10 @@ permalink: /version-history/
 published: true
 ---
 
+### ### v2.2.0 (beta)
+
+ - lots of changes...
+
 ### v2.1.0
 
 data
