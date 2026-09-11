@@ -73,6 +73,12 @@ select **Cancel** or **Exit edit mode** to leave without submitting.
 
 submitted suggestions do not appear on the website immediately; they must be reviewed and merged.
 
+---
+
+☎️ Call Us! ☎️
+
+a fun feature of the project is an interactive voice response system that emulates a non-existing logistics company who can't quite get it together. the ivr is available via the website as well as an actual phone number ([+1 (445)-ASIASOD](tel:+1445ASIASOD)).
+
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/toc.css">
 <script src="{{ site.baseurl }}/assets/js/toc.js"
   data-toc-id="instructions-toc" data-toc-title="Instructions" data-toc-class="instructions-page"></script>
