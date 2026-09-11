@@ -86,7 +86,7 @@ the [technical details](https://stretchie.net/technical-details) page contains t
 
 notes on version history can be found on the [version history](https://stretchie.net/version-history) page. browse the Talkin’ Whipapedia scrape, comparison, and merge archive on the [wiki data](https://stretchie.net/wiki-data/) page. browse the detailed transcription comparisons, review history, and approved Whisper changes on the combined [transcription and Whisper data](https://stretchie.net/transcription-data/) page.
 
-the codename for this project was chosen as "wallace-thrasher", as it is mentioned in the original alex trebek call on lpc 7. from there, it was a natural decision to decide to then call the web app "stretchie".
+the codename for this project was chosen as "wallace-thrasher", as it is an alias used in the original alex trebek call on lpc 7. from there, it was a natural decision to decide to then call the web app "stretchie".
 
 ### ☎️ Call Us! ☎️
 
