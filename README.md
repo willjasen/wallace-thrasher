@@ -49,6 +49,8 @@ GitHub users can contribute corrections directly from the website. Sign in with 
 
 ### 📋 Attribution 📋
 
+GitHub users that have contributed to the project can be viewed via the [Leaderboard](https://stretchie.net/suggestions).
+
 the transcript and subtitle data on this website are merged with data from [Talkin' Whipapedia](https://talkinwhipapedia.fandom.com/) and its contributors. that data is used and distributed here under the [Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/) license, consistent with the wiki's own licensing.
 
 ### 🪪 Licensing & Rights 🪪
