@@ -77,7 +77,7 @@ submitted suggestions do not appear on the website immediately; they must be rev
 
 ☎️ Call Us! ☎️
 
-a fun feature of the project is an interactive voice response system that emulates a non-existing logistics company who can't quite get it together. the ivr is available via the website as well as an actual phone number ([+1 (445)-ASIASOD](tel:+1445ASIASOD)).
+a fun feature of the project is an interactive voice response system that emulates a non-existing logistics company who can't quite get it together. the ivr is available via the website as well as an actual phone number ([+1 (445)-ASIASOD](tel:+1445ASIASOD)). note that this feature requires money on the backend and may be removed in the future.
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/toc.css">
 <script src="{{ site.baseurl }}/assets/js/toc.js"
