@@ -8,7 +8,7 @@ published: true
 
 ### ### v2.2.0 (beta)
 
- - lots of changes...
+ - lots of changes to mention...
 
 ### v2.1.0
 
