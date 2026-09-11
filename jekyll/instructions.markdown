@@ -10,7 +10,7 @@ published: true
 
 there are four pages that utilize the search feature, found under the Search menu option:
 
-the "[Aliases]({{ site.baseurl }}/aliases)" page enables for searching through the aliases and nicknames that LPC uses when calling others. in your case - you can call me stretchie. the page also displays all aliases used throughout the discography.
+the "[Aliases]({{ site.baseurl }}/aliases)" page enables for searching through the aliases and nicknames that LPC uses when calling others. in your case - *you can call me stretchie*. the page also displays all aliases used throughout the discography.
 
 the "[Establishments]({{ site.baseurl }}/establishments)" page enables searching through the establishments and places that LPC mentions. a frequently used establishment is UPS. the page also displays all establishments used throughout the discography.
 
