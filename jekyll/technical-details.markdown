@@ -90,7 +90,7 @@ commits to the main branch are deployed directly by [netlify](https://app.netlif
 
 ### ☎️ Twilio ☎️
 
-twilio is used for the interactive voice response feature. its interfaces include a softphone-style web app as well as a traditional phone number.
+twilio is used for the interactive voice response feature. its interfaces include a softphone-style web app as well as a traditional phone number. stats about who have used the system are shown on the about page.
 
 ### 🏷️ Badges 🏷️
 
