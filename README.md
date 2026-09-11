@@ -57,6 +57,8 @@ this project is **dual-licensed** — the source code and the JSON data are cove
 
 ##### source code — GPLv3
 
+GitHub users that have contributed to the project can be viewed via the [Leaderboard](https://stretchie.net/suggestions/)
+
 all source code (Ruby plugins, Python scripts, JavaScript, HTML templates, YAML config, etc.) is licensed under the [GPLv3](https://github.com/willjasen/wallace-thrasher/blob/main/gpl-3.0.txt), and this license applies to all past versions and branches of the project. to help best illustrate this licensing, here's a list of what it entails:
 
 1. anyone may copy, modify, and distribute this software *(throw it up and down)*
