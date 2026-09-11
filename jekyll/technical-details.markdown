@@ -88,6 +88,10 @@ to build and start a local web server, run this command from the `jekyll` direct
 
 commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
 
+### ☎️ Twilio ☎️
+
+twilio is used for the interactive voice response feature. its interfaces include a softphone-style web app as well as a tradition phone number.
+
 ### 🏷️ Badges 🏷️
 
 here are various badges related to this project's code and its deployments
