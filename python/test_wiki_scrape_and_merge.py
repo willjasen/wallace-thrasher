@@ -38,6 +38,44 @@ class WikitextParsingTests(unittest.TestCase):
 """
         self.assertEqual(wiki.parse_transcript_from_wikitext(source), [("LPC", "Hello, there.")])
 
+    def test_parses_legacy_bold_lpc_and_plain_respondent_lines(self):
+        source = """{{Track_Info|title1 = Squaresville|length = 2:25}}
+''[ring]''
+
+Squaresville.
+
+<b>Hi.</b>
+
+Hello?
+
+'''Yes, I was calling about my overalls.'''
+==See also==
+"""
+        self.assertEqual(
+            wiki.parse_transcript_from_wikitext(source),
+            [(None, "[ring]"), (None, "Squaresville."), ("LPC", "Hi."),
+             (None, "Hello?"), ("LPC", "Yes, I was calling about my overalls.")],
+        )
+
+    def test_does_not_parse_arbitrary_article_prose_as_legacy_transcript(self):
+        self.assertEqual(wiki.parse_transcript_from_wikitext("A normal article paragraph."), [])
+
+    def test_reports_incomplete_legacy_transcript_status(self):
+        source = "{{Track_Info|title1=x}}{{TranscriptIncomplete}}\n\n'''Hello.'''"
+        rows = wiki.parse_transcript_from_wikitext(source)
+        self.assertEqual(wiki.transcript_page_status(source, rows)["scrape_status"], "transcript_incomplete")
+        self.assertEqual(wiki.transcript_page_status(source, rows)["parser"], "legacy_prose")
+
+    def test_transcript_needed_heading_is_not_scraped_as_dialogue(self):
+        source = "{{Track_Info|title1=x}}\n== Track transcription ==\n{{TranscriptNeeded}}"
+        rows = wiki.parse_transcript_from_wikitext(source)
+        self.assertEqual(rows, [])
+        self.assertEqual(wiki.transcript_page_status(source, rows)["scrape_status"], "transcript_needed")
+
+    def test_single_article_paragraph_is_not_a_legacy_transcript(self):
+        source = '{{Track_Info|title1=x}}\n"X" is a track released on an album.'
+        self.assertEqual(wiki.parse_transcript_from_wikitext(source), [])
+
     def test_cleans_external_link_labels(self):
         raw = "Call [https://example.test/wiki/Person Evonne Goolagong] today."
         self.assertEqual(wiki._clean_wiki_text(raw), "Call Evonne Goolagong today.")
@@ -61,6 +99,19 @@ class WikitextParsingTests(unittest.TestCase):
 
 
 class AlignmentTests(unittest.TestCase):
+    def test_splits_one_wiki_turn_across_timestamped_subtitles(self):
+        source = [(None, "Hey, uh, sir, I think you called the other day. What I do is set up an interview, okay?")]
+        entries = [
+            subtitle(1, "SPEAKER_02", "Hey, sir, I think you called the other day."),
+            subtitle(2, "SPEAKER_02", "What I do is set up an interview."),
+        ]
+        aligned = wiki.align_wiki_to_json(source, entries)
+        self.assertEqual(len(aligned), 2)
+        self.assertTrue(all(item["text_split_from_group"] for item in aligned))
+        self.assertEqual(aligned[0]["wiki_text"], "Hey, uh, sir, I think you called the other day.")
+        self.assertEqual(aligned[1]["wiki_text"], "What I do is set up an interview, okay?")
+        self.assertEqual(aligned[0]["wiki_group_text"], source[0][1])
+
     def test_grouped_fragments_use_their_combined_timestamp_span(self):
         source = [("LPC", "Hello there.", "00:00:01,000", "00:00:05,000")]
         entries = [

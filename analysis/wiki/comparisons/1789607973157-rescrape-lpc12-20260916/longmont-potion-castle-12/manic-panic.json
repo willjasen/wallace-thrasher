@@ -1,0 +1,1655 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-09-17T02:12:47.319029+00:00",
+  "snapshot": "1789607973157-rescrape-lpc12-20260916",
+  "album": "Longmont Potion Castle 12",
+  "album_slug": "longmont-potion-castle-12",
+  "track": "Manic Panic",
+  "track_slug": "manic-panic",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-12/manic-panic.json",
+  "json_sha256": "d77e6dcbf2c5ce6d78c4253d902376830f6d83eafecb26848894ff77016b2d02",
+  "wiki_title": "Manic Panic",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Manic_Panic",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 22,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 20.4427,
+          "observations": 22
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tannick, panic.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Tannick, panic.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hi, could I purchase a gift certificate?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi could I purchase a gift certificate?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        2
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, could I purchase a gift certificate?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You can't.",
+      "wiki_speaker": null,
+      "wiki_text": "You can!",
+      "wiki_group_text": "You can! What are you wanting a gift certificate for?",
+      "similarity": 0.875,
+      "group_similarity": 0.9808,
+      "match_type": "similar",
+      "json_group": [
+        3,
+        4
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        3
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "You can!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you wanting a gift certificate for?",
+      "wiki_speaker": null,
+      "wiki_text": "What are you wanting a gift certificate for?",
+      "wiki_group_text": "You can! What are you wanting a gift certificate for?",
+      "similarity": 1.0,
+      "group_similarity": 0.9808,
+      "match_type": "exact",
+      "json_group": [
+        3,
+        4
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        3
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "What are you wanting a gift certificate for?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "For $7,500.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uhh for $7500",
+      "wiki_group_text": null,
+      "similarity": 0.7619,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Uhh for $7500",
+      "text_action": "review"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "$7,500?",
+      "wiki_speaker": null,
+      "wiki_text": "$7500?!",
+      "wiki_group_text": "$7500?! Who is this??",
+      "similarity": 0.8889,
+      "group_similarity": 0.9697,
+      "match_type": "similar",
+      "json_group": [
+        6,
+        7
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "$7500?!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who is this?",
+      "wiki_speaker": null,
+      "wiki_text": "Who is this??",
+      "wiki_group_text": "$7500?! Who is this??",
+      "similarity": 1.0,
+      "group_similarity": 0.9697,
+      "match_type": "exact",
+      "json_group": [
+        6,
+        7
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Who is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My name's Sterling.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My name’s Sterling.",
+      "wiki_group_text": null,
+      "similarity": 0.9444,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        6
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My name’s Sterling.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your name's Sterling.",
+      "wiki_speaker": null,
+      "wiki_text": "Your name’s Sterling?",
+      "wiki_group_text": "Your name’s Sterling? Have you been in here before?",
+      "similarity": 0.95,
+      "group_similarity": 0.9796,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        7
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Your name’s Sterling?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Have you been in here before?",
+      "wiki_speaker": null,
+      "wiki_text": "Have you been in here before?",
+      "wiki_group_text": "Your name’s Sterling? Have you been in here before?",
+      "similarity": 1.0,
+      "group_similarity": 0.9796,
+      "match_type": "exact",
+      "json_group": [
+        9,
+        10
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        7
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Have you been in here before?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, it's not for me, ma'am.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No it’s not for me, ma’am.",
+      "wiki_group_text": "No it’s not for me, ma’am. It’s for another person. I wanted this other person to have haircuts for years and years and years...",
+      "similarity": 0.9167,
+      "group_similarity": 0.9754,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No it’s not for me, ma’am.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "It's for another person.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s for another person.",
+      "wiki_group_text": "No it’s not for me, ma’am. It’s for another person. I wanted this other person to have haircuts for years and years and years...",
+      "similarity": 0.9565,
+      "group_similarity": 0.9754,
+      "match_type": "similar",
+      "json_group": [
+        11,
+        12,
+        13
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s for another person.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I wanted this other person to have haircuts for years and years and years.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I wanted this other person to have haircuts for years and years and years...",
+      "wiki_group_text": "No it’s not for me, ma’am. It’s for another person. I wanted this other person to have haircuts for years and years and years...",
+      "similarity": 1.0,
+      "group_similarity": 0.9754,
+      "match_type": "exact",
+      "json_group": [
+        11,
+        12,
+        13
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I wanted this other person to have haircuts for years and years and years.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, okay.",
+      "wiki_speaker": null,
+      "wiki_text": "Oh okay",
+      "wiki_group_text": "Oh okay I’m. Well, y’know- You know what let me take your name and number because I don’t know if we can write one for that amount.",
+      "similarity": 1.0,
+      "group_similarity": 0.9244,
+      "match_type": "exact",
+      "json_group": [
+        14,
+        15,
+        16
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, okay.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, you know, let me take your name and number,",
+      "wiki_speaker": null,
+      "wiki_text": "I’m. Well, y’know- You know what let me take your name and number",
+      "wiki_group_text": "Oh okay I’m. Well, y’know- You know what let me take your name and number because I don’t know if we can write one for that amount.",
+      "similarity": 0.8519,
+      "group_similarity": 0.9244,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15,
+        16
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I’m. Well, y’know- You know what let me take your name and number",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "because I don't know if we can write one for that amount.",
+      "wiki_speaker": null,
+      "wiki_text": "because I don’t know if we can write one for that amount.",
+      "wiki_group_text": "Oh okay I’m. Well, y’know- You know what let me take your name and number because I don’t know if we can write one for that amount.",
+      "similarity": 0.9821,
+      "group_similarity": 0.9244,
+      "match_type": "similar",
+      "json_group": [
+        14,
+        15,
+        16
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "because I don’t know if we can write one for that amount.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I work at Hoover Dam,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well I work at uh- Hoover Dam.",
+      "wiki_group_text": "Well I work at uh- Hoover Dam. I was just gonna drive up’air and pick it up at your store.",
+      "similarity": 0.9434,
+      "group_similarity": 0.8743,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        10
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well I work at uh- Hoover Dam.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and so I was just going to drive up there and pick it up at your store.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I was just gonna drive up’air and pick it up at your store.",
+      "wiki_group_text": "Well I work at uh- Hoover Dam. I was just gonna drive up’air and pick it up at your store.",
+      "similarity": 0.8438,
+      "group_similarity": 0.8743,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        10
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was just gonna drive up’air and pick it up at your store.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, and has the person that you're buying this gift certificate for,",
+      "wiki_speaker": null,
+      "wiki_text": "Uh huh- okay and has the person that you’re buying this gift certificate for,",
+      "wiki_group_text": "Uh huh- okay and has the person that you’re buying this gift certificate for, for $7500, that’s what you said- have they been in here before?",
+      "similarity": 0.9371,
+      "group_similarity": 0.9339,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20,
+        21
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Uh huh- okay and has the person that you’re buying this gift certificate for,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "for $7,500?",
+      "wiki_speaker": null,
+      "wiki_text": "for $7500, that’s",
+      "wiki_group_text": "Uh huh- okay and has the person that you’re buying this gift certificate for, for $7500, that’s what you said- have they been in here before?",
+      "similarity": 0.6667,
+      "group_similarity": 0.9339,
+      "match_type": "similar",
+      "json_group": [
+        19,
+        20,
+        21
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "for $7500, that’s",
+      "text_action": "review"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "what you said? Have they been in here before?",
+      "wiki_speaker": null,
+      "wiki_text": "what you said- have they been in here before?",
+      "wiki_group_text": "Uh huh- okay and has the person that you’re buying this gift certificate for, for $7500, that’s what you said- have they been in here before?",
+      "similarity": 1.0,
+      "group_similarity": 0.9339,
+      "match_type": "exact",
+      "json_group": [
+        19,
+        20,
+        21
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "what you said? Have they been in here before?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, this person also works at the Hoover Dam.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well this person also works at the Hoover dam.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        12
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well, this person also works at the Hoover Dam.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, well, then how would they be able to get over here to get a haircut?",
+      "wiki_speaker": null,
+      "wiki_text": "Oh well how will they be able to get over here to get a haircut?",
+      "wiki_group_text": null,
+      "similarity": 0.9242,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        13
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Oh well how will they be able to get over here to get a haircut?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "When I get back to the Hoover Dam to go back to work, I'd give it to the person then,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "When they go back to the Hoover dam to go back to work I’d give it to the person then,",
+      "wiki_group_text": "When they go back to the Hoover dam to go back to work I’d give it to the person then, and then that person could bring it to you and just drive up’air and use it- FOR YEARS AND YEARS.",
+      "similarity": 0.9405,
+      "group_similarity": 0.9301,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        14
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "When they go back to the Hoover dam to go back to work I’d give it to the person then,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "and then that person could bring it to you and just drive up there and use it for years and years and years.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "and then that person could bring it to you and just drive up’air and use it- FOR YEARS AND YEARS.",
+      "wiki_group_text": "When they go back to the Hoover dam to go back to work I’d give it to the person then, and then that person could bring it to you and just drive up’air and use it- FOR YEARS AND YEARS.",
+      "similarity": 0.9208,
+      "group_similarity": 0.9301,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        14
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "and then that person could bring it to you and just drive up’air and use it- FOR YEARS AND YEARS.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you know, we're not, we're not too hip on that. So sorry.",
+      "wiki_speaker": null,
+      "wiki_text": "You know- we’re not, we’re not too hip on that so sorry-",
+      "wiki_group_text": null,
+      "similarity": 0.9189,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "You know- we’re not, we’re not too hip on that so sorry-",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Oh, so you guys don't cut hair up there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "OHHHH... so you guys don’t cut hair up’air?",
+      "wiki_group_text": null,
+      "similarity": 0.8571,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        16
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "OHHHH... so you guys don’t cut hair up’air?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi, Madic County.",
+      "wiki_speaker": null,
+      "wiki_text": "Hi manic panic. ( in background) YOU HAVE REACHED",
+      "wiki_group_text": "Hi manic panic. ( in background) YOU HAVE REACHED THE MANIC PANIC HEADQUARTERS-",
+      "similarity": 0.4333,
+      "group_similarity": 0.6897,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Hi manic panic. ( in background) YOU HAVE REACHED",
+      "text_action": "review"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "The Manicanic Headquarters.",
+      "wiki_speaker": null,
+      "wiki_text": "THE MANIC PANIC HEADQUARTERS-",
+      "wiki_group_text": "Hi manic panic. ( in background) YOU HAVE REACHED THE MANIC PANIC HEADQUARTERS-",
+      "similarity": 0.963,
+      "group_similarity": 0.6897,
+      "match_type": "similar",
+      "json_group": [
+        28,
+        29
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "THE MANIC PANIC HEADQUARTERS-",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I wanted to get a haircut.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I wanted to get uh, a haircut.",
+      "wiki_group_text": "I wanted to get uh, a haircut. My name’s Sterling.",
+      "similarity": 0.9434,
+      "group_similarity": 0.9451,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        20
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I wanted to get uh, a haircut.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "My name's Sterling.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My name’s Sterling.",
+      "wiki_group_text": "I wanted to get uh, a haircut. My name’s Sterling.",
+      "similarity": 0.9444,
+      "group_similarity": 0.9451,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        20
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My name’s Sterling.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "None",
+      "json_text": "Yeah?",
+      "wiki_speaker": null,
+      "wiki_text": "Yeah? When?",
+      "wiki_group_text": null,
+      "similarity": 0.6154,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Yeah? When?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I wanted to schedule it for November 5th and recurring.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I wanted to schedule it for November 5th, and recurring.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        22
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I wanted to schedule it for November 5th and recurring.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "None",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": "Okay- s, s-",
+      "wiki_group_text": null,
+      "similarity": 0.6667,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        23
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Okay- s, s-",
+      "text_action": "review"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So in other words, I'd like to get my haircut on November 5th for years and years and years.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "In other words I’d like to get my haircut in November 5th for YEARS AND YEARS YEARS..",
+      "wiki_group_text": null,
+      "similarity": 0.9364,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        24
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "In other words I’d like to get my haircut in November 5th for YEARS AND YEARS YEARS..",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Wow.",
+      "wiki_speaker": null,
+      "wiki_text": "Wow!",
+      "wiki_group_text": "Wow! Well I guess we’ll just go one at a time. cause’ who knows if I’ll- I’ll be here in a year. Mentally. *laughing* I guess I’ll go one month at a time or one haircut at a time.",
+      "similarity": 1.0,
+      "group_similarity": 0.8474,
+      "match_type": "exact",
+      "json_group": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Wow.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, I guess we'll just go one at a time, because who knows if I'll be here in a year.",
+      "wiki_speaker": null,
+      "wiki_text": "Well I guess we’ll just go one at a time. cause’ who knows if I’ll- I’ll be here in a year.",
+      "wiki_group_text": "Wow! Well I guess we’ll just go one at a time. cause’ who knows if I’ll- I’ll be here in a year. Mentally. *laughing* I guess I’ll go one month at a time or one haircut at a time.",
+      "similarity": 0.9357,
+      "group_similarity": 0.8474,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Well I guess we’ll just go one at a time. cause’ who knows if I’ll- I’ll be here in a year.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You know?",
+      "wiki_speaker": null,
+      "wiki_text": "Mentally. *laughing* I guess",
+      "wiki_group_text": "Wow! Well I guess we’ll just go one at a time. cause’ who knows if I’ll- I’ll be here in a year. Mentally. *laughing* I guess I’ll go one month at a time or one haircut at a time.",
+      "similarity": 0.1818,
+      "group_similarity": 0.8474,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You know?",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I used to go one month at time or one haircut at time.",
+      "wiki_speaker": null,
+      "wiki_text": "I’ll go one month at a time or one haircut at a time.",
+      "wiki_group_text": "Wow! Well I guess we’ll just go one at a time. cause’ who knows if I’ll- I’ll be here in a year. Mentally. *laughing* I guess I’ll go one month at a time or one haircut at a time.",
+      "similarity": 0.8762,
+      "group_similarity": 0.8474,
+      "match_type": "similar",
+      "json_group": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I’ll go one month at a time or one haircut at a time.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I'd like to be on the books on a recurring basis for years and years and year.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No I’d like to be on the books on a recurring basis for YEARS AND YEARS AND YEARS...",
+      "wiki_group_text": null,
+      "similarity": 0.9814,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        26
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No I’d like to be on the books on a recurring basis for YEARS AND YEARS AND YEARS...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, well, that'll be good, but every time you come in, we'll rebook you.",
+      "wiki_speaker": null,
+      "wiki_text": "Okay well that’ll be good!- but every time you come in we’ll re-book you.",
+      "wiki_group_text": null,
+      "similarity": 0.964,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        27
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Okay well that’ll be good!- but every time you come in we’ll re-book you.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "So just put it down on your calendar and your outlook.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So just put it down on your calendar. And your Outlook.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        28
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So just put it down on your calendar and your outlook.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay. What's your preferred time?",
+      "wiki_speaker": null,
+      "wiki_text": "Okay- uh. What’s your- What’s your preferred time?",
+      "wiki_group_text": null,
+      "similarity": 0.7792,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        29
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Okay- uh. What’s your- What’s your preferred time?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, I've seen Brian's Sets are live in concert three times, so I think I know a thing or two about hair.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey- I,I’ve seen Brian Setzer live in concert 3 times so I think I know a thing or two about hair.",
+      "wiki_group_text": null,
+      "similarity": 0.9091,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        30
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey- I,I’ve seen Brian Setzer live in concert 3 times so I think I know a thing or two about hair.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, man, yeah you did, because he's the best.",
+      "wiki_speaker": null,
+      "wiki_text": "Oh man, yeah you do because he’s the best!",
+      "wiki_group_text": null,
+      "similarity": 0.9383,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        31
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Oh man, yeah you do because he’s the best!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I rub my scalp. I use gel. I got gel.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I rub my scalp. I use gel. I got gels",
+      "wiki_group_text": "I rub my scalp. I use gel. I got gels that you wouldn’t even believe.",
+      "similarity": 0.9855,
+      "group_similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I rub my scalp. I use gel. I got gels",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "jails that you wouldn't even believe.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "that you wouldn’t even believe.",
+      "wiki_group_text": "I rub my scalp. I use gel. I got gels that you wouldn’t even believe.",
+      "similarity": 0.8788,
+      "group_similarity": 0.9489,
+      "match_type": "similar",
+      "json_group": [
+        46,
+        47
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "that you wouldn’t even believe.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right. Well, what time do you want to come in, Sterling?",
+      "wiki_speaker": null,
+      "wiki_text": "WELL WHAT TIME DO YOU WANT TO COME IN, STERLING?",
+      "wiki_group_text": null,
+      "similarity": 0.902,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        33
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "WELL WHAT TIME DO YOU WANT TO COME IN, STERLING?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I want to come in year after, year after year.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I want to come in YEAR AFTER YEAR AFTER YEAR.........",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        34
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I want to come in year after, year after year.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "None",
+      "json_text": "Well, what time?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Well, what time?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Well, I'm in a bowling alley right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well I’m in a bowling alley right now-",
+      "wiki_group_text": null,
+      "similarity": 0.973,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well I’m in a bowling alley right now-",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "None",
+      "json_text": "I'm in a bowling alley right in the evening.",
+      "wiki_speaker": null,
+      "wiki_text": "IN THE MORNING OR AT- THE EVENING?",
+      "wiki_group_text": null,
+      "similarity": 0.6133,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        37
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "IN THE MORNING OR AT- THE EVENING?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm in a bowling alley right now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m in a bowling alley right now.",
+      "wiki_group_text": null,
+      "similarity": 0.9688,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        38
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m in a bowling alley right now.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, call me back.",
+      "wiki_speaker": null,
+      "wiki_text": "Okay. Call me back.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        39
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Okay, call me back.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "What's your name?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Uh whatcha name?",
+      "wiki_group_text": null,
+      "similarity": 0.5806,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        40
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Uh whatcha name?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, call me back.",
+      "wiki_speaker": null,
+      "wiki_text": "Okay call me back",
+      "wiki_group_text": "Okay call me back it’s Manic Panic. Um. Call me back when you can talk a little bit longer.",
+      "similarity": 1.0,
+      "group_similarity": 0.8718,
+      "match_type": "exact",
+      "json_group": [
+        56,
+        57,
+        58
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Okay, call me back.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's Manick Panic.",
+      "wiki_speaker": null,
+      "wiki_text": "it’s Manic Panic.",
+      "wiki_group_text": "Okay call me back it’s Manic Panic. Um. Call me back when you can talk a little bit longer.",
+      "similarity": 0.9091,
+      "group_similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "it’s Manic Panic.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And call me back when you can call me back and talk a little bit longer.",
+      "wiki_speaker": null,
+      "wiki_text": "Um. Call me back when you can talk a little bit longer.",
+      "wiki_group_text": "Okay call me back it’s Manic Panic. Um. Call me back when you can talk a little bit longer.",
+      "similarity": 0.8226,
+      "group_similarity": 0.8718,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57,
+        58
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Um. Call me back when you can talk a little bit longer.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Are you Hispanic, you said?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Are you Hispanic you said?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Are you Hispanic, you said?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": "No.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        43
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "No.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You just said you're Hispanic.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You just said you’re Hispanic I don't-",
+      "wiki_group_text": null,
+      "similarity": 0.8485,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You just said you’re Hispanic I don't-",
+      "text_action": "review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have another call coming down on the other line.",
+      "wiki_speaker": null,
+      "wiki_text": "I have another call coming in- I don’t have to- uh.",
+      "wiki_group_text": "I have another call coming in- I don’t have to- uh. Just call me back when you can.",
+      "similarity": 0.7835,
+      "group_similarity": 0.814,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        45
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "I have another call coming in- I don’t have to- uh.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm going to just call me back when you can.",
+      "wiki_speaker": null,
+      "wiki_text": "Just call me back when you can.",
+      "wiki_group_text": "I have another call coming in- I don’t have to- uh. Just call me back when you can.",
+      "similarity": 0.8219,
+      "group_similarity": 0.814,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        45
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Just call me back when you can.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm going to be calling back for years and years and years.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m gonna be calling back for years and years and years....",
+      "wiki_group_text": null,
+      "similarity": 0.9204,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        46
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m gonna be calling back for years and years and years....",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay. Sounds good.",
+      "wiki_speaker": null,
+      "wiki_text": "Okay. Sounds good.",
+      "wiki_group_text": "Okay. Sounds good. Alright Sterling, I’ll talk to you later.",
+      "similarity": 1.0,
+      "group_similarity": 0.9649,
+      "match_type": "exact",
+      "json_group": [
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        47
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Okay. Sounds good.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right, Sterling. I'll talk to you later.",
+      "wiki_speaker": null,
+      "wiki_text": "Alright Sterling, I’ll talk to you later.",
+      "wiki_group_text": "Okay. Sounds good. Alright Sterling, I’ll talk to you later.",
+      "similarity": 0.95,
+      "group_similarity": 0.9649,
+      "match_type": "similar",
+      "json_group": [
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        47
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_01",
+      "speaker_action": "keep",
+      "proposed_text": "Alright Sterling, I’ll talk to you later.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "You're going to talk to my tushy.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Talk to my tushie.",
+      "wiki_group_text": null,
+      "similarity": 0.6122,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        48
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Talk to my tushie.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "None",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": "Okay.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        49
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Okay.",
+      "text_action": "keep"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 68,
+    "total_wiki_lines": 49,
+    "matched_wiki_lines": 45,
+    "unmatched_wiki_lines": 4,
+    "matched": 66,
+    "speakers_to_map": 1,
+    "text_auto_correct": 33,
+    "text_review": 14,
+    "text_group_review": 0,
+    "unmatched_json": 2
+  }
+}

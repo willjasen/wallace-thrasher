@@ -1,0 +1,2242 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-09-17T02:12:27.316975+00:00",
+  "snapshot": "1789607973156-rescrape-lpc11-20260916",
+  "album": "Longmont Potion Castle 11",
+  "album_slug": "longmont-potion-castle-11",
+  "track": "Judge Joseph Wapner",
+  "track_slug": "judge-joseph-wapner",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-11/judge-joseph-wapner.json",
+  "json_sha256": "08ff98d626c5a38c4380dcb82374cb6e32bebd10a7a6c8c3e4eee0ffe8a8fdb9",
+  "wiki_title": "Judge Joseph Wapner",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Judge_Joseph_Wapner",
+  "speaker_mapping": {
+    "SPEAKER_01": "LPC",
+    "SPEAKER_02": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 7.5962,
+          "observations": 8
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes, we've got Judge Joseph Wapner on the line, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yes we've got Al- Judge Joeseph Wapner on the line sir.",
+      "wiki_group_text": null,
+      "similarity": 0.9608,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        3
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yes we've got Al- Judge Joeseph Wapner on the line sir.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner)",
+      "wiki_group_text": "(Mickey Wapner) Are you looking for Judge Wapner?",
+      "similarity": 0.25,
+      "group_similarity": 0.8293,
+      "match_type": "similar",
+      "json_group": [
+        8,
+        9
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Yes.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Are you looking for Judge Wapner?",
+      "wiki_speaker": null,
+      "wiki_text": "Are you looking for Judge Wapner?",
+      "wiki_group_text": "(Mickey Wapner) Are you looking for Judge Wapner?",
+      "similarity": 1.0,
+      "group_similarity": 0.8293,
+      "match_type": "exact",
+      "json_group": [
+        8,
+        9
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Are you looking for Judge Wapner?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "Alex Trebek",
+      "json_text": "No, I wasn't.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Uhh no i wasn't, Uhh",
+      "wiki_group_text": "(Alex Trebek) Uhh no i wasn't, Uhh my phone just rang and I picked it up and I said \"Hello\", and I say hello again. Who is this?",
+      "similarity": 0.5238,
+      "group_similarity": 0.8235,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Uhh no i wasn't, Uhh",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "Alex Trebek",
+      "json_text": "My phone just rang, and I picked it up, and I said hello.",
+      "wiki_speaker": null,
+      "wiki_text": "my phone just rang and I picked it up and I said \"Hello\",",
+      "wiki_group_text": "(Alex Trebek) Uhh no i wasn't, Uhh my phone just rang and I picked it up and I said \"Hello\", and I say hello again. Who is this?",
+      "similarity": 1.0,
+      "group_similarity": 0.8235,
+      "match_type": "exact",
+      "json_group": [
+        10,
+        11,
+        12
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "My phone just rang, and I picked it up, and I said hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I say hello again.",
+      "wiki_speaker": null,
+      "wiki_text": "and I say hello again. Who is this?",
+      "wiki_group_text": "(Alex Trebek) Uhh no i wasn't, Uhh my phone just rang and I picked it up and I said \"Hello\", and I say hello again. Who is this?",
+      "similarity": 0.68,
+      "group_similarity": 0.8235,
+      "match_type": "similar",
+      "json_group": [
+        10,
+        11,
+        12
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "and I say hello again. Who is this?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Hello, we get it.",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner) Hello again,",
+      "wiki_group_text": "(Mickey Wapner) Hello again, This is Mickey Wapner",
+      "similarity": 0.4,
+      "group_similarity": 0.7143,
+      "match_type": "similar",
+      "json_group": [
+        13,
+        14
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        10
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Mickey Wapner) Hello again,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Mickey Wapner.",
+      "wiki_speaker": null,
+      "wiki_text": "This is Mickey Wapner",
+      "wiki_group_text": "(Mickey Wapner) Hello again, This is Mickey Wapner",
+      "similarity": 1.0,
+      "group_similarity": 0.7143,
+      "match_type": "exact",
+      "json_group": [
+        13,
+        14
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        10
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "This is Mickey Wapner.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Oh, hi.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Oh hi, uhh,",
+      "wiki_group_text": "(Alex Trebek) Oh hi, uhh, did you make a phone call Mickey?",
+      "similarity": 0.3846,
+      "group_similarity": 0.8261,
+      "match_type": "similar",
+      "json_group": [
+        15,
+        16
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Oh, hi.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Did you make a phone call, Mickey?",
+      "wiki_speaker": null,
+      "wiki_text": "did you make a phone call Mickey?",
+      "wiki_group_text": "(Alex Trebek) Oh hi, uhh, did you make a phone call Mickey?",
+      "similarity": 1.0,
+      "group_similarity": 0.8261,
+      "match_type": "exact",
+      "json_group": [
+        15,
+        16
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Did you make a phone call, Mickey?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Your phone rang?",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Your phone rang?",
+      "wiki_group_text": null,
+      "similarity": 0.7143,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        13
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Your phone rang?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And you think somebody's calling you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "And you think somebody's calling you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Well, this is Alex Trebek, the host of Jeopardy, and my phone just rang.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Well, this is Alex Trebek, the host of Jeopardy, and my phone just rang.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And what I've discovered in recent months is that there is a group of individuals,",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals",
+      "wiki_group_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals or maybe just one individual who has, uhh, developed a technique to get phones in different parts of America ringing at the same time without them having made a call and uhh just messing with us and with the system. So it looks like this is another occasion of that, I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "similarity": 0.5704,
+      "group_similarity": 0.8147,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals",
+      "text_action": "review"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "Alex Trebek",
+      "json_text": "or maybe just one individual, who has developed a technique.",
+      "wiki_speaker": null,
+      "wiki_text": "or maybe just one individual who has, uhh, developed a technique",
+      "wiki_group_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals or maybe just one individual who has, uhh, developed a technique to get phones in different parts of America ringing at the same time without them having made a call and uhh just messing with us and with the system. So it looks like this is another occasion of that, I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "similarity": 0.9667,
+      "group_similarity": 0.8147,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "or maybe just one individual who has, uhh, developed a technique",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "Alex Trebek",
+      "json_text": "to get phones in different parts of America ringing at the same time without them having",
+      "wiki_speaker": null,
+      "wiki_text": "to get phones in different parts of America ringing at the same time without them having",
+      "wiki_group_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals or maybe just one individual who has, uhh, developed a technique to get phones in different parts of America ringing at the same time without them having made a call and uhh just messing with us and with the system. So it looks like this is another occasion of that, I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "similarity": 1.0,
+      "group_similarity": 0.8147,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "to get phones in different parts of America ringing at the same time without them having",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "Alex Trebek",
+      "json_text": "made a call and just messing with us and with the system.",
+      "wiki_speaker": null,
+      "wiki_text": "made a call and uhh just messing with us and with the system.",
+      "wiki_group_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals or maybe just one individual who has, uhh, developed a technique to get phones in different parts of America ringing at the same time without them having made a call and uhh just messing with us and with the system. So it looks like this is another occasion of that, I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "similarity": 0.9655,
+      "group_similarity": 0.8147,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "made a call and uhh just messing with us and with the system.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "Alex Trebek",
+      "json_text": "So it looks like this is another occasion of that.",
+      "wiki_speaker": null,
+      "wiki_text": "So it looks like this is another occasion of that,",
+      "wiki_group_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals or maybe just one individual who has, uhh, developed a technique to get phones in different parts of America ringing at the same time without them having made a call and uhh just messing with us and with the system. So it looks like this is another occasion of that, I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "similarity": 1.0,
+      "group_similarity": 0.8147,
+      "match_type": "exact",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "So it looks like this is another occasion of that.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I've had calls from butchers in Chicago telling me they were confirming my order, and I never made",
+      "wiki_speaker": null,
+      "wiki_text": "I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "wiki_group_text": "(Alex Trebek) And you think somebodies calling you, well, this is Alex Trebek, the host of Jeopardy, and my phone just rang and what I've discovered, uhh, in recent months is that there is a group of individuals or maybe just one individual who has, uhh, developed a technique to get phones in different parts of America ringing at the same time without them having made a call and uhh just messing with us and with the system. So it looks like this is another occasion of that, I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "similarity": 0.7413,
+      "group_similarity": 0.8147,
+      "match_type": "similar",
+      "json_group": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "I've had calls from butchers in Chigago telling me they were confirming my order (laughing from Mickey) and I never made an order of course. Whe-Where are you Mickey?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "Alex Trebek",
+      "json_text": "an order, of course.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "an order, of course.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "Alex Trebek",
+      "json_text": "So where are you, Mickey?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "So where are you, Mickey?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm at home in Century City.",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner) I'm at home but in Century City, California",
+      "wiki_group_text": null,
+      "similarity": 0.6506,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        16
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "(Mickey Wapner) I'm at home but in Century City, California",
+      "text_action": "review"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Century City.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Century City.",
+      "wiki_group_text": "(Alex Trebek) Century City. Oh ok well i'm in Studio City, California.",
+      "similarity": 0.6667,
+      "group_similarity": 0.8833,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "(Alex Trebek) Century City.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Oh, okay. Well, I'm in Studio City, California.",
+      "wiki_speaker": null,
+      "wiki_text": "Oh ok well i'm in Studio City, California.",
+      "wiki_group_text": "(Alex Trebek) Century City. Oh ok well i'm in Studio City, California.",
+      "similarity": 0.9756,
+      "group_similarity": 0.8833,
+      "match_type": "similar",
+      "json_group": [
+        31,
+        32
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Oh ok well i'm in Studio City, California.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) And uhh",
+      "wiki_group_text": "(Alex Trebek) And uhh I-I don't know, somebodies got a weird sense of humor but that's alright, there are yo-yo's out there in uh every part of our country and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "similarity": 0.3571,
+      "group_similarity": 0.9102,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "All right.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And I don't know.",
+      "wiki_speaker": null,
+      "wiki_text": "I-I don't know,",
+      "wiki_group_text": "(Alex Trebek) And uhh I-I don't know, somebodies got a weird sense of humor but that's alright, there are yo-yo's out there in uh every part of our country and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "similarity": 0.8667,
+      "group_similarity": 0.9102,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "I-I don't know,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Somebody's got a weird sense of humor, but that's all right.",
+      "wiki_speaker": null,
+      "wiki_text": "somebodies got a weird sense of humor but that's alright,",
+      "wiki_group_text": "(Alex Trebek) And uhh I-I don't know, somebodies got a weird sense of humor but that's alright, there are yo-yo's out there in uh every part of our country and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "similarity": 0.9474,
+      "group_similarity": 0.9102,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "somebodies got a weird sense of humor but that's alright,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "Alex Trebek",
+      "json_text": "There are yo-yo's out there in every part of our country.",
+      "wiki_speaker": null,
+      "wiki_text": "there are yo-yo's out there in uh every part of our country",
+      "wiki_group_text": "(Alex Trebek) And uhh I-I don't know, somebodies got a weird sense of humor but that's alright, there are yo-yo's out there in uh every part of our country and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "similarity": 0.9739,
+      "group_similarity": 0.9102,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "there are yo-yo's out there in uh every part of our country",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And if we can ever catch us, sons of bitches, I would love to prosecute them and have somebody like Joe rule on it and just send them the slammer for a long time.",
+      "wiki_speaker": null,
+      "wiki_text": "and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "wiki_group_text": "(Alex Trebek) And uhh I-I don't know, somebodies got a weird sense of humor but that's alright, there are yo-yo's out there in uh every part of our country and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "similarity": 0.9118,
+      "group_similarity": 0.9102,
+      "match_type": "similar",
+      "json_group": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "and if we can ever catch the sons of bitches (Mickey laughing) I would love to prosecute them and have somebody like Joe uh rule on it and just send em' to the slammer for a long time.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Let's hope so.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Let's hope so.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Well, I'm sorry you got disturbed.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed",
+      "wiki_group_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed now I got disturbed (Thats uh-) but I-I have one up on you (Yeah) in that I know because this has happened a number of times before, I know what they're doing and you don't",
+      "similarity": 0.7901,
+      "group_similarity": 0.9146,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed",
+      "text_action": "review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "Alex Trebek",
+      "json_text": "No, I got disturbed.",
+      "wiki_speaker": null,
+      "wiki_text": "now I got disturbed (Thats uh-)",
+      "wiki_group_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed now I got disturbed (Thats uh-) but I-I have one up on you (Yeah) in that I know because this has happened a number of times before, I know what they're doing and you don't",
+      "similarity": 0.7826,
+      "group_similarity": 0.9146,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "now I got disturbed (Thats uh-)",
+      "text_action": "review"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "Alex Trebek",
+      "json_text": "But I have one up on you in that I know because this has happened a number of times before.",
+      "wiki_speaker": null,
+      "wiki_text": "but I-I have one up on you (Yeah) in that I know because this has happened a number of times before,",
+      "wiki_group_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed now I got disturbed (Thats uh-) but I-I have one up on you (Yeah) in that I know because this has happened a number of times before, I know what they're doing and you don't",
+      "similarity": 0.9626,
+      "group_similarity": 0.9146,
+      "match_type": "similar",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "but I-I have one up on you (Yeah) in that I know because this has happened a number of times before,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I know what they're doing.",
+      "wiki_speaker": null,
+      "wiki_text": "I know what they're doing",
+      "wiki_group_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed now I got disturbed (Thats uh-) but I-I have one up on you (Yeah) in that I know because this has happened a number of times before, I know what they're doing and you don't",
+      "similarity": 1.0,
+      "group_similarity": 0.9146,
+      "match_type": "exact",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "I know what they're doing.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And you don't.",
+      "wiki_speaker": null,
+      "wiki_text": "and you don't",
+      "wiki_group_text": "(Alex Trebek) Yeah, well i'm sorry you got disturbed now I got disturbed (Thats uh-) but I-I have one up on you (Yeah) in that I know because this has happened a number of times before, I know what they're doing and you don't",
+      "similarity": 1.0,
+      "group_similarity": 0.9146,
+      "match_type": "exact",
+      "json_group": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "And you don't.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And if you know what they're doing, if you have another minute, what are they doing, what are they doing?",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner) And if you know what they're doing, if you have another minute (Yeah), what are they doing?",
+      "wiki_group_text": null,
+      "similarity": 0.8259,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        22
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "(Mickey Wapner) And if you know what they're doing, if you have another minute (Yeah), what are they doing?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are they doing?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What are they doing?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Well, they have a method of calling two different people at the same time.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Well, they have a method of calling 2 different people at the same time",
+      "wiki_group_text": "(Alex Trebek) Well, they have a method of calling 2 different people at the same time and then we both get on the phone and we wonder well",
+      "similarity": 0.8961,
+      "group_similarity": 0.9385,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        23
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Well, they have a method of calling 2 different people at the same time",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And then we both get on the phone and we wonder, well.",
+      "wiki_speaker": null,
+      "wiki_text": "and then we both get on the phone and we wonder well",
+      "wiki_group_text": "(Alex Trebek) Well, they have a method of calling 2 different people at the same time and then we both get on the phone and we wonder well",
+      "similarity": 1.0,
+      "group_similarity": 0.9385,
+      "match_type": "exact",
+      "json_group": [
+        47,
+        48
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        23
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "And then we both get on the phone and we wonder, well.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Who placed the call?",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner) Who placed the call?",
+      "wiki_group_text": null,
+      "similarity": 0.7308,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        24
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Mickey Wapner) Who placed the call?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Yeah, who just called me?",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Yeah w-who just called me",
+      "wiki_group_text": "(Alex Trebek) Yeah w-who just called me and you say well who called me and (Mickey Laughing) neither one of us called eachother, I had José Canseco, the former baseball star uhh, talk to me not too long ago and he said \"oh well yeah Alex what-uh-what do you want?\" y'know so, Somebody out there's screwing with us.",
+      "similarity": 0.7667,
+      "group_similarity": 0.8921,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Yeah w-who just called me",
+      "text_action": "review"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And you say, well, who called me?",
+      "wiki_speaker": null,
+      "wiki_text": "and you say well who called me",
+      "wiki_group_text": "(Alex Trebek) Yeah w-who just called me and you say well who called me and (Mickey Laughing) neither one of us called eachother, I had José Canseco, the former baseball star uhh, talk to me not too long ago and he said \"oh well yeah Alex what-uh-what do you want?\" y'know so, Somebody out there's screwing with us.",
+      "similarity": 1.0,
+      "group_similarity": 0.8921,
+      "match_type": "exact",
+      "json_group": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "And you say, well, who called me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And neither one of us called each other.",
+      "wiki_speaker": null,
+      "wiki_text": "and (Mickey Laughing) neither one of us called eachother,",
+      "wiki_group_text": "(Alex Trebek) Yeah w-who just called me and you say well who called me and (Mickey Laughing) neither one of us called eachother, I had José Canseco, the former baseball star uhh, talk to me not too long ago and he said \"oh well yeah Alex what-uh-what do you want?\" y'know so, Somebody out there's screwing with us.",
+      "similarity": 0.8172,
+      "group_similarity": 0.8921,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "and (Mickey Laughing) neither one of us called eachother,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I had Jose Canseco, the former baseball star, talked to me not too long ago.",
+      "wiki_speaker": null,
+      "wiki_text": "I had José Canseco, the former baseball star uhh, talk to me not too long ago",
+      "wiki_group_text": "(Alex Trebek) Yeah w-who just called me and you say well who called me and (Mickey Laughing) neither one of us called eachother, I had José Canseco, the former baseball star uhh, talk to me not too long ago and he said \"oh well yeah Alex what-uh-what do you want?\" y'know so, Somebody out there's screwing with us.",
+      "similarity": 0.9459,
+      "group_similarity": 0.8921,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "I had José Canseco, the former baseball star uhh, talk to me not too long ago",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "Alex Trebek",
+      "json_text": "And he said, well, yeah, Alex, what do you want?",
+      "wiki_speaker": null,
+      "wiki_text": "and he said \"oh well yeah Alex what-uh-what do you want?\" y'know",
+      "wiki_group_text": "(Alex Trebek) Yeah w-who just called me and you say well who called me and (Mickey Laughing) neither one of us called eachother, I had José Canseco, the former baseball star uhh, talk to me not too long ago and he said \"oh well yeah Alex what-uh-what do you want?\" y'know so, Somebody out there's screwing with us.",
+      "similarity": 0.8269,
+      "group_similarity": 0.8921,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "and he said \"oh well yeah Alex what-uh-what do you want?\" y'know",
+      "text_action": "review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "Alex Trebek",
+      "json_text": "So somebody out there is screwing with us?",
+      "wiki_speaker": null,
+      "wiki_text": "so, Somebody out there's screwing with us.",
+      "wiki_group_text": "(Alex Trebek) Yeah w-who just called me and you say well who called me and (Mickey Laughing) neither one of us called eachother, I had José Canseco, the former baseball star uhh, talk to me not too long ago and he said \"oh well yeah Alex what-uh-what do you want?\" y'know so, Somebody out there's screwing with us.",
+      "similarity": 0.963,
+      "group_similarity": 0.8921,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "so, Somebody out there's screwing with us.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I think so.",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner) I think",
+      "wiki_group_text": "(Mickey Wapner) I think so.",
+      "similarity": 0.4516,
+      "group_similarity": 0.5128,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        26
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Mickey Wapner) I think",
+      "text_action": "review"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": "so.",
+      "wiki_group_text": "(Mickey Wapner) I think so.",
+      "similarity": 0.3333,
+      "group_similarity": 0.5128,
+      "match_type": "similar",
+      "json_group": [
+        56,
+        57
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        26
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Okay.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Well, I'm sorry.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Ok, well i'm sorry",
+      "wiki_group_text": "(Alex Trebek) Ok, well i'm sorry we were both disturbed",
+      "similarity": 0.6512,
+      "group_similarity": 0.8315,
+      "match_type": "similar",
+      "json_group": [
+        58,
+        59
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        27
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Ok, well i'm sorry",
+      "text_action": "review"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "Alex Trebek",
+      "json_text": "we were both disturbed.",
+      "wiki_speaker": null,
+      "wiki_text": "we were both disturbed",
+      "wiki_group_text": "(Alex Trebek) Ok, well i'm sorry we were both disturbed",
+      "similarity": 1.0,
+      "group_similarity": 0.8315,
+      "match_type": "exact",
+      "json_group": [
+        58,
+        59
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        27
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "we were both disturbed.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "Alex Trebek",
+      "json_text": "I'm sorry, too.",
+      "wiki_speaker": null,
+      "wiki_text": "(Mickey Wapner) I'm sorry too,",
+      "wiki_group_text": "(Mickey Wapner) I'm sorry too, thank you very much",
+      "similarity": 0.65,
+      "group_similarity": 0.825,
+      "match_type": "similar",
+      "json_group": [
+        60,
+        61
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        28
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Mickey Wapner) I'm sorry too,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Thank you very much.",
+      "wiki_speaker": null,
+      "wiki_text": "thank you very much",
+      "wiki_group_text": "(Mickey Wapner) I'm sorry too, thank you very much",
+      "similarity": 1.0,
+      "group_similarity": 0.825,
+      "match_type": "exact",
+      "json_group": [
+        60,
+        61
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        28
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Thank you very much.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "Alex Trebek",
+      "json_text": "But if you get this kind of call again, at least you'll be one-up.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) But if you get this kind of call again, atleast you'll be one up,",
+      "wiki_group_text": "(Alex Trebek) But if you get this kind of call again, atleast you'll be one up, you'll know",
+      "similarity": 0.9065,
+      "group_similarity": 0.9202,
+      "match_type": "similar",
+      "json_group": [
+        62,
+        63
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        29
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) But if you get this kind of call again, atleast you'll be one up,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "Alex Trebek",
+      "json_text": "You'll know.",
+      "wiki_speaker": null,
+      "wiki_text": "you'll know",
+      "wiki_group_text": "(Alex Trebek) But if you get this kind of call again, atleast you'll be one up, you'll know",
+      "similarity": 1.0,
+      "group_similarity": 0.9202,
+      "match_type": "exact",
+      "json_group": [
+        62,
+        63
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        29
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "You'll know.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "Alex Trebek",
+      "json_text": "All righty?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "All righty?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "Alex Trebek",
+      "json_text": "All right.",
+      "wiki_speaker": null,
+      "wiki_text": "(Alex Trebek) Alrighty?",
+      "wiki_group_text": "(Alex Trebek) Alrighty? Bye bye.",
+      "similarity": 0.5517,
+      "group_similarity": 0.7111,
+      "match_type": "similar",
+      "json_group": [
+        66,
+        67
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "(Alex Trebek) Alrighty?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "Alex Trebek",
+      "json_text": "Bye-bye.",
+      "wiki_speaker": null,
+      "wiki_text": "Bye bye.",
+      "wiki_group_text": "(Alex Trebek) Alrighty? Bye bye.",
+      "similarity": 1.0,
+      "group_similarity": 0.7111,
+      "match_type": "exact",
+      "json_group": [
+        66,
+        67
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "Alex Trebek",
+      "speaker_action": "keep",
+      "proposed_text": "Bye-bye.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "None",
+      "json_text": "Hi-bye.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Hi-bye.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "None",
+      "json_text": "Hello.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Hello.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Judge Wappner.",
+      "wiki_speaker": null,
+      "wiki_text": "(Judge Wapner) Hello?",
+      "wiki_group_text": null,
+      "similarity": 0.7742,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        35
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "(Judge Wapner) Hello?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yes, sir.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Judge Wapner? Yes sir",
+      "wiki_group_text": "Judge Wapner? Yes sir this is Gideon Jago at uh MTV, How you doing?",
+      "similarity": 0.5185,
+      "group_similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Judge Wapner? Yes sir",
+      "text_action": "review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "This is Gideon Yego at MTV.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "this is Gideon Jago at uh MTV,",
+      "wiki_group_text": "Judge Wapner? Yes sir this is Gideon Jago at uh MTV, How you doing?",
+      "similarity": 0.8727,
+      "group_similarity": 0.8214,
+      "match_type": "similar",
+      "json_group": [
+        71,
+        72,
+        73
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "this is Gideon Jago at uh MTV,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How you doing?",
+      "wiki_group_text": "Judge Wapner? Yes sir this is Gideon Jago at uh MTV, How you doing?",
+      "similarity": 1.0,
+      "group_similarity": 0.8214,
+      "match_type": "exact",
+      "json_group": [
+        71,
+        72,
+        73
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How you doing?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I was told you might be interested in a television.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I was told you might be interested in a television",
+      "wiki_group_text": "I was told you might be interested in a television show we're putting together called What's Pipin'",
+      "similarity": 1.0,
+      "group_similarity": 0.9899,
+      "match_type": "exact",
+      "json_group": [
+        74,
+        75
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        38
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was told you might be interested in a television.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "show we're putting together called What's Piping?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "show we're putting together called What's Pipin'",
+      "wiki_group_text": "I was told you might be interested in a television show we're putting together called What's Pipin'",
+      "similarity": 0.9792,
+      "group_similarity": 0.9899,
+      "match_type": "similar",
+      "json_group": [
+        74,
+        75
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        38
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "show we're putting together called What's Pipin'",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "None",
+      "json_text": "What?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "What?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "None",
+      "json_text": "Yeah.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Yeah.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We just get everybody out there. It's a track and field type thing.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We just get everybody out there, it's a track and field type thing,",
+      "wiki_group_text": "We just get everybody out there, it's a track and field type thing, run some laps and uhh get decked out in some Halloween outfits. How's that sound? I was- (Unintelligable speaking from Judge Wapner.) I was told you might be interested",
+      "similarity": 1.0,
+      "group_similarity": 0.8515,
+      "match_type": "exact",
+      "json_group": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        40
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We just get everybody out there. It's a track and field type thing.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Run some laps and get decked out some Halloween outfits.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "run some laps and uhh get decked out in some Halloween outfits.",
+      "wiki_group_text": "We just get everybody out there, it's a track and field type thing, run some laps and uhh get decked out in some Halloween outfits. How's that sound? I was- (Unintelligable speaking from Judge Wapner.) I was told you might be interested",
+      "similarity": 0.9402,
+      "group_similarity": 0.8515,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        40
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "run some laps and uhh get decked out in some Halloween outfits.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "How does that sound?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How's that sound? I was- (Unintelligable speaking from Judge Wapner.)",
+      "wiki_group_text": "We just get everybody out there, it's a track and field type thing, run some laps and uhh get decked out in some Halloween outfits. How's that sound? I was- (Unintelligable speaking from Judge Wapner.) I was told you might be interested",
+      "similarity": 0.3614,
+      "group_similarity": 0.8515,
+      "match_type": "similar",
+      "json_group": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        40
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "How does that sound?",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I was told you might be interested.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I was told you might be interested",
+      "wiki_group_text": "We just get everybody out there, it's a track and field type thing, run some laps and uhh get decked out in some Halloween outfits. How's that sound? I was- (Unintelligable speaking from Judge Wapner.) I was told you might be interested",
+      "similarity": 1.0,
+      "group_similarity": 0.8515,
+      "match_type": "exact",
+      "json_group": [
+        78,
+        79,
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        40
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I was told you might be interested.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "No.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I do well.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I do well.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's coming up here in October.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's coming up here in October",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's coming up here in October.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "It's okay, then.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's ok then, uh",
+      "wiki_group_text": "It's ok then, uh we can move on. we've got Gideon Yago lined up maybe he can take your place, he was on MTV",
+      "similarity": 0.8276,
+      "group_similarity": 0.9378,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's ok then, uh",
+      "text_action": "review"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We can move on.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "we can move on.",
+      "wiki_group_text": "It's ok then, uh we can move on. we've got Gideon Yago lined up maybe he can take your place, he was on MTV",
+      "similarity": 1.0,
+      "group_similarity": 0.9378,
+      "match_type": "exact",
+      "json_group": [
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We can move on.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We've got Gideon Yego lined up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "we've got Gideon Yago lined up",
+      "wiki_group_text": "It's ok then, uh we can move on. we've got Gideon Yago lined up maybe he can take your place, he was on MTV",
+      "similarity": 0.9667,
+      "group_similarity": 0.9378,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "we've got Gideon Yago lined up",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Maybe he could take your place.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "maybe he can take your place,",
+      "wiki_group_text": "It's ok then, uh we can move on. we've got Gideon Yago lined up maybe he can take your place, he was on MTV",
+      "similarity": 0.8966,
+      "group_similarity": 0.9378,
+      "match_type": "similar",
+      "json_group": [
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "maybe he can take your place,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He was on MTV.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "he was on MTV",
+      "wiki_group_text": "It's ok then, uh we can move on. we've got Gideon Yago lined up maybe he can take your place, he was on MTV",
+      "similarity": 1.0,
+      "group_similarity": 0.9378,
+      "match_type": "exact",
+      "json_group": [
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "He was on MTV.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "None",
+      "json_text": "Hi.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "None",
+      "speaker_action": "keep",
+      "proposed_text": "Hi.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, and so you have a happy Halloween.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ok and so uh you have a happy Halloween",
+      "wiki_group_text": null,
+      "similarity": 0.9351,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        46
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ok and so uh you have a happy Halloween",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Thank you.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Thank you,",
+      "wiki_group_text": "Thank you, Bye",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        92,
+        93
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        48
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Thank you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Bye.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Bye",
+      "wiki_group_text": "Thank you, Bye",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        92,
+        93
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        48
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Bye.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Thank you.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 94,
+    "total_wiki_lines": 49,
+    "matched_wiki_lines": 28,
+    "unmatched_wiki_lines": 21,
+    "matched": 69,
+    "speakers_to_map": 2,
+    "text_auto_correct": 19,
+    "text_review": 22,
+    "text_group_review": 0,
+    "unmatched_json": 25
+  }
+}

@@ -1,0 +1,2181 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-09-17T02:05:36.084665+00:00",
+  "snapshot": "1789607973155-rescrape-lpc10-20260916",
+  "album": "Longmont Potion Castle 10",
+  "album_slug": "longmont-potion-castle-10",
+  "track": "Neighbor Noise",
+  "track_slug": "neighbor-noise",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-10/neighbor-noise.json",
+  "json_sha256": "3725b57b5f7023ca9cfba9d4731e4cdd46ff9c3b7d9347850d08fc8f960c97e7",
+  "wiki_title": "Neighbor Noise",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Neighbor_Noise",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 3.7936,
+          "observations": 4
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 32,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 30.4286,
+          "observations": 32
+        }
+      ]
+    },
+    "SPEAKER_05": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": false,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 0.761,
+          "observations": 1
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "David's.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "David's.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, this is Duncan Cocker, your neighbor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Duncan...Cocker. Your neighbor.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        2
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Duncan Cocker, your neighbor.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, hi.",
+      "wiki_speaker": null,
+      "wiki_text": "Yeah! Hi.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        3
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Yeah, hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you guys were making a whole lot of noise in there last night.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you guys were making a whole lotta noise in there last night.",
+      "wiki_group_text": "Yeah, you guys were making a whole lotta noise in there last night. Didn't appreciate it.",
+      "similarity": 0.9618,
+      "group_similarity": 0.9711,
+      "match_type": "similar",
+      "json_group": [
+        4,
+        5
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you guys were making a whole lotta noise in there last night.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Didn't appreciate it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Didn't appreciate it.",
+      "wiki_group_text": "Yeah, you guys were making a whole lotta noise in there last night. Didn't appreciate it.",
+      "similarity": 1.0,
+      "group_similarity": 0.9711,
+      "match_type": "exact",
+      "json_group": [
+        4,
+        5
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Didn't appreciate it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yeah, well, I'm focused on these crazy animals.",
+      "wiki_speaker": null,
+      "wiki_text": "(Laughs) Yeah, well I'm focused on these crazy animals.",
+      "wiki_group_text": null,
+      "similarity": 0.9263,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "(Laughs) Yeah, well I'm focused on these crazy animals.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So I need to know that you're going to keep things down tonight, volume-wise.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So I need to know that you're gonna keep things down tonight, volume wise.",
+      "wiki_group_text": "So I need to know that you're gonna keep things down tonight, volume wise. Ya got me?",
+      "similarity": 0.9524,
+      "group_similarity": 0.9405,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        6
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So I need to know that you're gonna keep things down tonight, volume wise.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Ya got me?",
+      "wiki_group_text": "So I need to know that you're gonna keep things down tonight, volume wise. Ya got me?",
+      "similarity": 0.8421,
+      "group_similarity": 0.9405,
+      "match_type": "similar",
+      "json_group": [
+        7,
+        8
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        6
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Ya got me?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Okay, we'll turn the TV down and keep the dogs quiet, all that sort of stuff.",
+      "wiki_speaker": null,
+      "wiki_text": "Uhh, ok. We'll turn the TV down and, uh, keep the dogs quiet. All that sort of stuff.",
+      "wiki_group_text": null,
+      "similarity": 0.9412,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        7
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Uhh, ok. We'll turn the TV down and, uh, keep the dogs quiet. All that sort of stuff.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you better do everything you can.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you better do everything you can.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you better do everything you can.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We'll keep an eye on it, or an ear on it.",
+      "wiki_speaker": null,
+      "wiki_text": "We'll keep an eye on it. Or an ear on it.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We'll keep an eye on it, or an ear on it.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Pipe down, do it now.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Pipe down, do it now...",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        10
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Pipe down, do it now.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": "Ok.",
+      "wiki_group_text": null,
+      "similarity": 0.6667,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Ok.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I don't want to hear from you again.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "...And I don't want to hear from you again.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        12
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I don't want to hear from you again.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Fair enough.",
+      "wiki_speaker": null,
+      "wiki_text": "Fair enough. -",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        13,
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_02",
+      "speaker_action": "keep",
+      "proposed_text": "Fair enough.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Well, hello.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Well, hello.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Who've I got?",
+      "wiki_speaker": null,
+      "wiki_text": "Who have I got.",
+      "wiki_group_text": null,
+      "similarity": 0.8462,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        18
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Who have I got.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm Duncan Whopper.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm Duncan Whopper.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Duncan Whopper.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": "Ok.",
+      "wiki_group_text": null,
+      "similarity": 0.6667,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        20
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Ok.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I live nearby you, and you guys are making way too much noise at night. You know that?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I live near by ya, and you guys are making way too much noise at night, you know that?",
+      "wiki_group_text": null,
+      "similarity": 0.9759,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        21
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I live near by ya, and you guys are making way too much noise at night, you know that?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Are we? Well, I'll tell you. We'll have to curb it then, won't we?",
+      "wiki_speaker": null,
+      "wiki_text": "Are we? Well I'll tell you, we'll have to curb it then, won't we.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        22
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Are we? Well, I'll tell you. We'll have to curb it then, won't we?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you bring it down a couple of knots here tonight? I got a big meeting tomorrow.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why don't cha bring 'er down a couple notched here tonight? I got a big meeting tommorra.",
+      "wiki_group_text": null,
+      "similarity": 0.8621,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        23
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't cha bring 'er down a couple notched here tonight? I got a big meeting tommorra.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "And how's the rest of your day going?",
+      "wiki_speaker": null,
+      "wiki_text": "(Laughs) And how's the rest of your day going?",
+      "wiki_group_text": null,
+      "similarity": 0.9114,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        24
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "(Laughs) And how's the rest of your day going?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I don't even know if I'm coming or going, lady.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't even know if I'm comin' or goin' lady.",
+      "wiki_group_text": "I don't even know if I'm comin' or goin' lady. I didn't get any sleep last night.",
+      "similarity": 0.9556,
+      "group_similarity": 0.9747,
+      "match_type": "similar",
+      "json_group": [
+        24,
+        25
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't even know if I'm comin' or goin' lady.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I didn't get any sleep last night.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I didn't get any sleep last night.",
+      "wiki_group_text": "I don't even know if I'm comin' or goin' lady. I didn't get any sleep last night.",
+      "similarity": 1.0,
+      "group_similarity": 0.9747,
+      "match_type": "exact",
+      "json_group": [
+        24,
+        25
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I didn't get any sleep last night.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Well, as I said, we'll do our best to curb it.",
+      "wiki_speaker": null,
+      "wiki_text": "(Laughs) Well, as I said, we'll do our best to curb it.",
+      "wiki_group_text": null,
+      "similarity": 0.9247,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        26
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "(Laughs) Well, as I said, we'll do our best to curb it.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, is Evelyn there?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "- Hey, is Evelyn there?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        27,
+        29
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, is Evelyn there?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Yeah.",
+      "wiki_speaker": null,
+      "wiki_text": "Yeah.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        30
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Yeah.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Duncan Cocker.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Duncan Cocker.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        31
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Duncan Cocker.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Duncan Crocker?",
+      "wiki_speaker": null,
+      "wiki_text": "Duncan? Crocker?",
+      "wiki_group_text": "Duncan? Crocker? Who are you?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        30,
+        31
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Duncan Crocker?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Who are you?",
+      "wiki_speaker": null,
+      "wiki_text": "Who are you?",
+      "wiki_group_text": "Duncan? Crocker? Who are you?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        30,
+        31
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Who are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Your neighbor?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Your neighbor.",
+      "wiki_group_text": "Your neighbor. Last night I was hearing dogs and cats and birds and everything over at your house.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        32,
+        33
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        33
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Your neighbor?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Last night I was hearing dogs and cats and birds and everything over at your house.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Last night I was hearing dogs and cats and birds and everything over at your house.",
+      "wiki_group_text": "Your neighbor. Last night I was hearing dogs and cats and birds and everything over at your house.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        32,
+        33
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        33
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Last night I was hearing dogs and cats and birds and everything over at your house.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "And what time was there?",
+      "wiki_speaker": null,
+      "wiki_text": "And what time was this?",
+      "wiki_group_text": null,
+      "similarity": 0.8889,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        34
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "And what time was this?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's too late if you asked me. I was trying to get some rest.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It was too late, if you ask me. I was trying to get some rest.",
+      "wiki_group_text": null,
+      "similarity": 0.9492,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        35
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It was too late, if you ask me. I was trying to get some rest.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "You need to answer my question. What time was this?",
+      "wiki_speaker": null,
+      "wiki_text": "You need to answer my question. What time was this?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "You need to answer my question. What time was this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I had a big, big meeting this morning.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I had a big, big meeting this morning.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        37
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I had a big, big meeting this morning.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Our dogs are in bed at 9.30 p.m.",
+      "wiki_speaker": null,
+      "wiki_text": "Our dogs are in bed at nine thirty P.M.",
+      "wiki_group_text": null,
+      "similarity": 0.8116,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        38
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Our dogs are in bed at nine thirty P.M.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's the most cockamamie thing I've ever heard.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's the most cockamamie thing I've ever heard.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        39
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's the most cockamamie thing I've ever heard.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Who are you? What address are you?",
+      "wiki_speaker": null,
+      "wiki_text": "Who are you? What address are you?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        40
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "Who are you? What address are you?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Duncan Cocker. I'm catty corner to you. One house down.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Duncan Cocker. I'm catty corner to you, one house down.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Duncan Cocker. I'm catty corner to you. One house down.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Duncan, what's your fucking address?",
+      "wiki_speaker": null,
+      "wiki_text": "DUNCAN, WHAT'S YOUR FUCKING ADDRESS?!",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "Duncan, what's your fucking address?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why don't you shut down your zoo over there and keep it quiet?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why don't you shut down your zoo over there and keep it quiet?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        43
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don't you shut down your zoo over there and keep it quiet?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Our dogs are in bed. You're talking to the wrong person.",
+      "wiki_speaker": null,
+      "wiki_text": "Our dogs are in bed. You're talking to the wrong person.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "Our dogs are in bed. You're talking to the wrong person.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_04",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": "- Yes?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        45,
+        47
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_04",
+      "speaker_action": "keep",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, this is Hooper. I'm your neighbor.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, this is Hooper. I'm your neighbor.",
+      "wiki_group_text": "Hey, this is Hooper. I'm your neighbor. And you guys had way too much noise and commotion last night up at your place.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        46,
+        47
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        48
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, this is Hooper. I'm your neighbor.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And you guys had way too much noise and commotion last night up at your place.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And you guys had way too much noise and commotion last night up at your place.",
+      "wiki_group_text": "Hey, this is Hooper. I'm your neighbor. And you guys had way too much noise and commotion last night up at your place.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        46,
+        47
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        48
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And you guys had way too much noise and commotion last night up at your place.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "No, you got the wrong number. My God.",
+      "wiki_speaker": null,
+      "wiki_text": "No, you've got the wrong number, my god.",
+      "wiki_group_text": null,
+      "similarity": 0.9577,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        49
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "No, you've got the wrong number, my god.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, I heard dogs barking and televisions, blaring, and everything else.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, I heard dogs barkin', and televisions blarin', and everything else.",
+      "wiki_group_text": null,
+      "similarity": 0.9701,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        50
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, I heard dogs barkin', and televisions blarin', and everything else.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's not me. I put my dogs to bed at 4 o'clock.",
+      "wiki_speaker": null,
+      "wiki_text": "IT'S NOT ME. I put my dogs to bed at four o'clock.",
+      "wiki_group_text": "IT'S NOT ME. I put my dogs to bed at four o'clock. Where do you live?",
+      "similarity": 0.9462,
+      "group_similarity": 0.9612,
+      "match_type": "similar",
+      "json_group": [
+        50,
+        51
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        51
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "IT'S NOT ME. I put my dogs to bed at four o'clock.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Where do you live?",
+      "wiki_speaker": null,
+      "wiki_text": "Where do you live?",
+      "wiki_group_text": "IT'S NOT ME. I put my dogs to bed at four o'clock. Where do you live?",
+      "similarity": 1.0,
+      "group_similarity": 0.9612,
+      "match_type": "exact",
+      "json_group": [
+        50,
+        51
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        51
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Where do you live?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "In the Lavender House.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "In the lavender house.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        52
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "In the Lavender House.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Where in the hell is the Lavender House?",
+      "wiki_speaker": null,
+      "wiki_text": "Where in the hell is the lavender house?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        53
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "Where in the hell is the Lavender House?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I ain't fixing to go no horror.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I ain't fixin' to go nowhere,",
+      "wiki_group_text": "I ain't fixin' to go nowhere, so why don't you keep it down to a dull roar, so I can get some rest here?",
+      "similarity": 0.8276,
+      "group_similarity": 0.951,
+      "match_type": "similar",
+      "json_group": [
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        54
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I ain't fixin' to go nowhere,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "So why don't you keep it down to a dull roar so I can get some rest here?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "so why don't you keep it down to a dull roar, so I can get some rest here?",
+      "wiki_group_text": "I ain't fixin' to go nowhere, so why don't you keep it down to a dull roar, so I can get some rest here?",
+      "similarity": 1.0,
+      "group_similarity": 0.951,
+      "match_type": "exact",
+      "json_group": [
+        54,
+        55
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        54
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So why don't you keep it down to a dull roar so I can get some rest here?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's not my dogs. It's the house next to me.",
+      "wiki_speaker": null,
+      "wiki_text": "IT'S NOT MY DOGS, IT'S THE HOUSE NEXT TO ME.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        55
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "It's not my dogs. It's the house next to me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Don't try to pull the old switcheroo on me, lady.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Don't try to pull the old switcheroo on me, lady.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Don't try to pull the old switcheroo on me, lady.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "Well, you're crazy bastard. It's not me. It's not my house.",
+      "wiki_speaker": null,
+      "wiki_text": "WELL YOU CRAZY BASTARD, IT'S NOT ME. IT'S NOT MY HOUSE.",
+      "wiki_group_text": "WELL YOU CRAZY BASTARD, IT'S NOT ME. IT'S NOT MY HOUSE. WHAT IS YOUR NUMBER?!?",
+      "similarity": 0.972,
+      "group_similarity": 0.9796,
+      "match_type": "similar",
+      "json_group": [
+        58,
+        59
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        57
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "WELL YOU CRAZY BASTARD, IT'S NOT ME. IT'S NOT MY HOUSE.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "What is your number?",
+      "wiki_speaker": null,
+      "wiki_text": "WHAT IS YOUR NUMBER?!?",
+      "wiki_group_text": "WELL YOU CRAZY BASTARD, IT'S NOT ME. IT'S NOT MY HOUSE. WHAT IS YOUR NUMBER?!?",
+      "similarity": 1.0,
+      "group_similarity": 0.9796,
+      "match_type": "exact",
+      "json_group": [
+        58,
+        59
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        57
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "What is your number?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My phone number?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My phone number?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        58
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My phone number?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "No, the number of your house.",
+      "wiki_speaker": null,
+      "wiki_text": "NOOO! The number of your house...",
+      "wiki_group_text": null,
+      "similarity": 0.9643,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        59
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "NOOO! The number of your house...",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm in the lavender house.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm in the lavender house.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        60
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm in the lavender house.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "I'm not where you get your mail.",
+      "wiki_speaker": null,
+      "wiki_text": "...the one where you get your mail.",
+      "wiki_group_text": null,
+      "similarity": 0.8387,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        61
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "...the one where you get your mail.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Now why don't you keep it down to a dog.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Now, why don't you keep it down to a",
+      "wiki_group_text": "Now, why don't you keep it down to a dull roar? I had a meeting this morning and I missed it 'cause of all your commotion there.",
+      "similarity": 0.9459,
+      "group_similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        62
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Now, why don't you keep it down to a",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Dole roar. I had a meeting this morning and I missed it because all your commotion there.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "dull roar? I had a meeting this morning and I missed it 'cause of all your commotion there.",
+      "wiki_group_text": "Now, why don't you keep it down to a dull roar? I had a meeting this morning and I missed it 'cause of all your commotion there.",
+      "similarity": 0.9432,
+      "group_similarity": 0.9444,
+      "match_type": "similar",
+      "json_group": [
+        64,
+        65
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        62
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "dull roar? I had a meeting this morning and I missed it 'cause of all your commotion there.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_03",
+      "json_text": "It's not me. My God. I call the damn police.",
+      "wiki_speaker": null,
+      "wiki_text": "It's not MEEE! My god! I'm...Call the damn police!",
+      "wiki_group_text": null,
+      "similarity": 0.9535,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        63
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_03",
+      "speaker_action": "keep",
+      "proposed_text": "It's not MEEE! My god! I'm...Call the damn police!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": "- Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        64,
+        66
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "My name's Fifi Nono. I'm your neighbor. And I've been hearing way, way, way too much noise coming out of your place last night and the night before.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "My name's FiFi NoNo. I'm your neighbor. And I've been hearing way, way, way too much noise coming out of your place last night and the night before.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "My name's Fifi Nono. I'm your neighbor. And I've been hearing way, way, way too much noise coming out of your place last night and the night before.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I have no idea what you're talking about. I don't know any such neighbor. I have no idea what you're",
+      "wiki_speaker": null,
+      "wiki_text": "I have no idea what you're talking about. I don't know any such neighbor. I have no idea what you're talking about...whatsoever.",
+      "wiki_group_text": null,
+      "similarity": 0.8869,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        68
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "I have no idea what you're talking about. I don't know any such neighbor. I have no idea what you're talking about...whatsoever.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "talking about. It sounded like you were on my roof.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It sounded like you were on my",
+      "wiki_group_text": "It sounded like you were on my roof...So I need you to pipe down, so I can get some r...",
+      "similarity": 0.7595,
+      "group_similarity": 0.7387,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        69
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It sounded like you were on my",
+      "text_action": "review"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "whatsoever. So I need you to pipe down so I can get some red. I don't know with all you want.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "roof...So I need you to pipe down, so I can get some r...",
+      "wiki_group_text": "It sounded like you were on my roof...So I need you to pipe down, so I can get some r...",
+      "similarity": 0.6809,
+      "group_similarity": 0.7387,
+      "match_type": "similar",
+      "json_group": [
+        70,
+        71
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        69
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "roof...So I need you to pipe down, so I can get some r...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Look, Mr. I can't be your neighbor. I don't live in your area code. I live in the area called 303. I don't know what",
+      "wiki_speaker": null,
+      "wiki_text": "I DON'T KNOW WHO THE HELL YOU ARE! Look mister, I can't be your neighbor, I don't live in your area code. I live in the area code 303. I don't know what the hell you're talking about.",
+      "wiki_group_text": null,
+      "similarity": 0.7431,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        70
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "I DON'T KNOW WHO THE HELL YOU ARE! Look mister, I can't be your neighbor, I don't live in your area code. I live in the area code 303. I don't know what the hell you're talking about.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "the hell you're talking about. So do I. It was a Herculean effort just to get through the night. It was so",
+      "wiki_speaker": "LPC",
+      "wiki_text": "So do I. It was a Herculean effort just to get through the night, it was so noisy over at your place.",
+      "wiki_group_text": null,
+      "similarity": 0.7264,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        71
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "So do I. It was a Herculean effort just to get through the night, it was so noisy over at your place.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "noisy over at your place. I haven't got my stereo on. I haven't had my stereo on for weeks.",
+      "wiki_speaker": null,
+      "wiki_text": "I haven't got my stereo on. I haven't had my stereo on for weeks.",
+      "wiki_group_text": null,
+      "similarity": 0.8344,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        72
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "I haven't got my stereo on. I haven't had my stereo on for weeks.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Tricken. It was like you were on my roof last night.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Friggin', it was like you were on my roof last night.",
+      "wiki_group_text": null,
+      "similarity": 0.9109,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        73
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Friggin', it was like you were on my roof last night.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "My neighbor on one side of me, Chuck. The neighbor on the other side of me is named Bob. I don't even know who you are.",
+      "wiki_speaker": null,
+      "wiki_text": "My neighbor on one side is named Chuck. The neighbor on the other side of me is named Bob. I don't even know who you are.",
+      "wiki_group_text": null,
+      "similarity": 0.97,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "My neighbor on one side is named Chuck. The neighbor on the other side of me is named Bob. I don't even know who you are.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't even know who you are. I don't give a good.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't give a good dog gone who it is.",
+      "wiki_group_text": null,
+      "similarity": 0.4368,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        75
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I don't give a good dog gone who it is.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "good do goddamn who it is. I don't give a damn either, but it's not me. Stop calling me and stop",
+      "wiki_speaker": null,
+      "wiki_text": "I DON'T GIVE A DAMN EITHER, BUT IT'S NOT ME! Stop calling me, and stop annoying me...",
+      "wiki_group_text": null,
+      "similarity": 0.7791,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        76
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "I DON'T GIVE A DAMN EITHER, BUT IT'S NOT ME! Stop calling me, and stop annoying me...",
+      "text_action": "review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "annoying me. Listen to me. I don't know what you're talking about. I am not. What did you hear?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen to me... ...I don't know what you're talking about. I am not...What did you hear? Did you hear music? What did you hear?",
+      "wiki_group_text": null,
+      "similarity": 0.761,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        77,
+        78
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen to me... ...I don't know what you're talking about. I am not...What did you hear? Did you hear music? What did you hear?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Did you hear music? What did you hear? Oh, I heard a television blur and I heard birds chirping. I heard",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, I heard televisions blaring, I heard birds chirping, I heard",
+      "wiki_group_text": "Oh, I heard televisions blaring, I heard birds chirping, I heard everything I could hear. Are you telling me you don't have a television and a bird? 'Cause I heard 'em all night long.",
+      "similarity": 0.7081,
+      "group_similarity": 0.8629,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        79
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, I heard televisions blaring, I heard birds chirping, I heard",
+      "text_action": "review"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "everything I could hear. Are you telling me you don't have a television and a bird? Because I heard him all night long.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "everything I could hear. Are you telling me you don't have a television and a bird? 'Cause I heard 'em all night long.",
+      "wiki_group_text": "Oh, I heard televisions blaring, I heard birds chirping, I heard everything I could hear. Are you telling me you don't have a television and a bird? 'Cause I heard 'em all night long.",
+      "similarity": 0.9697,
+      "group_similarity": 0.8629,
+      "match_type": "similar",
+      "json_group": [
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        79
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "everything I could hear. Are you telling me you don't have a television and a bird? 'Cause I heard 'em all night long.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have two cats and I have a television set. Yeah, I know you do because I heard it all night.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I have two cats, and I have a television set. Yeah, I know you do, 'cause I heard it all night.",
+      "wiki_group_text": null,
+      "similarity": 0.9834,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        80,
+        81
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I have two cats, and I have a television set. Yeah, I know you do, 'cause I heard it all night.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "I wasn't up all night. I went to bed at about 12.30 last night.",
+      "wiki_speaker": null,
+      "wiki_text": "I wasn't up all night. I went to bed at about 12:30 last night.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        82
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "I wasn't up all night. I went to bed at about 12.30 last night.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's cockamamie.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's cockamamie.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        83
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's cockamamie.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "And I didn't hear a damn thing.",
+      "wiki_speaker": null,
+      "wiki_text": "And I didn't hear a damn thing!",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        84
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "And I didn't hear a damn thing.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It sounded like you were blowing into a saxophone all went long. It was outrageous.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It sounded like you were blowing into a saxophone all night long. It was outrageous.",
+      "wiki_group_text": null,
+      "similarity": 0.9693,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        85
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It sounded like you were blowing into a saxophone all night long. It was outrageous.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "It's not me.",
+      "wiki_speaker": null,
+      "wiki_text": "It's not me!",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        86
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "It's not me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I don't believe you. I got your number from the Postmaster, and he knows what he's doing. Believe me, he's worked there for 10 years.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I don't believe you. I got your number from the postmaster, and he knows what he's doing. Believe me he's worked there for 10 years.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        87
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I don't believe you. I got your number from the Postmaster, and he knows what he's doing. Believe me, he's worked there for 10 years.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "What address did you give me?",
+      "wiki_speaker": null,
+      "wiki_text": "Wha, wha, what address did you give him?",
+      "wiki_group_text": null,
+      "similarity": 0.8308,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        88
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "Wha, wha, what address did you give him?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Listen, I need $25 to get a hotel room.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen, I need twenty-five dollars, to get a hotel room.",
+      "wiki_group_text": null,
+      "similarity": 0.764,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        89
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen, I need twenty-five dollars, to get a hotel room.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "Look, I don't give it to him. It's not me. It is not me.",
+      "wiki_speaker": null,
+      "wiki_text": "I don't give a damn, it's not me. It is not me,",
+      "wiki_group_text": "I don't give a damn, it's not me. It is not me, and if you don't stop calling me, and don't stop harassing me, I'll contact the police.",
+      "similarity": 0.8333,
+      "group_similarity": 0.8527,
+      "match_type": "similar",
+      "json_group": [
+        91,
+        92
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        90
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "I don't give a damn, it's not me. It is not me,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "And if you don't stop calling me and you don't stop harassing me, all content.",
+      "wiki_speaker": null,
+      "wiki_text": "and if you don't stop calling me, and don't stop harassing me, I'll contact the police.",
+      "wiki_group_text": "I don't give a damn, it's not me. It is not me, and if you don't stop calling me, and don't stop harassing me, I'll contact the police.",
+      "similarity": 0.8625,
+      "group_similarity": 0.8527,
+      "match_type": "similar",
+      "json_group": [
+        91,
+        92
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        90
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "and if you don't stop calling me, and don't stop harassing me, I'll contact the police.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_05",
+      "json_text": "the police, the post-caster.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "SPEAKER_05",
+      "speaker_action": "keep",
+      "proposed_text": "the police, the post-caster.",
+      "text_action": "no_wiki_match"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 93,
+    "total_wiki_lines": 85,
+    "matched_wiki_lines": 83,
+    "unmatched_wiki_lines": 2,
+    "matched": 90,
+    "speakers_to_map": 2,
+    "text_auto_correct": 26,
+    "text_review": 19,
+    "text_group_review": 0,
+    "unmatched_json": 3
+  }
+}

@@ -128,7 +128,7 @@ def fetch_wikitext(title: str) -> dict | None:
     params = urllib.parse.urlencode({
         "action":  "query",
         "prop":    "revisions",
-        "rvprop":  "content",
+        "rvprop":  "ids|timestamp|content",
         "rvslots": "main",
         "titles":  title,
         "format":  "json",
@@ -151,6 +151,8 @@ def fetch_wikitext(title: str) -> dict | None:
     return {
         "title":    page["title"],
         "pageid":   page["pageid"],
+        "revision_id": revisions[0].get("revid"),
+        "revision_timestamp": revisions[0].get("timestamp"),
         "wikitext": wikitext,
     }
 
@@ -277,7 +279,7 @@ def parse_transcript_from_wikitext(wikitext: str) -> list[tuple[str | None, str]
         re.DOTALL | re.IGNORECASE,
     )
     if not transcript_match:
-        return []
+        return _parse_legacy_transcript(wikitext)
 
     transcript_wikitext = transcript_match.group(1)
 
@@ -338,6 +340,84 @@ def parse_transcript_from_wikitext(wikitext: str) -> list[tuple[str | None, str]
                 lines.append((speaker, text))
 
     return lines
+
+
+def _strip_balanced_leading_templates(wikitext: str) -> str:
+    """Remove metadata templates at the beginning of a legacy track page."""
+    text = wikitext.lstrip()
+    while text.startswith("{{"):
+        depth = 0
+        end = None
+        for index in range(len(text) - 1):
+            token = text[index:index + 2]
+            if token == "{{":
+                depth += 1
+            elif token == "}}":
+                depth -= 1
+                if depth == 0:
+                    end = index + 2
+                    break
+        if end is None:
+            break
+        text = text[end:].lstrip()
+    return text
+
+
+def _parse_legacy_transcript(wikitext: str) -> list[tuple[str | None, str]]:
+    """Parse older pages where the transcript is prose and LPC is bolded."""
+    if not re.search(r"\{\{\s*Track[_ ]Info\b", wikitext, re.I):
+        return []
+
+    body = _strip_balanced_leading_templates(wikitext)
+    body = _strip_balanced_leading_templates(body)
+    transcription_heading = re.search(
+        r"^\s*==+\s*Track transcription\s*==+\s*", body, re.I
+    )
+    if transcription_heading:
+        body = body[transcription_heading.end():]
+        body = _strip_balanced_leading_templates(body)
+    body = re.split(r"(?:^|\n)==+[^=]|(?:^|\n)\[\[Category:", body, maxsplit=1, flags=re.I)[0]
+    body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+
+    blocks = [block.strip() for block in re.split(r"\n\s*\n", body) if block.strip()]
+    lines: list[tuple[str | None, str]] = []
+    bold_dialogue_found = False
+    for block in blocks:
+        block = re.sub(r"^(?:--+|\*\s*\*\s*\*)$", "", block.strip())
+        if not block:
+            continue
+        is_lpc = bool(
+            re.fullmatch(r"'''[\s\S]+'''", block)
+            or re.fullmatch(r"<b\b[^>]*>[\s\S]+</b>", block, re.I)
+        )
+        bold_dialogue_found = bold_dialogue_found or is_lpc
+        text = _clean_wiki_text(block)
+        text = re.sub(r"</?b\b[^>]*>", "", text, flags=re.I).strip()
+        if re.fullmatch(r"(?:thumb\|.*|Category:.*)", text, re.I):
+            continue
+        if text:
+            lines.append(("LPC" if is_lpc else None, text))
+    # Without an explicit transcription heading or bold dialogue, a lone
+    # paragraph is normally article description, image markup, or a category.
+    if not transcription_heading and not bold_dialogue_found and len(lines) < 2:
+        return []
+    return lines
+
+
+def transcript_page_status(wikitext: str, transcript: list[tuple[str | None, str]]) -> dict:
+    """Describe whether a fetched page yielded usable transcript data."""
+    incomplete = bool(re.search(r"\{\{\s*TranscriptIncomplete\b", wikitext, re.I))
+    needed = bool(re.search(r"\{\{\s*Transcript(?:Needed|NeededTrack)\b", wikitext, re.I))
+    if transcript:
+        status = "transcript_incomplete" if incomplete else "transcript_parsed"
+    elif incomplete:
+        status = "transcript_incomplete_empty"
+    elif needed:
+        status = "transcript_needed"
+    else:
+        status = "page_found_no_transcript"
+    parser = "table" if re.search(r"==\s*Transcript\s*==", wikitext, re.I) else "legacy_prose"
+    return {"scrape_status": status, "transcript_incomplete": incomplete, "parser": parser}
 
 # ── Helpers: Data loading ─────────────────────────────────────────────────────
 
@@ -449,6 +529,69 @@ def _timestamp_delta(source_start: float | None, source_end: float | None,
     if None in (source_start, source_end, target_start, target_end):
         return None
     return max(abs(source_start - target_start), abs(source_end - target_end))
+
+
+def _split_wiki_text_for_json_entries(wiki_text: str, json_entries: list[dict]) -> list[str] | None:
+    """Partition one wiki turn across timestamped local subtitle fragments.
+
+    The local subtitles define the desired number and order of pieces. A small
+    dynamic program chooses contiguous wiki-word boundaries that best resemble
+    each local fragment. The original wiki spelling and punctuation are kept.
+    """
+    count = len(json_entries)
+    if count <= 1:
+        return [wiki_text]
+    words = wiki_text.split()
+    if len(words) < count:
+        return None
+
+    local_texts = [str(entry.get("Text", "")) for entry in json_entries]
+    local_lengths = [max(1, len(_normalize(text))) for text in local_texts]
+    total_local = sum(local_lengths)
+    total_words = len(words)
+    expected = [0]
+    running = 0
+    for length in local_lengths[:-1]:
+        running += length
+        expected.append(round(total_words * running / total_local))
+    expected.append(total_words)
+
+    negative = float("-inf")
+    scores = [[negative] * (total_words + 1) for _ in range(count + 1)]
+    previous: list[list[int | None]] = [[None] * (total_words + 1) for _ in range(count + 1)]
+    scores[0][0] = 0.0
+    for part in range(count):
+        remaining_parts = count - part - 1
+        for start in range(total_words + 1):
+            if scores[part][start] == negative:
+                continue
+            min_end = start + 1
+            max_end = total_words - remaining_parts
+            for end in range(min_end, max_end + 1):
+                candidate = " ".join(words[start:end])
+                similarity = difflib.SequenceMatcher(
+                    None, _normalize(local_texts[part]), _normalize(candidate), autojunk=False
+                ).ratio()
+                # Similarity dominates; this small penalty resolves ambiguous
+                # repeated phrases toward boundaries proportional to subtitle length.
+                boundary_penalty = abs(end - expected[part + 1]) / max(1, total_words) * 0.04
+                score = scores[part][start] + similarity * local_lengths[part] - boundary_penalty
+                if score > scores[part + 1][end]:
+                    scores[part + 1][end] = score
+                    previous[part + 1][end] = start
+
+    if previous[count][total_words] is None:
+        return None
+    boundaries = [total_words]
+    end = total_words
+    for part in range(count, 0, -1):
+        start = previous[part][end]
+        if start is None:
+            return None
+        boundaries.append(start)
+        end = start
+    boundaries.reverse()
+    return [" ".join(words[boundaries[i]:boundaries[i + 1]]) for i in range(count)]
 
 
 def align_wiki_to_json(
@@ -650,22 +793,35 @@ def align_wiki_to_json(
             wiki_indices = [original_index for original_index, _, _, _, _ in wiki_slice]
             wiki_speaker = next((speaker for _, speaker, _, _, _ in wiki_slice if speaker), None)
             wiki_text = " ".join(text for _, _, text, _, _ in wiki_slice)
+            split_wiki_text = _split_wiki_text_for_json_entries(
+                wiki_text, [entry for _, entry in json_slice]
+            )
             source_start = next((start for _, _, _, start, _ in wiki_slice if start is not None), None)
             source_end = next((end for _, _, _, _, end in reversed(wiki_slice) if end is not None), None)
             target_start = _subtitle_seconds(json_slice[0][1].get("Start Time"))
             target_end = _subtitle_seconds(json_slice[-1][1].get("End Time"))
             timestamp_delta = _timestamp_delta(source_start, source_end, target_start, target_end)
             group_indices = [entry["Index"] for _, entry in json_slice]
-            for _, entry in json_slice:
+            for slice_index, (_, entry) in enumerate(json_slice):
+                wiki_segment = split_wiki_text[slice_index] if split_wiki_text else wiki_text
+                segment_similarity = difflib.SequenceMatcher(
+                    None,
+                    _normalize(entry.get("Text", "")),
+                    _normalize(wiki_segment),
+                    autojunk=False,
+                ).ratio()
                 alignments.append({
                     "json_index": entry["Index"],
                     "json_speaker": entry.get("Speaker", ""),
                     "json_text": entry.get("Text", ""),
                     "wiki_speaker": wiki_speaker,
-                    "wiki_text": wiki_text,
-                    "similarity": round(similarity, 4),
-                    "match_type": "exact" if similarity >= 0.9999 else "similar",
+                    "wiki_text": wiki_segment,
+                    "wiki_group_text": wiki_text if json_count > 1 else None,
+                    "similarity": round(segment_similarity, 4),
+                    "group_similarity": round(similarity, 4) if json_count > 1 else None,
+                    "match_type": "exact" if segment_similarity >= 0.9999 else "similar",
                     "json_group": group_indices if json_count > 1 else None,
+                    "text_split_from_group": json_count > 1 and split_wiki_text is not None,
                     "wiki_indices": wiki_indices,
                     "timestamp_delta": round(timestamp_delta, 3) if timestamp_delta is not None else None,
                     "timestamp_mismatch": timestamp_delta is not None and timestamp_delta > 5.0,
@@ -967,16 +1123,25 @@ def cmd_scrape(args) -> None:
 
         if found:
             transcript = parse_transcript_from_wikitext(found["wikitext"])
+            page_status = transcript_page_status(found["wikitext"], transcript)
             save_cache(a_slug, t_slug, {
                 "album_slug":   a_slug,
                 "track_slug":   t_slug,
                 "track_title":  t_title,
                 "wiki_title":   found["title"],
                 "wiki_pageid":  found["pageid"],
+                "wiki_revision_id": found.get("revision_id"),
+                "wiki_revision_timestamp": found.get("revision_timestamp"),
                 "wiki_url":     f"https://talkinwhipapedia.fandom.com/wiki/{urllib.parse.quote(found['title'].replace(' ', '_'))}",
                 "transcript":   transcript,
+                **page_status,
             }, snapshot)
-            fetched += 1
+            if transcript:
+                print(f"           parsed {len(transcript)} rows ({page_status['parser']})")
+                fetched += 1
+            else:
+                print(f"           {page_status['scrape_status']}")
+                missing += 1
         else:
             print(f"  [miss]  {a_slug}/{t_slug} — tried: {tried}")
             # Cache a sentinel so we don't re-try on every run
@@ -989,12 +1154,18 @@ def cmd_scrape(args) -> None:
                 "wiki_url":     None,
                 "transcript":   [],
                 "not_found":    True,
+                "scrape_status": "not_found",
+                "transcript_incomplete": False,
+                "parser": None,
             }, snapshot)
             missing += 1
 
     # Record this as the latest snapshot
     LATEST_FILE.write_text(snapshot, encoding="utf-8")
-    print(f"\nDone — fetched: {fetched}, cached/skipped: {skipped}, not found: {missing}")
+    print(
+        f"\nDone — usable transcripts: {fetched}, cached/skipped: {skipped}, "
+        f"missing or unusable: {missing}"
+    )
     print(f"Latest snapshot → {snapshot}")
 
 # ── Subcommand: compare ───────────────────────────────────────────────────────
@@ -1051,7 +1222,10 @@ def cmd_compare(args) -> None:
             w_text = aln["wiki_text"]
             j_text = aln["json_text"]
             sim    = aln["similarity"]
-            is_group = aln.get("json_group") is not None
+            is_group = (
+                aln.get("json_group") is not None
+                and not aln.get("text_split_from_group")
+            )
 
             if aln.get("wiki_speaker") and sim >= 0.65:
                 # Prefer the speaker attached to this particular matched line.
@@ -1232,7 +1406,7 @@ def cmd_merge(args) -> None:
 
             # Multi-entry groups: wiki text spans several JSON entries and
             # can't be auto-split back — skip text replacement for these.
-            if aln.get("json_group"):
+            if aln.get("json_group") and not aln.get("text_split_from_group"):
                 continue
 
             # Text update — only apply when confidence is sufficient

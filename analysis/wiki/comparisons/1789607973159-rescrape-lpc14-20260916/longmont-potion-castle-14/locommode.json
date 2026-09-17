@@ -1,0 +1,3335 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-09-17T02:07:53.441453+00:00",
+  "snapshot": "1789607973159-rescrape-lpc14-20260916",
+  "album": "Longmont Potion Castle 14",
+  "album_slug": "longmont-potion-castle-14",
+  "track": "Locommode",
+  "track_slug": "locommode",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-14/locommode.json",
+  "json_sha256": "0b21471cf24fc581f073a6cd44034a25e8c5d89c04f2bb239d9072dbf2f6abef",
+  "wiki_title": "Locommode",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Locommode",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "LPC",
+    "SPEAKER_02": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 2,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.8571,
+          "observations": 2
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 20,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 19.289,
+          "observations": 20
+        }
+      ]
+    },
+    "SPEAKER_02": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 3.4642,
+          "observations": 4
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello.",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        1
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you've got Preston Windermere here, 1,800 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, you've got Preston Windermere here, 1-800-Toilets.",
+      "wiki_group_text": "Yeah, you've got Preston Windermere here, 1-800-Toilets. Is this Joe?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        2
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, you've got Preston Windermere here, 1,800 toilets.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Is this Joe?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Is this Joe?",
+      "wiki_group_text": "Yeah, you've got Preston Windermere here, 1-800-Toilets. Is this Joe?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        2,
+        3
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        2
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Is this Joe?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Wait a minute, who is this?",
+      "wiki_speaker": null,
+      "wiki_text": "Wha? Wait a minute, who is this?",
+      "wiki_group_text": null,
+      "similarity": 0.9259,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        3
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Wha? Wait a minute, who is this?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, this is Preston. I'm with 1,800 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Preston, I'm with 1-800-Toilets.",
+      "wiki_group_text": "Yeah, this is Preston, I'm with 1-800-Toilets. We're gonna put 14 portable toilets on your property tomorrow. We've got some construction crews in the area, and we need to place 'em there, on your property.",
+      "similarity": 1.0,
+      "group_similarity": 0.9674,
+      "match_type": "exact",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Preston. I'm with 1,800 toilets.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're going to put 14 portable toilets on your property tomorrow.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We're gonna put 14 portable toilets on your property tomorrow.",
+      "wiki_group_text": "Yeah, this is Preston, I'm with 1-800-Toilets. We're gonna put 14 portable toilets on your property tomorrow. We've got some construction crews in the area, and we need to place 'em there, on your property.",
+      "similarity": 0.944,
+      "group_similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We're gonna put 14 portable toilets on your property tomorrow.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We got some construction crews in the area, and we need to place them there on your property.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We've got some construction crews in the area, and we need to place 'em there, on your property.",
+      "wiki_group_text": "Yeah, this is Preston, I'm with 1-800-Toilets. We're gonna put 14 portable toilets on your property tomorrow. We've got some construction crews in the area, and we need to place 'em there, on your property.",
+      "similarity": 0.9674,
+      "group_similarity": 0.9674,
+      "match_type": "similar",
+      "json_group": [
+        5,
+        6,
+        7
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We've got some construction crews in the area, and we need to place 'em there, on your property.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I got none to do with it. I don't want it.",
+      "wiki_speaker": null,
+      "wiki_text": "I got nothing to do with it! I don't want it!",
+      "wiki_group_text": null,
+      "similarity": 0.9398,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I got nothing to do with it! I don't want it!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Well, you got to clear about 45 square feet right in front so we can put our toilets up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Well you gotta clear about 45 square feet, right in front, so we can put our toilets up",
+      "wiki_group_text": "Well you gotta clear about 45 square feet, right in front, so we can put our toilets up 'ere, okay? We're from 1-800-Toilets.",
+      "similarity": 0.9825,
+      "group_similarity": 0.9752,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        6
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Well you gotta clear about 45 square feet, right in front, so we can put our toilets up",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "there, okay? We're from 1,800 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "'ere, okay? We're from 1-800-Toilets.",
+      "wiki_group_text": "Well you gotta clear about 45 square feet, right in front, so we can put our toilets up 'ere, okay? We're from 1-800-Toilets.",
+      "similarity": 0.9565,
+      "group_similarity": 0.9752,
+      "match_type": "similar",
+      "json_group": [
+        9,
+        10
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        6
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "'ere, okay? We're from 1-800-Toilets.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Where is it? Say the name and where the address.",
+      "wiki_speaker": null,
+      "wiki_text": "Wha! What?! What is this?! Check the name and the address!",
+      "wiki_group_text": null,
+      "similarity": 0.6735,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        7
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Wha! What?! What is this?! Check the name and the address!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "On your rental property there. We need you to clear 45 square fare. We got green",
+      "wiki_speaker": "LPC",
+      "wiki_text": "On your rental property there. We need you to clear 45 square feet. We've got green",
+      "wiki_group_text": "On your rental property there. We need you to clear 45 square feet. We've got green toilets, orange toilets, red toilets coming your way, first thing tomorrow morning. And I want you to make sure there's no rocks, or trash, or bushes...",
+      "similarity": 0.956,
+      "group_similarity": 0.9843,
+      "match_type": "similar",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "On your rental property there. We need you to clear 45 square feet. We've got green",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "toilets, orange toilets, red toilets, coming your way first thing tomorrow morning.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "toilets, orange toilets, red toilets coming your way, first thing tomorrow morning.",
+      "wiki_group_text": "On your rental property there. We need you to clear 45 square feet. We've got green toilets, orange toilets, red toilets coming your way, first thing tomorrow morning. And I want you to make sure there's no rocks, or trash, or bushes...",
+      "similarity": 1.0,
+      "group_similarity": 0.9843,
+      "match_type": "exact",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "toilets, orange toilets, red toilets, coming your way first thing tomorrow morning.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "And I want you to make sure there's no rocks or trash or bushes.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "And I want you to make sure there's no rocks, or trash, or bushes...",
+      "wiki_group_text": "On your rental property there. We need you to clear 45 square feet. We've got green toilets, orange toilets, red toilets coming your way, first thing tomorrow morning. And I want you to make sure there's no rocks, or trash, or bushes...",
+      "similarity": 1.0,
+      "group_similarity": 0.9843,
+      "match_type": "exact",
+      "json_group": [
+        12,
+        13,
+        14
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "And I want you to make sure there's no rocks or trash or bushes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I have nothing to do with it that doesn't belong to me. Leave me alone.",
+      "wiki_speaker": null,
+      "wiki_text": "I got nothing to do with it! It doesn't belong to me! Leave me alone!",
+      "wiki_group_text": null,
+      "similarity": 0.9185,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I got nothing to do with it! It doesn't belong to me! Leave me alone!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        12
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, Joe, this is Preston with 1-800 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey Joe, this is Preston with 1-800-Toilets.",
+      "wiki_group_text": "Hey Joe, this is Preston with 1-800-Toilets. We need you to give us a deposit two, three-hundred-dollar deposit. Just to protect our toilets, all right? I’ll be by to pick that up. Three-hundred dollars.",
+      "similarity": 1.0,
+      "group_similarity": 0.8604,
+      "match_type": "exact",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        13
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Joe, this is Preston with 1-800 toilets.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We need you to give us a deposit, too, $300 deposit just to protect our toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We need you to give us a deposit two, three-hundred-dollar deposit. Just to protect our toilets,",
+      "wiki_group_text": "Hey Joe, this is Preston with 1-800-Toilets. We need you to give us a deposit two, three-hundred-dollar deposit. Just to protect our toilets, all right? I’ll be by to pick that up. Three-hundred dollars.",
+      "similarity": 0.8521,
+      "group_similarity": 0.8604,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        13
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We need you to give us a deposit two, three-hundred-dollar deposit. Just to protect our toilets,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "All right, I'll be by to pick that up.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "all right? I’ll be by to pick that up. Three-hundred dollars.",
+      "wiki_group_text": "Hey Joe, this is Preston with 1-800-Toilets. We need you to give us a deposit two, three-hundred-dollar deposit. Just to protect our toilets, all right? I’ll be by to pick that up. Three-hundred dollars.",
+      "similarity": 0.7447,
+      "group_similarity": 0.8604,
+      "match_type": "similar",
+      "json_group": [
+        17,
+        18,
+        19
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        13
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "all right? I’ll be by to pick that up. Three-hundred dollars.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "$300.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "$300.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm going to give you nothing.",
+      "wiki_speaker": null,
+      "wiki_text": "I’m gonna give you nothing.",
+      "wiki_group_text": "I’m gonna give you nothing. And lay off before I call the police on you.",
+      "similarity": 0.8364,
+      "group_similarity": 0.9371,
+      "match_type": "similar",
+      "json_group": [
+        21,
+        22
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        14
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m gonna give you nothing.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "And lay off before I call the police on you.",
+      "wiki_speaker": null,
+      "wiki_text": "And lay off before I call the police on you.",
+      "wiki_group_text": "I’m gonna give you nothing. And lay off before I call the police on you.",
+      "similarity": 1.0,
+      "group_similarity": 0.9371,
+      "match_type": "exact",
+      "json_group": [
+        21,
+        22
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        14
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And lay off before I call the police on you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, I'm going to come out there and demand the check tomorrow morning.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, I’m gonna come out there and demand the check, tomorrow morning.",
+      "wiki_group_text": "Hey, I’m gonna come out there and demand the check, tomorrow morning. Do you understand me?",
+      "similarity": 0.9333,
+      "group_similarity": 0.9492,
+      "match_type": "similar",
+      "json_group": [
+        23,
+        24
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, I’m gonna come out there and demand the check, tomorrow morning.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you understand me?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you understand me?",
+      "wiki_group_text": "Hey, I’m gonna come out there and demand the check, tomorrow morning. Do you understand me?",
+      "similarity": 1.0,
+      "group_similarity": 0.9492,
+      "match_type": "exact",
+      "json_group": [
+        23,
+        24
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you understand me?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're going to lay over.",
+      "wiki_speaker": null,
+      "wiki_text": "(Unintelligible) lay off or",
+      "wiki_group_text": "(Unintelligible) lay off or you’re gonna be in jail.",
+      "similarity": 0.449,
+      "group_similarity": 0.64,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        16
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "(Unintelligible) lay off or",
+      "text_action": "review"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're going to be in jail.",
+      "wiki_speaker": null,
+      "wiki_text": "you’re gonna be in jail.",
+      "wiki_group_text": "(Unintelligible) lay off or you’re gonna be in jail.",
+      "similarity": 0.8163,
+      "group_similarity": 0.64,
+      "match_type": "similar",
+      "json_group": [
+        25,
+        26
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        16
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "you’re gonna be in jail.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Oh, you're going to be in jail.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Oh, you’re gonna be in jail.",
+      "wiki_group_text": "Oh, you’re gonna be in jail. I’m from 1-800-Toilets.",
+      "similarity": 0.8364,
+      "group_similarity": 0.8911,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Oh, you’re gonna be in jail.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm from 1-800 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I’m from 1-800-Toilets.",
+      "wiki_group_text": "Oh, you’re gonna be in jail. I’m from 1-800-Toilets.",
+      "similarity": 0.9545,
+      "group_similarity": 0.8911,
+      "match_type": "similar",
+      "json_group": [
+        27,
+        28
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I’m from 1-800-Toilets.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're full of shit.",
+      "wiki_speaker": null,
+      "wiki_text": "You’re full of shit.",
+      "wiki_group_text": null,
+      "similarity": 0.9474,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        18
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You’re full of shit.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why don't you go out front and clean it up?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Why don’t you go out front and clean it up.",
+      "wiki_group_text": null,
+      "similarity": 0.9762,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        19
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Why don’t you go out front and clean it up.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        22
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, this is Preston-Windemir, 1-800 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah, this is Preston Windermere. 1-800-Toilets.",
+      "wiki_group_text": null,
+      "similarity": 0.9545,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        23
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah, this is Preston Windermere. 1-800-Toilets.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 33,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You still don't play off?",
+      "wiki_speaker": null,
+      "wiki_text": "You still don’t lay off?",
+      "wiki_group_text": null,
+      "similarity": 0.9362,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        24
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You still don’t lay off?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 34,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Listen to me.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Listen to me.",
+      "wiki_group_text": "Listen to me. We’re bringing 14 portable toilets to your property tomorrow morning.",
+      "similarity": 1.0,
+      "group_similarity": 0.9877,
+      "match_type": "exact",
+      "json_group": [
+        34,
+        35
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Listen to me.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 35,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We're bringing 14 portable toilets to your property tomorrow morning.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’re bringing 14 portable toilets to your property tomorrow morning.",
+      "wiki_group_text": "Listen to me. We’re bringing 14 portable toilets to your property tomorrow morning.",
+      "similarity": 0.9853,
+      "group_similarity": 0.9877,
+      "match_type": "similar",
+      "json_group": [
+        34,
+        35
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We’re bringing 14 portable toilets to your property tomorrow morning.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 36,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got the wrong number?",
+      "wiki_speaker": null,
+      "wiki_text": "You got the wrong number!",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        26
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You got the wrong number?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 37,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "No, no, no.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "No, no, no.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        27
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "No, no, no.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 38,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're stupid.",
+      "wiki_speaker": null,
+      "wiki_text": "You’re stupid!",
+      "wiki_group_text": "You’re stupid! Lay off you mother fucker!",
+      "similarity": 0.9231,
+      "group_similarity": 0.7654,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        28
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You’re stupid!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 39,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let you up your motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "Lay off you mother fucker!",
+      "wiki_group_text": "You’re stupid! Lay off you mother fucker!",
+      "similarity": 0.6792,
+      "group_similarity": 0.7654,
+      "match_type": "similar",
+      "json_group": [
+        38,
+        39
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        28
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Lay off you mother fucker!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 40,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You're going to jail, sir, if you don't let us in to set up your toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re going to jail sir, if you don’t, uh, let us in, to set up your toilets.",
+      "wiki_group_text": "You’re going to jail sir, if you don’t, uh, let us in, to set up your toilets. Do you understand?",
+      "similarity": 0.951,
+      "group_similarity": 0.9609,
+      "match_type": "similar",
+      "json_group": [
+        40,
+        41
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        29
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You’re going to jail sir, if you don’t, uh, let us in, to set up your toilets.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 41,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Do you understand?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Do you understand?",
+      "wiki_group_text": "You’re going to jail sir, if you don’t, uh, let us in, to set up your toilets. Do you understand?",
+      "similarity": 1.0,
+      "group_similarity": 0.9609,
+      "match_type": "exact",
+      "json_group": [
+        40,
+        41
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        29
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Do you understand?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 42,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Let you.",
+      "wiki_speaker": null,
+      "wiki_text": "(unintelligible)",
+      "wiki_group_text": "(unintelligible) Why should I let you in?",
+      "similarity": 0.1905,
+      "group_similarity": 0.7536,
+      "match_type": "similar",
+      "json_group": [
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        30
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Let you.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 43,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Why should I let you in?",
+      "wiki_speaker": null,
+      "wiki_text": "Why should I let you in?",
+      "wiki_group_text": "(unintelligible) Why should I let you in?",
+      "similarity": 1.0,
+      "group_similarity": 0.7536,
+      "match_type": "exact",
+      "json_group": [
+        42,
+        43
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        30
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why should I let you in?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 44,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We want you up front.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We want you up front.",
+      "wiki_group_text": "We want you up front. We need a check. And we need keys to the property to set up fourteen toilets.",
+      "similarity": 1.0,
+      "group_similarity": 0.9263,
+      "match_type": "exact",
+      "json_group": [
+        44,
+        45,
+        46
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        31
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We want you up front.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 45,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "We need a check, and we need keys to the,",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We need a check. And we need keys to",
+      "wiki_group_text": "We want you up front. We need a check. And we need keys to the property to set up fourteen toilets.",
+      "similarity": 0.9459,
+      "group_similarity": 0.9263,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        31
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We need a check. And we need keys to",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 46,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "the property to set up 14 toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "the property to set up fourteen toilets.",
+      "wiki_group_text": "We want you up front. We need a check. And we need keys to the property to set up fourteen toilets.",
+      "similarity": 0.8611,
+      "group_similarity": 0.9263,
+      "match_type": "similar",
+      "json_group": [
+        44,
+        45,
+        46
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        31
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "the property to set up fourteen toilets.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 47,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why don't you drop dead, you're",
+      "wiki_speaker": null,
+      "wiki_text": "Why don’t you drop dead? You",
+      "wiki_group_text": "Why don’t you drop dead? You mother fucker.",
+      "similarity": 0.9123,
+      "group_similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why don’t you drop dead? You",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 48,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "motherfucker?",
+      "wiki_speaker": null,
+      "wiki_text": "mother fucker.",
+      "wiki_group_text": "Why don’t you drop dead? You mother fucker.",
+      "similarity": 0.96,
+      "group_similarity": 0.9286,
+      "match_type": "similar",
+      "json_group": [
+        47,
+        48
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        32
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "mother fucker.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 49,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're going to jail.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re going to jail, sir.",
+      "wiki_group_text": null,
+      "similarity": 0.8636,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        33
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You’re going to jail, sir.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 50,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why don't you drop dead?",
+      "wiki_speaker": null,
+      "wiki_text": "Why don’t you drop dead?",
+      "wiki_group_text": null,
+      "similarity": 0.9565,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        34
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why don’t you drop dead?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 51,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're going to...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re gonna… You mother fucker. (unintelligible)",
+      "wiki_group_text": "You’re gonna… You mother fucker. (unintelligible) You’re gonna be in jail.",
+      "similarity": 0.3667,
+      "group_similarity": 0.5405,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        35,
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're going to...",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 52,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're going to be in jail.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You’re gonna be in jail.",
+      "wiki_group_text": "You’re gonna… You mother fucker. (unintelligible) You’re gonna be in jail.",
+      "similarity": 0.8163,
+      "group_similarity": 0.5405,
+      "match_type": "similar",
+      "json_group": [
+        51,
+        52
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        35,
+        36
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You’re gonna be in jail.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 53,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "If you don't let us in, you're going to go to prison.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "If you don’t let us in, you’re gonna go to prison.",
+      "wiki_group_text": null,
+      "similarity": 0.8889,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        37
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "If you don’t let us in, you’re gonna go to prison.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 54,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yes.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 55,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Yeah, you're going to jail over these",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Yeah guy, you’re going to jail over these",
+      "wiki_group_text": "Yeah guy, you’re going to jail over these toilets. You got it?",
+      "similarity": 0.9211,
+      "group_similarity": 0.9474,
+      "match_type": "similar",
+      "json_group": [
+        55,
+        56,
+        57
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Yeah guy, you’re going to jail over these",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 56,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "toilets.",
+      "wiki_group_text": "Yeah guy, you’re going to jail over these toilets. You got it?",
+      "similarity": 1.0,
+      "group_similarity": 0.9474,
+      "match_type": "exact",
+      "json_group": [
+        55,
+        56,
+        57
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "toilets.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 57,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You got it?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You got it?",
+      "wiki_group_text": "Yeah guy, you’re going to jail over these toilets. You got it?",
+      "similarity": 1.0,
+      "group_similarity": 0.9474,
+      "match_type": "exact",
+      "json_group": [
+        55,
+        56,
+        57
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        41
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You got it?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 58,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You are a fucking guy, you know, and I'm",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You are a fucking guy, you know, and I'm",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 59,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "going to have my lawyer, you know.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "going to have my lawyer, you know.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 60,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "He's going to lock you up.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "He's going to lock you up.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 61,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I already call the police, and I gave him your numbers.",
+      "wiki_speaker": null,
+      "wiki_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers.",
+      "wiki_group_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers. You mother fucker, you’re calling me ‘I should give you toilets’, when I don’t own anything, I don’t own construction. If you want to give me toilets, you mother fucker.",
+      "similarity": 0.5073,
+      "group_similarity": 0.6965,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 62,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "You mother fucker,",
+      "wiki_group_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers. You mother fucker, you’re calling me ‘I should give you toilets’, when I don’t own anything, I don’t own construction. If you want to give me toilets, you mother fucker.",
+      "similarity": 0.9697,
+      "group_similarity": 0.6965,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You mother fucker,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 63,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're calling me.",
+      "wiki_speaker": null,
+      "wiki_text": "you’re calling me",
+      "wiki_group_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers. You mother fucker, you’re calling me ‘I should give you toilets’, when I don’t own anything, I don’t own construction. If you want to give me toilets, you mother fucker.",
+      "similarity": 0.9412,
+      "group_similarity": 0.6965,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "you’re calling me",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 64,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You should give you toilet.",
+      "wiki_speaker": null,
+      "wiki_text": "‘I should give you toilets’,",
+      "wiki_group_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers. You mother fucker, you’re calling me ‘I should give you toilets’, when I don’t own anything, I don’t own construction. If you want to give me toilets, you mother fucker.",
+      "similarity": 0.902,
+      "group_similarity": 0.6965,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "‘I should give you toilets’,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 65,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "When I don't own anything, I don't own it from stocks you.",
+      "wiki_speaker": null,
+      "wiki_text": "when I don’t own anything, I don’t own construction. If",
+      "wiki_group_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers. You mother fucker, you’re calling me ‘I should give you toilets’, when I don’t own anything, I don’t own construction. If you want to give me toilets, you mother fucker.",
+      "similarity": 0.7523,
+      "group_similarity": 0.6965,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "when I don’t own anything, I don’t own construction. If",
+      "text_action": "review"
+    },
+    {
+      "json_index": 66,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You want to give me toilets?",
+      "wiki_speaker": null,
+      "wiki_text": "you want to give me toilets, you mother fucker.",
+      "wiki_group_text": "You are a fucking guy, you know. And I’m gonna have my lawyer, you know, he’s gonna write you up. I’ve already called the police, and I gave them your numbers. You mother fucker, you’re calling me ‘I should give you toilets’, when I don’t own anything, I don’t own construction. If you want to give me toilets, you mother fucker.",
+      "similarity": 0.75,
+      "group_similarity": 0.6965,
+      "match_type": "similar",
+      "json_group": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        42
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "you want to give me toilets, you mother fucker.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 67,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your motherfucker.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 68,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You owe...",
+      "wiki_speaker": "LPC",
+      "wiki_text": "You owe…",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        43
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "You owe...",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 69,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Get out.",
+      "wiki_speaker": null,
+      "wiki_text": "Get off,",
+      "wiki_group_text": "Get off, get to work! You son of a bitch, get to work!",
+      "similarity": 0.7143,
+      "group_similarity": 0.96,
+      "match_type": "similar",
+      "json_group": [
+        69,
+        70,
+        71,
+        72
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Get off,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 70,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Get to work.",
+      "wiki_speaker": null,
+      "wiki_text": "get to work!",
+      "wiki_group_text": "Get off, get to work! You son of a bitch, get to work!",
+      "similarity": 1.0,
+      "group_similarity": 0.96,
+      "match_type": "exact",
+      "json_group": [
+        69,
+        70,
+        71,
+        72
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Get to work.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 71,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You son of a bitch.",
+      "wiki_speaker": null,
+      "wiki_text": "You son of a bitch,",
+      "wiki_group_text": "Get off, get to work! You son of a bitch, get to work!",
+      "similarity": 1.0,
+      "group_similarity": 0.96,
+      "match_type": "exact",
+      "json_group": [
+        69,
+        70,
+        71,
+        72
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You son of a bitch.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 72,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Get to work.",
+      "wiki_speaker": null,
+      "wiki_text": "get to work!",
+      "wiki_group_text": "Get off, get to work! You son of a bitch, get to work!",
+      "similarity": 1.0,
+      "group_similarity": 0.96,
+      "match_type": "exact",
+      "json_group": [
+        69,
+        70,
+        71,
+        72
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        44
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Get to work.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 73,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "You owe me $800.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You owe me $800.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 74,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yellow.",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 0.7273,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        48
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 75,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, guy, you've got to cut me a check on these freaking toilets here.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, guy, you gotta cut me a check on these frickin’ toilets here.",
+      "wiki_group_text": null,
+      "similarity": 0.9147,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        49
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, guy, you gotta cut me a check on these frickin’ toilets here.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 76,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Sure, I'm going to catch your check.",
+      "wiki_speaker": null,
+      "wiki_text": "Sure I’m gonna cut you a check.",
+      "wiki_group_text": "Sure I’m gonna cut you a check. I’m gonna cut your throat you mother fucker.",
+      "similarity": 0.75,
+      "group_similarity": 0.8312,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        50
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Sure I’m gonna cut you a check.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 77,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I'm going to cut your throat, you motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "I’m gonna cut your throat you mother fucker.",
+      "wiki_group_text": "Sure I’m gonna cut you a check. I’m gonna cut your throat you mother fucker.",
+      "similarity": 0.8864,
+      "group_similarity": 0.8312,
+      "match_type": "similar",
+      "json_group": [
+        76,
+        77
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        50
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I’m gonna cut your throat you mother fucker.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 78,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Yellow.",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 0.7273,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        54
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 79,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Okay.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 80,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, man, you tell me, what color toilets do you want?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay man, you tell me, what color toilets do you want?",
+      "wiki_group_text": "Okay man, you tell me, what color toilets do you want? Red? Green? Orange?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        55
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, man, you tell me, what color toilets do you want?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 81,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Red, green, orange?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Red? Green? Orange?",
+      "wiki_group_text": "Okay man, you tell me, what color toilets do you want? Red? Green? Orange?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        80,
+        81
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        55
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Red, green, orange?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 82,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Let me tell you, your motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "Let me tell you, you mother fucker.",
+      "wiki_group_text": "Let me tell you, you mother fucker. You’re gonna come over here, you know, and I’ll slash your mother fucking throat. Come over here, okay? Come over, you mother fucker. You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "similarity": 0.9697,
+      "group_similarity": 0.6461,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Let me tell you, you mother fucker.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 83,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You want to come over here, you know,",
+      "wiki_speaker": null,
+      "wiki_text": "You’re gonna come over here, you know,",
+      "wiki_group_text": "Let me tell you, you mother fucker. You’re gonna come over here, you know, and I’ll slash your mother fucking throat. Come over here, okay? Come over, you mother fucker. You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "similarity": 0.8169,
+      "group_similarity": 0.6461,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You’re gonna come over here, you know,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 84,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and I'll slash your motherfucker's throat.",
+      "wiki_speaker": null,
+      "wiki_text": "and I’ll slash your mother fucking throat.",
+      "wiki_group_text": "Let me tell you, you mother fucker. You’re gonna come over here, you know, and I’ll slash your mother fucking throat. Come over here, okay? Come over, you mother fucker. You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "similarity": 0.878,
+      "group_similarity": 0.6461,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and I’ll slash your mother fucking throat.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 85,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Come over here, okay?",
+      "wiki_speaker": null,
+      "wiki_text": "Come over here, okay?",
+      "wiki_group_text": "Let me tell you, you mother fucker. You’re gonna come over here, you know, and I’ll slash your mother fucking throat. Come over here, okay? Come over, you mother fucker. You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "similarity": 1.0,
+      "group_similarity": 0.6461,
+      "match_type": "exact",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Come over here, okay?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 86,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Come over, your motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "Come over, you mother fucker.",
+      "wiki_group_text": "Let me tell you, you mother fucker. You’re gonna come over here, you know, and I’ll slash your mother fucking throat. Come over here, okay? Come over, you mother fucker. You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "similarity": 0.963,
+      "group_similarity": 0.6461,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Come over, you mother fucker.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 87,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're dropped dead, your chicken shit.",
+      "wiki_speaker": null,
+      "wiki_text": "You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "wiki_group_text": "Let me tell you, you mother fucker. You’re gonna come over here, you know, and I’ll slash your mother fucking throat. Come over here, okay? Come over, you mother fucker. You drop dead you chicken shit. You’re a gangster, you’re a criminal, and you will drop dead, you know. If I don’t slash your throat, somebody else will, and you’ll wind up in jail and drop dead there.",
+      "similarity": 0.2609,
+      "group_similarity": 0.6461,
+      "match_type": "similar",
+      "json_group": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        56
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're dropped dead, your chicken shit.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 88,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You are gangster.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You are gangster.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 89,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You are a criminal,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You are a criminal,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 90,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and you will drop dead, you know.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and you will drop dead, you know.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 91,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "If I don't slash your throat,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "If I don't slash your throat,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 92,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "somebody else will,",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "somebody else will,",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 93,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "and you'll want to.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "and you'll want to.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 94,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "up in jail and drop that there.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "up in jail and drop that there.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 95,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Okay, so orange.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Okay, so orange?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        57
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Okay, so orange.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 96,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I accidentally got locked in one of these toilets.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I accidentally got locked in one of these toilets,",
+      "wiki_group_text": "I accidentally got locked in one of these toilets, could you please come let me out? Help me get out?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        96,
+        97
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        61
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I accidentally got locked in one of these toilets.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 97,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Could you please come let me out, help me get out?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "could you please come let me out? Help me get out?",
+      "wiki_group_text": "I accidentally got locked in one of these toilets, could you please come let me out? Help me get out?",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        96,
+        97
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        61
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Could you please come let me out, help me get out?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 98,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're not going to stop for those motherfucking toilets?",
+      "wiki_speaker": null,
+      "wiki_text": "You’re not gonna stop for those mother fucking toilets?",
+      "wiki_group_text": "You’re not gonna stop for those mother fucking toilets? Come over here! Chicken shit mother fucker.",
+      "similarity": 0.9091,
+      "group_similarity": 0.9239,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        62
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You’re not gonna stop for those mother fucking toilets?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 99,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Come over here, you chicken shit, motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "Come over here! Chicken shit mother fucker.",
+      "wiki_group_text": "You’re not gonna stop for those mother fucking toilets? Come over here! Chicken shit mother fucker.",
+      "similarity": 0.9412,
+      "group_similarity": 0.9239,
+      "match_type": "similar",
+      "json_group": [
+        98,
+        99
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        62
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Come over here! Chicken shit mother fucker.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 100,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        65
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 101,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hey, Joe, would you want to come down and hop on the toilet?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey, uh, Joe, would you want to come down and hop on the toilet?",
+      "wiki_group_text": "Hey, uh, Joe, would you want to come down and hop on the toilet? It’s pretty neat.",
+      "similarity": 0.9744,
+      "group_similarity": 0.9669,
+      "match_type": "similar",
+      "json_group": [
+        101,
+        102
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        66
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, uh, Joe, would you want to come down and hop on the toilet?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 102,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's pretty neat.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It’s pretty neat.",
+      "wiki_group_text": "Hey, uh, Joe, would you want to come down and hop on the toilet? It’s pretty neat.",
+      "similarity": 0.9375,
+      "group_similarity": 0.9669,
+      "match_type": "similar",
+      "json_group": [
+        101,
+        102
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        66
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It’s pretty neat.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 103,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your motherfucker.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 104,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your parents will be miserable of you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your parents will be miserable of you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 105,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your chicky shit, I pray to God you should drop dead.",
+      "wiki_speaker": null,
+      "wiki_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead.",
+      "wiki_group_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead. You should have an accident and drop dead, before you hurt anybody. Because if I see you mother fucker, I’ll slash your throat. You mother fucker. You’re such a chicken. Aren’t you ashamed for what you’re doing to your parents that you’re a criminal? Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "similarity": 0.625,
+      "group_similarity": 0.7866,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 106,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You should have an accident and drop dead before you heard anybody.",
+      "wiki_speaker": null,
+      "wiki_text": "You should have an accident and drop dead, before you hurt anybody.",
+      "wiki_group_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead. You should have an accident and drop dead, before you hurt anybody. Because if I see you mother fucker, I’ll slash your throat. You mother fucker. You’re such a chicken. Aren’t you ashamed for what you’re doing to your parents that you’re a criminal? Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "similarity": 0.9618,
+      "group_similarity": 0.7866,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You should have an accident and drop dead, before you hurt anybody.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 107,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Because if I see you, motherfucker, I'd slash your throat.",
+      "wiki_speaker": null,
+      "wiki_text": "Because if I see you mother fucker, I’ll slash your throat.",
+      "wiki_group_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead. You should have an accident and drop dead, before you hurt anybody. Because if I see you mother fucker, I’ll slash your throat. You mother fucker. You’re such a chicken. Aren’t you ashamed for what you’re doing to your parents that you’re a criminal? Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "similarity": 0.9464,
+      "group_similarity": 0.7866,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Because if I see you mother fucker, I’ll slash your throat.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 108,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your motherfucker, you're such a sick.",
+      "wiki_speaker": null,
+      "wiki_text": "You mother fucker. You’re such a chicken.",
+      "wiki_group_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead. You should have an accident and drop dead, before you hurt anybody. Because if I see you mother fucker, I’ll slash your throat. You mother fucker. You’re such a chicken. Aren’t you ashamed for what you’re doing to your parents that you’re a criminal? Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "similarity": 0.88,
+      "group_similarity": 0.7866,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You mother fucker. You’re such a chicken.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 109,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Aren't you ashamed that what you're doing to your parents, that you're a criminal?",
+      "wiki_speaker": null,
+      "wiki_text": "Aren’t you ashamed for what you’re doing to your parents that you’re a criminal?",
+      "wiki_group_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead. You should have an accident and drop dead, before you hurt anybody. Because if I see you mother fucker, I’ll slash your throat. You mother fucker. You’re such a chicken. Aren’t you ashamed for what you’re doing to your parents that you’re a criminal? Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "similarity": 0.9182,
+      "group_similarity": 0.7866,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Aren’t you ashamed for what you’re doing to your parents that you’re a criminal?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 110,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Aren't you ashamed of it, you motherfucker?",
+      "wiki_speaker": null,
+      "wiki_text": "Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "wiki_group_text": "You mother fucker. Your parents must be miserable with you. You chicken shit. I pray to God you should drop dead. You should have an accident and drop dead, before you hurt anybody. Because if I see you mother fucker, I’ll slash your throat. You mother fucker. You’re such a chicken. Aren’t you ashamed for what you’re doing to your parents that you’re a criminal? Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "similarity": 0.5031,
+      "group_similarity": 0.7866,
+      "match_type": "similar",
+      "json_group": [
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        67
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Aren’t you ashamed of it, you mother fucker? You chicken shit. (Unintelligible) Drop dead! Drop dead mother fucker! Drop dead!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 111,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your chicky shit?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your chicky shit?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 112,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're not for nothing, you motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're not for nothing, you motherfucker.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 113,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Drop there.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Drop there.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 114,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Drop dead, motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Drop dead, motherfucker.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 115,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Drop dead.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Drop dead.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 116,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hey, Joe.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hey Joe?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        71
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hey, Joe.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 117,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Yes.",
+      "wiki_speaker": null,
+      "wiki_text": "Yes?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        72
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Yes.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 118,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We'd like to offer you a job down here at 1-800 toilets.",
+      "wiki_speaker": null,
+      "wiki_text": "We’d like to offer you a job down here at 1-800-Toilets.",
+      "wiki_group_text": "We’d like to offer you a job down here at 1-800-Toilets. Why don’t you come on down for an interview?",
+      "similarity": 0.9818,
+      "group_similarity": 0.9798,
+      "match_type": "similar",
+      "json_group": [
+        118,
+        119
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        73
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "We’d like to offer you a job down here at 1-800-Toilets.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 119,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Why don't you come on down for an interview?",
+      "wiki_speaker": null,
+      "wiki_text": "Why don’t you come on down for an interview?",
+      "wiki_group_text": "We’d like to offer you a job down here at 1-800-Toilets. Why don’t you come on down for an interview?",
+      "similarity": 0.9767,
+      "group_similarity": 0.9798,
+      "match_type": "similar",
+      "json_group": [
+        118,
+        119
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        73
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why don’t you come on down for an interview?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 120,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Why don't you fuck yourself?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why don't you fuck yourself?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 121,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your motherfucker, why don't you fuck yourself?",
+      "wiki_speaker": null,
+      "wiki_text": "Why don’t you fuck yourself?",
+      "wiki_group_text": "Why don’t you fuck yourself? You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker. You’re gonna fall into an accident, I pray in my synagogue, I pray for you should drop dead. So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "similarity": 0.7222,
+      "group_similarity": 0.5733,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Why don’t you fuck yourself?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 122,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Drop dead, you motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker.",
+      "wiki_group_text": "Why don’t you fuck yourself? You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker. You’re gonna fall into an accident, I pray in my synagogue, I pray for you should drop dead. So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "similarity": 0.5253,
+      "group_similarity": 0.5733,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 123,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're going to fall into an accident.",
+      "wiki_speaker": null,
+      "wiki_text": "You’re gonna fall into an accident,",
+      "wiki_group_text": "Why don’t you fuck yourself? You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker. You’re gonna fall into an accident, I pray in my synagogue, I pray for you should drop dead. So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "similarity": 0.8732,
+      "group_similarity": 0.5733,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You’re gonna fall into an accident,",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 124,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I pray in my synagogue.",
+      "wiki_speaker": null,
+      "wiki_text": "I pray in my synagogue,",
+      "wiki_group_text": "Why don’t you fuck yourself? You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker. You’re gonna fall into an accident, I pray in my synagogue, I pray for you should drop dead. So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "similarity": 1.0,
+      "group_similarity": 0.5733,
+      "match_type": "exact",
+      "json_group": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I pray in my synagogue.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 125,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "I pray for you that you should drop dead.",
+      "wiki_speaker": null,
+      "wiki_text": "I pray for you should drop dead.",
+      "wiki_group_text": "Why don’t you fuck yourself? You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker. You’re gonna fall into an accident, I pray in my synagogue, I pray for you should drop dead. So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "similarity": 0.8732,
+      "group_similarity": 0.5733,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I pray for you should drop dead.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 126,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "So you won't have to go to jail, but you'll drop that, you know.",
+      "wiki_speaker": null,
+      "wiki_text": "So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "wiki_group_text": "Why don’t you fuck yourself? You mother fucker! Why don’t you fuck yourself? Drop dead you mother fucker. You’re gonna fall into an accident, I pray in my synagogue, I pray for you should drop dead. So you won’t have to go to jail, but you’ll drop dead, you know. You mother fucker. (Unintelligible) You chicken shit. You’re not worth, not even one nickel. Your mother must be struggling with her mental health, that she raised a mother fuck chicken shit son like you. You’re a chicken shit. (Unintelligible) Chicken shit! Mother fucker!",
+      "similarity": 0.2924,
+      "group_similarity": 0.5733,
+      "match_type": "similar",
+      "json_group": [
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        74
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "So you won't have to go to jail, but you'll drop that, you know.",
+      "text_action": "keep_low_confidence"
+    },
+    {
+      "json_index": 127,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your mother.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your mother.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 128,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You don't know your fuck.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You don't know your fuck.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 129,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're a chick and shit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're a chick and shit.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 130,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're not worth, not even one nickel.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're not worth, not even one nickel.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 131,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Your mother must be struggling with her mental health",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Your mother must be struggling with her mental health",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 132,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "that she raised her.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "that she raised her.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 133,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Mother fuck, the chicken shit, so like you.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Mother fuck, the chicken shit, so like you.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 134,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You're a chicken shit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You're a chicken shit.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 135,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You shit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You shit.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 136,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "You put your shit.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "You put your shit.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 137,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Motherfucker.",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 138,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "We'll talk about Moundefat.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "We’ll talk about benefits,",
+      "wiki_group_text": "We’ll talk about benefits, we’ll talk about…",
+      "similarity": 0.7843,
+      "group_similarity": 0.8182,
+      "match_type": "similar",
+      "json_group": [
+        138,
+        139
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        75
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "We’ll talk about benefits,",
+      "text_action": "review"
+    },
+    {
+      "json_index": 139,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "We'll talk about it.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "we’ll talk about…",
+      "wiki_group_text": "We’ll talk about benefits, we’ll talk about…",
+      "similarity": 0.8571,
+      "group_similarity": 0.8182,
+      "match_type": "similar",
+      "json_group": [
+        138,
+        139
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        75
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "we’ll talk about…",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 140,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Drop dead.",
+      "wiki_speaker": null,
+      "wiki_text": "Drop dead!",
+      "wiki_group_text": "Drop dead! Drop dead! Drop dead mother fucker!",
+      "similarity": 1.0,
+      "group_similarity": 0.8471,
+      "match_type": "exact",
+      "json_group": [
+        140,
+        141,
+        142
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        76
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Drop dead.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 141,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Grab dead.",
+      "wiki_speaker": null,
+      "wiki_text": "Drop dead!",
+      "wiki_group_text": "Drop dead! Drop dead! Drop dead mother fucker!",
+      "similarity": 0.6667,
+      "group_similarity": 0.8471,
+      "match_type": "similar",
+      "json_group": [
+        140,
+        141,
+        142
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        76
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Drop dead!",
+      "text_action": "review"
+    },
+    {
+      "json_index": 142,
+      "json_speaker": "SPEAKER_02",
+      "json_text": "Grab dead, motherfucker.",
+      "wiki_speaker": null,
+      "wiki_text": "Drop dead mother fucker!",
+      "wiki_group_text": "Drop dead! Drop dead! Drop dead mother fucker!",
+      "similarity": 0.8444,
+      "group_similarity": 0.8471,
+      "match_type": "similar",
+      "json_group": [
+        140,
+        141,
+        142
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        76
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Drop dead mother fucker!",
+      "text_action": "review"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 142,
+    "total_wiki_lines": 59,
+    "matched_wiki_lines": 55,
+    "unmatched_wiki_lines": 4,
+    "matched": 108,
+    "speakers_to_map": 3,
+    "text_auto_correct": 47,
+    "text_review": 23,
+    "text_group_review": 0,
+    "unmatched_json": 34
+  }
+}

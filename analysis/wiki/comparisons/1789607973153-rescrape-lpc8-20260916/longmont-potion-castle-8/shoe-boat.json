@@ -1,0 +1,808 @@
+{
+  "format_version": 2,
+  "generated_at": "2026-09-17T02:06:58.470587+00:00",
+  "snapshot": "1789607973153-rescrape-lpc8-20260916",
+  "album": "Longmont Potion Castle 8",
+  "album_slug": "longmont-potion-castle-8",
+  "track": "Shoe Boat",
+  "track_slug": "shoe-boat",
+  "json_path": "jekyll/assets/json/longmont-potion-castle-8/shoe-boat.json",
+  "json_sha256": "cbf8d3d8da40f6acea82078fd2bad195f5d3568fbad965c0a13b5b96d81a3789",
+  "wiki_title": "Shoe Boat",
+  "wiki_url": "https://talkinwhipapedia.fandom.com/wiki/Shoe_Boat",
+  "speaker_mapping": {
+    "SPEAKER_00": "LPC",
+    "SPEAKER_01": "LPC"
+  },
+  "speaker_mapping_evidence": {
+    "SPEAKER_00": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 1,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 1.0,
+          "observations": 1
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "name": "LPC",
+      "confidence": 1.0,
+      "observations": 10,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "LPC",
+          "score": 9.5124,
+          "observations": 10
+        }
+      ]
+    }
+  },
+  "alignments": [
+    {
+      "json_index": 1,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        1
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 2,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "This is Travis at Shoeboat.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "This is Travis at Shoe Boat.",
+      "wiki_group_text": "This is Travis at Shoe Boat. How ya doin'?",
+      "similarity": 0.9811,
+      "group_similarity": 0.925,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        2
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "This is Travis at Shoe Boat.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 3,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "How you doing?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "How ya doin'?",
+      "wiki_group_text": "This is Travis at Shoe Boat. How ya doin'?",
+      "similarity": 0.8,
+      "group_similarity": 0.925,
+      "match_type": "similar",
+      "json_group": [
+        2,
+        3
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        2
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "How ya doin'?",
+      "text_action": "review"
+    },
+    {
+      "json_index": 4,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I have no idea what you're talking about.",
+      "wiki_speaker": null,
+      "wiki_text": "I have no idea what you're talking about.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        3
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I have no idea what you're talking about.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 5,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "That's where I work.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "That's where I work.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        4
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "That's where I work.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 6,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I think I'm not interested.",
+      "wiki_speaker": null,
+      "wiki_text": "I think I'm not interested,",
+      "wiki_group_text": "I think I'm not interested, and if you call me again, I will report you. Thank you. Bye.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I think I'm not interested.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 7,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And if you call me again, I will report you.",
+      "wiki_speaker": null,
+      "wiki_text": "and if you call me again, I will report you.",
+      "wiki_group_text": "I think I'm not interested, and if you call me again, I will report you. Thank you. Bye.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And if you call me again, I will report you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 8,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Thank you.",
+      "wiki_speaker": null,
+      "wiki_text": "Thank you.",
+      "wiki_group_text": "I think I'm not interested, and if you call me again, I will report you. Thank you. Bye.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Thank you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 9,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Bye.",
+      "wiki_speaker": null,
+      "wiki_text": "Bye.",
+      "wiki_group_text": "I think I'm not interested, and if you call me again, I will report you. Thank you. Bye.",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        5
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Bye.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 10,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Let's call right back.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "------------------------------------------------------------ [Talking to self] Call right back.",
+      "wiki_group_text": null,
+      "similarity": 0.6923,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        6,
+        8
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "------------------------------------------------------------ [Talking to self] Call right back.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 11,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Hello.",
+      "wiki_speaker": null,
+      "wiki_text": "Hello?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        9
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 12,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi, it's Travis again, at Shoeboat.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi, this is Travis again at Shoe Boat.",
+      "wiki_group_text": null,
+      "similarity": 0.8824,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        10
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi, this is Travis again at Shoe Boat.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 13,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I said I'm not interested.",
+      "wiki_speaker": null,
+      "wiki_text": "I- I said I'm not interested.",
+      "wiki_group_text": null,
+      "similarity": 0.9615,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        11
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I- I said I'm not interested.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 14,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "In what?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "In what?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        12
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "In what?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 15,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And do not call this, so do not call me again, or you will be with.",
+      "wiki_speaker": null,
+      "wiki_text": "And I'm on the do not call list, so do not call me again or you will be reported.",
+      "wiki_group_text": null,
+      "similarity": 0.8252,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        13
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "And I'm on the do not call list, so do not call me again or you will be reported.",
+      "text_action": "review"
+    },
+    {
+      "json_index": 16,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's a big, big sale.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's a big big sale.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        14
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's a big, big sale.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 17,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm sorry.",
+      "wiki_speaker": null,
+      "wiki_text": "I'm sorry!",
+      "wiki_group_text": "I'm sorry! I'm not interested!",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        17,
+        18
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm sorry.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 18,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "I'm not interested.",
+      "wiki_speaker": null,
+      "wiki_text": "I'm not interested!",
+      "wiki_group_text": "I'm sorry! I'm not interested!",
+      "similarity": 1.0,
+      "group_similarity": 1.0,
+      "match_type": "exact",
+      "json_group": [
+        17,
+        18
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        15
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "I'm not interested.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 19,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Can I just tell you about our promotion brief?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Can I just tell you about our promotion briefly?",
+      "wiki_group_text": null,
+      "similarity": 0.9783,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        16
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Can I just tell you about our promotion briefly?",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 20,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "No, I don't want to listen to you.",
+      "wiki_speaker": null,
+      "wiki_text": "No! I don't want to listen to you!",
+      "wiki_group_text": "No! I don't want to listen to you! Do you not understand english!? Good bye!",
+      "similarity": 1.0,
+      "group_similarity": 0.9929,
+      "match_type": "exact",
+      "json_group": [
+        20,
+        21,
+        22
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "No, I don't want to listen to you.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 21,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Do you not understand English?",
+      "wiki_speaker": null,
+      "wiki_text": "Do you not understand english!?",
+      "wiki_group_text": "No! I don't want to listen to you! Do you not understand english!? Good bye!",
+      "similarity": 1.0,
+      "group_similarity": 0.9929,
+      "match_type": "exact",
+      "json_group": [
+        20,
+        21,
+        22
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Do you not understand English?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 22,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Goodbye.",
+      "wiki_speaker": null,
+      "wiki_text": "Good bye!",
+      "wiki_group_text": "No! I don't want to listen to you! Do you not understand english!? Good bye!",
+      "similarity": 0.9333,
+      "group_similarity": 0.9929,
+      "match_type": "similar",
+      "json_group": [
+        20,
+        21,
+        22
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        17
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Good bye!",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 23,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What's the problem?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "What's the problem?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        18
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "What's the problem?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 24,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "And do not call again.",
+      "wiki_speaker": null,
+      "wiki_text": "Do not call again! ------------------------------------------------------------",
+      "wiki_group_text": null,
+      "similarity": 0.8947,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        19,
+        20
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Do not call again! ------------------------------------------------------------",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 25,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hello?",
+      "wiki_speaker": null,
+      "wiki_text": null,
+      "similarity": 0.0,
+      "match_type": "unmatched_json",
+      "json_group": null,
+      "wiki_indices": [],
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Hello?",
+      "text_action": "no_wiki_match"
+    },
+    {
+      "json_index": 26,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Hi.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Hi.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        23
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Hi.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 27,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who is this?",
+      "wiki_speaker": null,
+      "wiki_text": "Who is this?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        24
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Who is this?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 28,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "I'm Travis.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "I'm Travis.",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        25
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "I'm Travis.",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 29,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "What are you calling for?",
+      "wiki_speaker": null,
+      "wiki_text": "What are you calling for?",
+      "wiki_group_text": null,
+      "similarity": 1.0,
+      "group_similarity": null,
+      "match_type": "exact",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        26
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "What are you calling for?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 30,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "It's a great, great promotion we've got running.",
+      "wiki_speaker": "LPC",
+      "wiki_text": "It's a great great promotion we've got runnin'.",
+      "wiki_group_text": "It's a great great promotion we've got runnin'. Who am I speaking with?",
+      "similarity": 0.9783,
+      "group_similarity": 0.9855,
+      "match_type": "similar",
+      "json_group": [
+        30,
+        31
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        27
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "It's a great great promotion we've got runnin'.",
+      "text_action": "auto_correct"
+    },
+    {
+      "json_index": 31,
+      "json_speaker": "SPEAKER_01",
+      "json_text": "Who am I speaking with?",
+      "wiki_speaker": "LPC",
+      "wiki_text": "Who am I speaking with?",
+      "wiki_group_text": "It's a great great promotion we've got runnin'. Who am I speaking with?",
+      "similarity": 1.0,
+      "group_similarity": 0.9855,
+      "match_type": "exact",
+      "json_group": [
+        30,
+        31
+      ],
+      "text_split_from_group": true,
+      "wiki_indices": [
+        27
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "matched_line",
+      "proposed_text": "Who am I speaking with?",
+      "text_action": "keep"
+    },
+    {
+      "json_index": 32,
+      "json_speaker": "SPEAKER_00",
+      "json_text": "Listen, I'll tell you this once, only once, don't ever call here again.",
+      "wiki_speaker": null,
+      "wiki_text": "Listen, tell you this once. Only once. Don't ever call here a-gain.",
+      "wiki_group_text": null,
+      "similarity": 0.9538,
+      "group_similarity": null,
+      "match_type": "similar",
+      "json_group": null,
+      "text_split_from_group": false,
+      "wiki_indices": [
+        28
+      ],
+      "timestamp_delta": null,
+      "timestamp_mismatch": false,
+      "proposed_speaker": "LPC",
+      "speaker_action": "inferred_mapping",
+      "proposed_text": "Listen, tell you this once. Only once. Don't ever call here a-gain.",
+      "text_action": "auto_correct"
+    }
+  ],
+  "summary": {
+    "total_json_entries": 32,
+    "total_wiki_lines": 26,
+    "matched_wiki_lines": 25,
+    "unmatched_wiki_lines": 1,
+    "matched": 31,
+    "speakers_to_map": 2,
+    "text_auto_correct": 8,
+    "text_review": 3,
+    "text_group_review": 0,
+    "unmatched_json": 1
+  }
+}
