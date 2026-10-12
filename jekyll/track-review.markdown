@@ -51,7 +51,7 @@ hide_from_nav: true
   <ul style="list-style-type: none; padding: 0;">
     <div class="album-info">
       <div class="album-image">
-        <a href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}">
+        <a href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}/">
             <img src="{{ site.baseurl }}/assets/img/albums/{{ album.Album_Picture }}" alt="{{ album.Album }}">
         </a>
       </div>

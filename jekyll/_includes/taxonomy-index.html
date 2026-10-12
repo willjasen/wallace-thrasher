@@ -40,11 +40,11 @@
       {% if album_has_values %}
         <section class="taxonomy-album">
           <header class="taxonomy-album-header">
-            <a class="taxonomy-album-cover" href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}" aria-label="View {{ album.Album }}">
+            <a class="taxonomy-album-cover" href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}/" aria-label="View {{ album.Album }}">
               <img src="{{ site.baseurl }}/assets/img/albums/{{ album.Album_Picture }}" alt="" width="64" height="64" loading="lazy">
             </a>
             <div>
-              <h3><a href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}">{{ album.Album }}</a></h3>
+              <h3><a href="{{ site.baseurl }}/albums/{{ album.Album_Slug }}/">{{ album.Album }}</a></h3>
               <p>{{ album.Year }}</p>
             </div>
           </header>
