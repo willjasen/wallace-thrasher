@@ -30,3 +30,13 @@ For changes that the website editor does not support, such as aliases, establish
 3. [Open a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) against this repository's `main` branch.
 
 Once the pull request is created, a maintainer will review it and merge it if everything looks good.
+
+## Build the Jekyll site locally
+
+The search indexes are generated during the Jekyll build with [docfind](https://github.com/microsoft/docfind). Install the pinned CLI and build the production site from `jekyll/`:
+
+```sh
+cd jekyll
+sh scripts/install-docfind.sh
+DOCFIND_BIN="$HOME/.local/bin/docfind" JEKYLL_ENV=production bundle exec jekyll build
+```
