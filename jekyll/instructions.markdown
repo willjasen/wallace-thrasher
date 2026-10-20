@@ -22,11 +22,11 @@ the "[Subtitles]({{ site.baseurl }}/subtitles)" page enables searching through t
 
 ### 🔎 Search Logic 🔎
 
-the search feature uses a logical 'and' when operating, instead of a logical 'or'. this behavior affects when multiple words are searched - the search will only return subtitles that contain all words being searched.
+the search feature uses a logical 'and' when operating, instead of a logical 'or'. when multiple words are searched, a subtitle must match every search term.
 
-for example, a search term of "cheese pizza" previously return 134 results - all subtitles containing either the word "cheese" or "pizza". now, the same search of "cheese pizza" returns 7 results - all subtitles containing both the words "cheese" and "pizza".
+for example, a search for "cheese pizza" returns subtitles that match both "cheese" and "pizza", not subtitles that match only one of them.
 
-note that results returned are not based on phrase matching. for example, a subtitle of "i want a cheese pizza" will be returned, but so will "i would like cheese on my pizza". due to limitations of [lunr.js](https://lunrjs.com/), phrase matching is not possible.
+results are not based on exact phrase matching. for example, a subtitle of "i want a cheese pizza" will be returned, but so will "i would like cheese on my pizza". matching terms must occur within the same subtitle line, but they do not have to be adjacent or in the same order. search also accepts prefixes and may match a one-character typo.
 
 also note that the ordering of the words does not matter, so a search for "cheese pizza" and for "pizza cheese" will return the same results.
 

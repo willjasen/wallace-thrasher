@@ -64,9 +64,15 @@ the JSON data for each track resides within a folder named as the respective alb
 ]
 ```
 
-### 🚘 Under The Hood 🚘
+### 🧩 WebAssembly Search 🧩
 
-when the search pages are accessed, the single combined JSON data (`/assets/json/data.combined.json`) is retrieved from the server, then lunr indexes the data so that it becomes searchable. lunr currently indexes for multiple fields: speakers, subtitles, aliases, and establishments.
+subtitle and speaker searches run locally in the browser using [docfind](https://github.com/microsoft/docfind), a search engine compiled to WebAssembly. the Jekyll build creates two indexes: one document per subtitle line, and one per unique speaker/track pair. each index stores searchable keywords and a document ID; the combined JSON data supplies the full records used to display results.
+
+the browser loads docfind's generated JavaScript module and its WebAssembly file, then initializes each index. subtitle results are checked against the original line so every query term must match within the same subtitle. matching supports word prefixes and one-character typos. speaker search uses the speaker index. aliases and establishments are filtered directly from the combined JSON data rather than indexed with WebAssembly.
+
+index files are written under a directory named for a hash of the combined data, so each build's data points to matching indexes. install the pinned docfind CLI with `sh scripts/install-docfind.sh`; the installer verifies the downloaded release with a SHA-256 checksum. See [Building](#building) for the production build command.
+
+### 🚘 Under The Hood 🚘
 
 the same file is exposed through a read-only browser API. the API downloads and caches `data.combined.json` once; all of its methods query that in-memory dataset and do not request `data.json`, individual track files, or a backend. it is available on every page as `window.WallaceThrasherAPI`.
 
@@ -76,7 +82,7 @@ the keys of `USB_Directory` and `USB_Filename` refer to the respective directory
 
 to install the project's dependencies, ensure Ruby is installed, then install its necessary gems by running: `bundle install; bundle update;`
 
-to create the default indexable production build, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll build`
+to create the default indexable production build, install the pinned docfind CLI and run the build command from the `jekyll` directory: `sh scripts/install-docfind.sh && DOCFIND_BIN="$HOME/.local/bin/docfind" JEKYLL_ENV=production bundle exec jekyll build`
 
 when the LPC USB collection is available locally, the build can also verify that every catalog album directory and track filename matches the USB files. set `LPC_USB_ROOT` to the USB collection's root before building, for example: `LPC_USB_ROOT="/path/to/LPC USB" JEKYLL_ENV=production bundle exec jekyll build`.
 

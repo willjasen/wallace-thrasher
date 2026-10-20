@@ -1,6 +1,6 @@
 [build]
   base    = "jekyll"
-  command = "JEKYLL_ENV=production bundle exec jekyll build --baseurl \"\""
+  command = "sh scripts/install-docfind.sh && DOCFIND_BIN=\"$HOME/.local/bin/docfind\" JEKYLL_ENV=production bundle exec jekyll build --baseurl \"\""
   publish = "_site"
   edge_functions = "_netlify/edge-functions"
 
@@ -24,7 +24,8 @@
 [build.cache]
   paths = [
     "jekyll/vendor/bundle",
-    "$HOME/.local/share/mise/installs/ruby"
+    "$HOME/.local/share/mise/installs/ruby",
+    "$HOME/.local/bin/docfind"
   ]
 
 [[headers]]

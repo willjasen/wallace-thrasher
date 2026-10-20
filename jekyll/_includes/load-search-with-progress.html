@@ -8,6 +8,9 @@
         clearInterval(intervalId);
         // console.log("Data has been loaded!");
         document.getElementById('status').innerHTML = "<img src=\"{{ site.baseurl }}/assets/img/completed.png\" id=\"statusImage\" width=\"25\" height=\"25\" />";
+      } else if (window.searchLoadError) {
+        clearInterval(intervalId);
+        document.getElementById('status').textContent = "Search could not be loaded.";
       }
     }, 100); // Check every 100ms
   </script>
