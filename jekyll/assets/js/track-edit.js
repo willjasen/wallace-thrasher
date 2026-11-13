@@ -366,16 +366,12 @@
         if (!data.ok) throw new Error(data.error || 'Unknown error');
 
         result.style.color = 'greenyellow';
-        result.innerHTML = 'Thank you! Suggestion submitted: ';
-        var pullRequestLink = el('a', {
-          href: data.pr_url,
-          target: '_blank',
-          rel: 'noopener noreferrer'
-        }, 'PR #' + data.pr_number + ' 🔗');
-        pullRequestLink.style.color = 'greenyellow';
-        pullRequestLink.style.fontWeight = 'bold';
-        pullRequestLink.style.textDecoration = 'underline';
-        result.appendChild(pullRequestLink);
+        window.WallaceThrasherPullRequestLink.renderSuggestionSuccess(
+          document,
+          result,
+          data.pr_url,
+          data.pr_number
+        );
         exitEditMode();
         editToggle.style.display = 'none';
         bar.style.display = 'flex';
