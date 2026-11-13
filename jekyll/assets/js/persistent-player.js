@@ -390,7 +390,9 @@
       document.title = doc.title;
 
       // Swap main content
-      oldMain.innerHTML = newMain.innerHTML;
+      oldMain.replaceChildren(...Array.from(newMain.childNodes, function (node) {
+        return document.importNode(node, true);
+      }));
 
       // Update URL
       history.pushState({ url }, doc.title, url);
