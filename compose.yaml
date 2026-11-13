@@ -8,3 +8,22 @@ services:
       - sh
       - -c
       - npm install --global npm@12.2.2 && node --version && npm --version && npm test
+
+  playwright:
+    profiles:
+      - e2e
+    image: mcr.microsoft.com/playwright:v1.65.0-noble
+    working_dir: /workspace
+    volumes:
+      - .:/workspace:ro
+      - playwright_node_modules:/tmp/playwright-deps
+    environment:
+      CI: "true"
+      NODE_PATH: /tmp/playwright-deps/node_modules
+    command:
+      - sh
+      - -c
+      - cp package.json /tmp/playwright-deps/package.json && npm install --prefix /tmp/playwright-deps --no-package-lock && /tmp/playwright-deps/node_modules/.bin/playwright test
+
+volumes:
+  playwright_node_modules:
