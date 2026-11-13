@@ -90,6 +90,18 @@ to build the site with the shared browser-rendered track viewer instead of fully
 
 to build and start a local web server, run this command from the `jekyll` directory: `JEKYLL_ENV=production bundle exec jekyll serve`
 
+### Running JavaScript tests
+
+With Docker Compose available (including through OrbStack), run from the repository root:
+
+```sh
+docker compose up --abort-on-container-exit --exit-code-from tests
+```
+
+The test service uses Node.js 26.13.1 and npm 12.2.2, mounts the repository read-only, and runs the full JavaScript suite. The stopped container and its logs remain available in OrbStack. The first run downloads the image; each run installs the pinned npm version inside the container.
+
+With Node.js installed locally, the same suite runs with `npm test`.
+
 ### 📤 Deployment 📤
 
 commits to the main branch are deployed directly by [netlify](https://app.netlify.com/sites/wallace-thrasher/deploys). netlify uses [`netlify.toml`](https://github.com/willjasen/wallace-thrasher/blob/main/netlify.toml) to build the jekyll site with `JEKYLL_ENV=production`.
