@@ -88,6 +88,10 @@ notes on version history can be found on the [version history](https://stretchie
 
 the codename for this project was chosen as "wallace-thrasher", as it is an alias used in the original alex trebek call on lpc 7. from there, it was a natural decision to then call the web app "stretchie".
 
+### 🧪 Testing 🧪
+
+Run the unit tests with `npm test`. For browser tests, first build the production site from `jekyll/` with `JEKYLL_ENV=production bundle exec jekyll build`, then run `docker compose --profile e2e run --rm playwright`. The Playwright container serves the generated `jekyll/_site/` locally while the tests run.
+
 ### ☎️ Call Us! ☎️
 
 if you'd like to speak further with the bangkok sod center, visit [stretchie.net](https://stretchie.net/about/?call=open) and use the **call** button in the bottom-left corner to call through your web browser. the microphone for this feature stays muted.
