@@ -47,18 +47,6 @@ furthermore, it has been my stance that ai is both good and bad - i believe that
 
 GitHub users can contribute corrections directly from the website. Sign in with GitHub, use the **Suggest edits** option on a track, and submit your changes; the website will create a pull request for review.
 
-### Running JavaScript tests
-
-With Docker Compose available (including through OrbStack), run from the repository root:
-
-```sh
-docker compose up --abort-on-container-exit --exit-code-from tests
-```
-
-The test service uses Node.js 26.13.1 and npm 12.2.2, mounts the repository read-only, and runs the full JavaScript suite. The stopped container and its logs remain available in OrbStack. The first run downloads the image; each run installs the pinned npm version inside the container.
-
-With Node.js installed locally, the same suite runs with `npm test`.
-
 ### 📋 Attribution 📋
 
 GitHub users that have contributed to the project can be viewed via the [Leaderboard](https://stretchie.net/suggestions).
