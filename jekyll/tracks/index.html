@@ -90,6 +90,7 @@ noindex: true
 </style>
 
 <script src="{{ site.baseurl }}/assets/js/alias-links.js"></script>
+<script src="{{ site.baseurl }}/assets/js/pull-request-link.js"></script>
 <script>
 (async function () {
   const BASE_URL = '{{ site.baseurl }}';
@@ -734,7 +735,12 @@ noindex: true
         const data = await res.json();
         if (data.ok) {
           resultEl.style.color = 'greenyellow';
-          resultEl.innerHTML = 'Thank you! Suggestion submitted: <a href="' + data.pr_url + '" target="_blank" rel="noopener noreferrer" style="color:greenyellow;text-decoration:underline;font-weight:bold;">PR #' + data.pr_number + ' 🔗</a>';
+          window.WallaceThrasherPullRequestLink.renderSuggestionSuccess(
+            document,
+            resultEl,
+            data.pr_url,
+            data.pr_number
+          );
           exitEditMode();
           editToggleBtn.style.display = 'none';
           bar.style.display = 'flex';

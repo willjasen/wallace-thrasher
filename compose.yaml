@@ -1,0 +1,10 @@
+services:
+  tests:
+    image: node:26.13.1-alpine
+    working_dir: /workspace
+    volumes:
+      - .:/workspace:ro
+    command:
+      - sh
+      - -c
+      - npm install --global npm@12.2.2 && node --version && npm --version && npm test
