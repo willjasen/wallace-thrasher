@@ -6,9 +6,16 @@ permalink: /version-history/
 published: true
 ---
 
-### ### v2.2.0 (beta)
+### v2.2.0
 
- - lots of changes to mention...
+ - added the "call us" feature
+ - replaced lunr.js with docfind (webassembly)
+ - improved speaker searching and editing
+ - merged more talkin' whipapedia
+ - improved the sitemap
+ - hardening against xss and updating dependencies
+
+---
 
 ### v2.1.0
 
